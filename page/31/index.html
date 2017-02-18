@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>杨先生村民</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:type" content="website">
+<meta property="og:title" content="杨先生村民">
+<meta property="og:url" content="http://xbin999.com/page/31/index.html">
+<meta property="og:site_name" content="杨先生村民">
+<meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="杨先生村民">
+<meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
+<meta name="twitter:creator" content="@xbin999">
+  
+    <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">杨先生村民</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">不惑，至简</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="xbin999.com">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-ruby中的numbers-strings和ranges" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/17/ruby中的numbers-strings和ranges/" class="article-date">
+  <time datetime="2013-06-17T05:36:19.000Z" itemprop="datePublished">2013-06-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/17/ruby中的numbers-strings和ranges/">Ruby中的numbers, strings和ranges</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="wrapper"><br><br>记住Ruby中的都是对象，标准类型也都是。<br><br>## 数值(nubmers)<br><br><em>   对于数值(numbers)来说，数值对象有Fixnum, Bignum, Float
+</em>   使用?来得到字符的ASCII值，这里<em>有点疑问，在irb中测试?a, ?\n 返回的是字符串”a”, “\n”，并不是整型数值</em>。<br><em>   控制字符使用?\C-x, ?\M-x和?\M-\C\x。
+</em>   aNumber.abs，而不是abs(aNumber).<br><br>## 字符串(strings)<br><br><em>   单引号，双引号
+</em>   使用#{expr}<br><em>   构建字符串的其他三种方法：%q, %Q, here documents。%q, %Q后面跟分隔符，可以是{}, (), //, !!, &lt;&gt;。
+</em>   here documents是指采用&lt;&lt;之后一个特征串，表示到此为止。通常&lt;&lt;后的特征串需要在第一列，除非在&lt;&lt;之后加上减号-。<br>&gt; print &lt;&lt;-STRING1, &lt;&lt;STRING2<br>&gt;<br>&gt;        Concat<br>&gt;<br>&gt;        STRING1<br>&gt;<br>&gt;           enate<br>&gt;<br>&gt;           STRING2<code>&lt;/pre&gt;
+*   字符串的函数多得很，split可以用正则表达式, squeeze用于消除多余字符（比如空格），scan和split类似，chomp用于去除末尾的指定字符。
+
+    ## 范围(ranges)
+
+*   最典型的用作序列
+*   对于自己定义的类，都可以用于range，要求就是定义succ返回序列中的下一对象以及比较运算符&amp;lt;=&amp;gt;
+*   比较运算符&amp;lt;=&amp;gt;对应小于、等于、大于返回-1，0，1。
+    &gt; &lt;pre&gt;</code><br>&gt;<br>&gt;     class VU<br>&gt;<br>&gt;       include Comparable<br>&gt;<br>&gt;     attr :volume<br>&gt;<br>&gt;<br>&gt;     def initialize(volume)  # 0..9<br>&gt;<br>&gt;     @volume = volume<br>&gt;<br>&gt;     end<br>&gt;<br>&gt;<br>&gt;     def inspect<br>&gt;<br>&gt;     ‘#’ <em> @volume<br>&gt;<br>&gt;     end<br>&gt;<br>&gt;<br>&gt;     # Support for ranges<br>&gt;<br>&gt;     def &lt;=&gt;(other)<br>&gt;<br>&gt;     self.volume &lt;=&gt; other.volume<br>&gt;<br>&gt;     end<br>&gt;<br>&gt;<br>&gt;     def succ<br>&gt;<br>&gt;     raise(IndexError, “Volume too big”) if `
+
+</em>   用于条件<br>    <pre>`<br>    while gets<br>      print if /start/../end/<br>    end<br><br>*   用于间隔：(1..10)    === 5<br></pre></div>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/17/ruby中的numbers-strings和ranges/" data-id="cizapjg8t00jbw5c2vrstqxmn" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/17/ruby中的numbers-strings和ranges/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/坚持100天学习Ruby/">坚持100天学习Ruby</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-父亲节快乐-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/16/父亲节快乐-2/" class="article-date">
+  <time datetime="2013-06-16T13:49:14.000Z" itemprop="datePublished">2013-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/16/父亲节快乐-2/">父亲节快乐！</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天是父亲节，发两幅小乐的作品。</p>
+<p>一幅小乐送给我一副她的手工画，动用了她的宝贝粘粘纸，五颜六色，花花绿绿，煞是好看。</p>
+<p><img src="http://ww4.sinaimg.cn/mw690/6a7f0b64gw1e5qarayyldj21kw16y4qp.jpg" alt="父亲节快乐！"></p>
+<p>上次记录<a href="http://xbin999.com/2005/06/19/%e7%88%b6%e4%ba%b2%e8%8a%82%e5%bf%ab%e4%b9%90/">父亲节快乐</a>的居然是2005年，好久远，也好温馨的记忆。</p>
+<p>另一幅是小乐的书法作品，有两个字没写好，不过小家伙懒得再写了，那就这样吧。</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/6a7f0b64gw1e5qaqqwtlrj20ph1loauk.jpg" alt=""></p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/16/父亲节快乐-2/" data-id="cizapjh7v01wqw5c2pal0vso0" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/16/父亲节快乐-2/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书法/">书法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐作品/">小乐作品</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-写一小段ruby犯的错误" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/16/写一小段ruby犯的错误/" class="article-date">
+  <time datetime="2013-06-16T03:26:52.000Z" itemprop="datePublished">2013-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/16/写一小段ruby犯的错误/">写一小段Ruby犯的错误</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="wrapper"><br><br>看了一段时间书，让自己写段小代码找找感觉，结果写起来语法问题不断，还是属于写c++代码的风格。<br><br>    class Paper<br>      def initialize(level=0, count=10)<br>        @level = level<br>        @count = count<br><br>        @questions = Array.new<br>        for i in 0..count-1 do<br>          @questions[i] = MathsQuestion.new(@level)<br>        end<br>      end<br><br>      attr_reader :level, :count<br>      attr_reader :questions<br>    end<br>    <code>&lt;/pre&gt;
+
+*   在开始写的时候凡是写new的地方，都写成了类似new MathsQuestion()，而不是Class.new
+*   for循环的的do/end直接写成了{}
+*   for i in 0..count-1开始想写[0..count-1].each的，但结果不是所想，在irb中验证一下：&gt; &lt;pre&gt;</code><br>&gt;     1.9.3p125 :022 &gt; [0..3].each{|i| puts i}<br>&gt;     0..3<br>&gt;     1.9.3p125 :023 &gt; (0..3).class<br>&gt;      =&gt; Range<br>&gt;     1.9.3p125 :024 &gt; [0..3].class<br>&gt;      =&gt; Array<br>&gt;     1.9.3p125 :025 &gt; (0..3).each{|i| puts i}<br>&gt;     0<br>&gt;     1<br>&gt;     2<br>&gt;     3<br>&gt;      =&gt; 0..3<br>&gt;<br>&gt; [0..3].each{|i| puts i}输出的结果是0..3，而不是0，1，2。原来[0..3]是Array而不是Range，应该使用(0..3).each就可以了。<br></div>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/16/写一小段ruby犯的错误/" data-id="cizapjgli016ww5c2otqbuzrg" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/16/写一小段ruby犯的错误/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/坚持100天学习Ruby/">坚持100天学习Ruby</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-我卖掉的第一份货物" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/15/我卖掉的第一份货物/" class="article-date">
+  <time datetime="2013-06-15T14:26:16.000Z" itemprop="datePublished">2013-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/15/我卖掉的第一份货物/">我卖掉的第一份货物</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>六一节的早晨一早小乐和我就醒了，小家伙就叽里呱啦给我讲开了周五的贸易节，讲得很生动，我都被小家伙吸引住了，诧异地问：“你怎么有那么多好说的？要不给老爸写一篇<a href="http://xbin999.com/tag/%e7%88%b6%e4%b8%8e%e5%a5%b3/">父与女</a>吧？”<br>小家伙笑了：“哈哈，我都已经写好了。”</p>
+<p>—————以下是小乐的作文—————</p>
+<p>我卖掉的第一份货物</p>
+<p>今天是求是教育集团一年一度的贸易节，也是全校所有同学最喜爱的节日之一。</p>
+<p>吃完中饭，走廊上立刻“火”了。课桌和椅子相互碰撞，道路上人山人海，连一只小猫都钻不出去。我和刘智成、戴欣月，推着桌椅艰难的，以乌龟的速度向三年级办公室挪去。经过一番努力后，我们终于到达了目的地，摆好了摊。</p>
+<p>我拿着一个猴子橡皮和一个香蕉橡皮去卖。走到三（4）班门口时，看到徐安淇正坐在摊位上，我知道她是一名橡皮爱好者。我走到她面前，学着卖木雕的少年那课中黑人少年诚恳地说：“安淇，你买一个吧！”没想到她对我说：“啊，芷欣！我身无分文，我老爸正在给我宅急送的路上呢！”“Uh Oh！”我吃惊地叫了一声，又转向在徐安淇身旁的施蕴嘉，“买一个吧！”我对她说。她犹豫了一会儿，问我：“两块加起来几元？”我回答说：“三元。”她从皮夹里拿出三元钱，伸直了她又白双胖的手臂装作一本正经的样子将钱递给我，手还紧紧抓着钱。我忍不住笑了起来，见钱眼开，从她手里拔出了钱。这时徐安淇偷偷拿走了橡皮，我指了指她，施蕴嘉立刻回过神来，抢橡皮去了。</p>
+<p>这就是我卖掉的第一份货物，这一次的成功，也给了我下一次也能卖出去的信心。</p>
+<p>——————————————————</p>
+<p><img src="http://ww3.sinaimg.cn/mw690/6a7f0b64gw1e5p6tso46gj20hs0d9750.jpg" alt=""><br>题图是小乐在贸易节上买的，圣旨边上的是两支笔，有趣吧。</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/15/我卖掉的第一份货物/" data-id="cizapjgxy01mvw5c2t4lrpiry" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/15/我卖掉的第一份货物/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/作文/">作文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐作文/">小乐作文</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-使用块来做闭包" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/15/使用块来做闭包/" class="article-date">
+  <time datetime="2013-06-15T01:57:28.000Z" itemprop="datePublished">2013-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/15/使用块来做闭包/">使用块来做闭包</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="wrapper"><br><br>在Ruby中可以使用块(Blocks)来实现闭包(Closure)的功能，闭包听过很多回了，但都没仔细去看过，看维基中有关<a href="http://zh.wikipedia.org/zh/%E9%97%AD%E5%8C%85_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6" target="_blank" rel="external">闭包的定义</a> )：<br><br><em>在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。所以，有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。</em><br><br>太拗口了。不过简单来看，闭包不仅仅是函数，还包括了函数的上下文，而使用闭包可以使得你在函数的外部也引用函数体内的变量等上下文环境。<br><br>看一个例子：<br><br>    def nTimes(aThing)<br>      return proc { |n| aThing * n }<br>    end<br><br>    p1 = nTimes(23)<br>    p1.call(3)<br>    »<br>    69<br>    p1.call(4)<br>    »<br>    92<br>    p2 = nTimes(“Hello “)<br>    p2.call(3)<br>    »<br>    “Hello Hello Hello “<br>    <code>&lt;/pre&gt;
+
+    方法nTimes返回了一个Proc对象，其中引用了aThing这个方法中的变量，而在外部调用p1时仍可以使用aThings，这就是闭包。
+
+    在[闭包的概念、形式与应用](http://www.ibm.com/developerworks/cn/linux/l-cn-closure/)中有一段Ruby中闭包的描述：
+
+    _所谓 Block 是指紧跟在函数调用之后用大括号或 do/end 括起来的代码，Block 的开始部分（左大括号或 do）必须和函数调用在同一行。Block 也可以接受参数，参数列表必须用两个竖杠括起来放在最前面。Block 会被作为它前面的函数调用的参数，而在这个函数中可以使用关键字 yield 来调用该 Block。_
+
+    _Block 实际上就是匿名函数，它可以被调用，可以捕获上下文。由于语法上要求 Block 必须出现在函数调用的后面，所以 Block 不能直接作为函数的的返回值。要想从一个函数中返回 Block，必须使用 proc 或 lambda 函数把 Block 转化为对象才行。_
+
+    阮一峰也有篇文章[学习Javascript闭包（Closure）](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)提到了闭包的作用：“一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。”
+
+    读取函数内部变量之前的例子就可以看到，再写段测试代码验证变量的值保存在内存中。
+
+    &lt;pre&gt;</code><br>    def f<br>       i = 100<br>       puts i<br>       @@x = proc{ i = i + 1 }<br>       return proc{ i = i + 10 }<br>    end<br><br>    f.call » 100<br>    @@x.call » 101<br>    @@x.call » 102<br>    f.call » 100<br>    @@x.call » 101<br><br>    p = f<br>    f.call » 100<br>    p.call » 110<br>    p.call » 120<br>    f.call » 100<br>    p.call » 130<br>    <code>&lt;/pre&gt;
+
+    先看第一段调用，@[@x](https://github.com/x)是全局变量返回函数内部变量的方式，每调用一次做一次累加1，f.call把i置回100后，@@x.call又继续从100开始加起。
+
+    而第二段，p.call 同样把i累加10，且f.call把i置回100，并不影响p，因为两者也是不同的实例。
+
+    &lt;pre&gt;</code><br>    1.9.3p125 :223 &gt; f<br>    100<br>     =&gt; #<br>    1.9.3p125 :224 &gt; p<br>     =&gt; #<br><br></div>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/15/使用块来做闭包/" data-id="cizapjgk5014yw5c2hry677dw" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/15/使用块来做闭包/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/坚持100天学习Ruby/">坚持100天学习Ruby</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-公元纪年" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/14/公元纪年/" class="article-date">
+  <time datetime="2013-06-14T14:53:50.000Z" itemprop="datePublished">2013-06-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/14/公元纪年/">公元纪年</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>讲历史绕不开一个公元纪年，在和小乐画<a href="http://xbin999.com/2013/06/11/%e6%97%b6%e9%97%b4%e9%98%b6%e6%a2%af/">时间阶梯</a>时大量的历史事件都是发生在公元前。</p>
+<p>那么公元又是什么呢？</p>
+<p>给小乐念“天国、权力、荣耀，全是你的”，就说到了：</p>
+<p>耶稣诞生之前都称为公元纪年，他诞生之后称为公元。你一定认为他诞生的时间就是0年了。</p>
+<p>不过事实上，公元纪年的起点时公元1年，而没有公元0年。</p>
+<p>&nbsp;</p>
+<p>而更有意思的是，大约在公元500多年后，人们才开始以耶稣诞生的时间来纪年，可他们在开始纪年的时候，把时间给弄错了。后来人们才发现耶稣实际上生于公元纪年的4年之前，也就是说，在公元前4年，但是，等发现这个错误的时候，已经来不及改正了。</p>
+<p>&nbsp;</p>
+<p>“这真是个美丽的错误，错了要改就很困难了。比如说有人是600年出生的，结果要和他说你是596年出生的，有的知道要改，有的不知道，那就都要错乱了。”</p>
+<p>“那就是说，我实际上应该是1999年出生了。”</p>
+<p>&nbsp;</p>
+<p>维基百科中有关<a href="http://zh.wikipedia.org/wiki/%E5%85%AC%E5%85%83" target="_blank" rel="external">公元</a>的说明：公元525年，基督教神学家狄奧尼修斯·伊希格斯建议將耶穌生年定为纪元元年，以取代当时罗马教廷所採用的「戴克里先历」。伊希格斯並推算耶穌是生于罗马建国后754年，但后來的历史学家发现他的计算有误；現在一般以耶穌誕诞生在公元前7年～前4年左右的说法最可靠。</p>
+<p>看来这还不是个准数啊。</p>
+<p>&nbsp;</p>
+<p>中国是在辛亥革命后次年1912年，中华民国政府决定采用西历历法（阳历）作为国历，但纪元部分沿用中国传统，采用中华民国纪年。</p>
+<p>1949年中国人民共和国成立后放弃使用民国纪年，改采用世界通用的公元纪年制度。</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/14/公元纪年/" data-id="cizapjgkz0164w5c2l9mtblc3" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/14/公元纪年/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/希利尔讲世界史/">希利尔讲世界史</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-君士坦丁和礼拜天的由来" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/14/君士坦丁和礼拜天的由来/" class="article-date">
+  <time datetime="2013-06-14T14:50:23.000Z" itemprop="datePublished">2013-06-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/14/君士坦丁和礼拜天的由来/">君士坦丁和礼拜天的由来</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天小乐挑了个180的数字，就从180页开始讲。文章的题目很怪，希利尔说这个故事的题目要到最后才说。</p>
+<p>“为什么？”</p>
+<p>因为除非你听完这个故事，否则根本没法明白题目的意思，所以提前看题目也没用。</p>
+<p>“那我更想先知道这个题目了。”</p>
+<p>“OK.那我先告诉你题目是I_H<strong>S_</strong>V<em>__</em>。”</p>
+<p>“啊，那是什么意思啊？”</p>
+<p>“In Hoc Signo Vinces(以此为记，必将得胜)”</p>
+<p>“不懂。”</p>
+<p>那让我们来开始今天的故事吧。</p>
+<p>大约在公元300年，罗马有个皇帝叫<a href="http://zh.wikipedia.org/wiki/%E5%90%9B%E5%A3%AB%E5%9D%A6%E4%B8%81%E4%B8%80%E4%B8%96_(%E7%BD%97%E9%A9%AC%E5%B8%9D%E5%9B%BD" target="_blank" rel="external">君士坦丁</a>)，他不是基督徒。</p>
+<p>“君士坦丁堡？”</p>
+<p>嗯，君士坦丁信奉的是罗马的那些神灵，不过可能他对这些神也没多少信仰。</p>
+<p>有一次，君士坦丁带兵打战，做梦看见天空中有一个火焰般的十字架，十字架下方有一行拉丁文字“In Hoc Signo Vinces”意思是以此为记，必将得胜。君士坦丁认为如果他带十字架参加战斗，就一定能征服敌人。他就想试试也没坏处，就让士兵盾牌都做个十字架标记上阵杀敌，结果还真打赢了。罗马元老院为此还特地建了一座凯旋门叫君士坦丁凯旋门，就在罗马的广场上，有三个圆拱组成。</p>
+<p><img src="http://ww3.sinaimg.cn/mw690/6a7f0b64gw1e5o1rroqw0j20dw0a5aci.jpg" alt=""></p>
+<p>之后君士坦丁就宣布基督教在罗马帝国合法化，据说他死前正式受洗成为一名基督徒。</p>
+<p>君士坦丁对罗马城不是很喜欢，更愿意住在罗马帝国东部的一个城市拜占庭，就搬到那里去住，并作为都城。拜占庭又叫新罗马，后来干脆叫君士坦丁的城，希腊语中表示城市的词叫polis（音波利斯，表示城邦），例如Annapolis美国的安纳波利斯，Indianapolis美国的印第安纳波利斯，所以君士坦丁的城就是Constantinepolis，后来简化为Constantinople，也就是君士坦丁堡。</p>
+<p>在君士坦丁时代以前，罗马帝国每周是没有假日的，星期天没什么不同，该咋的还咋的。君士坦丁认为基督徒每周得有一天来礼拜上帝，这天是个神圣的日子，用英文表示就是holyday，简化holiday，也就是假日。</p>
+<p>“就是礼拜日？”</p>
+<p>所以君士坦丁把星期天定为基督教的休息日，这一天他们不用工作，专门礼拜上帝，就如星期六是犹太人的圣日，星期五是穆斯林的圣日一样。</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/14/君士坦丁和礼拜天的由来/" data-id="cizapjgnq01a3w5c2i61fvlmr" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/14/君士坦丁和礼拜天的由来/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/希利尔讲世界史/">希利尔讲世界史</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-给小乐讲希利尔讲世界史之英国大宪章" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/14/给小乐讲希利尔讲世界史之英国大宪章/" class="article-date">
+  <time datetime="2013-06-14T14:46:48.000Z" itemprop="datePublished">2013-06-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/14/给小乐讲希利尔讲世界史之英国大宪章/">给小乐讲“希利尔讲世界史”之英国大宪章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>给小乐说十字军东征的时候是先说“没人喜欢的约翰”，结果跳到了约翰的兄弟狮心王理查德，现在继续回到没人喜欢的约翰。约翰是历史上又一个讨人厌的恶棍，我们都不喜欢他，但愿意听人讲他的故事，当听到他得到应有的下场时，会高兴得鼓掌欢呼。</p>
+<p>约翰杀死了他的侄子亚瑟，怕他会代替自己做国王；想让自己的朋友做英国的主教，和罗马教皇发生了一场争执，结果教皇命令英国所有的教堂都关闭。英国人收到了震骇，人人都责怪约翰。教皇也威胁要另外选个人来代替约翰做英国国王，把约翰吓坏了，赶紧认错。</p>
+<p>希利尔说约翰是个猪脑袋，总是做这样那样的错事。他觉得地球是围着国王转的，其他人来到世界上就是来让国王有佣人使唤的。约翰不停地从富人们那里要钱，要多少就得给多少，不给就用刑，甚至处死。</p>
+<p>约翰的恶行变本加厉，最后贵族们再也无法忍受了。于是他们把约翰关起来，并挟持到泰晤士河畔一个叫伦尼米德的小岛上，迫使约翰同意签订他们用拉丁语写成的一些文件。这是在1215年，对约翰来说是个倒霉日子，而对英国人民来说是个黄道吉日。贵族们逼迫约翰签订的那份协议背称作《大宪章》。</p>
+<p>&nbsp;</p>
+<p>约翰连自己的名字都不会写，所以他不能象现在的人那样签字。不过，他戴着一个印章戒指，这种戒指就是给那些不会签名的人用的。要签名的时候，只要把一些烧化的蜡油滴到协议上需要签名的地方，然后把印章往蜡油上一按就行了。</p>
+<p>在大宪章里，约翰同意赋予贵族们一些权利，而我们现在来看，这些权利是每个人都应该无条件拥有的。比如说：人们当然有权保管自己的财产，也有权让这些财产不被他人非法夺走；除非人们确实做错了事情并受到了公平的审讯，否则不应被关进监狱，也不应被国王或任何人处罚。这就是《大宪章》里规定的两项权利，此外还有很多类似的条约。</p>
+<p><img src="http://ww4.sinaimg.cn/mw690/6a7f0b64gw1e5o1rsi9y9j208c05k74l.jpg" alt=""></p>
+<p>“这些权利在现在大家可能觉得是基本的，但以前可很了不起。你觉得财产是不是应该是自己的，要受到保护？”</p>
+<p>“是的。”</p>
+<p>“可是国王想夺走就夺走。”</p>
+<p>“或者政府。”</p>
+<p>“是的，比如你有一块土地，也许政府看上了，就会想要你的地，当然他可能会出点钱，比如100块，但这地可远远不只这个钱。还有人身安全，必须受到公平审讯后才能被处罚，要知道以前可都是国王说了算，我们国家也一样是皇帝说了算。”</p>
+<p>&nbsp;</p>
+<p>1215年的大宪章以法律限制了英国王室的绝对权利。不少日后編成的政府宪法，包括美国宪法，都是起源自大宪章。</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/14/给小乐讲希利尔讲世界史之英国大宪章/" data-id="cizapjhgg024nw5c2g6l1id1m" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/14/给小乐讲希利尔讲世界史之英国大宪章/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/希利尔讲世界史/">希利尔讲世界史</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-块和迭代器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/14/块和迭代器/" class="article-date">
+  <time datetime="2013-06-14T11:35:27.000Z" itemprop="datePublished">2013-06-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/14/块和迭代器/">块和迭代器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="wrapper"><br><br>块（Block）就是一块用{}或do/end括起来的一段代码，可以使用块来实现回调(callback)、迭代器(iterator)。<br><br>采用yield在方法中去调用块。<br><br>    def callback<br>      yield<br>      yield<br>    end<br>    callback { puts “In the block” }<br>    <code>&lt;/pre&gt;
+
+    调用yield的时候可以传递参数，在block里，使用“||”列出参数。
+
+    迭代器是针对容器（比如Array）中的连续的元素重复调用一个块的代码。
+
+    块中最后一个表达式的值作为返回值会返回给调用方法，作为yield的值。比如find：
+    &lt;pre&gt;</code><br>    class Array<br>      def find<br>        for i in 0…size<br>          value = self[i]<br>          return value if yield(value)<br>        end<br>        return nil<br>      end<br>    end<br><br>    [1, 3, 5, 7, 9].find {|v| v<em>v &gt; 30 }   »7<br>    <code>&lt;/pre&gt;
+
+    再看一个例子，实现了数组元素的累加和阶乘，这里each是个迭代器，inject也是个迭代器。
+    &lt;pre&gt;</code><br>    class Array<br>      def inject(n)<br>         each { |value| n = yield(n, value) }<br>         n<br>      end<br>      def sum<br>        inject(0) { |n, value| n + value }<br>      end<br>      def product<br>        inject(1) { |n, value| n </em> value }<br>      end<br>    end<br>    [ 1, 2, 3, 4, 5 ].sum »15<br>    [ 1, 2, 3, 4, 5 ].product »120<br>    <code>&lt;/pre&gt;
+
+    块可以用在一些事务控制中，比如打开文件，做某些事情，然后关闭，简单的做法可以使用块，打开文件，调用块，将文件句柄传递给块，当块返回时，关闭文件。这样就把关闭文件的责任从文件的使用者交给了文件对象本身。如：
+    &lt;pre&gt;</code><br>    class File<br>      def File.openAndProcess(<em>args)<br>        f = File.open(</em>args)<br>        yield f<br>        f.close()<br>      end<br>    end<br><br>    File.openAndProcess(“testfile”, “r”) do |aFile|<br>      print while aFile.gets<br>    end<br><br></div>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/14/块和迭代器/" data-id="cizapjgqc01dmw5c2j89j2aw8" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/14/块和迭代器/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/坚持100天学习Ruby/">坚持100天学习Ruby</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-继续说ruby中的容器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/12/继续说ruby中的容器/" class="article-date">
+  <time datetime="2013-06-12T08:55:05.000Z" itemprop="datePublished">2013-06-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/12/继续说ruby中的容器/">继续说Ruby中的容器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>有关数组下标的引用：</p>
+<ul>
+<li>可以使用下标；</li>
+<li>可以使用下标的开始加个数[start, count]；</li>
+<li>可以用范围的形式[start..stop]；</li>
+<li><p>下标如果是负数则表示反向。</p>
+<p>1.9.3p125 :001 &gt; a=[1,3,5,7,9]<br> =&gt; [1, 3, 5, 7, 9]<br>1.9.3p125 :002 &gt; a<br> =&gt; [1, 3, 5, 7, 9]<br>1.9.3p125 :003 &gt; a[0]<br> =&gt; 1<br>1.9.3p125 :004 &gt; a[0,2]<br> =&gt; [1, 3]<br>1.9.3p125 :005 &gt; a[0..2]<br> =&gt; [1, 3, 5]<br>1.9.3p125 :006 &gt; a[-3]<br> =&gt; 5<br>1.9.3p125 :007 &gt; a[-3,2]<br> =&gt; [5, 7]<br>1.9.3p125 :008 &gt; a[-3..-1]<br> =&gt; [5, 7, 9]<br> `<br>hash的优点是可以用任何对象作为索引，缺点是无序，无法简单用于堆栈或队列。</p>
+<p>小技巧：类方法采用self返回对象的本身引用，可以链式操作。<br><pre>`<br> class SongList<br>  def append(aSong)</pre></p>
+<pre><code>@songs.push(aSong)
+self
+</code></pre><p>  end<br>end</p>
+</li>
+</ul>
+<p>list = SongList.new list.append(song1).append(song2).append(song3)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/06/12/继续说ruby中的容器/" data-id="cizapjhgr024xw5c2zus1waqg" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/06/12/继续说ruby中的容器/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/坚持100天学习Ruby/">坚持100天学习Ruby</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/30/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/106/">106</a><a class="extend next" rel="next" href="/page/32/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">fuyunv</h3>
+  <div class="widget">
+    <img src="http://xbin999.qiniudn.com/images/qrcode_for_gh_ffed660b754c_258.jpg">
+  </div>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><span class="category-list-count">117</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a><span class="category-list-count">38</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/家有小乐/">家有小乐</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小乐/">小乐</a><span class="category-list-count">336</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/100天行动/" style="font-size: 10.97px;">100天行动</a> <a href="/tags/5W1H1R/" style="font-size: 10px;">5W1H1R</a> <a href="/tags/5分钟游戏/" style="font-size: 10.97px;">5分钟游戏</a> <a href="/tags/APP/" style="font-size: 10px;">APP</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/BOSS/" style="font-size: 10.32px;">BOSS</a> <a href="/tags/Beatles/" style="font-size: 10px;">Beatles</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/China/" style="font-size: 11.94px;">China</a> <a href="/tags/DIY/" style="font-size: 12.26px;">DIY</a> <a href="/tags/English/" style="font-size: 10.65px;">English</a> <a href="/tags/FIT/" style="font-size: 10px;">FIT</a> <a href="/tags/Filezilla/" style="font-size: 10px;">Filezilla</a> <a href="/tags/Funny/" style="font-size: 18.71px;">Funny</a> <a href="/tags/Fusion-Drive/" style="font-size: 10px;">Fusion Drive</a> <a href="/tags/GFW/" style="font-size: 10.65px;">GFW</a> <a href="/tags/GoDaddy/" style="font-size: 10.32px;">GoDaddy</a> <a href="/tags/Google-Drive/" style="font-size: 10px;">Google Drive</a> <a href="/tags/Google-Reader/" style="font-size: 10.32px;">Google Reader</a> <a href="/tags/Homebrew/" style="font-size: 10.32px;">Homebrew</a> <a href="/tags/IT/" style="font-size: 19.35px;">IT</a> <a href="/tags/ImageMagick/" style="font-size: 10px;">ImageMagick</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/MacPorts/" style="font-size: 10px;">MacPorts</a> <a href="/tags/NPS/" style="font-size: 10px;">NPS</a> <a href="/tags/Nike-GPS/" style="font-size: 10px;">Nike+GPS</a> <a href="/tags/OCW/" style="font-size: 10px;">OCW</a> <a href="/tags/Office/" style="font-size: 10.32px;">Office</a> <a href="/tags/Openomy/" style="font-size: 11.29px;">Openomy</a> <a href="/tags/P-E-T/" style="font-size: 10.32px;">P.E.T</a> <a href="/tags/Politics/" style="font-size: 10px;">Politics</a> <a href="/tags/PostgreSQL/" style="font-size: 10px;">PostgreSQL</a> <a href="/tags/QQ/" style="font-size: 10px;">QQ</a> <a href="/tags/ROR/" style="font-size: 10px;">ROR</a> <a href="/tags/RSS/" style="font-size: 10px;">RSS</a> <a href="/tags/Rails/" style="font-size: 10px;">Rails</a> <a href="/tags/Ruby/" style="font-size: 10px;">Ruby</a> <a href="/tags/RubyGem/" style="font-size: 10px;">RubyGem</a> <a href="/tags/SBS/" style="font-size: 10px;">SBS</a> <a href="/tags/SEIM/" style="font-size: 10px;">SEIM</a> <a href="/tags/SKY/" style="font-size: 10px;">SKY</a> <a href="/tags/SNS/" style="font-size: 10.32px;">SNS</a> <a href="/tags/SSD/" style="font-size: 10px;">SSD</a> <a href="/tags/ShadowSocks/" style="font-size: 10px;">ShadowSocks</a> <a href="/tags/Sudoku/" style="font-size: 12.26px;">Sudoku</a> <a href="/tags/TmpDisk/" style="font-size: 10px;">TmpDisk</a> <a href="/tags/Tunnelblick/" style="font-size: 10px;">Tunnelblick</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/Weico/" style="font-size: 10px;">Weico</a> <a href="/tags/Yosemite/" style="font-size: 10px;">Yosemite</a> <a href="/tags/Zingo/" style="font-size: 10px;">Zingo</a> <a href="/tags/adminer/" style="font-size: 10px;">adminer</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/blogetery/" style="font-size: 10px;">blogetery</a> <a href="/tags/buzzsync/" style="font-size: 10px;">buzzsync</a> <a href="/tags/chnroutes/" style="font-size: 10px;">chnroutes</a> <a href="/tags/cowsay/" style="font-size: 10px;">cowsay</a> <a href="/tags/curl/" style="font-size: 10.32px;">curl</a> <a href="/tags/develop/" style="font-size: 10px;">develop</a> <a href="/tags/douban/" style="font-size: 10px;">douban</a> <a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a> <a href="/tags/evernote/" style="font-size: 10px;">evernote</a> <a href="/tags/extension/" style="font-size: 10.32px;">extension</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/faq/" style="font-size: 10.65px;">faq</a> <a href="/tags/follow5/" style="font-size: 10px;">follow5</a> <a href="/tags/freemind/" style="font-size: 10px;">freemind</a> <a href="/tags/fuyunv/" style="font-size: 20px;">fuyunv</a> <a href="/tags/git/" style="font-size: 10.97px;">git</a> <a href="/tags/gmail/" style="font-size: 10.32px;">gmail</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/google-earth/" style="font-size: 10px;">google earth</a> <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/hdfs/" style="font-size: 10px;">hdfs</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/horrible-histories/" style="font-size: 11.29px;">horrible histories</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/ios-app/" style="font-size: 10.65px;">ios app</a> <a href="/tags/iosapp/" style="font-size: 10.65px;">iosapp</a> <a href="/tags/iphone/" style="font-size: 10.65px;">iphone</a> <a href="/tags/it/" style="font-size: 10px;">it</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/koding/" style="font-size: 10px;">koding</a> <a href="/tags/mac/" style="font-size: 14.84px;">mac</a> <a href="/tags/mactips/" style="font-size: 11.61px;">mactips</a> <a href="/tags/mail/" style="font-size: 10.32px;">mail</a> <a href="/tags/markdown/" style="font-size: 10.97px;">markdown</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/objective-c/" style="font-size: 10px;">objective-c</a> <a href="/tags/one-piece/" style="font-size: 10.65px;">one piece</a> <a href="/tags/openfeint/" style="font-size: 10px;">openfeint</a> <a href="/tags/outlook/" style="font-size: 10.32px;">outlook</a> <a href="/tags/pow/" style="font-size: 10px;">pow</a> <a href="/tags/proxy/" style="font-size: 10.32px;">proxy</a> <a href="/tags/qiniu/" style="font-size: 10px;">qiniu</a> <a href="/tags/quizlet/" style="font-size: 10px;">quizlet</a> <a href="/tags/route/" style="font-size: 10px;">route</a> <a href="/tags/ruby/" style="font-size: 17.42px;">ruby</a> <a href="/tags/running/" style="font-size: 10.65px;">running</a> <a href="/tags/safari/" style="font-size: 10px;">safari</a> <a href="/tags/secret-socks/" style="font-size: 10px;">secret socks</a> <a href="/tags/sed/" style="font-size: 10px;">sed</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/skitch/" style="font-size: 10px;">skitch</a> <a href="/tags/slideshare/" style="font-size: 10px;">slideshare</a> <a href="/tags/spotlight/" style="font-size: 10px;">spotlight</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/ssh/" style="font-size: 10.65px;">ssh</a> <a href="/tags/symbol/" style="font-size: 10px;">symbol</a> <a href="/tags/tip/" style="font-size: 10.65px;">tip</a> <a href="/tags/tool/" style="font-size: 12.9px;">tool</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/tour/" style="font-size: 10px;">tour</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/twitter/" style="font-size: 10px;">twitter</a> <a href="/tags/usassh/" style="font-size: 10.32px;">usassh</a> <a href="/tags/wordpress/" style="font-size: 11.61px;">wordpress</a> <a href="/tags/workflow/" style="font-size: 10px;">workflow</a> <a href="/tags/xmlrpc/" style="font-size: 10px;">xmlrpc</a> <a href="/tags/youtube/" style="font-size: 10px;">youtube</a> <a href="/tags/一百天行动/" style="font-size: 11.61px;">一百天行动</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/万历十五年/" style="font-size: 14.84px;">万历十五年</a> <a href="/tags/三国/" style="font-size: 10.65px;">三国</a> <a href="/tags/三毛/" style="font-size: 10.65px;">三毛</a> <a href="/tags/不是问题的问题/" style="font-size: 10.65px;">不是问题的问题</a> <a href="/tags/世说新语/" style="font-size: 11.29px;">世说新语</a> <a href="/tags/中文/" style="font-size: 10px;">中文</a> <a href="/tags/乐乐的诗/" style="font-size: 10px;">乐乐的诗</a> <a href="/tags/乐妈写/" style="font-size: 13.55px;">乐妈写</a> <a href="/tags/乐妈说/" style="font-size: 10px;">乐妈说</a> <a href="/tags/习惯/" style="font-size: 10px;">习惯</a> <a href="/tags/书、音乐、电影/" style="font-size: 14.52px;">书、音乐、电影</a> <a href="/tags/书信/" style="font-size: 10.32px;">书信</a> <a href="/tags/书单/" style="font-size: 10.97px;">书单</a> <a href="/tags/书法/" style="font-size: 10.65px;">书法</a> <a href="/tags/产品体验/" style="font-size: 10.65px;">产品体验</a> <a href="/tags/亲子交流/" style="font-size: 10px;">亲子交流</a> <a href="/tags/亲子沟通/" style="font-size: 10.97px;">亲子沟通</a> <a href="/tags/人文/" style="font-size: 10px;">人文</a> <a href="/tags/人类的故事/" style="font-size: 10px;">人类的故事</a> <a href="/tags/作文/" style="font-size: 11.61px;">作文</a> <a href="/tags/倾听/" style="font-size: 10.32px;">倾听</a> <a href="/tags/健康与保健/" style="font-size: 10.32px;">健康与保健</a> <a href="/tags/儿童教育/" style="font-size: 19.03px;">儿童教育</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/全职妈妈/" style="font-size: 10px;">全职妈妈</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/兴趣/" style="font-size: 10.65px;">兴趣</a> <a href="/tags/兵役制/" style="font-size: 10px;">兵役制</a> <a href="/tags/其他/" style="font-size: 16.45px;">其他</a> <a href="/tags/内容/" style="font-size: 10px;">内容</a> <a href="/tags/写作/" style="font-size: 10px;">写作</a> <a href="/tags/凡尔纳/" style="font-size: 10px;">凡尔纳</a> <a href="/tags/分享/" style="font-size: 10px;">分享</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/分类/" style="font-size: 10px;">分类</a> <a href="/tags/分级阅读/" style="font-size: 10px;">分级阅读</a> <a href="/tags/创意/" style="font-size: 10px;">创意</a> <a href="/tags/剧本/" style="font-size: 10px;">剧本</a> <a href="/tags/动画片/" style="font-size: 10px;">动画片</a> <a href="/tags/北京/" style="font-size: 10px;">北京</a> <a href="/tags/十二生肖/" style="font-size: 10px;">十二生肖</a> <a href="/tags/十大/" style="font-size: 10px;">十大</a> <a href="/tags/半玩伴学/" style="font-size: 10.65px;">半玩伴学</a> <a href="/tags/南航/" style="font-size: 10px;">南航</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/历史/" style="font-size: 18.39px;">历史</a> <a href="/tags/历史上的今天/" style="font-size: 10.97px;">历史上的今天</a> <a href="/tags/古代历史/" style="font-size: 10px;">古代历史</a> <a href="/tags/古文/" style="font-size: 11.29px;">古文</a> <a href="/tags/古诗/" style="font-size: 10.97px;">古诗</a> <a href="/tags/咬指甲/" style="font-size: 10px;">咬指甲</a> <a href="/tags/哲学/" style="font-size: 10.32px;">哲学</a> <a href="/tags/唐诗/" style="font-size: 11.29px;">唐诗</a> <a href="/tags/唐诗宋词/" style="font-size: 10px;">唐诗宋词</a> <a href="/tags/四大美女/" style="font-size: 10px;">四大美女</a> <a href="/tags/团队/" style="font-size: 10.32px;">团队</a> <a href="/tags/国航/" style="font-size: 10px;">国航</a> <a href="/tags/图片处理/" style="font-size: 10px;">图片处理</a> <a href="/tags/土豆/" style="font-size: 10px;">土豆</a> <a href="/tags/圣诞/" style="font-size: 10.32px;">圣诞</a> <a href="/tags/地理/" style="font-size: 10.32px;">地理</a> <a href="/tags/坚持100天学习Ruby/" style="font-size: 17.1px;">坚持100天学习Ruby</a> <a href="/tags/埃及/" style="font-size: 10.32px;">埃及</a> <a href="/tags/埃及守护神/" style="font-size: 10px;">埃及守护神</a> <a href="/tags/培训/" style="font-size: 10px;">培训</a> <a href="/tags/夏山/" style="font-size: 10px;">夏山</a> <a href="/tags/夏山学校/" style="font-size: 10.65px;">夏山学校</a> <a href="/tags/大众点评/" style="font-size: 10px;">大众点评</a> <a href="/tags/奥数/" style="font-size: 12.9px;">奥数</a> <a href="/tags/学习/" style="font-size: 10.32px;">学习</a> <a href="/tags/学习方法/" style="font-size: 13.87px;">学习方法</a> <a href="/tags/客户分析/" style="font-size: 10px;">客户分析</a> <a href="/tags/宫崎骏/" style="font-size: 10px;">宫崎骏</a> <a href="/tags/家庭/" style="font-size: 10px;">家庭</a> <a href="/tags/家庭美德/" style="font-size: 12.26px;">家庭美德</a> <a href="/tags/家长会/" style="font-size: 10.32px;">家长会</a> <a href="/tags/宽容/" style="font-size: 10px;">宽容</a> <a href="/tags/寓言/" style="font-size: 10px;">寓言</a> <a href="/tags/对联/" style="font-size: 10px;">对联</a> <a href="/tags/对话/" style="font-size: 12.26px;">对话</a> <a href="/tags/小乐/" style="font-size: 19.68px;">小乐</a> <a href="/tags/小乐作品/" style="font-size: 12.9px;">小乐作品</a> <a href="/tags/小乐作文/" style="font-size: 15.16px;">小乐作文</a> <a href="/tags/小乐学钢琴/" style="font-size: 10px;">小乐学钢琴</a> <a href="/tags/小乐说/" style="font-size: 15.48px;">小乐说</a> <a href="/tags/小乐趣问/" style="font-size: 10px;">小乐趣问</a> <a href="/tags/小乐长安行/" style="font-size: 10.32px;">小乐长安行</a> <a href="/tags/小乐问/" style="font-size: 10px;">小乐问</a> <a href="/tags/小升初/" style="font-size: 11.29px;">小升初</a> <a href="/tags/小学活动/" style="font-size: 10px;">小学活动</a> <a href="/tags/小技巧/" style="font-size: 10.97px;">小技巧</a> <a href="/tags/小说/" style="font-size: 10.32px;">小说</a> <a href="/tags/小马过河/" style="font-size: 10px;">小马过河</a> <a href="/tags/山/" style="font-size: 10px;">山</a> <a href="/tags/工作杂记/" style="font-size: 17.74px;">工作杂记</a> <a href="/tags/希利尔讲世界史/" style="font-size: 14.19px;">希利尔讲世界史</a> <a href="/tags/庐山/" style="font-size: 10px;">庐山</a> <a href="/tags/建站/" style="font-size: 10px;">建站</a> <a href="/tags/影评/" style="font-size: 10.32px;">影评</a> <a href="/tags/微博/" style="font-size: 10.65px;">微博</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/思维/" style="font-size: 10px;">思维</a> <a href="/tags/思维导图/" style="font-size: 10.32px;">思维导图</a> <a href="/tags/思考/" style="font-size: 11.29px;">思考</a> <a href="/tags/恶魔果实/" style="font-size: 10px;">恶魔果实</a> <a href="/tags/悲剧/" style="font-size: 10px;">悲剧</a> <a href="/tags/想象/" style="font-size: 10px;">想象</a> <a href="/tags/感悟/" style="font-size: 10.65px;">感悟</a> <a href="/tags/成语/" style="font-size: 10.65px;">成语</a> <a href="/tags/成长/" style="font-size: 10.97px;">成长</a> <a href="/tags/手机游戏/" style="font-size: 10px;">手机游戏</a> <a href="/tags/扑克游戏/" style="font-size: 10px;">扑克游戏</a> <a href="/tags/批判性思维/" style="font-size: 10.32px;">批判性思维</a> <a href="/tags/技巧/" style="font-size: 10.65px;">技巧</a> <a href="/tags/技能教养法/" style="font-size: 10px;">技能教养法</a> <a href="/tags/拖延/" style="font-size: 10.32px;">拖延</a> <a href="/tags/换牙/" style="font-size: 10px;">换牙</a> <a href="/tags/提问题/" style="font-size: 10.32px;">提问题</a> <a href="/tags/搞笑/" style="font-size: 10.32px;">搞笑</a> <a href="/tags/支撑系统/" style="font-size: 10px;">支撑系统</a> <a href="/tags/故乡/" style="font-size: 10px;">故乡</a> <a href="/tags/教育/" style="font-size: 16.77px;">教育</a> <a href="/tags/教育方法/" style="font-size: 10px;">教育方法</a> <a href="/tags/数学/" style="font-size: 12.9px;">数学</a> <a href="/tags/数据建模/" style="font-size: 10px;">数据建模</a> <a href="/tags/数据模型/" style="font-size: 10.32px;">数据模型</a> <a href="/tags/新闻与政治/" style="font-size: 10.97px;">新闻与政治</a> <a href="/tags/方法/" style="font-size: 14.19px;">方法</a> <a href="/tags/旅游/" style="font-size: 12.26px;">旅游</a> <a href="/tags/旅游攻略/" style="font-size: 10.32px;">旅游攻略</a> <a href="/tags/旅行/" style="font-size: 11.61px;">旅行</a> <a href="/tags/无锡/" style="font-size: 10px;">无锡</a> <a href="/tags/时间管理/" style="font-size: 10.32px;">时间管理</a> <a href="/tags/明朝/" style="font-size: 10px;">明朝</a> <a href="/tags/明朝那些事儿/" style="font-size: 10px;">明朝那些事儿</a> <a href="/tags/显卡驱动/" style="font-size: 10px;">显卡驱动</a> <a href="/tags/暑假/" style="font-size: 10.65px;">暑假</a> <a href="/tags/朋友/" style="font-size: 11.29px;">朋友</a> <a href="/tags/杂记/" style="font-size: 12.9px;">杂记</a> <a href="/tags/杨红樱/" style="font-size: 10px;">杨红樱</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/梦想/" style="font-size: 11.29px;">梦想</a> <a href="/tags/正则表达式/" style="font-size: 10.32px;">正则表达式</a> <a href="/tags/步行/" style="font-size: 10px;">步行</a> <a href="/tags/武侠/" style="font-size: 10px;">武侠</a> <a href="/tags/死亡诗社/" style="font-size: 10px;">死亡诗社</a> <a href="/tags/民国/" style="font-size: 10.97px;">民国</a> <a href="/tags/民谣/" style="font-size: 10px;">民谣</a> <a href="/tags/沟通/" style="font-size: 11.61px;">沟通</a> <a href="/tags/治水/" style="font-size: 10px;">治水</a> <a href="/tags/浦江/" style="font-size: 10.65px;">浦江</a> <a href="/tags/海贼王/" style="font-size: 10.32px;">海贼王</a> <a href="/tags/游戏/" style="font-size: 11.61px;">游戏</a> <a href="/tags/游记/" style="font-size: 10.32px;">游记</a> <a href="/tags/爱心树/" style="font-size: 10px;">爱心树</a> <a href="/tags/父与女/" style="font-size: 10.32px;">父与女</a> <a href="/tags/牙仙子/" style="font-size: 10.32px;">牙仙子</a> <a href="/tags/独立思考/" style="font-size: 10.32px;">独立思考</a> <a href="/tags/猜谜/" style="font-size: 10.97px;">猜谜</a> <a href="/tags/玩中学/" style="font-size: 13.55px;">玩中学</a> <a href="/tags/环保/" style="font-size: 10.32px;">环保</a> <a href="/tags/理念/" style="font-size: 10px;">理念</a> <a href="/tags/理解/" style="font-size: 10px;">理解</a> <a href="/tags/生活/" style="font-size: 18.06px;">生活</a> <a href="/tags/生病/" style="font-size: 10px;">生病</a> <a href="/tags/用户/" style="font-size: 10px;">用户</a> <a href="/tags/用户体验/" style="font-size: 10px;">用户体验</a> <a href="/tags/电信/" style="font-size: 11.61px;">电信</a> <a href="/tags/电影/" style="font-size: 12.58px;">电影</a> <a href="/tags/百度地图/" style="font-size: 10px;">百度地图</a> <a href="/tags/百科/" style="font-size: 10px;">百科</a> <a href="/tags/真实/" style="font-size: 10px;">真实</a> <a href="/tags/真诚/" style="font-size: 10px;">真诚</a> <a href="/tags/知乎/" style="font-size: 10px;">知乎</a> <a href="/tags/神话/" style="font-size: 10.32px;">神话</a> <a href="/tags/离婚率/" style="font-size: 10px;">离婚率</a> <a href="/tags/科普/" style="font-size: 10.32px;">科普</a> <a href="/tags/移动互联网/" style="font-size: 10px;">移动互联网</a> <a href="/tags/穿越/" style="font-size: 10px;">穿越</a> <a href="/tags/童心/" style="font-size: 10px;">童心</a> <a href="/tags/童话/" style="font-size: 10px;">童话</a> <a href="/tags/童趣/" style="font-size: 10.97px;">童趣</a> <a href="/tags/笑话/" style="font-size: 10px;">笑话</a> <a href="/tags/精灵社/" style="font-size: 10.97px;">精灵社</a> <a href="/tags/绝对小孩/" style="font-size: 10px;">绝对小孩</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/美国语文/" style="font-size: 10px;">美国语文</a> <a href="/tags/美德/" style="font-size: 10.65px;">美德</a> <a href="/tags/翻墙/" style="font-size: 10.65px;">翻墙</a> <a href="/tags/翻译/" style="font-size: 12.9px;">翻译</a> <a href="/tags/考古/" style="font-size: 10.65px;">考古</a> <a href="/tags/聪明题/" style="font-size: 10.65px;">聪明题</a> <a href="/tags/胡适/" style="font-size: 10.97px;">胡适</a> <a href="/tags/脑洞/" style="font-size: 10px;">脑洞</a> <a href="/tags/节气/" style="font-size: 10px;">节气</a> <a href="/tags/英剧/" style="font-size: 10.32px;">英剧</a> <a href="/tags/英国/" style="font-size: 10px;">英国</a> <a href="/tags/英语/" style="font-size: 13.23px;">英语</a> <a href="/tags/蒋勋/" style="font-size: 10px;">蒋勋</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/视频/" style="font-size: 10.32px;">视频</a> <a href="/tags/角色/" style="font-size: 10px;">角色</a> <a href="/tags/设计/" style="font-size: 10.32px;">设计</a> <a href="/tags/诗/" style="font-size: 10px;">诗</a> <a href="/tags/语文/" style="font-size: 10.32px;">语文</a> <a href="/tags/诺贝尔奖/" style="font-size: 10px;">诺贝尔奖</a> <a href="/tags/读书/" style="font-size: 15.48px;">读书</a> <a href="/tags/课件/" style="font-size: 10.65px;">课件</a> <a href="/tags/调查/" style="font-size: 10px;">调查</a> <a href="/tags/谜语/" style="font-size: 10.97px;">谜语</a> <a href="/tags/贝尔金/" style="font-size: 10px;">贝尔金</a> <a href="/tags/越狱/" style="font-size: 10px;">越狱</a> <a href="/tags/越读馆/" style="font-size: 10.65px;">越读馆</a> <a href="/tags/趣课题/" style="font-size: 10px;">趣课题</a> <a href="/tags/跑步/" style="font-size: 10.32px;">跑步</a> <a href="/tags/输赢/" style="font-size: 10px;">输赢</a> <a href="/tags/邮政/" style="font-size: 10px;">邮政</a> <a href="/tags/配音/" style="font-size: 10px;">配音</a> <a href="/tags/金庸/" style="font-size: 10.65px;">金庸</a> <a href="/tags/问答/" style="font-size: 10.32px;">问答</a> <a href="/tags/问题讨论/" style="font-size: 10px;">问题讨论</a> <a href="/tags/阅读/" style="font-size: 16.13px;">阅读</a> <a href="/tags/陪小乐学习/" style="font-size: 15.81px;">陪小乐学习</a> <a href="/tags/随手记/" style="font-size: 10px;">随手记</a> <a href="/tags/青春/" style="font-size: 10px;">青春</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a> <a href="/tags/音频分享/" style="font-size: 10px;">音频分享</a> <a href="/tags/马来西亚/" style="font-size: 10.97px;">马来西亚</a> <a href="/tags/骑行/" style="font-size: 10.65px;">骑行</a> <a href="/tags/魔方/" style="font-size: 10px;">魔方</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/11/">November 2011</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/08/">August 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/06/">June 2010</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/05/">May 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/04/">April 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/03/">March 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/01/">January 2010</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/04/">April 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/12/">December 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/05/">May 2008</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/10/">October 2007</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/09/">September 2007</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/08/">August 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/07/">July 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/06/">June 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/05/">May 2007</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/04/">April 2007</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/03/">March 2007</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/02/">February 2007</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/01/">January 2007</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/12/">December 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/11/">November 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/10/">October 2006</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/05/">May 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/04/">April 2006</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/03/">March 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/02/">February 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/01/">January 2006</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/12/">December 2005</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/11/">November 2005</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/10/">October 2005</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/09/">September 2005</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/08/">August 2005</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/07/">July 2005</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/06/">June 2005</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/05/">May 2005</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/04/">April 2005</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/03/">March 2005</a><span class="archive-list-count">16</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/18/Google Drive无法登录/">Google Drive无法登录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/">小乐的小学阅读私家书单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/05/nao-dong-de-yi-tian/">脑洞的一天</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/">悦读2016年4月推荐书单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/">当孩子面临“你怎么不为班级着想”的指责时</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://themes.xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Bin Yang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xbin999"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55026585-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </div>
+</body>
+</html>

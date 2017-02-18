@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>杨先生村民</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:type" content="website">
+<meta property="og:title" content="杨先生村民">
+<meta property="og:url" content="http://xbin999.com/index.html">
+<meta property="og:site_name" content="杨先生村民">
+<meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="杨先生村民">
+<meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
+<meta name="twitter:creator" content="@xbin999">
+  
+    <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">杨先生村民</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">不惑，至简</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="xbin999.com">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Google Drive无法登录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/18/Google Drive无法登录/" class="article-date">
+  <time datetime="2017-02-18T03:52:23.000Z" itemprop="datePublished">2017-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/18/Google Drive无法登录/">Google Drive无法登录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照<a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="external">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a>一文，主要是Google Drive登录并没有能走SS代理，只有通过<a href="https://www.privoxy.org/" target="_blank" rel="external">Privoxy</a>代理将http/https转发到SS。</p>
+<p>不过我尝试使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forward-socks5 .google.com 127.0.0.1:1080</div></pre></td></tr></table></figure>
+<p>能一直登录到最后，但完成后就显示是未登录。无奈只有把域名改成”/”全匹配，但这样造成所有http/https都会走shadowsocks代理。</p>
+<p>有关Privoxy的启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Applications/Privoxy&gt; sudo ./stopPrivoxy.sh ; sudo ./startPrivoxy.sh</div></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="external">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a></li>
+<li><a href="https://wutong.me/archives/472.html" target="_blank" rel="external">实现Charles和Shadowsocks的共存</a></li>
+<li><a href="https://gist.github.com/Alexniver/9a4f1791fe4305b0750a" target="_blank" rel="external">ubuntu下, 使用shadowsock和Privoxy帮助你在命令行中, 无障碍进行go get</a></li>
+<li><a href="https://www.zfanw.com/blog/privoxy-tutorial.html" target="_blank" rel="external">Privoxy 简明教程</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2017/02/18/Google Drive无法登录/" data-id="cizapjg1w000ow5c235o9jc1h" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2017/02/18/Google Drive无法登录/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Drive/">Google Drive</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ShadowSocks/">ShadowSocks</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/" class="article-date">
+  <time datetime="2016-05-08T08:27:14.000Z" itemprop="datePublished">2016-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/">小乐的小学阅读私家书单</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前段时间看到阿啃老师推荐了一份《<a href="https://mp.weixin.qq.com/s?__biz=MzAxMzA5MjU3OA==&amp;mid=2650333334&amp;idx=1&amp;sn=6fe3fab2616e12f93d464effff59e3f6&amp;scene=25&amp;srcid=0508J5DtC9GQ5QCCCzj2qRrg#wechat_redirec t" target="_blank" rel="external">概不负责的9岁儿童书单</a>》，说到“菜虫是男孩，荐书有性别倾向”，可以考虑有个女孩书单。我想正可以筛选筛选小乐看的书，做个参考，也免得每次朋友问书时想半天，正好也算是小乐小学毕业前的阅读小结。</p>
+<p>本书单的选择原则主要三条：<br>第一都是小乐看过和表示喜欢的，有些书我觉得不错，但她不喜欢就只有割爱，所以书单和小乐的阅读喜好密切先关；<br>第二市面上流传很广的不纳入，比如名气很大的四大名著，或者一些世界名著《伊索寓言》、《简爱》，学校里孩子大多都会看的《查理九世》、《笑猫日记》等；<br>第三同类型书中部分加了我的一点点倾向。只不过我不像阿啃老师那样把书都看过，有总体把握，自己的深度也不够，只能更表示不负责任了。</p>
+<p>进入正单前，先来个小学前幼儿期的序，我们看的绘本不多，就只选家中仍一直保留最喜欢的五本。</p>
+<ul>
+<li>阿罗系列 [美]克罗格特.约翰逊 / 孙晓娜 / 接力出版社 / 2004–1–1</li>
+<li><a href="[查理与劳拉系列](http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000102&amp;itemidx=1#wechat_redirect">查理与劳拉系列</a>) (英)罗伦·乔尔德 编绘 / 小皮 / 接力出版社 / 2010年3月</li>
+<li>不一样的卡梅拉系列 （法）克利斯提昂·约里波瓦、（法）艾利施 绘 / 郑迪蔚 / 2011–11</li>
+<li>你给我读，我给你念 (美)玛丽·安·霍贝尔曼|译者:李永毅|绘画:(美)迈克尔·埃姆博尔莱 / 李永毅 / 北京科技 / 2009–4</li>
+<li>缤纷世界——儿童地图绘本 拉露斯出版社 / 广东省地图出版社 / 2006–11</li>
+</ul>
+<p>进入小学阶段后，从年龄段粗略可以分高低两个阶段，低年级阶段基本我选，（有关选书参见<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=210058816&amp;idx=1&amp;sn=1e553083796f2d5bf1cb03cb3eaa420b&amp;scene=21#wechat_redirect" target="_blank" rel="external">如何让孩子爱上阅读</a>）现在她自己也会提一些想看的书，五年级后所覆盖的阅读范围和成人相差不大，看明白多少只有随时间慢慢来了。比如《<a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=100004199&amp;itemidx=1&amp;sign=1706f5dfed4df9d2a51f05b9e33f4609#wechat_redirect" target="_blank" rel="external">万历十五年</a>》、《<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204431236&amp;idx=1&amp;sn=012be4476051a008d7edd9ef900a6550&amp;scene=21#wechat_redirect" target="_blank" rel="external">神祇、陵墓与学者:考古学传奇</a>》都是睡前我给她念的。</p>
+<ol>
+<li>剑桥少儿生物百科/剑桥少儿科技百科/剑桥少儿文明百科 中国宇航出版社 2004年2月</li>
+<li>少儿职业志向指南 (法)帕蒂西亚·欧尔 / 黄凌霞译 / 接力出版社 / 2011年7月</li>
+<li>森林里的科学童话:四季的角度 四月/文，大粒儿盐/绘，浙江大学出版社/2012年1月</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402026502&amp;idx=1&amp;sn=fb09ae6352849c048e0857c11caee382&amp;scene=21#wechat_redirect" target="_blank" rel="external">写给孩子的哲学启蒙书</a> (法)碧姬·拉贝、米歇尔·毕奇、绘画:(法)雅克·阿扎姆 / 刘岩、王川娅 / 广西师大 / 2009–5 </li>
+<li>阿基米德儿童科普绘本系列 [法] / 中国大百科全书出版社 / 2012–5</li>
+<li>可怕的科学•经典数学系列 (英)卡佳坦•波斯基特 / 北京出版集团公司,北京少年儿童出版社 / 2012–1–1</li>
+<li>中国科普名家名作数学系列精选辑 李毓佩等/中国少年儿童出版社/2012年4月</li>
+<li>希腊三部曲 [英] 杰拉尔德•达雷尔（Gerald Durrell）/ 唐嘉慧 译 / 浙江人民出版社 / 2012–11</li>
+<li>DK莎士比亚百科 英国DK出版社 / 徐嘉、鲍忠明、于军琴 / 电子工业出版社 / 2016–5–1</li>
+<li>GO科学向前冲 韩 向日葵工作室/千太阳译/中信出版社/2010–5</li>
+<li>美国国家地理少儿版百科 美国国家地理学会 编 浙江少年儿童出版社/ 2010–12 </li>
+<li>小柏拉图系列 <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204164691&amp;idx=1&amp;sn=8439b12a5715adb6007c2656079ae340&amp;scene=21#wechat_redirect" target="_blank" rel="external">第欧根尼的另类生活</a>: 小柏拉图 [法]严·马尔尚 著、[法]文森特·索莱尔 绘 / 戴敏 / 浙江少年儿童出版社 / 2014–4</li>
+<li>小狗钱钱 [德] 博多·舍费尔 / 王钟欣、余茜 / 南海出版公司 / 2009–2–1</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=203348848&amp;idx=1&amp;sn=f3c214c0678978a03d747dca1c7d79a7&amp;scene=21#wechat_redirect" target="_blank" rel="external">航海王（海贼王/One Piece）</a> 尾田荣一郎/浙江人民美术出版社</li>
+<li>蔡志忠古典漫画 蔡志忠/生活·读书·新知三联书店/2001年4月</li>
+<li>一个人去跑步 马拉松1年级生 高木直子 图文 洪俞君译/译林出版社/2011年8月</li>
+<li>我的错都是大人的错 幾米 绘 / 现代出版社 / 2009–5 </li>
+<li>我不是完美小孩 幾米 / 海豚出版社 / 2011–4 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000675&amp;itemidx=1&amp;sign=31796c7e5970e6087d809ab105608274#wechat_redirect" target="_blank" rel="external">绝对小孩</a> 朱德庸 / 上海锦绣文章出版社 / 2007–5 </li>
+<li>漫话世界系列丛书•漫话英国/漫话美国/漫话哲学 李元馥 / 朴惠园 / 中信出版社 / 2002–10</li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000308&amp;itemidx=1&amp;sign=13df9366877d0d796323f3c12cf87fc2#wechat_redirect" target="_blank" rel="external">希利尔讲世界史</a>/希利尔讲世界地理/希利尔讲艺术史 V.M.希利尔 / 贵州教育出版社 / 2010–4</li>
+<li>吴姐姐讲历史故事 吴涵碧 / 新世界出版社 / 2011–9–1</li>
+<li>啊哈系列 啊哈!原来还有这样的国家（韩）池昊晋　著，（韩）金在一　绘 / 千太阳 / 中信 / 2010–11–23</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=205168875&amp;idx=1&amp;sn=40b96066991f31509ced880c6792044a&amp;scene=21#wechat_redirect" target="_blank" rel="external">明朝那些事儿</a> 当年明月 / 浙江人民出版社 / 2011–12–1</li>
+<li>中国近代史 蒋廷黻 / 武汉出版社 / 2012–6–1 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000194&amp;itemidx=1#wechat_redirect" target="_blank" rel="external">万历十五年</a> (美) 黄仁宇 / 生活·读书·新知三联书店 / 2014–7</li>
+<li>大江大海1949 龙应台</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=202338220&amp;idx=1&amp;sn=864002a9c24cf9522a4def1f60268bbf&amp;scene=21#wechat_redirect" target="_blank" rel="external">神祇、陵墓与学者:考古学传奇</a> [德]C.W.策拉姆 / 张芸、孟薇 / 生活·读书·新知三联书店 / 2012–6</li>
+<li>狄更斯讲英国史 (英)查尔斯·狄更斯 / 苏旻婕 等 / 北京时代华文书局 / 2014–7</li>
+<li>嗨!青春期:9–16岁男孩女孩专属读本 埃莉诺•格林伍德、亚历山大•考克斯 / 田科武 / 高等教育出版社 / 2010–7</li>
+<li>女孩，你该知道的事 [韩] 金清儿、（韩）孙多憓绘 / 千太阳 / 东方出版社 / 2012–11</li>
+<li>窗边的小豆豆 [日] 黑柳彻子 著、岩崎千弘 图 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000663&amp;itemidx=1&amp;sign=0c50139a75003ad505526e1ba057d95b#wechat_redirect" target="_blank" rel="external">夏山学校</a> A.S.尼尔 / 王克难 / 南海出版公司 / 2010–5 </li>
+<li>孩子你慢慢来 龙应台 / 生活·读书·新知三联书店 / 2009–12–1</li>
+<li>亲爱的安德烈 龙应台、[德] 安德烈 / 人民文学出版社 / 2008–12</li>
+<li>目送 龙应台 / 生活·读书·新知三联书店 / 2009–10</li>
+<li>这些人,那些事 吴念真 / 译林出版社 / 2011–9 </li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200043062&amp;idx=1&amp;sn=f5619c4a5919d9fbac1612a47a6e66cb&amp;scene=21#wechat_redirect" target="_blank" rel="external">阅读是最浪漫的教养</a> 李伟文、双胞胎AB宝 / 北方妇女儿童出版社 / 2013–3 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000127&amp;itemidx=1#wechat_redirect" target="_blank" rel="external">在爱里相遇:做个好大人,给孩子一份没有亏欠的爱</a> 蔡颖卿 / 漓江出版社 / 2012–9</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200664150&amp;idx=1&amp;sn=faf106e27822e745d0a3afbc70d8053d&amp;scene=21#wechat_redirect" target="_blank" rel="external">爱哭鬼小隼</a> (日)河合隼雄 著、(日)冈田知子 绘 / 蔡鸣雁 / 浙江人民出版社 / 2013–1</li>
+<li>世界名人传记丛书:名人传 [法]罗曼·罗兰 / 陈筱卿 / 译林出版社 / 2013–9</li>
+<li>当鸭子遇见死神 (德)沃尔夫·埃布鲁赫 文/图 / 陈科慧 / 新蕾出版社 / 2013–9</li>
+<li>罗伯特·罗素作品集(纽伯瑞儿童文学奖作品) 兔子坡 : 罗伯特·罗素作品集 (美)罗伯特·罗素 / 陈薇薇 / 安徽教育出版社</li>
+<li>安房直子幻想小说系列 (日) 安房直子 / 彭懿 / 上海世纪出版股份有限公司少年儿童出版社 / 2010年4月</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200302304&amp;idx=1&amp;sn=d3c52346d6ef0f79da172c92003504e9&amp;scene=21#wechat_redirect" target="_blank" rel="external">夏洛的网</a> E·B·怀特 / 任溶溶 / 上海译文出版社 / 2004–6</li>
+<li>查理和巧克力工厂 (英)罗尔德·达尔 著、(英)昆廷·布莱克 绘 / 任溶溶 / 明天出版社 / 2009–3</li>
+<li>橡树上的逃亡 蒂莫泰·德·丰拜勒 / 刘英华 / 新蕾出版社 / 2007–9</li>
+<li>波普先生的企鹅【美】理查德·阿特沃特/弗洛伦斯·阿特沃特 / 安聿麒 / 新蕾出版社 / 2011–1 /</li>
+<li>柳林风声 肯尼恩・格雷厄姆 / 马晓声、朱兆林 / 新蕾出版社 / 2003–09</li>
+<li>布鲁克林有棵树 贝蒂·史密斯（Betty Smith) / 方柏林 / 译林出版社 / 2009–7</li>
+<li>安德鲁•克莱门斯系列 不要讲话 安德鲁•克莱门斯 / 蔡青恩、唐唐 绘 / 天津教育出版社 / 2013–1</li>
+<li>企鹅经典丛书:莎士比亚喜剧选 [英]威廉·莎士比亚 / 朱生豪 / 人民文学出版社 / 2013–4</li>
+<li>夜莺与玫瑰 [英] 奥斯卡·王尔德 / 谈瀛洲 / 浙江文艺出版社 / 2015–4</li>
+<li>记忆传授人 (美)洛伊丝·劳里 / 郑荣珍 / 河北教育出版社 / 2009–4 </li>
+<li>动物庄园 乔治•奥威尔 (George Orwell) / 隗静秋 / 上海三联书店 / 2009–6–1</li>
+<li>小灵通漫游未来 叶永烈 / 湖北少年儿童出版社 / 2009–8 </li>
+<li>纳尼亚传奇 [英] C.S.刘易斯 / 译林出版社/ 2015年11月</li>
+<li>霍比特人 [英] J.R.R.托尔金 / 吴刚 / 上海人民出版社 / 2013–1</li>
+<li>魔戒 (英)J.R.R.托尔金 / 朱学恒 / 译林出版社 / 2013–1</li>
+<li>哈利·波特 [英] J.K.罗琳 / 马爱农、马爱新译 / 人民文学出版社</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200997469&amp;idx=1&amp;sn=427086dd89c1688477d5f597be07b630&amp;scene=21#wechat_redirect" target="_blank" rel="external">埃及守护神系列</a> [美] 雷克·莱尔顿 袁异译 / 接力出版社 / 2013年7月</li>
+<li>埃及神话 朱星辰 / 中国林业出版社 / 2007–1</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=202931807&amp;idx=1&amp;sn=2648db2e3b19e921beb979e5be4258cf&amp;scene=21#wechat_redirect" target="_blank" rel="external">波西•杰克逊系列</a> [美] 雷克·莱尔顿 赵振中、袁异译 / 接力出版社 / 2011年2月</li>
+<li>波西•杰克逊奥林匹斯英雄系列 [美] 雷克·莱尔顿 赵振中、袁异等译 / 接力出版社 / 2011年8月</li>
+<li>永远讲不完的故事 (德)米切尔·恩德 / 杨武能 / 二十一世纪出版社 / 2013–6</li>
+<li>安德的游戏 (美)奥森·斯科特·卡德 / 李毅 / 广西科学技术出版社 / 2013–11–1 </li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200497645&amp;idx=1&amp;sn=a8d610898bd779c9b0202dc106448e05&amp;scene=21#wechat_redirect" target="_blank" rel="external">哈尔的移动城堡</a> [英]戴安娜•韦恩•琼斯 / 何羲和 / 人民文学出版社 / 2013–1</li>
+<li>福尔摩斯探案全集 [英] 柯南·道尔/ 王海滨译 / 中国妇女出版社 / 2013年1月</li>
+<li>东方快车谋杀案 : 阿加莎·克里斯蒂侦探作品集 [英]阿加莎·克里斯蒂 / 郑桥 / 新星出版社 / 2013–5 </li>
+<li>解忧杂货店 (日)东野圭吾 / 李盈春 / 南海出版公司 / 2014–5 </li>
+<li>金庸作品集 金庸 / 广州出版社 / 2009年9月</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=209194848&amp;idx=1&amp;sn=eea452dfe4b7563bd9d7b4c625ac28f9&amp;scene=21#wechat_redirect" target="_blank" rel="external">三毛全集</a> 三毛 / 北京十月文艺出版社 / 2011年11月</li>
+<li>我们仨 杨绛 / 生活·读书·新知三联书店 / 2003–7 </li>
+<li>围城 钱钟书 / 人民文学出版社 / 2000–7 </li>
+<li>洗澡 杨绛 / 人民文学出版社 / 2004–01</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=210436968&amp;idx=1&amp;sn=cd604b2b0fd663659d71f816afb95e6e&amp;scene=21#wechat_redirect" target="_blank" rel="external">活着</a> 余华 / 南海出版公司 / 1998–5</li>
+<li>许三观卖血记 余华 / 上海文艺出版社 / 2004–1</li>
+<li>城门开 北岛 / 生活·读书·新知三联书店 / 2015–7</li>
+<li>野草 鲁迅 / 人民文学出版社 / 2006年6月 </li>
+<li>上课记 /上课记2 王小妮 / 中国华侨出版社 / 2011–12 / 2013–5 </li>
+<li>民主的细节:当代美国政治观察随笔 刘瑜 / 上海三联书店 / 2011–10</li>
+<li>近距离看美国系列：历史深处的忧虑/总统是靠不住的/我也有一个梦想/如彗星划过夜空 林达 / 生活·读书·新知三联书店 / 1997–5 </li>
+<li>给孩子的诗 北岛 选编 / 中信出版社 / 2014–7–1 </li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=208811440&amp;idx=1&amp;sn=d146184d0c05a0295441a44d5709bc2b&amp;scene=21#wechat_redirect" target="_blank" rel="external">新月集</a> [印度] 泰戈尔 / 郑振铎 / 外语教学与研究出版社 / 2010–1</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204070186&amp;idx=1&amp;sn=5cb6155e862bb354ac4ce817f7250d3c&amp;scene=21#wechat_redirect" target="_blank" rel="external">蒋勋说唐诗</a> 蒋勋 / 中信出版社 / 2014–9</li>
+</ol>
+<p>最后再来一个英文阅读书单，这一直是小乐刚开始英文阅读时饱受困惑的，因为英文是在二年级才开始学，中文阅读的深度和英文水平不匹配，当时我想通过阅读的方式让她逐步学习英文，选书的难度非常大，经过很长一段时间的系列筛选以及小乐阅读的进步，才慢慢渡过这个阶段。所以英文书单主要以系列和作者为主。</p>
+<ul>
+<li>Harry Potter and the Sorcerer’s Stone J.K. Rowling / Scholastic Paperbacks / 1999–9</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=203234780&amp;idx=1&amp;sn=32f673fc28fb1283ce089b60775389b5&amp;scene=21#wechat_redirect" target="_blank" rel="external">Horrible histories</a> DEARY TERRY / Scholastic</li>
+<li>Matilda / The Witches / Fantastic Mr. Fox Roald Dahl</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200302304&amp;idx=1&amp;sn=d3c52346d6ef0f79da172c92003504e9&amp;scene=21#wechat_redirect" target="_blank" rel="external">Charlotte’s Web</a> / the Trumpet of the Swan / Stuart Little E.B.White</li>
+<li>Goosebumps: A Night in Terror Tower Stine, R. L.</li>
+<li>Who Is J.K. Rowling? Pollack, Pam; Belviso, Meg; Marchesi, Stephen / 2012–8</li>
+<li>Diary of a Wimpy Kid</li>
+<li>Magic Tree House</li>
+<li>The 39 Clues Book 1 : The Maze Of Bones Rick Riordan / Scholastic Inc. / 2008–10–1</li>
+<li>The Magic School Bus<br>(粗体为系列名称或作者名称。)</li>
+</ul>
+<p>最后经过筛选，整理完毕，居然发现列了有100本的系列书，希望能给需要的家长朋友一点参考。文中链接是以往在fuyunv中的部分记录。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/" data-id="cizapjgc100quw5c2aze4aryb" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书单/">书单</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/阅读/">阅读</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-nao-dong-de-yi-tian" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/05/nao-dong-de-yi-tian/" class="article-date">
+  <time datetime="2016-05-05T08:26:58.000Z" itemprop="datePublished">2016-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/05/nao-dong-de-yi-tian/">脑洞的一天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>五一小长假最后一天的下午，没了作业、没得看书的小乐百无聊赖躺在客厅沙发上发呆，游手好闲的我在餐厅拿着本书，只剩下忙碌的乐妈在房间里整理换季的衣服，大概觉得这父与女都太空了，房间里传出温柔的狮吼：“你们俩给我洗衣服去。”</p>
+<p>我起身从小乐身边走过，小乐张大眼睛坏坏地对我说：“老爸，我们来玩<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402799872&amp;idx=1&amp;sn=8c8fd83cdc1f3bd55c9e5314cc206181&amp;scene=21#wechat_redirect" target="_blank" rel="external">Davy Back Fight</a>吧。”（上次在“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402799872&amp;idx=1&amp;sn=8c8fd83cdc1f3bd55c9e5314cc206181&amp;scene=21#wechat_redirect" target="_blank" rel="external">从看海贼王中学习想象力</a>”专门讲过草帽海贼团和Foxy海贼团的对决）<br>“什么？”我一愣。<br>“Davy Back Fight.”<br>“哦。”还是有点迷惑，“咋玩呀？”<br>“我们想想，要不让妈妈做裁判，让她出题目。”<br>“让她出题目啊，那还不是让我们俩比赛洗衣服。”<br>“洗衣服也行啊。”</p>
+<p>就这样，“Davy Back Fight”第一局开始。俩人分赃，刚好爸爸妈妈衣服各半，不过老爸的衣服少了个Bra，额外奖赏一只五一出游时装衣服的袋子，算是抵过。比赛以谁先手工洗干净交给洗衣机脱干者为胜，最后漂洗的一盆水需经裁判检查是否干净。结果我以微弱劣势告负，失败的惩罚是又加洗了一个iPad包。<br>“哼，全赖中间上了次厕所，小乐赛前先解决了，不公平啊不公平！”</p>
+<p>“Davy Back Fight”第二局，我怀有“私心”地提了一个项目“补袜子”，因为我大脚拇指特喜欢风凉，在冬天的袜子上都争气地戳出了一个洞，其中还有二出洞的。<br>小乐：“怎么都是劳动的项目？”<br>“劳动节嘛，要不下一个项目你来出好了。”<br>“好。”小乐同学大气表示同意，跑进房间。<br>“老爸，夏天的丝袜要补吗？”<br>“那个不用了吧，再穿穿破就扔掉了。”<br>小乐从抽屉里搜出我所有的冬季破袜，又找妈妈去要了件穿不上的衣服做布料。<br>数数破袜有七只，每人三只，剩下一只作为比赛的奖励项。<br>我翻着分给我的袜子，说：“小乐，老爸要补的袜子有两只都有两个洞啊。”<br>“那我们换一只吧。”<br>“好。对了，补的时候线可千万别太稀了，不然很容易又顶出来的。”<br>“好的。”<br>俩人各拿三只，兵分两路，一个到窗边图书角，一个在餐桌，拿着针线干了起来。</p>
+<p>“咦，怎么没有惨叫声啊？”乐妈开始耍坏：“被扎了可别忍着啊？”<br>“谁像你啊。”一个左哼哼，一个右哼哼。<br>没曾想第二局我继续败北。愿赌服输，只好再补第四只袜子。</p>
+<p>“小乐，第三局我们比什么呢？”<br>“看谁能说服妈妈，晚上看5集海贼王。”<br>“这个好。”<br>没等我出马，小乐就去说服了乐妈，让我很好奇。<br>母女俩走过来时，我问：“你怎么说服妈妈的？”<br>乐妈说：“小乐用事实来说服我的呀，她说现在海贼王的片头片尾去掉就很短了，一集就都只有十几分钟。”<br>“好吧，那我可以不用说了。”<br>“没有啊，你们两个都要分别来说服我的。”乐妈说：“小乐说服了我，看5集海贼王，你只能看4集。”</p>
+<p>吃晚饭时，乐妈又和我们说起一件趣事：小区里一辆汽车没有人，却居然没有熄火，影像也一直亮着，在车边来回看了半天，后来找到车主朋友和他说了，都觉得怪异。<br>小乐一听蹦出一句：“难道是车精灵？”（海贼王中的黄金梅利号就有船精灵，在司法岛之战中最后关头就是梅利出现救了路飞和伙伴们）</p>
+<p>“有道理啊。”<br>“真是太有脑洞了，今天看来是脑洞的一天，要不我们举行个脑洞大比拼吧。”</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/05/05/nao-dong-de-yi-tian/" data-id="cizapjg6u00dqw5c2kux5step" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/05/05/nao-dong-de-yi-tian/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对话/">对话</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/海贼王/">海贼王</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脑洞/">脑洞</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-yue-du-2016-nian-4-yue-tui-jian-shu-dan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/" class="article-date">
+  <time datetime="2016-05-02T08:26:43.000Z" itemprop="datePublished">2016-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/">悦读2016年4月推荐书单</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一晃就是4月份了，1月28本，2月35本，3月16本，4月14本，这个月活动更多，除了<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651799035&amp;idx=1&amp;sn=7227f06faa5053b12e209e40586994d0&amp;scene=21#wechat_redirect" target="_blank" rel="external">小升初</a>，还有校运动会，区市的篮球和足球比赛，所以阅读的时间也真是需要争分夺秒，哪天晚上要是少了阅读的时间，小乐都是要和我急的，也就难怪她总要急着把作业做完了。</p>
+<p>书看的没那么多也有好处，比如要选10本，把系列书去掉，我发现剩下的就是，不过考虑小乐的打分，这个月就只推荐9本了。4月的主旨是怀旧月，因为很多书小乐都是再次读，或者有些是把早买的书新翻了出来，以下书单按时间排序。</p>
+<ul>
+<li>碧血剑</li>
+</ul>
+<p>不知道为什么，每次看着本书，都不喜欢阿九，觉得她是大大的电灯泡，总觉得青青特别可怜。但后来又觉得错在袁承志，感觉他是最没用的男主角之一。</p>
+<ul>
+<li>Harry Potter and the Half-Blood Prince </li>
+</ul>
+<p>又啃完一本大部头！好久不看哈波，这次读英文又别有一番风味。特别喜欢看哈利和金妮最后的对话，具体我就不剧透了，呵呵。（乐爸：绝对的大部头，当然不是一个月能看完的，但完成后的成就感是足足的）</p>
+<ul>
+<li>美国国家地理少儿版百科 </li>
+</ul>
+<p>放在家里好久了，从来没看过，但拿起来一看就放不下了，好看得不得了，内容很丰富。</p>
+<ul>
+<li>特别要命的数学</li>
+</ul>
+<p>有些题目特别有意思，做起来很有挑战性，不过还好没要我的命。</p>
+<ul>
+<li>少儿职业志向指南</li>
+</ul>
+<p>很有意思，虽然叫指南，感觉很枯燥的样子，其实内容丰富，还很实用。（乐爸：法国人的书还是很有趣的）</p>
+<ul>
+<li>数字-破解万物的钥匙</li>
+</ul>
+<p>数字真的好奇妙呢！我最喜欢书中的圆周率了，一个特别吸引人的奇妙的无限不循环小数。3.1415926535897932384626433832795028841971……</p>
+<ul>
+<li>Who Is J. K. Rowling? </li>
+</ul>
+<p>久违的小英文书！别看它这么薄薄的一本，可是一本人物传记哦！不过内容一点也不枯燥，还是挺有意思的一本小书。（乐爸：这个系列的书都还不错，就是发现的晚了点，现在给小乐看略偏简单）</p>
+<ul>
+<li>伊豆的舞女</li>
+</ul>
+<p>第一次读川端康成的书，就被震撼了。细腻的笔调，描绘出一个个动人的故事，不会让人感到太悲伤，只是有一点淡淡的惆怅。</p>
+<ul>
+<li>遇见未知的自己</li>
+</ul>
+<p>感觉小说中同样隐含着人生的哲学，文中主角遇到的困难虽然与我的毫不相同，但她的有些心情我也感同身受。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/" data-id="cizapjgd000syw5c2ii6isj9s" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书单/">书单</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/阅读/">阅读</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/" class="article-date">
+  <time datetime="2016-04-28T08:26:19.000Z" itemprop="datePublished">2016-04-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/">当孩子面临“你怎么不为班级着想”的指责时</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>乐妈给我讲了一件朋友孩子身上发生的事。</p>
+<p>小贝（化名）班级中要排练一个舞台剧参加学校的艺术节活动，需要三个小朋友在剧中穿插一段拉丁舞。在选小演员时，同学们选的跳舞名单中就有小贝，因为小贝也在学舞蹈，虽然学的是民族舞。小贝一开始并不愿意参加，因为她不会拉丁舞，而且也不喜欢。于是，同学们就纷纷指责她：“你怎么不为班级着想，不替集体增光呢？！”小贝被说地无可奈何，只能违心答应了下来。</p>
+<p>晚餐时乐妈把这个故事讲给小乐听，问她怎么看？</p>
+<p>小乐：“首先不会跳，小贝可以试着去学！”<br>乐妈：“那关键如果她根本不想学着跳，有没有权利选择不跳呢？”<br>小乐：“当然有！但是拒绝是要有勇气的。”<br>乐妈：“你觉得同学们用集体来说服小贝对不对？”<br>小乐：“不对，集体利益！什么是集体利益？它是抽象的，就像为人民服务一样，它们都是虚的。比如班里有个同学要去参加校外体育的比赛，刚好要年级考试，老师让他自己决定。这里就有学校这个集体利益，还有班级这个集体利益，那谁的利益大？能做比较吗？”</p>
+<p>我不由地想起了小乐的一个故事，小乐前几年每年都会参加年级围棋比赛，且总还能拿个名次，只因为小学低年级时学过围棋，但实际上后来没兴趣没有继续学，也没再下过围棋，只是每次到年级比赛时都靠着原来的老底去拿个名次，所以都让她代表班级参加。不过今年小乐和我们说“她不去参加围棋比赛了”。</p>
+<p>集体利益是个有趣的话题，我们从小的教育往往告诉我们是要以集体为重，个人利益要服从集体利益，但其实很少思考什么是集体？什么又能真正代表集体的利益？个人利益一定要服从集体利益吗？</p>
+<p>这个问题实际上在我的脑海中也一直不是很清晰，我想不如先举一些实例，看看大家在碰到时会怎么想？或是你的孩子是小贝，或者不是小贝时又会怎么想？所以设计了一个投票，说说我设计时考虑的点：</p>
+<ol>
+<li>案例的选取，我特意选择了五个场景，除了实际的参加班级舞台剧和围棋比赛，又增加了黑板报、打扫卫生和篮球赛，不同的场景在个人利益和集体利益的关系上是否相同？</li>
+<li>在集体利益的判断中，往往会采用“少数服从多数经常”的形式，那么通常班级中的选班长和迫使他人参加舞台剧上是否都可以用集体投票的形式？</li>
+<li>个人不愿意遵从集体的安排，其他人是否有指责的权利？</li>
+<li>他人指责的权利是否和不同的场景有关？（当然这一点并没能体现出来）</li>
+</ol>
+<p>由于微信投票标题有字数限制，我不得不对标题内容作了精简，使得五个场景的差异没有能完全体现出来，不过投票的结果还是说明了一些问题。认为小贝是不考虑集体利益的依次为：<br>篮球比赛（48%）&gt;黑板报评比（14%）&gt;围棋比赛/卫生检查（11%）&gt;班级舞台剧（7%）</p>
+<p>认为小贝并非不考虑集体利益的依次为：<br>卫生检查（89%）&gt;围棋比赛（86%）&gt;班级舞台剧（84%）&gt;黑板报评比（80%）&gt;篮球比赛（45%）</p>
+<p>从投票结果分析，篮球比赛是一个最独特的场景，在是否考虑集体利益上意见分歧很大，近一半人认为篮球中没有做按教练说的多传球是不考虑集体利益，相反卫生检查意见最一致，认为小贝不愿意每次都安排她打扫不属于“不考虑集体利益”，其他围棋比赛、班级舞台剧、黑板报接近于卫生检查的结果，但在“班级舞台剧”时有9%的人选择了不确定（或许是有更多的背景描述导致）。</p>
+<p>细想一下为什么？因为打扫卫生是体力活，所以不能都安排她去做，如果我写成扫厕所的话，估计大家更反对了。相对应的黑板报、围棋呢，难道它们是属于脑力活、技术活，就应该由最好的人去做吗？注意我特地在卫生检查的场景中说明了小贝是打扫最干净的，从集体利益来说就应该每次评比都安排她。而篮球比赛的特殊性，或许是因为大家的心目中认为篮球、足球等集体项目本身就应该是以集体利益为第一位。</p>
+<p>不过是不是投票越多就一定正确呢？不一定，在这五个场景中选择的答案或许都应该是“不考虑集体利益”。因为这要看你所定义的集体利益是什么，如果集体利益在这五个场景中代表的是班级和球队的利益，那么小贝的行为不都损害了集体利益吗？所以投票的结果恰恰说明我们没有能对集体利益的概念有一个清晰的认识。</p>
+<p>在维基百科中有一个“集体主义”的定义，我引用过来：</p>
+<blockquote>
+<p>集体主义，是主张个人从属于社会，个人利益应当服从集团、民族、阶级和国家利益的一种思想理论，是一种精神。在极权主义的国家，这种意识会被用于对政党和领袖的绝对忠诚，是独裁政权的性质。</p>
+</blockquote>
+<p>这个概念太大，上篇文章很多小学生朋友看和评论了，所以我的目的还是想从孩子的角度来说明和如何处理这样的问题。照搬上面的定义只是让我们看集体主义只是一种理论，一种精神，不代表它是真理。进而思考在个人利益和集体利益相冲突时，个人是否一定要服从集体？</p>
+<p>我们先看投票的结果，93%的人认为小贝有权利不参加舞台剧，7%不确定，说明在是否参加的问题上大家的观点一致，面对“个人利益和集体利益相冲突”时，小贝是有权利说不。</p>
+<p>紧接着的问题是”小贝不愿意参加舞台剧，你是否觉得其他孩子有权利指责小贝？”，这是我特意设置的，80%的人认为没有权利，看到这里时大家一定发现出问题了。为什么？难道其他孩子在自己的价值观判断中觉得不对时，却没有发表言论的权利了吗？如果把问题设为“指责小贝是否合理”，或许就不会引起大家的困惑，但有没有发现在完全从道德角度判断时，却全然忽视了人的基本言论的权利。</p>
+<p>“小贝可以说不，其他孩子也有权利指责小贝”，这个问题又何解呢？我想说的是都有权利，但有权利不代表行为一定是合理的。在五个案例中，按投票比例排序，卫生检查&gt;围棋比赛&gt;班级舞台剧&gt;黑板报评比&gt;篮球比赛，前四者投票人都倾向于个人权利的保障无可厚非，但偏偏在学校中却出现了很多同学的指责声，是孩子还不成熟吗？或许更大的原因是教育出了问题，盲目地服从于集体主义，忽视了个人的感受，没有人教他们如何思辨。这也是我设置最后一个调查问题的出发点，36%的人之前并没有思考过“个人利益服从集体利益”的正确性，包括我自己，因为你已经习惯了单位中的个人、小集体，大集体，至于该选择哪一个，则完全取决于自己的心情，何况又是在小学生群体中。</p>
+<p>比如说，小朋友会觉得因为自己打扫卫生最认真而让他扫厕所是不合理的，但却没想让别人参加班级舞台剧，也占用了时间需要排练，要表演好还需要请老师，花费金钱等。还有像围棋比赛、黑板报评比，出发点是希望能获得好名次，看起来是为了集体利益，但有没有想围棋比赛是否能让有兴趣的人参加，黑板报书写技能能让更多孩子参与锻炼，从长远来看对孩子群体的发展是否更有帮助？是不是比短期的名词更为重要？如果我们教育能更多从孩子的兴趣触发，不那么聚焦于短期利益，很多问题就可以迎刃而解，围棋、舞台剧、篮球，都只是一个社团，首先应该遵循的是孩子的兴趣，孩子愿意参与是基础。</p>
+<p>集体利益到底有哪些呢？有小集体利益（班级的）、大集体利益（学校的），还有更大的，有短期利益、长期利益，谁又来判断集体利益是能获得最大化的呢？比如说班级和学校活动发生冲突时，比如说泰坦尼克号沈船时，让老人、妇女、小孩先上救生艇是否一定符合集体利益？在多重情况下的选择必然是多样化的，而教育应该鼓励多样化，也让孩子认可多样化，这样才不会因为有人一时的“不愿意参加舞台剧”，就被加以指责。</p>
+<p>再说说五个案例中选择差异最大的一个“篮球比赛”，不要说小贝，科比在场上也同样面临着是单干还是传球的问题，同样从“集体利益最大化”的角度来说，也许科比单干更好，也许科比传球更好，而作为一项集体运动，不喜欢可以不参与，但选择参与后就要遵循其中的规则，这里简单的说就是听从教练的技战术安排。这是我自己理解选择这个案例最大的不同。</p>
+<p>顾全集体利益的过程中，集体利益的如何判定往往会采用“少数服从多数”的形式，投票的结果是91%的人认为不应该采用投票迫使他人参加舞台剧，68%认为可以以投票形式选班长。“少数服从多数”只是民主决策中的一种手段，不一定合理。只不过是我们日常常用的一种手段，非常重要的一点是涛涛爸爸以前常在群中提的“民主仅适用于公域”，也就是在私人领域它并不适合，就像我们总不能投票表决把你的书包送给别人一样，所以我们无权投票决定一定要小贝参加，而竞选班长在此可以认为是班级中的一个公共领域，谁能做好这个班长，需要大家行使权利来投票选择。</p>
+<p>总结一下自己的看法：</p>
+<ol>
+<li>你有权利说不，个人利益不一定小于集体利益。</li>
+<li>别人也有权利发表评论。</li>
+<li>但这样的评论不一定合适，重要的是教育和引导。</li>
+<li>教育中只有不过分注重于短期利益，才会有更多选择的多样性。</li>
+</ol>
+<p>啰啰嗦嗦说了这么多，或许还是不能解答家长朋友和小朋友的困惑，因为我也还没能都明白，但我还是想写这篇文章的原因，是想让小朋友明白，在面对下一次指责时不要觉得自己不道德，有说不的勇气，而在指责别人时也能换个角度去思考，学习去思考不同的集体利益场景是否需要盲从，更希望有更多教育工作者能在这个问题上给孩子以启发和帮助。</p>
+<p>最后再引用群中朋友对以上问题的评论（谢谢 @可二 @Ying @xiaozhen，还有很多群中的朋友，帮我解了不少惑）：</p>
+<ul>
+<li>这些都应该以孩子自愿参与为标准，不可以任何强制。教育者也不应该以任何集体利益为由对孩子进行道德绑架。</li>
+<li>应该废除班长制度，部分主持或者协助事宜，可以采取抽签或者轮替的方式进行。</li>
+<li>可以有指责的权利，但是仅限于学生，不包括老师。同时如果我是那个老师，我会向学生指出这种指责的不当之处在哪里。</li>
+<li>那个时候同学的指责，其实并非出自对集体利益的维护，而是因为小贝的拒绝触犯了“集体意愿”。大多数情况下，老师和同学的不满，很可能只是因为对方没有做出他们期待的行为，进而下意识地为了合理化自己的不满而抢占所谓的道德制高点。</li>
+<li>不是什么个人与集体的问题，集体这个词太空泛。</li>
+<li>不按教练的要求积极传球，不是什么个人值得探讨的应该是特定场合的社会角色及所应承担的责任问题。球赛因其对团队协作的特殊要求，而与之前的一些案例不太相同。也就是说，小贝有选择参加这次球赛或不参加的权利，但一旦参加，对自己在球赛中应负有的责任应该有清醒的认识。这是游戏规则，同时也体现个人的职业素养和操守。如果小贝不按牌理出牌，教练是有权利将其淘汰出局的。</li>
+</ul>
+<p>参考：</p>
+<ul>
+<li>集体主义 - 维基百科，自由的百科全书</li>
+<li>自由 - 维基百科，自由的百科全书</li>
+<li>中国人提倡集体主义，但合作意识落后，怎么解释这种矛盾？ - 知乎</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/" data-id="cizapjg400051w5c26ssq7yyn" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/儿童教育/">儿童教育</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教育/">教育</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-deng-dai-pin-tu-xing-qi-wu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/22/deng-dai-pin-tu-xing-qi-wu/" class="article-date">
+  <time datetime="2016-04-22T08:25:54.000Z" itemprop="datePublished">2016-04-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/22/deng-dai-pin-tu-xing-qi-wu/">等待 拼图 星期五</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>走出英特的校门，我长长地舒了一口气，终于<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651799012&amp;idx=1&amp;sn=22ef0852d644f42f495fbf25829ebc59&amp;scene=21#wechat_redirect" target="_blank" rel="external">面试完了</a>！那是星期六的下午，消息要等到星期五才能知道。</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651799021&amp;idx=1&amp;sn=8460c6175e6c1be74539db91b49c7f33&amp;scene=21#wechat_redirect" target="_blank" rel="external">好漫长的等待啊！</a>往常转瞬即逝的一个礼拜如一个世纪般难熬。等待中的每一天我都坐立不安，心神不宁，在心中幻想过无数次录取或没录取的情景。无数次脆弱地将头埋在妈妈怀里哭泣，无数次身心俱瘁地一头栽倒在床上试图将烦恼忘记，无数次悲叹竞争对手之多又安慰自己“你能行”，无数次被问到“去哪个学校”却只能强颜欢笑回笑“还没定”……我的心在这煎熬中几乎被片片撕裂。</p>
+<p>我唯一的安慰是一张拼图，一张《海贼王》漫画的一千片巨大拼图。不管每天事情再多，人再疲惫，我都要抽时间痴痴地坐在桌边，耐心地一片一片拼着。一天拼一部分，巨大的拼图渐渐完整，画面渐渐清晰，仿佛每拼一片，我心中的阴云就散开一点。《海贼王》拼图上的每个人都笑着看着我，他们是那么乐观开朗，似乎没有一点烦恼。每个人的笑脸对我来说都是精神上的鼓励，是极大的安慰。日子一天一天过去，我也一天一天地拼着，星期五渐渐靠近，拼图还剩一角……<br><img src="http://xbin999.qiniudn.com/images/xsc11.png" alt=""></p>
+<p>我怀着又期待又焦虑的心情迎来了星期五。一整天，我都忐忑不安。回到家，我深呼吸一口气，按下闹铃。妈妈的脚步声响起。我脑中一瞬间转过好几个开门的场景，但……</p>
+<p>“还没有消息。”迎接我的是这句话。眼看时间接近工作人员的下班时间—5点，英特却丝毫没有消息。我颓然跌坐在椅子上，心中好空虚。</p>
+<p>我把自己关在房间里，一个人看书，感觉连阅读也无法扼止慢慢占领心灵的绝望。我，失败了吗？</p>
+<p>“乐儿，快出来！”妈妈大叫着。我沉浸在失望中，弱弱地答了句：“干嘛？”“快过来啊！”妈妈还在喊。我走出房间，看到妈妈激动地拿着手机。“快，你自己看！”</p>
+<p>我接过手机。“杨芷欣同学，你符合我校录取标准线……”还未来得及笑，泪水已夺眶而出……<br><img src="http://xbin999.qiniudn.com/images/xsc12.png" alt=""></p>
+<p>桌上，拼图完成了。图上那些人，笑得好开心，像我一样。<br><img src="http://xbin999.qiniudn.com/images/xsc13.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/04/22/deng-dai-pin-tu-xing-qi-wu/" data-id="cizapjg430059w5c2snkm24pw" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/04/22/deng-dai-pin-tu-xing-qi-wu/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐作文/">小乐作文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小升初/">小升初</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-mian-shi-hou-de-deng-dai" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/20/mian-shi-hou-de-deng-dai/" class="article-date">
+  <time datetime="2016-04-20T08:25:42.000Z" itemprop="datePublished">2016-04-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/20/mian-shi-hou-de-deng-dai/">面试后的等待</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>乐乐的第二次面试结束后，就开始了等待。刚开始是期待，接着就是煎熬。当然这个煎熬主要是我和乐乐，乐乐因为好想进这个学校而煎熬，我因为看着女儿的煎熬而跟着煎熬。而乐爸整天乐呵呵乐呵呵，所以我看着他就来气。</p>
+<p>学校说好是下周五才会有消息，所以我们要足足等六天。这六天女儿的脸就是我的晴雨表。<br>“妈妈，班里的同学都在说自己进了什么什么学校，我不想听都不行，心里好烦！”<br>“妈妈，心里很难受！”<br>“妈妈，一定要星期五才能知道吗？”<br>“妈妈，我好担心！”<br>“妈妈，你不要安慰我，我知道！”<br>“妈妈，别这么对我笑，我心里不是滋味！”<br>“妈妈，你知道消息后，能马上告诉我吗？”<br>“不，不，算了，还是等我回来再告诉我吧！”</p>
+<p>我是她唯一可以诉说的对象，她在我这里可以流眼泪，而我只能心疼得一个人悄悄地流。我开始失眠，有时整晚不睡，有时后半夜不睡，想很多很多。想着我们的选择对不对？想着我们不给乐乐报跟学习有关的班对不对？想着如果乐乐没录取，她会怎么样？其中最让我心烦意乱的就是乐乐会怎么样？如果不录取，我们就又要进入主打应试的学校，那又会变成什么样？</p>
+<p>有朋友问我：“你不是一直反对民办的吗？怎么现在自己也去了？”其实这是误解，我所反对的民办是以分数为最终目的学校，我们不想让乐乐为了应试而去刷题。这个学校我们也比较过，不仅相对民办，哪怕相对公办，在理念上是属于不应试的学校。加上乐乐喜欢语言，普通学校的英语教学已经不够她学了，她又想再学一门外语，所以是我们的首选。我们不会因为哪个学校升学率高，也不管适不适合，也不管孩子愿不愿意，就拼命往里挤。民办也好公办也好，选最适合自己的。</p>
+<p>有个晚上做完作业，乐乐的情绪不高：“太可怕了，我生活在不公平的世界里！”<br>我凝视着她，用坚定的语气说：“乐乐，你知道这个世界是不公平的，我们每个人都会经历不公平的事，今天在这件事上你占便宜了，明天在那件事上你会被别人占便宜，没有人能逃脱！”<br>乐乐把埋在手臂里的头抬起来看着我：“所有人吗？”<br>我说：“所有人，除非这个人势利大到无边，这个人财力大到无边，但这样的人多吗？”<br>乐乐迟疑了会：“不多！”</p>
+<p>以前也有朋友建议我要提早去找关系，我这个本土杭州人，也不是没有关系，但是我过不了自己的关，过不了如何面对孩子的关。</p>
+<p>前段时间想让乐乐去参加越读馆的夏令营，是面对中学生的，乐乐还不到要求的年级，我鼓励她去争取。虽然她试了，但是回来告诉我，这是在破坏规则，她不喜欢这样。先不说事情的不同，但是乐乐正直的性格让我们能做的，就是制定提升自己的计划，用自己的能力去尽可能尝试为自己争取公平。以前童老师曾评价乐乐：“她的眼睛里有对公义的渴望！”每次看到这句话，我都会忍不住泪眼朦胧，我相信，属于乐乐的公义一定就在某个地方，可能要她花十八般武艺才能获得，但它一定就在那里，看着她闷闷不乐的脸，我只能在心里暗暗对她说：“不管结果怎么样，都不要放弃呀，乐乐！”</p>
+<p>日子就这么一天天熬着，听乐爸的建议，不去特意地开导她，而是用好玩的游戏来分散她的注意力。但我知道她的一颦一笑中透着什么！</p>
+<p>一直到了周五，乐爸都下班回家了，还是没有任何消息传来。<br>“妈妈，还会有消息吗？”<br>“可能不会有了，他们也要下班的。”<br>她默默走进房间，关上房门。我的心也沉到谷底，成或不成，总该有个说法呀！</p>
+<p>“嘀嘀”，我掏出手机，看到一段文字中的其中两个字：“符合”，就大叫乐乐。乐乐冲了出来，抢过手机，看到短信，抱着乐爸哭了。</p>
+<p>孩子如愿了，她实现了她的第一个目标，我为她感到高兴。但是后面的路很长，我真的不知道怎么替她规划！我想这也不该是我们来规划的吧，更多地还是能让孩子有时间去思想，去尝试，而不是奔跑在无尽的题海中，孩子应该会有自己的选择。</p>
+<p>小升初的经历让我真正感觉到累，走这条素质教育的路，不拿分数来衡量一个孩子，拿似乎看不到摸不着的综合素质来评价一个人，是否成人可能还差不多，谈是否成功是难上加难。我无法改变教育资源的不平衡，仍然只能做好自己，不过我还是相信，知识是永恒的，不会因为师资的不同，而变得贵或贱。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/04/20/mian-shi-hou-de-deng-dai/" data-id="cizapjg6l00cww5c2ydcrmu14" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/04/20/mian-shi-hou-de-deng-dai/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/乐妈写/">乐妈写</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小升初/">小升初</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-xiao-sheng-chu-de-di-er-ci-mian-shi" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/18/xiao-sheng-chu-de-di-er-ci-mian-shi/" class="article-date">
+  <time datetime="2016-04-18T08:25:29.000Z" itemprop="datePublished">2016-04-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/18/xiao-sheng-chu-de-di-er-ci-mian-shi/">小升初的第二次面试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>终于接到小乐心念念想去的学校面试通知。有了<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651798956&amp;idx=1&amp;sn=9d0c699445404839f1aa77db6b4d288e&amp;scene=21#wechat_redirect" target="_blank" rel="external">第一次面试</a>的经验，她开始准备，从自我介绍到英文问题回答，还会拉着我当主考官，让我想问题提问，自己组织英语回答。我听不懂她在说什么，只是看着她微笑放松的神情，就满足地笑了。</p>
+<p>“妈妈，为什么我觉得我准备地很充分了，还是这么紧张呢？”<br>“我真的好想去，妈妈？”<br>“如果我进不了，我可以在家上学吗？算了，再说吧！”<br>“妈妈，我会努力的！”</p>
+<p>我知道，她一直在挣扎，开始我以开导为主，但发现她越来越沉默，眼神中透着一层忧郁。我怕了。童老师让我：“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=210648532&amp;idx=1&amp;sn=dec874f72349b3f49fe45a44439e961c&amp;scene=21#wechat_redirect" target="_blank" rel="external">倾听，站在她这里</a>。”我突然想到，对呀，我怎么把这个给忘了！无知才无畏 ，她紧张是因为她在乎。我现在还是先把“鼓励”给放一放，多一点倾听和理解。</p>
+<p>周六的应试是11点30，为了早点适应环境，我们提前了1个半小时出门。没曾想原来半小时的行程，因为路堵竟然开了1个小时，不过小乐丝毫没受影响，一路有说有笑的，先听小七最近天天唱的《水手》，</p>
+<blockquote>
+<p>他说风雨中这点痛算什么<br>擦干泪不要怕至少我们还有梦       </p>
+</blockquote>
+<p>又听<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204583288&amp;idx=1&amp;sn=384f155c8381180d9d36bb7240665e81&amp;scene=21#wechat_redirect" target="_blank" rel="external">《Horrible Histories》中的有趣歌曲</a>，状态越来越好。</p>
+<p>跨进校园，小乐就被吸引了，她红着脸，抿着嘴，谨慎地看着人群和校园。我知道她的心情，我边走边把右手向身边划动，寻找她的手，悄悄握紧它，把我的爱传给她。我们握在一起，什么话都不需要说。</p>
+<p>还有半小时用餐时间，所以时间相当紧迫。小乐已经不止一次听学姐说过学校的餐饮有多少棒，吃好大半后，抬起头兴奋地说：“呀，我热血沸腾了呢！”引得我们哈哈大笑。吃完准备离开时，她拿过纸巾，把桌上的菜汁擦试干净。</p>
+<p><img src="http://xbin999.qiniudn.com/images/xsc.jpg" alt=""></p>
+<p>参加面试的人真的好多，乌压压一片，孩子们列队进场时，我站在花坛的台阶上张望，还是看不到她。接下来又是等待，差不多过了近三小时，学校广播告知孩子们已经结束所有面谈，马上出来，结果会以短信方式告知。孩子们鱼贯而出，人多的根本看不清，我一个个扫视。“乐乐，你在哪里？”心里喊着。出来的孩子越来越少，我才有机会挤到前面，正当我摇摆着头，看着出口处时，“喂，看什么呢？就看你睁着大眼睛，我在这儿呢！”乐乐取笑的声音从我眼皮下传来。我的天，这个“不孝女”竟然如此对我说话，我悬着的心算是落地了。</p>
+<p>坐上车，乐乐就告诉我们面试了些什么。除了笔试，都是开放性的问题。比如<br>“你是怎么看学奥数的？”<br>“你认为阅读和写作有什么联系？”<br>“你的学校怎么样？”<br>“你为什么要来面试？”<br>她说面试老师都微笑着倾听，所以她也是一直笑着，把自己的见解说出来。又把语文笔试的内容告诉我们，还有250字的作文。作文题目是《你心中的大石头》，我一听就愣了。“妈妈，我写的是你们。我说我心中的大石头就是你们俩，爸爸把我培养成书虫，可以和我一起互相讨论看法。而妈妈给我乐观向上，总是在我遇到挫折的时候给我力量，有次我参加篮球比赛，她悄悄在我书包里放了一张纸条‘可以流血、流汗、流泪，就是不要放弃’！”我记得这是她第一次出校门参加篮球比赛的场景，当时激动的心情还记得，坐在前座，我流下了眼泪。这时我已经不去计较录不录取了，这样的女儿，我骄傲！</p>
+<p>晚上一个同学家长告诉我，乐乐第一次面试的学校说，如果觉得自己没有发挥好，可以再去试一次。我给乐乐看，“你怎么想？”<br>“算了吧！”乐乐平静地说。<br>这又是她的选择。</p>
+<p>后面的结局如何还不知道，不过既然选择不走“纯应试教育”的路，就也要暂时“输”得起。我不后悔<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=403141248&amp;idx=1&amp;sn=24d7ad21457716aba02edc7af8bef9d6&amp;scene=21#wechat_redirect" target="_blank" rel="external">放弃奥数</a>，也不后悔没有为了升学迎合考证书。家人都说我太固执，其实不是，而是遵循乐乐的天性一起做的选择。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/04/18/xiao-sheng-chu-de-di-er-ci-mian-shi/" data-id="cizapjgby00qnw5c2jslc3n8k" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/04/18/xiao-sheng-chu-de-di-er-ci-mian-shi/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/乐妈写/">乐妈写</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小升初/">小升初</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-xiao-sheng-chu-de-di-yi-ci-mian-shi" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/16/xiao-sheng-chu-de-di-yi-ci-mian-shi/" class="article-date">
+  <time datetime="2016-04-16T08:25:14.000Z" itemprop="datePublished">2016-04-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/16/xiao-sheng-chu-de-di-yi-ci-mian-shi/">小升初的第一次面试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>随着孩子的小升初，“半玩伴学”群里的朋友们也和我们全家一起经历了一次过程，有放松、期盼、失望、自信、等待和喜悦，很多朋友希望我们能把小乐面试的经历给写下来，也算是一种鼓励。下面是乐妈在小乐第一次面试和第二次面试之间的记录，算是开篇。</p>
+<p>昨天写了《<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=403289251&amp;idx=1&amp;sn=dfd3a73ae7b23b0f130fd2e8730c6dd9&amp;scene=21#wechat_redirect" target="_blank" rel="external">和小乐聊小升初的面试</a>》一文，没想到得到这么多朋友的转发和评论，也收到朋友的祝福和建议，真的很谢谢大家。</p>
+<p>先说说我们为什么建议乐乐去那所民办中学投简历的缘由。我是属于那类已经会公开指责现今教育的不满家长，反对应试、反对题海战术、反对父母给孩子包办择校。事实上参加面试的学校并非乐乐想要去的学校，但是在征求乐乐同意后投了简历。当时只是想让乐乐去参加面试练习，感受气氛，也对比知道自己在同龄人中的水平。当时逗乐乐说：“就当去玩玩吧！”“好的！”于是就这么愉快地决定了。</p>
+<p>有了这种心态，一点打探都没有。接到面试电话通知后，本来我想让乐爸留在家里烧中饭，我一个人带乐乐去，因为并没有很重视这件事。还是乐爸有心，他和我商量：“我还是一起去吧！毕竟这是乐乐第一次面试，我去也是一种支持！”我说：“啊，干嘛这么隆重，好吧！”后来从乐乐的情绪中看，乐爸是对的，虽然乐乐知道我们的意图，但她一直是个认真的孩子，既然去做了，总想做好它。（陪伴孩子还是非常重要的，用行动告诉对孩子的支持）</p>
+<p>面试早上，乐乐有点紧张。雨下地很大，我们早早开车等在学校门口，一个画画、一个看书、一个看手机，来消磨时间。等我们到达报到处，已经开始点名，看她背着双肩包，有点漠然的表情，我知道她在紧张。而在孩子面试时两小时的等待中，周围的家长们传递着种种“小道”消息。而听着“乐乐肯定没问题”之类的话，我会有点得意。没做准备，一是我们并没考虑就读，二是我确实对乐乐有信心，甚至想象在接到录取通知后华丽丽的拒绝会不会很过瘾。</p>
+<p>乐乐出来了，依然没有笑容。乐爸说：“走，老爸带你考察一下他们的篮球场！”雨停了，我们漫步在校园中，都没有问“考的怎么样？”只是评论他们的篮球场、足球场，当去考察他们的厕所时，乐乐开始讲她经历的两小时。（等待孩子的讲述，做好倾听）</p>
+<p>“先是一个老师看我的成绩单，说你有这么多三好学生呀？！然后老师让我用三分钟英文自我介绍，从我的自我介绍里再挑了两个单词让我拼写，耶，我全拼出了，但是介绍时有两个疙瘩！”<br>我们都说这个不容易的，没有充分准备，是会这样的。<br>乐乐继续：“语文先是阅读，然后回答问题，最后是当场口头说一篇作文，是要发生在我身上的事，给我什么启示。这个我觉得，没有回答好，这个老师一直板着脸，我就很紧张。”<br>“那你的作文是什么呢？”<br>“《我的新加坡妈妈》！”我一想，确实题材有些偏，很难讲出启示。<br>“数学是五大道题，有简便运算，再是图形……”<br>乐爸：“牛吃草！”<br>乐乐最烦牛吃草问题，乐爸故意戏弄她。<br>“没有没有，这个没有，有一道题我开始没做，等其它做完了，我再去做时，用了方程，但来不及算完，就到时间了！”<br>乐爸：“不错呀，小妞，挺好的！”</p>
+<p>回家路上，乐乐还是心事重重，先是担心自己没有考好，然后又担心如果面试成功后，怎么办？<br>“妈妈，如果签了协议，是不是我就不能去其它学校了？”<br>“也可以去，就是可能会交违约金，这个妈妈也不知道！两个学校，你现在还会选哪个？”<br>“当然还是原来的闹，我只是怕我想去的去不了，这个学校又放弃了，就只能去对面中学了！”<br>心疼她，这么小的孩子，就要有这样的煎熬。</p>
+<p>趁乐乐进房间，我把我知道的和我的想法告诉乐爸：“学校虽然不住校，但有晚自习，到家弄好要9点了！”<br>乐爸一听直摇头：“那算了！”<br>我继续说：“如果进这个学校，就意味走应试刷题的路，如果走这条路，我宁可选对面公办，自己的时间会多一些！”<br>两个人达成了共识。</p>
+<p>乐乐的情绪因为假期晚上的《海贼王》时间又重新高涨起来，也不在意了，继续一心一意向往自己心仪的学校。当然，我确实还是太自满了，事情超出了我的预料。没有事先做准备，多少让乐乐受了打击，不过未尝不是好事，这样的裸考才能暴露出真正的问题。（选择孩子喜欢的事情放松自己）</p>
+<p>周二白天我在想，当时为什么让乐乐去试面试的原因，不正是想从中找到自己的不足嘛！所以我拿起电话，告诉招生办老师我想知道孩子为什么失败的原因，我说：“我不是在意结果 ，只是想从校方知道自己孩子在哪方面不足，我们的路还长，想要有针对性的练习！”老师态度很好，告诉我这个是保密的，也并不代表没机会，让我再等通知，让我相信他们会公平公正的。</p>
+<p>挂了电话后，我脑子想：“不行，成与不成倒不是我们关心的重点，孩子不是在这件事上成了就算优秀，不成就不算优秀。我们要想的绝不是眼前简单地进民办，而是要从长远孩子的发展来考虑。练习也不是因为成功而放松，不成功而自弃。还是需要发析原因，学校有自己制定的游戏规则，我并不想去评价，我们所能讨论的是自己的不足。”</p>
+<p>下午乐乐放学回来，开心地告诉我学校里举办的年级篮球赛两场都赢了。趁她洗澡时，我就和她一起聊了起来。</p>
+<p>乐乐：“英文自我介绍3分钟，我其实都不知道3分钟实际有多久，所以可能只说了1分钟多。而且我的语法也肯定错了很多。我还算好，像我们另一个同学是用英文讲一个关于西湖的民间故事！”<br>我又吃了一惊，这个难度不是一般的大，如果没有准备，除非是英文功底已经和欧美同步，否则几乎做不到。<br>我：“恩，这个是有难度的，但看来我们说的能力还是弱项，需要加强！”<br>乐乐：“数学我觉得我考地很好！”<br>我：“恩，这个不容易，都是奥数题！”<br>乐乐：“语文不理想，开始回答阅读题时，老师就脸色不好，我就知道回答错了！”<br>我：“奥，是有标准答案的问题，我更喜欢那些开放性问题！你那天说作文没说好，那如果现在，你会选什么说呢？”<br>乐乐：“我当时看到老师的脸，就害怕了，脑子里一片空白！”<br>我：“恩，看来应辨能力和心理素质也要加强。你平时在学校参加这么多活动，都可以拿来说，像上次你们打篮球，怎么一点点追上比分，还有上次踢足球输了，还有艺术节如何为自己节目争取更多机会，妈妈能说出好多呀！”（事后寻找自己的不足改进自己）</p>
+<p>晚上等乐爸回来，我把我们聊的和自己的想法告诉他，觉得需要帮助乐乐提升自己的展现能力，也才有了<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=403289251&amp;idx=1&amp;sn=dfd3a73ae7b23b0f130fd2e8730c6dd9&amp;scene=21#wechat_redirect" target="_blank" rel="external">次日的早餐谈话</a>。</p>
+<p>回顾自己周二一个白天的心路历程“感觉困惑 - 回想初衷 - 重树目标 - 建立信心”，告诉自己不必去纠结那些为什么，不要去找人家的问题，只是想后面能做什么，怎么提升自己。</p>
+<p>不过没想这还只是开始，有关小乐的第二次面试下次再说。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/04/16/xiao-sheng-chu-de-di-yi-ci-mian-shi/" data-id="cizapjgc400r1w5c2ci92gcwf" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/04/16/xiao-sheng-chu-de-di-yi-ci-mian-shi/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/乐妈写/">乐妈写</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小升初/">小升初</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-chuang-yi-gu-shi-tian-kong" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/08/chuang-yi-gu-shi-tian-kong/" class="article-date">
+  <time datetime="2016-04-08T08:24:48.000Z" itemprop="datePublished">2016-04-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/08/chuang-yi-gu-shi-tian-kong/">5分钟游戏 - 创意故事填空</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近小乐晚上在看一本尘封已久的百科全书《美国国家地理少儿版百科百科》，临睡前跑来刷牙，就给我们手舞足蹈地念了一段自编的故事，笑地都控制不住，揉着肚子往床上倒。</p>
+<blockquote>
+<p>太开心了，爸妈要带我去霍格沃茨，我可以在福灵剂里游泳，也能尽情地玩魁地奇了。我只是希望这次不要想去年的无聊旅程一样，那次爸爸妈妈、姨妈和我打算到古灵阁去旅行。当我们在路上行驶时，老妈打开一张伏地魔的CD，并开始边笑边听小苹果。我当时正在玩最爱的电子游戏，而且马上要达到有史以来的最变态分数，突然，耳边传来一声巨大的“轰”。我们的车停在了路上的一个9又3/4站台前面。我大吼一声：“No！”因为我的游戏机掉出了车窗，并被一辆快速开过的霍格沃茨专车 碾坏了。在那之后，我开始无聊地打瞌睡。当我醒来的时候，我听见“啾”的声音，并闻到恶臭。原来是一群鹰头马身有翼兽正在我们眼前过马路！当我们总算到达古灵阁时，却发现旅馆把我们的预约记录弄没了，结果我们只好睡在一间海格小屋里。不过，今年应该不会再有这样的经历了。因为我们不再开车，而是搭乘游轮旅行！</p>
+</blockquote>
+<p>是不是很有趣？这个故事有一个骨架，小乐填充了其中的划线部分，但非常有意思的是小家伙完全以哈利波特的故事场景做了填充，一个非常有趣的创意。正是以前在“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=206840053&amp;idx=1&amp;sn=221aa64e1a08c16964a1ab84abdc079e&amp;scene=21#wechat_redirect" target="_blank" rel="external">天才的七种创意策略</a>”中说的“强迫一些不曾发生的关系”，并“把东西组合在一起”，趣味就出来了。</p>
+<p>像不像平常玩的一个组合游戏，一个人说主语，一个人说时间，一个人说地点，一个人说动作，然后组合在一起，往往会有意想不到的效果，比如“在一个月黑风高的晚上唐僧师徒在学校操场上唱着小苹果”，这个游戏的有趣之处同样是在“强迫一些不曾发生的关系”，“把东西组合在一起”，随时随地2~4个人都可以玩，也没有时间限制，正是我们喜欢的<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=208561392&amp;idx=1&amp;sn=7b44ce3c71c1fb3dc80f8731929a4f3c&amp;scene=21#wechat_redirect" target="_blank" rel="external">5分钟游戏</a>系列。如果人员更多的话，可以加入更多元素，比如让主语“和XXX”，动作的状态“最后XXX”，如果继续把场景扩大，套上一个故事框架，也就成了今天我们所说的例子，或许你就可以设计一个这样的故事框架。</p>
+<p>是不是很有意思，赶紧和孩子一起玩一个吧。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2016/04/08/chuang-yi-gu-shi-tian-kong/" data-id="cizapjg3g0041w5c2io5rehg8" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2016/04/08/chuang-yi-gu-shi-tian-kong/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/5分钟游戏/">5分钟游戏</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuyunv/">fuyunv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/创意/">创意</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/106/">106</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">fuyunv</h3>
+  <div class="widget">
+    <img src="http://xbin999.qiniudn.com/images/qrcode_for_gh_ffed660b754c_258.jpg">
+  </div>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><span class="category-list-count">117</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a><span class="category-list-count">38</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/家有小乐/">家有小乐</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小乐/">小乐</a><span class="category-list-count">336</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/100天行动/" style="font-size: 10.97px;">100天行动</a> <a href="/tags/5W1H1R/" style="font-size: 10px;">5W1H1R</a> <a href="/tags/5分钟游戏/" style="font-size: 10.97px;">5分钟游戏</a> <a href="/tags/APP/" style="font-size: 10px;">APP</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/BOSS/" style="font-size: 10.32px;">BOSS</a> <a href="/tags/Beatles/" style="font-size: 10px;">Beatles</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/China/" style="font-size: 11.94px;">China</a> <a href="/tags/DIY/" style="font-size: 12.26px;">DIY</a> <a href="/tags/English/" style="font-size: 10.65px;">English</a> <a href="/tags/FIT/" style="font-size: 10px;">FIT</a> <a href="/tags/Filezilla/" style="font-size: 10px;">Filezilla</a> <a href="/tags/Funny/" style="font-size: 18.71px;">Funny</a> <a href="/tags/Fusion-Drive/" style="font-size: 10px;">Fusion Drive</a> <a href="/tags/GFW/" style="font-size: 10.65px;">GFW</a> <a href="/tags/GoDaddy/" style="font-size: 10.32px;">GoDaddy</a> <a href="/tags/Google-Drive/" style="font-size: 10px;">Google Drive</a> <a href="/tags/Google-Reader/" style="font-size: 10.32px;">Google Reader</a> <a href="/tags/Homebrew/" style="font-size: 10.32px;">Homebrew</a> <a href="/tags/IT/" style="font-size: 19.35px;">IT</a> <a href="/tags/ImageMagick/" style="font-size: 10px;">ImageMagick</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/MacPorts/" style="font-size: 10px;">MacPorts</a> <a href="/tags/NPS/" style="font-size: 10px;">NPS</a> <a href="/tags/Nike-GPS/" style="font-size: 10px;">Nike+GPS</a> <a href="/tags/OCW/" style="font-size: 10px;">OCW</a> <a href="/tags/Office/" style="font-size: 10.32px;">Office</a> <a href="/tags/Openomy/" style="font-size: 11.29px;">Openomy</a> <a href="/tags/P-E-T/" style="font-size: 10.32px;">P.E.T</a> <a href="/tags/Politics/" style="font-size: 10px;">Politics</a> <a href="/tags/PostgreSQL/" style="font-size: 10px;">PostgreSQL</a> <a href="/tags/QQ/" style="font-size: 10px;">QQ</a> <a href="/tags/ROR/" style="font-size: 10px;">ROR</a> <a href="/tags/RSS/" style="font-size: 10px;">RSS</a> <a href="/tags/Rails/" style="font-size: 10px;">Rails</a> <a href="/tags/Ruby/" style="font-size: 10px;">Ruby</a> <a href="/tags/RubyGem/" style="font-size: 10px;">RubyGem</a> <a href="/tags/SBS/" style="font-size: 10px;">SBS</a> <a href="/tags/SEIM/" style="font-size: 10px;">SEIM</a> <a href="/tags/SKY/" style="font-size: 10px;">SKY</a> <a href="/tags/SNS/" style="font-size: 10.32px;">SNS</a> <a href="/tags/SSD/" style="font-size: 10px;">SSD</a> <a href="/tags/ShadowSocks/" style="font-size: 10px;">ShadowSocks</a> <a href="/tags/Sudoku/" style="font-size: 12.26px;">Sudoku</a> <a href="/tags/TmpDisk/" style="font-size: 10px;">TmpDisk</a> <a href="/tags/Tunnelblick/" style="font-size: 10px;">Tunnelblick</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/Weico/" style="font-size: 10px;">Weico</a> <a href="/tags/Yosemite/" style="font-size: 10px;">Yosemite</a> <a href="/tags/Zingo/" style="font-size: 10px;">Zingo</a> <a href="/tags/adminer/" style="font-size: 10px;">adminer</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/blogetery/" style="font-size: 10px;">blogetery</a> <a href="/tags/buzzsync/" style="font-size: 10px;">buzzsync</a> <a href="/tags/chnroutes/" style="font-size: 10px;">chnroutes</a> <a href="/tags/cowsay/" style="font-size: 10px;">cowsay</a> <a href="/tags/curl/" style="font-size: 10.32px;">curl</a> <a href="/tags/develop/" style="font-size: 10px;">develop</a> <a href="/tags/douban/" style="font-size: 10px;">douban</a> <a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a> <a href="/tags/evernote/" style="font-size: 10px;">evernote</a> <a href="/tags/extension/" style="font-size: 10.32px;">extension</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/faq/" style="font-size: 10.65px;">faq</a> <a href="/tags/follow5/" style="font-size: 10px;">follow5</a> <a href="/tags/freemind/" style="font-size: 10px;">freemind</a> <a href="/tags/fuyunv/" style="font-size: 20px;">fuyunv</a> <a href="/tags/git/" style="font-size: 10.97px;">git</a> <a href="/tags/gmail/" style="font-size: 10.32px;">gmail</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/google-earth/" style="font-size: 10px;">google earth</a> <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/hdfs/" style="font-size: 10px;">hdfs</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/horrible-histories/" style="font-size: 11.29px;">horrible histories</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/ios-app/" style="font-size: 10.65px;">ios app</a> <a href="/tags/iosapp/" style="font-size: 10.65px;">iosapp</a> <a href="/tags/iphone/" style="font-size: 10.65px;">iphone</a> <a href="/tags/it/" style="font-size: 10px;">it</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/koding/" style="font-size: 10px;">koding</a> <a href="/tags/mac/" style="font-size: 14.84px;">mac</a> <a href="/tags/mactips/" style="font-size: 11.61px;">mactips</a> <a href="/tags/mail/" style="font-size: 10.32px;">mail</a> <a href="/tags/markdown/" style="font-size: 10.97px;">markdown</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/objective-c/" style="font-size: 10px;">objective-c</a> <a href="/tags/one-piece/" style="font-size: 10.65px;">one piece</a> <a href="/tags/openfeint/" style="font-size: 10px;">openfeint</a> <a href="/tags/outlook/" style="font-size: 10.32px;">outlook</a> <a href="/tags/pow/" style="font-size: 10px;">pow</a> <a href="/tags/proxy/" style="font-size: 10.32px;">proxy</a> <a href="/tags/qiniu/" style="font-size: 10px;">qiniu</a> <a href="/tags/quizlet/" style="font-size: 10px;">quizlet</a> <a href="/tags/route/" style="font-size: 10px;">route</a> <a href="/tags/ruby/" style="font-size: 17.42px;">ruby</a> <a href="/tags/running/" style="font-size: 10.65px;">running</a> <a href="/tags/safari/" style="font-size: 10px;">safari</a> <a href="/tags/secret-socks/" style="font-size: 10px;">secret socks</a> <a href="/tags/sed/" style="font-size: 10px;">sed</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/skitch/" style="font-size: 10px;">skitch</a> <a href="/tags/slideshare/" style="font-size: 10px;">slideshare</a> <a href="/tags/spotlight/" style="font-size: 10px;">spotlight</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/ssh/" style="font-size: 10.65px;">ssh</a> <a href="/tags/symbol/" style="font-size: 10px;">symbol</a> <a href="/tags/tip/" style="font-size: 10.65px;">tip</a> <a href="/tags/tool/" style="font-size: 12.9px;">tool</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/tour/" style="font-size: 10px;">tour</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/twitter/" style="font-size: 10px;">twitter</a> <a href="/tags/usassh/" style="font-size: 10.32px;">usassh</a> <a href="/tags/wordpress/" style="font-size: 11.61px;">wordpress</a> <a href="/tags/workflow/" style="font-size: 10px;">workflow</a> <a href="/tags/xmlrpc/" style="font-size: 10px;">xmlrpc</a> <a href="/tags/youtube/" style="font-size: 10px;">youtube</a> <a href="/tags/一百天行动/" style="font-size: 11.61px;">一百天行动</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/万历十五年/" style="font-size: 14.84px;">万历十五年</a> <a href="/tags/三国/" style="font-size: 10.65px;">三国</a> <a href="/tags/三毛/" style="font-size: 10.65px;">三毛</a> <a href="/tags/不是问题的问题/" style="font-size: 10.65px;">不是问题的问题</a> <a href="/tags/世说新语/" style="font-size: 11.29px;">世说新语</a> <a href="/tags/中文/" style="font-size: 10px;">中文</a> <a href="/tags/乐乐的诗/" style="font-size: 10px;">乐乐的诗</a> <a href="/tags/乐妈写/" style="font-size: 13.55px;">乐妈写</a> <a href="/tags/乐妈说/" style="font-size: 10px;">乐妈说</a> <a href="/tags/习惯/" style="font-size: 10px;">习惯</a> <a href="/tags/书、音乐、电影/" style="font-size: 14.52px;">书、音乐、电影</a> <a href="/tags/书信/" style="font-size: 10.32px;">书信</a> <a href="/tags/书单/" style="font-size: 10.97px;">书单</a> <a href="/tags/书法/" style="font-size: 10.65px;">书法</a> <a href="/tags/产品体验/" style="font-size: 10.65px;">产品体验</a> <a href="/tags/亲子交流/" style="font-size: 10px;">亲子交流</a> <a href="/tags/亲子沟通/" style="font-size: 10.97px;">亲子沟通</a> <a href="/tags/人文/" style="font-size: 10px;">人文</a> <a href="/tags/人类的故事/" style="font-size: 10px;">人类的故事</a> <a href="/tags/作文/" style="font-size: 11.61px;">作文</a> <a href="/tags/倾听/" style="font-size: 10.32px;">倾听</a> <a href="/tags/健康与保健/" style="font-size: 10.32px;">健康与保健</a> <a href="/tags/儿童教育/" style="font-size: 19.03px;">儿童教育</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/全职妈妈/" style="font-size: 10px;">全职妈妈</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/兴趣/" style="font-size: 10.65px;">兴趣</a> <a href="/tags/兵役制/" style="font-size: 10px;">兵役制</a> <a href="/tags/其他/" style="font-size: 16.45px;">其他</a> <a href="/tags/内容/" style="font-size: 10px;">内容</a> <a href="/tags/写作/" style="font-size: 10px;">写作</a> <a href="/tags/凡尔纳/" style="font-size: 10px;">凡尔纳</a> <a href="/tags/分享/" style="font-size: 10px;">分享</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/分类/" style="font-size: 10px;">分类</a> <a href="/tags/分级阅读/" style="font-size: 10px;">分级阅读</a> <a href="/tags/创意/" style="font-size: 10px;">创意</a> <a href="/tags/剧本/" style="font-size: 10px;">剧本</a> <a href="/tags/动画片/" style="font-size: 10px;">动画片</a> <a href="/tags/北京/" style="font-size: 10px;">北京</a> <a href="/tags/十二生肖/" style="font-size: 10px;">十二生肖</a> <a href="/tags/十大/" style="font-size: 10px;">十大</a> <a href="/tags/半玩伴学/" style="font-size: 10.65px;">半玩伴学</a> <a href="/tags/南航/" style="font-size: 10px;">南航</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/历史/" style="font-size: 18.39px;">历史</a> <a href="/tags/历史上的今天/" style="font-size: 10.97px;">历史上的今天</a> <a href="/tags/古代历史/" style="font-size: 10px;">古代历史</a> <a href="/tags/古文/" style="font-size: 11.29px;">古文</a> <a href="/tags/古诗/" style="font-size: 10.97px;">古诗</a> <a href="/tags/咬指甲/" style="font-size: 10px;">咬指甲</a> <a href="/tags/哲学/" style="font-size: 10.32px;">哲学</a> <a href="/tags/唐诗/" style="font-size: 11.29px;">唐诗</a> <a href="/tags/唐诗宋词/" style="font-size: 10px;">唐诗宋词</a> <a href="/tags/四大美女/" style="font-size: 10px;">四大美女</a> <a href="/tags/团队/" style="font-size: 10.32px;">团队</a> <a href="/tags/国航/" style="font-size: 10px;">国航</a> <a href="/tags/图片处理/" style="font-size: 10px;">图片处理</a> <a href="/tags/土豆/" style="font-size: 10px;">土豆</a> <a href="/tags/圣诞/" style="font-size: 10.32px;">圣诞</a> <a href="/tags/地理/" style="font-size: 10.32px;">地理</a> <a href="/tags/坚持100天学习Ruby/" style="font-size: 17.1px;">坚持100天学习Ruby</a> <a href="/tags/埃及/" style="font-size: 10.32px;">埃及</a> <a href="/tags/埃及守护神/" style="font-size: 10px;">埃及守护神</a> <a href="/tags/培训/" style="font-size: 10px;">培训</a> <a href="/tags/夏山/" style="font-size: 10px;">夏山</a> <a href="/tags/夏山学校/" style="font-size: 10.65px;">夏山学校</a> <a href="/tags/大众点评/" style="font-size: 10px;">大众点评</a> <a href="/tags/奥数/" style="font-size: 12.9px;">奥数</a> <a href="/tags/学习/" style="font-size: 10.32px;">学习</a> <a href="/tags/学习方法/" style="font-size: 13.87px;">学习方法</a> <a href="/tags/客户分析/" style="font-size: 10px;">客户分析</a> <a href="/tags/宫崎骏/" style="font-size: 10px;">宫崎骏</a> <a href="/tags/家庭/" style="font-size: 10px;">家庭</a> <a href="/tags/家庭美德/" style="font-size: 12.26px;">家庭美德</a> <a href="/tags/家长会/" style="font-size: 10.32px;">家长会</a> <a href="/tags/宽容/" style="font-size: 10px;">宽容</a> <a href="/tags/寓言/" style="font-size: 10px;">寓言</a> <a href="/tags/对联/" style="font-size: 10px;">对联</a> <a href="/tags/对话/" style="font-size: 12.26px;">对话</a> <a href="/tags/小乐/" style="font-size: 19.68px;">小乐</a> <a href="/tags/小乐作品/" style="font-size: 12.9px;">小乐作品</a> <a href="/tags/小乐作文/" style="font-size: 15.16px;">小乐作文</a> <a href="/tags/小乐学钢琴/" style="font-size: 10px;">小乐学钢琴</a> <a href="/tags/小乐说/" style="font-size: 15.48px;">小乐说</a> <a href="/tags/小乐趣问/" style="font-size: 10px;">小乐趣问</a> <a href="/tags/小乐长安行/" style="font-size: 10.32px;">小乐长安行</a> <a href="/tags/小乐问/" style="font-size: 10px;">小乐问</a> <a href="/tags/小升初/" style="font-size: 11.29px;">小升初</a> <a href="/tags/小学活动/" style="font-size: 10px;">小学活动</a> <a href="/tags/小技巧/" style="font-size: 10.97px;">小技巧</a> <a href="/tags/小说/" style="font-size: 10.32px;">小说</a> <a href="/tags/小马过河/" style="font-size: 10px;">小马过河</a> <a href="/tags/山/" style="font-size: 10px;">山</a> <a href="/tags/工作杂记/" style="font-size: 17.74px;">工作杂记</a> <a href="/tags/希利尔讲世界史/" style="font-size: 14.19px;">希利尔讲世界史</a> <a href="/tags/庐山/" style="font-size: 10px;">庐山</a> <a href="/tags/建站/" style="font-size: 10px;">建站</a> <a href="/tags/影评/" style="font-size: 10.32px;">影评</a> <a href="/tags/微博/" style="font-size: 10.65px;">微博</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/思维/" style="font-size: 10px;">思维</a> <a href="/tags/思维导图/" style="font-size: 10.32px;">思维导图</a> <a href="/tags/思考/" style="font-size: 11.29px;">思考</a> <a href="/tags/恶魔果实/" style="font-size: 10px;">恶魔果实</a> <a href="/tags/悲剧/" style="font-size: 10px;">悲剧</a> <a href="/tags/想象/" style="font-size: 10px;">想象</a> <a href="/tags/感悟/" style="font-size: 10.65px;">感悟</a> <a href="/tags/成语/" style="font-size: 10.65px;">成语</a> <a href="/tags/成长/" style="font-size: 10.97px;">成长</a> <a href="/tags/手机游戏/" style="font-size: 10px;">手机游戏</a> <a href="/tags/扑克游戏/" style="font-size: 10px;">扑克游戏</a> <a href="/tags/批判性思维/" style="font-size: 10.32px;">批判性思维</a> <a href="/tags/技巧/" style="font-size: 10.65px;">技巧</a> <a href="/tags/技能教养法/" style="font-size: 10px;">技能教养法</a> <a href="/tags/拖延/" style="font-size: 10.32px;">拖延</a> <a href="/tags/换牙/" style="font-size: 10px;">换牙</a> <a href="/tags/提问题/" style="font-size: 10.32px;">提问题</a> <a href="/tags/搞笑/" style="font-size: 10.32px;">搞笑</a> <a href="/tags/支撑系统/" style="font-size: 10px;">支撑系统</a> <a href="/tags/故乡/" style="font-size: 10px;">故乡</a> <a href="/tags/教育/" style="font-size: 16.77px;">教育</a> <a href="/tags/教育方法/" style="font-size: 10px;">教育方法</a> <a href="/tags/数学/" style="font-size: 12.9px;">数学</a> <a href="/tags/数据建模/" style="font-size: 10px;">数据建模</a> <a href="/tags/数据模型/" style="font-size: 10.32px;">数据模型</a> <a href="/tags/新闻与政治/" style="font-size: 10.97px;">新闻与政治</a> <a href="/tags/方法/" style="font-size: 14.19px;">方法</a> <a href="/tags/旅游/" style="font-size: 12.26px;">旅游</a> <a href="/tags/旅游攻略/" style="font-size: 10.32px;">旅游攻略</a> <a href="/tags/旅行/" style="font-size: 11.61px;">旅行</a> <a href="/tags/无锡/" style="font-size: 10px;">无锡</a> <a href="/tags/时间管理/" style="font-size: 10.32px;">时间管理</a> <a href="/tags/明朝/" style="font-size: 10px;">明朝</a> <a href="/tags/明朝那些事儿/" style="font-size: 10px;">明朝那些事儿</a> <a href="/tags/显卡驱动/" style="font-size: 10px;">显卡驱动</a> <a href="/tags/暑假/" style="font-size: 10.65px;">暑假</a> <a href="/tags/朋友/" style="font-size: 11.29px;">朋友</a> <a href="/tags/杂记/" style="font-size: 12.9px;">杂记</a> <a href="/tags/杨红樱/" style="font-size: 10px;">杨红樱</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/梦想/" style="font-size: 11.29px;">梦想</a> <a href="/tags/正则表达式/" style="font-size: 10.32px;">正则表达式</a> <a href="/tags/步行/" style="font-size: 10px;">步行</a> <a href="/tags/武侠/" style="font-size: 10px;">武侠</a> <a href="/tags/死亡诗社/" style="font-size: 10px;">死亡诗社</a> <a href="/tags/民国/" style="font-size: 10.97px;">民国</a> <a href="/tags/民谣/" style="font-size: 10px;">民谣</a> <a href="/tags/沟通/" style="font-size: 11.61px;">沟通</a> <a href="/tags/治水/" style="font-size: 10px;">治水</a> <a href="/tags/浦江/" style="font-size: 10.65px;">浦江</a> <a href="/tags/海贼王/" style="font-size: 10.32px;">海贼王</a> <a href="/tags/游戏/" style="font-size: 11.61px;">游戏</a> <a href="/tags/游记/" style="font-size: 10.32px;">游记</a> <a href="/tags/爱心树/" style="font-size: 10px;">爱心树</a> <a href="/tags/父与女/" style="font-size: 10.32px;">父与女</a> <a href="/tags/牙仙子/" style="font-size: 10.32px;">牙仙子</a> <a href="/tags/独立思考/" style="font-size: 10.32px;">独立思考</a> <a href="/tags/猜谜/" style="font-size: 10.97px;">猜谜</a> <a href="/tags/玩中学/" style="font-size: 13.55px;">玩中学</a> <a href="/tags/环保/" style="font-size: 10.32px;">环保</a> <a href="/tags/理念/" style="font-size: 10px;">理念</a> <a href="/tags/理解/" style="font-size: 10px;">理解</a> <a href="/tags/生活/" style="font-size: 18.06px;">生活</a> <a href="/tags/生病/" style="font-size: 10px;">生病</a> <a href="/tags/用户/" style="font-size: 10px;">用户</a> <a href="/tags/用户体验/" style="font-size: 10px;">用户体验</a> <a href="/tags/电信/" style="font-size: 11.61px;">电信</a> <a href="/tags/电影/" style="font-size: 12.58px;">电影</a> <a href="/tags/百度地图/" style="font-size: 10px;">百度地图</a> <a href="/tags/百科/" style="font-size: 10px;">百科</a> <a href="/tags/真实/" style="font-size: 10px;">真实</a> <a href="/tags/真诚/" style="font-size: 10px;">真诚</a> <a href="/tags/知乎/" style="font-size: 10px;">知乎</a> <a href="/tags/神话/" style="font-size: 10.32px;">神话</a> <a href="/tags/离婚率/" style="font-size: 10px;">离婚率</a> <a href="/tags/科普/" style="font-size: 10.32px;">科普</a> <a href="/tags/移动互联网/" style="font-size: 10px;">移动互联网</a> <a href="/tags/穿越/" style="font-size: 10px;">穿越</a> <a href="/tags/童心/" style="font-size: 10px;">童心</a> <a href="/tags/童话/" style="font-size: 10px;">童话</a> <a href="/tags/童趣/" style="font-size: 10.97px;">童趣</a> <a href="/tags/笑话/" style="font-size: 10px;">笑话</a> <a href="/tags/精灵社/" style="font-size: 10.97px;">精灵社</a> <a href="/tags/绝对小孩/" style="font-size: 10px;">绝对小孩</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/美国语文/" style="font-size: 10px;">美国语文</a> <a href="/tags/美德/" style="font-size: 10.65px;">美德</a> <a href="/tags/翻墙/" style="font-size: 10.65px;">翻墙</a> <a href="/tags/翻译/" style="font-size: 12.9px;">翻译</a> <a href="/tags/考古/" style="font-size: 10.65px;">考古</a> <a href="/tags/聪明题/" style="font-size: 10.65px;">聪明题</a> <a href="/tags/胡适/" style="font-size: 10.97px;">胡适</a> <a href="/tags/脑洞/" style="font-size: 10px;">脑洞</a> <a href="/tags/节气/" style="font-size: 10px;">节气</a> <a href="/tags/英剧/" style="font-size: 10.32px;">英剧</a> <a href="/tags/英国/" style="font-size: 10px;">英国</a> <a href="/tags/英语/" style="font-size: 13.23px;">英语</a> <a href="/tags/蒋勋/" style="font-size: 10px;">蒋勋</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/视频/" style="font-size: 10.32px;">视频</a> <a href="/tags/角色/" style="font-size: 10px;">角色</a> <a href="/tags/设计/" style="font-size: 10.32px;">设计</a> <a href="/tags/诗/" style="font-size: 10px;">诗</a> <a href="/tags/语文/" style="font-size: 10.32px;">语文</a> <a href="/tags/诺贝尔奖/" style="font-size: 10px;">诺贝尔奖</a> <a href="/tags/读书/" style="font-size: 15.48px;">读书</a> <a href="/tags/课件/" style="font-size: 10.65px;">课件</a> <a href="/tags/调查/" style="font-size: 10px;">调查</a> <a href="/tags/谜语/" style="font-size: 10.97px;">谜语</a> <a href="/tags/贝尔金/" style="font-size: 10px;">贝尔金</a> <a href="/tags/越狱/" style="font-size: 10px;">越狱</a> <a href="/tags/越读馆/" style="font-size: 10.65px;">越读馆</a> <a href="/tags/趣课题/" style="font-size: 10px;">趣课题</a> <a href="/tags/跑步/" style="font-size: 10.32px;">跑步</a> <a href="/tags/输赢/" style="font-size: 10px;">输赢</a> <a href="/tags/邮政/" style="font-size: 10px;">邮政</a> <a href="/tags/配音/" style="font-size: 10px;">配音</a> <a href="/tags/金庸/" style="font-size: 10.65px;">金庸</a> <a href="/tags/问答/" style="font-size: 10.32px;">问答</a> <a href="/tags/问题讨论/" style="font-size: 10px;">问题讨论</a> <a href="/tags/阅读/" style="font-size: 16.13px;">阅读</a> <a href="/tags/陪小乐学习/" style="font-size: 15.81px;">陪小乐学习</a> <a href="/tags/随手记/" style="font-size: 10px;">随手记</a> <a href="/tags/青春/" style="font-size: 10px;">青春</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a> <a href="/tags/音频分享/" style="font-size: 10px;">音频分享</a> <a href="/tags/马来西亚/" style="font-size: 10.97px;">马来西亚</a> <a href="/tags/骑行/" style="font-size: 10.65px;">骑行</a> <a href="/tags/魔方/" style="font-size: 10px;">魔方</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/11/">November 2011</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/08/">August 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/06/">June 2010</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/05/">May 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/04/">April 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/03/">March 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/01/">January 2010</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/04/">April 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/12/">December 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/05/">May 2008</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/10/">October 2007</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/09/">September 2007</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/08/">August 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/07/">July 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/06/">June 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/05/">May 2007</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/04/">April 2007</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/03/">March 2007</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/02/">February 2007</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/01/">January 2007</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/12/">December 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/11/">November 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/10/">October 2006</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/05/">May 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/04/">April 2006</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/03/">March 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/02/">February 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/01/">January 2006</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/12/">December 2005</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/11/">November 2005</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/10/">October 2005</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/09/">September 2005</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/08/">August 2005</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/07/">July 2005</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/06/">June 2005</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/05/">May 2005</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/04/">April 2005</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/03/">March 2005</a><span class="archive-list-count">16</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/18/Google Drive无法登录/">Google Drive无法登录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/">小乐的小学阅读私家书单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/05/nao-dong-de-yi-tian/">脑洞的一天</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/">悦读2016年4月推荐书单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/">当孩子面临“你怎么不为班级着想”的指责时</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://themes.xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Bin Yang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xbin999"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55026585-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </div>
+</body>
+</html>

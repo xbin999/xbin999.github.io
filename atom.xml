@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>杨先生村民</title>
+  <subtitle>不惑，至简</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://xbin999.com/"/>
+  <updated>2017-02-18T03:52:38.000Z</updated>
+  <id>http://xbin999.com/</id>
+  
+  <author>
+    <name>Bin Yang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Drive无法登录</title>
+    <link href="http://xbin999.com/2017/02/18/Google%20Drive%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95/"/>
+    <id>http://xbin999.com/2017/02/18/Google Drive无法登录/</id>
+    <published>2017-02-18T03:52:23.000Z</published>
+    <updated>2017-02-18T03:52:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照<a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="external">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a>一文，主要是Google Drive登录并没有能走SS代理，只有通过<a href="https://www.privoxy.org/" target="_blank" rel="external">Privoxy</a>代理将http/https转发到SS。</p>
+<p>不过我尝试使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forward-socks5 .google.com 127.0.0.1:1080</div></pre></td></tr></table></figure>
+<p>能一直登录到最后，但完成后就显示是未登录。无奈只有把域名改成”/”全匹配，但这样造成所有http/https都会走shadowsocks代理。</p>
+<p>有关Privoxy的启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Applications/Privoxy&gt; sudo ./stopPrivoxy.sh ; sudo ./startPrivoxy.sh</div></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="external">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a></li>
+<li><a href="https://wutong.me/archives/472.html" target="_blank" rel="external">实现Charles和Shadowsocks的共存</a></li>
+<li><a href="https://gist.github.com/Alexniver/9a4f1791fe4305b0750a" target="_blank" rel="external">ubuntu下, 使用shadowsock和Privoxy帮助你在命令行中, 无障碍进行go get</a></li>
+<li><a href="https://www.zfanw.com/blog/privoxy-tutorial.html" target="_blank" rel="external">Privoxy 简明教程</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照&lt;a href=&quot;https://wutong.me/archives/493.html/comment-page-1#comment-5&quot; target=&quot;
+    
+    </summary>
+    
+    
+      <category term="IT" scheme="http://xbin999.com/tags/IT/"/>
+    
+      <category term="ShadowSocks" scheme="http://xbin999.com/tags/ShadowSocks/"/>
+    
+      <category term="Google Drive" scheme="http://xbin999.com/tags/Google-Drive/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小乐的小学阅读私家书单</title>
+    <link href="http://xbin999.com/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/"/>
+    <id>http://xbin999.com/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/</id>
+    <published>2016-05-08T08:27:14.000Z</published>
+    <updated>2016-05-18T12:19:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前段时间看到阿啃老师推荐了一份《<a href="https://mp.weixin.qq.com/s?__biz=MzAxMzA5MjU3OA==&amp;mid=2650333334&amp;idx=1&amp;sn=6fe3fab2616e12f93d464effff59e3f6&amp;scene=25&amp;srcid=0508J5DtC9GQ5QCCCzj2qRrg#wechat_redirec t" target="_blank" rel="external">概不负责的9岁儿童书单</a>》，说到“菜虫是男孩，荐书有性别倾向”，可以考虑有个女孩书单。我想正可以筛选筛选小乐看的书，做个参考，也免得每次朋友问书时想半天，正好也算是小乐小学毕业前的阅读小结。</p>
+<p>本书单的选择原则主要三条：<br>第一都是小乐看过和表示喜欢的，有些书我觉得不错，但她不喜欢就只有割爱，所以书单和小乐的阅读喜好密切先关；<br>第二市面上流传很广的不纳入，比如名气很大的四大名著，或者一些世界名著《伊索寓言》、《简爱》，学校里孩子大多都会看的《查理九世》、《笑猫日记》等；<br>第三同类型书中部分加了我的一点点倾向。只不过我不像阿啃老师那样把书都看过，有总体把握，自己的深度也不够，只能更表示不负责任了。</p>
+<p>进入正单前，先来个小学前幼儿期的序，我们看的绘本不多，就只选家中仍一直保留最喜欢的五本。</p>
+<ul>
+<li>阿罗系列 [美]克罗格特.约翰逊 / 孙晓娜 / 接力出版社 / 2004–1–1</li>
+<li><a href="[查理与劳拉系列](http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000102&amp;itemidx=1#wechat_redirect">查理与劳拉系列</a>) (英)罗伦·乔尔德 编绘 / 小皮 / 接力出版社 / 2010年3月</li>
+<li>不一样的卡梅拉系列 （法）克利斯提昂·约里波瓦、（法）艾利施 绘 / 郑迪蔚 / 2011–11</li>
+<li>你给我读，我给你念 (美)玛丽·安·霍贝尔曼|译者:李永毅|绘画:(美)迈克尔·埃姆博尔莱 / 李永毅 / 北京科技 / 2009–4</li>
+<li>缤纷世界——儿童地图绘本 拉露斯出版社 / 广东省地图出版社 / 2006–11</li>
+</ul>
+<p>进入小学阶段后，从年龄段粗略可以分高低两个阶段，低年级阶段基本我选，（有关选书参见<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=210058816&amp;idx=1&amp;sn=1e553083796f2d5bf1cb03cb3eaa420b&amp;scene=21#wechat_redirect" target="_blank" rel="external">如何让孩子爱上阅读</a>）现在她自己也会提一些想看的书，五年级后所覆盖的阅读范围和成人相差不大，看明白多少只有随时间慢慢来了。比如《<a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=100004199&amp;itemidx=1&amp;sign=1706f5dfed4df9d2a51f05b9e33f4609#wechat_redirect" target="_blank" rel="external">万历十五年</a>》、《<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204431236&amp;idx=1&amp;sn=012be4476051a008d7edd9ef900a6550&amp;scene=21#wechat_redirect" target="_blank" rel="external">神祇、陵墓与学者:考古学传奇</a>》都是睡前我给她念的。</p>
+<ol>
+<li>剑桥少儿生物百科/剑桥少儿科技百科/剑桥少儿文明百科 中国宇航出版社 2004年2月</li>
+<li>少儿职业志向指南 (法)帕蒂西亚·欧尔 / 黄凌霞译 / 接力出版社 / 2011年7月</li>
+<li>森林里的科学童话:四季的角度 四月/文，大粒儿盐/绘，浙江大学出版社/2012年1月</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402026502&amp;idx=1&amp;sn=fb09ae6352849c048e0857c11caee382&amp;scene=21#wechat_redirect" target="_blank" rel="external">写给孩子的哲学启蒙书</a> (法)碧姬·拉贝、米歇尔·毕奇、绘画:(法)雅克·阿扎姆 / 刘岩、王川娅 / 广西师大 / 2009–5 </li>
+<li>阿基米德儿童科普绘本系列 [法] / 中国大百科全书出版社 / 2012–5</li>
+<li>可怕的科学•经典数学系列 (英)卡佳坦•波斯基特 / 北京出版集团公司,北京少年儿童出版社 / 2012–1–1</li>
+<li>中国科普名家名作数学系列精选辑 李毓佩等/中国少年儿童出版社/2012年4月</li>
+<li>希腊三部曲 [英] 杰拉尔德•达雷尔（Gerald Durrell）/ 唐嘉慧 译 / 浙江人民出版社 / 2012–11</li>
+<li>DK莎士比亚百科 英国DK出版社 / 徐嘉、鲍忠明、于军琴 / 电子工业出版社 / 2016–5–1</li>
+<li>GO科学向前冲 韩 向日葵工作室/千太阳译/中信出版社/2010–5</li>
+<li>美国国家地理少儿版百科 美国国家地理学会 编 浙江少年儿童出版社/ 2010–12 </li>
+<li>小柏拉图系列 <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204164691&amp;idx=1&amp;sn=8439b12a5715adb6007c2656079ae340&amp;scene=21#wechat_redirect" target="_blank" rel="external">第欧根尼的另类生活</a>: 小柏拉图 [法]严·马尔尚 著、[法]文森特·索莱尔 绘 / 戴敏 / 浙江少年儿童出版社 / 2014–4</li>
+<li>小狗钱钱 [德] 博多·舍费尔 / 王钟欣、余茜 / 南海出版公司 / 2009–2–1</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=203348848&amp;idx=1&amp;sn=f3c214c0678978a03d747dca1c7d79a7&amp;scene=21#wechat_redirect" target="_blank" rel="external">航海王（海贼王/One Piece）</a> 尾田荣一郎/浙江人民美术出版社</li>
+<li>蔡志忠古典漫画 蔡志忠/生活·读书·新知三联书店/2001年4月</li>
+<li>一个人去跑步 马拉松1年级生 高木直子 图文 洪俞君译/译林出版社/2011年8月</li>
+<li>我的错都是大人的错 幾米 绘 / 现代出版社 / 2009–5 </li>
+<li>我不是完美小孩 幾米 / 海豚出版社 / 2011–4 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000675&amp;itemidx=1&amp;sign=31796c7e5970e6087d809ab105608274#wechat_redirect" target="_blank" rel="external">绝对小孩</a> 朱德庸 / 上海锦绣文章出版社 / 2007–5 </li>
+<li>漫话世界系列丛书•漫话英国/漫话美国/漫话哲学 李元馥 / 朴惠园 / 中信出版社 / 2002–10</li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000308&amp;itemidx=1&amp;sign=13df9366877d0d796323f3c12cf87fc2#wechat_redirect" target="_blank" rel="external">希利尔讲世界史</a>/希利尔讲世界地理/希利尔讲艺术史 V.M.希利尔 / 贵州教育出版社 / 2010–4</li>
+<li>吴姐姐讲历史故事 吴涵碧 / 新世界出版社 / 2011–9–1</li>
+<li>啊哈系列 啊哈!原来还有这样的国家（韩）池昊晋　著，（韩）金在一　绘 / 千太阳 / 中信 / 2010–11–23</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=205168875&amp;idx=1&amp;sn=40b96066991f31509ced880c6792044a&amp;scene=21#wechat_redirect" target="_blank" rel="external">明朝那些事儿</a> 当年明月 / 浙江人民出版社 / 2011–12–1</li>
+<li>中国近代史 蒋廷黻 / 武汉出版社 / 2012–6–1 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000194&amp;itemidx=1#wechat_redirect" target="_blank" rel="external">万历十五年</a> (美) 黄仁宇 / 生活·读书·新知三联书店 / 2014–7</li>
+<li>大江大海1949 龙应台</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=202338220&amp;idx=1&amp;sn=864002a9c24cf9522a4def1f60268bbf&amp;scene=21#wechat_redirect" target="_blank" rel="external">神祇、陵墓与学者:考古学传奇</a> [德]C.W.策拉姆 / 张芸、孟薇 / 生活·读书·新知三联书店 / 2012–6</li>
+<li>狄更斯讲英国史 (英)查尔斯·狄更斯 / 苏旻婕 等 / 北京时代华文书局 / 2014–7</li>
+<li>嗨!青春期:9–16岁男孩女孩专属读本 埃莉诺•格林伍德、亚历山大•考克斯 / 田科武 / 高等教育出版社 / 2010–7</li>
+<li>女孩，你该知道的事 [韩] 金清儿、（韩）孙多憓绘 / 千太阳 / 东方出版社 / 2012–11</li>
+<li>窗边的小豆豆 [日] 黑柳彻子 著、岩崎千弘 图 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000663&amp;itemidx=1&amp;sign=0c50139a75003ad505526e1ba057d95b#wechat_redirect" target="_blank" rel="external">夏山学校</a> A.S.尼尔 / 王克难 / 南海出版公司 / 2010–5 </li>
+<li>孩子你慢慢来 龙应台 / 生活·读书·新知三联书店 / 2009–12–1</li>
+<li>亲爱的安德烈 龙应台、[德] 安德烈 / 人民文学出版社 / 2008–12</li>
+<li>目送 龙应台 / 生活·读书·新知三联书店 / 2009–10</li>
+<li>这些人,那些事 吴念真 / 译林出版社 / 2011–9 </li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200043062&amp;idx=1&amp;sn=f5619c4a5919d9fbac1612a47a6e66cb&amp;scene=21#wechat_redirect" target="_blank" rel="external">阅读是最浪漫的教养</a> 李伟文、双胞胎AB宝 / 北方妇女儿童出版社 / 2013–3 </li>
+<li><a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000127&amp;itemidx=1#wechat_redirect" target="_blank" rel="external">在爱里相遇:做个好大人,给孩子一份没有亏欠的爱</a> 蔡颖卿 / 漓江出版社 / 2012–9</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200664150&amp;idx=1&amp;sn=faf106e27822e745d0a3afbc70d8053d&amp;scene=21#wechat_redirect" target="_blank" rel="external">爱哭鬼小隼</a> (日)河合隼雄 著、(日)冈田知子 绘 / 蔡鸣雁 / 浙江人民出版社 / 2013–1</li>
+<li>世界名人传记丛书:名人传 [法]罗曼·罗兰 / 陈筱卿 / 译林出版社 / 2013–9</li>
+<li>当鸭子遇见死神 (德)沃尔夫·埃布鲁赫 文/图 / 陈科慧 / 新蕾出版社 / 2013–9</li>
+<li>罗伯特·罗素作品集(纽伯瑞儿童文学奖作品) 兔子坡 : 罗伯特·罗素作品集 (美)罗伯特·罗素 / 陈薇薇 / 安徽教育出版社</li>
+<li>安房直子幻想小说系列 (日) 安房直子 / 彭懿 / 上海世纪出版股份有限公司少年儿童出版社 / 2010年4月</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200302304&amp;idx=1&amp;sn=d3c52346d6ef0f79da172c92003504e9&amp;scene=21#wechat_redirect" target="_blank" rel="external">夏洛的网</a> E·B·怀特 / 任溶溶 / 上海译文出版社 / 2004–6</li>
+<li>查理和巧克力工厂 (英)罗尔德·达尔 著、(英)昆廷·布莱克 绘 / 任溶溶 / 明天出版社 / 2009–3</li>
+<li>橡树上的逃亡 蒂莫泰·德·丰拜勒 / 刘英华 / 新蕾出版社 / 2007–9</li>
+<li>波普先生的企鹅【美】理查德·阿特沃特/弗洛伦斯·阿特沃特 / 安聿麒 / 新蕾出版社 / 2011–1 /</li>
+<li>柳林风声 肯尼恩・格雷厄姆 / 马晓声、朱兆林 / 新蕾出版社 / 2003–09</li>
+<li>布鲁克林有棵树 贝蒂·史密斯（Betty Smith) / 方柏林 / 译林出版社 / 2009–7</li>
+<li>安德鲁•克莱门斯系列 不要讲话 安德鲁•克莱门斯 / 蔡青恩、唐唐 绘 / 天津教育出版社 / 2013–1</li>
+<li>企鹅经典丛书:莎士比亚喜剧选 [英]威廉·莎士比亚 / 朱生豪 / 人民文学出版社 / 2013–4</li>
+<li>夜莺与玫瑰 [英] 奥斯卡·王尔德 / 谈瀛洲 / 浙江文艺出版社 / 2015–4</li>
+<li>记忆传授人 (美)洛伊丝·劳里 / 郑荣珍 / 河北教育出版社 / 2009–4 </li>
+<li>动物庄园 乔治•奥威尔 (George Orwell) / 隗静秋 / 上海三联书店 / 2009–6–1</li>
+<li>小灵通漫游未来 叶永烈 / 湖北少年儿童出版社 / 2009–8 </li>
+<li>纳尼亚传奇 [英] C.S.刘易斯 / 译林出版社/ 2015年11月</li>
+<li>霍比特人 [英] J.R.R.托尔金 / 吴刚 / 上海人民出版社 / 2013–1</li>
+<li>魔戒 (英)J.R.R.托尔金 / 朱学恒 / 译林出版社 / 2013–1</li>
+<li>哈利·波特 [英] J.K.罗琳 / 马爱农、马爱新译 / 人民文学出版社</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200997469&amp;idx=1&amp;sn=427086dd89c1688477d5f597be07b630&amp;scene=21#wechat_redirect" target="_blank" rel="external">埃及守护神系列</a> [美] 雷克·莱尔顿 袁异译 / 接力出版社 / 2013年7月</li>
+<li>埃及神话 朱星辰 / 中国林业出版社 / 2007–1</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=202931807&amp;idx=1&amp;sn=2648db2e3b19e921beb979e5be4258cf&amp;scene=21#wechat_redirect" target="_blank" rel="external">波西•杰克逊系列</a> [美] 雷克·莱尔顿 赵振中、袁异译 / 接力出版社 / 2011年2月</li>
+<li>波西•杰克逊奥林匹斯英雄系列 [美] 雷克·莱尔顿 赵振中、袁异等译 / 接力出版社 / 2011年8月</li>
+<li>永远讲不完的故事 (德)米切尔·恩德 / 杨武能 / 二十一世纪出版社 / 2013–6</li>
+<li>安德的游戏 (美)奥森·斯科特·卡德 / 李毅 / 广西科学技术出版社 / 2013–11–1 </li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200497645&amp;idx=1&amp;sn=a8d610898bd779c9b0202dc106448e05&amp;scene=21#wechat_redirect" target="_blank" rel="external">哈尔的移动城堡</a> [英]戴安娜•韦恩•琼斯 / 何羲和 / 人民文学出版社 / 2013–1</li>
+<li>福尔摩斯探案全集 [英] 柯南·道尔/ 王海滨译 / 中国妇女出版社 / 2013年1月</li>
+<li>东方快车谋杀案 : 阿加莎·克里斯蒂侦探作品集 [英]阿加莎·克里斯蒂 / 郑桥 / 新星出版社 / 2013–5 </li>
+<li>解忧杂货店 (日)东野圭吾 / 李盈春 / 南海出版公司 / 2014–5 </li>
+<li>金庸作品集 金庸 / 广州出版社 / 2009年9月</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=209194848&amp;idx=1&amp;sn=eea452dfe4b7563bd9d7b4c625ac28f9&amp;scene=21#wechat_redirect" target="_blank" rel="external">三毛全集</a> 三毛 / 北京十月文艺出版社 / 2011年11月</li>
+<li>我们仨 杨绛 / 生活·读书·新知三联书店 / 2003–7 </li>
+<li>围城 钱钟书 / 人民文学出版社 / 2000–7 </li>
+<li>洗澡 杨绛 / 人民文学出版社 / 2004–01</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=210436968&amp;idx=1&amp;sn=cd604b2b0fd663659d71f816afb95e6e&amp;scene=21#wechat_redirect" target="_blank" rel="external">活着</a> 余华 / 南海出版公司 / 1998–5</li>
+<li>许三观卖血记 余华 / 上海文艺出版社 / 2004–1</li>
+<li>城门开 北岛 / 生活·读书·新知三联书店 / 2015–7</li>
+<li>野草 鲁迅 / 人民文学出版社 / 2006年6月 </li>
+<li>上课记 /上课记2 王小妮 / 中国华侨出版社 / 2011–12 / 2013–5 </li>
+<li>民主的细节:当代美国政治观察随笔 刘瑜 / 上海三联书店 / 2011–10</li>
+<li>近距离看美国系列：历史深处的忧虑/总统是靠不住的/我也有一个梦想/如彗星划过夜空 林达 / 生活·读书·新知三联书店 / 1997–5 </li>
+<li>给孩子的诗 北岛 选编 / 中信出版社 / 2014–7–1 </li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=208811440&amp;idx=1&amp;sn=d146184d0c05a0295441a44d5709bc2b&amp;scene=21#wechat_redirect" target="_blank" rel="external">新月集</a> [印度] 泰戈尔 / 郑振铎 / 外语教学与研究出版社 / 2010–1</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204070186&amp;idx=1&amp;sn=5cb6155e862bb354ac4ce817f7250d3c&amp;scene=21#wechat_redirect" target="_blank" rel="external">蒋勋说唐诗</a> 蒋勋 / 中信出版社 / 2014–9</li>
+</ol>
+<p>最后再来一个英文阅读书单，这一直是小乐刚开始英文阅读时饱受困惑的，因为英文是在二年级才开始学，中文阅读的深度和英文水平不匹配，当时我想通过阅读的方式让她逐步学习英文，选书的难度非常大，经过很长一段时间的系列筛选以及小乐阅读的进步，才慢慢渡过这个阶段。所以英文书单主要以系列和作者为主。</p>
+<ul>
+<li>Harry Potter and the Sorcerer’s Stone J.K. Rowling / Scholastic Paperbacks / 1999–9</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=203234780&amp;idx=1&amp;sn=32f673fc28fb1283ce089b60775389b5&amp;scene=21#wechat_redirect" target="_blank" rel="external">Horrible histories</a> DEARY TERRY / Scholastic</li>
+<li>Matilda / The Witches / Fantastic Mr. Fox Roald Dahl</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=200302304&amp;idx=1&amp;sn=d3c52346d6ef0f79da172c92003504e9&amp;scene=21#wechat_redirect" target="_blank" rel="external">Charlotte’s Web</a> / the Trumpet of the Swan / Stuart Little E.B.White</li>
+<li>Goosebumps: A Night in Terror Tower Stine, R. L.</li>
+<li>Who Is J.K. Rowling? Pollack, Pam; Belviso, Meg; Marchesi, Stephen / 2012–8</li>
+<li>Diary of a Wimpy Kid</li>
+<li>Magic Tree House</li>
+<li>The 39 Clues Book 1 : The Maze Of Bones Rick Riordan / Scholastic Inc. / 2008–10–1</li>
+<li>The Magic School Bus<br>(粗体为系列名称或作者名称。)</li>
+</ul>
+<p>最后经过筛选，整理完毕，居然发现列了有100本的系列书，希望能给需要的家长朋友一点参考。文中链接是以往在fuyunv中的部分记录。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间看到阿啃老师推荐了一份《&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAxMzA5MjU3OA==&amp;amp;mid=2650333334&amp;amp;idx=1&amp;amp;sn=6fe3fab2616e12f93d464effff
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+      <category term="书单" scheme="http://xbin999.com/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>脑洞的一天</title>
+    <link href="http://xbin999.com/2016/05/05/nao-dong-de-yi-tian/"/>
+    <id>http://xbin999.com/2016/05/05/nao-dong-de-yi-tian/</id>
+    <published>2016-05-05T08:26:58.000Z</published>
+    <updated>2016-05-18T12:07:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>五一小长假最后一天的下午，没了作业、没得看书的小乐百无聊赖躺在客厅沙发上发呆，游手好闲的我在餐厅拿着本书，只剩下忙碌的乐妈在房间里整理换季的衣服，大概觉得这父与女都太空了，房间里传出温柔的狮吼：“你们俩给我洗衣服去。”</p>
+<p>我起身从小乐身边走过，小乐张大眼睛坏坏地对我说：“老爸，我们来玩<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402799872&amp;idx=1&amp;sn=8c8fd83cdc1f3bd55c9e5314cc206181&amp;scene=21#wechat_redirect" target="_blank" rel="external">Davy Back Fight</a>吧。”（上次在“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402799872&amp;idx=1&amp;sn=8c8fd83cdc1f3bd55c9e5314cc206181&amp;scene=21#wechat_redirect" target="_blank" rel="external">从看海贼王中学习想象力</a>”专门讲过草帽海贼团和Foxy海贼团的对决）<br>“什么？”我一愣。<br>“Davy Back Fight.”<br>“哦。”还是有点迷惑，“咋玩呀？”<br>“我们想想，要不让妈妈做裁判，让她出题目。”<br>“让她出题目啊，那还不是让我们俩比赛洗衣服。”<br>“洗衣服也行啊。”</p>
+<p>就这样，“Davy Back Fight”第一局开始。俩人分赃，刚好爸爸妈妈衣服各半，不过老爸的衣服少了个Bra，额外奖赏一只五一出游时装衣服的袋子，算是抵过。比赛以谁先手工洗干净交给洗衣机脱干者为胜，最后漂洗的一盆水需经裁判检查是否干净。结果我以微弱劣势告负，失败的惩罚是又加洗了一个iPad包。<br>“哼，全赖中间上了次厕所，小乐赛前先解决了，不公平啊不公平！”</p>
+<p>“Davy Back Fight”第二局，我怀有“私心”地提了一个项目“补袜子”，因为我大脚拇指特喜欢风凉，在冬天的袜子上都争气地戳出了一个洞，其中还有二出洞的。<br>小乐：“怎么都是劳动的项目？”<br>“劳动节嘛，要不下一个项目你来出好了。”<br>“好。”小乐同学大气表示同意，跑进房间。<br>“老爸，夏天的丝袜要补吗？”<br>“那个不用了吧，再穿穿破就扔掉了。”<br>小乐从抽屉里搜出我所有的冬季破袜，又找妈妈去要了件穿不上的衣服做布料。<br>数数破袜有七只，每人三只，剩下一只作为比赛的奖励项。<br>我翻着分给我的袜子，说：“小乐，老爸要补的袜子有两只都有两个洞啊。”<br>“那我们换一只吧。”<br>“好。对了，补的时候线可千万别太稀了，不然很容易又顶出来的。”<br>“好的。”<br>俩人各拿三只，兵分两路，一个到窗边图书角，一个在餐桌，拿着针线干了起来。</p>
+<p>“咦，怎么没有惨叫声啊？”乐妈开始耍坏：“被扎了可别忍着啊？”<br>“谁像你啊。”一个左哼哼，一个右哼哼。<br>没曾想第二局我继续败北。愿赌服输，只好再补第四只袜子。</p>
+<p>“小乐，第三局我们比什么呢？”<br>“看谁能说服妈妈，晚上看5集海贼王。”<br>“这个好。”<br>没等我出马，小乐就去说服了乐妈，让我很好奇。<br>母女俩走过来时，我问：“你怎么说服妈妈的？”<br>乐妈说：“小乐用事实来说服我的呀，她说现在海贼王的片头片尾去掉就很短了，一集就都只有十几分钟。”<br>“好吧，那我可以不用说了。”<br>“没有啊，你们两个都要分别来说服我的。”乐妈说：“小乐说服了我，看5集海贼王，你只能看4集。”</p>
+<p>吃晚饭时，乐妈又和我们说起一件趣事：小区里一辆汽车没有人，却居然没有熄火，影像也一直亮着，在车边来回看了半天，后来找到车主朋友和他说了，都觉得怪异。<br>小乐一听蹦出一句：“难道是车精灵？”（海贼王中的黄金梅利号就有船精灵，在司法岛之战中最后关头就是梅利出现救了路飞和伙伴们）</p>
+<p>“有道理啊。”<br>“真是太有脑洞了，今天看来是脑洞的一天，要不我们举行个脑洞大比拼吧。”</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;五一小长假最后一天的下午，没了作业、没得看书的小乐百无聊赖躺在客厅沙发上发呆，游手好闲的我在餐厅拿着本书，只剩下忙碌的乐妈在房间里整理换季的衣服，大概觉得这父与女都太空了，房间里传出温柔的狮吼：“你们俩给我洗衣服去。”&lt;/p&gt;
+&lt;p&gt;我起身从小乐身边走过，小乐张大眼睛坏坏地
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="海贼王" scheme="http://xbin999.com/tags/%E6%B5%B7%E8%B4%BC%E7%8E%8B/"/>
+    
+      <category term="对话" scheme="http://xbin999.com/tags/%E5%AF%B9%E8%AF%9D/"/>
+    
+      <category term="脑洞" scheme="http://xbin999.com/tags/%E8%84%91%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>悦读2016年4月推荐书单</title>
+    <link href="http://xbin999.com/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/"/>
+    <id>http://xbin999.com/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/</id>
+    <published>2016-05-02T08:26:43.000Z</published>
+    <updated>2016-05-18T12:04:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一晃就是4月份了，1月28本，2月35本，3月16本，4月14本，这个月活动更多，除了<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651799035&amp;idx=1&amp;sn=7227f06faa5053b12e209e40586994d0&amp;scene=21#wechat_redirect" target="_blank" rel="external">小升初</a>，还有校运动会，区市的篮球和足球比赛，所以阅读的时间也真是需要争分夺秒，哪天晚上要是少了阅读的时间，小乐都是要和我急的，也就难怪她总要急着把作业做完了。</p>
+<p>书看的没那么多也有好处，比如要选10本，把系列书去掉，我发现剩下的就是，不过考虑小乐的打分，这个月就只推荐9本了。4月的主旨是怀旧月，因为很多书小乐都是再次读，或者有些是把早买的书新翻了出来，以下书单按时间排序。</p>
+<ul>
+<li>碧血剑</li>
+</ul>
+<p>不知道为什么，每次看着本书，都不喜欢阿九，觉得她是大大的电灯泡，总觉得青青特别可怜。但后来又觉得错在袁承志，感觉他是最没用的男主角之一。</p>
+<ul>
+<li>Harry Potter and the Half-Blood Prince </li>
+</ul>
+<p>又啃完一本大部头！好久不看哈波，这次读英文又别有一番风味。特别喜欢看哈利和金妮最后的对话，具体我就不剧透了，呵呵。（乐爸：绝对的大部头，当然不是一个月能看完的，但完成后的成就感是足足的）</p>
+<ul>
+<li>美国国家地理少儿版百科 </li>
+</ul>
+<p>放在家里好久了，从来没看过，但拿起来一看就放不下了，好看得不得了，内容很丰富。</p>
+<ul>
+<li>特别要命的数学</li>
+</ul>
+<p>有些题目特别有意思，做起来很有挑战性，不过还好没要我的命。</p>
+<ul>
+<li>少儿职业志向指南</li>
+</ul>
+<p>很有意思，虽然叫指南，感觉很枯燥的样子，其实内容丰富，还很实用。（乐爸：法国人的书还是很有趣的）</p>
+<ul>
+<li>数字-破解万物的钥匙</li>
+</ul>
+<p>数字真的好奇妙呢！我最喜欢书中的圆周率了，一个特别吸引人的奇妙的无限不循环小数。3.1415926535897932384626433832795028841971……</p>
+<ul>
+<li>Who Is J. K. Rowling? </li>
+</ul>
+<p>久违的小英文书！别看它这么薄薄的一本，可是一本人物传记哦！不过内容一点也不枯燥，还是挺有意思的一本小书。（乐爸：这个系列的书都还不错，就是发现的晚了点，现在给小乐看略偏简单）</p>
+<ul>
+<li>伊豆的舞女</li>
+</ul>
+<p>第一次读川端康成的书，就被震撼了。细腻的笔调，描绘出一个个动人的故事，不会让人感到太悲伤，只是有一点淡淡的惆怅。</p>
+<ul>
+<li>遇见未知的自己</li>
+</ul>
+<p>感觉小说中同样隐含着人生的哲学，文中主角遇到的困难虽然与我的毫不相同，但她的有些心情我也感同身受。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一晃就是4月份了，1月28本，2月35本，3月16本，4月14本，这个月活动更多，除了&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;amp;mid=2651799035&amp;amp;idx=1&amp;amp;sn=
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+      <category term="书单" scheme="http://xbin999.com/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当孩子面临“你怎么不为班级着想”的指责时</title>
+    <link href="http://xbin999.com/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/"/>
+    <id>http://xbin999.com/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/</id>
+    <published>2016-04-28T08:26:19.000Z</published>
+    <updated>2016-05-18T12:10:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>乐妈给我讲了一件朋友孩子身上发生的事。</p>
+<p>小贝（化名）班级中要排练一个舞台剧参加学校的艺术节活动，需要三个小朋友在剧中穿插一段拉丁舞。在选小演员时，同学们选的跳舞名单中就有小贝，因为小贝也在学舞蹈，虽然学的是民族舞。小贝一开始并不愿意参加，因为她不会拉丁舞，而且也不喜欢。于是，同学们就纷纷指责她：“你怎么不为班级着想，不替集体增光呢？！”小贝被说地无可奈何，只能违心答应了下来。</p>
+<p>晚餐时乐妈把这个故事讲给小乐听，问她怎么看？</p>
+<p>小乐：“首先不会跳，小贝可以试着去学！”<br>乐妈：“那关键如果她根本不想学着跳，有没有权利选择不跳呢？”<br>小乐：“当然有！但是拒绝是要有勇气的。”<br>乐妈：“你觉得同学们用集体来说服小贝对不对？”<br>小乐：“不对，集体利益！什么是集体利益？它是抽象的，就像为人民服务一样，它们都是虚的。比如班里有个同学要去参加校外体育的比赛，刚好要年级考试，老师让他自己决定。这里就有学校这个集体利益，还有班级这个集体利益，那谁的利益大？能做比较吗？”</p>
+<p>我不由地想起了小乐的一个故事，小乐前几年每年都会参加年级围棋比赛，且总还能拿个名次，只因为小学低年级时学过围棋，但实际上后来没兴趣没有继续学，也没再下过围棋，只是每次到年级比赛时都靠着原来的老底去拿个名次，所以都让她代表班级参加。不过今年小乐和我们说“她不去参加围棋比赛了”。</p>
+<p>集体利益是个有趣的话题，我们从小的教育往往告诉我们是要以集体为重，个人利益要服从集体利益，但其实很少思考什么是集体？什么又能真正代表集体的利益？个人利益一定要服从集体利益吗？</p>
+<p>这个问题实际上在我的脑海中也一直不是很清晰，我想不如先举一些实例，看看大家在碰到时会怎么想？或是你的孩子是小贝，或者不是小贝时又会怎么想？所以设计了一个投票，说说我设计时考虑的点：</p>
+<ol>
+<li>案例的选取，我特意选择了五个场景，除了实际的参加班级舞台剧和围棋比赛，又增加了黑板报、打扫卫生和篮球赛，不同的场景在个人利益和集体利益的关系上是否相同？</li>
+<li>在集体利益的判断中，往往会采用“少数服从多数经常”的形式，那么通常班级中的选班长和迫使他人参加舞台剧上是否都可以用集体投票的形式？</li>
+<li>个人不愿意遵从集体的安排，其他人是否有指责的权利？</li>
+<li>他人指责的权利是否和不同的场景有关？（当然这一点并没能体现出来）</li>
+</ol>
+<p>由于微信投票标题有字数限制，我不得不对标题内容作了精简，使得五个场景的差异没有能完全体现出来，不过投票的结果还是说明了一些问题。认为小贝是不考虑集体利益的依次为：<br>篮球比赛（48%）&gt;黑板报评比（14%）&gt;围棋比赛/卫生检查（11%）&gt;班级舞台剧（7%）</p>
+<p>认为小贝并非不考虑集体利益的依次为：<br>卫生检查（89%）&gt;围棋比赛（86%）&gt;班级舞台剧（84%）&gt;黑板报评比（80%）&gt;篮球比赛（45%）</p>
+<p>从投票结果分析，篮球比赛是一个最独特的场景，在是否考虑集体利益上意见分歧很大，近一半人认为篮球中没有做按教练说的多传球是不考虑集体利益，相反卫生检查意见最一致，认为小贝不愿意每次都安排她打扫不属于“不考虑集体利益”，其他围棋比赛、班级舞台剧、黑板报接近于卫生检查的结果，但在“班级舞台剧”时有9%的人选择了不确定（或许是有更多的背景描述导致）。</p>
+<p>细想一下为什么？因为打扫卫生是体力活，所以不能都安排她去做，如果我写成扫厕所的话，估计大家更反对了。相对应的黑板报、围棋呢，难道它们是属于脑力活、技术活，就应该由最好的人去做吗？注意我特地在卫生检查的场景中说明了小贝是打扫最干净的，从集体利益来说就应该每次评比都安排她。而篮球比赛的特殊性，或许是因为大家的心目中认为篮球、足球等集体项目本身就应该是以集体利益为第一位。</p>
+<p>不过是不是投票越多就一定正确呢？不一定，在这五个场景中选择的答案或许都应该是“不考虑集体利益”。因为这要看你所定义的集体利益是什么，如果集体利益在这五个场景中代表的是班级和球队的利益，那么小贝的行为不都损害了集体利益吗？所以投票的结果恰恰说明我们没有能对集体利益的概念有一个清晰的认识。</p>
+<p>在维基百科中有一个“集体主义”的定义，我引用过来：</p>
+<blockquote>
+<p>集体主义，是主张个人从属于社会，个人利益应当服从集团、民族、阶级和国家利益的一种思想理论，是一种精神。在极权主义的国家，这种意识会被用于对政党和领袖的绝对忠诚，是独裁政权的性质。</p>
+</blockquote>
+<p>这个概念太大，上篇文章很多小学生朋友看和评论了，所以我的目的还是想从孩子的角度来说明和如何处理这样的问题。照搬上面的定义只是让我们看集体主义只是一种理论，一种精神，不代表它是真理。进而思考在个人利益和集体利益相冲突时，个人是否一定要服从集体？</p>
+<p>我们先看投票的结果，93%的人认为小贝有权利不参加舞台剧，7%不确定，说明在是否参加的问题上大家的观点一致，面对“个人利益和集体利益相冲突”时，小贝是有权利说不。</p>
+<p>紧接着的问题是”小贝不愿意参加舞台剧，你是否觉得其他孩子有权利指责小贝？”，这是我特意设置的，80%的人认为没有权利，看到这里时大家一定发现出问题了。为什么？难道其他孩子在自己的价值观判断中觉得不对时，却没有发表言论的权利了吗？如果把问题设为“指责小贝是否合理”，或许就不会引起大家的困惑，但有没有发现在完全从道德角度判断时，却全然忽视了人的基本言论的权利。</p>
+<p>“小贝可以说不，其他孩子也有权利指责小贝”，这个问题又何解呢？我想说的是都有权利，但有权利不代表行为一定是合理的。在五个案例中，按投票比例排序，卫生检查&gt;围棋比赛&gt;班级舞台剧&gt;黑板报评比&gt;篮球比赛，前四者投票人都倾向于个人权利的保障无可厚非，但偏偏在学校中却出现了很多同学的指责声，是孩子还不成熟吗？或许更大的原因是教育出了问题，盲目地服从于集体主义，忽视了个人的感受，没有人教他们如何思辨。这也是我设置最后一个调查问题的出发点，36%的人之前并没有思考过“个人利益服从集体利益”的正确性，包括我自己，因为你已经习惯了单位中的个人、小集体，大集体，至于该选择哪一个，则完全取决于自己的心情，何况又是在小学生群体中。</p>
+<p>比如说，小朋友会觉得因为自己打扫卫生最认真而让他扫厕所是不合理的，但却没想让别人参加班级舞台剧，也占用了时间需要排练，要表演好还需要请老师，花费金钱等。还有像围棋比赛、黑板报评比，出发点是希望能获得好名次，看起来是为了集体利益，但有没有想围棋比赛是否能让有兴趣的人参加，黑板报书写技能能让更多孩子参与锻炼，从长远来看对孩子群体的发展是否更有帮助？是不是比短期的名词更为重要？如果我们教育能更多从孩子的兴趣触发，不那么聚焦于短期利益，很多问题就可以迎刃而解，围棋、舞台剧、篮球，都只是一个社团，首先应该遵循的是孩子的兴趣，孩子愿意参与是基础。</p>
+<p>集体利益到底有哪些呢？有小集体利益（班级的）、大集体利益（学校的），还有更大的，有短期利益、长期利益，谁又来判断集体利益是能获得最大化的呢？比如说班级和学校活动发生冲突时，比如说泰坦尼克号沈船时，让老人、妇女、小孩先上救生艇是否一定符合集体利益？在多重情况下的选择必然是多样化的，而教育应该鼓励多样化，也让孩子认可多样化，这样才不会因为有人一时的“不愿意参加舞台剧”，就被加以指责。</p>
+<p>再说说五个案例中选择差异最大的一个“篮球比赛”，不要说小贝，科比在场上也同样面临着是单干还是传球的问题，同样从“集体利益最大化”的角度来说，也许科比单干更好，也许科比传球更好，而作为一项集体运动，不喜欢可以不参与，但选择参与后就要遵循其中的规则，这里简单的说就是听从教练的技战术安排。这是我自己理解选择这个案例最大的不同。</p>
+<p>顾全集体利益的过程中，集体利益的如何判定往往会采用“少数服从多数”的形式，投票的结果是91%的人认为不应该采用投票迫使他人参加舞台剧，68%认为可以以投票形式选班长。“少数服从多数”只是民主决策中的一种手段，不一定合理。只不过是我们日常常用的一种手段，非常重要的一点是涛涛爸爸以前常在群中提的“民主仅适用于公域”，也就是在私人领域它并不适合，就像我们总不能投票表决把你的书包送给别人一样，所以我们无权投票决定一定要小贝参加，而竞选班长在此可以认为是班级中的一个公共领域，谁能做好这个班长，需要大家行使权利来投票选择。</p>
+<p>总结一下自己的看法：</p>
+<ol>
+<li>你有权利说不，个人利益不一定小于集体利益。</li>
+<li>别人也有权利发表评论。</li>
+<li>但这样的评论不一定合适，重要的是教育和引导。</li>
+<li>教育中只有不过分注重于短期利益，才会有更多选择的多样性。</li>
+</ol>
+<p>啰啰嗦嗦说了这么多，或许还是不能解答家长朋友和小朋友的困惑，因为我也还没能都明白，但我还是想写这篇文章的原因，是想让小朋友明白，在面对下一次指责时不要觉得自己不道德，有说不的勇气，而在指责别人时也能换个角度去思考，学习去思考不同的集体利益场景是否需要盲从，更希望有更多教育工作者能在这个问题上给孩子以启发和帮助。</p>
+<p>最后再引用群中朋友对以上问题的评论（谢谢 @可二 @Ying @xiaozhen，还有很多群中的朋友，帮我解了不少惑）：</p>
+<ul>
+<li>这些都应该以孩子自愿参与为标准，不可以任何强制。教育者也不应该以任何集体利益为由对孩子进行道德绑架。</li>
+<li>应该废除班长制度，部分主持或者协助事宜，可以采取抽签或者轮替的方式进行。</li>
+<li>可以有指责的权利，但是仅限于学生，不包括老师。同时如果我是那个老师，我会向学生指出这种指责的不当之处在哪里。</li>
+<li>那个时候同学的指责，其实并非出自对集体利益的维护，而是因为小贝的拒绝触犯了“集体意愿”。大多数情况下，老师和同学的不满，很可能只是因为对方没有做出他们期待的行为，进而下意识地为了合理化自己的不满而抢占所谓的道德制高点。</li>
+<li>不是什么个人与集体的问题，集体这个词太空泛。</li>
+<li>不按教练的要求积极传球，不是什么个人值得探讨的应该是特定场合的社会角色及所应承担的责任问题。球赛因其对团队协作的特殊要求，而与之前的一些案例不太相同。也就是说，小贝有选择参加这次球赛或不参加的权利，但一旦参加，对自己在球赛中应负有的责任应该有清醒的认识。这是游戏规则，同时也体现个人的职业素养和操守。如果小贝不按牌理出牌，教练是有权利将其淘汰出局的。</li>
+</ul>
+<p>参考：</p>
+<ul>
+<li>集体主义 - 维基百科，自由的百科全书</li>
+<li>自由 - 维基百科，自由的百科全书</li>
+<li>中国人提倡集体主义，但合作意识落后，怎么解释这种矛盾？ - 知乎</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;乐妈给我讲了一件朋友孩子身上发生的事。&lt;/p&gt;
+&lt;p&gt;小贝（化名）班级中要排练一个舞台剧参加学校的艺术节活动，需要三个小朋友在剧中穿插一段拉丁舞。在选小演员时，同学们选的跳舞名单中就有小贝，因为小贝也在学舞蹈，虽然学的是民族舞。小贝一开始并不愿意参加，因为她不会拉丁舞，而且
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="儿童教育" scheme="http://xbin999.com/tags/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2/"/>
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="教育" scheme="http://xbin999.com/tags/%E6%95%99%E8%82%B2/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>等待 拼图 星期五</title>
+    <link href="http://xbin999.com/2016/04/22/deng-dai-pin-tu-xing-qi-wu/"/>
+    <id>http://xbin999.com/2016/04/22/deng-dai-pin-tu-xing-qi-wu/</id>
+    <published>2016-04-22T08:25:54.000Z</published>
+    <updated>2016-05-18T12:05:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>走出英特的校门，我长长地舒了一口气，终于<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651799012&amp;idx=1&amp;sn=22ef0852d644f42f495fbf25829ebc59&amp;scene=21#wechat_redirect" target="_blank" rel="external">面试完了</a>！那是星期六的下午，消息要等到星期五才能知道。</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651799021&amp;idx=1&amp;sn=8460c6175e6c1be74539db91b49c7f33&amp;scene=21#wechat_redirect" target="_blank" rel="external">好漫长的等待啊！</a>往常转瞬即逝的一个礼拜如一个世纪般难熬。等待中的每一天我都坐立不安，心神不宁，在心中幻想过无数次录取或没录取的情景。无数次脆弱地将头埋在妈妈怀里哭泣，无数次身心俱瘁地一头栽倒在床上试图将烦恼忘记，无数次悲叹竞争对手之多又安慰自己“你能行”，无数次被问到“去哪个学校”却只能强颜欢笑回笑“还没定”……我的心在这煎熬中几乎被片片撕裂。</p>
+<p>我唯一的安慰是一张拼图，一张《海贼王》漫画的一千片巨大拼图。不管每天事情再多，人再疲惫，我都要抽时间痴痴地坐在桌边，耐心地一片一片拼着。一天拼一部分，巨大的拼图渐渐完整，画面渐渐清晰，仿佛每拼一片，我心中的阴云就散开一点。《海贼王》拼图上的每个人都笑着看着我，他们是那么乐观开朗，似乎没有一点烦恼。每个人的笑脸对我来说都是精神上的鼓励，是极大的安慰。日子一天一天过去，我也一天一天地拼着，星期五渐渐靠近，拼图还剩一角……<br><img src="http://xbin999.qiniudn.com/images/xsc11.png" alt=""></p>
+<p>我怀着又期待又焦虑的心情迎来了星期五。一整天，我都忐忑不安。回到家，我深呼吸一口气，按下闹铃。妈妈的脚步声响起。我脑中一瞬间转过好几个开门的场景，但……</p>
+<p>“还没有消息。”迎接我的是这句话。眼看时间接近工作人员的下班时间—5点，英特却丝毫没有消息。我颓然跌坐在椅子上，心中好空虚。</p>
+<p>我把自己关在房间里，一个人看书，感觉连阅读也无法扼止慢慢占领心灵的绝望。我，失败了吗？</p>
+<p>“乐儿，快出来！”妈妈大叫着。我沉浸在失望中，弱弱地答了句：“干嘛？”“快过来啊！”妈妈还在喊。我走出房间，看到妈妈激动地拿着手机。“快，你自己看！”</p>
+<p>我接过手机。“杨芷欣同学，你符合我校录取标准线……”还未来得及笑，泪水已夺眶而出……<br><img src="http://xbin999.qiniudn.com/images/xsc12.png" alt=""></p>
+<p>桌上，拼图完成了。图上那些人，笑得好开心，像我一样。<br><img src="http://xbin999.qiniudn.com/images/xsc13.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;走出英特的校门，我长长地舒了一口气，终于&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;amp;mid=2651799012&amp;amp;idx=1&amp;amp;sn=22ef0852d644f42f495fbf2
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="小乐作文" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90%E4%BD%9C%E6%96%87/"/>
+    
+      <category term="小升初" scheme="http://xbin999.com/tags/%E5%B0%8F%E5%8D%87%E5%88%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试后的等待</title>
+    <link href="http://xbin999.com/2016/04/20/mian-shi-hou-de-deng-dai/"/>
+    <id>http://xbin999.com/2016/04/20/mian-shi-hou-de-deng-dai/</id>
+    <published>2016-04-20T08:25:42.000Z</published>
+    <updated>2016-05-18T12:00:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>乐乐的第二次面试结束后，就开始了等待。刚开始是期待，接着就是煎熬。当然这个煎熬主要是我和乐乐，乐乐因为好想进这个学校而煎熬，我因为看着女儿的煎熬而跟着煎熬。而乐爸整天乐呵呵乐呵呵，所以我看着他就来气。</p>
+<p>学校说好是下周五才会有消息，所以我们要足足等六天。这六天女儿的脸就是我的晴雨表。<br>“妈妈，班里的同学都在说自己进了什么什么学校，我不想听都不行，心里好烦！”<br>“妈妈，心里很难受！”<br>“妈妈，一定要星期五才能知道吗？”<br>“妈妈，我好担心！”<br>“妈妈，你不要安慰我，我知道！”<br>“妈妈，别这么对我笑，我心里不是滋味！”<br>“妈妈，你知道消息后，能马上告诉我吗？”<br>“不，不，算了，还是等我回来再告诉我吧！”</p>
+<p>我是她唯一可以诉说的对象，她在我这里可以流眼泪，而我只能心疼得一个人悄悄地流。我开始失眠，有时整晚不睡，有时后半夜不睡，想很多很多。想着我们的选择对不对？想着我们不给乐乐报跟学习有关的班对不对？想着如果乐乐没录取，她会怎么样？其中最让我心烦意乱的就是乐乐会怎么样？如果不录取，我们就又要进入主打应试的学校，那又会变成什么样？</p>
+<p>有朋友问我：“你不是一直反对民办的吗？怎么现在自己也去了？”其实这是误解，我所反对的民办是以分数为最终目的学校，我们不想让乐乐为了应试而去刷题。这个学校我们也比较过，不仅相对民办，哪怕相对公办，在理念上是属于不应试的学校。加上乐乐喜欢语言，普通学校的英语教学已经不够她学了，她又想再学一门外语，所以是我们的首选。我们不会因为哪个学校升学率高，也不管适不适合，也不管孩子愿不愿意，就拼命往里挤。民办也好公办也好，选最适合自己的。</p>
+<p>有个晚上做完作业，乐乐的情绪不高：“太可怕了，我生活在不公平的世界里！”<br>我凝视着她，用坚定的语气说：“乐乐，你知道这个世界是不公平的，我们每个人都会经历不公平的事，今天在这件事上你占便宜了，明天在那件事上你会被别人占便宜，没有人能逃脱！”<br>乐乐把埋在手臂里的头抬起来看着我：“所有人吗？”<br>我说：“所有人，除非这个人势利大到无边，这个人财力大到无边，但这样的人多吗？”<br>乐乐迟疑了会：“不多！”</p>
+<p>以前也有朋友建议我要提早去找关系，我这个本土杭州人，也不是没有关系，但是我过不了自己的关，过不了如何面对孩子的关。</p>
+<p>前段时间想让乐乐去参加越读馆的夏令营，是面对中学生的，乐乐还不到要求的年级，我鼓励她去争取。虽然她试了，但是回来告诉我，这是在破坏规则，她不喜欢这样。先不说事情的不同，但是乐乐正直的性格让我们能做的，就是制定提升自己的计划，用自己的能力去尽可能尝试为自己争取公平。以前童老师曾评价乐乐：“她的眼睛里有对公义的渴望！”每次看到这句话，我都会忍不住泪眼朦胧，我相信，属于乐乐的公义一定就在某个地方，可能要她花十八般武艺才能获得，但它一定就在那里，看着她闷闷不乐的脸，我只能在心里暗暗对她说：“不管结果怎么样，都不要放弃呀，乐乐！”</p>
+<p>日子就这么一天天熬着，听乐爸的建议，不去特意地开导她，而是用好玩的游戏来分散她的注意力。但我知道她的一颦一笑中透着什么！</p>
+<p>一直到了周五，乐爸都下班回家了，还是没有任何消息传来。<br>“妈妈，还会有消息吗？”<br>“可能不会有了，他们也要下班的。”<br>她默默走进房间，关上房门。我的心也沉到谷底，成或不成，总该有个说法呀！</p>
+<p>“嘀嘀”，我掏出手机，看到一段文字中的其中两个字：“符合”，就大叫乐乐。乐乐冲了出来，抢过手机，看到短信，抱着乐爸哭了。</p>
+<p>孩子如愿了，她实现了她的第一个目标，我为她感到高兴。但是后面的路很长，我真的不知道怎么替她规划！我想这也不该是我们来规划的吧，更多地还是能让孩子有时间去思想，去尝试，而不是奔跑在无尽的题海中，孩子应该会有自己的选择。</p>
+<p>小升初的经历让我真正感觉到累，走这条素质教育的路，不拿分数来衡量一个孩子，拿似乎看不到摸不着的综合素质来评价一个人，是否成人可能还差不多，谈是否成功是难上加难。我无法改变教育资源的不平衡，仍然只能做好自己，不过我还是相信，知识是永恒的，不会因为师资的不同，而变得贵或贱。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;乐乐的第二次面试结束后，就开始了等待。刚开始是期待，接着就是煎熬。当然这个煎熬主要是我和乐乐，乐乐因为好想进这个学校而煎熬，我因为看着女儿的煎熬而跟着煎熬。而乐爸整天乐呵呵乐呵呵，所以我看着他就来气。&lt;/p&gt;
+&lt;p&gt;学校说好是下周五才会有消息，所以我们要足足等六天。这六天女
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="乐妈写" scheme="http://xbin999.com/tags/%E4%B9%90%E5%A6%88%E5%86%99/"/>
+    
+      <category term="小升初" scheme="http://xbin999.com/tags/%E5%B0%8F%E5%8D%87%E5%88%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小升初的第二次面试</title>
+    <link href="http://xbin999.com/2016/04/18/xiao-sheng-chu-de-di-er-ci-mian-shi/"/>
+    <id>http://xbin999.com/2016/04/18/xiao-sheng-chu-de-di-er-ci-mian-shi/</id>
+    <published>2016-04-18T08:25:29.000Z</published>
+    <updated>2016-05-18T11:59:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>终于接到小乐心念念想去的学校面试通知。有了<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=2651798956&amp;idx=1&amp;sn=9d0c699445404839f1aa77db6b4d288e&amp;scene=21#wechat_redirect" target="_blank" rel="external">第一次面试</a>的经验，她开始准备，从自我介绍到英文问题回答，还会拉着我当主考官，让我想问题提问，自己组织英语回答。我听不懂她在说什么，只是看着她微笑放松的神情，就满足地笑了。</p>
+<p>“妈妈，为什么我觉得我准备地很充分了，还是这么紧张呢？”<br>“我真的好想去，妈妈？”<br>“如果我进不了，我可以在家上学吗？算了，再说吧！”<br>“妈妈，我会努力的！”</p>
+<p>我知道，她一直在挣扎，开始我以开导为主，但发现她越来越沉默，眼神中透着一层忧郁。我怕了。童老师让我：“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=210648532&amp;idx=1&amp;sn=dec874f72349b3f49fe45a44439e961c&amp;scene=21#wechat_redirect" target="_blank" rel="external">倾听，站在她这里</a>。”我突然想到，对呀，我怎么把这个给忘了！无知才无畏 ，她紧张是因为她在乎。我现在还是先把“鼓励”给放一放，多一点倾听和理解。</p>
+<p>周六的应试是11点30，为了早点适应环境，我们提前了1个半小时出门。没曾想原来半小时的行程，因为路堵竟然开了1个小时，不过小乐丝毫没受影响，一路有说有笑的，先听小七最近天天唱的《水手》，</p>
+<blockquote>
+<p>他说风雨中这点痛算什么<br>擦干泪不要怕至少我们还有梦       </p>
+</blockquote>
+<p>又听<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=204583288&amp;idx=1&amp;sn=384f155c8381180d9d36bb7240665e81&amp;scene=21#wechat_redirect" target="_blank" rel="external">《Horrible Histories》中的有趣歌曲</a>，状态越来越好。</p>
+<p>跨进校园，小乐就被吸引了，她红着脸，抿着嘴，谨慎地看着人群和校园。我知道她的心情，我边走边把右手向身边划动，寻找她的手，悄悄握紧它，把我的爱传给她。我们握在一起，什么话都不需要说。</p>
+<p>还有半小时用餐时间，所以时间相当紧迫。小乐已经不止一次听学姐说过学校的餐饮有多少棒，吃好大半后，抬起头兴奋地说：“呀，我热血沸腾了呢！”引得我们哈哈大笑。吃完准备离开时，她拿过纸巾，把桌上的菜汁擦试干净。</p>
+<p><img src="http://xbin999.qiniudn.com/images/xsc.jpg" alt=""></p>
+<p>参加面试的人真的好多，乌压压一片，孩子们列队进场时，我站在花坛的台阶上张望，还是看不到她。接下来又是等待，差不多过了近三小时，学校广播告知孩子们已经结束所有面谈，马上出来，结果会以短信方式告知。孩子们鱼贯而出，人多的根本看不清，我一个个扫视。“乐乐，你在哪里？”心里喊着。出来的孩子越来越少，我才有机会挤到前面，正当我摇摆着头，看着出口处时，“喂，看什么呢？就看你睁着大眼睛，我在这儿呢！”乐乐取笑的声音从我眼皮下传来。我的天，这个“不孝女”竟然如此对我说话，我悬着的心算是落地了。</p>
+<p>坐上车，乐乐就告诉我们面试了些什么。除了笔试，都是开放性的问题。比如<br>“你是怎么看学奥数的？”<br>“你认为阅读和写作有什么联系？”<br>“你的学校怎么样？”<br>“你为什么要来面试？”<br>她说面试老师都微笑着倾听，所以她也是一直笑着，把自己的见解说出来。又把语文笔试的内容告诉我们，还有250字的作文。作文题目是《你心中的大石头》，我一听就愣了。“妈妈，我写的是你们。我说我心中的大石头就是你们俩，爸爸把我培养成书虫，可以和我一起互相讨论看法。而妈妈给我乐观向上，总是在我遇到挫折的时候给我力量，有次我参加篮球比赛，她悄悄在我书包里放了一张纸条‘可以流血、流汗、流泪，就是不要放弃’！”我记得这是她第一次出校门参加篮球比赛的场景，当时激动的心情还记得，坐在前座，我流下了眼泪。这时我已经不去计较录不录取了，这样的女儿，我骄傲！</p>
+<p>晚上一个同学家长告诉我，乐乐第一次面试的学校说，如果觉得自己没有发挥好，可以再去试一次。我给乐乐看，“你怎么想？”<br>“算了吧！”乐乐平静地说。<br>这又是她的选择。</p>
+<p>后面的结局如何还不知道，不过既然选择不走“纯应试教育”的路，就也要暂时“输”得起。我不后悔<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=403141248&amp;idx=1&amp;sn=24d7ad21457716aba02edc7af8bef9d6&amp;scene=21#wechat_redirect" target="_blank" rel="external">放弃奥数</a>，也不后悔没有为了升学迎合考证书。家人都说我太固执，其实不是，而是遵循乐乐的天性一起做的选择。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;终于接到小乐心念念想去的学校面试通知。有了&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;amp;mid=2651798956&amp;amp;idx=1&amp;amp;sn=9d0c699445404839f1aa77
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="乐妈写" scheme="http://xbin999.com/tags/%E4%B9%90%E5%A6%88%E5%86%99/"/>
+    
+      <category term="小升初" scheme="http://xbin999.com/tags/%E5%B0%8F%E5%8D%87%E5%88%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小升初的第一次面试</title>
+    <link href="http://xbin999.com/2016/04/16/xiao-sheng-chu-de-di-yi-ci-mian-shi/"/>
+    <id>http://xbin999.com/2016/04/16/xiao-sheng-chu-de-di-yi-ci-mian-shi/</id>
+    <published>2016-04-16T08:25:14.000Z</published>
+    <updated>2016-05-18T11:57:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>随着孩子的小升初，“半玩伴学”群里的朋友们也和我们全家一起经历了一次过程，有放松、期盼、失望、自信、等待和喜悦，很多朋友希望我们能把小乐面试的经历给写下来，也算是一种鼓励。下面是乐妈在小乐第一次面试和第二次面试之间的记录，算是开篇。</p>
+<p>昨天写了《<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=403289251&amp;idx=1&amp;sn=dfd3a73ae7b23b0f130fd2e8730c6dd9&amp;scene=21#wechat_redirect" target="_blank" rel="external">和小乐聊小升初的面试</a>》一文，没想到得到这么多朋友的转发和评论，也收到朋友的祝福和建议，真的很谢谢大家。</p>
+<p>先说说我们为什么建议乐乐去那所民办中学投简历的缘由。我是属于那类已经会公开指责现今教育的不满家长，反对应试、反对题海战术、反对父母给孩子包办择校。事实上参加面试的学校并非乐乐想要去的学校，但是在征求乐乐同意后投了简历。当时只是想让乐乐去参加面试练习，感受气氛，也对比知道自己在同龄人中的水平。当时逗乐乐说：“就当去玩玩吧！”“好的！”于是就这么愉快地决定了。</p>
+<p>有了这种心态，一点打探都没有。接到面试电话通知后，本来我想让乐爸留在家里烧中饭，我一个人带乐乐去，因为并没有很重视这件事。还是乐爸有心，他和我商量：“我还是一起去吧！毕竟这是乐乐第一次面试，我去也是一种支持！”我说：“啊，干嘛这么隆重，好吧！”后来从乐乐的情绪中看，乐爸是对的，虽然乐乐知道我们的意图，但她一直是个认真的孩子，既然去做了，总想做好它。（陪伴孩子还是非常重要的，用行动告诉对孩子的支持）</p>
+<p>面试早上，乐乐有点紧张。雨下地很大，我们早早开车等在学校门口，一个画画、一个看书、一个看手机，来消磨时间。等我们到达报到处，已经开始点名，看她背着双肩包，有点漠然的表情，我知道她在紧张。而在孩子面试时两小时的等待中，周围的家长们传递着种种“小道”消息。而听着“乐乐肯定没问题”之类的话，我会有点得意。没做准备，一是我们并没考虑就读，二是我确实对乐乐有信心，甚至想象在接到录取通知后华丽丽的拒绝会不会很过瘾。</p>
+<p>乐乐出来了，依然没有笑容。乐爸说：“走，老爸带你考察一下他们的篮球场！”雨停了，我们漫步在校园中，都没有问“考的怎么样？”只是评论他们的篮球场、足球场，当去考察他们的厕所时，乐乐开始讲她经历的两小时。（等待孩子的讲述，做好倾听）</p>
+<p>“先是一个老师看我的成绩单，说你有这么多三好学生呀？！然后老师让我用三分钟英文自我介绍，从我的自我介绍里再挑了两个单词让我拼写，耶，我全拼出了，但是介绍时有两个疙瘩！”<br>我们都说这个不容易的，没有充分准备，是会这样的。<br>乐乐继续：“语文先是阅读，然后回答问题，最后是当场口头说一篇作文，是要发生在我身上的事，给我什么启示。这个我觉得，没有回答好，这个老师一直板着脸，我就很紧张。”<br>“那你的作文是什么呢？”<br>“《我的新加坡妈妈》！”我一想，确实题材有些偏，很难讲出启示。<br>“数学是五大道题，有简便运算，再是图形……”<br>乐爸：“牛吃草！”<br>乐乐最烦牛吃草问题，乐爸故意戏弄她。<br>“没有没有，这个没有，有一道题我开始没做，等其它做完了，我再去做时，用了方程，但来不及算完，就到时间了！”<br>乐爸：“不错呀，小妞，挺好的！”</p>
+<p>回家路上，乐乐还是心事重重，先是担心自己没有考好，然后又担心如果面试成功后，怎么办？<br>“妈妈，如果签了协议，是不是我就不能去其它学校了？”<br>“也可以去，就是可能会交违约金，这个妈妈也不知道！两个学校，你现在还会选哪个？”<br>“当然还是原来的闹，我只是怕我想去的去不了，这个学校又放弃了，就只能去对面中学了！”<br>心疼她，这么小的孩子，就要有这样的煎熬。</p>
+<p>趁乐乐进房间，我把我知道的和我的想法告诉乐爸：“学校虽然不住校，但有晚自习，到家弄好要9点了！”<br>乐爸一听直摇头：“那算了！”<br>我继续说：“如果进这个学校，就意味走应试刷题的路，如果走这条路，我宁可选对面公办，自己的时间会多一些！”<br>两个人达成了共识。</p>
+<p>乐乐的情绪因为假期晚上的《海贼王》时间又重新高涨起来，也不在意了，继续一心一意向往自己心仪的学校。当然，我确实还是太自满了，事情超出了我的预料。没有事先做准备，多少让乐乐受了打击，不过未尝不是好事，这样的裸考才能暴露出真正的问题。（选择孩子喜欢的事情放松自己）</p>
+<p>周二白天我在想，当时为什么让乐乐去试面试的原因，不正是想从中找到自己的不足嘛！所以我拿起电话，告诉招生办老师我想知道孩子为什么失败的原因，我说：“我不是在意结果 ，只是想从校方知道自己孩子在哪方面不足，我们的路还长，想要有针对性的练习！”老师态度很好，告诉我这个是保密的，也并不代表没机会，让我再等通知，让我相信他们会公平公正的。</p>
+<p>挂了电话后，我脑子想：“不行，成与不成倒不是我们关心的重点，孩子不是在这件事上成了就算优秀，不成就不算优秀。我们要想的绝不是眼前简单地进民办，而是要从长远孩子的发展来考虑。练习也不是因为成功而放松，不成功而自弃。还是需要发析原因，学校有自己制定的游戏规则，我并不想去评价，我们所能讨论的是自己的不足。”</p>
+<p>下午乐乐放学回来，开心地告诉我学校里举办的年级篮球赛两场都赢了。趁她洗澡时，我就和她一起聊了起来。</p>
+<p>乐乐：“英文自我介绍3分钟，我其实都不知道3分钟实际有多久，所以可能只说了1分钟多。而且我的语法也肯定错了很多。我还算好，像我们另一个同学是用英文讲一个关于西湖的民间故事！”<br>我又吃了一惊，这个难度不是一般的大，如果没有准备，除非是英文功底已经和欧美同步，否则几乎做不到。<br>我：“恩，这个是有难度的，但看来我们说的能力还是弱项，需要加强！”<br>乐乐：“数学我觉得我考地很好！”<br>我：“恩，这个不容易，都是奥数题！”<br>乐乐：“语文不理想，开始回答阅读题时，老师就脸色不好，我就知道回答错了！”<br>我：“奥，是有标准答案的问题，我更喜欢那些开放性问题！你那天说作文没说好，那如果现在，你会选什么说呢？”<br>乐乐：“我当时看到老师的脸，就害怕了，脑子里一片空白！”<br>我：“恩，看来应辨能力和心理素质也要加强。你平时在学校参加这么多活动，都可以拿来说，像上次你们打篮球，怎么一点点追上比分，还有上次踢足球输了，还有艺术节如何为自己节目争取更多机会，妈妈能说出好多呀！”（事后寻找自己的不足改进自己）</p>
+<p>晚上等乐爸回来，我把我们聊的和自己的想法告诉他，觉得需要帮助乐乐提升自己的展现能力，也才有了<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=403289251&amp;idx=1&amp;sn=dfd3a73ae7b23b0f130fd2e8730c6dd9&amp;scene=21#wechat_redirect" target="_blank" rel="external">次日的早餐谈话</a>。</p>
+<p>回顾自己周二一个白天的心路历程“感觉困惑 - 回想初衷 - 重树目标 - 建立信心”，告诉自己不必去纠结那些为什么，不要去找人家的问题，只是想后面能做什么，怎么提升自己。</p>
+<p>不过没想这还只是开始，有关小乐的第二次面试下次再说。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;随着孩子的小升初，“半玩伴学”群里的朋友们也和我们全家一起经历了一次过程，有放松、期盼、失望、自信、等待和喜悦，很多朋友希望我们能把小乐面试的经历给写下来，也算是一种鼓励。下面是乐妈在小乐第一次面试和第二次面试之间的记录，算是开篇。&lt;/p&gt;
+&lt;p&gt;昨天写了《&lt;a href=
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="乐妈写" scheme="http://xbin999.com/tags/%E4%B9%90%E5%A6%88%E5%86%99/"/>
+    
+      <category term="小升初" scheme="http://xbin999.com/tags/%E5%B0%8F%E5%8D%87%E5%88%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5分钟游戏 - 创意故事填空</title>
+    <link href="http://xbin999.com/2016/04/08/chuang-yi-gu-shi-tian-kong/"/>
+    <id>http://xbin999.com/2016/04/08/chuang-yi-gu-shi-tian-kong/</id>
+    <published>2016-04-08T08:24:48.000Z</published>
+    <updated>2016-05-18T11:55:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近小乐晚上在看一本尘封已久的百科全书《美国国家地理少儿版百科百科》，临睡前跑来刷牙，就给我们手舞足蹈地念了一段自编的故事，笑地都控制不住，揉着肚子往床上倒。</p>
+<blockquote>
+<p>太开心了，爸妈要带我去霍格沃茨，我可以在福灵剂里游泳，也能尽情地玩魁地奇了。我只是希望这次不要想去年的无聊旅程一样，那次爸爸妈妈、姨妈和我打算到古灵阁去旅行。当我们在路上行驶时，老妈打开一张伏地魔的CD，并开始边笑边听小苹果。我当时正在玩最爱的电子游戏，而且马上要达到有史以来的最变态分数，突然，耳边传来一声巨大的“轰”。我们的车停在了路上的一个9又3/4站台前面。我大吼一声：“No！”因为我的游戏机掉出了车窗，并被一辆快速开过的霍格沃茨专车 碾坏了。在那之后，我开始无聊地打瞌睡。当我醒来的时候，我听见“啾”的声音，并闻到恶臭。原来是一群鹰头马身有翼兽正在我们眼前过马路！当我们总算到达古灵阁时，却发现旅馆把我们的预约记录弄没了，结果我们只好睡在一间海格小屋里。不过，今年应该不会再有这样的经历了。因为我们不再开车，而是搭乘游轮旅行！</p>
+</blockquote>
+<p>是不是很有趣？这个故事有一个骨架，小乐填充了其中的划线部分，但非常有意思的是小家伙完全以哈利波特的故事场景做了填充，一个非常有趣的创意。正是以前在“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=206840053&amp;idx=1&amp;sn=221aa64e1a08c16964a1ab84abdc079e&amp;scene=21#wechat_redirect" target="_blank" rel="external">天才的七种创意策略</a>”中说的“强迫一些不曾发生的关系”，并“把东西组合在一起”，趣味就出来了。</p>
+<p>像不像平常玩的一个组合游戏，一个人说主语，一个人说时间，一个人说地点，一个人说动作，然后组合在一起，往往会有意想不到的效果，比如“在一个月黑风高的晚上唐僧师徒在学校操场上唱着小苹果”，这个游戏的有趣之处同样是在“强迫一些不曾发生的关系”，“把东西组合在一起”，随时随地2~4个人都可以玩，也没有时间限制，正是我们喜欢的<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=208561392&amp;idx=1&amp;sn=7b44ce3c71c1fb3dc80f8731929a4f3c&amp;scene=21#wechat_redirect" target="_blank" rel="external">5分钟游戏</a>系列。如果人员更多的话，可以加入更多元素，比如让主语“和XXX”，动作的状态“最后XXX”，如果继续把场景扩大，套上一个故事框架，也就成了今天我们所说的例子，或许你就可以设计一个这样的故事框架。</p>
+<p>是不是很有意思，赶紧和孩子一起玩一个吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近小乐晚上在看一本尘封已久的百科全书《美国国家地理少儿版百科百科》，临睡前跑来刷牙，就给我们手舞足蹈地念了一段自编的故事，笑地都控制不住，揉着肚子往床上倒。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;太开心了，爸妈要带我去霍格沃茨，我可以在福灵剂里游泳，也能尽情地玩魁地奇了
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="5分钟游戏" scheme="http://xbin999.com/tags/5%E5%88%86%E9%92%9F%E6%B8%B8%E6%88%8F/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="创意" scheme="http://xbin999.com/tags/%E5%88%9B%E6%84%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和小乐聊小升初的面试</title>
+    <link href="http://xbin999.com/2016/04/06/he-xiao-le-liao-xiao-sheng-chu-de-mian-shi/"/>
+    <id>http://xbin999.com/2016/04/06/he-xiao-le-liao-xiao-sheng-chu-de-mian-shi/</id>
+    <published>2016-04-06T08:24:31.000Z</published>
+    <updated>2016-05-18T11:52:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上周小乐参加了一所民办中学的面试锻炼，但并没有收到第二轮面试的通知。我们并没有困惑于人家为什么不选我们，而是想了想自己可能需要改进的问题，继续为下一个自己想去的学校的面试而做准备。</p>
+<p>最近乐爸比较忙，匆匆抽早上吃饭的时间和女儿聊，因为时间有限，所以大多他主讲。</p>
+<p>乐爸：“所有的面试归纳起来无非就是三步。第一步是自我介绍。自我介绍一般会要求控制在3分钟之内，可能中文或英文，你就把它当成是一次类似TED的演讲，前面的介绍事先可以准备，但最后一点演讲需要练习。”<br>乐爸举了以前给乐乐看过的TED中的一个魔术表演：“演讲的人是面对观众的，但配合的魔术视频是事先录制好播放的！”<br>乐乐很惊叹：“啊，我以为是他变出来的！”<br>“不是，他通过练习，知道后一秒会是什么，分秒不差，这些都是通过练习才达到的。”乐爸继续说道：“在自我介绍时，要注意很重要的一点：自信，比如会不会微笑？眼神是不是有交流？”</p>
+<p>乐爸：“面试的第二步是什么呢？”<br>乐乐：“回答问题。”<br>乐爸：“对，第二步是回答问题；但别忘了第三步，就是问问题。要记住，面试中你不要把自己当成是弱者，好像只能被他们选。所有的面试选择……”<br>乐乐接道：“互相的！”<br>乐爸：“棒，一定要记住这一点,并不是你去了之后，就是一只待宰的羔羊，不能因为我们姓杨，我们杨家也是有选择的，所以除了答之外，还可以有问！问代表着你想知道什么？”<br>乐乐：“童老师讲义里这个也有的，（乐在寒假参加过越读馆的面试技巧培训）当时我们就脑洞大开想了很多问题。然后我说我想问他们食堂怎么样？但是我想问食堂怎么样会不会很失礼？”（乐乐平时很注意礼仪，这可能和我以前规矩太多有关，好处和坏处都有，好处是有教养，坏处是敏感，着想的太多）</p>
+<p>乐爸：“问了食堂怎么样后，你真正想知道的是什么呢？问这个问题，有可能会造成主考官认为这个孩子是不是很贪吃呀？怎么只想着吃呢？所以你在问这个问题前，要想办法避免造成他有这样的印象。在所有的答和问都要注意一点什么呢？”<br>乐乐：“避免造成不良印象！”<br>乐爸：“对，但这句话太空，不知道怎么样才能避免造成不良印象？有一个技巧就是：别太短！太短的话别人根本不知道你想要表达什么，完全就靠自己去理解。太短是一个问题，还有一个是太抽象，或者说太高大上，不接地气。比如你说‘避免造成不良印象’后面，知道该怎么做吗？所以要说的长一点，要说的具体点。你在当时回答时，可能会紧张，不知道从何说起，所以你可以去讲一些故事。这个故事是在你身边实际发生的，和这个问题有关的事情。给你举一个例子，面试时很多时候会问‘你喜欢什么呀？’你会说‘我喜欢阅读’，然后呢？接下来老师可能会分很多种，有些老师会等着你继续回答，有些老师会马上再问你一个问题，如‘你喜欢读什么样的书？’你可能会说‘我喜欢读金庸的武侠小说。’然后老师又会问你‘你喜欢哪本呀？’你可能会说‘我喜欢《神雕侠侣》……”<br>乐乐插了一句：“我就问’你看过吗，我们来聊聊！”<br>乐爸：“对，但你想想爸爸所讲的例子，那个老师在问了三个或四个问题时，你才回答到了这里。很可能有很多老师，在问了第一个问题后，他就在等着你讲，你如果不讲，就不再往下问了。这样从第一问题，你回答完‘阅读’后就没了，那就是回答太短了。如果问十个孩子，十个孩子都这么回答的话，每个孩子所表现的情况就是一模一样，只不过有的回答‘阅读’有的回答‘写作’而已。那怎么样才让回答变长呢？也就是你怎么才能表现出你喜欢阅读呢？”<br>乐乐：“我花很多时间在阅读上！”<br>乐爸：“太短，继续！”<br>乐妈：“‘很多时间’，什么叫很多？怎么让人家知道这个很多到底有多少多？”<br>乐爸：“讲一些故事，讲你身上发生的故事！”<br>乐乐还是觉得有些困惑，不知道具体说什么。<br>乐爸：”爸爸给你举个例子启发一下好不好？爸爸曾经写过一篇文章，叫《<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=209564607&amp;idx=1&amp;sn=0cc13b4a5a1e3b4eb91dbd0cffa71f18&amp;scene=21#wechat_redirect" target="_blank" rel="external">这个暑假小乐看的书</a>》，你还记不记得我给你拍的几张照片？那你接下来可以怎么讲呢，我喜欢阅读，爸爸有个公众号叫父与女，专门记录我阅读的故事，有一次暑假里的时候，我看了很多很多的书，爸爸给我记录一共看了有61本书。<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402377186&amp;idx=1&amp;sn=64fd0a4b2ca53ed8069024833586da2d&amp;scene=21#wechat_redirect" target="_blank" rel="external">还有一次我把所有的书叠起来</a>，都要到我的肩膀了。这是不是就具体了，充分体现了你喜欢阅读。再举个例子，你怎么爱阅读……”</p>
+<p>乐乐：“我还为阅读跟老爸吵过一架！”<br>乐爸：“这是个非常好的例子！”<br>乐乐：“人家会不会想这是个不孝敬父母的孩子？”<br>乐爸：“这又要你脑洞大开了，在这里你想要表达的是你和老爸吵架吗？不是，你如果只说了‘为阅读和老爸吵架’，就又说短了，你还是要讲一个故事，那个故事是什么呢？你和老爸吵过几次架？”<br>乐乐：“一次！”<br>乐爸：“对，我们<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=203161970&amp;idx=1&amp;sn=2d6a52bcc5a7a7f0c41a1b40e4ff057f&amp;scene=21#wechat_redirect" target="_blank" rel="external">吵了一次唯一的架</a>！这次吵架就是为了阅读，当然老师有可能会问，也有可能不问！”<br>乐乐：“继续讲！”<br>乐妈：“对，你千万不能完全等着让人家去猜，那可能会猜歪了，跟你想表达的就不一样了！”<br>乐乐：“我是不是不要先整体的说？”<br>乐爸：“不用去考虑整体，面试的时候你会紧张，不像今天。你可以想到一件事后，一点点说出来！”<br>乐乐：“恩，有一次我在看《波西杰克逊》，我看到最后一章了，很紧张，很想把它看完，然后爸爸说要睡觉了，太晚了，我不肯，爸爸来抢我的书，我就有点火了，就和他抢书。”<br>乐爸：“可以，你就是把核心的一句话如何铺垫地说出来。再想想，还有没有其他？”</p>
+<p>乐妈：“你现在在做的，看完书在豆瓣上做记录！”<br>乐爸：“我已经在豆瓣上记录了多少本书；我和爸爸每个月会都在父与女上<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=403256063&amp;idx=1&amp;sn=75192e2a151c074a2e2a3ea617e59dcf&amp;scene=21#wechat_redirect" target="_blank" rel="external">推荐我所阅读过的十本书</a>；非常受大家的喜欢，怎么受大家喜欢呢？”<br>乐乐：”这个我就不知道了！“（这个怪我们，没有把每次大家的反馈告诉她）<br>乐妈：“有些朋友会说‘收了’，然后也会买给自己的孩子看！”<br>乐爸：“还有家长会的时候……”<br>乐乐：“啊，我还上台讲了我的阅读！我讲的是<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=202050288&amp;idx=1&amp;sn=ce9896ea1fce2b596f25b48bb9c8553e&amp;scene=21#wechat_redirect" target="_blank" rel="external">靠阅读学好语文</a>。”<br>乐爸：“对，所以并不是你回答一句‘我喜欢阅读’就好了！”<br>乐乐：“但是，我如果把所有的都讲了，会不会太占时间了”（还是替人家着想，往往把自己退到一边，需要有人引导她问答，反之就会认为不好交流。）<br>乐妈：“对，所以你可以观察面试官的表情，他如果很有兴趣，就多说点，如果你觉得说的差不多了，就可以收口了，这个要自己把握!”</p>
+<p>乐爸：“这就是前面讲的，你们要有眼神的交流！这些是回答要注意的点，那提问其实也一样，围绕着你所关注的事情，要跟这个学校有关。一定要记住你们是‘双向的’。你前面说想问‘食堂怎么样？’可以问，但你要想怎么让这个问题真正表达出你想要表达的含义，不会造成人家的误解。比如你有很多爱好，你会关心你的爱好在学校中能不能发挥出来！”<br>乐乐：“像你们的篮球场大不大？”<br>乐爸：“对，但这个问题，又带出了另外一点，你为什么会问这个问题？”<br>乐乐：“我喜欢打篮球！”<br>乐爸：“那你可以先告诉人家！对吧？为什么会问这个问题很关键，你可以说‘我很喜欢打篮球，我从三年级就开始打篮球了，我一直是学校的篮球主力，到了中学我也一直想打的。所以才关心篮球场大不大呀？学校有没有篮球队呀？这些是你真正想要关心的，再比如，你很喜欢弹钢琴，学校有没有弹钢琴的地方呀，学校在音乐艺术方向是如何引导的呢？你很想学日语，因为喜欢《海贼王》呀？你们能不能开日语课呀？当然他们有可能会说有，也有可能会说没有。比如说篮球，他们可能会说有女子篮球队或没有。如果他说没有女子队， 那这时候你怎么办？”<br>乐乐：“那我们就创一个吧！”<br>乐爸：“非常好，充分表现出‘自信’，不怯懦，不要人家一说没有，你就没话说了。不是这样的，人家回答‘有’或‘没有’，你都可以继续再问。比如你说‘创一个’，那这个创也不是你在说大话，像班里以前只有你一个女孩子打篮球，后来你们不有好几个女生一起训练，还打比赛，对吧！那如果人家说有，你怎么办？”<br>乐乐：“再继续锻炼自己，继续加入篮球队！但是我还不知道进不进得了这个学校，所以还是觉得有怪！”<br>乐爸：“你可以继续问他！”<br>乐乐：“我是不是问他们成绩怎么样，但我觉得问成绩又不太好！”（又替人家着想了，怕人家成绩不光彩会伤心，觉得问地唐突）<br>乐爸：“那除了问成绩之外，还可以问什么呢？”<br>乐妈：“如果你已经在学校了，有女子篮球队，因为你是新生，人家不知道你以前的水平，所以没有人来找你，但这时你又很想去，你会怎么做？是不是可以问，怎么加入篮球队？是老师来选？还是自己报名？”<br>乐爸：“就像<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=205307494&amp;idx=1&amp;sn=c7dd3767d176710e43a82e573675a84d&amp;scene=21#wechat_redirect" target="_blank" rel="external">苏格拉底三步问答</a>，当然你不要把人家问的要自杀奥。但千万别敷衍地问一个，好，完了！”</p>
+<p>乐爸：“面谈是灵活的，是人和人之间双向的交流，有的人会启发式地问，会不断地问你问题，让你把真正想表达的东西说出来！”<br>乐乐：“但有些老师不是！”<br>乐爸：“对，许多人不是。交流一直是双向的，选择也是，所以你不能完全把责任推给对方，当人家没有具备的时候，你也可以主动起来。当你想到这是双向的时候，你就不会有‘我来就是被你们问的’这个想法。不要让自己像砧板上的肉，你也可以反过来，拿人家来当肉！”<br>乐乐：“那人家会不会觉得我好可怕！”<br>乐妈：“那要看你怎么问？在问之前是怎么想的？比如你想问食堂，如果没有任何铺垫，不了解你的人就会认为你只知道吃。你如何在问这个问题前不让别人产生突兀的感觉？你可以介绍一个你们现在学校的几个菜样，像什么’面粉裹面粉‘的大排呀。如果有了这些铺垫就会好很多，人家才会了解你为什么会关心食堂。”</p>
+<p>乐爸：“当你讲细节时，就会变生动！怎么和别人聊天，这也是一种能力，是需要学习和练习的。自我介绍是演讲，是一个人在表达，当然听众也需要顾到，你不能一个人嗨了去了！不是吹嘘，有些人在面试可能会去吹，但我们要注重真实！真实的你都可以大胆拿出来讲。”<br>乐妈：“像在说你昨天把哈波第6本看完了，你可以真实描述自己怎么辛苦地看下来，花了多少时间，怎么看的，生词怎么处理！”<br>乐乐：“恩，还背单词！”<br>乐妈：“对，你详细告诉老师，你是怎么在做的，老师就会知道‘奥，原来她在看有难度的书时，会自主学习，而能自主学习才是更有意义的！你不能一句’我看完了‘就好了，人家觉得很轻松，单词都认识……”<br>乐乐：“怎么可能都认识！”<br>乐妈：“对，但如果你不说清楚事实时，会造成人家误解，你需要告诉别人你的英文阅读是如何一点点积累上去的。同时也可以在说自学英语时，引出你为什么选择这个学校的原因，对吧？！”<br>乐爸：“你还可以说说你们以前的<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=207638354&amp;idx=1&amp;sn=f30c02f379a59702402151c4dec4a1a8&amp;scene=21#wechat_redirect" target="_blank" rel="external">英语四人小组</a>！你们当时是怎么一起学习的！”<br>乐乐：“我们有背单词，配音，还会自导自演小剧场，演一些英文歌曲。”<br>乐爸：“恩，可以微笑些，不要这么严肃！还可以加点细节，像背单词，你们搞了一个背单词游戏！”<br>乐妈：“你们还会在背出单词后，‘罚’吃零食！”<br>乐乐：“恩，有一次还差点把我们乌龟给喂的吃死了！”<br>乐爸：”对，就讲这些生动的细节！“</p>
+<p>闹铃响了，到乐乐上学的时间了，我们的对话也就结束了。</p>
+<p>每个孩子都不同，有的孩子善于表达，不过乐乐并非如此，在面试时还不知道如何应对。如果看过《海贼王》的，会觉得她像极了妮可罗宾：话不多、理性、喜欢看书。每次我看她在写作业时的专注神情，就觉得她像个学者，像极了考古学家罗宾，而罗宾恰恰也是乐乐最喜欢的角色。不管怎么说，乐乐都是父母心中那个优秀的孩子，她只是还欠缺这方面的技能，需要练习。虽说面试有它的局限性，虽说“是金子总会发光”，不过我们也需要把盖在自己身上的尘埃抖掉，才能让人看到发光的金子。</p>
+<p>下一步就是让我们一起为下一个面试做准备。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上周小乐参加了一所民办中学的面试锻炼，但并没有收到第二轮面试的通知。我们并没有困惑于人家为什么不选我们，而是想了想自己可能需要改进的问题，继续为下一个自己想去的学校的面试而做准备。&lt;/p&gt;
+&lt;p&gt;最近乐爸比较忙，匆匆抽早上吃饭的时间和女儿聊，因为时间有限，所以大多他主讲。&lt;
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="教育" scheme="http://xbin999.com/tags/%E6%95%99%E8%82%B2/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="小升初" scheme="http://xbin999.com/tags/%E5%B0%8F%E5%8D%87%E5%88%9D/"/>
+    
+      <category term="沟通" scheme="http://xbin999.com/tags/%E6%B2%9F%E9%80%9A/"/>
+    
+      <category term="面试" scheme="http://xbin999.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>越读馆听课记</title>
+    <link href="http://xbin999.com/2016/04/03/yue-du-guan-ting-ke-ji/"/>
+    <id>http://xbin999.com/2016/04/03/yue-du-guan-ting-ke-ji/</id>
+    <published>2016-04-03T08:24:16.000Z</published>
+    <updated>2016-05-18T11:48:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>周六上午和小乐一起参加了越读馆肖老师的一堂古文课，去前我并不知道听什么，收到这任务估摸是乐妈听到文言文头疼，觉得都属于阅读问题，一并交给我就行。不过我也很开心，早想去感受下越读馆的课，也学习几招。（刚被批评了，小乐说妈妈可不是头疼文言文，就是要我去体会越读馆的;-）</p>
+<p>肖老师的课讲的是“文言之趣”，估摸是想打消孩子们对文言文的恐惧。开篇从神智体谜引出一首有趣的七言律诗，讲了个苏轼以智伏辽使的故事；之后仍以猜谜的形式推荐了七本经典古文书籍《史记》、《世说新语》、《古文观止》、《太平广记》、《西湖梦寻》、《 聊斋志异》和《人间词话》，一时家长们拍照的拍照，记录的记录。七本书小乐猜中了《世说新语》和《 聊斋志异》，我作为家长也参与答了一个《人间词话》。而在说《太平广记》时提到了《书剑恩仇录》的赵半山，就更合小乐胃口了。</p>
+<p>除了书的推荐，还有方法“文言翻译八字决”，虽说因时间没展开，但是听着对英文翻译也适用；更有阅读时的“可字批注法”，以“可”+“形容词”的方式捕捉古文中的异常之处（异于常人、常态、常识），再以“可”字批注的方式进行点评，如可疑、可恨、可爱、可怜等等。</p>
+<p>一个好的课堂，除了提供技术和方法，更需要有实例和练习。实例选取了一段史记中的《高祖本纪》：</p>
+<blockquote>
+<p>高祖以亭长为县送徒骊山，徒多道亡。自度比至皆亡之，到丰西泽中，止饮，夜乃解纵所送徒。曰：“公等皆去，吾亦从此逝矣！”徒中壮士愿从者十余人。高祖被酒，夜径泽中，令一人行前。行前者还报曰：“前有大蛇当径，愿还。”高祖醉，曰：“壮士行，何畏！”乃前，拔剑击斩蛇。蛇遂分为两，径开。行数里，醉，因卧。后人来至蛇所，有一老妪夜哭。人问何哭，妪曰：“人杀吾子，故哭之。”人曰：“妪子何为见杀？”妪曰：“吾，白帝子也，化为蛇，当道，今为赤帝子斩之，故哭。”人乃以妪为不诚，欲告之，妪因忽不见。后人至，高祖觉。后人告高祖，高祖乃心独喜，自负。诸从者日益畏之。</p>
+</blockquote>
+<p>让孩子们分析文中的有哪些人物，是否有异常之处，然后对选出的人物做“可”字批注。这正是我最有兴趣听的部分，而肖老师在课上的几点提示让我颇有收获。</p>
+<p>通常选择文中的人物时，我们的思维会局限于主角，比如高祖，再多想一点就是老妪，但是肖老师提醒除了高祖和老妪之外的人物呢？再细看文中，不仅有“行前者”，还有“后人”，乃至最后的“诸从者”，甚至还有非人类的“蛇”，顿时让人脑洞大开，觉得文中的人物丰富了许多。</p>
+<p>从之后孩子们的回答来看也变得多样化，小乐的视角完全是站在蛇的角度，她在课堂上的回答是觉得蛇“可怜”，平白无故在路上被斩了；回来的路上更是告诉我还觉得刘邦“可恶”，依然是站在蛇的角度。或许和文章的主题无关，但这里又需要赞的一点就是肖老师在课上一直强调的是这里的回答没有对错，同时也告诉孩子们需要代入到时代中，不能完全以现实思想观点来看待。</p>
+<p>在每个孩子的回答后，又提出了几个问题，首先是“你觉得这个故事可信吗？”，孩子们全部摇头不可信，不过紧接着的第二个问题“司马迁相信这个故事吗？”，就非常有意思，让我很是佩服。确实以现代科学的眼光来看，白帝子，赤帝子都不可信，所以孩子的回答都不稀奇；但第二个问题的好，就在于代入当时的时代后，“司马迁是如何看待这个故事的呢”，必然引发更多的思考，诸如对人物的神化，尤其是帝王的神化，那背后又会是什么原因呢？</p>
+<p>听到此处，不由让我也掉一句古文：“文当如是学也”。</p>
+<p>一个小时的课程很快就结束了，回家的途中，我开玩笑问：“肖老师的课和童老师的课一样吗？”<br>小乐点评曰：“肖老师上课激情很足，不过发声会比较累；童老师不那么‘二’的时候还是比较沉稳的。”<br>我打趣道：“不知道会不会是我们这些家长坐后面的缘故啊😄”</p>
+<p>最后除了家里已有的《世说新语》、《古文观止》之外，估摸着得把几本先给补齐了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;周六上午和小乐一起参加了越读馆肖老师的一堂古文课，去前我并不知道听什么，收到这任务估摸是乐妈听到文言文头疼，觉得都属于阅读问题，一并交给我就行。不过我也很开心，早想去感受下越读馆的课，也学习几招。（刚被批评了，小乐说妈妈可不是头疼文言文，就是要我去体会越读馆的;-）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="越读馆" scheme="http://xbin999.com/tags/%E8%B6%8A%E8%AF%BB%E9%A6%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>悦读2016年3月推荐书单</title>
+    <link href="http://xbin999.com/2016/04/02/yue-du-2016-nian-3-yue-tui-jian-shu-dan/"/>
+    <id>http://xbin999.com/2016/04/02/yue-du-2016-nian-3-yue-tui-jian-shu-dan/</id>
+    <published>2016-04-02T08:24:04.000Z</published>
+    <updated>2016-05-18T11:46:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>看着窗外灰朦朦的天，似乎空气中弥漫着PM 2.5的味道，好想把舌头伸出去舔舔。天气预报说要下雨，却迟迟没下，也看不到太阳。我既没法写阳光明媚的春天，也不能说清明时节雨纷纷，算了，冲这天我决定不给空气添堵，不给高速添堵，老老实实宅在家中，整理小乐的《悦读2016年3月推荐书单》。</p>
+<p>1月28本，2月35本，3月16本，开学后时间明显不再充裕。从阅读类型来看，武侠和推理题材继续保留，不过增加了《可怕的科学》系列三本，重点还有越读馆的推荐书目。</p>
+<p>这个月16选10相对轻松很多，以下书单按时间排序。</p>
+<ul>
+<li>彷徨</li>
+</ul>
+<p>旧社会真的好可怕，我好庆幸自己生在二十一世纪。</p>
+<ul>
+<li>呼兰河传</li>
+</ul>
+<p>看得时候觉得好有意思，后来越看越悲惨，特别是那个小团圆媳妇，实在是太可怜了。</p>
+<ul>
+<li>嫌疑人X的献身</li>
+</ul>
+<p>看到最后都快哭了！心情好复杂，我从来没有看推理小说那么纠结过。</p>
+<ul>
+<li>波普先生的企鹅</li>
+</ul>
+<p>是越读馆的必读书目，买来一看，薄薄的一本，但乐趣无限。波普一家真是很有爱心的家庭呢。</p>
+<ul>
+<li>芒果街上的小屋</li>
+</ul>
+<p>很清纯的一本小说，一个女孩的成长日记。</p>
+<ul>
+<li>地狱</li>
+</ul>
+<p>丹布朗小说的总体套路是掌握了，不过结局总是出人意料。</p>
+<ul>
+<li>记忆传授人</li>
+</ul>
+<p>刚开始把它当成普通科幻小说来看，但发现书中的整个社会都好黑暗。</p>
+<ul>
+<li>要命的数学</li>
+</ul>
+<p>可怕的科学系列，重读，以前不清楚的现在看起来好多了。</p>
+<ul>
+<li>这些人，那些事</li>
+</ul>
+<p>原来那时候的台湾也这么乱！吴念真用平淡的比调描写令人震惊的事实。</p>
+<ul>
+<li>楚留香传奇</li>
+</ul>
+<p>好看死我了，武侠和悬疑的综合体，我喜欢。</p>
+<p>本月书单中没有英文书籍，主要是小乐专注于啃大部头《Harry Potter and the Half-Blood Prince》，已经到578页，不下于其他5本，看着厚厚的书越读越薄，亦是快事。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看着窗外灰朦朦的天，似乎空气中弥漫着PM 2.5的味道，好想把舌头伸出去舔舔。天气预报说要下雨，却迟迟没下，也看不到太阳。我既没法写阳光明媚的春天，也不能说清明时节雨纷纷，算了，冲这天我决定不给空气添堵，不给高速添堵，老老实实宅在家中，整理小乐的《悦读2016年3月推荐书单
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+      <category term="书单" scheme="http://xbin999.com/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>清明，忆我的外婆</title>
+    <link href="http://xbin999.com/2016/03/31/qing-ming-yi-wo-de-wai-po/"/>
+    <id>http://xbin999.com/2016/03/31/qing-ming-yi-wo-de-wai-po/</id>
+    <published>2016-03-31T08:23:44.000Z</published>
+    <updated>2016-05-18T11:38:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://xbin999.qiniudn.com/images/wp2.png" alt=""></p>
+<p>题图拍于民国37年，照片的另外半张文中有说。</p>
+<p>妈妈来杭州检查身体，说起了家中的事，说了不少，印象中最深的是外婆和妈妈的事。转眼就是清明，外婆故去正是在清明后不久，忽然想起外婆这一走都已十年。</p>
+<p>十年前我的记录：</p>
+<blockquote>
+<p>2006年4月4日 外婆的身体最近一直都不是很好，下午和maggie在说的时候，心里觉得好不踏实。我得回去看一下。</p>
+<p>2006年4月13日 一直以来都很自豪，外公、外婆、爷爷和奶奶四老都还健在，都是80多岁的高龄了，身体也都不错。<br>外婆的身体去年不是很好，但春节回老家的时候看起来还是挺好，没想节后病症复发，来的是那样的快和突然。周末赶回家时，外婆已经处于昏迷之中，偶尔的叫唤才能微微睁一下眼睛。病中的外婆完全变了一个样子，瘦地让人疼痛，让人无法相信。<br>外婆的一生应该是很典型的中国传统妇女那一种，一辈子就是为了丈夫和儿孙在操劳，除了生病可能就从来没有休息过。春节的时候也是刚出院没多久，觉得身体好了点，就要自己去买菜和烧饭，也不愿雇一个保姆。<br>在离开老家之后的次日（周二）临晨，外婆就走了，没有疼痛。此时的我希望是有天国，天国的外婆应该不会那么劳累了。</p>
+</blockquote>
+<p>十年过去了，我把妈妈讲的和外婆的碎碎末末的事记下来，送给我的外婆。</p>
+<p>妈妈48年初出生，当时外公在雷达研究所，国民党员，受他的舅公（据说算国内无线电的奠基人，只不过我无法确认）之邀，打算前去新疆，东西都准备好了。当时新疆物资缺乏，外公给刚出生的妈妈准备婴儿用品，按打计算，都是准备一式12份。不过最终终没有成行，不然一家或许都到了美国，当然也就没有我了。</p>
+<p>解放时外公所在单位起义投诚，保护了当时的无线电设备。51年小姨出生，之后三反五反运动开始，外公由于原先解放前学习所在的无线电学校属于军统下属学校，他们那批学员从起义人员一下变成了反革命人员，52年被安排去苏北农场劳动改造；外婆则带着四岁的妈妈和一岁的小姨回了浦江老家。回到老家，全家还是地主儿女的身份，所幸太外公（妈妈的爷爷）属于开明地主。</p>
+<p>外公时有信来，只是外婆并不识字。每次收到外公的信，都是太外公他们拆开看，看完信后并不和外婆讲，家中规矩大，外婆也不敢问。一直到妈妈上学，认识了几个字，外婆说：“你去爷爷那里，把信拿来念给我听听。”妈妈就小跑找爷爷拿了信，其实并不认识多少字，外公的字写得挺不错但潦草的很，更是难懂。一封信基本上是妈妈认一部分，外婆摇一摇猜一部分其中的意思。再慢慢地外婆让妈妈写回信，并口述说：“让你爸别把字写得太潦草，这样我们能认得更清楚些。”或许正是有这样的经历，在那个年代外婆一定要求两个女儿上学，她并不指望孩子上学能有多出息，能认信、写信，不用受自己这样的苦就好。即使旁人都说女儿是嫁出去的，读书没什么用，但外婆依然很坚决，有一种朴素的儿女都一样的价值观。</p>
+<p>太外公是地主，外公做过国民党，免不了被抄家。家中让人担惊受怕的东西能扔早扔了，证据能毁的也都毁了。外婆的照片只剩下一半（题图），因为另一半是穿着国民党军服的外公；家中传承的不锈钢勺是当年美国大兵装备，我留了一个，只是上面的印字全给磨去了。<br><img src="http://xbin999.qiniudn.com/images/wp1.png" alt=""></p>
+<p>当然有值钱的实在舍不得扔，外婆把一些金银首饰偷偷藏在小孩裤子口袋，用针线缝好，再把裤子和破布卷在一起，锁在柜子中，只告诉了妈妈。一次，外婆去富阳农场打工，帮别人做饭。半夜突然来人抄家，家里只有妈妈和小姨，乡里来的人让妈妈拿钥匙打开小柜，把里面东西扔地到处都是，还放话说“XXX的大媳妇家里要是没有金器的话，是不可能的。”当时妈妈尚不到十岁，在旁边一句话不敢说，等抄家的人都走了，妈妈再默默地把东西收起来。等外婆在外地知晓后，连夜往回赶，到郑家坞车站已经没了车，正是夏天，就决定和同伴走30多里路回家，中途在黄宅吃了个瓜，得了急性肠胃炎，第二天早上又吐又泻，痛地在床上从这一头爬到那一头，不停对妈妈说：“看来这次我是活不过去了”。小姨小妈妈三岁，印象还没那么深刻。偷藏下来的金器在困难时期换了几十块钱，算是帮家里过了一个难关。</p>
+<p>外婆有个妹妹，我应该叫姨婆来着，住在邻村。姨公姨婆有时闹别扭，外婆会去劝劝，白天没时间就晚上去，那时的路都是乡村小路，天又黑，路边不是农田就是坟墓，每到这时外婆会叫上妈妈：“跟妈妈一起去一趟”。“好。”母女俩就这样相伴，前一脚后一脚，一大一小地走去，虽然不远，但俩人胆子都小，往往是一身冷汗。</p>
+<p>56年外公刑满释放，没回浦江，成了农场职工，政策允许外婆去农场，太外公也希望一家能团聚。于是到59年，外婆一个人带着两个女儿去苏北。外婆不识字，也不会说普通话，一路上，大的照看小的，小的负责问路，给外公打电话，那时妈妈也就12岁，小姨9岁。外婆去农场后，总算一家团聚，之后又有了我的两个舅舅。</p>
+<p>妈妈和小姨在苏北呆了十年，大部分时间都在农场，68年知识青年下乡去农村插队，那一年的农村生活或许影响了妈妈，在后来回浦江后才会选择了我爸这个农民，也才有了我。当时说到是否要回浦江，外婆说：“你们俩姐妹要是回去呢，我们还有盼头，不然这一辈子可能就都在外地了。”也是，只不过没想到等外公平反，外公、外婆和两个舅舅再回到浦江全家团聚，又已到了84年。我也已经10岁多，而在此之前我只在7岁探亲时见过他们一次。</p>
+<p>外婆故去时虚岁89，不到三年，外公也离世，虚岁93，重又相聚。俩人身份不同，文化不同，在一起风风雨雨七十四年，记得外公平反时，所里的领导说：“你能有今天，都是有一个好老婆。儿女成双，那么幸福的一个家庭，这都是你老婆的功劳。”</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://xbin999.qiniudn.com/images/wp2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;题图拍于民国37年，照片的另外半张文中有说。&lt;/p&gt;
+&lt;p&gt;妈妈来杭州检查身体，说起了家中的事，说了不少，印象中最深的是外婆和妈妈的事。转
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="生活" scheme="http://xbin999.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当你身在洞里，你不可能看到真相</title>
+    <link href="http://xbin999.com/2016/03/28/dang-ni-shen-zai-dong-li-ni-bu-ke-neng-kan-dao-zhen-xiang/"/>
+    <id>http://xbin999.com/2016/03/28/dang-ni-shen-zai-dong-li-ni-bu-ke-neng-kan-dao-zhen-xiang/</id>
+    <published>2016-03-28T08:23:30.000Z</published>
+    <updated>2016-05-18T11:36:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>两个礼拜前在朋友圈里我发了个路由器的照片，配文说“折腾一天的结果是把它变成了砖”。当时干的事情是先刷了DDWRT，然后又刷OpenWRT，结果路由器就不能用了。后来我找万能的某宝，直接买了一个刷好OpenWRT的路由器，想配置配置软件总是方便，结果这俩礼拜的周末都在折腾路由器了，但到现在还是没完全搞定，一方面感叹自己这IT是白干了，另一方面也为牛X的网络环境而折服。</p>
+<p>那咋就这么难折腾呢，周末我给乐妈做了一段尽量通俗的解释。</p>
+<p>上网干的事情就是根据名字知道地址（DNS服务），然后再找到一条通往该地址路。先说查地址服务，比如英国首相府（相当于谷歌），在唐宁街10号（一串IP地址），前者是名字，后者是地址，我要邮局帮我送封信给英国首相，邮局得知道它的地址。由于每天都会拆楼盖楼，名字和地址的对应关系时刻在变，各邮局之间信息需要同步，我们肯定会选就近的邮局提供服务，只可惜邮局提供的可能是假地址（DNS污染）；那如果邮局不可信，我换个英国当地可信的邮局行不行，当然行，但是还可能碰到个国内的骗子邮局（DNS劫持）；或者再给你增加打电话咨询真实邮局的难度，10次断9次（丢包），慢慢拖死你。等你千辛万苦终于查到地址后，信总算寄出去了，你又惊奇地发现此路不通，比如说两岸通邮前的信都需要经香港转。所以这时你还得找个在香港的亲戚，建立一个私人通道（VPN），先把信寄给他，然后再让他帮你把信转寄到英国。还有等到私人通道建立后，不幸的是你发现所有寄出的信都先到香港去兜了一大圈，包括你同城的信件，所以还得想办法自己在做个分拣工作，什么信从香港走，什么信不走香港。</p>
+<p>在这个过程中，你需要斗智斗勇，层层剥离其中的陷阱。要在以前乐妈肯定会觉得折腾，搞这玩意干啥，上网不是好好的嘛！微信、QQ、百度（由于其无耻精神渐渐被淘汰）、淘宝、亚马逊、优酷，该有的也都有，facebook, twitter, youtube传说中的网站她本来就没听说过。但实际上作为一个普通的家长，在你认真地陪孩子学习中，由于网络的便利会给你带来更广阔的视野，更优秀的教育服务。即使抛开Google搜索，维基百科不说，就拿孩子学英语来说：<br>Raz-kids有很好的分级阅读教材，但国内访问很慢，经常发现QQ群中父母们交流如何翻墙；<br>Vocabulary.com 一个很好用的英英翻译，提供原汁原味的例句，整理的单词列表还可以做选择题测试，也是时用时不能用；<br>Voicetube 台湾的一个英语学习视频网站，在<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=207638354&amp;idx=1&amp;sn=f30c02f379a59702402151c4dec4a1a8&amp;scene=21#wechat_redirect" target="_blank" rel="external">斯莱特林英语学习</a>时，我较多选择了其中的内容，但它的视频都来自Youtube，常规是根本看不到的。</p>
+<p>于是一个个普通的家庭干起了“翻墙”的勾当，学起了更复杂的IT知识，而他们的本意只是希望能快速地访问一个英语应用。网络创造了便利，而我们却神奇地发现前方有一道不可逾越的墙。</p>
+<p>当然还是很多朋友会说：“折腾它干什么呢？即使不翻墙不也是好好的嘛。”</p>
+<p>正好晚上给小乐念《极简欧洲史》，说到了柏拉图的经典比喻，我把给小乐念的一部分摘了过来。</p>
+<blockquote>
+<p>直到今天，柏拉图依然是一个哲学核心问题的起点：我们的感官经验是不是真能引导我们走向真实？柏拉图相信，我们在世间的所见所感，只是存在于另一个崇高灵魂界中的完美形体的影子。世界上有普通的桌子，但有一张完美形体的桌子一直存在于某个别处。即使是个抽象的观念，例如正义和良善，也是以完美的形体存在于某个他处。人类便是来自那个灵魂界，必须透过心智和精神的锻炼，才能重新发现这个完美。</p>
+</blockquote>
+<p>很抽象哦，没关系，柏拉图还有一个生动有力的比喻，这个才是重点。</p>
+<blockquote>
+<p>想象一群人，被囚禁于一个幽暗洞穴之中，而且全部被锁链绑住手脚。他们背对高墙镇日坐着，看不到背后，只能面对另一面的穴壁。洞穴外头有一条路，路的尽头有一个大火炬，路上若有其他人、动物和车辆经过，火炬就会将这些东西的影子投射在他们面对的穴壁上。这些穴居人看到的唯一事物就是这些影像；他们替阴影命名、品头论足；针对它们推理辩论；他们相信，这些影子是世间真实的存在。 后来，其中一人意外被解开锁链，从山洞走到露天处。一开始，强烈的光线照得他睁不开眼，等他看到阳光下五彩缤纷、美好的立体世界，不禁又惊又疑。可是，他说，在山洞里，我们以为…… 没错，当你身在洞里，你不可能看到真相。</p>
+</blockquote>
+<p>“没错，当你身在洞里，你不可能看到真相。”</p>
+<p>还记得许巍的《蓝莲花》吗？“没有什么能够阻挡，你对自由的向往。”人总是向往自由的。我们受的教育不是说，老一辈无产阶级革命家抛头颅，洒热血，所要争取的不就是这一点嘛。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;两个礼拜前在朋友圈里我发了个路由器的照片，配文说“折腾一天的结果是把它变成了砖”。当时干的事情是先刷了DDWRT，然后又刷OpenWRT，结果路由器就不能用了。后来我找万能的某宝，直接买了一个刷好OpenWRT的路由器，想配置配置软件总是方便，结果这俩礼拜的周末都在折腾路由
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="翻墙" scheme="http://xbin999.com/tags/%E7%BF%BB%E5%A2%99/"/>
+    
+      <category term="GFW" scheme="http://xbin999.com/tags/GFW/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>奥数三部曲</title>
+    <link href="http://xbin999.com/2016/03/23/ao-shu-san-bu-qu/"/>
+    <id>http://xbin999.com/2016/03/23/ao-shu-san-bu-qu/</id>
+    <published>2016-03-23T08:23:03.000Z</published>
+    <updated>2016-05-18T11:34:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我今天说的并不是如何学好奥数，恰恰相反，我要讲的是我们一家如何选择放弃奥数的故事。时间已经很久远了，在偶然的聊天中提起了这段经历，送给每个和孩子一起在奥数路上纠结的家庭。</p>
+<h1 id="参加奥数培训班的缘起"><a href="#参加奥数培训班的缘起" class="headerlink" title="参加奥数培训班的缘起"></a>参加奥数培训班的缘起</h1><p>2013年4月。</p>
+<p>前段时间乐妈一次打电话给我说她对小乐发火了，还是数学的问题，聪明题有好多不会做，而发火的原因是小乐光等着我回去讲，根本没想在学校里问问老师。我开始没在意，不是啥大事。话锋一转，乐妈马上又和我说她已经给孩子报名参加奥数班的考试了，我就发急了。</p>
+<p>之前家中曾经说过某奥数班的事（用P班表示），据说很牛，报名的人一堆，要考试，还很难上。当时我劝说没必要参加，不清楚的我自己教，多想想适合孩子的一些解决方法，少用x，y列二元一次方程组就是。再说小乐也挺喜欢我给她讲的，经常等我回家时就说：“老爸，给你准备了两道聪聪。”（聪明题的聪）</p>
+<p>现在乐妈已经报名了。“既报之，则安之”。上周末小乐去参加了奥数班的入学考试，并考上了。这个时候，经过几天的冷静后，乐妈反而纠结到底是否去上？晚上一家人针对这个问题聊了一会，乐妈告诉小乐可以去试试，如果她不喜欢就不去。<br>小乐倒觉得还好，笑着说：“老爸，你可要失业了。”<br>我以失业的角度回道：“那老爸可怎么办呀？”<br>“没事的，我还会留两道给你聪一下的。”</p>
+<p>看来小乐也没把它太当回事，那就先这样吧，到时看她喜欢，唯一的问题是兴趣班总是会变得越来越多。</p>
+<p>如果问乐妈当时“为什么要去上奥数班呢？”，出发点还是在于父母一颗功利的心，忽视了孩子的感受。在我看来，奥数和钢琴、唱歌、跑步、下棋、书法、阅读一样，都是一种兴趣，并没有高低之分。关键先看小乐的反应，只要她先不排斥，并不是说一定就不行。但现在如果直接说不上奥数，一样忽略了小乐的感受，父母的出尔反尔、轻言放弃，都不是好事。我想还是顺其自然，让她当一件普通的兴趣先去试试，喜欢就喜欢，不喜欢再丢掉。只希望这中间过程中老师的课能不要太功利，不要轻易打击孩子的自信心，也希望奥数老师的教学不是那么死板。</p>
+<h1 id="过程总是艰难的"><a href="#过程总是艰难的" class="headerlink" title="过程总是艰难的"></a>过程总是艰难的</h1><p>2014年10月。</p>
+<p>没想到这试一试就是一年半，老师的讲题并不死板，一开始也挺受孩子的喜欢。只不过目的性也是非常明确，宣传的都是XXX考了什么杯，被XX民办给录取了，课堂上多是激励强者，打击弱者的氛围，至于培养数学的兴趣是少之又少，慢慢的这课程也由喜欢变成了不适应。</p>
+<p>2014年10月，适逢小乐要去参加新加坡交流，发生了和奥数课程冲突的事，乐妈写了“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=201137020&amp;idx=1&amp;sn=033b57f5c195a892bcd813b9dd107b72&amp;scene=21#wechat_redirect" target="_blank" rel="external">奥数是用来衡量孩子的标准吗？</a>”</p>
+<p>小乐因为要去新加坡一周，所以有一节奥数课不能上。老师提出可以换课到周二，偏偏周二又是去新加坡的准备会。</p>
+<p>下课了，孩子们陆续交了课堂作业出来。乐乐出来后，我问她：“乐乐，那周二的课你想换吗？”<br>教室里的空气一定闷热，乐乐的脸红红的，她摇着头“不要换！”<br>“奥，好，那我们走！”<br>出了门，乐乐说：“就算来上课了，我也听不懂，来了也没有用！” 我知道今天的课一定对她来说很不顺利呀。<br>有朋友问自己孩子“周二去上课重要，还是开会重要？”<br>乐乐在我身边嘀咕：“我不觉得上课重要！”<br>我一直笑着听，不说话。</p>
+<p>和朋友分开后，乐乐说了今天上课的感觉，她说她真的做不出了，就交上去了，她感觉自己快成苹果汁了。看的出，她心情很低落。<br>我忍不住老生常谈：“你可以不上的！”<br>“妈妈，别说了！”（我们一直劝乐乐，如果她不想上，可以马上停课，但她却一直坚持着。）<br>听她这么恳切说，我忍住没再说下去了。<br>“乐乐，妈妈很为你骄傲，因为你会自己想自己的事了，会为自己做决定了！”<br>乐爸也开口了： “囡啊，爸爸妈妈和他们想的不一样，在我们眼里你有自己的想法就是棒的！”<br>“恩，上次课堂作业我也做不出就交上去了，后来得了待评，我才不管呢，做不出就是做不出！老师说我们留下来的都是跟不上的，但我一直告诉自己——我是独一无二的，我是最棒的！”<br>我真的很开心，听她说这些。</p>
+<p>看着乐乐一点点恢复好心情，我才放下心。<br>“为什么还让乐乐继续去上奥数？”<br>我也问过她，她知道自己不是奥数天才，她知道自己一直跟的很辛苦，她知道自己一直跌跌撞撞，她最知道每次去上课时自己的感受。所以这个问题我前不久也问过她，她说：“不舍得，不舍得那里的同学，不舍得老师！” 记得上学期，我们已经成功动员她放弃继续学下去。她当时在老师办公室考试，看着老师桌边放满的一些师哥师姐的毕业照片时，流下眼泪，她告诉我：“我想着自己不能出现在照片中，就觉得好不舍得老师！” 老师，如果你知道这个“差生”不舍得你时，你还会为她做不出这些题目，而说她：不聪明、跟不上吗？ 奥数难道是你衡量一个人的唯一标准吗？</p>
+<h1 id="我们选择了放弃"><a href="#我们选择了放弃" class="headerlink" title="我们选择了放弃"></a>我们选择了放弃</h1><p>2014年12月，距离上次新加坡之行后不久，因为培训班中末尾淘汰制，需要补考合格才能继续学下去。我们仨一起决定放弃补考，办理了奥数班的退学。</p>
+<p>或许在大家的眼中，看起来这是一次失败的经历，不过就像乐妈前面说的“奥数难道是衡量一个人的唯一标准吗？”生活是丰富多彩的，奥数只是很小的选项，民办也不是重心，与其勉强而不开心地学习，还不如换来一个“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=202454551&amp;idx=1&amp;sn=7ad5b48965f56d1acd1b1948a5428597&amp;scene=21#wechat_redirect" target="_blank" rel="external">跳跃的小乐</a>”。</p>
+<blockquote>
+<p>晚上“父与女”的时间，给小乐念《蒋勋说唐诗》中“侠的精神”说到李世民喜欢王羲之的《兰亭集序》。<br>“爸爸，我的字帖上还有一篇是《圣教序》，一开始怎么是大唐三藏？王羲之不是比唐朝还要早吗？”<br>我一下子愣住了：“啊？圣教序一开始是这样的吗？不可能吧？”<br>“是的。”<br>“那我们明天查查看。”<br>“王羲之有预言能力的，是阿波罗赐给了他力量。”小乐又开始自说自话了：“阿波罗是预言之神嘛。”<br>继而说到“初唐时候，最重要的生命风范就体现在“风尘三侠”身上。在唐传奇里，虬髯客将资财赠予李靖和红拂女，随后潇洒离去，这里面有一种侠的精神”。<br>“飘飘洒洒，长袖一挥，就走了。”小乐赞道，继而又来一句：“留下一张纸条，上有六字真言。”<br>“是啥？”<br>“菩萨都是这样的。”<br>我无语。<br>……</p>
+</blockquote>
+<p>短暂的“父与女”时间，惊喜地发现小乐的思维活跃了很多，东一榔头、西一棒槌，不断跳出各种奇思怪想。或许是最近减负，压力和束缚少了；或许是每周看电影后的提问起了效果。谁知道呢？无论是什么原因，都是可喜的进步。</p>
+<p>又过了一年</p>
+<p>本以为奥数的故事就这样都过去了，我们没有再去上任何的奥数培训班，有不会做的时候，小乐继续会找我：“老爸，有两道聪聪。”可谁又能知道它的影响又会是如此的深呢？</p>
+<p>2015年11月，一次偶然的倾诉，让我们听到了小乐的心声。还是乐妈的记录：</p>
+<p>退学后，一直没有怎么提起过这个培训班，没想到，今天乐乐像倒豆子一样，一下说了很多，我当时无法录音，之后靠一点点回忆记录下来。当她背对着坐在我大腿上，语速时快，时慢，边擦拭自己流下来的眼泪时，我真的被震撼、被感动了。</p>
+<blockquote>
+<p>“以前，我在P班，只想找个角落，不想和别人接触，我喜欢坐在最后，因为这样比较有安全感，就算做不出也不用怕别人的目光。如果坐在中间，边上的同学一个个把讲义做好，站起来，当你看到边上的人都走光时，就会有种深深的自卑感。我也不知道，我当时是怎么考进去的，一些比我晚来的同学，都学的比我好。我根本没有办法和他们比，所以我每次去都只能装出清高样，他们在一起讨论题目时，我就看书，我不想引人注意。可是，我又很引人注意，看书时总会有同学凑过来，我这时真想大声说‘走开’。每次W老师问‘有没有同学不懂的？’，我是真的不懂，但我就是不敢说，看着大家都这么懂，我只能把一堆的问题带回来给爸爸。当W老师说他带了多少多少学生进民办时，我就在想，这不是我想要的。在P班是没有隐私的，每次考多少分都会公布。有次我考了倒数第一，本来我是不想让别人关注的，却一下变成了别人关注的对象。我也告诉自己不要和别人比，但是我怎么能做的到？每次期末，W老师都会公布要补考的名单，我开始只是旁观者，但后来我自己却也成了‘被旁观者’，所以我退缩了，我不敢去面对，我选择不去补考，连最后的几节课也不想上了。我有时在想W老师会怎么看我退学，很大的可能，是他觉得少了个累赘，极少的可能是，他觉得挺可惜的。但我只想告诉他，我不稀罕奥数了。现在在Y班（Y是乐乐现在上的关于文学赏析的培训班） 有一句话：‘带领者，需要勇敢；殿后者，需要坚强。’妈妈，知道 P班和Y班的区别是什么吗？一个是竞争，一个是自由。”</p>
+<p>我在想当时为什么会给报奥数？因为我想让她学好数学，我想让她考名牌大学，我想：哪天走在路上，遇到熟人，他问“你们乐乐现在在哪里上大学？”我会强掩着一丝微笑，装作镇定地说“在北大！”而现在，我只想我生她，就是因为我爱她，她是老天送给我的礼物，我不会用她去赢得别人的赞赏，我不会因为想防老，而拴住她想走远的脚步。</p>
+<p>因为爱，怎么可以有杂念？</p>
+</blockquote>
+<p>还需要说更多吗？奥数从来就不应该是全民运动，只不过我们在一个不正常的环境中做着不正常的事罢了。放弃不正常的事，那不是很正常吗？放弃未必都是坏事，能有更多的活动时间，我们越来越体会到时间的宝贵；而如果真有兴趣，也只是一时的中断，人生可是马拉松。</p>
+<p>在孩子的成长中，我能做的事就是陪她玩，陪她快乐地成长。还记得那句承诺吗：“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402647627&amp;idx=1&amp;sn=e923f3d0808b110d376022e46957a4d3&amp;scene=21#wechat_redirect" target="_blank" rel="external">她在我这里只能幸福。</a>。”</p>
+<p>真是要谢谢自己在“fuyunv”公众号的记录，保留了每段的心路历程、孩子的影响以及我们仨的成长。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我今天说的并不是如何学好奥数，恰恰相反，我要讲的是我们一家如何选择放弃奥数的故事。时间已经很久远了，在偶然的聊天中提起了这段经历，送给每个和孩子一起在奥数路上纠结的家庭。&lt;/p&gt;
+&lt;h1 id=&quot;参加奥数培训班的缘起&quot;&gt;&lt;a href=&quot;#参加奥数培训班的缘起&quot; class
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="儿童教育" scheme="http://xbin999.com/tags/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2/"/>
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="教育" scheme="http://xbin999.com/tags/%E6%95%99%E8%82%B2/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="奥数" scheme="http://xbin999.com/tags/%E5%A5%A5%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>走过回家的路</title>
+    <link href="http://xbin999.com/2016/03/22/zou-guo-hui-jia-de-lu/"/>
+    <id>http://xbin999.com/2016/03/22/zou-guo-hui-jia-de-lu/</id>
+    <published>2016-03-22T08:22:51.000Z</published>
+    <updated>2016-05-18T11:23:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>走在一次普通的回家的路上，我悠然地散着步，慢慢地走着。我享受这短短的路程。</p>
+<p>不紧不慢地走着，一会儿发发呆，一会儿抬头看看云，借用这十分钟的时间让我的身心都得以放松。一切都和往常一样：车底下有几个猫在睡觉，舒展肢体；玉兰花都开了，有几朵已渐渐凋零，地上散满了花瓣；卖饼的老爷爷老奶奶也正忙着招呼顾客……我深呼吸一口气，感觉自己已被净化，放松起来。呵，这是熟悉的感觉，这是回家的感觉。</p>
+<p>渐渐地，我走进了小区的4号门。门口的保安向我微笑：“放学啰！”我笑着点头。心中暖暖的，这问候，好亲切！</p>
+<p>继续向前走着，那幢熟悉的高楼出现在我眼前。三楼阳台上，有个人影在探头张望。看到我，她笑着挥了挥手，跑走了。我知道，她要去门口准备为我开门。“妈妈，我回来了。”我在心中默默地说。</p>
+<p>走到门前，按了一下门铃。妈妈笑盈盈的脸从门后露了出来。<br>“你回来了，宝贝。”<br>“嗯，回来了。”<br>淡淡的几句话的交谈，但我们都笑了，家，好温馨啊！</p>
+<p>回家的路，是通向我心中最柔软处的路，我，会好好珍惜每一次回家的路。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;走在一次普通的回家的路上，我悠然地散着步，慢慢地走着。我享受这短短的路程。&lt;/p&gt;
+&lt;p&gt;不紧不慢地走着，一会儿发发呆，一会儿抬头看看云，借用这十分钟的时间让我的身心都得以放松。一切都和往常一样：车底下有几个猫在睡觉，舒展肢体；玉兰花都开了，有几朵已渐渐凋零，地上散满了花瓣
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="小乐作文" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90%E4%BD%9C%E6%96%87/"/>
+    
+      <category term="童趣" scheme="http://xbin999.com/tags/%E7%AB%A5%E8%B6%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>家人是生命最宝贵的</title>
+    <link href="http://xbin999.com/2016/03/15/jia-ren-shi-sheng-ming-zui-bao-gui-de/"/>
+    <id>http://xbin999.com/2016/03/15/jia-ren-shi-sheng-ming-zui-bao-gui-de/</id>
+    <published>2016-03-15T08:22:38.000Z</published>
+    <updated>2016-05-18T11:20:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>家人，是生命最宝贵的东西。我很珍惜和家人在一起的每分每秒，那是一种幸福、快乐的感觉。</p>
+<p>爸爸和妈妈像我的朋友一样，我们经常在一起讨论问题。妈妈常说“我们是个自由、民主的家庭”。的确，他们在很多事情上都放手让我自己选择，不帮我擅自决定。因此，我也敢大胆地发表意见，敢开他们的玩笑。当爸爸正在为减肥锻炼而跑步时（我是锻炼身体，不是减肥好不好），妈妈就叫他“小熊”，我也会笑着在他跑步经过我身边时喊一句：“小熊加油！”然后三个人一起笑。</p>
+<p>外婆、姨娘和<a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000479&amp;itemidx=1&amp;sign=4a03cb7e287f9d3b5428b54235f632fd#wechat_redirect" target="_blank" rel="external">小表妹七月</a>是我除父母以外最亲近的人。外婆从小把我带大，虽然性子急、比较顽固，但总是最关心我的那个人。姨娘就像我的另一个妈妈，在她没结婚时，我经常跑去和她一起睡。记得小时候每次被妈妈骂了，外婆都会因为心疼我而去批量妈妈，然后姨妈再把哭成泪人的我抱回去和她睡。</p>
+<p>小七月总是让人又可气又可笑。<br>我陪她玩游戏，她对我说：“天黑了，睡觉吧。”<br>其实天亮着，所以我告诉她：“天亮了，可以起床了。”<br>她指着亮堂堂的天空说：“天黑了！天黑了！”<br>每当她要走开一会儿，就会一本正经地告诉我：“阿姐，不能爬窗户的！”</p>
+<p>爷爷奶奶、姑姑和表弟虽然不在杭州，但也给我一种熟悉亲近的感觉。爷爷辛苦了大半辈子，会干很多活，能教我很多从来没听说过的知识；奶奶眼睛不太好，但看到我总是说：“乐乐，奶奶再给你打件毛衣吧。”爷爷奶奶一个农民的儿子，一个地主的女儿，有很多不同的故事。</p>
+<p>姑姑永远是一张温和的笑脸，说话声音也柔柔的，只有碰到表弟才会严肃起来。表弟比我小一岁，一见到我就给灌输游戏知识。过年回老家，在出去玩时，他给我讲了一路的游戏，但我一个都没记住。</p>
+<p>我的家人给我带来了快乐，我爱他们。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;家人，是生命最宝贵的东西。我很珍惜和家人在一起的每分每秒，那是一种幸福、快乐的感觉。&lt;/p&gt;
+&lt;p&gt;爸爸和妈妈像我的朋友一样，我们经常在一起讨论问题。妈妈常说“我们是个自由、民主的家庭”。的确，他们在很多事情上都放手让我自己选择，不帮我擅自决定。因此，我也敢大胆地发表意见，
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="小乐作文" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90%E4%BD%9C%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>说说“你的梦想是什么？”</title>
+    <link href="http://xbin999.com/2016/03/13/shuo-shuo-ni-de-meng-xiang-shi-shen-me/"/>
+    <id>http://xbin999.com/2016/03/13/shuo-shuo-ni-de-meng-xiang-shi-shen-me/</id>
+    <published>2016-03-13T08:22:04.000Z</published>
+    <updated>2016-05-18T11:19:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>聊天的起源是我和乐妈打算忽悠小乐再增加点英语学习的量，不过却说了很多有关梦想的内容。</p>
+<p>乐爸：小乐，你的梦想是什么？<br>小乐：啊？！（吓了一跳）<br>乐爸：一般我们都是从梦想开始说起！不然为什么要去学英语呢？<br>小乐：这个嘛，我的梦想其实是想当老师，好像跟英语也没什么关系！（得意）</p>
+<p>乐妈：那你想当一个什么样的老师？<br>小乐：这、这不是说到道德问题上了吗？<br>乐妈：也不算道德问题了，比如说有的老师满腹经纶，有的老师只会照搬讲义，是什么造成了这样两种老师？不同的老师肯定带给孩子不同的东西。有才识的老师，肯定孩子们受益很多，你在王小妮的书中也看到了，所以你想当老师，跟学什么东西是有关系的，不光英语，包括你学书法，板书写出来漂漂亮亮的，你们L老师字写得漂亮，你是不是也是很崇拜的吧？<br>小乐：恩，L老师字是很端正的，J老师是草的，但也是很好看的。我当然是要做那种满腹经纶的老师！</p>
+<p>乐爸：那我们具体点，当老师需要什么，第一要满腹经纶。<br>小乐：嗯，还要有王者气质。还要幽默一点，课堂上要能让同学们笑起来，但不是那种黄色幽默，红色幽默和黑色幽默。（不知道区别在哪里，小乐也没说清，说是被同学们灌输太多了）<br>乐爸：那你觉得T老师是个什么样的老师，满腹经纶？幽默？<br>小乐：嗯，T老师，真的知识很丰富的。还有就是她有启发性，会循循善诱。<br>乐爸：你有没有觉得爸也有这点？（脸皮厚啊脸皮厚）<br>小乐：有的，呵呵，你还会画图！我觉得，老师要能把你知道的知识，在肚子里转化为孩子们能懂的语言，然后再经过过滤，加工成幽默风趣的、孩子喜欢的语言。你不能说一个个很深奥的词语，然后再一个个解释过去，肯定没人会想听的。</p>
+<p>乐爸：那能够转化成孩子的语言，这个基础是什么呢？<br>小乐：要有一颗童心，和孩子的关系不是简单的师生关系，要在师生关系上建立友谊，像王小妮他们大学就更特别了。而像小学一年级的孩子，我想应该有点像母亲一样的角色。以前每年开学，大队委带一年级小朋友到班级，就有很多孩子哭，大人就半哄半骗半骂，看着好心酸呀，我问他几班的，他哭得我都听不清他在说什么。<br>乐爸：你们学校L校长这方面怎么样？<br>小乐：我们L校长还是很不错的。有时她在学校里，碰到同学，就会这边点头“你好”，那边点头“你们好”，像吃了摇头丸一样。有时同学右手拎了很多东西，只能左手敬礼，你们猜她会怎么做？<br>乐爸：她也用左手敬礼？<br>小乐：不是，她会说“东西多就不要敬礼了！”<br>乐爸：不错，这里体现了和孩子是平等的观点。想要达到满腹经纶的老师，要学的东西就不少。</p>
+<p>小乐：爸爸，当老师一定要考教师证吗？是不是一定要从师范毕业？<br>乐爸：不一定。但重要的一点可能需要学点心理学，懂得孩子的心理。<br>小乐：还有普通话要标准。<br>乐爸：还有你是不是要有演讲的技能？<br>小乐：那是，站在讲台前，你的腿千万不能抖奥！不然，一年级小朋友会说“老师，你还好吗，是不是感冒了？”<br>乐妈：嗯，演讲是会让人挺害羞的！<br>乐爸：你得要像TED中他们演讲的样子。<br>小乐：有时站在台上，你的腿会无意识地抖。<br>乐爸：你上次在班上给家长们讲时，不是挺好的吗？<br>小乐：我觉得有个PPT会好很多，手里有个东西，就会安心很多。<br>乐爸：看来还要有电脑IT技能。<br>小乐：这个我还是可以的。（得意）<br>乐爸：这可并不一定只是PPT哦。对了，你觉得满腹经纶是专才型的还是……<br>小乐：我是要全才型的。以后我当老师，如果体育课被冲掉了，我会说“来同志们，我们去操场上，我给你们上体育课”。有次音乐课老师不在，L老师说“这节本来是音乐课，我以前虽然学过钢琴，但现在也不会弹了，所以只能讲课作了。”（念念不忘没有体育课的悲伤啊）<br>乐爸：那你应该站起来说“虽然我还不是老师，但是钢琴我还是会弹的，要不我们来上音乐课吧。”（一家人哈哈大笑）看来你想要做一个通才，要和孩子们玩在一起。能和孩子们玩在一起的老师往往阅历是丰富的。<br>小乐：阅历？<br>乐爸：是的，比如上课讲到罗马，你就可以对孩子们说“当年我去了罗马，罗马的斗兽场是什么样子的！”<br>小乐：我可以说“当年我去了新加坡。”<br>（然后父与女俩人拿乐妈开涮，表演乐妈当外婆时，给外孙女讲当年骑行台湾的壮举）</p>
+<p>乐爸：这些和英语有关系吗？<br>小乐：当然有关系了，通才也包括英语的呀！<br>乐爸：这些技能和英语最大的关系，还在于英语已经成为全球通用语言，大部分专用文献都是用英语写的，像爸爸搞IT，要了解新技术也得去看英语文章去。还是当年爸爸看《哈利波特》，多喜欢呀，可接下来呢？“我们还在翻译中，请稍候！”<br>小乐：嗯，《哈利波特》还好，我的《海贼王》还要吊我胃口！<br>乐爸：对，真的等不及呀！现在互联网这么发达，信息瞬间到达，但你如果要等着人家翻译，就太痛苦了，像《海贼王》，日本早已经到后面好几集了，我们还在苦苦等待。<br>小乐：哎，这次有点久，都快两个月了！（小乐指国内引入的航海王出版物，无奈）<br>乐爸：所以做为一个老师，你会起到一个引领的作用，你要告诉孩子们这个世界是什么样子的，那你就得先看到这个世界是什么样子的，带他们去看，就算不是实地去，也可以借助网络，英语还是基础。<br>小乐：嗯，我觉得当老师还要具备一个能力，非常重要——面对冷场的能力。<br>（给我们讲了上一位新老师的课时，老师和学生互动不起来出现冷场的尴尬场景）<br>乐妈：奥，那这个算不算演讲的能力？<br>小乐：这跟演讲不同，演讲可以只管一个人讲，但上课不同，需要有交流。<br>乐爸：好，看来还需要有面对挫折的能力。哎，我们好像总算把英语和老师的职业扯上关系了。那为了实现这个梦想，看来大学还是要去上了！<br>小乐：那是的闹！<br>乐爸：大学毕业是本科，后面如果要学还有硕士、博士、博士后……<br>小乐：博士后是什么，我以为是博士的后代，像富二代一样！<br>乐爸：没有，我如果站在考拉妈（博士）后面，就是博士后。（俩人大笑）</p>
+<p>乐爸：本科的学习主要还是教你学习方法，培养你自学的能力。<br>小乐：大学是不是就没人管你了，你好自为知？<br>乐爸：对，不会像现在小学生，老师天天盯着你。要上大学，可以在国内上或国外上，都需要经过考试，一步步上去。过程中我们也可以不断丰富我们的阅历，除了在学校里上课，还可以借助网络上课、夏令营、旅行等等。当然在这期间也可能会发生变化，你会有新的感兴趣的东西，像爸爸说过的Slash，我想你的Slash不会只是一个——小学老师，它可能只是你其中的一个，或许你还会是作家、儿童心理学家、什么<a href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5MDQzODAyMA==&amp;appmsgid=10000193&amp;itemidx=1#wechat_redirect" target="_blank" rel="external">诺贝尔XX奖</a>。你会接触许多东西，有更丰富的阅历，会有更多的选择。即使现在我们马上面临小升初，如果上不了自己想上的学校，也不要紧，因为我们还有后面更美好的东西。你要喜欢的内容，也可以直接在网络上一些课程，如果英语过关，你就完全不用去等。 （Slash的说法来自《“多重职业”成为全球新趋势》一文，点击【阅读原文】查看）<br>小乐：那他们是不是都要考试的？<br>乐妈：对，如果要参加外面的课程，是全英文的话，需要有一定的英文水平，你要能听懂看懂他们在讲什么。<br>小乐：有没有牛吃草问题？<br>乐爸：也许有，也许没。对了，还有一点——要有自信心。<br>小乐：那还有一点，要会和同事好好相处。我觉得现在我又是小孩，又是大人的感觉，很矛盾。<br>乐妈：是的，现在这个年纪属于青春期，顺其自然。</p>
+<p>（小乐到这时已经看了三次时间了，只怕耽误晚上看《海贼王》，我们的话题也必须要结束了）</p>
+<p>乐爸：马上升初中，有你想上的初中，能上最好，不能上也没关系。<br>小乐：对，莫有关系。<br>乐爸：我们前面说的网络也好，游学也好，都可以去学习自己想学的东西，只要你具备有英语的能力、基本数学的能力、阅读理解的能力，那就都没问题。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;聊天的起源是我和乐妈打算忽悠小乐再增加点英语学习的量，不过却说了很多有关梦想的内容。&lt;/p&gt;
+&lt;p&gt;乐爸：小乐，你的梦想是什么？&lt;br&gt;小乐：啊？！（吓了一跳）&lt;br&gt;乐爸：一般我们都是从梦想开始说起！不然为什么要去学英语呢？&lt;br&gt;小乐：这个嘛，我的梦想其实是想当老师，好
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="对话" scheme="http://xbin999.com/tags/%E5%AF%B9%E8%AF%9D/"/>
+    
+      <category term="梦想" scheme="http://xbin999.com/tags/%E6%A2%A6%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何和孩子聊电影——引导和诱导的区别</title>
+    <link href="http://xbin999.com/2016/03/11/ru-he-he-hai-zi-liao-dian-ying/"/>
+    <id>http://xbin999.com/2016/03/11/ru-he-he-hai-zi-liao-dian-ying/</id>
+    <published>2016-03-11T08:21:47.000Z</published>
+    <updated>2016-05-18T11:44:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>群里聊天时，我随口说了句“和孩子要引导，而不是诱导”。当时并没细想两个词的差异，只是觉得引导多棒，诱导明显带有拐卖性质，怎么行呢？</p>
+<p>不过和孩子的交流中，到底什么样算是引导，什么样又算是诱导呢？</p>
+<p>在“<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=402854869&amp;idx=1&amp;sn=d38d506d1c769b3b059d366d902abced&amp;scene=21#wechat_redirect" target="_blank" rel="external">一场亲子电影漫谈”</a>”中，锚妈和锚锚对于电影《疯狂动物城》有一场精彩的对话，尤其是开头：</p>
+<blockquote>
+<p>我：“锚，如果你来给这部电影定主题，或者关键词，你想到了什么?”<br>锚：“宫斗！”<br>我：“为什么呢？”<br>锚：“你看，绵羊副市长是这部片子中的最大坏蛋，是她一手策划了整场阴谋，陷害了狮子市长，最后让自己坐上了市长宝座。”<br>我：“哦，有道理。你没看过甄嬛传吧。”<br>锚：“没啊，但宫斗嘛，就是这么回事。”<br>我：“好吧，那你说说，需要具备什么才称得上‘宫斗’呢？”<br>锚：“必须要有一个替死鬼，狮子市长就是绵羊副市长的替死鬼，可以简称为傻X，还需要有合伙人，类似像朋友，但实际上是他（她）的利用工具，帮助他（她）一步步实现最终目的。”<br>我：“这部电影里绵羊副市长的工具有哪些呢？”<br>锚：“很多啊。比如说那头大公羊，他帮主角制作武器。还有兔子Judy也成为了她的工具，利用她来侧面赶狮子下台。”<br>我：“嗯，分析得不错。”<br>锚：“名侦探柯南里面，总是越不像凶手的反而越是凶手。就像这部电影里的小羊，看起来软绵绵，毫无战斗力，却是真正主谋。”<br>我：“为什么呢？”<br>锚：“这样才能形成巨大的反差呀。”</p>
+</blockquote>
+<p>从“电影的关键词冒出宫斗”到“什么称得上宫斗” ，从“绵羊副市长的阴谋”到给出“越不像凶手的反而是凶手”，步步设问，让孩子自己给出“巨大的反差”是一种好的故事技巧，给我们展示了一个好的引导方式。不过对话的后半段，锚妈说的内容比锚锚变得多了起来，相对引导的成分就变少了。（点击底部的【阅读原文】查看）</p>
+<p>从中我们能看到诱导和引导的区别，诱导偏重，痕迹比较明显，会让孩子感觉到说教；而引导举重若轻，不着痕迹，“润物细无声”。如果一定要下个定义，我会说：<br>直接告诉答案，让对方接受你的观点或经验，是诱导。<br>开放性地问题，让对方实践得出自己的答案，是引导。</p>
+<p><img src="http://xbin999.qiniudn.com/images/p2320125953.jpg" alt=""></p>
+<p>上周日下午我们一家也看了电影《疯狂动物城》，但这一次我们没能好好聊，从影院散场回来的路上就失败了。观影的过程很开心，但不知为啥出来后的气氛并不热烈，小乐抛出了“电影到底讲的是什么主题”的话题，从她的言语中透着点严肃，乐妈接的内容提到了有“种族”意味，更使得谈话变得严肃起来，很难再往下细聊。“一部动画片带给我们欢乐就足够了。”我想转移话题，但小乐却觉得故事也很老套，最终本次聊电影以失败而告终。</p>
+<p>事后我在想为什么没能聊起来的原因？</p>
+<p>首先是氛围。和孩子的沟通氛围很重要，如果孩子本身的情绪不是很高，并不适合和孩子交流；即使有时是孩子先提出了话题，但并不代表着她对此有很高的兴致，可能只是形成了一种习惯。（像我们习惯性会聊聊电影）所以在进入正式的对话时先要调动好情绪，进入一种乐于沟通的氛围。</p>
+<p><img src="http://xbin999.qiniudn.com/images/p2315674077.jpg" alt=""></p>
+<p>开场很关键。那么锚妈提出“如果你来给这部电影定主题，或者关键词，你想到了什么?”和小乐提出“电影到底讲的是什么主题？”，两者之间有什么差异吗？</p>
+<p>我觉得主要有两点：<br>一是“关键词”是个好东西，让你能用很简单的词语来概括，便于切入话题，而“主题”往往让人从写“中心思想”入手，很大很麻烦；<br>二是提出话题的人不同，锚妈提出话题，孩子回答，询问再加以引导，适合慢慢进入节奏；而小乐提出话题，大人回答时往往会偏向于严密性、严肃性，造成话题进入不够有趣，或者诱导的成分会重起来，孩子在意见不统一时很难共鸣。</p>
+<p>比如从我们这次失败的经验来看，直接聊“种族”等严肃话题不合适，即使父母告诉孩子只是表达自己的个人观点，也需要看孩子的接受程度。父母和孩子之间的对话并不能做到完全的平等，尤其是在孩子的心智尚未完全成熟的情况下，往往父母先发表的观点会对孩子造成影响，也就是会有诱导因素。“即使父母平等地对待孩子，也只是心里保持平等，但心理不一定能做到平等。”所以尽量还是要让孩子先说、多说，等孩子说完后再讨论。</p>
+<p>那像小乐已经先直接发出提问，如何进入话题更好呢？我的想法是别聊“中心思想”，从小的教育习惯让我们在看文章、电影后就要谈段落大意，中心思想（现在可能仍是的）。但其实很多时候电影带给我们首要的是快乐，中心思想是需要到一定层次深入思考后才能体会的，是聊之后的结果，所以开场我们只需说个人的直观感受，但注意用细节来进行描述。</p>
+<p><img src="http://xbin999.qiniudn.com/images/p2277484017.jpg" alt=""></p>
+<p>比如说影片给我们带来的欢乐，一个全新的动物城是如此新奇，可以说：<br>办事大厅的树懒慢吞吞地说话和办事；<br>火车站售货处专门提供给长颈鹿的饮料管道；<br>狐狸从大象商店中骗来的冰棒是如此巨大，而融化后又转手成了一群仓鼠们舔的小脚爪冰棍等等。</p>
+<p><img src="http://xbin999.qiniudn.com/images/p2324084504.jpg" alt=""><br><img src="http://xbin999.qiniudn.com/images/p2324084360.jpg" alt=""><br><img src="http://xbin999.qiniudn.com/images/p2324084433.jpg" alt=""><br><img src="http://xbin999.qiniudn.com/images/p2324086967.jpg" alt=""><br><img src="http://xbin999.qiniudn.com/images/p2323812636.jpg" alt=""></p>
+<p>跟随着细节，我们相当于再次回顾电影，沉浸其中，氛围会变得愉快。大人或许会觉得这样的讨论没啥意义，笑过就完了，主题呢？</p>
+<p>不要着急，随着细节的深入交流，必然会伴随着问题，引发出各类主题，对应上面的细节，我们可以说：<br>树懒这么慢，为啥还要让他们办公？<br>提供给长颈鹿的饮料管道，换成你会怎么设计？反之如果是给小老鼠提供服务，又该怎么办呢？电影中有没有考虑不同动物差异的设计？<br>如果你是狐狸，从动物们的差异中可以找到什么样的商机？</p>
+<p>也许这些话题和电影想要表达的一点关系都没有，那又有什么关系呢？一部电影不应该只有梦想、勇气、成长、平等、友谊、信任、亲情等等，能聊这些固然很好；但好的电影中有无数的细节可以供我们探讨，不同的孩子完全能找到自己感兴趣的内容。从这个意义上来说，家长想让孩子去聊一个固定的话题（往往有预设的答案），就已经有了诱导成分；而在细节交流的过程中，根据内容做不同的设问，才是真正的引导。当然对家长的要求挺高，更由于我们自己思路的受限，不过这不正是我们和孩子共同成长的机会吗。</p>
+<p>最后总结一下自己和孩子聊电影的经验：有一个好的氛围，提开放性的问题，从细节开始聊起，根据聊天进程不断探讨新的问题，不要预设答案，到最后可以根据讨论的结果适当总结。</p>
+<p>切忌避免问一些诱导性问题，锚爸说的一句话特别赞：“最重要的不是灌输，而是自我萌生的感受”，这应该就是引导和诱导的区别。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;群里聊天时，我随口说了句“和孩子要引导，而不是诱导”。当时并没细想两个词的差异，只是觉得引导多棒，诱导明显带有拐卖性质，怎么行呢？&lt;/p&gt;
+&lt;p&gt;不过和孩子的交流中，到底什么样算是引导，什么样又算是诱导呢？&lt;/p&gt;
+&lt;p&gt;在“&lt;a href=&quot;http://mp.weixi
+    
+    </summary>
+    
+      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="电影" scheme="http://xbin999.com/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+      <category term="沟通" scheme="http://xbin999.com/tags/%E6%B2%9F%E9%80%9A/"/>
+    
+  </entry>
+  
+</feed>

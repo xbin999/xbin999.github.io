@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: tool | 杨先生村民</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:type" content="website">
+<meta property="og:title" content="杨先生村民">
+<meta property="og:url" content="http://xbin999.com/tags/tool/index.html">
+<meta property="og:site_name" content="杨先生村民">
+<meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="杨先生村民">
+<meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
+<meta name="twitter:creator" content="@xbin999">
+  
+    <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">杨先生村民</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">不惑，至简</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="xbin999.com">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-mac-os-she-zhi-bu-tong-de-lu-you" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" class="article-date">
+  <time datetime="2014-12-29T09:57:28.000Z" itemprop="datePublished">2014-12-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/">为Mac OS设置国内外地址不同的访问路由</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境越来越恶化，这两天到处都是Gmail彻底被墙的消息。我等屁民只有迎难而上，把vpn，ssh给用好。</p>
+<p>原先一直都是在用Chrome+SwitchySharp+ssh的方式，但这个方式不爽的是只支持http/https，很多时候git或brew更新时都会出问题，到时就只有祭起VPN大棋，但VPN的问题呢又在于走的是全局路由，包括国内的站点也都走了VPN，既慢又费流量。以前偶尔用用，一直懒得折腾，今天研究了一下，可以根据国内外地址设置不同的访问路由。这真是一个折腾的时代。</p>
+<p>在mac下需要的几个工具：修改路由的<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>和开源的OpenVPN客户端<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>，原理就是：</p>
+<p>“<em>利用来自APNIC的数据生成路由命令脚本，让VPN客户端在连接时自动执行。通过这些路由脚本，可以让用户在使用VPN作为默认网关时，不使用VPN访问中国国内IP，从而减轻VPN负担，并提高访问国内网站的速度。</em>”</p>
+<p>如果你VPN服务使用PPTP，mac下很简单，参照<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes说明</a>即可，可惜我的<a href="https://www.123ssh.net/aff.php?aff=087" target="_blank" rel="external">VPN提供商</a>PPTP，L2TP，Cisco IPSecVPN几种连接方式相继被GFW干扰，目前只有采用OpenVPN的连接方式，参见<a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a>，不过Viscosity不是免费的，我就找个开源的<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>替代。</p>
+<p>说明一下过程和注意事项：</p>
+<ul>
+<li>下载<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>。</li>
+<li>在目录下执行python chnroutes.py -p mac ，生成 ip-up 与 ip-down 两个文件。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中导入你的vpn服务提供商提供的配置文件。</li>
+<li>修改<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>的连接配置文件，增加</li>
+</ul>
+<pre><code>
+up {your directory}/ip-up
+down {your directory}/ip-down
+networksetup -setdnsservers "Ethernet" 8.8.8.8 8.8.4.4
+networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
+</code></pre>
+
+<ul>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中的设置里Set DNS/WINS为“Do not setnameserver”，由前面的配置文件来指定。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>连接VPN，连接成功后，可以访问<a href="http://ip138.com/" target="_blank" rel="external">ip138.com</a>和<a href="http://www.ip.cn/" target="_blank" rel="external">ip.cn</a>，前者为访问国内站点的ip地址，后者为访问国外站点的地址，两者应该不同。</li>
+</ul>
+<p><em>– 12月30日更新：<br>发现连上VPN后，公司内网无法访问，参考<a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a>在ip-up/ip-down中增加公司的域名以及内网地址即可。对于Chrome来说可能需要清除缓存，否则总指向到该死的189so。</em></p>
+<p>参考的文章有：</p>
+<ul>
+<li><a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">jimmyxu/chnroutes</a></li>
+<li><a href="http://www.jianshu.com/p/6e84c6d7dc58" target="_blank" rel="external">Mac（OSX）使用VPN小技巧——国内外访问分流</a></li>
+<li><a href="http://v.ifiorano.com/post/21261756835" target="_blank" rel="external">解决max-routes参数的2000条限制</a></li>
+<li><a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a></li>
+<li><a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" data-id="cizapjg6e00caw5c2cmqhtq72" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GFW/">GFW</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tunnelblick/">Tunnelblick</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chnroutes/">chnroutes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gmail/">gmail</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-replace-qrsync-log-file-with-markdown-format" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/01/replace-qrsync-log-file-with-markdown-format/" class="article-date">
+  <time datetime="2014-12-01T09:21:26.000Z" itemprop="datePublished">2014-12-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/01/replace-qrsync-log-file-with-markdown-format/">为七牛云图床的上传生成markdown格式日志</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://xbin999.com/2014/09/18/%E8%BF%81%E7%A7%BBwordpress%E5%88%B0hexo/">博客迁移到hexo</a>后，使用<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云</a>作为图床，日常就用它的命令行工具<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="external">qrsync</a>上传图像，上传成功后会显示日志。有点不爽的是日志中只是显示上传到服务器上的相对路径的文件名称，在写markdown 格式时，还需要自己去补充类似“![]”，然后再补充完整url信息。</p>
+<p>于是就在日志信息后加一个sed的脚本做替换，帮自动生成markdown格式，书写自然就方便了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Users/yangbin/bin/qrsync /Users/yangbin/bin/qiniu-conf.json 2&gt;&amp;1 |sed -e &apos;s/\(=&gt; xbin999:\)\(.*\)/=&gt; ![](http:\/\/xbin999.qiniudb.com\/\2\)/&apos;</div></pre></td></tr></table></figure>
+<p>另一种只显示结果文件格式的可以参见<a href="https://gist.github.com/xbin999/5d6ae721d04d51f99c39" target="_blank" rel="external">gist</a>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/" data-id="cizapjg7v00h4w5c2vtl2dpat" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/it/">it</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sed/">sed</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/七牛/">七牛</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-豆瓣购书单和亚马逊促销" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/09/01/豆瓣购书单和亚马逊促销/" class="article-date">
+  <time datetime="2014-09-01T11:41:00.000Z" itemprop="datePublished">2014-09-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/01/豆瓣购书单和亚马逊促销/">豆瓣购书单和亚马逊促销</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对于一个爱看书的人来说（我能说我自己吗？），豆瓣和亚马逊是不可缺少的两个网站。豆瓣可以猜你喜欢，有推荐的豆列，还可以建立<a href="http://book.douban.com/cart" target="_blank" rel="external">购书单</a>，并且会提供购书单中各网站购买的价格对比，一般我选择在<a href="http://www.amazon.cn/" target="_blank" rel="external">亚马逊</a>购书比较多，这里除了种类和价格因素外，还有就是亚马逊的书籍推荐服务。</p>
+<p>我习惯的购书是日常在豆瓣中把要买的书加入购书单，然后去亚马逊购买，有活动自然会更划算。亚马逊经常会有各种各样的促销活动，但活动活动往往会有范围，而不是针对所有的书，比如现在的<a href="http://amzn.to/1x0AM7u" target="_blank" rel="external">“满199元返100元图书券”</a>活动，也有35万中文图书的限制。这样带来的问题就是，把书加入购物车后，却发现书又没参加活动，凑单的时候就更苦恼了。（不差钱的就不用管这些了）</p>
+<p>所以我一直想能不能有个服务，能检查一下我的购书单，看看有哪些书是参加了亚马逊的促销活动的。不过貌似豆瓣和亚马逊都不会有人提供，第三方的也总不见，无奈只有自己用ruby写了一个<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="external">“从豆瓣购书单中挑出有亚马逊促销的书籍”</a>。</p>
+<p>机制也很简单，先在浏览器打开你的<a href="http://book.douban.com/cart" target="_blank" rel="external">豆瓣购书单</a>，另存为cart.html，然后用了三个正则表达式用来做html的解析，你只需要修改最后的一个prom_regexp，提供亚马逊促销活动对应的促销码即可，比如<a href="http://amzn.to/1x0AM7u" target="_blank" rel="external">“满199元返100元图书券”</a>活动的促销码就是“<em>6HREB5FXXK</em>”，运行后的结果输出的就是你的购书单中参加了活动的书籍和豆瓣链接（当然你的电脑上需要安装有ruby的环境），适用于在购书单中列了一堆书又还没有钱，等着促销活动的朋友。</p>
+<p>比如我的运行结果就是：</p>
+<pre><code>
+=== books in promotion ===
+跑步，该怎么跑？, http://book.douban.com/subject/22993407/
+自控力, http://book.douban.com/subject/10786473/
+学习要像加勒比海盗, http://book.douban.com/subject/5946563/
+教育就是解放心灵, http://book.douban.com/subject/4864406/
+无器械健身, http://book.douban.com/subject/11608712/
+怦然心动的人生整理魔法, http://book.douban.com/subject/10747883/
+设计并不重要, http://book.douban.com/subject/20375121/
+戊戌政变记, http://book.douban.com/subject/5315180/
+共读绘本的一年, http://book.douban.com/subject/24295824/
+...
+</code></pre>
+
+<p>喜欢的朋友可以从github上获取<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="external">源代码</a>自行修改。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2014/09/01/豆瓣购书单和亚马逊促销/" data-id="cizapjhm7029qw5c2u911ktf7" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2014/09/01/豆瓣购书单和亚马逊促销/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/amazon/">amazon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/douban/">douban</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-没钱买ssd的人可以用内存做临时存储" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/11/28/没钱买ssd的人可以用内存做临时存储/" class="article-date">
+  <time datetime="2013-11-28T09:13:37.000Z" itemprop="datePublished">2013-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/11/28/没钱买ssd的人可以用内存做临时存储/">没钱买SSD的人可以用内存做临时存储</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="wrapper"><br><br>在知乎上看到一个问题<a href="http://www.zhihu.com/question/20873070/answer/20139836" target="_blank" rel="external">程序员如何优雅地使用 Mac？</a>的回答，里面提到了一个mac上的工具<a href="http://inkscribbles.com/apps/tmpdisk/" target="_blank" rel="external">TmpDisk</a>，开源的内存磁盘管理工具，用来将你的内存虚拟成硬盘，加速文件的读写，缺点当然是关机或弹出磁盘文件就丢失了。不过这个貌似也看成是优点，你都不需要去考虑清理文件。<br><br>立即<a href="http://inkscribbles.com/downloads/TmpDisk-1.1.2.dmg" target="_blank" rel="external">下载</a>安装，设置好后，将我常用的下载目录（包括邮件附件）设置到该虚拟硬盘上，体验果然飞快啊。其实大多数邮件的附件下载下来并不需要长期保存，只要当时快速处理即可。这样只需要每天关机前将需要保存的文件转移到硬盘即可（刚好是一次整理过程），其他自动删除，爽。<br><br>没钱买SSD的人有福了，不过速度越快，心倒是更痒了。<br><br></div>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/11/28/没钱买ssd的人可以用内存做临时存储/" data-id="cizapjh7401vyw5c2h9s9f1dp" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/11/28/没钱买ssd的人可以用内存做临时存储/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TmpDisk/">TmpDisk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mactips/">mactips</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-编写markdown文档直接发布到wordpress上-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/27/编写markdown文档直接发布到wordpress上-4/" class="article-date">
+  <time datetime="2013-04-27T07:48:11.000Z" itemprop="datePublished">2013-04-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/27/编写markdown文档直接发布到wordpress上-4/">编写markdown文档直接发布到wordpress上</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="external">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="external">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="external">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="external">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
+
+</em>   运行flavor时报错<br><br>    ~/.rvm/gems/ruby-1.9.3-p125/gems/json-1.7.5/lib/json/ext/parser.bundle: [BUG] Segmentation fault<br>    ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]<br>    <code>&lt;/pre&gt;
+    这个原因是flavor.rb指定了/usr/bin/ruby，和我的rvm环境不一致，修改ruby运行环境即可。
+*   命令行下mail 运行时报错
+    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="external">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cizapjhgy0252w5c2ci5u74im" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-采用markdown来编写文档" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/02/07/采用markdown来编写文档/" class="article-date">
+  <time datetime="2013-02-07T05:56:48.000Z" itemprop="datePublished">2013-02-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/02/07/采用markdown来编写文档/">采用markdown来编写文档</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>很多时候记会议纪要，用word写吧，觉得太笨重，慢；用文本写，写标题1, 2, 3, … 结果前后一调整，或者插入/删除一行就要去重新调整序号，实在难受。随它去呢，又让我这种偏执的人感到别扭。</p>
+<p>讨厌在书写的时候要考虑格式的设置，markdown确实是一个很好的解决方法，好好学学，强迫自己习惯markdown的编写。最基本的编写也就那么几个：</p>
+<ol>
+<li>用几个#号来标识标题。</li>
+<li>段落的写法，第一个是数字，那就按数字1,2,3排，非数字就是符号排的段落，第一个字符用-, *, + 都可以。</li>
+<li>链接的写法，最简单的就是中括号里写文字，后面小括号里写链接，相同主机内可以使用相对路径。</li>
+<li>对写代码的人来说，还有一个要记住的是用反引号`把代码给括起来。<br>我觉得有这么几招就差不多了，顶多用两个星号搞搞<strong>粗体</strong>、一个星号<em>斜体</em>，详细的使用帮助可以参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">markdown语法说明</a>。</li>
+</ol>
+<p><strong>“工欲善其事，必先利其器。”</strong></p>
+<p>首先，我得选择一个文本编写工具来替代Stickies，支持markdown，简单一点，能自动保存。<a href="http://mouapp.com/" target="_blank" rel="external">Mou</a> 不够简单，还是觉得<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 不错，简洁得很，同时支持<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 的云服务。（<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 同时提供iphone/ipad下的客户端应用，虽然<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 在国内访问貌似不畅。）</p>
+<p>其次需要能把markdown文件转成html文件，将格式内容进行保存或者发布到博客中（我一般还是会保存在Evernote中，话说Evernote什么时候能支持markdown啊）。<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身能提供预览并保存html文件。另外mac下还有两个不错的工具：</p>
+<ul>
+<li>一个是chrome扩展<a href="https://github.com/adam-p/markdown-here" target="_blank" rel="external">Markdown here</a> 对于使用gmail的人来说有帮助，先用markdown写邮件，然后使用该插件Markdown Toggle做一次转换即可；</li>
+<li>一个是<a href="http://brettterpstra.com/projects/markdown-service-tools/" target="_blank" rel="external">md</a> ，提供了mac OS下的一堆服务，让你在文本编辑下右键菜单出现一堆常用的markdown服务。<br>最后再推荐<a href="https://github.com/github/gollum" target="_blank" rel="external">gollum</a> ，基于<a href="http://git-scm.com/" target="_blank" rel="external">git</a> 的个人wiki管理工具，和<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 配合（<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身也能提供页面的跳转，够强大吧），一个写markdown文件，一个提供wiki页面和搜索。</li>
+</ul>
+<p>先写这么多，等使用时间长了，有心得再做更新，这篇文章就是基于<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 写的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2013/02/07/采用markdown来编写文档/" data-id="cizapjhoh02bvw5c2xod4y7rq" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2013/02/07/采用markdown来编写文档/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-在safari中使用https-google-reader订阅rss" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/05/14/在safari中使用https-google-reader订阅rss/" class="article-date">
+  <time datetime="2012-05-14T09:56:11.000Z" itemprop="datePublished">2012-05-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/05/14/在safari中使用https-google-reader订阅rss/">在safari中使用https google reader订阅RSS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前在safari中一直使用<a href="http://archive.robwilkerson.org/2010/06/16/add-to-google-reader-extension-for-safari-5/" target="_blank" rel="external">Add To Google Reader</a>订阅RSS，不过由于老外不必担心GFW，采用http即可，但是我使用的时候经常都很杯具的是http无法访问google，从而必须手工改成https，再刷新一次，很不爽。</p>
+<p>就像修改一下，去找代码，codaset已经不能访问。就到<a href="https://github.com/" target="_blank" rel="external">github</a>上找了个<a href="http://robwilkerson.org/" target="_blank" rel="external">Rob Wilkerson</a> 之前参考的版本，也就是<a href="http://github.com/Chupa" target="_blank" rel="external">Chupa</a>的<a href="http://github.com/Chupa/Read-in-Google-Reader" target="_blank" rel="external">源代码</a>。我也clone了他的代码，做了一些修改。</p>
+<p>一是采用https的方式访问google；</p>
+<p>二是点击RSS按钮后直接采用google reader订阅，而不需要选择iGoogle或Reader。</p>
+<p>你可以直接在target中<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension/raw/master/target/read-in-https-google-reader.safariextz" target="_blank" rel="external">下载</a>安装即可，或者在<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension" target="_blank" rel="external">read-in-https-google-reader</a>中得到源代码。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/" data-id="cizapjgpr01csw5c2377l0yb2" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Reader/">Google Reader</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RSS/">RSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/extension/">extension</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-iosapp推荐《历史上的今天》" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/02/08/iosapp推荐《历史上的今天》/" class="article-date">
+  <time datetime="2012-02-08T05:47:58.000Z" itemprop="datePublished">2012-02-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小乐/">小乐</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/08/iosapp推荐《历史上的今天》/">iosapp推荐 - 《历史上的今天》</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前在<a href="https://img.skitch.com/20120208-e9s5m2j2k9hrshri64aka8r4dg.jpg" target="_blank" rel="external">微博上</a>推荐过一个ios的应用《<a href="http://itunes.apple.com/cn/app/li-shi-shang-jin-tian-le-jie/id471834408?mt=8" target="_blank" rel="external">历史上的今天</a>》，iphone和ipad上都有，免费带广告。意犹未尽，决定再说说自己用的体会。</p>
+<p>功能和界面都挺简单，每天自动告诉你历史上今天发生了什么，包括大事记、出生、逝世、节假日和习俗四个部分。你并不能自己选择某一天去查询事件，但我恰恰觉得这点限制使得该应用成了一个很好地讲述工具，象一本历史故事书，能让你娓娓道来，而不是定位于一个历史工具书。对于事件中的关键字一般会提供链接，进行百度搜索，一般需要详细解释时，我会跳到维基百科、百度百科、互动百科等查看详细描述。</p>
+<p><img src="https://img.skitch.com/20120208-e9s5m2j2k9hrshri64aka8r4dg.jpg" alt="历史上的今天"></p>
+<p>小乐向来对历史有一定的兴趣，故每天晚上小乐临睡前，都会有几分钟时间，我给她讲述一下《历史上的今天》，一般我会挑一些小乐有兴趣的内容，或者拓宽知识面的点，有些只是照读，有些则会查询百科细究。相比于历史百科全书来说，应用还是有很强的优势：</p>
+<p>1. 新鲜感，每天都是不同的内容（一年后不知会怎样，不过一个应用能持续用一年我想已经非常了不起了。另外到时也许又会有新的兴趣点）；</p>
+<p>2. 方便性，不需要大部头，以及内容链接带来查阅的方便性，虽然背后依托的是百科类网站，但手持ipad，那种上知天文，下知地理的感觉，哈哈，小乐一定崇拜死了；</p>
+<p>3. 选择性和启发性，在讲述的过程中针对一天中的历史点，有着丰富的选择性，完全可以针对孩子的不同兴趣点选择要讲述的内容；而且很多内容如果没有这样的事记形式我想是永远都不涉及到的。</p>
+<p>比如昨天2月7日，我就给小乐讲述了：</p>
+<blockquote>
+<p>1977年，在中国共产党中央委员会主席华国锋的授意下，《人民日报》发表社论，公开提出<strong>两个凡是</strong></p>
+<p>1923年，京汉铁路“二七”大罢工；</p>
+<p>1812年，狄更斯的诞辰；</p>
+<p>1964年，披头士赴美，在纽约开始巡回演唱；</p>
+</blockquote>
+<p>还有其他一些，内容丰富吧。</p>
+<p>在讲二七罢工的时候，我说我去过河南的二七广场，有点联系。小家伙问领导人都有谁，张国焘不认识，项英，嗯，上次说皖南事变的时候提到过；</p>
+<p>讲披头士的时候，说了一下列侬的死。不能理解歌迷怎么会刺杀他的。还有用QQ音乐听了一下yellow submarine，多媒体教学；</p>
+<p>而讲“两个凡是”的时候，我问了小乐你对两个凡是的这两句话能理解吗？你觉得对吗？这也算是政治启蒙吧。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2012/02/08/iosapp推荐《历史上的今天》/" data-id="cizapjg5q00akw5c27xg5feto" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2012/02/08/iosapp推荐《历史上的今天》/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosapp/">iosapp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小乐/">小乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/陪小乐学习/">陪小乐学习</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-slugs-6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/10/17/slugs-6/" class="article-date">
+  <time datetime="2011-10-17T00:00:00.000Z" itemprop="datePublished">2011-10-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/10/17/slugs-6/">mac下的Calculator直接支持货币汇率转换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div>刚想换算一下港币，google能直接告诉我们答案，不过一开始输入的查询语句有问题，后来改成“<a href="http://www.google.com.hk/#hl=zh-CN&amp;source=hp&amp;q=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;oq=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=e&amp;gs_upl=1882l6890l0l7169l31l14l0l0l0l0l0l0ll0l0&amp;bav=cf.osb&amp;fp=4c2aaa88d72919d4&amp;biw=1239&amp;bih=670" target="_blank" rel="external">1港币等于多少人民币</a>”才行。</div></p>
+<p><div>不过也正因为此，想去找一个mac下的汇率计算工具，才发现Calculator就提供了这一功能，选择”Convert - Currency”，真是方便。</div><br><img src="https://img.skitch.com/20111016-jsj3eijarcm3yfhr5rh1kcaqy7.jpg" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2011/10/17/slugs-6/" data-id="cizapjg9x00m4w5c2jqrmp773" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2011/10/17/slugs-6/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-slugs-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/09/20/slugs-3/" class="article-date">
+  <time datetime="2011-09-19T16:10:12.000Z" itemprop="datePublished">2011-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/09/20/slugs-3/">freemind/filezilla/dropbox在mac下使用的几个问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前养成好习惯，尽量使用一些跨平台的软件，比如Evernote, dropbox, Filezilla, Freemind，这样在切换到mac上的时候能加快过渡。<div>不过在实际使用的时候，在这几个软件上都碰到了一些问题：</div><div>1. Freemind无法输入中文</div><div>解决方法：先切换到英文输入发，再启动Freemind，就可以输入中文了；</div><div>2. Filezilla连接上ftp server后，不能显示目录</div><div>解决方法：今天服务器上传了一些<a href="http://weibo.com/k/%25E5%25B0%258F%25E4%25B9%2590%25E8%258B%258F%25E5%25B7%259E%25E8%25A1%258C&amp;refer=miniblog_jing" target="_blank" rel="external">去苏州玩</a>的照片，结果上去一看服务器上啥文件也看不到。原来是<a href="http://os.51cto.com/art/201103/247723.htm" target="_blank" rel="external">编码的问题</a>，在站点管理器中修改站点的编码为gb2312就可以了；</div><div>3. dropbox无法实时更新</div><div>解决方法：这个应该和mac无关，只是因为一下子有了两台机器实时更新的需求，才发现它的存在和严重性。<a href="http://www.williamlong.info/archives/2585.html" target="_blank" rel="external">月光博客上有篇详细的文章</a>，还是要感谢伟大的GFW。没用privoxy，我暂时还没去管它。</div></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://xbin999.com/2011/09/20/slugs-3/" data-id="cizapjg9s00lqw5c2cdebjppj" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://xbin999.com/2011/09/20/slugs-3/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Filezilla/">Filezilla</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dropbox/">dropbox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/freemind/">freemind</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议</a>进行许可。
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/tags/tool/page/2/">2</a><a class="extend next" rel="next" href="/tags/tool/page/2/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">fuyunv</h3>
+  <div class="widget">
+    <img src="http://xbin999.qiniudn.com/images/qrcode_for_gh_ffed660b754c_258.jpg">
+  </div>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><span class="category-list-count">117</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/坚持100天学习Ruby/">坚持100天学习Ruby</a><span class="category-list-count">38</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/家有小乐/">家有小乐</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小乐/">小乐</a><span class="category-list-count">336</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/100天行动/" style="font-size: 10.97px;">100天行动</a> <a href="/tags/5W1H1R/" style="font-size: 10px;">5W1H1R</a> <a href="/tags/5分钟游戏/" style="font-size: 10.97px;">5分钟游戏</a> <a href="/tags/APP/" style="font-size: 10px;">APP</a> <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/BOSS/" style="font-size: 10.32px;">BOSS</a> <a href="/tags/Beatles/" style="font-size: 10px;">Beatles</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/China/" style="font-size: 11.94px;">China</a> <a href="/tags/DIY/" style="font-size: 12.26px;">DIY</a> <a href="/tags/English/" style="font-size: 10.65px;">English</a> <a href="/tags/FIT/" style="font-size: 10px;">FIT</a> <a href="/tags/Filezilla/" style="font-size: 10px;">Filezilla</a> <a href="/tags/Funny/" style="font-size: 18.71px;">Funny</a> <a href="/tags/Fusion-Drive/" style="font-size: 10px;">Fusion Drive</a> <a href="/tags/GFW/" style="font-size: 10.65px;">GFW</a> <a href="/tags/GoDaddy/" style="font-size: 10.32px;">GoDaddy</a> <a href="/tags/Google-Drive/" style="font-size: 10px;">Google Drive</a> <a href="/tags/Google-Reader/" style="font-size: 10.32px;">Google Reader</a> <a href="/tags/Homebrew/" style="font-size: 10.32px;">Homebrew</a> <a href="/tags/IT/" style="font-size: 19.35px;">IT</a> <a href="/tags/ImageMagick/" style="font-size: 10px;">ImageMagick</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/MacPorts/" style="font-size: 10px;">MacPorts</a> <a href="/tags/NPS/" style="font-size: 10px;">NPS</a> <a href="/tags/Nike-GPS/" style="font-size: 10px;">Nike+GPS</a> <a href="/tags/OCW/" style="font-size: 10px;">OCW</a> <a href="/tags/Office/" style="font-size: 10.32px;">Office</a> <a href="/tags/Openomy/" style="font-size: 11.29px;">Openomy</a> <a href="/tags/P-E-T/" style="font-size: 10.32px;">P.E.T</a> <a href="/tags/Politics/" style="font-size: 10px;">Politics</a> <a href="/tags/PostgreSQL/" style="font-size: 10px;">PostgreSQL</a> <a href="/tags/QQ/" style="font-size: 10px;">QQ</a> <a href="/tags/ROR/" style="font-size: 10px;">ROR</a> <a href="/tags/RSS/" style="font-size: 10px;">RSS</a> <a href="/tags/Rails/" style="font-size: 10px;">Rails</a> <a href="/tags/Ruby/" style="font-size: 10px;">Ruby</a> <a href="/tags/RubyGem/" style="font-size: 10px;">RubyGem</a> <a href="/tags/SBS/" style="font-size: 10px;">SBS</a> <a href="/tags/SEIM/" style="font-size: 10px;">SEIM</a> <a href="/tags/SKY/" style="font-size: 10px;">SKY</a> <a href="/tags/SNS/" style="font-size: 10.32px;">SNS</a> <a href="/tags/SSD/" style="font-size: 10px;">SSD</a> <a href="/tags/ShadowSocks/" style="font-size: 10px;">ShadowSocks</a> <a href="/tags/Sudoku/" style="font-size: 12.26px;">Sudoku</a> <a href="/tags/TmpDisk/" style="font-size: 10px;">TmpDisk</a> <a href="/tags/Tunnelblick/" style="font-size: 10px;">Tunnelblick</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/Weico/" style="font-size: 10px;">Weico</a> <a href="/tags/Yosemite/" style="font-size: 10px;">Yosemite</a> <a href="/tags/Zingo/" style="font-size: 10px;">Zingo</a> <a href="/tags/adminer/" style="font-size: 10px;">adminer</a> <a href="/tags/amazon/" style="font-size: 10px;">amazon</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/blogetery/" style="font-size: 10px;">blogetery</a> <a href="/tags/buzzsync/" style="font-size: 10px;">buzzsync</a> <a href="/tags/chnroutes/" style="font-size: 10px;">chnroutes</a> <a href="/tags/cowsay/" style="font-size: 10px;">cowsay</a> <a href="/tags/curl/" style="font-size: 10.32px;">curl</a> <a href="/tags/develop/" style="font-size: 10px;">develop</a> <a href="/tags/douban/" style="font-size: 10px;">douban</a> <a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a> <a href="/tags/evernote/" style="font-size: 10px;">evernote</a> <a href="/tags/extension/" style="font-size: 10.32px;">extension</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/faq/" style="font-size: 10.65px;">faq</a> <a href="/tags/follow5/" style="font-size: 10px;">follow5</a> <a href="/tags/freemind/" style="font-size: 10px;">freemind</a> <a href="/tags/fuyunv/" style="font-size: 20px;">fuyunv</a> <a href="/tags/git/" style="font-size: 10.97px;">git</a> <a href="/tags/gmail/" style="font-size: 10.32px;">gmail</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/google-earth/" style="font-size: 10px;">google earth</a> <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/hdfs/" style="font-size: 10px;">hdfs</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/horrible-histories/" style="font-size: 11.29px;">horrible histories</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/ios-app/" style="font-size: 10.65px;">ios app</a> <a href="/tags/iosapp/" style="font-size: 10.65px;">iosapp</a> <a href="/tags/iphone/" style="font-size: 10.65px;">iphone</a> <a href="/tags/it/" style="font-size: 10px;">it</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/koding/" style="font-size: 10px;">koding</a> <a href="/tags/mac/" style="font-size: 14.84px;">mac</a> <a href="/tags/mactips/" style="font-size: 11.61px;">mactips</a> <a href="/tags/mail/" style="font-size: 10.32px;">mail</a> <a href="/tags/markdown/" style="font-size: 10.97px;">markdown</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/objective-c/" style="font-size: 10px;">objective-c</a> <a href="/tags/one-piece/" style="font-size: 10.65px;">one piece</a> <a href="/tags/openfeint/" style="font-size: 10px;">openfeint</a> <a href="/tags/outlook/" style="font-size: 10.32px;">outlook</a> <a href="/tags/pow/" style="font-size: 10px;">pow</a> <a href="/tags/proxy/" style="font-size: 10.32px;">proxy</a> <a href="/tags/qiniu/" style="font-size: 10px;">qiniu</a> <a href="/tags/quizlet/" style="font-size: 10px;">quizlet</a> <a href="/tags/route/" style="font-size: 10px;">route</a> <a href="/tags/ruby/" style="font-size: 17.42px;">ruby</a> <a href="/tags/running/" style="font-size: 10.65px;">running</a> <a href="/tags/safari/" style="font-size: 10px;">safari</a> <a href="/tags/secret-socks/" style="font-size: 10px;">secret socks</a> <a href="/tags/sed/" style="font-size: 10px;">sed</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/skitch/" style="font-size: 10px;">skitch</a> <a href="/tags/slideshare/" style="font-size: 10px;">slideshare</a> <a href="/tags/spotlight/" style="font-size: 10px;">spotlight</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/ssh/" style="font-size: 10.65px;">ssh</a> <a href="/tags/symbol/" style="font-size: 10px;">symbol</a> <a href="/tags/tip/" style="font-size: 10.65px;">tip</a> <a href="/tags/tool/" style="font-size: 12.9px;">tool</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/tour/" style="font-size: 10px;">tour</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/twitter/" style="font-size: 10px;">twitter</a> <a href="/tags/usassh/" style="font-size: 10.32px;">usassh</a> <a href="/tags/wordpress/" style="font-size: 11.61px;">wordpress</a> <a href="/tags/workflow/" style="font-size: 10px;">workflow</a> <a href="/tags/xmlrpc/" style="font-size: 10px;">xmlrpc</a> <a href="/tags/youtube/" style="font-size: 10px;">youtube</a> <a href="/tags/一百天行动/" style="font-size: 11.61px;">一百天行动</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/万历十五年/" style="font-size: 14.84px;">万历十五年</a> <a href="/tags/三国/" style="font-size: 10.65px;">三国</a> <a href="/tags/三毛/" style="font-size: 10.65px;">三毛</a> <a href="/tags/不是问题的问题/" style="font-size: 10.65px;">不是问题的问题</a> <a href="/tags/世说新语/" style="font-size: 11.29px;">世说新语</a> <a href="/tags/中文/" style="font-size: 10px;">中文</a> <a href="/tags/乐乐的诗/" style="font-size: 10px;">乐乐的诗</a> <a href="/tags/乐妈写/" style="font-size: 13.55px;">乐妈写</a> <a href="/tags/乐妈说/" style="font-size: 10px;">乐妈说</a> <a href="/tags/习惯/" style="font-size: 10px;">习惯</a> <a href="/tags/书、音乐、电影/" style="font-size: 14.52px;">书、音乐、电影</a> <a href="/tags/书信/" style="font-size: 10.32px;">书信</a> <a href="/tags/书单/" style="font-size: 10.97px;">书单</a> <a href="/tags/书法/" style="font-size: 10.65px;">书法</a> <a href="/tags/产品体验/" style="font-size: 10.65px;">产品体验</a> <a href="/tags/亲子交流/" style="font-size: 10px;">亲子交流</a> <a href="/tags/亲子沟通/" style="font-size: 10.97px;">亲子沟通</a> <a href="/tags/人文/" style="font-size: 10px;">人文</a> <a href="/tags/人类的故事/" style="font-size: 10px;">人类的故事</a> <a href="/tags/作文/" style="font-size: 11.61px;">作文</a> <a href="/tags/倾听/" style="font-size: 10.32px;">倾听</a> <a href="/tags/健康与保健/" style="font-size: 10.32px;">健康与保健</a> <a href="/tags/儿童教育/" style="font-size: 19.03px;">儿童教育</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/全职妈妈/" style="font-size: 10px;">全职妈妈</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/兴趣/" style="font-size: 10.65px;">兴趣</a> <a href="/tags/兵役制/" style="font-size: 10px;">兵役制</a> <a href="/tags/其他/" style="font-size: 16.45px;">其他</a> <a href="/tags/内容/" style="font-size: 10px;">内容</a> <a href="/tags/写作/" style="font-size: 10px;">写作</a> <a href="/tags/凡尔纳/" style="font-size: 10px;">凡尔纳</a> <a href="/tags/分享/" style="font-size: 10px;">分享</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/分类/" style="font-size: 10px;">分类</a> <a href="/tags/分级阅读/" style="font-size: 10px;">分级阅读</a> <a href="/tags/创意/" style="font-size: 10px;">创意</a> <a href="/tags/剧本/" style="font-size: 10px;">剧本</a> <a href="/tags/动画片/" style="font-size: 10px;">动画片</a> <a href="/tags/北京/" style="font-size: 10px;">北京</a> <a href="/tags/十二生肖/" style="font-size: 10px;">十二生肖</a> <a href="/tags/十大/" style="font-size: 10px;">十大</a> <a href="/tags/半玩伴学/" style="font-size: 10.65px;">半玩伴学</a> <a href="/tags/南航/" style="font-size: 10px;">南航</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/历史/" style="font-size: 18.39px;">历史</a> <a href="/tags/历史上的今天/" style="font-size: 10.97px;">历史上的今天</a> <a href="/tags/古代历史/" style="font-size: 10px;">古代历史</a> <a href="/tags/古文/" style="font-size: 11.29px;">古文</a> <a href="/tags/古诗/" style="font-size: 10.97px;">古诗</a> <a href="/tags/咬指甲/" style="font-size: 10px;">咬指甲</a> <a href="/tags/哲学/" style="font-size: 10.32px;">哲学</a> <a href="/tags/唐诗/" style="font-size: 11.29px;">唐诗</a> <a href="/tags/唐诗宋词/" style="font-size: 10px;">唐诗宋词</a> <a href="/tags/四大美女/" style="font-size: 10px;">四大美女</a> <a href="/tags/团队/" style="font-size: 10.32px;">团队</a> <a href="/tags/国航/" style="font-size: 10px;">国航</a> <a href="/tags/图片处理/" style="font-size: 10px;">图片处理</a> <a href="/tags/土豆/" style="font-size: 10px;">土豆</a> <a href="/tags/圣诞/" style="font-size: 10.32px;">圣诞</a> <a href="/tags/地理/" style="font-size: 10.32px;">地理</a> <a href="/tags/坚持100天学习Ruby/" style="font-size: 17.1px;">坚持100天学习Ruby</a> <a href="/tags/埃及/" style="font-size: 10.32px;">埃及</a> <a href="/tags/埃及守护神/" style="font-size: 10px;">埃及守护神</a> <a href="/tags/培训/" style="font-size: 10px;">培训</a> <a href="/tags/夏山/" style="font-size: 10px;">夏山</a> <a href="/tags/夏山学校/" style="font-size: 10.65px;">夏山学校</a> <a href="/tags/大众点评/" style="font-size: 10px;">大众点评</a> <a href="/tags/奥数/" style="font-size: 12.9px;">奥数</a> <a href="/tags/学习/" style="font-size: 10.32px;">学习</a> <a href="/tags/学习方法/" style="font-size: 13.87px;">学习方法</a> <a href="/tags/客户分析/" style="font-size: 10px;">客户分析</a> <a href="/tags/宫崎骏/" style="font-size: 10px;">宫崎骏</a> <a href="/tags/家庭/" style="font-size: 10px;">家庭</a> <a href="/tags/家庭美德/" style="font-size: 12.26px;">家庭美德</a> <a href="/tags/家长会/" style="font-size: 10.32px;">家长会</a> <a href="/tags/宽容/" style="font-size: 10px;">宽容</a> <a href="/tags/寓言/" style="font-size: 10px;">寓言</a> <a href="/tags/对联/" style="font-size: 10px;">对联</a> <a href="/tags/对话/" style="font-size: 12.26px;">对话</a> <a href="/tags/小乐/" style="font-size: 19.68px;">小乐</a> <a href="/tags/小乐作品/" style="font-size: 12.9px;">小乐作品</a> <a href="/tags/小乐作文/" style="font-size: 15.16px;">小乐作文</a> <a href="/tags/小乐学钢琴/" style="font-size: 10px;">小乐学钢琴</a> <a href="/tags/小乐说/" style="font-size: 15.48px;">小乐说</a> <a href="/tags/小乐趣问/" style="font-size: 10px;">小乐趣问</a> <a href="/tags/小乐长安行/" style="font-size: 10.32px;">小乐长安行</a> <a href="/tags/小乐问/" style="font-size: 10px;">小乐问</a> <a href="/tags/小升初/" style="font-size: 11.29px;">小升初</a> <a href="/tags/小学活动/" style="font-size: 10px;">小学活动</a> <a href="/tags/小技巧/" style="font-size: 10.97px;">小技巧</a> <a href="/tags/小说/" style="font-size: 10.32px;">小说</a> <a href="/tags/小马过河/" style="font-size: 10px;">小马过河</a> <a href="/tags/山/" style="font-size: 10px;">山</a> <a href="/tags/工作杂记/" style="font-size: 17.74px;">工作杂记</a> <a href="/tags/希利尔讲世界史/" style="font-size: 14.19px;">希利尔讲世界史</a> <a href="/tags/庐山/" style="font-size: 10px;">庐山</a> <a href="/tags/建站/" style="font-size: 10px;">建站</a> <a href="/tags/影评/" style="font-size: 10.32px;">影评</a> <a href="/tags/微博/" style="font-size: 10.65px;">微博</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/思维/" style="font-size: 10px;">思维</a> <a href="/tags/思维导图/" style="font-size: 10.32px;">思维导图</a> <a href="/tags/思考/" style="font-size: 11.29px;">思考</a> <a href="/tags/恶魔果实/" style="font-size: 10px;">恶魔果实</a> <a href="/tags/悲剧/" style="font-size: 10px;">悲剧</a> <a href="/tags/想象/" style="font-size: 10px;">想象</a> <a href="/tags/感悟/" style="font-size: 10.65px;">感悟</a> <a href="/tags/成语/" style="font-size: 10.65px;">成语</a> <a href="/tags/成长/" style="font-size: 10.97px;">成长</a> <a href="/tags/手机游戏/" style="font-size: 10px;">手机游戏</a> <a href="/tags/扑克游戏/" style="font-size: 10px;">扑克游戏</a> <a href="/tags/批判性思维/" style="font-size: 10.32px;">批判性思维</a> <a href="/tags/技巧/" style="font-size: 10.65px;">技巧</a> <a href="/tags/技能教养法/" style="font-size: 10px;">技能教养法</a> <a href="/tags/拖延/" style="font-size: 10.32px;">拖延</a> <a href="/tags/换牙/" style="font-size: 10px;">换牙</a> <a href="/tags/提问题/" style="font-size: 10.32px;">提问题</a> <a href="/tags/搞笑/" style="font-size: 10.32px;">搞笑</a> <a href="/tags/支撑系统/" style="font-size: 10px;">支撑系统</a> <a href="/tags/故乡/" style="font-size: 10px;">故乡</a> <a href="/tags/教育/" style="font-size: 16.77px;">教育</a> <a href="/tags/教育方法/" style="font-size: 10px;">教育方法</a> <a href="/tags/数学/" style="font-size: 12.9px;">数学</a> <a href="/tags/数据建模/" style="font-size: 10px;">数据建模</a> <a href="/tags/数据模型/" style="font-size: 10.32px;">数据模型</a> <a href="/tags/新闻与政治/" style="font-size: 10.97px;">新闻与政治</a> <a href="/tags/方法/" style="font-size: 14.19px;">方法</a> <a href="/tags/旅游/" style="font-size: 12.26px;">旅游</a> <a href="/tags/旅游攻略/" style="font-size: 10.32px;">旅游攻略</a> <a href="/tags/旅行/" style="font-size: 11.61px;">旅行</a> <a href="/tags/无锡/" style="font-size: 10px;">无锡</a> <a href="/tags/时间管理/" style="font-size: 10.32px;">时间管理</a> <a href="/tags/明朝/" style="font-size: 10px;">明朝</a> <a href="/tags/明朝那些事儿/" style="font-size: 10px;">明朝那些事儿</a> <a href="/tags/显卡驱动/" style="font-size: 10px;">显卡驱动</a> <a href="/tags/暑假/" style="font-size: 10.65px;">暑假</a> <a href="/tags/朋友/" style="font-size: 11.29px;">朋友</a> <a href="/tags/杂记/" style="font-size: 12.9px;">杂记</a> <a href="/tags/杨红樱/" style="font-size: 10px;">杨红樱</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/梦想/" style="font-size: 11.29px;">梦想</a> <a href="/tags/正则表达式/" style="font-size: 10.32px;">正则表达式</a> <a href="/tags/步行/" style="font-size: 10px;">步行</a> <a href="/tags/武侠/" style="font-size: 10px;">武侠</a> <a href="/tags/死亡诗社/" style="font-size: 10px;">死亡诗社</a> <a href="/tags/民国/" style="font-size: 10.97px;">民国</a> <a href="/tags/民谣/" style="font-size: 10px;">民谣</a> <a href="/tags/沟通/" style="font-size: 11.61px;">沟通</a> <a href="/tags/治水/" style="font-size: 10px;">治水</a> <a href="/tags/浦江/" style="font-size: 10.65px;">浦江</a> <a href="/tags/海贼王/" style="font-size: 10.32px;">海贼王</a> <a href="/tags/游戏/" style="font-size: 11.61px;">游戏</a> <a href="/tags/游记/" style="font-size: 10.32px;">游记</a> <a href="/tags/爱心树/" style="font-size: 10px;">爱心树</a> <a href="/tags/父与女/" style="font-size: 10.32px;">父与女</a> <a href="/tags/牙仙子/" style="font-size: 10.32px;">牙仙子</a> <a href="/tags/独立思考/" style="font-size: 10.32px;">独立思考</a> <a href="/tags/猜谜/" style="font-size: 10.97px;">猜谜</a> <a href="/tags/玩中学/" style="font-size: 13.55px;">玩中学</a> <a href="/tags/环保/" style="font-size: 10.32px;">环保</a> <a href="/tags/理念/" style="font-size: 10px;">理念</a> <a href="/tags/理解/" style="font-size: 10px;">理解</a> <a href="/tags/生活/" style="font-size: 18.06px;">生活</a> <a href="/tags/生病/" style="font-size: 10px;">生病</a> <a href="/tags/用户/" style="font-size: 10px;">用户</a> <a href="/tags/用户体验/" style="font-size: 10px;">用户体验</a> <a href="/tags/电信/" style="font-size: 11.61px;">电信</a> <a href="/tags/电影/" style="font-size: 12.58px;">电影</a> <a href="/tags/百度地图/" style="font-size: 10px;">百度地图</a> <a href="/tags/百科/" style="font-size: 10px;">百科</a> <a href="/tags/真实/" style="font-size: 10px;">真实</a> <a href="/tags/真诚/" style="font-size: 10px;">真诚</a> <a href="/tags/知乎/" style="font-size: 10px;">知乎</a> <a href="/tags/神话/" style="font-size: 10.32px;">神话</a> <a href="/tags/离婚率/" style="font-size: 10px;">离婚率</a> <a href="/tags/科普/" style="font-size: 10.32px;">科普</a> <a href="/tags/移动互联网/" style="font-size: 10px;">移动互联网</a> <a href="/tags/穿越/" style="font-size: 10px;">穿越</a> <a href="/tags/童心/" style="font-size: 10px;">童心</a> <a href="/tags/童话/" style="font-size: 10px;">童话</a> <a href="/tags/童趣/" style="font-size: 10.97px;">童趣</a> <a href="/tags/笑话/" style="font-size: 10px;">笑话</a> <a href="/tags/精灵社/" style="font-size: 10.97px;">精灵社</a> <a href="/tags/绝对小孩/" style="font-size: 10px;">绝对小孩</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/美国语文/" style="font-size: 10px;">美国语文</a> <a href="/tags/美德/" style="font-size: 10.65px;">美德</a> <a href="/tags/翻墙/" style="font-size: 10.65px;">翻墙</a> <a href="/tags/翻译/" style="font-size: 12.9px;">翻译</a> <a href="/tags/考古/" style="font-size: 10.65px;">考古</a> <a href="/tags/聪明题/" style="font-size: 10.65px;">聪明题</a> <a href="/tags/胡适/" style="font-size: 10.97px;">胡适</a> <a href="/tags/脑洞/" style="font-size: 10px;">脑洞</a> <a href="/tags/节气/" style="font-size: 10px;">节气</a> <a href="/tags/英剧/" style="font-size: 10.32px;">英剧</a> <a href="/tags/英国/" style="font-size: 10px;">英国</a> <a href="/tags/英语/" style="font-size: 13.23px;">英语</a> <a href="/tags/蒋勋/" style="font-size: 10px;">蒋勋</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/视频/" style="font-size: 10.32px;">视频</a> <a href="/tags/角色/" style="font-size: 10px;">角色</a> <a href="/tags/设计/" style="font-size: 10.32px;">设计</a> <a href="/tags/诗/" style="font-size: 10px;">诗</a> <a href="/tags/语文/" style="font-size: 10.32px;">语文</a> <a href="/tags/诺贝尔奖/" style="font-size: 10px;">诺贝尔奖</a> <a href="/tags/读书/" style="font-size: 15.48px;">读书</a> <a href="/tags/课件/" style="font-size: 10.65px;">课件</a> <a href="/tags/调查/" style="font-size: 10px;">调查</a> <a href="/tags/谜语/" style="font-size: 10.97px;">谜语</a> <a href="/tags/贝尔金/" style="font-size: 10px;">贝尔金</a> <a href="/tags/越狱/" style="font-size: 10px;">越狱</a> <a href="/tags/越读馆/" style="font-size: 10.65px;">越读馆</a> <a href="/tags/趣课题/" style="font-size: 10px;">趣课题</a> <a href="/tags/跑步/" style="font-size: 10.32px;">跑步</a> <a href="/tags/输赢/" style="font-size: 10px;">输赢</a> <a href="/tags/邮政/" style="font-size: 10px;">邮政</a> <a href="/tags/配音/" style="font-size: 10px;">配音</a> <a href="/tags/金庸/" style="font-size: 10.65px;">金庸</a> <a href="/tags/问答/" style="font-size: 10.32px;">问答</a> <a href="/tags/问题讨论/" style="font-size: 10px;">问题讨论</a> <a href="/tags/阅读/" style="font-size: 16.13px;">阅读</a> <a href="/tags/陪小乐学习/" style="font-size: 15.81px;">陪小乐学习</a> <a href="/tags/随手记/" style="font-size: 10px;">随手记</a> <a href="/tags/青春/" style="font-size: 10px;">青春</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a> <a href="/tags/音频分享/" style="font-size: 10px;">音频分享</a> <a href="/tags/马来西亚/" style="font-size: 10.97px;">马来西亚</a> <a href="/tags/骑行/" style="font-size: 10.65px;">骑行</a> <a href="/tags/魔方/" style="font-size: 10px;">魔方</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/11/">November 2011</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/08/">August 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/06/">June 2010</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/05/">May 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/04/">April 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/03/">March 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/01/">January 2010</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/04/">April 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/12/">December 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/05/">May 2008</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/10/">October 2007</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/09/">September 2007</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/08/">August 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/07/">July 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/06/">June 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/05/">May 2007</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/04/">April 2007</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/03/">March 2007</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/02/">February 2007</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/01/">January 2007</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/12/">December 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/11/">November 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/10/">October 2006</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/05/">May 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/04/">April 2006</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/03/">March 2006</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/02/">February 2006</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/01/">January 2006</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/12/">December 2005</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/11/">November 2005</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/10/">October 2005</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/09/">September 2005</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/08/">August 2005</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/07/">July 2005</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/06/">June 2005</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/05/">May 2005</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/04/">April 2005</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/03/">March 2005</a><span class="archive-list-count">16</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/18/Google Drive无法登录/">Google Drive无法登录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/xiao-le-de-xiao-xue-yue-du-si-jia-shu-dan/">小乐的小学阅读私家书单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/05/nao-dong-de-yi-tian/">脑洞的一天</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/02/yue-du-2016-nian-4-yue-tui-jian-shu-dan/">悦读2016年4月推荐书单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/28/dang-hai-zi-mian-lin-ni-bu-wei-ban-ji-zhao-xiang-de-zhi-ze-shi/">当孩子面临“你怎么不为班级着想”的指责时</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://themes.xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Bin Yang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xbin999"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55026585-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </div>
+</body>
+</html>
