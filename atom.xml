@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xbin999.com/"/>
-  <updated>2017-02-19T05:33:09.000Z</updated>
+  <updated>2017-02-19T08:35:50.000Z</updated>
   <id>http://xbin999.com/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>教小乐搜索杀死女巫的歌</title>
+    <link href="http://xbin999.com/2017/02/19/%E6%95%99%E5%B0%8F%E4%B9%90%E6%90%9C%E7%B4%A2%E6%9D%80%E6%AD%BB%E5%A5%B3%E5%B7%AB%E7%9A%84%E6%AD%8C/"/>
+    <id>http://xbin999.com/2017/02/19/教小乐搜索杀死女巫的歌/</id>
+    <published>2017-02-19T08:35:40.000Z</published>
+    <updated>2017-02-19T08:35:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上周末全家看了《神奇动物在哪里》，小乐对电影中小女孩哼的一首有关如何用种种手段杀死女巫的儿歌非常感兴趣，在自己自己搜索无获后，她问我：“爸爸，你能不能找到那首杀死女巫的儿歌？”。<br>“可以啊，我找找看。”</p>
+<p>在“你为什么轻信鲍勃迪伦拒奖的假消息”中提到“搜索是必须掌握的基本技能”，不过如何进行搜索找到有效答案，也是需要方法的。所以我简单说说这次搜索实践，第一点很关键的是尽量用Google（Google用不了你还可以用bing），而不是百度（查作业答案例外）。本文中搜索非特殊注明，均采用Google。</p>
+<p>怎么开始搜索呢？也就是先得有关键特征，于是我问小乐：“那儿歌怎么唱的？”<br>“your mommy, my mommy什么的。”<br>另外我们还还知道这部电影的名字是《神奇动物在哪里》，对吧？</p>
+<p>我先到豆瓣电影上找到<a href="https://movie.douban.com/subject/25726614/" target="_blank" rel="external">《神奇动物在哪里》</a>，这个应该简单，看到电影的英文名称是”Fantastic Beasts and Where to Find Them”。</p>
+<p>先试试中文的“神奇动物在哪里 杀女巫 的儿歌”，结果不理想。</p>
+<p>再试试英文：”Fantastic Beasts and Where to Find Them kill witch song”, “Fantastic Beasts your mommy my mommy kill witch song”，发现了一个有趣的网站<a href="http://www.themoviespoiler.com/2016Spoilers/FantasticBeasts.html" target="_blank" rel="external">”The Movie Spoiler”</a>，这里有电影的完整剧透，慎点。剧透中提到一句话“Modesty sings songs about killing witches, while Credence suffers physical and emotional abuse from …”。</p>
+<p>对呀，我们还我们还可从索小女演员Modesty的扮演者入手入手。所以接下来我要找到女演员的名字，豆瓣电影中有演员表，但是很难对应谁是谁。好在我们还有电影的宝库MDB，豆瓣电影介绍介绍中直接提提供供<a href="http://www.imdb.com/title/tt3183660/" target="_blank" rel="external">IMDB的链接</a>，所以所以我们可以看到<a href="http://www.imdb.com/title/tt3183660/fullcredits" target="_blank" rel="external">完整的演职员表</a>，于是我们就知道了小演员的名字是Faith Wood-Blagrove，在电影中扮演的角色叫Modesty Barebone。</p>
+<p>接下来我同时从两个点入手进行搜索：</p>
+<p>一是在在twitter中搜索Modesty Barebone，真发现了一个用户名字是<a href="https://twitter.com/modesuti" target="_blank" rel="external">Modesty Barebone</a> 从关注者人数看有应该不是真人，但她的个人简介写道：<br>「 My momma, your momma, gonna catch a witch . My momma, your momma, flying on a switch. ☆ 」<br>New York, USA • harrypotter.wikia.com/wiki/Modesty_B…<br>哇，感觉有戏。</p>
+<p>一是在Google中搜索“Modesty Barebone sing kill witch song”，除了排在第一的”The Movie Spoiler”，发现了又一个影迷应该会很敢兴趣的网站<a href="http://www.wikia.com/" target="_blank" rel="external">Fandom</a>，它说自己是“The Largest Entertainment Fan Site in the World.”，其中自然包括了Harry Potter的Wiki，也有<a href="http://harrypotter.wikia.com/wiki/Fantastic_Beasts_and_Where_to_Find_Them_(film" target="_blank" rel="external">神奇动物在哪里的维基</a> )，我直接到”Modesty Barebone”章节章节。两条路殊途同归，进入<a href="http://harrypotter.wikia.com/wiki/Modesty_Barebone" target="_blank" rel="external">Modesty Barebone的介绍页面</a>，赫然发现网页上写着：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">My momma, your momma, flying on a switch,</div><div class="line">My momma, your momma, witches never cry,</div><div class="line">My momma, your momma, witches gonna die!</div><div class="line"></div><div class="line">Witch number one, drown in a river!</div><div class="line">Witch number two, gotta noose to give her!</div><div class="line">Witch number three, gonna watch her burn,</div><div class="line">Witch number four, flogging take a turn.</div></pre></td></tr></table></figure>
+<p>哇，开心。那是不是就结束了呢？不是，就像我们做数学题目解方程一样，求得x后，可以把x代入算式做验证。所以我们可以拿搜索到的结果，再找找是否会有新的发现？</p>
+<p>于是我继续搜索”My momma, your momma, flying on a switch”原句，排在第一的网站又很让人惊喜<a href="http://www.novels2u.com/romance/8235/8235_6.html" target="_blank" rel="external">Fantastic Beasts and Where to Find Them: The Original Screenplay(6)</a>，它居然提供了电影的剧本，剧本是这样写的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">SCENE 27</div><div class="line">INT. SECOND SALEM CHURCH, MAIN HALL—MONTAGE—DAY</div><div class="line">A dingy wooden church with darkened windows and a high mezzanine balcony. Modesty is playing a solitary variation of hopscotch, skipping in and out of a chalked grid.</div><div class="line"></div><div class="line">MODESTY</div><div class="line">My momma, your momma,</div><div class="line">gonna catch a witch,</div><div class="line">My momma, your momma,</div><div class="line">flying on a switch,</div><div class="line">My momma, your momma,</div><div class="line">witches never cry,</div><div class="line">My momma, your momma,</div><div class="line">witches gonna die!</div><div class="line"></div><div class="line">As she sings we see the church is full of group paraphernalia—leaflets advertising Mary Lou’s campaign, and a large version of the group’s anti-witchcraft banner.</div><div class="line"></div><div class="line">……</div><div class="line"></div><div class="line">SCENE 30</div><div class="line">INT. SECOND SALEM CHURCH, MAIN HALL—DAY</div><div class="line">Modesty continues playing hopscotch. Credence pauses, looking past her and out toward the door.</div><div class="line">MODESTY</div><div class="line">. . . Witch number three,</div><div class="line">gonna watch her burn, </div><div class="line">Witch number four, flogging</div><div class="line">take a turn.</div><div class="line"></div><div class="line">Young children stream into the church.</div><div class="line">TIME CUT:</div><div class="line">Brown soup is being ladled out to the children, who jostle each other to get near the front of the line. Mary Lou, wearing an apron and looking on approvingly, squeezes through the little crowd.</div></pre></td></tr></table></figure>
+<p>看来在<a href="http://www.wikia.com/" target="_blank" rel="external">Fandom</a>的wiki中还少了第一句“My momma, your momma, gonna catch a witch”，不过这是否就是完整版的儿歌，它是否还有原始出处呢？我还没找到，暂时未发现有这首儿歌的短视频。</p>
+<p>我的搜索任务暂时完成了，小乐同学表示很满意。她问我：“你是怎么搜索的？”</p>
+<p>于是就有了这篇文章，你学会了吗？有疑惑，有疑惑，多练练就是。</p>
+<p>本文涉及的网站：</p>
+<ul>
+<li><a href="https://movie.douban.com/" target="_blank" rel="external">豆瓣电影</a></li>
+<li><a href="http://www.imdb.com/" target="_blank" rel="external">IMDB</a></li>
+<li><a href="http://www.themoviespoiler.com/" target="_blank" rel="external">The Movie Spoiler</a></li>
+<li><a href="http://www.wikia.com/" target="_blank" rel="external">Fandom</a></li>
+<li><a href="http://www.novels2u.com/" target="_blank" rel="external">Best Romance Novels Online</a></li>
+<li><a href="https://www.google.com/" target="_blank" rel="external">Google</a></li>
+<li><a href="https://twitter.com/" target="_blank" rel="external">Twitter</a>- <a href="https://www.google.com/" target="_blank" rel="external">Google</a></li>
+<li><a href="https://twitter.com/" target="_blank" rel="external">Twitter</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上周末全家看了《神奇动物在哪里》，小乐对电影中小女孩哼的一首有关如何用种种手段杀死女巫的儿歌非常感兴趣，在自己自己搜索无获后，她问我：“爸爸，你能不能找到那首杀死女巫的儿歌？”。&lt;br&gt;“可以啊，我找找看。”&lt;/p&gt;
+&lt;p&gt;在“你为什么轻信鲍勃迪伦拒奖的假消息”中提到“搜索
+    
+    </summary>
+    
+    
+      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
+    
+      <category term="教育" scheme="http://xbin999.com/tags/%E6%95%99%E8%82%B2/"/>
+    
+      <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="电影" scheme="http://xbin999.com/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>Kids who can but won&#39;t</title>
@@ -454,9 +509,9 @@
     
       <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
     
-      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
-    
       <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
     
       <category term="书单" scheme="http://xbin999.com/tags/%E4%B9%A6%E5%8D%95/"/>
     
@@ -559,9 +614,9 @@
     
       <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
     
-      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
-    
       <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
     
       <category term="书单" scheme="http://xbin999.com/tags/%E4%B9%A6%E5%8D%95/"/>
     
@@ -1003,9 +1058,9 @@
     
       <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
     
-      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
-    
       <category term="小乐" scheme="http://xbin999.com/tags/%E5%B0%8F%E4%B9%90/"/>
+    
+      <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
     
       <category term="书单" scheme="http://xbin999.com/tags/%E4%B9%A6%E5%8D%95/"/>
     
@@ -1052,48 +1107,6 @@
       <category term="生活" scheme="http://xbin999.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>当你身在洞里，你不可能看到真相</title>
-    <link href="http://xbin999.com/2016/03/28/dang-ni-shen-zai-dong-li-ni-bu-ke-neng-kan-dao-zhen-xiang/"/>
-    <id>http://xbin999.com/2016/03/28/dang-ni-shen-zai-dong-li-ni-bu-ke-neng-kan-dao-zhen-xiang/</id>
-    <published>2016-03-28T08:23:30.000Z</published>
-    <updated>2016-05-18T11:36:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>两个礼拜前在朋友圈里我发了个路由器的照片，配文说“折腾一天的结果是把它变成了砖”。当时干的事情是先刷了DDWRT，然后又刷OpenWRT，结果路由器就不能用了。后来我找万能的某宝，直接买了一个刷好OpenWRT的路由器，想配置配置软件总是方便，结果这俩礼拜的周末都在折腾路由器了，但到现在还是没完全搞定，一方面感叹自己这IT是白干了，另一方面也为牛X的网络环境而折服。</p>
-<p>那咋就这么难折腾呢，周末我给乐妈做了一段尽量通俗的解释。</p>
-<p>上网干的事情就是根据名字知道地址（DNS服务），然后再找到一条通往该地址路。先说查地址服务，比如英国首相府（相当于谷歌），在唐宁街10号（一串IP地址），前者是名字，后者是地址，我要邮局帮我送封信给英国首相，邮局得知道它的地址。由于每天都会拆楼盖楼，名字和地址的对应关系时刻在变，各邮局之间信息需要同步，我们肯定会选就近的邮局提供服务，只可惜邮局提供的可能是假地址（DNS污染）；那如果邮局不可信，我换个英国当地可信的邮局行不行，当然行，但是还可能碰到个国内的骗子邮局（DNS劫持）；或者再给你增加打电话咨询真实邮局的难度，10次断9次（丢包），慢慢拖死你。等你千辛万苦终于查到地址后，信总算寄出去了，你又惊奇地发现此路不通，比如说两岸通邮前的信都需要经香港转。所以这时你还得找个在香港的亲戚，建立一个私人通道（VPN），先把信寄给他，然后再让他帮你把信转寄到英国。还有等到私人通道建立后，不幸的是你发现所有寄出的信都先到香港去兜了一大圈，包括你同城的信件，所以还得想办法自己在做个分拣工作，什么信从香港走，什么信不走香港。</p>
-<p>在这个过程中，你需要斗智斗勇，层层剥离其中的陷阱。要在以前乐妈肯定会觉得折腾，搞这玩意干啥，上网不是好好的嘛！微信、QQ、百度（由于其无耻精神渐渐被淘汰）、淘宝、亚马逊、优酷，该有的也都有，facebook, twitter, youtube传说中的网站她本来就没听说过。但实际上作为一个普通的家长，在你认真地陪孩子学习中，由于网络的便利会给你带来更广阔的视野，更优秀的教育服务。即使抛开Google搜索，维基百科不说，就拿孩子学英语来说：<br>Raz-kids有很好的分级阅读教材，但国内访问很慢，经常发现QQ群中父母们交流如何翻墙；<br>Vocabulary.com 一个很好用的英英翻译，提供原汁原味的例句，整理的单词列表还可以做选择题测试，也是时用时不能用；<br>Voicetube 台湾的一个英语学习视频网站，在<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDQzODAyMA==&amp;mid=207638354&amp;idx=1&amp;sn=f30c02f379a59702402151c4dec4a1a8&amp;scene=21#wechat_redirect" target="_blank" rel="external">斯莱特林英语学习</a>时，我较多选择了其中的内容，但它的视频都来自Youtube，常规是根本看不到的。</p>
-<p>于是一个个普通的家庭干起了“翻墙”的勾当，学起了更复杂的IT知识，而他们的本意只是希望能快速地访问一个英语应用。网络创造了便利，而我们却神奇地发现前方有一道不可逾越的墙。</p>
-<p>当然还是很多朋友会说：“折腾它干什么呢？即使不翻墙不也是好好的嘛。”</p>
-<p>正好晚上给小乐念《极简欧洲史》，说到了柏拉图的经典比喻，我把给小乐念的一部分摘了过来。</p>
-<blockquote>
-<p>直到今天，柏拉图依然是一个哲学核心问题的起点：我们的感官经验是不是真能引导我们走向真实？柏拉图相信，我们在世间的所见所感，只是存在于另一个崇高灵魂界中的完美形体的影子。世界上有普通的桌子，但有一张完美形体的桌子一直存在于某个别处。即使是个抽象的观念，例如正义和良善，也是以完美的形体存在于某个他处。人类便是来自那个灵魂界，必须透过心智和精神的锻炼，才能重新发现这个完美。</p>
-</blockquote>
-<p>很抽象哦，没关系，柏拉图还有一个生动有力的比喻，这个才是重点。</p>
-<blockquote>
-<p>想象一群人，被囚禁于一个幽暗洞穴之中，而且全部被锁链绑住手脚。他们背对高墙镇日坐着，看不到背后，只能面对另一面的穴壁。洞穴外头有一条路，路的尽头有一个大火炬，路上若有其他人、动物和车辆经过，火炬就会将这些东西的影子投射在他们面对的穴壁上。这些穴居人看到的唯一事物就是这些影像；他们替阴影命名、品头论足；针对它们推理辩论；他们相信，这些影子是世间真实的存在。 后来，其中一人意外被解开锁链，从山洞走到露天处。一开始，强烈的光线照得他睁不开眼，等他看到阳光下五彩缤纷、美好的立体世界，不禁又惊又疑。可是，他说，在山洞里，我们以为…… 没错，当你身在洞里，你不可能看到真相。</p>
-</blockquote>
-<p>“没错，当你身在洞里，你不可能看到真相。”</p>
-<p>还记得许巍的《蓝莲花》吗？“没有什么能够阻挡，你对自由的向往。”人总是向往自由的。我们受的教育不是说，老一辈无产阶级革命家抛头颅，洒热血，所要争取的不就是这一点嘛。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;两个礼拜前在朋友圈里我发了个路由器的照片，配文说“折腾一天的结果是把它变成了砖”。当时干的事情是先刷了DDWRT，然后又刷OpenWRT，结果路由器就不能用了。后来我找万能的某宝，直接买了一个刷好OpenWRT的路由器，想配置配置软件总是方便，结果这俩礼拜的周末都在折腾路由
-    
-    </summary>
-    
-      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
-    
-    
-      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
-    
-      <category term="翻墙" scheme="http://xbin999.com/tags/%E7%BF%BB%E5%A2%99/"/>
-    
-      <category term="GFW" scheme="http://xbin999.com/tags/GFW/"/>
     
   </entry>
   
