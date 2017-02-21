@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xbin999.com/"/>
-  <updated>2017-02-19T08:38:47.000Z</updated>
+  <updated>2017-02-21T05:10:01.000Z</updated>
   <id>http://xbin999.com/</id>
   
   <author>
@@ -14,6 +14,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写作时如何有效处理图片</title>
+    <link href="http://xbin999.com/2017/02/21/%E5%86%99%E4%BD%9C%E6%97%B6%E5%A6%82%E4%BD%95%E6%9C%89%E6%95%88%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/"/>
+    <id>http://xbin999.com/2017/02/21/写作时如何有效处理图片/</id>
+    <published>2017-02-21T05:09:43.000Z</published>
+    <updated>2017-02-21T05:10:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>写公众号和博客的时候，处理图片是比较麻烦的事情。通常的步骤是：</p>
+<ol>
+<li>找图片或截图。</li>
+<li>调整合适的大小。</li>
+<li>图片上传。</li>
+<li>在文章中插入图片。</li>
+</ol>
+<p>通常处理几张图片，没有5、10分钟是搞不定的。今天我想说说自己的经验，如何提升自己的效率的。（本文所说的内容适用于mac，在windows/linux并不完全适用，但可以找到类似替代方案）</p>
+<p><strong>截图</strong>我的用的是腾讯的“<a href="https://itunes.apple.com/cn/app/jie-tu-jietu/id1059334054" target="_blank" rel="external">截图</a>”，<strong>找图片</strong>，<a href="https://www.flickr.com/" target="_blank" rel="external">Flickr</a>, <a href="">pixbay</a>, <a href="https://foter.com" target="_blank" rel="external">foter</a>，都会提供免费Creative Common授权的图片，配合<a href="https://www.alfredapp.com/" target="_blank" rel="external">alfred</a>自定义搜索，还是挺方便的。</p>
+<p><img src="http://7b1ha1.com1.z0.glb.clouddn.com/images/Jietu20170221-101118.jpg" alt=""></p>
+<p><strong>调整图片为合适的大小</strong>，只需要用Automator写一段workflow脚本即可。简单思路就是把图像文件复制到指定目录，可以加上处理后的固定格式（比如说前缀、后缀、日期等），然后统一转换为JPG格式，调整成固定大小。</p>
+<p> <img src="http://7b1ha1.com1.z0.glb.clouddn.com/images/Jietu20170221-092654.jpg" alt=""></p>
+<p>编写完成后，安装，这样就在Finder中，右键选中的图像文件，一键即可把所有图片文件调整到固定宽度，并复制到指定图像目录。</p>
+<p>微信公众号是自己独立封闭的体系，不能引用外部的图片链接。只能在公众号提供的编辑器进行上传，并在文章中插入图片。不过很多时候，有时写的随笔并没有在公众号上发布，而是在博客“<a href="http://xbin999.com/">杨先生村民</a>”上发布，比如和技术相关的。但是面对大量的上传引用操作，尤其把发过的公众号文字再重新去上传博客，文字复制粘贴还好，但图片处理起来真是让人吐血，心情都没了。我想能把精力集中在写文字上，而把大量简单琐碎操作给精简掉，所以陆续整理了一些小工具。</p>
+<p>我的博客是基于<a href="https://hexo.com" target="_blank" rel="external">Hexo</a>的，一个支持<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown</a>格式的静态博客，简单说你可以在自己的电脑上用<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown</a>写作。我选择的软件是免费的<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>和<a href="https://typora.io" target="_blank" rel="external">Typora</a>，<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>方便组织目录中的文件，还可以基于<a href="https://simplenote.com" target="_blank" rel="external">simplenote</a>和手机同步，同时把<a href="https://typora.io" target="_blank" rel="external">Typora</a>设置为外部编辑器，而<a href="https://typora.io" target="_blank" rel="external">Typora</a>则提供边编辑边预览的效果。在需要专注地单独写一篇文字时可以使用<a href="https://typora.io" target="_blank" rel="external">Typora</a>，比如我现在的书写。</p>
+<p>在<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown</a>中引用图片是以文字形式来书写，![]之后再在()中加入图片的外部链接即可，这时你需要有一个图床，就是放你上传的图片的地方。<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云</a>提供了很好的服务，有免费空间，最棒的是提供API实现图片的上传。所以接下来，我写了一个脚本实现把图片上传到<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云</a>，同样再用Automator写一段脚本，使得在Finder中选择图像文件后，点击右键上传到七牛云。这还不够，如果纯粹是上传到七牛云，你还是需要一个个去网站上拷贝出图片的地址，很烦人。我再在脚本中替换上传日志，让它直接输出Markdown格式的图片地址，并用pbcopy命令复制到剪贴板。</p>
+<p> <img src="http://7b1ha1.com1.z0.glb.clouddn.com/images/Jietu20170221-102149.jpg" alt=""></p>
+<p>这段话的简单含义就是我<strong>选择了一堆文件，一键上传到七牛云后，直接在编辑器中“粘贴”就可以得到上传图片的Markdown格式的地址了</strong>。像下面的文字不需要我一行行，一个个字符去输入。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">![](http://7b1ha1.com1.z0.glb.clouddn.com/images/Jietu20170221-092654.jpg)</div><div class="line">![](http://7b1ha1.com1.z0.glb.clouddn.com/images/Jietu20170221-101118.jpg)</div><div class="line">![](http://7b1ha1.com1.z0.glb.clouddn.com/images/Jietu20170221-102149.jpg)</div></pre></td></tr></table></figure>
+<p>写这段文字的时候，心情是何等畅快。文章写好后，接下来是用<a href="https://hexo.com" target="_blank" rel="external">Hexo</a>的命令完成静态站点的编译和发布。<a href="https://hexo.com" target="_blank" rel="external">Hexo</a>写文章一是需要有固定的格式，比如标题、写作日期、tag等等，写格式是让人厌烦的；二是发布也要敲命令，虽然是一行”hexo generate —deploy”即可。但即使只敲一行命令，还是烦，因为你总要记挂着去敲，敲了之后还想着看是不是正常运行完了。写完了，它自己直接发布到博客上不就完了吗？再写一个定时后台运行守护进程，Mac上不建议采用cron，改使用launchctl来提供。于是我新写个后台脚本自动给文章加上Hexo的固定格式，每天定时运行，看到有新的文章就自动发布到博客“<a href="http://xbin999.com/">杨先生村民</a>”上。</p>
+<p><strong>世界太平了！！！</strong></p>
+<p>对了，还有一件事也可以提一下。和电影相关主题的文章，常常会选择一些带有台词的电影截图，同时希望把连续的台词拼接在一起，比如像它。</p>
+<p> <img src="http://7b1ha1.com1.z0.glb.clouddn.com/images/xbin_IMG_1116.PNG.jpg" alt=""></p>
+<p>如果用画图软件，需要新增、调整图片大小留出空位、再打开剪切粘贴，再打开剪切粘贴，再剪切粘贴……还不一定切的好，对的准，这么机械的工作当然又需要一个脚本。</p>
+<p><strong>让写字变得更专注，更有趣些吧。</strong></p>
+<p>本文涉及的脚本都放在<a href="https://github.com/xbin999/utils" target="_blank" rel="external">github: xbin999/utils</a>上。如果有兴趣用，需要点开发基础，有些配置信息自己改改，欢迎提建议。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;写公众号和博客的时候，处理图片是比较麻烦的事情。通常的步骤是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;找图片或截图。&lt;/li&gt;
+&lt;li&gt;调整合适的大小。&lt;/li&gt;
+&lt;li&gt;图片上传。&lt;/li&gt;
+&lt;li&gt;在文章中插入图片。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;通常处理几张图片，没有5、10分钟是
+    
+    </summary>
+    
+    
+      <category term="IT" scheme="http://xbin999.com/tags/IT/"/>
+    
+      <category term="tools" scheme="http://xbin999.com/tags/tools/"/>
+    
+      <category term="blog" scheme="http://xbin999.com/tags/blog/"/>
+    
+      <category term="效率" scheme="http://xbin999.com/tags/%E6%95%88%E7%8E%87/"/>
+    
+  </entry>
   
   <entry>
     <title>教小乐搜索杀死女巫的歌</title>
@@ -1063,50 +1122,6 @@
       <category term="阅读" scheme="http://xbin999.com/tags/%E9%98%85%E8%AF%BB/"/>
     
       <category term="书单" scheme="http://xbin999.com/tags/%E4%B9%A6%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>清明，忆我的外婆</title>
-    <link href="http://xbin999.com/2016/03/31/qing-ming-yi-wo-de-wai-po/"/>
-    <id>http://xbin999.com/2016/03/31/qing-ming-yi-wo-de-wai-po/</id>
-    <published>2016-03-31T08:23:44.000Z</published>
-    <updated>2016-05-18T11:38:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://xbin999.qiniudn.com/images/wp2.png" alt=""></p>
-<p>题图拍于民国37年，照片的另外半张文中有说。</p>
-<p>妈妈来杭州检查身体，说起了家中的事，说了不少，印象中最深的是外婆和妈妈的事。转眼就是清明，外婆故去正是在清明后不久，忽然想起外婆这一走都已十年。</p>
-<p>十年前我的记录：</p>
-<blockquote>
-<p>2006年4月4日 外婆的身体最近一直都不是很好，下午和maggie在说的时候，心里觉得好不踏实。我得回去看一下。</p>
-<p>2006年4月13日 一直以来都很自豪，外公、外婆、爷爷和奶奶四老都还健在，都是80多岁的高龄了，身体也都不错。<br>外婆的身体去年不是很好，但春节回老家的时候看起来还是挺好，没想节后病症复发，来的是那样的快和突然。周末赶回家时，外婆已经处于昏迷之中，偶尔的叫唤才能微微睁一下眼睛。病中的外婆完全变了一个样子，瘦地让人疼痛，让人无法相信。<br>外婆的一生应该是很典型的中国传统妇女那一种，一辈子就是为了丈夫和儿孙在操劳，除了生病可能就从来没有休息过。春节的时候也是刚出院没多久，觉得身体好了点，就要自己去买菜和烧饭，也不愿雇一个保姆。<br>在离开老家之后的次日（周二）临晨，外婆就走了，没有疼痛。此时的我希望是有天国，天国的外婆应该不会那么劳累了。</p>
-</blockquote>
-<p>十年过去了，我把妈妈讲的和外婆的碎碎末末的事记下来，送给我的外婆。</p>
-<p>妈妈48年初出生，当时外公在雷达研究所，国民党员，受他的舅公（据说算国内无线电的奠基人，只不过我无法确认）之邀，打算前去新疆，东西都准备好了。当时新疆物资缺乏，外公给刚出生的妈妈准备婴儿用品，按打计算，都是准备一式12份。不过最终终没有成行，不然一家或许都到了美国，当然也就没有我了。</p>
-<p>解放时外公所在单位起义投诚，保护了当时的无线电设备。51年小姨出生，之后三反五反运动开始，外公由于原先解放前学习所在的无线电学校属于军统下属学校，他们那批学员从起义人员一下变成了反革命人员，52年被安排去苏北农场劳动改造；外婆则带着四岁的妈妈和一岁的小姨回了浦江老家。回到老家，全家还是地主儿女的身份，所幸太外公（妈妈的爷爷）属于开明地主。</p>
-<p>外公时有信来，只是外婆并不识字。每次收到外公的信，都是太外公他们拆开看，看完信后并不和外婆讲，家中规矩大，外婆也不敢问。一直到妈妈上学，认识了几个字，外婆说：“你去爷爷那里，把信拿来念给我听听。”妈妈就小跑找爷爷拿了信，其实并不认识多少字，外公的字写得挺不错但潦草的很，更是难懂。一封信基本上是妈妈认一部分，外婆摇一摇猜一部分其中的意思。再慢慢地外婆让妈妈写回信，并口述说：“让你爸别把字写得太潦草，这样我们能认得更清楚些。”或许正是有这样的经历，在那个年代外婆一定要求两个女儿上学，她并不指望孩子上学能有多出息，能认信、写信，不用受自己这样的苦就好。即使旁人都说女儿是嫁出去的，读书没什么用，但外婆依然很坚决，有一种朴素的儿女都一样的价值观。</p>
-<p>太外公是地主，外公做过国民党，免不了被抄家。家中让人担惊受怕的东西能扔早扔了，证据能毁的也都毁了。外婆的照片只剩下一半（题图），因为另一半是穿着国民党军服的外公；家中传承的不锈钢勺是当年美国大兵装备，我留了一个，只是上面的印字全给磨去了。<br><img src="http://xbin999.qiniudn.com/images/wp1.png" alt=""></p>
-<p>当然有值钱的实在舍不得扔，外婆把一些金银首饰偷偷藏在小孩裤子口袋，用针线缝好，再把裤子和破布卷在一起，锁在柜子中，只告诉了妈妈。一次，外婆去富阳农场打工，帮别人做饭。半夜突然来人抄家，家里只有妈妈和小姨，乡里来的人让妈妈拿钥匙打开小柜，把里面东西扔地到处都是，还放话说“XXX的大媳妇家里要是没有金器的话，是不可能的。”当时妈妈尚不到十岁，在旁边一句话不敢说，等抄家的人都走了，妈妈再默默地把东西收起来。等外婆在外地知晓后，连夜往回赶，到郑家坞车站已经没了车，正是夏天，就决定和同伴走30多里路回家，中途在黄宅吃了个瓜，得了急性肠胃炎，第二天早上又吐又泻，痛地在床上从这一头爬到那一头，不停对妈妈说：“看来这次我是活不过去了”。小姨小妈妈三岁，印象还没那么深刻。偷藏下来的金器在困难时期换了几十块钱，算是帮家里过了一个难关。</p>
-<p>外婆有个妹妹，我应该叫姨婆来着，住在邻村。姨公姨婆有时闹别扭，外婆会去劝劝，白天没时间就晚上去，那时的路都是乡村小路，天又黑，路边不是农田就是坟墓，每到这时外婆会叫上妈妈：“跟妈妈一起去一趟”。“好。”母女俩就这样相伴，前一脚后一脚，一大一小地走去，虽然不远，但俩人胆子都小，往往是一身冷汗。</p>
-<p>56年外公刑满释放，没回浦江，成了农场职工，政策允许外婆去农场，太外公也希望一家能团聚。于是到59年，外婆一个人带着两个女儿去苏北。外婆不识字，也不会说普通话，一路上，大的照看小的，小的负责问路，给外公打电话，那时妈妈也就12岁，小姨9岁。外婆去农场后，总算一家团聚，之后又有了我的两个舅舅。</p>
-<p>妈妈和小姨在苏北呆了十年，大部分时间都在农场，68年知识青年下乡去农村插队，那一年的农村生活或许影响了妈妈，在后来回浦江后才会选择了我爸这个农民，也才有了我。当时说到是否要回浦江，外婆说：“你们俩姐妹要是回去呢，我们还有盼头，不然这一辈子可能就都在外地了。”也是，只不过没想到等外公平反，外公、外婆和两个舅舅再回到浦江全家团聚，又已到了84年。我也已经10岁多，而在此之前我只在7岁探亲时见过他们一次。</p>
-<p>外婆故去时虚岁89，不到三年，外公也离世，虚岁93，重又相聚。俩人身份不同，文化不同，在一起风风雨雨七十四年，记得外公平反时，所里的领导说：“你能有今天，都是有一个好老婆。儿女成双，那么幸福的一个家庭，这都是你老婆的功劳。”</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://xbin999.qiniudn.com/images/wp2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;题图拍于民国37年，照片的另外半张文中有说。&lt;/p&gt;
-&lt;p&gt;妈妈来杭州检查身体，说起了家中的事，说了不少，印象中最深的是外婆和妈妈的事。转
-    
-    </summary>
-    
-      <category term="小乐" scheme="http://xbin999.com/categories/%E5%B0%8F%E4%B9%90/"/>
-    
-    
-      <category term="生活" scheme="http://xbin999.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="fuyunv" scheme="http://xbin999.com/tags/fuyunv/"/>
     
   </entry>
   
