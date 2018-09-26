@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/2005/page/12/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,7 +104,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/07/女儿夸我真聪明/" data-id="cj133pj3201fc00c2jmnev1zl" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/07/女儿夸我真聪明/" data-id="cjmiwvbex01di04c25jh226ey" class="article-share-link">Share</a>
       
 
       
@@ -151,7 +152,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/06/明天体检/" data-id="cj133pje201sd00c2whg9uqc0" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/06/明天体检/" data-id="cjmiwvblo01qb04c2zwzqzgtl" class="article-share-link">Share</a>
       
 
       
@@ -193,13 +194,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!449" class="bvMsg"><div>组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：</div><br><div>   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;<br>   execute immediate strSql;</div><br><div>初看觉得很正常，但问题确实是在这里。正常情况下iSpecialBal都应该为非负数，一切ok。结果由于数据库出了条异常的记录，iSpecialBal为负数，比如-1,重组后的sql我们来看一下：</div><br><div>update table set balance=balance<font color="#ff0000"><em> –1 where id=1</em></font></div><br><div>由于负数的原因，导致减法运算变成了&quot;–&quot;，成了oracle中sql的注释。结果原先的按id做update变成了所有记录的update。</div><br><div>唉，看起来是一个小问题。但想到的恐怕都不多啊<img src="/rte/emoticons/smile_confused.gif" alt=""></div><br><div>导致的结果是加班不算，还要做一大堆的数据恢复，而且想要“再回到从前”也很困难了。</div><br><div>引以为戒！</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!449" class="bvMsg"><div>组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：</div><br><div>   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;<br>   execute immediate strSql;</div><br><div>初看觉得很正常，但问题确实是在这里。正常情况下iSpecialBal都应该为非负数，一切ok。结果由于数据库出了条异常的记录，iSpecialBal为负数，比如-1,重组后的sql我们来看一下：</div><br><div>update table set balance=balance<font color="#ff0000">_ –1 where id=1_</font></div><br><div>由于负数的原因，导致减法运算变成了&quot;–&quot;，成了oracle中sql的注释。结果原先的按id做update变成了所有记录的update。</div><br><div>唉，看起来是一个小问题。但想到的恐怕都不多啊<img src="/rte/emoticons/smile_confused.gif" alt=""></div><br><div>导致的结果是加班不算，还要做一大堆的数据恢复，而且想要“再回到从前”也很困难了。</div><br><div>引以为戒！</div></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/06/一个sql的小问题/" data-id="cj133pipj00uk00c2gwho6n26" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/06/一个sql的小问题/" data-id="cjmiwvb5y00sr04c2ovhf7pl0" class="article-share-link">Share</a>
       
 
       
@@ -241,12 +242,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!446" class="bvMsg"><div>这几天到处看到和听到的都是新奥尔良的飓风，搞不明白飓风和台风有什么差别。学习了一下，原来台风和飓风其实是一样的，都是12级以上的热带气旋，只不过发生在不同的地方称呼不同而已。</div><br><div>据说台风一词可能来源于中国，看一下金山词霸上typhoon的字源：Probably alteration ofChinese (Cantonese) toi fung。</div><br><div>这里是wikipedia给出的<a href="http://zh.wikipedia.org/wiki/%E9%A2%B1%E9%A2%A8" target="_blank" rel="external">台风</a>解释：</div><br><div>台风是热带气旋的一种。气象学上，台风专指北太平洋西部(国际日期线以西，包括南中国海)上发生，中心持续风速达到12级及以上(即每秒32.6米以上)的热带气旋。至于在大西洋或北太平洋东部发生，达到同样强度的热带气旋，称为飓风。习惯上，台风亦被用来统称所有在西北太平洋发生的热带气旋。</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!446" class="bvMsg"><div>这几天到处看到和听到的都是新奥尔良的飓风，搞不明白飓风和台风有什么差别。学习了一下，原来台风和飓风其实是一样的，都是12级以上的热带气旋，只不过发生在不同的地方称呼不同而已。</div><br><div>据说台风一词可能来源于中国，看一下金山词霸上typhoon的字源：Probably alteration ofChinese (Cantonese) toi fung。</div><br><div>这里是wikipedia给出的<a href="http://zh.wikipedia.org/wiki/%E9%A2%B1%E9%A2%A8" target="_blank" rel="noopener">台风</a>解释：</div><br><div>台风是热带气旋的一种。气象学上，台风专指北太平洋西部(国际日期线以西，包括南中国海)上发生，中心持续风速达到12级及以上(即每秒32.6米以上)的热带气旋。至于在大西洋或北太平洋东部发生，达到同样强度的热带气旋，称为飓风。习惯上，台风亦被用来统称所有在西北太平洋发生的热带气旋。</div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/05/台风和飓风的区别/" data-id="cj133piz601a200c2i24cygfu" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/05/台风和飓风的区别/" data-id="cjmiwvbcf018804c26t1g0hcs" class="article-share-link">Share</a>
       
 
       
@@ -294,7 +295,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/03/野孩子/" data-id="cj133pk0e02cy00c2yjwzqrbj" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/03/野孩子/" data-id="cjmiwvbyp02at04c27ga1z8gn" class="article-share-link">Share</a>
       
 
       
@@ -341,7 +342,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/02/甲方和乙方的差别/" data-id="cj133pjku01yv00c2dao6do9k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/02/甲方和乙方的差别/" data-id="cjmiwvbpo01wr04c209lcud1o" class="article-share-link">Share</a>
       
 
       
@@ -410,16 +411,16 @@
 <p><div>而在我们的应用中最好的解决方法是第三种：大家使用同一份shared library。</div></p>
 <p><div> </div></p>
 <p><div>参考：</div></p>
-<p><div><a href="http://support.businessobjects.com/library/kbase/articles/c2010558.asp" target="_blank" rel="external">Holos and HP memory management issues</a></div></p>
-<p><div><a href="http://docs.hp.com/hpux/onlinedocs/os/memwn1_4.pdf" target="_blank" rel="external">Memory window white paper</a></div></p>
-<p><div><a href="http://web.gat.com/comp/analysis/mdsplus/textfilebusy.html" target="_blank" rel="external">Shared Libraries on HP-UX</a></div></p>
-<p><div>《UNIX环境高级编程》</div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV7oExKEhqAyVYHH0FFZz4Shoo0gX_9lb4VP8To6oj7ixw" target="_blank" rel="external"><img src="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV789eTribnzOcyvidszP0tu9kMHoei6-CNbrGiVCwEpT4" alt=""></a></td></tr></table></p>
+<p><div><a href="http://support.businessobjects.com/library/kbase/articles/c2010558.asp" target="_blank" rel="noopener">Holos and HP memory management issues</a></div></p>
+<p><div><a href="http://docs.hp.com/hpux/onlinedocs/os/memwn1_4.pdf" target="_blank" rel="noopener">Memory window white paper</a></div></p>
+<p><div><a href="http://web.gat.com/comp/analysis/mdsplus/textfilebusy.html" target="_blank" rel="noopener">Shared Libraries on HP-UX</a></div></p>
+<p><div>《UNIX环境高级编程》</div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV7oExKEhqAyVYHH0FFZz4Shoo0gX_9lb4VP8To6oj7ixw" target="_blank" rel="noopener"><img src="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV789eTribnzOcyvidszP0tu9kMHoei6-CNbrGiVCwEpT4" alt=""></a></td></tr></table></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/30/not-enough-space和hp-ux内存管理/" data-id="cj133piix00e600c28o3w9k1a" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/30/not-enough-space和hp-ux内存管理/" data-id="cjmiwvb1200da04c2ubdujpa7" class="article-share-link">Share</a>
       
 
       
@@ -466,7 +467,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/29/想唱就唱/" data-id="cj133pj8y01ml00c2midhtlaq" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/29/想唱就唱/" data-id="cjmiwvbik01kn04c2vvaofen4" class="article-share-link">Share</a>
       
 
       
@@ -508,12 +509,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!421" class="bvMsg"><a href="http://it.sohu.com/20050825/n240296433.shtml" target="_blank" rel="external">中移动正式获3G用159号段 3G号段争夺战开打</a><br><div>前两天还在讨论3G号段的问题，据说是15打头，现在看到了下文。可怜我们都已经把15给内部使用了:-(。看来大家的想法都是一样的，14实在是太难听。</div><br><div>不过这种想法实在也是不好，人为地浪费了很多资源，好好的一座大楼就没有了第四、十三、十四层，何必呢？</div><br><div> </div><br><div>P.S. MSN SPACE的标题不允许使用“移动”两个字，不知哪里犯禁了？</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!421" class="bvMsg"><a href="http://it.sohu.com/20050825/n240296433.shtml" target="_blank" rel="noopener">中移动正式获3G用159号段 3G号段争夺战开打</a><br><div>前两天还在讨论3G号段的问题，据说是15打头，现在看到了下文。可怜我们都已经把15给内部使用了:-(。看来大家的想法都是一样的，14实在是太难听。</div><br><div>不过这种想法实在也是不好，人为地浪费了很多资源，好好的一座大楼就没有了第四、十三、十四层，何必呢？</div><br><div> </div><br><div>P.S. MSN SPACE的标题不允许使用“移动”两个字，不知哪里犯禁了？</div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/29/移－动3g采用159号段/" data-id="cj133pjn0021d00c28t0em2lu" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/29/移－动3g采用159号段/" data-id="cjmiwvbr901z904c2vupj7hl0" class="article-share-link">Share</a>
       
 
       
@@ -561,7 +562,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/28/乐乐近日语录/" data-id="cj133pita010y00c2wr9dvv04" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/28/乐乐近日语录/" data-id="cjmiwvb8h00z804c299hta6ta" class="article-share-link">Share</a>
       
 
       
@@ -678,7 +679,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/mac/page/2/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,20 +102,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>上次说过用brew安装应用的时候碰上“<a href="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host-%e7%9a%84%e9%97%ae%e9%a2%98/">curl: (7) couldn’t connect to host 的问题</a>”，去掉了代理访问虽然正常了，但由于很多应用还是托管在<a href="http://sourceforge.net/" target="_blank" rel="external">sourceforge</a>上，而<a href="http://sourceforge.net/" target="_blank" rel="external">sourceforge</a>由于被墙的缘故，所以使用brew安装的时候还是会报错。</p>
-<p>象我安装<a href="http://www.imagemagick.org/script/index.php" target="_blank" rel="external">ImageMagick</a>的时候，就出现：</p>
+        <p>上次说过用brew安装应用的时候碰上“<a href="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host-%e7%9a%84%e9%97%ae%e9%a2%98/">curl: (7) couldn’t connect to host 的问题</a>”，去掉了代理访问虽然正常了，但由于很多应用还是托管在<a href="http://sourceforge.net/" target="_blank" rel="noopener">sourceforge</a>上，而<a href="http://sourceforge.net/" target="_blank" rel="noopener">sourceforge</a>由于被墙的缘故，所以使用brew安装的时候还是会报错。</p>
+<p>象我安装<a href="http://www.imagemagick.org/script/index.php" target="_blank" rel="noopener">ImageMagick</a>的时候，就出现：</p>
 <p><pre><code>$ brew install ImageMagick</code></pre></p>
 <p>Warning: Your Xcode (4.4.1) is outdated</p>
 <p>Please install Xcode 4.6.</p>
-<p>==&gt; Downloading <a href="https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-" target="_blank" rel="external">https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-</a></p>
+<p>==&gt; Downloading <a href="https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-" target="_blank" rel="noopener">https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-</a></p>
 <p>curl: (56) Recv failure: Connection reset by peer</p>
 <p>Warning: Bottle installation failed: building from source.</p>
-<p>==&gt; Downloading <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10" target="_blank" rel="external">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10</a></p>
+<p>==&gt; Downloading <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10" target="_blank" rel="noopener">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10</a></p>
 <p>curl: (56) Recv failure: Connection reset by peer</p>
-<p>Error: Download failed: <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz" target="_blank" rel="external">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz</a><br>如何解决这个问题呢？有多种方法：</p>
+<p>Error: Download failed: <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz" target="_blank" rel="noopener">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz</a><br>如何解决这个问题呢？有多种方法：</p>
 <ol>
-<li>一是<a href="http://leegorous.net/blog/2012/08/10/how-to-skip-download-in-brew-install/" target="_blank" rel="external">跳过下载步骤，事先下载程序包，放到/Library/Caches/Homebrew/ 目录中</a>，就可以继续。不过讨厌的是你不知道需要依赖多少个包的时候，这一个个下实在是浪费功夫。</li>
-<li><a href="http://community.itbbs.cn/thread/21327/" target="_blank" rel="external">修改下载目标源，直接把sf.net的地址给替换掉</a>，一样麻烦。</li>
+<li>一是<a href="http://leegorous.net/blog/2012/08/10/how-to-skip-download-in-brew-install/" target="_blank" rel="noopener">跳过下载步骤，事先下载程序包，放到/Library/Caches/Homebrew/ 目录中</a>，就可以继续。不过讨厌的是你不知道需要依赖多少个包的时候，这一个个下实在是浪费功夫。</li>
+<li><a href="http://community.itbbs.cn/thread/21327/" target="_blank" rel="noopener">修改下载目标源，直接把sf.net的地址给替换掉</a>，一样麻烦。</li>
 <li>使用代理，让curl通过代理来访问。编辑$HOME/.curlrc文件，增加“–socks5 127.0.0.1:1080”即可（替换成你自己的代理），这样你在brew install安装的时候，相应curl就会通过socks代理访问，从而成功下载完成安装。方便简单，就是你需要自己设置一个socks代理。</li>
 </ol>
 
@@ -122,7 +123,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/01/brew安装程序包如何绕开墙的办法/" data-id="cj133piff003e00c2fis9wrzh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/01/brew安装程序包如何绕开墙的办法/" data-id="cjmiwvaxy003504c28fqrv9f6" class="article-share-link">Share</a>
       
 
       
@@ -168,8 +169,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用<a href="http://www.cloudfoundry.com/" target="_blank" rel="external">Cloud Foundry</a>过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：<a href="http://blog.55minutes.com/2012/01/fixing-a-segmentation-fault-in-ruby-193/" target="_blank" rel="external">Fixing a Segmentation Fault in Ruby 1.9.3</a> ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）</p>
-<p>查问题的时候，发现抱怨MacPorts较多，选择<a href="http://hi.hiing.net/2011/06/use-homebrew-package-management.html" target="_blank" rel="external">用Homebrew替换MacPorts</a>，卸载了MacPorts，安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="external">Homebrew</a>，使用命令：</p>
+        <p>使用<a href="http://www.cloudfoundry.com/" target="_blank" rel="noopener">Cloud Foundry</a>过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：<a href="http://blog.55minutes.com/2012/01/fixing-a-segmentation-fault-in-ruby-193/" target="_blank" rel="noopener">Fixing a Segmentation Fault in Ruby 1.9.3</a> ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）</p>
+<p>查问题的时候，发现抱怨MacPorts较多，选择<a href="http://hi.hiing.net/2011/06/use-homebrew-package-management.html" target="_blank" rel="noopener">用Homebrew替换MacPorts</a>，卸载了MacPorts，安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="noopener">Homebrew</a>，使用命令：</p>
 <p><code>$ brew install wget</code><br>测试出现错误：“curl: (7) couldn’t connect to host”。</p>
 <p><code>$ curl -v http://localhost</code><br>发现开始就去连接本地的socks proxy 服务器，而我又没起该代理服务器。于是连接上代理服务器，再做测试，提示：“Empty reply from server mac”。</p>
 <p>干脆去掉默认代理连接，打开.bash_profile，注释：</p>
@@ -182,7 +183,7 @@ $ curl localhost
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host的问题/" data-id="cj133pify004u00c2rf4dxxm4" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host的问题/" data-id="cjmiwvayd004g04c255a8mskn" class="article-share-link">Share</a>
       
 
       
@@ -234,22 +235,22 @@ $ curl localhost
 <li>用几个#号来标识标题。</li>
 <li>段落的写法，第一个是数字，那就按数字1,2,3排，非数字就是符号排的段落，第一个字符用-, *, + 都可以。</li>
 <li>链接的写法，最简单的就是中括号里写文字，后面小括号里写链接，相同主机内可以使用相对路径。</li>
-<li>对写代码的人来说，还有一个要记住的是用反引号`把代码给括起来。<br>我觉得有这么几招就差不多了，顶多用两个星号搞搞<strong>粗体</strong>、一个星号<em>斜体</em>，详细的使用帮助可以参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">markdown语法说明</a>。</li>
+<li>对写代码的人来说，还有一个要记住的是用反引号`把代码给括起来。<br>我觉得有这么几招就差不多了，顶多用两个星号搞搞<strong>粗体</strong>、一个星号_斜体_，详细的使用帮助可以参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">markdown语法说明</a>。</li>
 </ol>
 <p><strong>“工欲善其事，必先利其器。”</strong></p>
-<p>首先，我得选择一个文本编写工具来替代Stickies，支持markdown，简单一点，能自动保存。<a href="http://mouapp.com/" target="_blank" rel="external">Mou</a> 不够简单，还是觉得<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 不错，简洁得很，同时支持<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 的云服务。（<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 同时提供iphone/ipad下的客户端应用，虽然<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 在国内访问貌似不畅。）</p>
-<p>其次需要能把markdown文件转成html文件，将格式内容进行保存或者发布到博客中（我一般还是会保存在Evernote中，话说Evernote什么时候能支持markdown啊）。<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身能提供预览并保存html文件。另外mac下还有两个不错的工具：</p>
+<p>首先，我得选择一个文本编写工具来替代Stickies，支持markdown，简单一点，能自动保存。<a href="http://mouapp.com/" target="_blank" rel="noopener">Mou</a> 不够简单，还是觉得<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 不错，简洁得很，同时支持<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 的云服务。（<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 同时提供iphone/ipad下的客户端应用，虽然<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 在国内访问貌似不畅。）</p>
+<p>其次需要能把markdown文件转成html文件，将格式内容进行保存或者发布到博客中（我一般还是会保存在Evernote中，话说Evernote什么时候能支持markdown啊）。<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 本身能提供预览并保存html文件。另外mac下还有两个不错的工具：</p>
 <ul>
-<li>一个是chrome扩展<a href="https://github.com/adam-p/markdown-here" target="_blank" rel="external">Markdown here</a> 对于使用gmail的人来说有帮助，先用markdown写邮件，然后使用该插件Markdown Toggle做一次转换即可；</li>
-<li>一个是<a href="http://brettterpstra.com/projects/markdown-service-tools/" target="_blank" rel="external">md</a> ，提供了mac OS下的一堆服务，让你在文本编辑下右键菜单出现一堆常用的markdown服务。<br>最后再推荐<a href="https://github.com/github/gollum" target="_blank" rel="external">gollum</a> ，基于<a href="http://git-scm.com/" target="_blank" rel="external">git</a> 的个人wiki管理工具，和<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 配合（<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身也能提供页面的跳转，够强大吧），一个写markdown文件，一个提供wiki页面和搜索。</li>
+<li>一个是chrome扩展<a href="https://github.com/adam-p/markdown-here" target="_blank" rel="noopener">Markdown here</a> 对于使用gmail的人来说有帮助，先用markdown写邮件，然后使用该插件Markdown Toggle做一次转换即可；</li>
+<li>一个是<a href="http://brettterpstra.com/projects/markdown-service-tools/" target="_blank" rel="noopener">md</a> ，提供了mac OS下的一堆服务，让你在文本编辑下右键菜单出现一堆常用的markdown服务。<br>最后再推荐<a href="https://github.com/github/gollum" target="_blank" rel="noopener">gollum</a> ，基于<a href="http://git-scm.com/" target="_blank" rel="noopener">git</a> 的个人wiki管理工具，和<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 配合（<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 本身也能提供页面的跳转，够强大吧），一个写markdown文件，一个提供wiki页面和搜索。</li>
 </ul>
-<p>先写这么多，等使用时间长了，有心得再做更新，这篇文章就是基于<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 写的。</p>
+<p>先写这么多，等使用时间长了，有心得再做更新，这篇文章就是基于<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 写的。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/02/07/采用markdown来编写文档/" data-id="cj133pjzz02cj00c2hwxagvef" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/02/07/采用markdown来编写文档/" data-id="cjmiwvbyg02ae04c23fbwccpi" class="article-share-link">Share</a>
       
 
       
@@ -310,7 +311,7 @@ $ curl localhost
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cj133pj8k01m100c2cv8occsh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cjmiwvbia01k604c2q3qu96y9" class="article-share-link">Share</a>
       
 
       
@@ -356,14 +357,14 @@ $ curl localhost
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div>刚想换算一下港币，google能直接告诉我们答案，不过一开始输入的查询语句有问题，后来改成“<a href="http://www.google.com.hk/#hl=zh-CN&amp;source=hp&amp;q=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;oq=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=e&amp;gs_upl=1882l6890l0l7169l31l14l0l0l0l0l0l0ll0l0&amp;bav=cf.osb&amp;fp=4c2aaa88d72919d4&amp;biw=1239&amp;bih=670" target="_blank" rel="external">1港币等于多少人民币</a>”才行。</div></p>
+        <p><div>刚想换算一下港币，google能直接告诉我们答案，不过一开始输入的查询语句有问题，后来改成“<a href="http://www.google.com.hk/#hl=zh-CN&amp;source=hp&amp;q=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;oq=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=e&amp;gs_upl=1882l6890l0l7169l31l14l0l0l0l0l0l0ll0l0&amp;bav=cf.osb&amp;fp=4c2aaa88d72919d4&amp;biw=1239&amp;bih=670" target="_blank" rel="noopener">1港币等于多少人民币</a>”才行。</div></p>
 <p><div>不过也正因为此，想去找一个mac下的汇率计算工具，才发现Calculator就提供了这一功能，选择”Convert - Currency”，真是方便。</div><br><img src="https://img.skitch.com/20111016-jsj3eijarcm3yfhr5rh1kcaqy7.jpg" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/10/17/slugs-6/" data-id="cj133pilu00m700c2gv3rw7jx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/10/17/slugs-6/" data-id="cjmiwvb3f00l204c2ljxrds6j" class="article-share-link">Share</a>
       
 
       
@@ -410,20 +411,20 @@ $ curl localhost
     <div class="article-entry" itemprop="articleBody">
       
         <p>mac上提供的mail.app还是很赞的，直接输入邮箱即可连接公司的Exchage Server，基本上用的很习惯。</p>
-<p>然后碰上了第一个问题：我习惯把收件箱中的邮件看完后即转移到archive目录，我希望能有一个快捷键，类似gmail中的y。找了和试了一些方法，在twitter上向<a href="http://twitter.com/xiaolai" target="_blank" rel="external">xiaolai</a>求助了一下，得到了解决方法。Lion直接提供快捷键设置，可以设置全局的，也可以针对某一个app进行设置。</p>
+<p>然后碰上了第一个问题：我习惯把收件箱中的邮件看完后即转移到archive目录，我希望能有一个快捷键，类似gmail中的y。找了和试了一些方法，在twitter上向<a href="http://twitter.com/xiaolai" target="_blank" rel="noopener">xiaolai</a>求助了一下，得到了解决方法。Lion直接提供快捷键设置，可以设置全局的，也可以针对某一个app进行设置。</p>
 <p><img src="https://img.skitch.com/20110924-td8c2m17ncdwrk6uxx343hyqk9.jpg" alt="键盘快捷键设置"></p>
 <p>不过这个方法不是很完美，就是在mail.app的菜单中会有两个相同的&ldquo;archive&rdquo;菜单项，一个是move，一个是copy，经常会引起混乱。所以我始终觉得不是很爽。</p>
 <p>继续使用的过程中，<a href="http://xbin999.com/?p=697">无法接受的问题</a>出现了。居然我近期发送的带附件的邮件同事们在outlook中查看时，附件或图片的后续文本都被当成了ATT类的附件。这个问题很头疼，没找到好的解决方案，所以我只好尝试其他邮件客户端了。</p>
 <p>以前用过的两个选择：Thunderbird，Outlook都试了一下。</p>
 <p>Thunderbird在windows上当初曾用了一年多，也试过一些插件，还是不错的。但很难接受的一点是和office之间的表格、图片的拷贝不支持。（这一点也比不上mail.app）另外总觉得界面风格也有点丑，不习惯。</p>
-<p>Outlook之前打算做过配置的，结果设置账户为Exchange的时候，但悲催地得到了提示<a href="http://support.microsoft.com/kb/2353366/zh-cn" target="_blank" rel="external">outlook 2011不被我们的Exchagen Server支持，需要exchange 2007 sp1</a>。给IT反馈暂时也没用啊，当时就直接放弃了。现在碰到这个问题后，只好重新回过来再看Outlook，设置账户为IMAP方式，这样就能搞定了，快捷键的问题还是象<a href="https://img.skitch.com/20110924-td8c2m17ncdwrk6uxx343hyqk9.jpg" target="_blank" rel="external">上图</a>一样搞定。</p>
+<p>Outlook之前打算做过配置的，结果设置账户为Exchange的时候，但悲催地得到了提示<a href="http://support.microsoft.com/kb/2353366/zh-cn" target="_blank" rel="noopener">outlook 2011不被我们的Exchagen Server支持，需要exchange 2007 sp1</a>。给IT反馈暂时也没用啊，当时就直接放弃了。现在碰到这个问题后，只好重新回过来再看Outlook，设置账户为IMAP方式，这样就能搞定了，快捷键的问题还是象<a href="https://img.skitch.com/20110924-td8c2m17ncdwrk6uxx343hyqk9.jpg" target="_blank" rel="noopener">上图</a>一样搞定。</p>
 <p>有缺憾的问题是非Exchange账户连接方式，需要自己去设置和服务端同步的IMAP文件夹，日历、规则和通讯录就无法直接和服务器同步了。只能要这样了，一是等公司的IT升级；二是等mail.app和outlook之间的联通性了。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/24/mac上邮件客户端的选择/" data-id="cj133piif00cj00c2uc3pbztc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/24/mac上邮件客户端的选择/" data-id="cjmiwvb0m00bp04c2oeyehksb" class="article-share-link">Share</a>
       
 
       
@@ -469,7 +470,7 @@ $ curl localhost
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用了这么多点的mac了，感觉还挺顺的，谁知今天出了个很头疼的问题。兄弟反馈我发的邮件看不到正文，都成为附件中的一部分了，在outlook中形式如下：<div><img src="https://img.skitch.com/20110921-d59a2t9hr4mssri8k4q81uhwgi.png" alt=""></div><div>晕啊！这么大的问题，枉我还一直自我感觉良好，也没人及早提醒我一下。真怀疑最近我的有些邮件大家有没有看清楚啊？！</div><div>赶紧找解决方案。但是越看越心凉，貌似这个问题很难，mac的mail.app和outlook, exchange server不是一家啊！而且这个问题的渊源似乎也很久了。</div><div>“<a href="http://support.microsoft.com/kb/814111" target="_blank" rel="external">Outlook将内联邮件信息呈现为附件</a>”这是2004的文章；</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><a href="http://chealion.ca/2010/06/mail-app-outlook-attachments-and-disappearing-text/" target="_blank" rel="external">MAIL.APP, OUTLOOK, ATTACHMENTS AND DISAPPEARING TEXT</a></span>”对这个问题有详细的描述，通过选择“总是发送与windows兼容的附件”，“总是在邮件结尾处发送附件”能解决部分问题，就是让附件在最后，使得后面要截取的文本没有。但对于发送的时候带多个附件，尤其很多时候是直接在邮件中内嵌图表，还是会导致图表的信息都无法显示。</div><div>最新的进展在微软的论坛上有篇很长的文章：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="external">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”，发起人认为是Outlook设置为IMAP连接的问题，而不是Exchange的原因。貌似微软的解决效率也不高，5月份提出的问题，陆续都有人反馈存在同样情况。提问的人也抱怨了一下：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">I’d be curious to know if somebody else on your end can actually try to reproduce the problem and see it first-hand.</span>”。</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">Our request for a fix for this support case was turned down for a fix for Office 2010 (even though they acknowledged the bug):</span></div></p>
+        <p>使用了这么多点的mac了，感觉还挺顺的，谁知今天出了个很头疼的问题。兄弟反馈我发的邮件看不到正文，都成为附件中的一部分了，在outlook中形式如下：<div><img src="https://img.skitch.com/20110921-d59a2t9hr4mssri8k4q81uhwgi.png" alt=""></div><div>晕啊！这么大的问题，枉我还一直自我感觉良好，也没人及早提醒我一下。真怀疑最近我的有些邮件大家有没有看清楚啊？！</div><div>赶紧找解决方案。但是越看越心凉，貌似这个问题很难，mac的mail.app和outlook, exchange server不是一家啊！而且这个问题的渊源似乎也很久了。</div><div>“<a href="http://support.microsoft.com/kb/814111" target="_blank" rel="noopener">Outlook将内联邮件信息呈现为附件</a>”这是2004的文章；</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><a href="http://chealion.ca/2010/06/mail-app-outlook-attachments-and-disappearing-text/" target="_blank" rel="noopener">MAIL.APP, OUTLOOK, ATTACHMENTS AND DISAPPEARING TEXT</a></span>”对这个问题有详细的描述，通过选择“总是发送与windows兼容的附件”，“总是在邮件结尾处发送附件”能解决部分问题，就是让附件在最后，使得后面要截取的文本没有。但对于发送的时候带多个附件，尤其很多时候是直接在邮件中内嵌图表，还是会导致图表的信息都无法显示。</div><div>最新的进展在微软的论坛上有篇很长的文章：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="noopener">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”，发起人认为是Outlook设置为IMAP连接的问题，而不是Exchange的原因。貌似微软的解决效率也不高，5月份提出的问题，陆续都有人反馈存在同样情况。提问的人也抱怨了一下：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">I’d be curious to know if somebody else on your end can actually try to reproduce the problem and see it first-hand.</span>”。</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">Our request for a fix for this support case was turned down for a fix for Office 2010 (even though they acknowledged the bug):</span></div></p>
 <p>Unfortunately - I have bad news concerning this issue. The product team has reviewed the request, but the changes required to support this are too large for a regular fix. The team is looking at doing work in Outlook to support this in a future release, but it just cannot be done in the currently released versions. So the request was turned down for a change in the current product.</p>
 <p>and</p>
 <p>Yes - it is a really big change that is just too big to put in the current product.</p>
@@ -480,7 +481,7 @@ $ curl localhost
 <p>&nbsp;So, all our Outlook clients who will be using Google e-mail in the next 6 months will start not receiving e-mail attachments forwarded to them by Mac Mail.app clients.</p>
 <div><span class="Apple-style-span" style="background-color:rgb(221,221,221);">And, if we’re lucky, we’ll see a fix in 2 years.&nbsp;&nbsp; Bleah.&nbsp; You might open an SR so they realize how big an impact this will have/is having.</span>”</div><div><br></div>
 
-<div>我的环境是：mac OS X 10.7.1，mail 5.0，Exchage Server（版本不确定，肯定比2011低）</div><div>从我测试的情况来看，我在mac上使用mail.app发送带有附件的邮件，由于原先的签名中就带有图片，就会导致签名的第一张图片之后的文本全部不会显示，都成了附件的形式，在gmail中收到的邮件也是如此，如下图：</div><div><img src="https://img.skitch.com/20110921-pidrdpbcm7rdayq6m535ccy5kw.jpg" alt=""></div><div>似乎和outlook邮件客户端没有关系，但和exchange server不知是否有一定关联？</div><div>在“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="external">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”中还提到了一种有趣的解决方法：</div><div>在terminal上设置“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes”</span>&nbsp;，然后重启mail.app。</div><div>我试了一下，还真能其作用，但这样会导致在mail中自己看邮件非常不方便，因为看到的内容都是image什么的，具体内容就全不知了。</div><div><br></div><div>最终我还是没能找到解决方法，暂时改进的点是我把签名中的图片都给去了，以纯文本形式，附件都添加在邮件最后。谁有方法的话盼能告诉一声。</div>
+<div>我的环境是：mac OS X 10.7.1，mail 5.0，Exchage Server（版本不确定，肯定比2011低）</div><div>从我测试的情况来看，我在mac上使用mail.app发送带有附件的邮件，由于原先的签名中就带有图片，就会导致签名的第一张图片之后的文本全部不会显示，都成了附件的形式，在gmail中收到的邮件也是如此，如下图：</div><div><img src="https://img.skitch.com/20110921-pidrdpbcm7rdayq6m535ccy5kw.jpg" alt=""></div><div>似乎和outlook邮件客户端没有关系，但和exchange server不知是否有一定关联？</div><div>在“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="noopener">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”中还提到了一种有趣的解决方法：</div><div>在terminal上设置“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes”</span>&nbsp;，然后重启mail.app。</div><div>我试了一下，还真能其作用，但这样会导致在mail中自己看邮件非常不方便，因为看到的内容都是image什么的，具体内容就全不知了。</div><div><br></div><div>最终我还是没能找到解决方法，暂时改进的点是我把签名中的图片都给去了，以纯文本形式，附件都添加在邮件最后。谁有方法的话盼能告诉一声。</div>
 
 <div><br></div>
 
@@ -488,7 +489,7 @@ $ curl localhost
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/22/slugs-5/" data-id="cj133pilt00m400c2jl2vinhn" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/22/slugs-5/" data-id="cjmiwvb3e00ky04c21lawi4er" class="article-share-link">Share</a>
       
 
       
@@ -535,13 +536,13 @@ $ curl localhost
     <div class="article-entry" itemprop="articleBody">
       
         <p>在使用mac的过程中，发现打开应用时，会把上次浏览的窗口都一个个恢复打开，比如safari会自动打开之前看的网页；excel会打开之前看的表格等等。一开始觉得挺神奇，很有意思。不过时间长了就烦了，毕竟大多时间其实是不想看之前正常关闭的文档的，个人觉得恢复只需要异常中断时打开就可以了。</p>
-<div>打开设置-通用：</div><br><div><img src="https://img.skitch.com/20110920-bj29b6kus1cjyhrc2ftah1st2i.jpg" alt=""></div><br><div>把“退出并重新打开应用程序时恢复窗口”勾选去掉就可以了。</div><br><div>lion还有个有趣的选项，就是在系统升级或应用安装后，需要重启系统时可以选择“<a href="http://mactips.info/2011/09/reopen-windows-on-restart-in-lion?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+mactips%2FPETA+%28Mac+Tips%29" target="_blank" rel="external">重新登录时重新打开窗口</a>”，这个我觉得比较人性化。</div><br><div>推荐<a href="http://mactips.info/2011" target="_blank" rel="external">mactips</a>网站，这是上次在twitter上咨询笑来老师时告诉的一个站点，订阅了它的博文，每次看看都还是挺有收获。</div>
+<div>打开设置-通用：</div><br><div><img src="https://img.skitch.com/20110920-bj29b6kus1cjyhrc2ftah1st2i.jpg" alt=""></div><br><div>把“退出并重新打开应用程序时恢复窗口”勾选去掉就可以了。</div><br><div>lion还有个有趣的选项，就是在系统升级或应用安装后，需要重启系统时可以选择“<a href="http://mactips.info/2011/09/reopen-windows-on-restart-in-lion?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+mactips%2FPETA+%28Mac+Tips%29" target="_blank" rel="noopener">重新登录时重新打开窗口</a>”，这个我觉得比较人性化。</div><br><div>推荐<a href="http://mactips.info/2011" target="_blank" rel="noopener">mactips</a>网站，这是上次在twitter上咨询笑来老师时告诉的一个站点，订阅了它的博文，每次看看都还是挺有收获。</div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/20/slugs-4/" data-id="cj133pils00m000c29xts58jr" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/20/slugs-4/" data-id="cjmiwvb3d00kv04c2kvo0cqm6" class="article-share-link">Share</a>
       
 
       
@@ -587,13 +588,13 @@ $ curl localhost
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前养成好习惯，尽量使用一些跨平台的软件，比如Evernote, dropbox, Filezilla, Freemind，这样在切换到mac上的时候能加快过渡。<div>不过在实际使用的时候，在这几个软件上都碰到了一些问题：</div><div>1. Freemind无法输入中文</div><div>解决方法：先切换到英文输入发，再启动Freemind，就可以输入中文了；</div><div>2. Filezilla连接上ftp server后，不能显示目录</div><div>解决方法：今天服务器上传了一些<a href="http://weibo.com/k/%25E5%25B0%258F%25E4%25B9%2590%25E8%258B%258F%25E5%25B7%259E%25E8%25A1%258C&amp;refer=miniblog_jing" target="_blank" rel="external">去苏州玩</a>的照片，结果上去一看服务器上啥文件也看不到。原来是<a href="http://os.51cto.com/art/201103/247723.htm" target="_blank" rel="external">编码的问题</a>，在站点管理器中修改站点的编码为gb2312就可以了；</div><div>3. dropbox无法实时更新</div><div>解决方法：这个应该和mac无关，只是因为一下子有了两台机器实时更新的需求，才发现它的存在和严重性。<a href="http://www.williamlong.info/archives/2585.html" target="_blank" rel="external">月光博客上有篇详细的文章</a>，还是要感谢伟大的GFW。没用privoxy，我暂时还没去管它。</div></p>
+        <p>之前养成好习惯，尽量使用一些跨平台的软件，比如Evernote, dropbox, Filezilla, Freemind，这样在切换到mac上的时候能加快过渡。<div>不过在实际使用的时候，在这几个软件上都碰到了一些问题：</div><div>1. Freemind无法输入中文</div><div>解决方法：先切换到英文输入发，再启动Freemind，就可以输入中文了；</div><div>2. Filezilla连接上ftp server后，不能显示目录</div><div>解决方法：今天服务器上传了一些<a href="http://weibo.com/k/%25E5%25B0%258F%25E4%25B9%2590%25E8%258B%258F%25E5%25B7%259E%25E8%25A1%258C&amp;refer=miniblog_jing" target="_blank" rel="noopener">去苏州玩</a>的照片，结果上去一看服务器上啥文件也看不到。原来是<a href="http://os.51cto.com/art/201103/247723.htm" target="_blank" rel="noopener">编码的问题</a>，在站点管理器中修改站点的编码为gb2312就可以了；</div><div>3. dropbox无法实时更新</div><div>解决方法：这个应该和mac无关，只是因为一下子有了两台机器实时更新的需求，才发现它的存在和严重性。<a href="http://www.williamlong.info/archives/2585.html" target="_blank" rel="noopener">月光博客上有篇详细的文章</a>，还是要感谢伟大的GFW。没用privoxy，我暂时还没去管它。</div></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/20/slugs-3/" data-id="cj133pilr00lx00c2jaybzjox" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/20/slugs-3/" data-id="cjmiwvb3c00kr04c2hbhildqn" class="article-share-link">Share</a>
       
 
       
@@ -639,13 +640,13 @@ $ curl localhost
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>以生日礼物的名义买了一台MACBOOK PRO，哈哈，也算是对自己好一点吧。<div>用了几天了，感觉熟悉多了，基本上工作都能在mac上完成了。简单说一点体会：</div><div>1. 第一天熟悉触控板，把常用的手势操作都练上一遍。以前总觉得这个太麻烦了，没想到用后觉得挺舒服的。左右、前后的切换；放大缩小都能自然；</div><div>2. 再顺带看一下别人的一些经验和常用的工具，我是大概浏览了笑来老师的<a href="http://www.lixiaolai.com/archives/category/computer-related/all-about-apple" target="_blank" rel="external">All about Apple</a>和小众软件的<a href="http://www.appinn.com/category/mac/" target="_blank" rel="external">二狗系列</a>。</div><div>3. 熟悉键盘操作，快捷键很重要，象我本来在windows的时候也很习惯采用键盘的操作方式，桌面都是空白的。至少知道ctrl+c/v的替换，在mac上需要使用command键。推荐一篇：<span class="Apple-style-span" style="background-color:rgb(255,255,255);"><a href="http://www.lixiaolai.com/archives/10928.html" target="_blank" rel="external">OS X的文本编辑常用快捷键</a>。</span></div><div><span class="Apple-style-span" style="background-color:rgb(255,255,255);">4. 装一些常用的软件，我首选的dropbox, evernote, keepass，有了这几个基本资料就有了，也能干活了。之后是QQ, Adium的通讯工具，office还是离不开，选了破解的。</span></div><div><span class="Apple-style-span" style="background-color:rgb(255,255,255);">一路用来也是问题不断，google之，这个以后再慢慢细说吧。</span></div><div><span class="Apple-style-span" style="background-color:rgb(221,221,221);"><br></span></div></p>
+        <p>以生日礼物的名义买了一台MACBOOK PRO，哈哈，也算是对自己好一点吧。<div>用了几天了，感觉熟悉多了，基本上工作都能在mac上完成了。简单说一点体会：</div><div>1. 第一天熟悉触控板，把常用的手势操作都练上一遍。以前总觉得这个太麻烦了，没想到用后觉得挺舒服的。左右、前后的切换；放大缩小都能自然；</div><div>2. 再顺带看一下别人的一些经验和常用的工具，我是大概浏览了笑来老师的<a href="http://www.lixiaolai.com/archives/category/computer-related/all-about-apple" target="_blank" rel="noopener">All about Apple</a>和小众软件的<a href="http://www.appinn.com/category/mac/" target="_blank" rel="noopener">二狗系列</a>。</div><div>3. 熟悉键盘操作，快捷键很重要，象我本来在windows的时候也很习惯采用键盘的操作方式，桌面都是空白的。至少知道ctrl+c/v的替换，在mac上需要使用command键。推荐一篇：<span class="Apple-style-span" style="background-color:rgb(255,255,255);"><a href="http://www.lixiaolai.com/archives/10928.html" target="_blank" rel="noopener">OS X的文本编辑常用快捷键</a>。</span></div><div><span class="Apple-style-span" style="background-color:rgb(255,255,255);">4. 装一些常用的软件，我首选的dropbox, evernote, keepass，有了这几个基本资料就有了，也能干活了。之后是QQ, Adium的通讯工具，office还是离不开，选了破解的。</span></div><div><span class="Apple-style-span" style="background-color:rgb(255,255,255);">一路用来也是问题不断，google之，这个以后再慢慢细说吧。</span></div><div><span class="Apple-style-span" style="background-color:rgb(221,221,221);"><br></span></div></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/16/slugs-2/" data-id="cj133pilq00lt00c27xh0ak82" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/16/slugs-2/" data-id="cjmiwvb3b00ko04c2xb971u1h" class="article-share-link">Share</a>
       
 
       
@@ -762,7 +763,7 @@ $ curl localhost
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

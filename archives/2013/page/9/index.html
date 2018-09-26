@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/2013/page/9/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,18 +102,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>    1.9.3-p125 :068 &gt; global_variables.sort<br>     =&gt; [:$!, :$”, :$$, :$&amp;, :$’, :$<em>, :$+, :$,, :$-, :$-0, :$-F, :$-I, :$-K, :$-W, :$-a, :$-d, :$-i, :$-l, :$-p, :$-v, :$-w, :$., :$/, :$0, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9, :$:, :$;, :$, :$?, :$@, :$DEBUG, :$FILENAME, :$KCODE, :$LOADED_FEATURES, :$LOAD_PATH, :$PROGRAM<em>NAME, :$SAFE, :$VERBOSE, :$\, :$</em>, :$`, :$binding, :$stderr, :$stdin, :$stdout, :$~]<br>    1.9.3-p125 :069 &gt; global_variables.length<br>     =&gt; 56 
+        <div id="wrapper"><br><br>    1.9.3-p125 :068 &gt; global_variables.sort<br>     =&gt; [:$!, :$”, :$$, :$&amp;, :$’, :$<em>, :$+, :$,, :$-, :$-0, :$-F, :$-I, :$-K, :$-W, :$-a, :$-d, :$-i, :$-l, :$-p, :$-v, :$-w, :$., :$/, :$0, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9, :$:, :$;, :$, :$?, :$@, :$DEBUG, :$FILENAME, :$KCODE, :$LOADED_FEATURES, :$LOAD_PATH, :$PROGRAM_NAME, :$SAFE, :$VERBOSE, :$\, :$_, :$`, :$binding, :$stderr, :$stdin, :$stdout, :$~]<br>    1.9.3-p125 :069 &gt; global_variables.length<br>     =&gt; 56 
 
 </em>   $<em>， gets输入的结果保存在全局变量$</em>中，print不带参数时会输出$<em>的值，光写一个正则表达式，也是和$</em> 匹配。<br><em>   $?， 命令行的返回状态
 </em>   $~， 用//括起来的正则表达式是Regexp对象，match匹配的结果是一个MatchData实例，MatchData是一个特殊变量$~的类型，封装了通过特殊变量$&amp;(匹配的内容),$’(匹配的内容的前半部分), $`(匹配的内容的后半部分), $1, $2等等返回的结果。<br><em>   $0， 脚本运行文件名称。
 </em>   $<em>， 命令行参数。
 </em>   $.， 当前的输入行号。<br><em>   $$，进程号。
-</em>   $:，$LOAD_PATH。<br><br>有两篇<a href="http://www.zhlwish.com/2013/01/15/ruby-global-variables-you-should-known/" target="_blank" rel="external">几个有意思的Ruby全局变量</a>和<a href="http://blog.chinaunix.net/uid-26244834-id-2954687.html" target="_blank" rel="external">Ruby的全局变量</a>可以参考。<br><br></div>
+</em>   $:，$LOAD_PATH。<br><br>有两篇<a href="http://www.zhlwish.com/2013/01/15/ruby-global-variables-you-should-known/" target="_blank" rel="noopener">几个有意思的Ruby全局变量</a>和<a href="http://blog.chinaunix.net/uid-26244834-id-2954687.html" target="_blank" rel="noopener">Ruby的全局变量</a>可以参考。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/24/ruby中有哪些全局变量/" data-id="cj133pikn00j000c2i9yxyvma" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/24/ruby中有哪些全局变量/" data-id="cjmiwvb2f00i104c2u2aa7x5u" class="article-share-link">Share</a>
       
 
       
@@ -160,25 +161,27 @@
       
         <div id="wrapper"><br><br><em>   Ruby中所有的东西都是一个表达式。
 </em>   许多运算符其实是方法调用，比如a<em>b+c，实际上是(a.</em>(b)).+(c)，通过a请求对象引用调用方法”<em>“，传递一个参数b，再把结果作为一个对象调用方法”+”，传递c作为参数。由于都是对象，所以可以重定义方法，比如：<br><br>    class Fixnum<br>      alias oldPlus +<br>      def +(other)<br>        oldPlus(other).succ<br>      end<br>    end<br>    1 + 2 » 4<br>    `
-</em>   可以使用反引号<code>或%x前缀，来执行OS的外部命令。命令行的返回状态保存在全局变量$?中。反引号``括起来的字符串传递给方法Kernel::</code>，注意只有一个<code>。你同样可以重载。
-
-    ## 有关赋值
-
-*   赋值可以是链式的，a = b = c = 1。
-*   赋值有两种基本形式，一种是把对象引用赋给一个变量或常量；另一种是赋给对象属性或元素引用，比如：aSong.duration = 234, instrument[&quot;ano&quot;] = &quot;ccolo&quot;，在这种方式下是通过调用左值(lvalues)的方法来实现的。
-*   并行赋值，这里有个经典的例子，两数互换。
-    &gt; &lt;pre&gt;</code><br>&gt;     // c语言的实现方式<br>&gt;     int a = 1;<br>&gt;     int b = 2;<br>&gt;     int temp;<br>&gt;     temp = a;<br>&gt;     a = b;<br>&gt;     b = temp;<br>&gt;     // Ruby中可以用以下方式<br>&gt;     a, b = b, a<br>&gt;     <code>&lt;/pre&gt;
-*   Ruby在赋值前依次计算右边的数值，再赋值给左边的变量，比如：
-    &gt; &lt;pre&gt;</code><br>&gt;     x = 0 » 0<br>&gt;     a, b, c   =   x, (x += 1), (x += 1) » [0, 1, 2]<br><br><em>   如果赋值的左值多于右值，则剩余的左值置为nil；如果右值多于左值，则多余的右值忽略。
+</em>   可以使用反引号<code>或%x前缀，来执行OS的外部命令。命令行的返回状态保存在全局变量$?中。反引号`</code>括起来的字符串传递给方法Kernel::<code>，注意只有一个</code>。你同样可以重载。<br><br>    ## 有关赋值<br><br><em>   赋值可以是链式的，a = b = c = 1。
+</em>   赋值有两种基本形式，一种是把对象引用赋给一个变量或常量；另一种是赋给对象属性或元素引用，比如：aSong.duration = 234, instrument[“ano”] = “ccolo”，在这种方式下是通过调用左值(lvalues)的方法来实现的。<br><em>   并行赋值，这里有个经典的例子，两数互换。<br>    &gt; <pre><code>&gt;     // c语言的实现方式
+&gt;     int a = 1;
+&gt;     int b = 2;
+&gt;     int temp;
+&gt;     temp = a;
+&gt;     a = b;
+&gt;     b = temp;
+&gt;     // Ruby中可以用以下方式
+&gt;     a, b = b, a
+&gt;</code></pre>
+</em>   Ruby在赋值前依次计算右边的数值，再赋值给左边的变量，比如：<br>    &gt; <pre>`<br>&gt;     x = 0 » 0<br>&gt;     a, b, c   =   x, (x += 1), (x += 1) » [0, 1, 2]<br><br><em>   如果赋值的左值多于右值，则剩余的左值置为nil；如果右值多于左值，则多余的右值忽略。
 
 </em>   注意变量前面加<em>号，如果左值变量前加</em>号，则剩余的右值作为数组赋值；<br><br><em>   并行赋值还有要注意的地方，左值变量用()括起来，相当于嵌套的并行赋值。
 
-</em>   详细例子参见<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="external">书中章节</a>。<br></div>
+</em>   详细例子参见<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="noopener">书中章节</a>。<br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/23/ruby的表达式和赋值/" data-id="cj133pil600k900c2dso41tia" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/23/ruby的表达式和赋值/" data-id="cjmiwvb2u00ja04c2c6johzzi" class="article-share-link">Share</a>
       
 
       
@@ -232,13 +235,13 @@
 <p><img src="http://ww4.sinaimg.cn/mw690/6a7f0b64gw1e5wn4mrkhrj21kw0uve24.jpg" alt=""></p>
 <p>今天一早，躺在床上的时候，小乐和我说：“爸爸，只有6天了。”<br>“什么只有6天了？”<br>“放暑假呀！”<br>“啊，对呀，你改倒计时了吗？”<br>“改了。”</p>
 <p>换一个角度看问题，生活可以更美好，不是吗？</p>
-<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="noopener">fuyunv</a>  .</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/22/暑假倒计时/" data-id="cj133pjet01t700c2a6grpqhd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/22/暑假倒计时/" data-id="cjmiwvbm601r704c2tsucl6t4" class="article-share-link">Share</a>
       
 
       
@@ -291,7 +294,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/21/有关ruby的方法/" data-id="cj133pjf401ti00c25rl0rd51" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/21/有关ruby的方法/" data-id="cjmiwvbmb01re04c2timkyfkm" class="article-share-link">Share</a>
       
 
       
@@ -337,12 +340,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>最基本的有关正则表达式的使用<a href="http://xbin999.com/2013/06/08/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e5%92%8c%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba/">前面</a>说了，有关<a href="http://xbin999.com/2013/06/19/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e7%9a%84%e7%b1%bb%e5%a4%84%e7%90%86/">Regexp类中的$符号</a>也有说明，再补充说明一下一些常用的符号。<br><br>正则表达式中有几部分内容：<br><br>1.  先是patterns，所有字符除了., |, (, ), [, {, +, \, ^, $, <em>, 和 ?之外，都匹配自己本身。接下来其实就是了解这些乱七八糟的符号分别干嘛的。\ 用来做字符转义。<br>2.  anchors，^, $是最基本的表示首和尾，除此之外还有\A, \z, \Z, \b, \B。<br>&gt;- \A 字符串的开始<br>&gt;- \z 字符串的结尾<br>&gt;- \Z 支持以换行符结束的字符串的结尾<br>&gt;- \b 单词首尾<br>&gt;- \B 非单词首尾<br><br>    1.9.3p125 :024 &gt; showRE(“this is the time”, /time\z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :025 &gt; showRE(“this is the time”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :026 &gt; showRE(“this is the time\n”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;\n”    1.9.3p125 :027 &gt; showRE(“this is the time\n”, /time\z/)<br>    `<br>3.  字符类(character class)，放在[]中，有\d, \D, \s, \S, \w, \W。大写字母表示否定。<br>    &gt;- \d [0-9]数字<br>    &gt;- \D [^0-9]非数字<br>    &gt;- \s [\s\t\r\n\f] 空格<br>    &gt;- \S [^\s\t\r\n\f] 非空格    &gt;- \w [A-Za-z0-9<em>] 单词字符<br>    &gt;- \W[^A-Za-z0-9</em>] 非单词字符4.  用于表示重复，</em>, +, ?，还有{m,n}, {m,}的形式。<br>5.  替换，|<br>6.  组合，()<br><br>    乱七八糟的字符就说完了，还有一个常用的是替换，也就是sub和gsub，这里会用到\1, \2等模式中匹配到的变量，比如：<br><br>    <pre>`<br>    “fred:smith”.sub(/(\w+):(\w+)/, ‘\2, \1’) » “smith, fred”<br>    “nercpyitno”.gsub(/(.)(.)/, ‘\2\1’) » “encryption”<br><br></pre></div>
+        <div id="wrapper"><br><br>最基本的有关正则表达式的使用<a href="http://xbin999.com/2013/06/08/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e5%92%8c%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba/">前面</a>说了，有关<a href="http://xbin999.com/2013/06/19/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e7%9a%84%e7%b1%bb%e5%a4%84%e7%90%86/">Regexp类中的$符号</a>也有说明，再补充说明一下一些常用的符号。<br><br>正则表达式中有几部分内容：<br><br>1.  先是patterns，所有字符除了., |, (, ), [, {, +, \, ^, $, <em>, 和 ?之外，都匹配自己本身。接下来其实就是了解这些乱七八糟的符号分别干嘛的。\ 用来做字符转义。<br>2.  anchors，^, $是最基本的表示首和尾，除此之外还有\A, \z, \Z, \b, \B。<br>&gt;- \A 字符串的开始<br>&gt;- \z 字符串的结尾<br>&gt;- \Z 支持以换行符结束的字符串的结尾<br>&gt;- \b 单词首尾<br>&gt;- \B 非单词首尾<br><br>    1.9.3p125 :024 &gt; showRE(“this is the time”, /time\z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :025 &gt; showRE(“this is the time”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :026 &gt; showRE(“this is the time\n”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;\n”    1.9.3p125 :027 &gt; showRE(“this is the time\n”, /time\z/)<br>    `<br>3.  字符类(character class)，放在[]中，有\d, \D, \s, \S, \w, \W。大写字母表示否定。<br>    &gt;- \d [0-9]数字<br>    &gt;- \D [^0-9]非数字<br>    &gt;- \s [\s\t\r\n\f] 空格<br>    &gt;- \S [^\s\t\r\n\f] 非空格    &gt;- \w [A-Za-z0-9_] 单词字符<br>    &gt;- \W[^A-Za-z0-9_] 非单词字符4.  用于表示重复，</em>, +, ?，还有{m,n}, {m,}的形式。<br>5.  替换，|<br>6.  组合，()<br><br>    乱七八糟的字符就说完了，还有一个常用的是替换，也就是sub和gsub，这里会用到\1, \2等模式中匹配到的变量，比如：<br><br>    <pre>`<br>    “fred:smith”.sub(/(\w+):(\w+)/, ‘\2, \1’) » “smith, fred”<br>    “nercpyitno”.gsub(/(.)(.)/, ‘\2\1’) » “encryption”<br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/20/正则表达式中的符号/" data-id="cj133pjh201vd00c21sdb2f7d" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/20/正则表达式中的符号/" data-id="cjmiwvbnm01t904c2e9vm82sx" class="article-share-link">Share</a>
       
 
       
@@ -406,7 +409,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/19/ruby中正则表达式的类处理/" data-id="cj133pikp00j700c2rgy2yzki" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/19/ruby中正则表达式的类处理/" data-id="cjmiwvb2i00i804c20nw7l3d8" class="article-share-link">Share</a>
       
 
       
@@ -452,8 +455,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/06/03/%e5%9d%9a%e6%8c%81100%e5%a4%a9%e6%9d%a5%e5%9f%b9%e5%85%bb%e6%97%b6%e9%97%b4%e7%ae%a1%e7%90%86%e4%b9%a0%e6%83%af/">坚持100天学习Ruby</a>，第二周，小结一下。<br><br><em>   继续看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="external">Programming Ruby - The Pragmatic Programmer’s Guide</a>两章，”Containers, Blocks, and Iterators”和”Standard Types”，其中Standard Types还没看完。
-</em>   每天花的时间还是中午休息时间，一般都会超出一个番茄时间，整理内容最好能当时同步输出，否则晚上时间够呛。看到李笑来的<a href="http://book.douban.com/subject/5171244/" target="_blank" rel="external">《把时间当作朋友》</a>，说到了柳比歇夫的“事件-时间日志”，打算同步实践一下。这样时间控制上会更准确。<br><em>   自己脱离书本写的小代码，也才50多行，写的时候<a href="http://xbin999.com/2013/06/16/%e5%86%99%e4%b8%80%e5%b0%8f%e6%ae%b5ruby%e7%8a%af%e7%9a%84%e9%94%99%e8%af%af/">老往C++那里靠</a>。<br><br>把看到几点再聚集一下：
+        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/06/03/%e5%9d%9a%e6%8c%81100%e5%a4%a9%e6%9d%a5%e5%9f%b9%e5%85%bb%e6%97%b6%e9%97%b4%e7%ae%a1%e7%90%86%e4%b9%a0%e6%83%af/">坚持100天学习Ruby</a>，第二周，小结一下。<br><br><em>   继续看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="noopener">Programming Ruby - The Pragmatic Programmer’s Guide</a>两章，”Containers, Blocks, and Iterators”和”Standard Types”，其中Standard Types还没看完。
+</em>   每天花的时间还是中午休息时间，一般都会超出一个番茄时间，整理内容最好能当时同步输出，否则晚上时间够呛。看到李笑来的<a href="http://book.douban.com/subject/5171244/" target="_blank" rel="noopener">《把时间当作朋友》</a>，说到了柳比歇夫的“事件-时间日志”，打算同步实践一下。这样时间控制上会更准确。<br><em>   自己脱离书本写的小代码，也才50多行，写的时候<a href="http://xbin999.com/2013/06/16/%e5%86%99%e4%b8%80%e5%b0%8f%e6%ae%b5ruby%e7%8a%af%e7%9a%84%e9%94%99%e8%af%af/">老往C++那里靠</a>。<br><br>把看到几点再聚集一下：
 
 </em>   最重要的是<a href="http://xbin999.com/2013/06/14/%e5%9d%97%e5%92%8c%e8%bf%ad%e4%bb%a3%e5%99%a8/">块(Block)，迭代器</a>、闭包的概念。块就是一段代码，可以用yield去调用块；迭代器是针对容器中元素重复调用一个块的代码；<a href="http://xbin999.com/2013/06/15/%e4%bd%bf%e7%94%a8%e5%9d%97%e6%9d%a5%e5%81%9a%e9%97%ad%e5%8c%85/">闭包</a>让你在函数外部引用函数体内的变量等上下文。<br>*   标准类型里范围<a href="http://xbin999.com/2013/06/17/ruby%e4%b8%ad%e7%9a%84numbers-strings%e5%92%8cranges/">ranges</a>，自定义类可以用于range，需要定义succ和比较运算符&lt;=&gt;。<br><br>还不清楚的点，<a href="http://xbin999.com/2013/06/17/ruby%e4%b8%ad%e7%9a%84numbers-strings%e5%92%8cranges/">使用?来得到字符的ASCII值，在irb中测试?a, ?\n 返回的是字符串”a”, “\n”，并不是整型数值
 </a>。<br><br></div>
@@ -461,7 +464,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/18/第二周的总结/" data-id="cj133pjo0022c00c25udhunag" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/18/第二周的总结/" data-id="cjmiwvbrv020904c22xcocesa" class="article-share-link">Share</a>
       
 
       
@@ -526,7 +529,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/17/ruby中的numbers-strings和ranges/" data-id="cj133pikr00ja00c2k594o5wv" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/17/ruby中的numbers-strings和ranges/" data-id="cjmiwvb2j00ic04c2kbcyor8l" class="article-share-link">Share</a>
       
 
       
@@ -578,13 +581,13 @@
 <p>上次记录<a href="http://xbin999.com/2005/06/19/%e7%88%b6%e4%ba%b2%e8%8a%82%e5%bf%ab%e4%b9%90/">父亲节快乐</a>的居然是2005年，好久远，也好温馨的记忆。</p>
 <p>另一幅是小乐的书法作品，有两个字没写好，不过小家伙懒得再写了，那就这样吧。</p>
 <p><img src="http://ww1.sinaimg.cn/mw690/6a7f0b64gw1e5qaqqwtlrj20ph1loauk.jpg" alt=""></p>
-<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="noopener">fuyunv</a>  .</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/16/父亲节快乐-2/" data-id="cj133pjj401xc00c2sa5s9ktg" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/16/父亲节快乐-2/" data-id="cjmiwvbor01v804c2ykvkaswy" class="article-share-link">Share</a>
       
 
       
@@ -639,7 +642,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/16/写一小段ruby犯的错误/" data-id="cj133pixa017800c2nxov72ad" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/16/写一小段ruby犯的错误/" data-id="cjmiwvbb5015e04c28gdmyosw" class="article-share-link">Share</a>
       
 
       
@@ -756,7 +759,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

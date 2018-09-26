@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/IT/page/17/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -97,13 +98,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!180" class="bvMsg"><br><br>虽然知道浮点数不能做精确比较，不过还是经常会疏忽。前段时间看morphis, herfool的二次出帐代码，倒是学到了一个单词epsilon，印像深刻了<img src="http://spaces.msn.com/mmm2005-01-24_16.34/RTE/emoticons/smile_regular.gif" alt="">。<br><br>msdn上的一篇文章：<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/vccore/html/_core_Why_Floating_Point_Numbers_May_Lose_Precision.asp" target="_blank" rel="external">为何浮点数可能丢失精度</a><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!180" class="bvMsg"><br><br>虽然知道浮点数不能做精确比较，不过还是经常会疏忽。前段时间看morphis, herfool的二次出帐代码，倒是学到了一个单词epsilon，印像深刻了<img src="http://spaces.msn.com/mmm2005-01-24_16.34/RTE/emoticons/smile_regular.gif" alt="">。<br><br>msdn上的一篇文章：<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/vccore/html/_core_Why_Floating_Point_Numbers_May_Lose_Precision.asp" target="_blank" rel="noopener">为何浮点数可能丢失精度</a><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/05/epsilon/" data-id="cj133pigf006e00c2nxyu4ry3" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/05/epsilon/" data-id="cjmiwvayw005v04c2eqjqqwhb" class="article-share-link">Share</a>
       
 
       
@@ -145,13 +146,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!173" class="bvMsg"><br><br>同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &quot;s/[[:cntrl:]]//g&quot;来做转换，简单写了个shell如下：<br><br>#!/bin/sh<br># name: dos2unix.sh<br># Creator: Bin Yang<br># Created data: 2005/04/04<br><br>if [ $# -lt 1 ]<br>then<br>    echo &quot;Usage: $0 filename&quot;<br>    return<br>fi<br><br>echo &quot;replace begin…&quot;<br>while [ $# -gt 0 ]<br>do<br>    filename=$1<br>    shift<br><br>    echo &quot;dealing with $filename… &quot;<br>    mv $filename .$filename.bak<br>    sed &quot;s/[[:cntrl:]]//g&quot; .$filename.bak &gt; $filename<br>done<br><br>echo &quot;replace end.&quot;<br><br>developerWorks上有不错的sed教程<a href="http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml" target="_blank" rel="external">http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml</a><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!173" class="bvMsg"><br><br>同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &quot;s/[[:cntrl:]]//g&quot;来做转换，简单写了个shell如下：<br><br>#!/bin/sh<br># name: dos2unix.sh<br># Creator: Bin Yang<br># Created data: 2005/04/04<br><br>if [ $# -lt 1 ]<br>then<br>    echo &quot;Usage: $0 filename&quot;<br>    return<br>fi<br><br>echo &quot;replace begin…&quot;<br>while [ $# -gt 0 ]<br>do<br>    filename=$1<br>    shift<br><br>    echo &quot;dealing with $filename… &quot;<br>    mv $filename .$filename.bak<br>    sed &quot;s/[[:cntrl:]]//g&quot; .$filename.bak &gt; $filename<br>done<br><br>echo &quot;replace end.&quot;<br><br>developerWorks上有不错的sed教程<a href="http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml" target="_blank" rel="noopener">http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml</a><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/04/sed简单应用/" data-id="cj133pild00ks00c2t0z3wee6" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/04/sed简单应用/" data-id="cjmiwvb2z00jt04c2e7v2stx0" class="article-share-link">Share</a>
       
 
       
@@ -193,13 +194,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!171" class="bvMsg"><br><br>年前用StatCVS统计过我们的项目，自动生成的代码占的比例好大。当时还推荐了一把。今天看到一篇介绍文章<a href="http://www-900.ibm.com/developerworks/cn/java/j-statcvs/index.shtml" target="_blank" rel="external">《StatCVS 提供了对 CVS 储存库活动的深入观察》</a>，写的还挺清楚的。<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!171" class="bvMsg"><br><br>年前用StatCVS统计过我们的项目，自动生成的代码占的比例好大。当时还推荐了一把。今天看到一篇介绍文章<a href="http://www-900.ibm.com/developerworks/cn/java/j-statcvs/index.shtml" target="_blank" rel="noopener">《StatCVS 提供了对 CVS 储存库活动的深入观察》</a>，写的还挺清楚的。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/23/statcvs/" data-id="cj133pim400mp00c2mph0dccu" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/23/statcvs/" data-id="cjmiwvb3o00ln04c25gs6cag9" class="article-share-link">Share</a>
       
 
       
@@ -241,13 +242,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!162" class="bvMsg"><br><br>找了个简单，可以在本地编辑的wiki工具，用tcl写的<a href="http://www.equi4.com/wikit.html" target="_blank" rel="external">wikit</a>。先练习练习。<br><br>高兴的是终于学会了第一步：<br><br>如何在Wiki页中新增一个链接？<br>先写&quot;[[&quot;，再写页的名称，最后写&quot;]]&quot;，保存页面。页面的名称周围的方括号将显示链接属性，点击方括号，跳到新页面。编辑、保存，大功告成！<br><br>郁闷的是，刚刚在做练习，尝试翻译一下它的英文help，结果去做“changing the help button’”时，把help标题改成了中文帮助，结果使得中文帮助和help成了相同的页，把前面写的东西都丢光了。从它的&quot;Recent changes&quot;也不知怎么恢复。<br><br>现在也没搞明白。郁闷<img src="http://spaces.msn.com/mmm2005-01-24_16.34/RTE/emoticons/smile_sad.gif" alt=""><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!162" class="bvMsg"><br><br>找了个简单，可以在本地编辑的wiki工具，用tcl写的<a href="http://www.equi4.com/wikit.html" target="_blank" rel="noopener">wikit</a>。先练习练习。<br><br>高兴的是终于学会了第一步：<br><br>如何在Wiki页中新增一个链接？<br>先写&quot;[[&quot;，再写页的名称，最后写&quot;]]&quot;，保存页面。页面的名称周围的方括号将显示链接属性，点击方括号，跳到新页面。编辑、保存，大功告成！<br><br>郁闷的是，刚刚在做练习，尝试翻译一下它的英文help，结果去做“changing the help button’”时，把help标题改成了中文帮助，结果使得中文帮助和help成了相同的页，把前面写的东西都丢光了。从它的&quot;Recent changes&quot;也不知怎么恢复。<br><br>现在也没搞明白。郁闷<img src="http://spaces.msn.com/mmm2005-01-24_16.34/RTE/emoticons/smile_sad.gif" alt=""><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/15/高兴和郁闷/" data-id="cj133pk2s02et00c2abzyx0ku" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/15/高兴和郁闷/" data-id="cjmiwvc0202cm04c286mek7vc" class="article-share-link">Share</a>
       
 
       
@@ -289,13 +290,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!159" class="bvMsg"><br><br>考虑学习一下Emacs，EmacsWiki，整理资源先。<br><br><a href="http://202.38.99.17/~huxw/emacs/daily-emacs/daily-emacs-Z-H-1.html#node_toc_start" target="_blank" rel="external">Emacs的日常生活</a><br><br><a href="http://learn.tsinghua.edu.cn/homepage/2001315450/emacs.html" target="_blank" rel="external">王垠主页的Emacs部分</a><br><br><a href="http://liyu2000.nease.net/webpage/EmacsWikiZh.html" target="_blank" rel="external">EmacsWiki中文</a><a href="http://liyu2000.nease.net/webpage/Emacs.html" target="_blank" rel="external"></a><br><br><a href="http://db.cs.hit.edu.cn/~chunyu/emacs_files/notes-emacs.html" target="_blank" rel="external">Emacs 使用笔记</a><br><br><a href="http://www.emacswiki.org/cgi-bin/wiki" target="_blank" rel="external">EmacsWiki</a><br><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!159" class="bvMsg"><br><br>考虑学习一下Emacs，EmacsWiki，整理资源先。<br><br><a href="http://202.38.99.17/~huxw/emacs/daily-emacs/daily-emacs-Z-H-1.html#node_toc_start" target="_blank" rel="noopener">Emacs的日常生活</a><br><br><a href="http://learn.tsinghua.edu.cn/homepage/2001315450/emacs.html" target="_blank" rel="noopener">王垠主页的Emacs部分</a><br><br><a href="http://liyu2000.nease.net/webpage/EmacsWikiZh.html" target="_blank" rel="noopener">EmacsWiki中文</a><a href="http://liyu2000.nease.net/webpage/Emacs.html" target="_blank" rel="noopener"></a><br><br><a href="http://db.cs.hit.edu.cn/~chunyu/emacs_files/notes-emacs.html" target="_blank" rel="noopener">Emacs 使用笔记</a><br><br><a href="http://www.emacswiki.org/cgi-bin/wiki" target="_blank" rel="noopener">EmacsWiki</a><br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/14/emacs-emacswiki/" data-id="cj133pigd006700c28au8lyxb" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/14/emacs-emacswiki/" data-id="cjmiwvayv005r04c2g35d767t" class="article-share-link">Share</a>
       
 
       
@@ -337,13 +338,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!147" class="bvMsg"><br><br>gmail目前也支持使用pop收信，先在gmail帐户上设置enable pop。然后设置你的邮件客户端（我用的是foxmail），相应设置：<br><br>服务器分别为：smtp.gmail.com pop.gmail.com<br><br>高级设置中端口分别为：SMTP 465 POP3 995，同时启用SSL连接。<br><br>另外不错的一点是，你在本地使用foxmail发邮件后，gmail中也会给你做一份备份，我喜欢。<br><br>详细可以参见：<br><br><a href="http://gmail.google.com/support/bin/answer.py?answer=13273" target="_blank" rel="external">http://gmail.google.com/support/bin/answer.py?answer=13273</a><br><br><a href="http://gmail.google.com/support/bin/answer.py?answer=13276" target="_blank" rel="external">http://gmail.google.com/support/bin/answer.py?answer=13276</a><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!147" class="bvMsg"><br><br>gmail目前也支持使用pop收信，先在gmail帐户上设置enable pop。然后设置你的邮件客户端（我用的是foxmail），相应设置：<br><br>服务器分别为：smtp.gmail.com pop.gmail.com<br><br>高级设置中端口分别为：SMTP 465 POP3 995，同时启用SSL连接。<br><br>另外不错的一点是，你在本地使用foxmail发邮件后，gmail中也会给你做一份备份，我喜欢。<br><br>详细可以参见：<br><br><a href="http://gmail.google.com/support/bin/answer.py?answer=13273" target="_blank" rel="noopener">http://gmail.google.com/support/bin/answer.py?answer=13273</a><br><br><a href="http://gmail.google.com/support/bin/answer.py?answer=13276" target="_blank" rel="noopener">http://gmail.google.com/support/bin/answer.py?answer=13276</a><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/12/gmail-enable-pop/" data-id="cj133pigr007p00c2c9hyc4gn" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/12/gmail-enable-pop/" data-id="cjmiwvaza007704c20muorngn" class="article-share-link">Share</a>
       
 
       
@@ -385,13 +386,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!146" class="bvMsg"><br><br><a href="http://desktop.google.com" target="_blank" rel="external">http://desktop.google.com</a><br><br>目录都不用整理了，哈哈<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!146" class="bvMsg"><br><br><a href="http://desktop.google.com" target="_blank" rel="noopener">http://desktop.google.com</a><br><br>目录都不用整理了，哈哈<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/10/google的桌面搜索，很强啊/" data-id="cj133pih0008j00c2hgmlyofg" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/10/google的桌面搜索，很强啊/" data-id="cjmiwvazi008204c21omazh2b" class="article-share-link">Share</a>
       
 
       
@@ -433,13 +434,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!141" class="bvMsg"><br><br>关于cppunit在hp上的编译，源代码的tar包可以从<a href="http://cppunit.sourceforge.net/" target="_blank" rel="external"><font color="#ff0000">网站</font></a>上获得。<br><br>解开包后，按文档的说明是：<br>./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-AA&quot;<br>不过由于我们的项目的编译选项中使用的CXXFLAGS=&quot;-Aa&quot;，所以直接使用该命令编译得到的动态库在项目中并不能使用，写测试代码没问题。<br>&quot;-AA&quot;使用的是新的2.0标准C++库，而&quot;-Aa&quot;是1.2.1的标准库，两者不是完全兼容的。（不知道为什么我们不用新标准，象stringstream就不能使用，可能也有老的库要兼容吧）<br>两个选项详细的区别可以参见 <a href="http://docs.hp.com/en/1405/options.htm" target="_blank" rel="external">http://docs.hp.com/en/1405/options.htm</a><br><br>我后来编译的方法如下：<br>% ./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-Aa&quot;<br>修改cppunit源代码，主要包括：<br>1. 修改头文件include/cppunit/config-auto.h，增加<br>#ifndef CPPUNIT_HAVE_CLASS_STRSTREAM<br>#define CPPUNIT_HAVE_CLASS_STRSTREAM  1<br>#endif<br>2. 修改头文件include/cppunit/Portability.h，将CPPUNIT_HAVE_NAMESPACES部分改为：<br>#if !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_NAMESPACE)<br>#  define CPPUNIT_NO_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_NAMESPACE)<br>#endif // !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_STD_NAMESPACE)<br>#  define CPPUNIT_NO_STD_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_STD_NAMESPACE)<br>3. 修改.cpp和.h中包括的头文件，将&lt;iostream&gt;, &lt;fstream&gt;改位&lt;iostream.h&gt;, &lt;fstream.h&gt;<br>再重新编译。<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!141" class="bvMsg"><br><br>关于cppunit在hp上的编译，源代码的tar包可以从<a href="http://cppunit.sourceforge.net/" target="_blank" rel="noopener"><font color="#ff0000">网站</font></a>上获得。<br><br>解开包后，按文档的说明是：<br>./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-AA&quot;<br>不过由于我们的项目的编译选项中使用的CXXFLAGS=&quot;-Aa&quot;，所以直接使用该命令编译得到的动态库在项目中并不能使用，写测试代码没问题。<br>&quot;-AA&quot;使用的是新的2.0标准C++库，而&quot;-Aa&quot;是1.2.1的标准库，两者不是完全兼容的。（不知道为什么我们不用新标准，象stringstream就不能使用，可能也有老的库要兼容吧）<br>两个选项详细的区别可以参见 <a href="http://docs.hp.com/en/1405/options.htm" target="_blank" rel="noopener">http://docs.hp.com/en/1405/options.htm</a><br><br>我后来编译的方法如下：<br>% ./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-Aa&quot;<br>修改cppunit源代码，主要包括：<br>1. 修改头文件include/cppunit/config-auto.h，增加<br>#ifndef CPPUNIT_HAVE_CLASS_STRSTREAM<br>#define CPPUNIT_HAVE_CLASS_STRSTREAM  1<br>#endif<br>2. 修改头文件include/cppunit/Portability.h，将CPPUNIT_HAVE_NAMESPACES部分改为：<br>#if !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_NAMESPACE)<br>#  define CPPUNIT_NO_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_NAMESPACE)<br>#endif // !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_STD_NAMESPACE)<br>#  define CPPUNIT_NO_STD_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_STD_NAMESPACE)<br>3. 修改.cpp和.h中包括的头文件，将&lt;iostream&gt;, &lt;fstream&gt;改位&lt;iostream.h&gt;, &lt;fstream.h&gt;<br>再重新编译。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/10/cppunit在hp上的编译/" data-id="cj133pifx004o00c2klmxlunt" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/10/cppunit在hp上的编译/" data-id="cjmiwvaya004704c2tatxrws6" class="article-share-link">Share</a>
       
 
       
@@ -556,7 +557,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

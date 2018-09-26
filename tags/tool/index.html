@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/tool/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,15 +104,15 @@
       
         <p>环境越来越恶化，这两天到处都是Gmail彻底被墙的消息。我等屁民只有迎难而上，把vpn，ssh给用好。</p>
 <p>原先一直都是在用Chrome+SwitchySharp+ssh的方式，但这个方式不爽的是只支持http/https，很多时候git或brew更新时都会出问题，到时就只有祭起VPN大棋，但VPN的问题呢又在于走的是全局路由，包括国内的站点也都走了VPN，既慢又费流量。以前偶尔用用，一直懒得折腾，今天研究了一下，可以根据国内外地址设置不同的访问路由。这真是一个折腾的时代。</p>
-<p>在mac下需要的几个工具：修改路由的<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>和开源的OpenVPN客户端<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>，原理就是：</p>
+<p>在mac下需要的几个工具：修改路由的<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes</a>和开源的OpenVPN客户端<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>，原理就是：</p>
 <p>“<em>利用来自APNIC的数据生成路由命令脚本，让VPN客户端在连接时自动执行。通过这些路由脚本，可以让用户在使用VPN作为默认网关时，不使用VPN访问中国国内IP，从而减轻VPN负担，并提高访问国内网站的速度。</em>”</p>
-<p>如果你VPN服务使用PPTP，mac下很简单，参照<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes说明</a>即可，可惜我的<a href="https://www.123ssh.net/aff.php?aff=087" target="_blank" rel="external">VPN提供商</a>PPTP，L2TP，Cisco IPSecVPN几种连接方式相继被GFW干扰，目前只有采用OpenVPN的连接方式，参见<a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a>，不过Viscosity不是免费的，我就找个开源的<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>替代。</p>
+<p>如果你VPN服务使用PPTP，mac下很简单，参照<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes说明</a>即可，可惜我的<a href="https://www.123ssh.net/aff.php?aff=087" target="_blank" rel="noopener">VPN提供商</a>PPTP，L2TP，Cisco IPSecVPN几种连接方式相继被GFW干扰，目前只有采用OpenVPN的连接方式，参见<a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="noopener">Mac OS X通过Viscosity连接OpenVPN</a>，不过Viscosity不是免费的，我就找个开源的<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>替代。</p>
 <p>说明一下过程和注意事项：</p>
 <ul>
-<li>下载<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>。</li>
+<li>下载<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes</a>。</li>
 <li>在目录下执行python chnroutes.py -p mac ，生成 ip-up 与 ip-down 两个文件。</li>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中导入你的vpn服务提供商提供的配置文件。</li>
-<li>修改<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>的连接配置文件，增加</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>中导入你的vpn服务提供商提供的配置文件。</li>
+<li>修改<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>的连接配置文件，增加</li>
 </ul>
 <pre><code>
 up {your directory}/ip-up
@@ -121,24 +122,24 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
 </code></pre>
 
 <ul>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中的设置里Set DNS/WINS为“Do not setnameserver”，由前面的配置文件来指定。</li>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>连接VPN，连接成功后，可以访问<a href="http://ip138.com/" target="_blank" rel="external">ip138.com</a>和<a href="http://www.ip.cn/" target="_blank" rel="external">ip.cn</a>，前者为访问国内站点的ip地址，后者为访问国外站点的地址，两者应该不同。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>中的设置里Set DNS/WINS为“Do not setnameserver”，由前面的配置文件来指定。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>连接VPN，连接成功后，可以访问<a href="http://ip138.com/" target="_blank" rel="noopener">ip138.com</a>和<a href="http://www.ip.cn/" target="_blank" rel="noopener">ip.cn</a>，前者为访问国内站点的ip地址，后者为访问国外站点的地址，两者应该不同。</li>
 </ul>
-<p><em>– 12月30日更新：<br>发现连上VPN后，公司内网无法访问，参考<a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a>在ip-up/ip-down中增加公司的域名以及内网地址即可。对于Chrome来说可能需要清除缓存，否则总指向到该死的189so。</em></p>
+<p><em>– 12月30日更新：<br>发现连上VPN后，公司内网无法访问，参考<a href="http://fxck.it/post/57501298563" target="_blank" rel="noopener">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a>在ip-up/ip-down中增加公司的域名以及内网地址即可。对于Chrome来说可能需要清除缓存，否则总指向到该死的189so。</em></p>
 <p>参考的文章有：</p>
 <ul>
-<li><a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">jimmyxu/chnroutes</a></li>
-<li><a href="http://www.jianshu.com/p/6e84c6d7dc58" target="_blank" rel="external">Mac（OSX）使用VPN小技巧——国内外访问分流</a></li>
-<li><a href="http://v.ifiorano.com/post/21261756835" target="_blank" rel="external">解决max-routes参数的2000条限制</a></li>
-<li><a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a></li>
-<li><a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a></li>
+<li><a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">jimmyxu/chnroutes</a></li>
+<li><a href="http://www.jianshu.com/p/6e84c6d7dc58" target="_blank" rel="noopener">Mac（OSX）使用VPN小技巧——国内外访问分流</a></li>
+<li><a href="http://v.ifiorano.com/post/21261756835" target="_blank" rel="noopener">解决max-routes参数的2000条限制</a></li>
+<li><a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="noopener">Mac OS X通过Viscosity连接OpenVPN</a></li>
+<li><a href="http://fxck.it/post/57501298563" target="_blank" rel="noopener">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" data-id="cj133piie00ch00c2ogstaetm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" data-id="cjmiwvb0l00bm04c2ne8iey9o" class="article-share-link">Share</a>
       
 
       
@@ -184,16 +185,16 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://xbin999.com/2014/09/18/%E8%BF%81%E7%A7%BBwordpress%E5%88%B0hexo/">博客迁移到hexo</a>后，使用<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云</a>作为图床，日常就用它的命令行工具<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="external">qrsync</a>上传图像，上传成功后会显示日志。有点不爽的是日志中只是显示上传到服务器上的相对路径的文件名称，在写markdown 格式时，还需要自己去补充类似“![]”，然后再补充完整url信息。</p>
+        <p><a href="http://xbin999.com/2014/09/18/%E8%BF%81%E7%A7%BBwordpress%E5%88%B0hexo/">博客迁移到hexo</a>后，使用<a href="http://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>作为图床，日常就用它的命令行工具<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="noopener">qrsync</a>上传图像，上传成功后会显示日志。有点不爽的是日志中只是显示上传到服务器上的相对路径的文件名称，在写markdown 格式时，还需要自己去补充类似“![]”，然后再补充完整url信息。</p>
 <p>于是就在日志信息后加一个sed的脚本做替换，帮自动生成markdown格式，书写自然就方便了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Users/yangbin/bin/qrsync /Users/yangbin/bin/qiniu-conf.json 2&gt;&amp;1 |sed -e &apos;s/\(=&gt; xbin999:\)\(.*\)/=&gt; ![](http:\/\/xbin999.qiniudb.com\/\2\)/&apos;</div></pre></td></tr></table></figure>
-<p>另一种只显示结果文件格式的可以参见<a href="https://gist.github.com/xbin999/5d6ae721d04d51f99c39" target="_blank" rel="external">gist</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/yangbin/bin/qrsync /Users/yangbin/bin/qiniu-conf.json 2&gt;&amp;1 |sed -e &apos;s/\(=&gt; xbin999:\)\(.*\)/=&gt; ![](http:\/\/xbin999.qiniudb.com\/\2\)/&apos;</span><br></pre></td></tr></table></figure>
+<p>另一种只显示结果文件格式的可以参见<a href="https://gist.github.com/xbin999/5d6ae721d04d51f99c39" target="_blank" rel="noopener">gist</a>。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/" data-id="cj133pijy00hb00c24j9e48rd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/" data-id="cjmiwvb1w00gc04c2cmmcrvto" class="article-share-link">Share</a>
       
 
       
@@ -239,10 +240,10 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于一个爱看书的人来说（我能说我自己吗？），豆瓣和亚马逊是不可缺少的两个网站。豆瓣可以猜你喜欢，有推荐的豆列，还可以建立<a href="http://book.douban.com/cart" target="_blank" rel="external">购书单</a>，并且会提供购书单中各网站购买的价格对比，一般我选择在<a href="http://www.amazon.cn/" target="_blank" rel="external">亚马逊</a>购书比较多，这里除了种类和价格因素外，还有就是亚马逊的书籍推荐服务。</p>
-<p>我习惯的购书是日常在豆瓣中把要买的书加入购书单，然后去亚马逊购买，有活动自然会更划算。亚马逊经常会有各种各样的促销活动，但活动活动往往会有范围，而不是针对所有的书，比如现在的<a href="http://amzn.to/1x0AM7u" target="_blank" rel="external">“满199元返100元图书券”</a>活动，也有35万中文图书的限制。这样带来的问题就是，把书加入购物车后，却发现书又没参加活动，凑单的时候就更苦恼了。（不差钱的就不用管这些了）</p>
-<p>所以我一直想能不能有个服务，能检查一下我的购书单，看看有哪些书是参加了亚马逊的促销活动的。不过貌似豆瓣和亚马逊都不会有人提供，第三方的也总不见，无奈只有自己用ruby写了一个<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="external">“从豆瓣购书单中挑出有亚马逊促销的书籍”</a>。</p>
-<p>机制也很简单，先在浏览器打开你的<a href="http://book.douban.com/cart" target="_blank" rel="external">豆瓣购书单</a>，另存为cart.html，然后用了三个正则表达式用来做html的解析，你只需要修改最后的一个prom_regexp，提供亚马逊促销活动对应的促销码即可，比如<a href="http://amzn.to/1x0AM7u" target="_blank" rel="external">“满199元返100元图书券”</a>活动的促销码就是“<em>6HREB5FXXK</em>”，运行后的结果输出的就是你的购书单中参加了活动的书籍和豆瓣链接（当然你的电脑上需要安装有ruby的环境），适用于在购书单中列了一堆书又还没有钱，等着促销活动的朋友。</p>
+        <p>对于一个爱看书的人来说（我能说我自己吗？），豆瓣和亚马逊是不可缺少的两个网站。豆瓣可以猜你喜欢，有推荐的豆列，还可以建立<a href="http://book.douban.com/cart" target="_blank" rel="noopener">购书单</a>，并且会提供购书单中各网站购买的价格对比，一般我选择在<a href="http://www.amazon.cn/" target="_blank" rel="noopener">亚马逊</a>购书比较多，这里除了种类和价格因素外，还有就是亚马逊的书籍推荐服务。</p>
+<p>我习惯的购书是日常在豆瓣中把要买的书加入购书单，然后去亚马逊购买，有活动自然会更划算。亚马逊经常会有各种各样的促销活动，但活动活动往往会有范围，而不是针对所有的书，比如现在的<a href="http://amzn.to/1x0AM7u" target="_blank" rel="noopener">“满199元返100元图书券”</a>活动，也有35万中文图书的限制。这样带来的问题就是，把书加入购物车后，却发现书又没参加活动，凑单的时候就更苦恼了。（不差钱的就不用管这些了）</p>
+<p>所以我一直想能不能有个服务，能检查一下我的购书单，看看有哪些书是参加了亚马逊的促销活动的。不过貌似豆瓣和亚马逊都不会有人提供，第三方的也总不见，无奈只有自己用ruby写了一个<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="noopener">“从豆瓣购书单中挑出有亚马逊促销的书籍”</a>。</p>
+<p>机制也很简单，先在浏览器打开你的<a href="http://book.douban.com/cart" target="_blank" rel="noopener">豆瓣购书单</a>，另存为cart.html，然后用了三个正则表达式用来做html的解析，你只需要修改最后的一个prom_regexp，提供亚马逊促销活动对应的促销码即可，比如<a href="http://amzn.to/1x0AM7u" target="_blank" rel="noopener">“满199元返100元图书券”</a>活动的促销码就是“<em>6HREB5FXXK</em>”，运行后的结果输出的就是你的购书单中参加了活动的书籍和豆瓣链接（当然你的电脑上需要安装有ruby的环境），适用于在购书单中列了一堆书又还没有钱，等着促销活动的朋友。</p>
 <p>比如我的运行结果就是：</p>
 <pre><code>
 === books in promotion ===
@@ -258,13 +259,13 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
 ...
 </code></pre>
 
-<p>喜欢的朋友可以从github上获取<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="external">源代码</a>自行修改。</p>
+<p>喜欢的朋友可以从github上获取<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="noopener">源代码</a>自行修改。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/09/01/豆瓣购书单和亚马逊促销/" data-id="cj133pjxq02ah00c2rvxdsgt2" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/09/01/豆瓣购书单和亚马逊促销/" data-id="cjmiwvbx3028d04c217bu0nid" class="article-share-link">Share</a>
       
 
       
@@ -310,13 +311,13 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>在知乎上看到一个问题<a href="http://www.zhihu.com/question/20873070/answer/20139836" target="_blank" rel="external">程序员如何优雅地使用 Mac？</a>的回答，里面提到了一个mac上的工具<a href="http://inkscribbles.com/apps/tmpdisk/" target="_blank" rel="external">TmpDisk</a>，开源的内存磁盘管理工具，用来将你的内存虚拟成硬盘，加速文件的读写，缺点当然是关机或弹出磁盘文件就丢失了。不过这个貌似也看成是优点，你都不需要去考虑清理文件。<br><br>立即<a href="http://inkscribbles.com/downloads/TmpDisk-1.1.2.dmg" target="_blank" rel="external">下载</a>安装，设置好后，将我常用的下载目录（包括邮件附件）设置到该虚拟硬盘上，体验果然飞快啊。其实大多数邮件的附件下载下来并不需要长期保存，只要当时快速处理即可。这样只需要每天关机前将需要保存的文件转移到硬盘即可（刚好是一次整理过程），其他自动删除，爽。<br><br>没钱买SSD的人有福了，不过速度越快，心倒是更痒了。<br><br></div>
+        <div id="wrapper"><br><br>在知乎上看到一个问题<a href="http://www.zhihu.com/question/20873070/answer/20139836" target="_blank" rel="noopener">程序员如何优雅地使用 Mac？</a>的回答，里面提到了一个mac上的工具<a href="http://inkscribbles.com/apps/tmpdisk/" target="_blank" rel="noopener">TmpDisk</a>，开源的内存磁盘管理工具，用来将你的内存虚拟成硬盘，加速文件的读写，缺点当然是关机或弹出磁盘文件就丢失了。不过这个貌似也看成是优点，你都不需要去考虑清理文件。<br><br>立即<a href="http://inkscribbles.com/downloads/TmpDisk-1.1.2.dmg" target="_blank" rel="noopener">下载</a>安装，设置好后，将我常用的下载目录（包括邮件附件）设置到该虚拟硬盘上，体验果然飞快啊。其实大多数邮件的附件下载下来并不需要长期保存，只要当时快速处理即可。这样只需要每天关机前将需要保存的文件转移到硬盘即可（刚好是一次整理过程），其他自动删除，爽。<br><br>没钱买SSD的人有福了，不过速度越快，心倒是更痒了。<br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/11/28/没钱买ssd的人可以用内存做临时存储/" data-id="cj133pjhy01w900c25g8kuwvi" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/11/28/没钱买ssd的人可以用内存做临时存储/" data-id="cjmiwvbo401u604c293k451t0" class="article-share-link">Share</a>
       
 
       
@@ -362,18 +363,18 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="external">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="external">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="external">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="external">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
+        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="noopener">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="noopener">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="noopener">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="noopener">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
 
 </em>   运行flavor时报错<br><br>    ~/.rvm/gems/ruby-1.9.3-p125/gems/json-1.7.5/lib/json/ext/parser.bundle: [BUG] Segmentation fault<br>    ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]<br>    <code>&lt;/pre&gt;
     这个原因是flavor.rb指定了/usr/bin/ruby，和我的rvm环境不一致，修改ruby运行环境即可。
 *   命令行下mail 运行时报错
-    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="external">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
+    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="noopener">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cj133pjrt025o00c2dw0lao7k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cjmiwvbtv023l04c2sakbzzgc" class="article-share-link">Share</a>
       
 
       
@@ -425,22 +426,22 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
 <li>用几个#号来标识标题。</li>
 <li>段落的写法，第一个是数字，那就按数字1,2,3排，非数字就是符号排的段落，第一个字符用-, *, + 都可以。</li>
 <li>链接的写法，最简单的就是中括号里写文字，后面小括号里写链接，相同主机内可以使用相对路径。</li>
-<li>对写代码的人来说，还有一个要记住的是用反引号`把代码给括起来。<br>我觉得有这么几招就差不多了，顶多用两个星号搞搞<strong>粗体</strong>、一个星号<em>斜体</em>，详细的使用帮助可以参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">markdown语法说明</a>。</li>
+<li>对写代码的人来说，还有一个要记住的是用反引号`把代码给括起来。<br>我觉得有这么几招就差不多了，顶多用两个星号搞搞<strong>粗体</strong>、一个星号_斜体_，详细的使用帮助可以参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">markdown语法说明</a>。</li>
 </ol>
 <p><strong>“工欲善其事，必先利其器。”</strong></p>
-<p>首先，我得选择一个文本编写工具来替代Stickies，支持markdown，简单一点，能自动保存。<a href="http://mouapp.com/" target="_blank" rel="external">Mou</a> 不够简单，还是觉得<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 不错，简洁得很，同时支持<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 的云服务。（<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 同时提供iphone/ipad下的客户端应用，虽然<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 在国内访问貌似不畅。）</p>
-<p>其次需要能把markdown文件转成html文件，将格式内容进行保存或者发布到博客中（我一般还是会保存在Evernote中，话说Evernote什么时候能支持markdown啊）。<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身能提供预览并保存html文件。另外mac下还有两个不错的工具：</p>
+<p>首先，我得选择一个文本编写工具来替代Stickies，支持markdown，简单一点，能自动保存。<a href="http://mouapp.com/" target="_blank" rel="noopener">Mou</a> 不够简单，还是觉得<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 不错，简洁得很，同时支持<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 的云服务。（<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 同时提供iphone/ipad下的客户端应用，虽然<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 在国内访问貌似不畅。）</p>
+<p>其次需要能把markdown文件转成html文件，将格式内容进行保存或者发布到博客中（我一般还是会保存在Evernote中，话说Evernote什么时候能支持markdown啊）。<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 本身能提供预览并保存html文件。另外mac下还有两个不错的工具：</p>
 <ul>
-<li>一个是chrome扩展<a href="https://github.com/adam-p/markdown-here" target="_blank" rel="external">Markdown here</a> 对于使用gmail的人来说有帮助，先用markdown写邮件，然后使用该插件Markdown Toggle做一次转换即可；</li>
-<li>一个是<a href="http://brettterpstra.com/projects/markdown-service-tools/" target="_blank" rel="external">md</a> ，提供了mac OS下的一堆服务，让你在文本编辑下右键菜单出现一堆常用的markdown服务。<br>最后再推荐<a href="https://github.com/github/gollum" target="_blank" rel="external">gollum</a> ，基于<a href="http://git-scm.com/" target="_blank" rel="external">git</a> 的个人wiki管理工具，和<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 配合（<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身也能提供页面的跳转，够强大吧），一个写markdown文件，一个提供wiki页面和搜索。</li>
+<li>一个是chrome扩展<a href="https://github.com/adam-p/markdown-here" target="_blank" rel="noopener">Markdown here</a> 对于使用gmail的人来说有帮助，先用markdown写邮件，然后使用该插件Markdown Toggle做一次转换即可；</li>
+<li>一个是<a href="http://brettterpstra.com/projects/markdown-service-tools/" target="_blank" rel="noopener">md</a> ，提供了mac OS下的一堆服务，让你在文本编辑下右键菜单出现一堆常用的markdown服务。<br>最后再推荐<a href="https://github.com/github/gollum" target="_blank" rel="noopener">gollum</a> ，基于<a href="http://git-scm.com/" target="_blank" rel="noopener">git</a> 的个人wiki管理工具，和<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 配合（<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 本身也能提供页面的跳转，够强大吧），一个写markdown文件，一个提供wiki页面和搜索。</li>
 </ul>
-<p>先写这么多，等使用时间长了，有心得再做更新，这篇文章就是基于<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 写的。</p>
+<p>先写这么多，等使用时间长了，有心得再做更新，这篇文章就是基于<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 写的。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/02/07/采用markdown来编写文档/" data-id="cj133pjzz02cj00c2hwxagvef" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/02/07/采用markdown来编写文档/" data-id="cjmiwvbyg02ae04c23fbwccpi" class="article-share-link">Share</a>
       
 
       
@@ -486,17 +487,17 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前在safari中一直使用<a href="http://archive.robwilkerson.org/2010/06/16/add-to-google-reader-extension-for-safari-5/" target="_blank" rel="external">Add To Google Reader</a>订阅RSS，不过由于老外不必担心GFW，采用http即可，但是我使用的时候经常都很杯具的是http无法访问google，从而必须手工改成https，再刷新一次，很不爽。</p>
-<p>就像修改一下，去找代码，codaset已经不能访问。就到<a href="https://github.com/" target="_blank" rel="external">github</a>上找了个<a href="http://robwilkerson.org/" target="_blank" rel="external">Rob Wilkerson</a> 之前参考的版本，也就是<a href="http://github.com/Chupa" target="_blank" rel="external">Chupa</a>的<a href="http://github.com/Chupa/Read-in-Google-Reader" target="_blank" rel="external">源代码</a>。我也clone了他的代码，做了一些修改。</p>
+        <p>之前在safari中一直使用<a href="http://archive.robwilkerson.org/2010/06/16/add-to-google-reader-extension-for-safari-5/" target="_blank" rel="noopener">Add To Google Reader</a>订阅RSS，不过由于老外不必担心GFW，采用http即可，但是我使用的时候经常都很杯具的是http无法访问google，从而必须手工改成https，再刷新一次，很不爽。</p>
+<p>就像修改一下，去找代码，codaset已经不能访问。就到<a href="https://github.com/" target="_blank" rel="noopener">github</a>上找了个<a href="http://robwilkerson.org/" target="_blank" rel="noopener">Rob Wilkerson</a> 之前参考的版本，也就是<a href="http://github.com/Chupa" target="_blank" rel="noopener">Chupa</a>的<a href="http://github.com/Chupa/Read-in-Google-Reader" target="_blank" rel="noopener">源代码</a>。我也clone了他的代码，做了一些修改。</p>
 <p>一是采用https的方式访问google；</p>
 <p>二是点击RSS按钮后直接采用google reader订阅，而不需要选择iGoogle或Reader。</p>
-<p>你可以直接在target中<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension/raw/master/target/read-in-https-google-reader.safariextz" target="_blank" rel="external">下载</a>安装即可，或者在<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension" target="_blank" rel="external">read-in-https-google-reader</a>中得到源代码。</p>
+<p>你可以直接在target中<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension/raw/master/target/read-in-https-google-reader.safariextz" target="_blank" rel="noopener">下载</a>安装即可，或者在<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension" target="_blank" rel="noopener">read-in-https-google-reader</a>中得到源代码。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/" data-id="cj133pj1i01d600c2xq2yt9vc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/" data-id="cjmiwvbdt01bb04c2fe8kwmzi" class="article-share-link">Share</a>
       
 
       
@@ -542,7 +543,7 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前在<a href="https://img.skitch.com/20120208-e9s5m2j2k9hrshri64aka8r4dg.jpg" target="_blank" rel="external">微博上</a>推荐过一个ios的应用《<a href="http://itunes.apple.com/cn/app/li-shi-shang-jin-tian-le-jie/id471834408?mt=8" target="_blank" rel="external">历史上的今天</a>》，iphone和ipad上都有，免费带广告。意犹未尽，决定再说说自己用的体会。</p>
+        <p>之前在<a href="https://img.skitch.com/20120208-e9s5m2j2k9hrshri64aka8r4dg.jpg" target="_blank" rel="noopener">微博上</a>推荐过一个ios的应用《<a href="http://itunes.apple.com/cn/app/li-shi-shang-jin-tian-le-jie/id471834408?mt=8" target="_blank" rel="noopener">历史上的今天</a>》，iphone和ipad上都有，免费带广告。意犹未尽，决定再说说自己用的体会。</p>
 <p>功能和界面都挺简单，每天自动告诉你历史上今天发生了什么，包括大事记、出生、逝世、节假日和习俗四个部分。你并不能自己选择某一天去查询事件，但我恰恰觉得这点限制使得该应用成了一个很好地讲述工具，象一本历史故事书，能让你娓娓道来，而不是定位于一个历史工具书。对于事件中的关键字一般会提供链接，进行百度搜索，一般需要详细解释时，我会跳到维基百科、百度百科、互动百科等查看详细描述。</p>
 <p><img src="https://img.skitch.com/20120208-e9s5m2j2k9hrshri64aka8r4dg.jpg" alt="历史上的今天"></p>
 <p>小乐向来对历史有一定的兴趣，故每天晚上小乐临睡前，都会有几分钟时间，我给她讲述一下《历史上的今天》，一般我会挑一些小乐有兴趣的内容，或者拓宽知识面的点，有些只是照读，有些则会查询百科细究。相比于历史百科全书来说，应用还是有很强的优势：</p>
@@ -565,7 +566,7 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/02/08/iosapp推荐《历史上的今天》/" data-id="cj133pihy00ar00c2scxdr2wx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/02/08/iosapp推荐《历史上的今天》/" data-id="cjmiwvb07009z04c2qzb1uv70" class="article-share-link">Share</a>
       
 
       
@@ -611,14 +612,14 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div>刚想换算一下港币，google能直接告诉我们答案，不过一开始输入的查询语句有问题，后来改成“<a href="http://www.google.com.hk/#hl=zh-CN&amp;source=hp&amp;q=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;oq=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=e&amp;gs_upl=1882l6890l0l7169l31l14l0l0l0l0l0l0ll0l0&amp;bav=cf.osb&amp;fp=4c2aaa88d72919d4&amp;biw=1239&amp;bih=670" target="_blank" rel="external">1港币等于多少人民币</a>”才行。</div></p>
+        <p><div>刚想换算一下港币，google能直接告诉我们答案，不过一开始输入的查询语句有问题，后来改成“<a href="http://www.google.com.hk/#hl=zh-CN&amp;source=hp&amp;q=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;oq=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=e&amp;gs_upl=1882l6890l0l7169l31l14l0l0l0l0l0l0ll0l0&amp;bav=cf.osb&amp;fp=4c2aaa88d72919d4&amp;biw=1239&amp;bih=670" target="_blank" rel="noopener">1港币等于多少人民币</a>”才行。</div></p>
 <p><div>不过也正因为此，想去找一个mac下的汇率计算工具，才发现Calculator就提供了这一功能，选择”Convert - Currency”，真是方便。</div><br><img src="https://img.skitch.com/20111016-jsj3eijarcm3yfhr5rh1kcaqy7.jpg" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/10/17/slugs-6/" data-id="cj133pilu00m700c2gv3rw7jx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/10/17/slugs-6/" data-id="cjmiwvb3f00l204c2ljxrds6j" class="article-share-link">Share</a>
       
 
       
@@ -664,13 +665,13 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前养成好习惯，尽量使用一些跨平台的软件，比如Evernote, dropbox, Filezilla, Freemind，这样在切换到mac上的时候能加快过渡。<div>不过在实际使用的时候，在这几个软件上都碰到了一些问题：</div><div>1. Freemind无法输入中文</div><div>解决方法：先切换到英文输入发，再启动Freemind，就可以输入中文了；</div><div>2. Filezilla连接上ftp server后，不能显示目录</div><div>解决方法：今天服务器上传了一些<a href="http://weibo.com/k/%25E5%25B0%258F%25E4%25B9%2590%25E8%258B%258F%25E5%25B7%259E%25E8%25A1%258C&amp;refer=miniblog_jing" target="_blank" rel="external">去苏州玩</a>的照片，结果上去一看服务器上啥文件也看不到。原来是<a href="http://os.51cto.com/art/201103/247723.htm" target="_blank" rel="external">编码的问题</a>，在站点管理器中修改站点的编码为gb2312就可以了；</div><div>3. dropbox无法实时更新</div><div>解决方法：这个应该和mac无关，只是因为一下子有了两台机器实时更新的需求，才发现它的存在和严重性。<a href="http://www.williamlong.info/archives/2585.html" target="_blank" rel="external">月光博客上有篇详细的文章</a>，还是要感谢伟大的GFW。没用privoxy，我暂时还没去管它。</div></p>
+        <p>之前养成好习惯，尽量使用一些跨平台的软件，比如Evernote, dropbox, Filezilla, Freemind，这样在切换到mac上的时候能加快过渡。<div>不过在实际使用的时候，在这几个软件上都碰到了一些问题：</div><div>1. Freemind无法输入中文</div><div>解决方法：先切换到英文输入发，再启动Freemind，就可以输入中文了；</div><div>2. Filezilla连接上ftp server后，不能显示目录</div><div>解决方法：今天服务器上传了一些<a href="http://weibo.com/k/%25E5%25B0%258F%25E4%25B9%2590%25E8%258B%258F%25E5%25B7%259E%25E8%25A1%258C&amp;refer=miniblog_jing" target="_blank" rel="noopener">去苏州玩</a>的照片，结果上去一看服务器上啥文件也看不到。原来是<a href="http://os.51cto.com/art/201103/247723.htm" target="_blank" rel="noopener">编码的问题</a>，在站点管理器中修改站点的编码为gb2312就可以了；</div><div>3. dropbox无法实时更新</div><div>解决方法：这个应该和mac无关，只是因为一下子有了两台机器实时更新的需求，才发现它的存在和严重性。<a href="http://www.williamlong.info/archives/2585.html" target="_blank" rel="noopener">月光博客上有篇详细的文章</a>，还是要感谢伟大的GFW。没用privoxy，我暂时还没去管它。</div></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/20/slugs-3/" data-id="cj133pilr00lx00c2jaybzjox" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/20/slugs-3/" data-id="cjmiwvb3c00kr04c2hbhildqn" class="article-share-link">Share</a>
       
 
       
@@ -787,7 +788,7 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

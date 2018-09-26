@@ -5,20 +5,19 @@
   
   <title>学习一下git（二） | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="两种途径开始git，一是init初始化新仓库，再添加文件；二是从现有仓库clone。   git init
-   git clone&amp;gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需">
+  <meta name="description" content="两种途径开始git，一是init初始化新仓库，再添加文件；二是从现有仓库clone。   git init    git clone&amp;gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习一下git（二）">
 <meta property="og:url" content="http://xbin999.com/2013/09/11/学习一下git（二）/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="两种途径开始git，一是init初始化新仓库，再添加文件；二是从现有仓库clone。   git init
-   git clone&amp;gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需">
+<meta property="og:description" content="两种途径开始git，一是init初始化新仓库，再添加文件；二是从现有仓库clone。   git init    git clone&amp;gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://github-camo.global.ssl.fastly.net/4e3bee80d97c66b665aca0ec27195ad1706dc76c/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303230312d746e2e706e67">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习一下git（二）">
-<meta name="twitter:description" content="两种途径开始git，一是init初始化新仓库，再添加文件；二是从现有仓库clone。   git init
-   git clone&amp;gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需">
+<meta name="twitter:description" content="两种途径开始git，一是init初始化新仓库，再添加文件；二是从现有仓库clone。   git init    git clone&amp;gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需">
 <meta name="twitter:image" content="https://github-camo.global.ssl.fastly.net/4e3bee80d97c66b665aca0ec27195ad1706dc76c/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303230312d746e2e706e67">
 <meta name="twitter:creator" content="@xbin999">
   
@@ -106,17 +105,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <div id="wrapper"><br><br>两种途径开始git，一是init初始化新仓库，再添加文件；二是从现有仓库clone。<br><br><em>   git init
-</em>   git clone&gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。<br><br>在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需要理解<a href="http://xbin999.com/2013/08/21/%e5%ad%a6%e4%b9%a0%e4%b8%80%e4%b8%8bgit%ef%bc%88%e4%b8%80%ef%bc%89/">三个区域</a>，以及在区域间文件的状态变化周期。<br><br><a href="https://github-camo.global.ssl.fastly.net/4e3bee80d97c66b665aca0ec27195ad1706dc76c/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303230312d746e2e706e67" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/4e3bee80d97c66b665aca0ec27195ad1706dc76c/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303230312d746e2e706e67" alt="文件的状态变化周期"></a><br><br><em>   git diff 比较工作目录中当前文件和暂存区域快照之间的差异。
-</em>   git diff –cached 比较暂存区域和上次提交的快照之间的差异。<br><em>   git diff –staged 同上。git diff采用合并格式diff的变体，带上下文，有关diff的格式详细参考<a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">阮一峰的读懂diff</a>。&gt; diff –git a/yun.txt b/yun.txt<br>&gt;<br>&gt;     index de629e5..67ca091 100755<br>&gt;<br>&gt;     — a/yun.txt<br>&gt;<br>&gt;     +++ b/yun.txt<br>&gt;<br>&gt;     @@ -13,3 +13,4 @@ pc-jfjwapp11     10.70.217.70<br>&gt;<br>&gt;      pc-jfjwapp12     10.70.217.71<br>&gt;<br>&gt;      $ test<br>&gt;<br>&gt;      second line<br>&gt;<br>&gt;     +add 8-21<br>&gt;<br>&gt; 1.  第一行，a版本是变动前的，b版本是变动后的。<br>&gt; 2.  第二行，de629e5是a版本的哈希值，67ca091是b版本的哈希值，755表示文件权限。<br>&gt; 3.  第三、四行表示比较的两个文件，—是a版本，+++是b版本。<br>&gt; 4.  第五行@@和@@之间是两个文件的变化，-13,3 是a版本的第13行开始，一共3行，+13,4是表示b版本的第13行开始，一共4行。<br>&gt; 5.  之后是变化的文件内容，带有+号的是表示b版本内容，带有-号的是表示a版本的内容。
+</em>   git clone&gt; 为什么是clone，而不是checkout，就是因为git和其他VCS不同的是git收取项目历史所有的数据，而不仅仅是某一个版本。<br><br>在有了git仓库后，常用的操作就是add, commit, log, status, diff, rm, mv，而这些操作还是需要理解<a href="http://xbin999.com/2013/08/21/%e5%ad%a6%e4%b9%a0%e4%b8%80%e4%b8%8bgit%ef%bc%88%e4%b8%80%ef%bc%89/">三个区域</a>，以及在区域间文件的状态变化周期。<br><br><a href="https://github-camo.global.ssl.fastly.net/4e3bee80d97c66b665aca0ec27195ad1706dc76c/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303230312d746e2e706e67" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/4e3bee80d97c66b665aca0ec27195ad1706dc76c/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303230312d746e2e706e67" alt="文件的状态变化周期"></a><br><br><em>   git diff 比较工作目录中当前文件和暂存区域快照之间的差异。
+</em>   git diff –cached 比较暂存区域和上次提交的快照之间的差异。<br><em>   git diff –staged 同上。git diff采用合并格式diff的变体，带上下文，有关diff的格式详细参考<a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="noopener">阮一峰的读懂diff</a>。&gt; diff –git a/yun.txt b/yun.txt<br>&gt;<br>&gt;     index de629e5..67ca091 100755<br>&gt;<br>&gt;     — a/yun.txt<br>&gt;<br>&gt;     +++ b/yun.txt<br>&gt;<br>&gt;     @@ -13,3 +13,4 @@ pc-jfjwapp11     10.70.217.70<br>&gt;<br>&gt;      pc-jfjwapp12     10.70.217.71<br>&gt;<br>&gt;      $ test<br>&gt;<br>&gt;      second line<br>&gt;<br>&gt;     +add 8-21<br>&gt;<br>&gt; 1.  第一行，a版本是变动前的，b版本是变动后的。<br>&gt; 2.  第二行，de629e5是a版本的哈希值，67ca091是b版本的哈希值，755表示文件权限。<br>&gt; 3.  第三、四行表示比较的两个文件，—是a版本，+++是b版本。<br>&gt; 4.  第五行@@和@@之间是两个文件的变化，-13,3 是a版本的第13行开始，一共3行，+13,4是表示b版本的第13行开始，一共4行。<br>&gt; 5.  之后是变化的文件内容，带有+号的是表示b版本内容，带有-号的是表示a版本的内容。
 
 </em>   git commit<em>   git commit -a 跳过使用暂存区域，也就是不要git add了。
 </em>   git rm 移除文件<br><em>   git rm –cached 从暂存区域移除，当前工作目录保留，比如编译中间文件。
-</em>   git log -p -2 其中-p选项展开显示每次提交的内容差异，-2则仅显示最近的两次更新。<br>*   gitk 是随git一同发布，基于Tcl/Tk的，git log的图形化工具。<br><br>如果和常规的版本控制管理系统相比较，多人协同开发，还是需要一个代码托管的地方。<a href="https://github.com/" target="_blank" rel="external">github</a> 就提供了免费软件项目git仓库托管服务，国内也有<a href="https://gitcafe.com/" target="_blank" rel="external">gitcafe</a>。所以完整的git使用还涉及和托管服务之间的交互，和远程仓库的协作下次继续。<br><br></div>
+</em>   git log -p -2 其中-p选项展开显示每次提交的内容差异，-2则仅显示最近的两次更新。<br>*   gitk 是随git一同发布，基于Tcl/Tk的，git log的图形化工具。<br><br>如果和常规的版本控制管理系统相比较，多人协同开发，还是需要一个代码托管的地方。<a href="https://github.com/" target="_blank" rel="noopener">github</a> 就提供了免费软件项目git仓库托管服务，国内也有<a href="https://gitcafe.com/" target="_blank" rel="noopener">gitcafe</a>。所以完整的git使用还涉及和托管服务之间的交互，和远程仓库的协作下次继续。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/09/11/学习一下git（二）/" data-id="cj133pj4001gk00c22rmis0v8" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/09/11/学习一下git（二）/" data-id="cjmiwvbfi01eq04c2xrk4rvj1" class="article-share-link">Share</a>
       
 
       
@@ -251,7 +250,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

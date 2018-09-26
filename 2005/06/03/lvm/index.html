@@ -6,11 +6,13 @@
   <title>LVM | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="• 要使用 LVM，磁盘必须首先初始化为物理卷（也称为 LVM 磁盘）。• 初始化一个或多个物理卷之后，将它们分为一个或多个卷组。如果将所有物理卷视为一个存储池，那么，该存储池的一部分磁盘可以组织成一个卷组。• 一个特定磁盘只能属于一个卷组。可创建的卷组的最大数由可配置参数maxvgs 决定。• 一个卷组可包含 1 到 255 个物理卷。• 来自卷组的磁盘空间被划分为逻辑卷。逻辑卷是一种不同的">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LVM">
 <meta property="og:url" content="http://xbin999.com/2005/06/03/lvm/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="• 要使用 LVM，磁盘必须首先初始化为物理卷（也称为 LVM 磁盘）。• 初始化一个或多个物理卷之后，将它们分为一个或多个卷组。如果将所有物理卷视为一个存储池，那么，该存储池的一部分磁盘可以组织成一个卷组。• 一个特定磁盘只能属于一个卷组。可创建的卷组的最大数由可配置参数maxvgs 决定。• 一个卷组可包含 1 到 255 个物理卷。• 来自卷组的磁盘空间被划分为逻辑卷。逻辑卷是一种不同的">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://byfiles.storage.live.com/y1pqFp92vOQ_wbBawutvM24W8noZPoF726vMMZW7J9WC-Ih21kPP6dCvCWIg4ibgS-bWcWCstjMkxw">
 <meta property="og:updated_time" content="2014-09-18T07:27:14.000Z">
 <meta name="twitter:card" content="summary">
@@ -100,13 +102,13 @@
       
         <div id="msgcns!B3AD1EA9132E7DF1!218" class="bvMsg">
 
-<p>• 要使用 LVM，磁盘必须首先初始化为<strong>物理卷</strong>（也称为 LVM 磁盘）。<br>• 初始化一个或多个物理卷之后，将它们分为一个或多个<strong>卷组</strong>。如果将所有<br>物理卷视为一个存储池，那么，该存储池的一部分磁盘可以组织成一个卷<br>组。<br>• 一个特定磁盘只能属于一个卷组。可创建的卷组的最大数由可配置参数<br>maxvgs 决定。<br>• 一个卷组可包含 1 到 255 个物理卷。<br>• 来自卷组的磁盘空间被划分为<strong>逻辑卷</strong>。逻辑卷是一种不同的可用磁盘空间<br>单元。一个卷组最多可包含 255 个逻辑卷。<br>• 逻辑卷可以只存在于一个磁盘上，也可以存在于许多磁盘上。<br>• 逻辑卷的磁盘空间可以用于交换、转储、原始数据，或者，也可以在其上<br>创建文件系统。<br></p></div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1pqFp92vOQ_wbBawutvM24W8noZPoF726vqk3utv2xxvSaGDlS07NKdC2e7EStCUJKemJR-MbSnUY" target="_blank" rel="external"><img src="http://byfiles.storage.live.com/y1pqFp92vOQ_wbBawutvM24W8noZPoF726vMMZW7J9WC-Ih21kPP6dCvCWIg4ibgS-bWcWCstjMkxw" alt=""></a></td></tr></table><p></p>
+<p>• 要使用 LVM，磁盘必须首先初始化为<strong>物理卷</strong>（也称为 LVM 磁盘）。<br>• 初始化一个或多个物理卷之后，将它们分为一个或多个<strong>卷组</strong>。如果将所有<br>物理卷视为一个存储池，那么，该存储池的一部分磁盘可以组织成一个卷<br>组。<br>• 一个特定磁盘只能属于一个卷组。可创建的卷组的最大数由可配置参数<br>maxvgs 决定。<br>• 一个卷组可包含 1 到 255 个物理卷。<br>• 来自卷组的磁盘空间被划分为<strong>逻辑卷</strong>。逻辑卷是一种不同的可用磁盘空间<br>单元。一个卷组最多可包含 255 个逻辑卷。<br>• 逻辑卷可以只存在于一个磁盘上，也可以存在于许多磁盘上。<br>• 逻辑卷的磁盘空间可以用于交换、转储、原始数据，或者，也可以在其上<br>创建文件系统。<br></p></div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1pqFp92vOQ_wbBawutvM24W8noZPoF726vqk3utv2xxvSaGDlS07NKdC2e7EStCUJKemJR-MbSnUY" target="_blank" rel="noopener"><img src="http://byfiles.storage.live.com/y1pqFp92vOQ_wbBawutvM24W8noZPoF726vMMZW7J9WC-Ih21kPP6dCvCWIg4ibgS-bWcWCstjMkxw" alt=""></a></td></tr></table><p></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/06/03/lvm/" data-id="cj133piid00cb00c23vloxjgn" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/06/03/lvm/" data-id="cjmiwvb0j00bg04c2hsi9gqaq" class="article-share-link">Share</a>
       
 
       
@@ -241,7 +243,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

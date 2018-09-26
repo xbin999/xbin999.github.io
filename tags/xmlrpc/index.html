@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/xmlrpc/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://xmlrpc.scripting.com/spec.html" target="_blank" rel="external">XML-RPC</a> 是互联网上的一种远程过程调用协议，采用http+xml的方式。XML-RPC消息是一个HTTP-POST请求，请求报文是XML，而服务端调用返回的报文也采用XML格式。<br><br>XML-RPC支持的数据类型有：int, string, boolean, double, dateTime.iso8601, base64, array, struct。如果不指定类型，缺省为string。<br><br>返回报文正常情况都是200 OK，比如：<br><br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Length: 158<br>    Content-Type: text/xml<br>    Date: Fri, 17 Jul 1998 19:55:08 GMT<br>    Server: UserLand Frontier/5.1.2-WinNT<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br><a href="http://xmlrpc.scripting.com/spec.html" target="_blank" rel="noopener">XML-RPC</a> 是互联网上的一种远程过程调用协议，采用http+xml的方式。XML-RPC消息是一个HTTP-POST请求，请求报文是XML，而服务端调用返回的报文也采用XML格式。<br><br>XML-RPC支持的数据类型有：int, string, boolean, double, dateTime.iso8601, base64, array, struct。如果不指定类型，缺省为string。<br><br>返回报文正常情况都是200 OK，比如：<br><br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Length: 158<br>    Content-Type: text/xml<br>    Date: Fri, 17 Jul 1998 19:55:08 GMT<br>    Server: UserLand Frontier/5.1.2-WinNT<br>    <code>&lt;/pre&gt;
     &amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;
     &amp;lt;methodResponse&amp;gt;
     &amp;lt;params&amp;gt;
@@ -111,16 +112,16 @@
     &amp;lt;/params&amp;gt;
     &amp;lt;/methodResponse&amp;gt;
     &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-    &lt;pre&gt;</code><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">Ruby 很好地提供了对XML-RPC的支持，直接require “xmlrpc”，分别有</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Client.html" target="_blank" rel="external">client</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">和</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Server.html" target="_blank" rel="external">server</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">。一个简单的例子：</span><br>    <code>&lt;/pre&gt;
+    &lt;pre&gt;</code><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">Ruby 很好地提供了对XML-RPC的支持，直接require “xmlrpc”，分别有</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Client.html" target="_blank" rel="noopener">client</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">和</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Server.html" target="_blank" rel="noopener">server</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">。一个简单的例子：</span><br>    <code>&lt;/pre&gt;
     server 端，new创建一个实例，并在指定端口侦听，serve在增加了处理器后启动服务，处理XML-RPC请求并响应。
     &lt;pre&gt;</code><br>    require “xmlrpc/server”<br><br>    s = XMLRPC::Server.new(7777)<br>    s.add_handler(“michael.add”) do |a,b|<br>      a + b<br>    end<br><br>    s.serve<br>    <code>&lt;/pre&gt;
     client 端采用call调用方法，第一个参数是方法名，之后跟着方法需要的参数。
-    &lt;pre&gt;</code><br>    require “xmlrpc/client”<br><br>    server = XMLRPC::Client.new(“localhost”, “/RPC2”, 7777)<br>    begin<br>      param = server.call(“michael.add”, 4, 5)<br>      puts “4 + 5 = #{param}”<br>    rescue XMLRPC::FaultException =&gt; e<br>      puts “Error:”<br>      puts e.faultCode<br>      puts e.faultString<br>    end<br><br><a href="http://codex.wordpress.org/XML-RPC_Support" target="_blank" rel="external">Wordpress提供了XML-PRC的支持</a>，从WordPress 3.5起就默认支持XML-RPC功能，详细的API参见<a href="http://codex.wordpress.org/XML-RPC_WordPress_API" target="_blank" rel="external">XML-RPC WordPress API</a>，采用wp.接口取代了Blogger, MovableType和metaWeblog接口。<br><br></div>
+    &lt;pre&gt;</code><br>    require “xmlrpc/client”<br><br>    server = XMLRPC::Client.new(“localhost”, “/RPC2”, 7777)<br>    begin<br>      param = server.call(“michael.add”, 4, 5)<br>      puts “4 + 5 = #{param}”<br>    rescue XMLRPC::FaultException =&gt; e<br>      puts “Error:”<br>      puts e.faultCode<br>      puts e.faultString<br>    end<br><br><a href="http://codex.wordpress.org/XML-RPC_Support" target="_blank" rel="noopener">Wordpress提供了XML-PRC的支持</a>，从WordPress 3.5起就默认支持XML-RPC功能，详细的API参见<a href="http://codex.wordpress.org/XML-RPC_WordPress_API" target="_blank" rel="noopener">XML-RPC WordPress API</a>，采用wp.接口取代了Blogger, MovableType和metaWeblog接口。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/07/xml-rpc/" data-id="cj133pio200re00c2tnztp850" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/07/xml-rpc/" data-id="cjmiwvb5100q104c2sag5sg0u" class="article-share-link">Share</a>
       
 
       
@@ -233,7 +234,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

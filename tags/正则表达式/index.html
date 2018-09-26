@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/正则表达式/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,12 +102,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>最基本的有关正则表达式的使用<a href="http://xbin999.com/2013/06/08/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e5%92%8c%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba/">前面</a>说了，有关<a href="http://xbin999.com/2013/06/19/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e7%9a%84%e7%b1%bb%e5%a4%84%e7%90%86/">Regexp类中的$符号</a>也有说明，再补充说明一下一些常用的符号。<br><br>正则表达式中有几部分内容：<br><br>1.  先是patterns，所有字符除了., |, (, ), [, {, +, \, ^, $, <em>, 和 ?之外，都匹配自己本身。接下来其实就是了解这些乱七八糟的符号分别干嘛的。\ 用来做字符转义。<br>2.  anchors，^, $是最基本的表示首和尾，除此之外还有\A, \z, \Z, \b, \B。<br>&gt;- \A 字符串的开始<br>&gt;- \z 字符串的结尾<br>&gt;- \Z 支持以换行符结束的字符串的结尾<br>&gt;- \b 单词首尾<br>&gt;- \B 非单词首尾<br><br>    1.9.3p125 :024 &gt; showRE(“this is the time”, /time\z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :025 &gt; showRE(“this is the time”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :026 &gt; showRE(“this is the time\n”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;\n”    1.9.3p125 :027 &gt; showRE(“this is the time\n”, /time\z/)<br>    `<br>3.  字符类(character class)，放在[]中，有\d, \D, \s, \S, \w, \W。大写字母表示否定。<br>    &gt;- \d [0-9]数字<br>    &gt;- \D [^0-9]非数字<br>    &gt;- \s [\s\t\r\n\f] 空格<br>    &gt;- \S [^\s\t\r\n\f] 非空格    &gt;- \w [A-Za-z0-9<em>] 单词字符<br>    &gt;- \W[^A-Za-z0-9</em>] 非单词字符4.  用于表示重复，</em>, +, ?，还有{m,n}, {m,}的形式。<br>5.  替换，|<br>6.  组合，()<br><br>    乱七八糟的字符就说完了，还有一个常用的是替换，也就是sub和gsub，这里会用到\1, \2等模式中匹配到的变量，比如：<br><br>    <pre>`<br>    “fred:smith”.sub(/(\w+):(\w+)/, ‘\2, \1’) » “smith, fred”<br>    “nercpyitno”.gsub(/(.)(.)/, ‘\2\1’) » “encryption”<br><br></pre></div>
+        <div id="wrapper"><br><br>最基本的有关正则表达式的使用<a href="http://xbin999.com/2013/06/08/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e5%92%8c%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba/">前面</a>说了，有关<a href="http://xbin999.com/2013/06/19/ruby%e4%b8%ad%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e7%9a%84%e7%b1%bb%e5%a4%84%e7%90%86/">Regexp类中的$符号</a>也有说明，再补充说明一下一些常用的符号。<br><br>正则表达式中有几部分内容：<br><br>1.  先是patterns，所有字符除了., |, (, ), [, {, +, \, ^, $, <em>, 和 ?之外，都匹配自己本身。接下来其实就是了解这些乱七八糟的符号分别干嘛的。\ 用来做字符转义。<br>2.  anchors，^, $是最基本的表示首和尾，除此之外还有\A, \z, \Z, \b, \B。<br>&gt;- \A 字符串的开始<br>&gt;- \z 字符串的结尾<br>&gt;- \Z 支持以换行符结束的字符串的结尾<br>&gt;- \b 单词首尾<br>&gt;- \B 非单词首尾<br><br>    1.9.3p125 :024 &gt; showRE(“this is the time”, /time\z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :025 &gt; showRE(“this is the time”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;”    1.9.3p125 :026 &gt; showRE(“this is the time\n”, /time\Z/)<br>    =&gt; “this is the &lt;&gt;\n”    1.9.3p125 :027 &gt; showRE(“this is the time\n”, /time\z/)<br>    `<br>3.  字符类(character class)，放在[]中，有\d, \D, \s, \S, \w, \W。大写字母表示否定。<br>    &gt;- \d [0-9]数字<br>    &gt;- \D [^0-9]非数字<br>    &gt;- \s [\s\t\r\n\f] 空格<br>    &gt;- \S [^\s\t\r\n\f] 非空格    &gt;- \w [A-Za-z0-9_] 单词字符<br>    &gt;- \W[^A-Za-z0-9_] 非单词字符4.  用于表示重复，</em>, +, ?，还有{m,n}, {m,}的形式。<br>5.  替换，|<br>6.  组合，()<br><br>    乱七八糟的字符就说完了，还有一个常用的是替换，也就是sub和gsub，这里会用到\1, \2等模式中匹配到的变量，比如：<br><br>    <pre>`<br>    “fred:smith”.sub(/(\w+):(\w+)/, ‘\2, \1’) » “smith, fred”<br>    “nercpyitno”.gsub(/(.)(.)/, ‘\2\1’) » “encryption”<br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/20/正则表达式中的符号/" data-id="cj133pjh201vd00c21sdb2f7d" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/20/正则表达式中的符号/" data-id="cjmiwvbnm01t904c2e9vm82sx" class="article-share-link">Share</a>
       
 
       
@@ -170,7 +171,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/19/ruby中正则表达式的类处理/" data-id="cj133pikp00j700c2rgy2yzki" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/19/ruby中正则表达式的类处理/" data-id="cjmiwvb2i00i804c20nw7l3d8" class="article-share-link">Share</a>
       
 
       
@@ -283,7 +284,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

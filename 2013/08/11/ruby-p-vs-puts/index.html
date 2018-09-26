@@ -6,11 +6,13 @@
   <title>ruby p vs puts | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="看代码的时候看到了 p ““  80 + “validated” ，心想这个p是啥玩意，为啥不用puts啊？细看一下还有点讲究，p是个Kernel方法，p打印的是inspect方法，而不是to_s，更适合与调试。比如 1, “1” and “2\b1”的区别，用puts输出的全是1，而p则能输出内部结构。    1.9.3p125 :055 &amp;gt; puts 1, “1”, “2\b1”">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ruby p vs puts">
 <meta property="og:url" content="http://xbin999.com/2013/08/11/ruby-p-vs-puts/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="看代码的时候看到了 p ““  80 + “validated” ，心想这个p是啥玩意，为啥不用puts啊？细看一下还有点讲究，p是个Kernel方法，p打印的是inspect方法，而不是to_s，更适合与调试。比如 1, “1” and “2\b1”的区别，用puts输出的全是1，而p则能输出内部结构。    1.9.3p125 :055 &amp;gt; puts 1, “1”, “2\b1”">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-16T07:54:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ruby p vs puts">
@@ -100,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>看<a href="https://github.com/simsicon/weibo_2_example/blob/master/example.rb" target="_blank" rel="external">代码</a>的时候看到了 p “<em>“ </em> 80 + “validated” ，心想这个p是啥玩意，为啥不用puts啊？<br><br>细看一下还有点讲究，<a href="http://www.ruby-doc.org/core-2.0/Kernel.html#method-i-p" target="_blank" rel="external">p是个Kernel方法</a>，p打印的是inspect方法，而不是to_s，更适合与调试。比如 <a href="http://stackoverflow.com/questions/1255324/p-vs-puts-in-ruby" target="_blank" rel="external">1, “1” and “2\b1”的区别，用puts输出的全是1，而p则能输出内部结构</a>。<br><br>    1.9.3p125 :055 &gt; puts 1, “1”, “2\b1”<br>    1<br>    1<br>    1<br>     =&gt; nil<br>    1.9.3p125 :056 &gt; p 1, “1”, “2\b1”<br>    1<br>    “1”<br>    “2\b1”<br>     =&gt; [1, “1”, “2\b1”]<br>     <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>看<a href="https://github.com/simsicon/weibo_2_example/blob/master/example.rb" target="_blank" rel="noopener">代码</a>的时候看到了 p “<em>“ </em> 80 + “validated” ，心想这个p是啥玩意，为啥不用puts啊？<br><br>细看一下还有点讲究，<a href="http://www.ruby-doc.org/core-2.0/Kernel.html#method-i-p" target="_blank" rel="noopener">p是个Kernel方法</a>，p打印的是inspect方法，而不是to_s，更适合与调试。比如 <a href="http://stackoverflow.com/questions/1255324/p-vs-puts-in-ruby" target="_blank" rel="noopener">1, “1” and “2\b1”的区别，用puts输出的全是1，而p则能输出内部结构</a>。<br><br>    1.9.3p125 :055 &gt; puts 1, “1”, “2\b1”<br>    1<br>    1<br>    1<br>     =&gt; nil<br>    1.9.3p125 :056 &gt; p 1, “1”, “2\b1”<br>    1<br>    “1”<br>    “2\b1”<br>     =&gt; [1, “1”, “2\b1”]<br>     <code>&lt;/pre&gt;
 
     在[What is “p” in Ruby?](http://stackoverflow.com/questions/1758284/what-is-p-in-ruby)还说到了一个poetry mode，写Ruby方法调用参数时不使用括号，不是很理解。
 
@@ -119,7 +121,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/11/ruby-p-vs-puts/" data-id="cj133piki00ik00c26qy9p4iz" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/11/ruby-p-vs-puts/" data-id="cjmiwvb2a00hm04c297tob6dt" class="article-share-link">Share</a>
       
 
       
@@ -254,7 +256,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

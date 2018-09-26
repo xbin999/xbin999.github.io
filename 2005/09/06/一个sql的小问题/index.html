@@ -6,11 +6,13 @@
   <title>一个sql的小问题 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;   execute immediate strSql;初看觉得很正常，但问题确实是在这里。正常情况下i">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个sql的小问题">
 <meta property="og:url" content="http://xbin999.com/2005/09/06/一个sql的小问题/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;   execute immediate strSql;初看觉得很正常，但问题确实是在这里。正常情况下i">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://xbin999.com/rte/emoticons/smile_confused.gif">
 <meta property="og:updated_time" content="2014-09-18T12:07:20.000Z">
 <meta name="twitter:card" content="summary">
@@ -98,13 +100,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!449" class="bvMsg"><div>组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：</div><br><div>   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;<br>   execute immediate strSql;</div><br><div>初看觉得很正常，但问题确实是在这里。正常情况下iSpecialBal都应该为非负数，一切ok。结果由于数据库出了条异常的记录，iSpecialBal为负数，比如-1,重组后的sql我们来看一下：</div><br><div>update table set balance=balance<font color="#ff0000"><em> –1 where id=1</em></font></div><br><div>由于负数的原因，导致减法运算变成了&quot;–&quot;，成了oracle中sql的注释。结果原先的按id做update变成了所有记录的update。</div><br><div>唉，看起来是一个小问题。但想到的恐怕都不多啊<img src="/rte/emoticons/smile_confused.gif" alt=""></div><br><div>导致的结果是加班不算，还要做一大堆的数据恢复，而且想要“再回到从前”也很困难了。</div><br><div>引以为戒！</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!449" class="bvMsg"><div>组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：</div><br><div>   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;<br>   execute immediate strSql;</div><br><div>初看觉得很正常，但问题确实是在这里。正常情况下iSpecialBal都应该为非负数，一切ok。结果由于数据库出了条异常的记录，iSpecialBal为负数，比如-1,重组后的sql我们来看一下：</div><br><div>update table set balance=balance<font color="#ff0000">_ –1 where id=1_</font></div><br><div>由于负数的原因，导致减法运算变成了&quot;–&quot;，成了oracle中sql的注释。结果原先的按id做update变成了所有记录的update。</div><br><div>唉，看起来是一个小问题。但想到的恐怕都不多啊<img src="/rte/emoticons/smile_confused.gif" alt=""></div><br><div>导致的结果是加班不算，还要做一大堆的数据恢复，而且想要“再回到从前”也很困难了。</div><br><div>引以为戒！</div></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/06/一个sql的小问题/" data-id="cj133pipj00uk00c2gwho6n26" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/06/一个sql的小问题/" data-id="cjmiwvb5y00sr04c2ovhf7pl0" class="article-share-link">Share</a>
       
 
       
@@ -239,7 +241,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -6,11 +6,13 @@
   <title>(转)Oracle中大批量删除数据的方法 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="eygle提供的Oracle中大批量删除数据的方法，感觉不错，解决了我现在的实际问题。create or replace procedure delBigTab(p_TableName       in    varchar2,p_Condition       in    varchar2,p_Count        in    varchar2)aspragma autonomous_tra">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(转)Oracle中大批量删除数据的方法">
 <meta property="og:url" content="http://xbin999.com/2005/04/22/转oracle中大批量删除数据的方法/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="eygle提供的Oracle中大批量删除数据的方法，感觉不错，解决了我现在的实际问题。create or replace procedure delBigTab(p_TableName       in    varchar2,p_Condition       in    varchar2,p_Count        in    varchar2)aspragma autonomous_tra">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://spaces.msn.com/mmm2005-04-13_18.20/RTE/emoticons/smile_teeth.gif">
 <meta property="og:updated_time" content="2014-09-18T12:07:21.000Z">
 <meta name="twitter:card" content="summary">
@@ -98,13 +100,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!199" class="bvMsg"><br><br>eygle提供的<a href="http://www.eygle.com/archives/2005/04/oracleoeouaeeae.html" target="_blank" rel="external"><font color="#ff0000">Oracle中大批量删除数据的方法</font></a>，感觉不错，解决了我现在的实际问题。<img src="http://spaces.msn.com/mmm2005-04-13_18.20/RTE/emoticons/smile_teeth.gif" alt=""><br><br>create or replace procedure delBigTab<br>(<br>p_TableName       in    varchar2,<br>p_Condition       in    varchar2,<br>p_Count        in    varchar2<br>)<br>as<br>pragma <strong>autonomous_transaction</strong>;<br>n_delete number:=0;<br>begin<br>while 1=1 loop<br>EXECUTE IMMEDIATE<br>‘delete from ‘||p_TableName||’ where ‘||p_Condition||’ and rownum &lt;= :rn’<br>USING p_Count;<br>if SQL%NOTFOUND then<br>exit;<br>else<br>n_delete:=n_delete + SQL%ROWCOUNT;<br>end if;<br>commit;<br>end loop;<br>commit;<br>DBMS_OUTPUT.PUT_LINE(‘Finished!’);<br>DBMS_OUTPUT.PUT_LINE(‘Totally ‘||to_char(n_delete)||’ records deleted!’);<br>end;<br><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!199" class="bvMsg"><br><br>eygle提供的<a href="http://www.eygle.com/archives/2005/04/oracleoeouaeeae.html" target="_blank" rel="noopener"><font color="#ff0000">Oracle中大批量删除数据的方法</font></a>，感觉不错，解决了我现在的实际问题。<img src="http://spaces.msn.com/mmm2005-04-13_18.20/RTE/emoticons/smile_teeth.gif" alt=""><br><br>create or replace procedure delBigTab<br>(<br>p_TableName       in    varchar2,<br>p_Condition       in    varchar2,<br>p_Count        in    varchar2<br>)<br>as<br>pragma <strong>autonomous_transaction</strong>;<br>n_delete number:=0;<br>begin<br>while 1=1 loop<br>EXECUTE IMMEDIATE<br>‘delete from ‘||p_TableName||’ where ‘||p_Condition||’ and rownum &lt;= :rn’<br>USING p_Count;<br>if SQL%NOTFOUND then<br>exit;<br>else<br>n_delete:=n_delete + SQL%ROWCOUNT;<br>end if;<br>commit;<br>end loop;<br>commit;<br>DBMS_OUTPUT.PUT_LINE(‘Finished!’);<br>DBMS_OUTPUT.PUT_LINE(‘Totally ‘||to_char(n_delete)||’ records deleted!’);<br>end;<br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/22/转oracle中大批量删除数据的方法/" data-id="cj133pjyp02be00c2sxjxbspo" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/22/转oracle中大批量删除数据的方法/" data-id="cjmiwvbxn029904c2ml8gt9b9" class="article-share-link">Share</a>
       
 
       
@@ -239,7 +241,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

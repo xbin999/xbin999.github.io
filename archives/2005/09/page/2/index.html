@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/2005/09/page/2/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,7 +104,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/11/光郎头/" data-id="cj133piwe015y00c2g3xoebhd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/11/光郎头/" data-id="cjmiwvbah014404c2ohebq9n8" class="article-share-link">Share</a>
       
 
       
@@ -151,7 +152,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/07/女儿夸我真聪明/" data-id="cj133pj3201fc00c2jmnev1zl" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/07/女儿夸我真聪明/" data-id="cjmiwvbex01di04c25jh226ey" class="article-share-link">Share</a>
       
 
       
@@ -199,7 +200,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/06/明天体检/" data-id="cj133pje201sd00c2whg9uqc0" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/06/明天体检/" data-id="cjmiwvblo01qb04c2zwzqzgtl" class="article-share-link">Share</a>
       
 
       
@@ -241,13 +242,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!449" class="bvMsg"><div>组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：</div><br><div>   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;<br>   execute immediate strSql;</div><br><div>初看觉得很正常，但问题确实是在这里。正常情况下iSpecialBal都应该为非负数，一切ok。结果由于数据库出了条异常的记录，iSpecialBal为负数，比如-1,重组后的sql我们来看一下：</div><br><div>update table set balance=balance<font color="#ff0000"><em> –1 where id=1</em></font></div><br><div>由于负数的原因，导致减法运算变成了&quot;–&quot;，成了oracle中sql的注释。结果原先的按id做update变成了所有记录的update。</div><br><div>唉，看起来是一个小问题。但想到的恐怕都不多啊<img src="/rte/emoticons/smile_confused.gif" alt=""></div><br><div>导致的结果是加班不算，还要做一大堆的数据恢复，而且想要“再回到从前”也很困难了。</div><br><div>引以为戒！</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!449" class="bvMsg"><div>组里一个新上的存储过程出现了一点问题，debug了半天，觉得不可思议。最终的定位在类似下面的sql上：</div><br><div>   strSql := ‘update ‘||strTableName||’ set balance=balance -‘|| iSpecialBal ||’ where id=’||iId;<br>   execute immediate strSql;</div><br><div>初看觉得很正常，但问题确实是在这里。正常情况下iSpecialBal都应该为非负数，一切ok。结果由于数据库出了条异常的记录，iSpecialBal为负数，比如-1,重组后的sql我们来看一下：</div><br><div>update table set balance=balance<font color="#ff0000">_ –1 where id=1_</font></div><br><div>由于负数的原因，导致减法运算变成了&quot;–&quot;，成了oracle中sql的注释。结果原先的按id做update变成了所有记录的update。</div><br><div>唉，看起来是一个小问题。但想到的恐怕都不多啊<img src="/rte/emoticons/smile_confused.gif" alt=""></div><br><div>导致的结果是加班不算，还要做一大堆的数据恢复，而且想要“再回到从前”也很困难了。</div><br><div>引以为戒！</div></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/06/一个sql的小问题/" data-id="cj133pipj00uk00c2gwho6n26" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/06/一个sql的小问题/" data-id="cjmiwvb5y00sr04c2ovhf7pl0" class="article-share-link">Share</a>
       
 
       
@@ -289,12 +290,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!446" class="bvMsg"><div>这几天到处看到和听到的都是新奥尔良的飓风，搞不明白飓风和台风有什么差别。学习了一下，原来台风和飓风其实是一样的，都是12级以上的热带气旋，只不过发生在不同的地方称呼不同而已。</div><br><div>据说台风一词可能来源于中国，看一下金山词霸上typhoon的字源：Probably alteration ofChinese (Cantonese) toi fung。</div><br><div>这里是wikipedia给出的<a href="http://zh.wikipedia.org/wiki/%E9%A2%B1%E9%A2%A8" target="_blank" rel="external">台风</a>解释：</div><br><div>台风是热带气旋的一种。气象学上，台风专指北太平洋西部(国际日期线以西，包括南中国海)上发生，中心持续风速达到12级及以上(即每秒32.6米以上)的热带气旋。至于在大西洋或北太平洋东部发生，达到同样强度的热带气旋，称为飓风。习惯上，台风亦被用来统称所有在西北太平洋发生的热带气旋。</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!446" class="bvMsg"><div>这几天到处看到和听到的都是新奥尔良的飓风，搞不明白飓风和台风有什么差别。学习了一下，原来台风和飓风其实是一样的，都是12级以上的热带气旋，只不过发生在不同的地方称呼不同而已。</div><br><div>据说台风一词可能来源于中国，看一下金山词霸上typhoon的字源：Probably alteration ofChinese (Cantonese) toi fung。</div><br><div>这里是wikipedia给出的<a href="http://zh.wikipedia.org/wiki/%E9%A2%B1%E9%A2%A8" target="_blank" rel="noopener">台风</a>解释：</div><br><div>台风是热带气旋的一种。气象学上，台风专指北太平洋西部(国际日期线以西，包括南中国海)上发生，中心持续风速达到12级及以上(即每秒32.6米以上)的热带气旋。至于在大西洋或北太平洋东部发生，达到同样强度的热带气旋，称为飓风。习惯上，台风亦被用来统称所有在西北太平洋发生的热带气旋。</div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/05/台风和飓风的区别/" data-id="cj133piz601a200c2i24cygfu" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/05/台风和飓风的区别/" data-id="cjmiwvbcf018804c26t1g0hcs" class="article-share-link">Share</a>
       
 
       
@@ -342,7 +343,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/03/野孩子/" data-id="cj133pk0e02cy00c2yjwzqrbj" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/03/野孩子/" data-id="cjmiwvbyp02at04c27ga1z8gn" class="article-share-link">Share</a>
       
 
       
@@ -389,7 +390,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/09/02/甲方和乙方的差别/" data-id="cj133pjku01yv00c2dao6do9k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/09/02/甲方和乙方的差别/" data-id="cjmiwvbpo01wr04c209lcud1o" class="article-share-link">Share</a>
       
 
       
@@ -506,7 +507,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

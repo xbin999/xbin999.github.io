@@ -5,31 +5,18 @@
   
   <title>悲剧的self-assigned ip address | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从上周五就突然发现mac连公司的wifi连接不上，得到的IP都是169打头的self-assigned ip address，很疑惑。
-于是又是关闭wifi，打开wifi，不行；
-再renew DHCP，重新获得地址，不行；
-看到有的说，要新设置一个location，删掉wifi，再重新添加，也试了，还是不行；
-最可笑的重启也试了，不行啊。
-可能是公司的无线连接太多了，分配不到IP地址了，这个是比">
+  <meta name="description" content="从上周五就突然发现mac连公司的wifi连接不上，得到的IP都是169打头的self-assigned ip address，很疑惑。 于是又是关闭wifi，打开wifi，不行； 再renew DHCP，重新获得地址，不行； 看到有的说，要新设置一个location，删掉wifi，再重新添加，也试了，还是不行； 最可笑的重启也试了，不行啊。 可能是公司的无线连接太多了，分配不到IP地址了，这个是比">
+<meta name="keywords" content="mac,tip,network">
 <meta property="og:type" content="article">
 <meta property="og:title" content="悲剧的self-assigned ip address">
 <meta property="og:url" content="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="从上周五就突然发现mac连公司的wifi连接不上，得到的IP都是169打头的self-assigned ip address，很疑惑。
-于是又是关闭wifi，打开wifi，不行；
-再renew DHCP，重新获得地址，不行；
-看到有的说，要新设置一个location，删掉wifi，再重新添加，也试了，还是不行；
-最可笑的重启也试了，不行啊。
-可能是公司的无线连接太多了，分配不到IP地址了，这个是比">
+<meta property="og:description" content="从上周五就突然发现mac连公司的wifi连接不上，得到的IP都是169打头的self-assigned ip address，很疑惑。 于是又是关闭wifi，打开wifi，不行； 再renew DHCP，重新获得地址，不行； 看到有的说，要新设置一个location，删掉wifi，再重新添加，也试了，还是不行； 最可笑的重启也试了，不行啊。 可能是公司的无线连接太多了，分配不到IP地址了，这个是比">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T07:34:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="悲剧的self-assigned ip address">
-<meta name="twitter:description" content="从上周五就突然发现mac连公司的wifi连接不上，得到的IP都是169打头的self-assigned ip address，很疑惑。
-于是又是关闭wifi，打开wifi，不行；
-再renew DHCP，重新获得地址，不行；
-看到有的说，要新设置一个location，删掉wifi，再重新添加，也试了，还是不行；
-最可笑的重启也试了，不行啊。
-可能是公司的无线连接太多了，分配不到IP地址了，这个是比">
+<meta name="twitter:description" content="从上周五就突然发现mac连公司的wifi连接不上，得到的IP都是169打头的self-assigned ip address，很疑惑。 于是又是关闭wifi，打开wifi，不行； 再renew DHCP，重新获得地址，不行； 看到有的说，要新设置一个location，删掉wifi，再重新添加，也试了，还是不行； 最可笑的重启也试了，不行啊。 可能是公司的无线连接太多了，分配不到IP地址了，这个是比">
 <meta name="twitter:creator" content="@xbin999">
   
     <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
@@ -130,7 +117,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cj133pj8k01m100c2cv8occsh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cjmiwvbia01k604c2q3qu96y9" class="article-share-link">Share</a>
       
 
       
@@ -265,7 +252,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

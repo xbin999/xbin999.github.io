@@ -6,11 +6,13 @@
   <title>cppunit在hp上的编译 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="关于cppunit在hp上的编译，源代码的tar包可以从网站上获得。解开包后，按文档的说明是：./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&amp;quot;-AA&amp;quot;不过由于我们的项目的编译选项中使用的CXXFLAGS=&amp;quot;-Aa&amp;quot;，所以直接使用该命令编译得到的动态库在项目中并不能使用，写测试代码没问题。&amp;quot;-A">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cppunit在hp上的编译">
 <meta property="og:url" content="http://xbin999.com/2005/03/10/cppunit在hp上的编译/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="关于cppunit在hp上的编译，源代码的tar包可以从网站上获得。解开包后，按文档的说明是：./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&amp;quot;-AA&amp;quot;不过由于我们的项目的编译选项中使用的CXXFLAGS=&amp;quot;-Aa&amp;quot;，所以直接使用该命令编译得到的动态库在项目中并不能使用，写测试代码没问题。&amp;quot;-A">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T07:27:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cppunit在hp上的编译">
@@ -96,13 +98,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!141" class="bvMsg"><br><br>关于cppunit在hp上的编译，源代码的tar包可以从<a href="http://cppunit.sourceforge.net/" target="_blank" rel="external"><font color="#ff0000">网站</font></a>上获得。<br><br>解开包后，按文档的说明是：<br>./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-AA&quot;<br>不过由于我们的项目的编译选项中使用的CXXFLAGS=&quot;-Aa&quot;，所以直接使用该命令编译得到的动态库在项目中并不能使用，写测试代码没问题。<br>&quot;-AA&quot;使用的是新的2.0标准C++库，而&quot;-Aa&quot;是1.2.1的标准库，两者不是完全兼容的。（不知道为什么我们不用新标准，象stringstream就不能使用，可能也有老的库要兼容吧）<br>两个选项详细的区别可以参见 <a href="http://docs.hp.com/en/1405/options.htm" target="_blank" rel="external">http://docs.hp.com/en/1405/options.htm</a><br><br>我后来编译的方法如下：<br>% ./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-Aa&quot;<br>修改cppunit源代码，主要包括：<br>1. 修改头文件include/cppunit/config-auto.h，增加<br>#ifndef CPPUNIT_HAVE_CLASS_STRSTREAM<br>#define CPPUNIT_HAVE_CLASS_STRSTREAM  1<br>#endif<br>2. 修改头文件include/cppunit/Portability.h，将CPPUNIT_HAVE_NAMESPACES部分改为：<br>#if !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_NAMESPACE)<br>#  define CPPUNIT_NO_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_NAMESPACE)<br>#endif // !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_STD_NAMESPACE)<br>#  define CPPUNIT_NO_STD_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_STD_NAMESPACE)<br>3. 修改.cpp和.h中包括的头文件，将&lt;iostream&gt;, &lt;fstream&gt;改位&lt;iostream.h&gt;, &lt;fstream.h&gt;<br>再重新编译。<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!141" class="bvMsg"><br><br>关于cppunit在hp上的编译，源代码的tar包可以从<a href="http://cppunit.sourceforge.net/" target="_blank" rel="noopener"><font color="#ff0000">网站</font></a>上获得。<br><br>解开包后，按文档的说明是：<br>./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-AA&quot;<br>不过由于我们的项目的编译选项中使用的CXXFLAGS=&quot;-Aa&quot;，所以直接使用该命令编译得到的动态库在项目中并不能使用，写测试代码没问题。<br>&quot;-AA&quot;使用的是新的2.0标准C++库，而&quot;-Aa&quot;是1.2.1的标准库，两者不是完全兼容的。（不知道为什么我们不用新标准，象stringstream就不能使用，可能也有老的库要兼容吧）<br>两个选项详细的区别可以参见 <a href="http://docs.hp.com/en/1405/options.htm" target="_blank" rel="noopener">http://docs.hp.com/en/1405/options.htm</a><br><br>我后来编译的方法如下：<br>% ./configure –enable-hpuxshl CC=cc CXX=aCC CXXFLAGS=&quot;-Aa&quot;<br>修改cppunit源代码，主要包括：<br>1. 修改头文件include/cppunit/config-auto.h，增加<br>#ifndef CPPUNIT_HAVE_CLASS_STRSTREAM<br>#define CPPUNIT_HAVE_CLASS_STRSTREAM  1<br>#endif<br>2. 修改头文件include/cppunit/Portability.h，将CPPUNIT_HAVE_NAMESPACES部分改为：<br>#if !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_NAMESPACE)<br>#  define CPPUNIT_NO_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_NAMESPACE)<br>#endif // !defined(CPPUNIT_HAVE_NAMESPACES)<br># if !defined(CPPUNIT_NO_STD_NAMESPACE)<br>#  define CPPUNIT_NO_STD_NAMESPACE 1<br># endif // !defined(CPPUNIT_NO_STD_NAMESPACE)<br>3. 修改.cpp和.h中包括的头文件，将&lt;iostream&gt;, &lt;fstream&gt;改位&lt;iostream.h&gt;, &lt;fstream.h&gt;<br>再重新编译。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/10/cppunit在hp上的编译/" data-id="cj133pifx004o00c2klmxlunt" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/10/cppunit在hp上的编译/" data-id="cjmiwvaya004704c2tatxrws6" class="article-share-link">Share</a>
       
 
       
@@ -232,7 +234,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

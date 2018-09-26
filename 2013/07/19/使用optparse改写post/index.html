@@ -6,11 +6,13 @@
   <title>使用optparse改写post | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="之前写过”编写markdown文档直接发布到wordpress上“，当时还是自己解析ARGV，看了optparse后，把代码改一改。       # Define the options, and what they do       opts.on( ‘-s’, ‘–title [BlogTitle]’, ‘Blog title’ ) do|title|         options[:tit">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用optparse改写post">
 <meta property="og:url" content="http://xbin999.com/2013/07/19/使用optparse改写post/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="之前写过”编写markdown文档直接发布到wordpress上“，当时还是自己解析ARGV，看了optparse后，把代码改一改。       # Define the options, and what they do       opts.on( ‘-s’, ‘–title [BlogTitle]’, ‘Blog title’ ) do|title|         options[:tit">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用optparse改写post">
@@ -100,12 +102,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>之前写过”<a href="http://xbin999.com/2013/04/27/%E7%BC%96%E5%86%99markdown%E6%96%87%E6%A1%A3%E7%9B%B4%E6%8E%A5%E5%8F%91%E5%B8%83%E5%88%B0wordpress%E4%B8%8A-4/">编写markdown文档直接发布到wordpress上</a>“，当时还是<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">自己解析ARGV</a>，看了<a href="http://xbin999.com/2013/07/18/ruby-optionparser/">optparse</a>后，把代码改一改。<br><br>       # Define the options, and what they do<br>       opts.on( ‘-s’, ‘–title [BlogTitle]’, ‘Blog title’ ) do|title|<br>         options[:title] = title<br>       end<br><br>       options[:tags] = nil<br>       opts.on( ‘-t’, ‘–tags tag1,tag2,tag3’, Array, ‘Tags blog’ ) do|tags|<br>         options[:tags] = tags<br>       end<br><br>       options[:categories] = nil<br>       opts.on( ‘-c’, ‘–categories cat1,cat2,cat3’, Array, ‘Blog categories’ ) do|categories|<br>         options[:categories] = categories<br>       end<br><br>第一个参数可选，后面的可以指定列表，挺好。<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">修改后的代码</a>。<br><br></div>
+        <div id="wrapper"><br><br>之前写过”<a href="http://xbin999.com/2013/04/27/%E7%BC%96%E5%86%99markdown%E6%96%87%E6%A1%A3%E7%9B%B4%E6%8E%A5%E5%8F%91%E5%B8%83%E5%88%B0wordpress%E4%B8%8A-4/">编写markdown文档直接发布到wordpress上</a>“，当时还是<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">自己解析ARGV</a>，看了<a href="http://xbin999.com/2013/07/18/ruby-optionparser/">optparse</a>后，把代码改一改。<br><br>       # Define the options, and what they do<br>       opts.on( ‘-s’, ‘–title [BlogTitle]’, ‘Blog title’ ) do|title|<br>         options[:title] = title<br>       end<br><br>       options[:tags] = nil<br>       opts.on( ‘-t’, ‘–tags tag1,tag2,tag3’, Array, ‘Tags blog’ ) do|tags|<br>         options[:tags] = tags<br>       end<br><br>       options[:categories] = nil<br>       opts.on( ‘-c’, ‘–categories cat1,cat2,cat3’, Array, ‘Blog categories’ ) do|categories|<br>         options[:categories] = categories<br>       end<br><br>第一个参数可选，后面的可以指定列表，挺好。<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">修改后的代码</a>。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/19/使用optparse改写post/" data-id="cj133pivs015100c21jgjyywd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/19/使用optparse改写post/" data-id="cjmiwvba3013604c2c0g758l2" class="article-share-link">Share</a>
       
 
       
@@ -123,11 +125,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2013/07/19/和鸡兔同笼一样经典的聪明题/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2013/07/19/《如何说孩子才会听，怎么听孩子才肯说》的读书/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          和鸡兔同笼一样经典的聪明题
+          《如何说孩子才会听，怎么听孩子才肯说》的读书笔记
         
       </div>
     </a>
@@ -240,7 +242,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

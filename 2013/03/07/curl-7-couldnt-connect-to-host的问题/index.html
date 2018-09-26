@@ -5,19 +5,18 @@
   
   <title>curl: (7) couldn’t connect to host 的问题 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用Cloud Foundry过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：Fixing a Segmentation Fault in Ruby 1.9.3 ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）
-查问题的时候，发现抱怨MacPorts较多，选择用Hom">
+  <meta name="description" content="使用Cloud Foundry过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：Fixing a Segmentation Fault in Ruby 1.9.3 ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说） 查问题的时候，发现抱怨MacPorts较多，选择用Hom">
+<meta name="keywords" content="IT,mac,curl,Homebrew,proxy,faq,MacPorts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="curl: (7) couldn’t connect to host 的问题">
 <meta property="og:url" content="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host的问题/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="使用Cloud Foundry过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：Fixing a Segmentation Fault in Ruby 1.9.3 ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）
-查问题的时候，发现抱怨MacPorts较多，选择用Hom">
+<meta property="og:description" content="使用Cloud Foundry过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：Fixing a Segmentation Fault in Ruby 1.9.3 ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说） 查问题的时候，发现抱怨MacPorts较多，选择用Hom">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T07:27:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="curl: (7) couldn’t connect to host 的问题">
-<meta name="twitter:description" content="使用Cloud Foundry过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：Fixing a Segmentation Fault in Ruby 1.9.3 ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）
-查问题的时候，发现抱怨MacPorts较多，选择用Hom">
+<meta name="twitter:description" content="使用Cloud Foundry过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：Fixing a Segmentation Fault in Ruby 1.9.3 ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说） 查问题的时候，发现抱怨MacPorts较多，选择用Hom">
 <meta name="twitter:creator" content="@xbin999">
   
     <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
@@ -103,8 +102,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用<a href="http://www.cloudfoundry.com/" target="_blank" rel="external">Cloud Foundry</a>过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：<a href="http://blog.55minutes.com/2012/01/fixing-a-segmentation-fault-in-ruby-193/" target="_blank" rel="external">Fixing a Segmentation Fault in Ruby 1.9.3</a> ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）</p>
-<p>查问题的时候，发现抱怨MacPorts较多，选择<a href="http://hi.hiing.net/2011/06/use-homebrew-package-management.html" target="_blank" rel="external">用Homebrew替换MacPorts</a>，卸载了MacPorts，安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="external">Homebrew</a>，使用命令：</p>
+        <p>使用<a href="http://www.cloudfoundry.com/" target="_blank" rel="noopener">Cloud Foundry</a>过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：<a href="http://blog.55minutes.com/2012/01/fixing-a-segmentation-fault-in-ruby-193/" target="_blank" rel="noopener">Fixing a Segmentation Fault in Ruby 1.9.3</a> ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）</p>
+<p>查问题的时候，发现抱怨MacPorts较多，选择<a href="http://hi.hiing.net/2011/06/use-homebrew-package-management.html" target="_blank" rel="noopener">用Homebrew替换MacPorts</a>，卸载了MacPorts，安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="noopener">Homebrew</a>，使用命令：</p>
 <p><code>$ brew install wget</code><br>测试出现错误：“curl: (7) couldn’t connect to host”。</p>
 <p><code>$ curl -v http://localhost</code><br>发现开始就去连接本地的socks proxy 服务器，而我又没起该代理服务器。于是连接上代理服务器，再做测试，提示：“Empty reply from server mac”。</p>
 <p>干脆去掉默认代理连接，打开.bash_profile，注释：</p>
@@ -117,7 +116,7 @@ $ curl localhost
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host的问题/" data-id="cj133pify004u00c2rf4dxxm4" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host的问题/" data-id="cjmiwvayd004g04c255a8mskn" class="article-share-link">Share</a>
       
 
       
@@ -252,7 +251,7 @@ $ curl localhost
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

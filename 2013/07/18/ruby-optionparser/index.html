@@ -6,11 +6,13 @@
   <title>ruby OptionParser | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="原先在看的Programming Ruby版本有点低，其中的代码有些在1.9中也不适合，比如说Net::HTTP.get，找了本Programming Ruby 1.9的，目录结构也有所不同了，所以补看部分。不过最近事情多，效率变低，每天都只是看一会，也缺少总结了。今天记录一下看”Organizing Your Source”中的一个例子用的optparse，optparse是Ruby的一个库，不">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ruby OptionParser">
 <meta property="og:url" content="http://xbin999.com/2013/07/18/ruby-optionparser/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="原先在看的Programming Ruby版本有点低，其中的代码有些在1.9中也不适合，比如说Net::HTTP.get，找了本Programming Ruby 1.9的，目录结构也有所不同了，所以补看部分。不过最近事情多，效率变低，每天都只是看一会，也缺少总结了。今天记录一下看”Organizing Your Source”中的一个例子用的optparse，optparse是Ruby的一个库，不">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ruby OptionParser">
@@ -100,19 +102,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>原先在看的<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="external">Programming Ruby</a>版本有点低，其中的代码有些在1.9中也不适合，比如说<a href="http://xbin999.com/2013/07/03/%e7%9c%8b%e4%b9%a6%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b%ef%bc%8c%e5%86%99%e4%bb%a3%e7%a0%81%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b/">Net::HTTP.get</a>，找了本Programming Ruby 1.9的，目录结构也有所不同了，所以补看部分。不过最近事情多，效率变低，每天都只是看一会，也缺少总结了。<br><br>今天记录一下看”Organizing Your Source”中的一个例子用的<a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/optparse/rdoc/OptionParser.html" target="_blank" rel="external">optparse</a>，optparse是Ruby的一个库，不是gem。OptionParser类用于对命令行选项进行解析，有一些特色：<br><br><em>   参数规范说明和处理代码写在一起，便于关联。
+        <div id="wrapper"><br><br>原先在看的<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="noopener">Programming Ruby</a>版本有点低，其中的代码有些在1.9中也不适合，比如说<a href="http://xbin999.com/2013/07/03/%e7%9c%8b%e4%b9%a6%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b%ef%bc%8c%e5%86%99%e4%bb%a3%e7%a0%81%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b/">Net::HTTP.get</a>，找了本Programming Ruby 1.9的，目录结构也有所不同了，所以补看部分。不过最近事情多，效率变低，每天都只是看一会，也缺少总结了。<br><br>今天记录一下看”Organizing Your Source”中的一个例子用的<a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/optparse/rdoc/OptionParser.html" target="_blank" rel="noopener">optparse</a>，optparse是Ruby的一个库，不是gem。OptionParser类用于对命令行选项进行解析，有一些特色：<br><br><em>   参数规范说明和处理代码写在一起，便于关联。
 </em>   可以自动生成选项的汇总，不需要独立维护选项信息。<br><em>   可选和必选参数指定很简单优雅。
 </em>   输入参数能自动转换成所需类。<br><em>   输入参数能限制数据集。<br><br>有个简单例子：<br><br>    require ‘optparse’<br>    options = {}<br>    optparse = OptionParser.new do |opts|<br>      opts.banner = “Usage: example.rb [options]”<br><br>      opts.on(“-v”, “–[no-]verbose”, “Run verbosely”) do |v|<br>        options[:verbose] = v<br>      end<br>    end<br>    optparse.parse!<br>    p options<br>    p ARGV<br>    `<br><br>    OptionParser.parse! 用于从ARGV中抽取选项，被抽取的选项会从ARGV中删除。<br><br>    在上例中，options是一个空的hash，当命令行中遇到-v或–verbose，则会设置options[:verbose]为true。<br><br>    optparse是一个OptionParser对象实例，传递了一个块，这个块构造了内部的数据结构，然后调用parse!。<br><br>    有两篇不错的文章：
 
-</em>   <a href="http://ruby.about.com/od/advancedruby/a/optionparser.htm" target="_blank" rel="external">OptionParser–Parsing Command-line Options the Ruby Way</a><br>*   <a href="http://rubylearning.com/blog/2011/01/03/how-do-i-make-a-command-line-tool-in-ruby/" target="_blank" rel="external">How do I make a command-line tool in Ruby?</a><br><br>    关于选项是可选还是必选，只需要看在选项后面的内容是否加上[]即可，比如下面的-r必选，-i可选。<br><br>    <pre><code># Mandatory argument.
+</em>   <a href="http://ruby.about.com/od/advancedruby/a/optionparser.htm" target="_blank" rel="noopener">OptionParser–Parsing Command-line Options the Ruby Way</a><br>*   <a href="http://rubylearning.com/blog/2011/01/03/how-do-i-make-a-command-line-tool-in-ruby/" target="_blank" rel="noopener">How do I make a command-line tool in Ruby?</a><br><br>    关于选项是可选还是必选，只需要看在选项后面的内容是否加上[]即可，比如下面的-r必选，-i可选。<br><br>    <pre><code># Mandatory argument.
           opts.on(&quot;-r&quot;, &quot;--require LIBRARY&quot;,
                   &quot;Require the LIBRARY before executing your script&quot;) do |lib|
-            options.library</code></pre><br><br>    对于必选的选项，如果在输入的命令行未指定选项参数值，则会报错：<br><br>    <pre><code>optparsetest.rb:44:in</code>‘: missing argument: -r (OptionParser::MissingArgument)<br><br>代码中可以捕获OptionParser::MissingArgument。stack overflow有个问题<a href="http://stackoverflow.com/questions/1541294/how-do-you-specify-a-required-switch-not-argument-with-ruby-optionparser/1542658#1542658" target="_blank" rel="external">How do you specify a required switch (not argument) with Ruby OptionParser?</a>专门描述了对于强制选项的处理方法。<br><br></pre></div>
+            options.library</code></pre><br><br>    对于必选的选项，如果在输入的命令行未指定选项参数值，则会报错：<br><br>    <pre><code>optparsetest.rb:44:in</code>‘: missing argument: -r (OptionParser::MissingArgument)<br><br>代码中可以捕获OptionParser::MissingArgument。stack overflow有个问题<a href="http://stackoverflow.com/questions/1541294/how-do-you-specify-a-required-switch-not-argument-with-ruby-optionparser/1542658#1542658" target="_blank" rel="noopener">How do you specify a required switch (not argument) with Ruby OptionParser?</a>专门描述了对于强制选项的处理方法。<br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/18/ruby-optionparser/" data-id="cj133pikg00ih00c2asncibfx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/18/ruby-optionparser/" data-id="cjmiwvb2900hj04c25ditbc1t" class="article-share-link">Share</a>
       
 
       
@@ -247,7 +249,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

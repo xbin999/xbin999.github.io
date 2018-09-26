@@ -6,11 +6,13 @@
   <title>Ruby中正则表达式和输入输出 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="使用/pattern/创建一个正则表达式，正则表达式的详细语法就不说了，无外乎：* 0到多个字符, + 1到多个字符, | 或,() , \d 数字, \s 空格, \w 字母, . 任意字符。=~ 操作符用于字符串匹配正则表达式，匹配成功返回字符串中匹配的位置，不成功则返回nil。sub用于单个替换，gsub用于单个替换。    1.9.3p125 :095 &amp;gt; “ttPerl” =~ /">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby中正则表达式和输入输出">
 <meta property="og:url" content="http://xbin999.com/2013/06/08/ruby中正则表达式和输入输出/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="使用/pattern/创建一个正则表达式，正则表达式的详细语法就不说了，无外乎：* 0到多个字符, + 1到多个字符, | 或,() , \d 数字, \s 空格, \w 字母, . 任意字符。=~ 操作符用于字符串匹配正则表达式，匹配成功返回字符串中匹配的位置，不成功则返回nil。sub用于单个替换，gsub用于单个替换。    1.9.3p125 :095 &amp;gt; “ttPerl” =~ /">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ruby中正则表达式和输入输出">
@@ -106,12 +108,12 @@
 
     输入最典型的是gets，输入的结果保存在全局变量$_中，print不带参数时会输出$_的值，光写一个正则表达式，也是和$_ 匹配。
 
-    &lt;pre&gt;</code><br>    while gets           # assigns line to $<em><br>      if /Ruby/          # matches against $</em><br>        print            # prints $_<br>      end<br>    end<br><br></div>
+    &lt;pre&gt;</code><br>    while gets           # assigns line to $_<br>      if /Ruby/          # matches against $_<br>        print            # prints $_<br>      end<br>    end<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/08/ruby中正则表达式和输入输出/" data-id="cj133piko00j300c20g7q4xwq" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/08/ruby中正则表达式和输入输出/" data-id="cjmiwvb2g00i504c22pdwoir7" class="article-share-link">Share</a>
       
 
       
@@ -246,7 +248,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

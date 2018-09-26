@@ -6,11 +6,13 @@
   <title>使用带有obfuscated handshake的ssh | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="连不上ssh有一段时间了，因要出去玩，也就没在意它，回来后发现还是如此，看来是哪里出问题了。看服务器地址说明，多了个混淆SSH端口，是443和2222，一开始没在意混淆的概念，以为就是端口地址变了，就在命令上指定了“-p 443”，但还是连接不上。再细注意，发现还有个混淆加密密钥，而man ssh居然没有这个obfuscated。才感觉需要探究一下这混淆是啥意思呢？DZF上有一篇Obfuscate">
+<meta name="keywords" content="IT,GFW,ssh,usassh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用带有obfuscated handshake的ssh">
 <meta property="og:url" content="http://xbin999.com/2013/09/04/使用带有obfuscated-handshake的ssh/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="连不上ssh有一段时间了，因要出去玩，也就没在意它，回来后发现还是如此，看来是哪里出问题了。看服务器地址说明，多了个混淆SSH端口，是443和2222，一开始没在意混淆的概念，以为就是端口地址变了，就在命令上指定了“-p 443”，但还是连接不上。再细注意，发现还有个混淆加密密钥，而man ssh居然没有这个obfuscated。才感觉需要探究一下这混淆是啥意思呢？DZF上有一篇Obfuscate">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用带有obfuscated handshake的ssh">
@@ -100,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>连不上ssh有一段时间了，因要出去玩，也就没在意它，回来后发现还是如此，看来是哪里出问题了。<br><br>看<a href="https://www.123ssh.com/yihaotong.php" target="_blank" rel="external">服务器地址</a>说明，多了个混淆SSH端口，是443和2222，一开始没在意混淆的概念，以为就是端口地址变了，就在命令上指定了“-p 443”，但还是连接不上。<br><br>再细注意，发现还有个混淆加密密钥，而man ssh居然没有这个obfuscated。才感觉需要探究一下这混淆是啥意思呢？<br><br><a href="http://blog.slpo.net/" target="_blank" rel="external">DZF</a>上有一篇<a href="http://blog.slpo.net/?p=1234" target="_blank" rel="external">Obfuscated ssh</a>的安装说明，而在<a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="external">obfuscated-openssh</a>介绍到Handshake obfuscation，握手混淆，通过混淆加密key来加强了初始的SSH握手。越来越复杂了。<br><br><a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="external">obfuscated-openssh</a>在openssh客户端上增加了obfuscated handshake协议，客户端会多两个-z，-Z的参数。不管那么多，按提示先装一个：<br><br>    $ wget -o ofcssh.zip <a href="https://github.com/brl/obfuscated-openssh/archive/master.zip" target="_blank" rel="external">https://github.com/brl/obfuscated-openssh/archive/master.zip</a><br>    $ unzip ofcssh.zip<br>    $ cd obfuscated-openssh-master<br>    $ ./configure<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>连不上ssh有一段时间了，因要出去玩，也就没在意它，回来后发现还是如此，看来是哪里出问题了。<br><br>看<a href="https://www.123ssh.com/yihaotong.php" target="_blank" rel="noopener">服务器地址</a>说明，多了个混淆SSH端口，是443和2222，一开始没在意混淆的概念，以为就是端口地址变了，就在命令上指定了“-p 443”，但还是连接不上。<br><br>再细注意，发现还有个混淆加密密钥，而man ssh居然没有这个obfuscated。才感觉需要探究一下这混淆是啥意思呢？<br><br><a href="http://blog.slpo.net/" target="_blank" rel="noopener">DZF</a>上有一篇<a href="http://blog.slpo.net/?p=1234" target="_blank" rel="noopener">Obfuscated ssh</a>的安装说明，而在<a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="noopener">obfuscated-openssh</a>介绍到Handshake obfuscation，握手混淆，通过混淆加密key来加强了初始的SSH握手。越来越复杂了。<br><br><a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="noopener">obfuscated-openssh</a>在openssh客户端上增加了obfuscated handshake协议，客户端会多两个-z，-Z的参数。不管那么多，按提示先装一个：<br><br>    $ wget -o ofcssh.zip <a href="https://github.com/brl/obfuscated-openssh/archive/master.zip" target="_blank" rel="noopener">https://github.com/brl/obfuscated-openssh/archive/master.zip</a><br>    $ unzip ofcssh.zip<br>    $ cd obfuscated-openssh-master<br>    $ ./configure<br>    <code>&lt;/pre&gt;
     结果不幸出现错误如下：
     &lt;pre&gt;</code><br>    checking OpenSSL header version… 90812f (OpenSSL 0.9.8r 8 Feb 2011)<br>    checking OpenSSL library version… 90818f (OpenSSL 0.9.8x 10 May 2012)<br>    checking whether OpenSSL’s headers match the library… no<br>    configure: error: Your OpenSSL headers do not match your<br>    library. Check config.log for details.<br>    <code>&lt;/pre&gt;
     又是这该死的openssl，之前记得用brew装过openssl:
@@ -110,12 +112,12 @@
     果然，还是1.0.1e版，重新配置：
     &lt;pre&gt;</code><br>    $ ./configure –with-ssl-dir=/usr/local/Cellar/openssl/1.0.1e/<br>    $ make<br>    <code>&lt;/pre&gt;
     又出错了：
-    &lt;pre&gt;</code><br>    Undefined symbols for architecture x86_64:<br>      “_res_9_dn_expand”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getlong”, referenced from:<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getshort”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_init”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_query”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>    ld: symbol(s) not found for architecture x86_64<br><br>需要<a href="https://discussions.apple.com/thread/2546848?start=0&amp;tstart=0" target="_blank" rel="external">修改Makefile，在LDFLAGS后增加lresolv</a>，总算编译成功。<br><br>$ make install<br><br>如果涉及权限问题，自行加上sudo。安装后的程序在/usr/local/bin，使用带有obfuscated handshake功能的ssh：<br><br>$ /usr/local/bin/ssh -NT -f -D 1080 -p 443 -Z obfascatedkey username@sshhost<br><br>大功告成，亲个嘴吧。<br><br>有需要购买ssh的话，点击<a href="https://www.123ssh.com/aff.php?aff=087" target="_blank" rel="external">我的推广链接</a>。<br><br></div>
+    &lt;pre&gt;</code><br>    Undefined symbols for architecture x86_64:<br>      “_res_9_dn_expand”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getlong”, referenced from:<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getshort”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_init”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_query”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>    ld: symbol(s) not found for architecture x86_64<br><br>需要<a href="https://discussions.apple.com/thread/2546848?start=0&amp;tstart=0" target="_blank" rel="noopener">修改Makefile，在LDFLAGS后增加lresolv</a>，总算编译成功。<br><br>$ make install<br><br>如果涉及权限问题，自行加上sudo。安装后的程序在/usr/local/bin，使用带有obfuscated handshake功能的ssh：<br><br>$ /usr/local/bin/ssh -NT -f -D 1080 -p 443 -Z obfascatedkey username@sshhost<br><br>大功告成，亲个嘴吧。<br><br>有需要购买ssh的话，点击<a href="https://www.123ssh.com/aff.php?aff=087" target="_blank" rel="noopener">我的推广链接</a>。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/09/04/使用带有obfuscated-handshake的ssh/" data-id="cj133pivz015c00c2yoncgdof" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/09/04/使用带有obfuscated-handshake的ssh/" data-id="cjmiwvba9013j04c24zrxdc81" class="article-share-link">Share</a>
       
 
       
@@ -250,7 +252,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

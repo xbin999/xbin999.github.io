@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/2013/08/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -107,7 +108,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/21/给小乐讲万历十五年之海瑞（五）/" data-id="cj133pjqk024k00c2yr2y6ns4" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/21/给小乐讲万历十五年之海瑞（五）/" data-id="cjmiwvbt3022g04c2u5ey1g33" class="article-share-link">Share</a>
       
 
       
@@ -153,8 +154,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>看ruby和写代码的时候，很难离得开<a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="external">git</a> )和<a href="https://github.com/" target="_blank" rel="external">github</a>，所以让自己也系统地看一下。<br><br><a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="external">git</a> )是一个分布式的版本控制和源代码管理系统，最开始是由Linus Torvalds为linux内核开发而设计实现的。<br><br>传统的版本控制管理，象CVS，SVN一般都会有一个中心服务器，本地check out代码，然后修改，提交合并代码，但这样的问题是依赖于中心服务器。而对于分布式版本控制系统则在本地都有完整的代码仓库，任何一台服务器发生故障，都可以使用镜像的本地仓库恢复。<br><br>git很大的一个特点是对于文件保存完整的数据，而非文件的增量差异，在不同版本时对于没有变化的文件不再保存，而仅做一个链接。<br><br><a href="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" alt="Git保存更新时的文件快照"></a><br><br>由于其分布式的特点，每台机器上都是一个仓库，所以基本上操作都在本地，包括往库里提交修改、版本差异比较、查看更新日志等等。<br><br>对于git来说，任何一个文件流转过程中都存在三种状态：<br><br><em>   已提交（committed），表明文件已经提交到本地仓库中。
-</em>   已修改（modified），表明文件已经修改，但未提交。<br><em>   已暂存（staged），表明已修改的文件放在下次提交时要保存的清单中。<br><br>所以对于本地工作时，git有三个工作区域：git的工作目录，git本地仓库和暂存区域，一般在工作目录中会有一个.git目录，其中就保存了元数据和对象数据库，而暂存区域文件(index索引文件)也放在.git目录中。对于理解暂存区的作用，<a href="http://www.worldhello.net/2010/11/30/2166.html" target="_blank" rel="external">worldhello</a>上有一篇很好的文章和一个图，引用一下：<br><a href="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" alt="git work area"></a><br><br>如果我修改一个文件，增加一行”in stage”，然后使用git add 保存到暂存区，之后再增加一行”in work directory”，git status查看状态：<br><br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git status -s<br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git add yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in stage” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    M  yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in work directory” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    MM yun.txt<br><br>此时工作区、暂存区和本地仓库yun.txt文件的内容各不相同，可以使用：
+        <div id="wrapper"><br><br>看ruby和写代码的时候，很难离得开<a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="noopener">git</a> )和<a href="https://github.com/" target="_blank" rel="noopener">github</a>，所以让自己也系统地看一下。<br><br><a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="noopener">git</a> )是一个分布式的版本控制和源代码管理系统，最开始是由Linus Torvalds为linux内核开发而设计实现的。<br><br>传统的版本控制管理，象CVS，SVN一般都会有一个中心服务器，本地check out代码，然后修改，提交合并代码，但这样的问题是依赖于中心服务器。而对于分布式版本控制系统则在本地都有完整的代码仓库，任何一台服务器发生故障，都可以使用镜像的本地仓库恢复。<br><br>git很大的一个特点是对于文件保存完整的数据，而非文件的增量差异，在不同版本时对于没有变化的文件不再保存，而仅做一个链接。<br><br><a href="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" alt="Git保存更新时的文件快照"></a><br><br>由于其分布式的特点，每台机器上都是一个仓库，所以基本上操作都在本地，包括往库里提交修改、版本差异比较、查看更新日志等等。<br><br>对于git来说，任何一个文件流转过程中都存在三种状态：<br><br><em>   已提交（committed），表明文件已经提交到本地仓库中。
+</em>   已修改（modified），表明文件已经修改，但未提交。<br><em>   已暂存（staged），表明已修改的文件放在下次提交时要保存的清单中。<br><br>所以对于本地工作时，git有三个工作区域：git的工作目录，git本地仓库和暂存区域，一般在工作目录中会有一个.git目录，其中就保存了元数据和对象数据库，而暂存区域文件(index索引文件)也放在.git目录中。对于理解暂存区的作用，<a href="http://www.worldhello.net/2010/11/30/2166.html" target="_blank" rel="noopener">worldhello</a>上有一篇很好的文章和一个图，引用一下：<br><a href="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" alt="git work area"></a><br><br>如果我修改一个文件，增加一行”in stage”，然后使用git add 保存到暂存区，之后再增加一行”in work directory”，git status查看状态：<br><br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git status -s<br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git add yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in stage” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    M  yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in work directory” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    MM yun.txt<br><br>此时工作区、暂存区和本地仓库yun.txt文件的内容各不相同，可以使用：
 
 </em>   git commit yun.txt 提交暂存区的内容到本地仓库，也就是增加“in stage”；<br><em>   git rm – cached yun.txt 直接从暂存区删除内容，工作区不变；
 </em>   git checkout . yun.txt 使用暂存区文件更新工作区文件；<br>*   git chekcout HEAD yun.txt 使用本地仓库文件更新工作区和暂存区文件。<br><br>当然我们要使用git一般都是从git init 和git clone开始的，这个下次再说。<br><br></div>
@@ -162,7 +163,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/21/学习一下git（一）/" data-id="cj133pj3w01gf00c24no2ia39" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/21/学习一下git（一）/" data-id="cjmiwvbff01ek04c228kgmghp" class="article-share-link">Share</a>
       
 
       
@@ -210,13 +211,13 @@
       
         <div id="wrapper"><br><br>听说海瑞要来南直隶，南直隶的很多地方官就自动离职或请求他调。而缙绅之家也纷纷把朱漆大门改漆黑色，不要太炫人眼目。驻在苏州的一个宦官把他的轿夫由8人减至4人。新巡抚大人声势之迅猛，足以使人震慑。<br><br>海瑞下车伊始，就把他的“督抚条约”三十六款在所治各府县公布。条约规定：<br><br><em>   境内成年男子一律从速结婚成家，不愿守节的寡妇应立即改嫁，溺杀婴孩一律停止。（好猛啊！）
 </em>   巡抚出巡各地，府县官不得出城迎接，但巡抚可以传询耆老听取他们的控诉。<br><em>   巡抚在各府县逗留，地方官供给的伙食标准为每天纹银二钱至三钱，鸡鱼肉均可供应，但不得供应鹅及黄酒。（够细的）
-</em>   境内的公文，今后一律使用廉价纸张；过去的公文习惯上在文后都留有空白，今后也一律废止。（太节约了）<br>*   自条约公布之日起，境内的若干奢侈品要停止制造，包括特殊的纺织品、头饰、纸张文具以及甜食。<br><br>这些规定有的太细，本来就会生问题，不过海瑞最后的垮台，是因为他干预了境内的农田所有权所致。<br><br>明朝中叶土地问题十分尖锐，高利贷者利用地方上的光棍青皮大量放款于自耕农，利率很高，被迫借款者大多不能偿还。一旦放款的期限已到而又无力偿还，其所抵押的土地即为放款者所占有。海瑞下决心改变这种状况，希望限制富户过多地占有土地、缩小贫富差别。这种冲动使他一往直前，义无反顾。因此，他毫不犹豫地接受了大批要求退田的申请。<br><br>海瑞卷入了大量这样的纷争之中，孤军奋斗，以个人而对抗强大的社会力量，加之在具体处理这些诉讼的时候又过于自信，既没有对地方上的情形作过周密的考察，也没有宣布法律的准则，更没有建立专门的机构去调查案情、听取申辩以作出公正的裁决，海瑞的不能成功已不待言而自明。<br><br>要求罢免海瑞的奏疏连续送达御前。吏部根据各种参劾的奏疏提出意见，说南直隶巡抚海瑞实为“志大才疏”，应该调任闲曹。一年之前没有人敢于非议这位朝廷上最正直的忠臣，一年之后他却成了众矢之的；一年之前文渊阁和吏部还因为海瑞的抗议，对他另眼相看，一年之后他们却建议皇帝让他去重新担任不负实际责任的官职。于是愤愤不平的海瑞终于在1570年春天被迫辞职回乡，在提出辞职的奏疏中，他痛斥“举朝之士，皆妇人也”。这也使他在文官集团中失去了普遍的同情。<br><br>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>。<br><br></div>
+</em>   境内的公文，今后一律使用廉价纸张；过去的公文习惯上在文后都留有空白，今后也一律废止。（太节约了）<br>*   自条约公布之日起，境内的若干奢侈品要停止制造，包括特殊的纺织品、头饰、纸张文具以及甜食。<br><br>这些规定有的太细，本来就会生问题，不过海瑞最后的垮台，是因为他干预了境内的农田所有权所致。<br><br>明朝中叶土地问题十分尖锐，高利贷者利用地方上的光棍青皮大量放款于自耕农，利率很高，被迫借款者大多不能偿还。一旦放款的期限已到而又无力偿还，其所抵押的土地即为放款者所占有。海瑞下决心改变这种状况，希望限制富户过多地占有土地、缩小贫富差别。这种冲动使他一往直前，义无反顾。因此，他毫不犹豫地接受了大批要求退田的申请。<br><br>海瑞卷入了大量这样的纷争之中，孤军奋斗，以个人而对抗强大的社会力量，加之在具体处理这些诉讼的时候又过于自信，既没有对地方上的情形作过周密的考察，也没有宣布法律的准则，更没有建立专门的机构去调查案情、听取申辩以作出公正的裁决，海瑞的不能成功已不待言而自明。<br><br>要求罢免海瑞的奏疏连续送达御前。吏部根据各种参劾的奏疏提出意见，说南直隶巡抚海瑞实为“志大才疏”，应该调任闲曹。一年之前没有人敢于非议这位朝廷上最正直的忠臣，一年之后他却成了众矢之的；一年之前文渊阁和吏部还因为海瑞的抗议，对他另眼相看，一年之后他们却建议皇帝让他去重新担任不负实际责任的官职。于是愤愤不平的海瑞终于在1570年春天被迫辞职回乡，在提出辞职的奏疏中，他痛斥“举朝之士，皆妇人也”。这也使他在文官集团中失去了普遍的同情。<br><br>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="noopener">fuyunv</a>。<br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/20/给小乐讲万历十五年之海瑞（四）/" data-id="cj133pjqn024n00c2dwxo76zc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/20/给小乐讲万历十五年之海瑞（四）/" data-id="cjmiwvbt6022j04c2ilyftpz1" class="article-share-link">Share</a>
       
 
       
@@ -262,13 +263,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>海瑞给皇帝上了个奏疏，把嘉靖皇帝狠狠地骂了一顿，一开始并没有受到惩罚。不过到了1566年2月底，嘉靖左思右想，气愤难平，终于下令锦衣卫把海瑞逮捕到东厂禁锢。<br><br>海瑞就在狱中住了10个月。有一天，狱中忽然设酒肴相待。海瑞以为这是临死前的最后一餐，他神色不变，饮食如常。结果提牢主事悄悄告诉他，皇帝业已升天，新君不日即位，你老先生乃是忠臣，一定会得到重用，海瑞听罢，立刻放声号哭；号哭之余，继以呕吐。<br><br>1567年年初隆庆皇帝登极，海瑞被释出狱。出来后，对他的安排倒是成了文渊阁大学士和吏部尚书的一个难题。一方面他的声望已为整个帝国所公认。他当然是极端的廉洁，极端的诚实，但另一方面也可能就是极端的粗线条，极端的喜欢吹毛求疵。你说该拿海瑞怎么办呢？比较稳妥的办法就是把他养着，让他升官却不让他负实际的责任。于是，在不长的时期内，他历任尚宝司丞、大理寺右寺丞、左寺丞、南京通政司右通政，官至正四品。<br><br>但象海瑞这样的人是闲不住的，于是1569年年初的京察，海瑞在奏折中说：陛下既然赦免了我的死罪，又对我破格擢升，在所有的文臣之中，没有一个人会比我更加迫切地要求报答陛下的恩典。接着，他谦虚地声称自己才浅识疏；又接着，他表示自己现任的职务只是专管查看呈奏给皇帝的文书，看罢以后原封发送，既无财政责任，又用不着下左右全局的决心，但是连这样的一个位置还不称所职，不如干脆把我革退算了。<br><br>问题是没人敢把海瑞罢免掉，无奈之下文渊阁和吏部终于向他低头。当年复天，海瑞被任命为南直隶巡抚，驻扎苏州。<br><br>“知道直隶是哪里吗？”<br><br>“不知道。”<br><br>印象中直隶是在北方，直隶其实是指直属京师之地。明朝洪武元年（1368年）建都「南京」（后改称京师，永乐初年复改南京。在今南京市），以应天府等府为直隶。永乐初年移都「北京」（今北京市）後，又称直隶于北京的地区为北直隶，简称北直，相当于今北京、天津两市、河北省大部和河南、山东的小部地区；直隶于南京的地区称为南直隶，简称南直，相当于今江苏、安徽、上海。民国十七年（1928年）改直隶省名为河北省。<br><br>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>。<br><br></div>
+        <div id="wrapper"><br><br>海瑞给皇帝上了个奏疏，把嘉靖皇帝狠狠地骂了一顿，一开始并没有受到惩罚。不过到了1566年2月底，嘉靖左思右想，气愤难平，终于下令锦衣卫把海瑞逮捕到东厂禁锢。<br><br>海瑞就在狱中住了10个月。有一天，狱中忽然设酒肴相待。海瑞以为这是临死前的最后一餐，他神色不变，饮食如常。结果提牢主事悄悄告诉他，皇帝业已升天，新君不日即位，你老先生乃是忠臣，一定会得到重用，海瑞听罢，立刻放声号哭；号哭之余，继以呕吐。<br><br>1567年年初隆庆皇帝登极，海瑞被释出狱。出来后，对他的安排倒是成了文渊阁大学士和吏部尚书的一个难题。一方面他的声望已为整个帝国所公认。他当然是极端的廉洁，极端的诚实，但另一方面也可能就是极端的粗线条，极端的喜欢吹毛求疵。你说该拿海瑞怎么办呢？比较稳妥的办法就是把他养着，让他升官却不让他负实际的责任。于是，在不长的时期内，他历任尚宝司丞、大理寺右寺丞、左寺丞、南京通政司右通政，官至正四品。<br><br>但象海瑞这样的人是闲不住的，于是1569年年初的京察，海瑞在奏折中说：陛下既然赦免了我的死罪，又对我破格擢升，在所有的文臣之中，没有一个人会比我更加迫切地要求报答陛下的恩典。接着，他谦虚地声称自己才浅识疏；又接着，他表示自己现任的职务只是专管查看呈奏给皇帝的文书，看罢以后原封发送，既无财政责任，又用不着下左右全局的决心，但是连这样的一个位置还不称所职，不如干脆把我革退算了。<br><br>问题是没人敢把海瑞罢免掉，无奈之下文渊阁和吏部终于向他低头。当年复天，海瑞被任命为南直隶巡抚，驻扎苏州。<br><br>“知道直隶是哪里吗？”<br><br>“不知道。”<br><br>印象中直隶是在北方，直隶其实是指直属京师之地。明朝洪武元年（1368年）建都「南京」（后改称京师，永乐初年复改南京。在今南京市），以应天府等府为直隶。永乐初年移都「北京」（今北京市）後，又称直隶于北京的地区为北直隶，简称北直，相当于今北京、天津两市、河北省大部和河南、山东的小部地区；直隶于南京的地区称为南直隶，简称南直，相当于今江苏、安徽、上海。民国十七年（1928年）改直隶省名为河北省。<br><br>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="noopener">fuyunv</a>。<br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/20/给小乐讲万历十五年之海瑞（三）/" data-id="cj133pjqd024d00c2bjsiswqm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/20/给小乐讲万历十五年之海瑞（三）/" data-id="cjmiwvbsz022904c2qpyw9rjd" class="article-share-link">Share</a>
       
 
       
@@ -321,7 +322,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/19/给小乐讲万历十五年之海瑞（二）/" data-id="cj133pjqg024g00c2ps6craa2" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/19/给小乐讲万历十五年之海瑞（二）/" data-id="cjmiwvbt0022c04c2mat45nba" class="article-share-link">Share</a>
       
 
       
@@ -367,7 +368,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>brew,gem,rvm 和 bundler都是软件包的管理工具，搞过来搞过去，有点晕，需要理理。<br><br><a href="http://brew.sh/" target="_blank" rel="external"><strong>brew</strong></a>是OS X上提供软件包的管理。Homebrew将软件包安装到单独的目录，然后符号链接到/usr/local 中，完全基于git和ruby。使用gem来安装你的gems，用brew来搞定他们的依赖包。brew的安装：<br><br>    ruby -e “$(curl -fsSL <a href="https://raw.github.com/mxcl/homebrew/go" target="_blank" rel="external">https://raw.github.com/mxcl/homebrew/go</a>)”<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>brew,gem,rvm 和 bundler都是软件包的管理工具，搞过来搞过去，有点晕，需要理理。<br><br><a href="http://brew.sh/" target="_blank" rel="noopener"><strong>brew</strong></a>是OS X上提供软件包的管理。Homebrew将软件包安装到单独的目录，然后符号链接到/usr/local 中，完全基于git和ruby。使用gem来安装你的gems，用brew来搞定他们的依赖包。brew的安装：<br><br>    ruby -e “$(curl -fsSL <a href="https://raw.github.com/mxcl/homebrew/go)&quot;" target="_blank" rel="noopener">https://raw.github.com/mxcl/homebrew/go)&quot;</a><br>    <code>&lt;/pre&gt;
 
     [**RubyGems**](http://rubygems.org/)是一个包管理框架，提供了ruby社区gem的托管服务，用于方便地下载、安装和使用ruby软件包。ruby软件包被称为&quot;gem&quot;，包含了ruby应用或库。要升级到最新的RubyGems，运行：
 
@@ -385,12 +386,12 @@
 
     采用rvm安装ruby：
 
-    &lt;pre&gt;</code><br>    $ rvm list known<br>    $ rvm install 1.9.3<br>    $ rvm use 1.9.3<br><br><a href="http://bundler.io/" target="_blank" rel="external"><strong>Bundler</strong></a>为ruby维持一个一致性的环境，跟踪应用代码和所需要的ruby gems，这样一个应用可以有所需要的精确的gems（和版本）。<br><br>$ gem install bundler<br><br>安装的顺序，先安装rvm，之后选择安装一个ruby版本，就可以提供一个完整的ruby运行环境。之后可以安装brew（brew虽然是管理os的，但基于ruby）和gem，分别管理操作系统和ruby的软件包。之后ruby重新编译的时候所依赖的包可以使用brew安装。有了gem之后，bundler只不过就是一个gem，直接通过gem install 即可。<br><br></div>
+    &lt;pre&gt;</code><br>    $ rvm list known<br>    $ rvm install 1.9.3<br>    $ rvm use 1.9.3<br><br><a href="http://bundler.io/" target="_blank" rel="noopener"><strong>Bundler</strong></a>为ruby维持一个一致性的环境，跟踪应用代码和所需要的ruby gems，这样一个应用可以有所需要的精确的gems（和版本）。<br><br>$ gem install bundler<br><br>安装的顺序，先安装rvm，之后选择安装一个ruby版本，就可以提供一个完整的ruby运行环境。之后可以安装brew（brew虽然是管理os的，但基于ruby）和gem，分别管理操作系统和ruby的软件包。之后ruby重新编译的时候所依赖的包可以使用brew安装。有了gem之后，bundler只不过就是一个gem，直接通过gem install 即可。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/13/brewgemrvm-and-bundler/" data-id="cj133pife003c00c2rajxwlef" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/13/brewgemrvm-and-bundler/" data-id="cjmiwvaxx003304c2ak7mzdp2" class="article-share-link">Share</a>
       
 
       
@@ -436,7 +437,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>看<a href="https://github.com/simsicon/weibo_2_example/blob/master/example.rb" target="_blank" rel="external">代码</a>的时候看到了 p “<em>“ </em> 80 + “validated” ，心想这个p是啥玩意，为啥不用puts啊？<br><br>细看一下还有点讲究，<a href="http://www.ruby-doc.org/core-2.0/Kernel.html#method-i-p" target="_blank" rel="external">p是个Kernel方法</a>，p打印的是inspect方法，而不是to_s，更适合与调试。比如 <a href="http://stackoverflow.com/questions/1255324/p-vs-puts-in-ruby" target="_blank" rel="external">1, “1” and “2\b1”的区别，用puts输出的全是1，而p则能输出内部结构</a>。<br><br>    1.9.3p125 :055 &gt; puts 1, “1”, “2\b1”<br>    1<br>    1<br>    1<br>     =&gt; nil<br>    1.9.3p125 :056 &gt; p 1, “1”, “2\b1”<br>    1<br>    “1”<br>    “2\b1”<br>     =&gt; [1, “1”, “2\b1”]<br>     <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>看<a href="https://github.com/simsicon/weibo_2_example/blob/master/example.rb" target="_blank" rel="noopener">代码</a>的时候看到了 p “<em>“ </em> 80 + “validated” ，心想这个p是啥玩意，为啥不用puts啊？<br><br>细看一下还有点讲究，<a href="http://www.ruby-doc.org/core-2.0/Kernel.html#method-i-p" target="_blank" rel="noopener">p是个Kernel方法</a>，p打印的是inspect方法，而不是to_s，更适合与调试。比如 <a href="http://stackoverflow.com/questions/1255324/p-vs-puts-in-ruby" target="_blank" rel="noopener">1, “1” and “2\b1”的区别，用puts输出的全是1，而p则能输出内部结构</a>。<br><br>    1.9.3p125 :055 &gt; puts 1, “1”, “2\b1”<br>    1<br>    1<br>    1<br>     =&gt; nil<br>    1.9.3p125 :056 &gt; p 1, “1”, “2\b1”<br>    1<br>    “1”<br>    “2\b1”<br>     =&gt; [1, “1”, “2\b1”]<br>     <code>&lt;/pre&gt;
 
     在[What is “p” in Ruby?](http://stackoverflow.com/questions/1758284/what-is-p-in-ruby)还说到了一个poetry mode，写Ruby方法调用参数时不使用括号，不是很理解。
 
@@ -455,7 +456,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/11/ruby-p-vs-puts/" data-id="cj133piki00ik00c26qy9p4iz" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/11/ruby-p-vs-puts/" data-id="cjmiwvb2a00hm04c297tob6dt" class="article-share-link">Share</a>
       
 
       
@@ -501,7 +502,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://xmlrpc.scripting.com/spec.html" target="_blank" rel="external">XML-RPC</a> 是互联网上的一种远程过程调用协议，采用http+xml的方式。XML-RPC消息是一个HTTP-POST请求，请求报文是XML，而服务端调用返回的报文也采用XML格式。<br><br>XML-RPC支持的数据类型有：int, string, boolean, double, dateTime.iso8601, base64, array, struct。如果不指定类型，缺省为string。<br><br>返回报文正常情况都是200 OK，比如：<br><br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Length: 158<br>    Content-Type: text/xml<br>    Date: Fri, 17 Jul 1998 19:55:08 GMT<br>    Server: UserLand Frontier/5.1.2-WinNT<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br><a href="http://xmlrpc.scripting.com/spec.html" target="_blank" rel="noopener">XML-RPC</a> 是互联网上的一种远程过程调用协议，采用http+xml的方式。XML-RPC消息是一个HTTP-POST请求，请求报文是XML，而服务端调用返回的报文也采用XML格式。<br><br>XML-RPC支持的数据类型有：int, string, boolean, double, dateTime.iso8601, base64, array, struct。如果不指定类型，缺省为string。<br><br>返回报文正常情况都是200 OK，比如：<br><br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Length: 158<br>    Content-Type: text/xml<br>    Date: Fri, 17 Jul 1998 19:55:08 GMT<br>    Server: UserLand Frontier/5.1.2-WinNT<br>    <code>&lt;/pre&gt;
     &amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;
     &amp;lt;methodResponse&amp;gt;
     &amp;lt;params&amp;gt;
@@ -511,16 +512,16 @@
     &amp;lt;/params&amp;gt;
     &amp;lt;/methodResponse&amp;gt;
     &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-    &lt;pre&gt;</code><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">Ruby 很好地提供了对XML-RPC的支持，直接require “xmlrpc”，分别有</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Client.html" target="_blank" rel="external">client</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">和</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Server.html" target="_blank" rel="external">server</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">。一个简单的例子：</span><br>    <code>&lt;/pre&gt;
+    &lt;pre&gt;</code><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">Ruby 很好地提供了对XML-RPC的支持，直接require “xmlrpc”，分别有</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Client.html" target="_blank" rel="noopener">client</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">和</span><a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/xmlrpc/rdoc/XMLRPC/Server.html" target="_blank" rel="noopener">server</a><span style="font-family:'Open Sans', sans-serif;font-size:13px;line-height:19px;">。一个简单的例子：</span><br>    <code>&lt;/pre&gt;
     server 端，new创建一个实例，并在指定端口侦听，serve在增加了处理器后启动服务，处理XML-RPC请求并响应。
     &lt;pre&gt;</code><br>    require “xmlrpc/server”<br><br>    s = XMLRPC::Server.new(7777)<br>    s.add_handler(“michael.add”) do |a,b|<br>      a + b<br>    end<br><br>    s.serve<br>    <code>&lt;/pre&gt;
     client 端采用call调用方法，第一个参数是方法名，之后跟着方法需要的参数。
-    &lt;pre&gt;</code><br>    require “xmlrpc/client”<br><br>    server = XMLRPC::Client.new(“localhost”, “/RPC2”, 7777)<br>    begin<br>      param = server.call(“michael.add”, 4, 5)<br>      puts “4 + 5 = #{param}”<br>    rescue XMLRPC::FaultException =&gt; e<br>      puts “Error:”<br>      puts e.faultCode<br>      puts e.faultString<br>    end<br><br><a href="http://codex.wordpress.org/XML-RPC_Support" target="_blank" rel="external">Wordpress提供了XML-PRC的支持</a>，从WordPress 3.5起就默认支持XML-RPC功能，详细的API参见<a href="http://codex.wordpress.org/XML-RPC_WordPress_API" target="_blank" rel="external">XML-RPC WordPress API</a>，采用wp.接口取代了Blogger, MovableType和metaWeblog接口。<br><br></div>
+    &lt;pre&gt;</code><br>    require “xmlrpc/client”<br><br>    server = XMLRPC::Client.new(“localhost”, “/RPC2”, 7777)<br>    begin<br>      param = server.call(“michael.add”, 4, 5)<br>      puts “4 + 5 = #{param}”<br>    rescue XMLRPC::FaultException =&gt; e<br>      puts “Error:”<br>      puts e.faultCode<br>      puts e.faultString<br>    end<br><br><a href="http://codex.wordpress.org/XML-RPC_Support" target="_blank" rel="noopener">Wordpress提供了XML-PRC的支持</a>，从WordPress 3.5起就默认支持XML-RPC功能，详细的API参见<a href="http://codex.wordpress.org/XML-RPC_WordPress_API" target="_blank" rel="noopener">XML-RPC WordPress API</a>，采用wp.接口取代了Blogger, MovableType和metaWeblog接口。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/07/xml-rpc/" data-id="cj133pio200re00c2tnztp850" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/07/xml-rpc/" data-id="cjmiwvb5100q104c2sag5sg0u" class="article-share-link">Share</a>
       
 
       
@@ -578,7 +579,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/06/列出数据量大的文件或目录/" data-id="cj133pixq017u00c2wv2bjs8m" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/06/列出数据量大的文件或目录/" data-id="cjmiwvbbe016004c2h2ek9j90" class="article-share-link">Share</a>
       
 
       
@@ -624,13 +625,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>周末回了趟老家，昨晚小乐问我：“爸爸，今天讲什么呀？”<br><br>我说：“继续讲万历。”<br><br>“你又没带书。”<br><br>“哈哈，咱有kindle呀！”<br><br>有kindle确实还是挺方便的，下一堆书，随时可以拿起翻看，基本我们在外面逛的时候都不用带什么书了。<br><br>“爸爸，那今天给我讲海瑞吧。”看来小家伙对海瑞情有独钟，最早讲万历十五年就是从说海瑞开始的，结合着去千岛湖的海公祠来说。不过在父与女中倒一直没怎么说海瑞的故事，这次分段说说。<br><br>海瑞从政20多年的生活，充满了各种各样的纠纷。他的信条和个性使他既被人尊重，也被人遗弃。这就是说，他虽然被人仰慕，但没有人按照他的榜样办事，他的一生体现了一个有教养的读书人服务于公众而牺牲自我的精神，但这种精神的实际作用却至为微薄。<br><br>小乐说：“海瑞是要给他封一个大官，但是又不让他做事的，因为他做事总是和别人…”<br><br>“不合拍。”<br><br>这里还是之前说的法律和道德的关系。海瑞充分重视法律的作用并且执法不阿，但是作为一个在圣经贤传培养下成长的文官，他又始终重视伦理道德的指导作用。他在著作中表示，人类的日常行为乃至一举一动，都可以根据直觉归纳于善、恶两个道德范畴之内。他说，他充当地方的行政官而兼司法官，所有诉讼，十之六七，其是非可以立即判定。只有少数的案件，是非尚有待斟酌，这斟酌的标准是：<br><br>“凡讼之可疑者，与其屈兄，宁屈其弟；与其屈叔伯，宁 屈其侄。与其屈贫民，宁屈富民；与其屈愚直，宁屈刁顽。 事在争产业；与其屈小民，宁屈乡宦，以救弊也。事在争言 貌，与其屈乡宦，宁屈小民，以存体也。”用这样的精神来执行法律，确实与“四书”的训示相符合。可是他出任文官并在公庭判案，上距“四书”的写作已经两千年，距本朝的开国也已近两百年。与海瑞同时的人所不能看清楚的是，这一段有关司法的建议恰恰暴露了我们这个帝国在制度上长期存在的困难：以熟读诗书的文人治理农民，他们不可能改进这个司法制度，更谈不上保障人权。法律的解释和执行离不开传统的伦理，组织上也没有对付复杂的因素和多元关系的能力。<br><br>所以海瑞的一生经历，就是这种制度的产物。其结果是，个人道德之长，仍不能补救组织和技术之短。<br><br>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>。<br><br></div>
+        <div id="wrapper"><br><br>周末回了趟老家，昨晚小乐问我：“爸爸，今天讲什么呀？”<br><br>我说：“继续讲万历。”<br><br>“你又没带书。”<br><br>“哈哈，咱有kindle呀！”<br><br>有kindle确实还是挺方便的，下一堆书，随时可以拿起翻看，基本我们在外面逛的时候都不用带什么书了。<br><br>“爸爸，那今天给我讲海瑞吧。”看来小家伙对海瑞情有独钟，最早讲万历十五年就是从说海瑞开始的，结合着去千岛湖的海公祠来说。不过在父与女中倒一直没怎么说海瑞的故事，这次分段说说。<br><br>海瑞从政20多年的生活，充满了各种各样的纠纷。他的信条和个性使他既被人尊重，也被人遗弃。这就是说，他虽然被人仰慕，但没有人按照他的榜样办事，他的一生体现了一个有教养的读书人服务于公众而牺牲自我的精神，但这种精神的实际作用却至为微薄。<br><br>小乐说：“海瑞是要给他封一个大官，但是又不让他做事的，因为他做事总是和别人…”<br><br>“不合拍。”<br><br>这里还是之前说的法律和道德的关系。海瑞充分重视法律的作用并且执法不阿，但是作为一个在圣经贤传培养下成长的文官，他又始终重视伦理道德的指导作用。他在著作中表示，人类的日常行为乃至一举一动，都可以根据直觉归纳于善、恶两个道德范畴之内。他说，他充当地方的行政官而兼司法官，所有诉讼，十之六七，其是非可以立即判定。只有少数的案件，是非尚有待斟酌，这斟酌的标准是：<br><br>“凡讼之可疑者，与其屈兄，宁屈其弟；与其屈叔伯，宁 屈其侄。与其屈贫民，宁屈富民；与其屈愚直，宁屈刁顽。 事在争产业；与其屈小民，宁屈乡宦，以救弊也。事在争言 貌，与其屈乡宦，宁屈小民，以存体也。”用这样的精神来执行法律，确实与“四书”的训示相符合。可是他出任文官并在公庭判案，上距“四书”的写作已经两千年，距本朝的开国也已近两百年。与海瑞同时的人所不能看清楚的是，这一段有关司法的建议恰恰暴露了我们这个帝国在制度上长期存在的困难：以熟读诗书的文人治理农民，他们不可能改进这个司法制度，更谈不上保障人权。法律的解释和执行离不开传统的伦理，组织上也没有对付复杂的因素和多元关系的能力。<br><br>所以海瑞的一生经历，就是这种制度的产物。其结果是，个人道德之长，仍不能补救组织和技术之短。<br><br>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="noopener">fuyunv</a>。<br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/04/给小乐讲万历十五年之海瑞（一）/" data-id="cj133pjqa024900c225z8sis1" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/04/给小乐讲万历十五年之海瑞（一）/" data-id="cjmiwvbsy022604c2qtfm5ttl" class="article-share-link">Share</a>
       
 
       
@@ -747,7 +748,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

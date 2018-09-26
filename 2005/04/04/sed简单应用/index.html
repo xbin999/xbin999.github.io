@@ -6,11 +6,13 @@
   <title>sed简单应用 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &amp;quot;s/[[:cntrl:]]//g&amp;quot;来做转换，简单写了个shell如下：#!/bin/sh# name: dos2unix.sh# Creator:">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sed简单应用">
 <meta property="og:url" content="http://xbin999.com/2005/04/04/sed简单应用/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &amp;quot;s/[[:cntrl:]]//g&amp;quot;来做转换，简单写了个shell如下：#!/bin/sh# name: dos2unix.sh# Creator:">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T12:07:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sed简单应用">
@@ -96,13 +98,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!173" class="bvMsg"><br><br>同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &quot;s/[[:cntrl:]]//g&quot;来做转换，简单写了个shell如下：<br><br>#!/bin/sh<br># name: dos2unix.sh<br># Creator: Bin Yang<br># Created data: 2005/04/04<br><br>if [ $# -lt 1 ]<br>then<br>    echo &quot;Usage: $0 filename&quot;<br>    return<br>fi<br><br>echo &quot;replace begin…&quot;<br>while [ $# -gt 0 ]<br>do<br>    filename=$1<br>    shift<br><br>    echo &quot;dealing with $filename… &quot;<br>    mv $filename .$filename.bak<br>    sed &quot;s/[[:cntrl:]]//g&quot; .$filename.bak &gt; $filename<br>done<br><br>echo &quot;replace end.&quot;<br><br>developerWorks上有不错的sed教程<a href="http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml" target="_blank" rel="external">http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml</a><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!173" class="bvMsg"><br><br>同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &quot;s/[[:cntrl:]]//g&quot;来做转换，简单写了个shell如下：<br><br>#!/bin/sh<br># name: dos2unix.sh<br># Creator: Bin Yang<br># Created data: 2005/04/04<br><br>if [ $# -lt 1 ]<br>then<br>    echo &quot;Usage: $0 filename&quot;<br>    return<br>fi<br><br>echo &quot;replace begin…&quot;<br>while [ $# -gt 0 ]<br>do<br>    filename=$1<br>    shift<br><br>    echo &quot;dealing with $filename… &quot;<br>    mv $filename .$filename.bak<br>    sed &quot;s/[[:cntrl:]]//g&quot; .$filename.bak &gt; $filename<br>done<br><br>echo &quot;replace end.&quot;<br><br>developerWorks上有不错的sed教程<a href="http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml" target="_blank" rel="noopener">http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml</a><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/04/sed简单应用/" data-id="cj133pild00ks00c2t0z3wee6" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/04/sed简单应用/" data-id="cjmiwvb2z00jt04c2e7v2stx0" class="article-share-link">Share</a>
       
 
       
@@ -237,7 +239,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

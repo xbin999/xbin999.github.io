@@ -6,11 +6,13 @@
   <title>mail.cpp和outlook之间带附件的邮件传送问题 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="使用了这么多点的mac了，感觉还挺顺的，谁知今天出了个很头疼的问题。兄弟反馈我发的邮件看不到正文，都成为附件中的一部分了，在outlook中形式如下：晕啊！这么大的问题，枉我还一直自我感觉良好，也没人及早提醒我一下。真怀疑最近我的有些邮件大家有没有看清楚啊？！赶紧找解决方案。但是越看越心凉，貌似这个问题很难，mac的mail.app和outlook, exchange server不是一家啊！而且">
+<meta name="keywords" content="mac,mactips,mail,outlook">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mail.cpp和outlook之间带附件的邮件传送问题">
 <meta property="og:url" content="http://xbin999.com/2011/09/22/slugs-5/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="使用了这么多点的mac了，感觉还挺顺的，谁知今天出了个很头疼的问题。兄弟反馈我发的邮件看不到正文，都成为附件中的一部分了，在outlook中形式如下：晕啊！这么大的问题，枉我还一直自我感觉良好，也没人及早提醒我一下。真怀疑最近我的有些邮件大家有没有看清楚啊？！赶紧找解决方案。但是越看越心凉，貌似这个问题很难，mac的mail.app和outlook, exchange server不是一家啊！而且">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://img.skitch.com/20110921-d59a2t9hr4mssri8k4q81uhwgi.png">
 <meta property="og:image" content="https://img.skitch.com/20110921-pidrdpbcm7rdayq6m535ccy5kw.jpg">
 <meta property="og:updated_time" content="2014-09-18T07:24:33.000Z">
@@ -103,7 +105,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用了这么多点的mac了，感觉还挺顺的，谁知今天出了个很头疼的问题。兄弟反馈我发的邮件看不到正文，都成为附件中的一部分了，在outlook中形式如下：<div><img src="https://img.skitch.com/20110921-d59a2t9hr4mssri8k4q81uhwgi.png" alt=""></div><div>晕啊！这么大的问题，枉我还一直自我感觉良好，也没人及早提醒我一下。真怀疑最近我的有些邮件大家有没有看清楚啊？！</div><div>赶紧找解决方案。但是越看越心凉，貌似这个问题很难，mac的mail.app和outlook, exchange server不是一家啊！而且这个问题的渊源似乎也很久了。</div><div>“<a href="http://support.microsoft.com/kb/814111" target="_blank" rel="external">Outlook将内联邮件信息呈现为附件</a>”这是2004的文章；</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><a href="http://chealion.ca/2010/06/mail-app-outlook-attachments-and-disappearing-text/" target="_blank" rel="external">MAIL.APP, OUTLOOK, ATTACHMENTS AND DISAPPEARING TEXT</a></span>”对这个问题有详细的描述，通过选择“总是发送与windows兼容的附件”，“总是在邮件结尾处发送附件”能解决部分问题，就是让附件在最后，使得后面要截取的文本没有。但对于发送的时候带多个附件，尤其很多时候是直接在邮件中内嵌图表，还是会导致图表的信息都无法显示。</div><div>最新的进展在微软的论坛上有篇很长的文章：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="external">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”，发起人认为是Outlook设置为IMAP连接的问题，而不是Exchange的原因。貌似微软的解决效率也不高，5月份提出的问题，陆续都有人反馈存在同样情况。提问的人也抱怨了一下：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">I’d be curious to know if somebody else on your end can actually try to reproduce the problem and see it first-hand.</span>”。</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">Our request for a fix for this support case was turned down for a fix for Office 2010 (even though they acknowledged the bug):</span></div></p>
+        <p>使用了这么多点的mac了，感觉还挺顺的，谁知今天出了个很头疼的问题。兄弟反馈我发的邮件看不到正文，都成为附件中的一部分了，在outlook中形式如下：<div><img src="https://img.skitch.com/20110921-d59a2t9hr4mssri8k4q81uhwgi.png" alt=""></div><div>晕啊！这么大的问题，枉我还一直自我感觉良好，也没人及早提醒我一下。真怀疑最近我的有些邮件大家有没有看清楚啊？！</div><div>赶紧找解决方案。但是越看越心凉，貌似这个问题很难，mac的mail.app和outlook, exchange server不是一家啊！而且这个问题的渊源似乎也很久了。</div><div>“<a href="http://support.microsoft.com/kb/814111" target="_blank" rel="noopener">Outlook将内联邮件信息呈现为附件</a>”这是2004的文章；</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><a href="http://chealion.ca/2010/06/mail-app-outlook-attachments-and-disappearing-text/" target="_blank" rel="noopener">MAIL.APP, OUTLOOK, ATTACHMENTS AND DISAPPEARING TEXT</a></span>”对这个问题有详细的描述，通过选择“总是发送与windows兼容的附件”，“总是在邮件结尾处发送附件”能解决部分问题，就是让附件在最后，使得后面要截取的文本没有。但对于发送的时候带多个附件，尤其很多时候是直接在邮件中内嵌图表，还是会导致图表的信息都无法显示。</div><div>最新的进展在微软的论坛上有篇很长的文章：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="noopener">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”，发起人认为是Outlook设置为IMAP连接的问题，而不是Exchange的原因。貌似微软的解决效率也不高，5月份提出的问题，陆续都有人反馈存在同样情况。提问的人也抱怨了一下：“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">I’d be curious to know if somebody else on your end can actually try to reproduce the problem and see it first-hand.</span>”。</div><div>“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">Our request for a fix for this support case was turned down for a fix for Office 2010 (even though they acknowledged the bug):</span></div></p>
 <p>Unfortunately - I have bad news concerning this issue. The product team has reviewed the request, but the changes required to support this are too large for a regular fix. The team is looking at doing work in Outlook to support this in a future release, but it just cannot be done in the currently released versions. So the request was turned down for a change in the current product.</p>
 <p>and</p>
 <p>Yes - it is a really big change that is just too big to put in the current product.</p>
@@ -114,7 +116,7 @@
 <p>&nbsp;So, all our Outlook clients who will be using Google e-mail in the next 6 months will start not receiving e-mail attachments forwarded to them by Mac Mail.app clients.</p>
 <div><span class="Apple-style-span" style="background-color:rgb(221,221,221);">And, if we’re lucky, we’ll see a fix in 2 years.&nbsp;&nbsp; Bleah.&nbsp; You might open an SR so they realize how big an impact this will have/is having.</span>”</div><div><br></div>
 
-<div>我的环境是：mac OS X 10.7.1，mail 5.0，Exchage Server（版本不确定，肯定比2011低）</div><div>从我测试的情况来看，我在mac上使用mail.app发送带有附件的邮件，由于原先的签名中就带有图片，就会导致签名的第一张图片之后的文本全部不会显示，都成了附件的形式，在gmail中收到的邮件也是如此，如下图：</div><div><img src="https://img.skitch.com/20110921-pidrdpbcm7rdayq6m535ccy5kw.jpg" alt=""></div><div>似乎和outlook邮件客户端没有关系，但和exchange server不知是否有一定关联？</div><div>在“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="external">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”中还提到了一种有趣的解决方法：</div><div>在terminal上设置“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes”</span>&nbsp;，然后重启mail.app。</div><div>我试了一下，还真能其作用，但这样会导致在mail中自己看邮件非常不方便，因为看到的内容都是image什么的，具体内容就全不知了。</div><div><br></div><div>最终我还是没能找到解决方法，暂时改进的点是我把签名中的图片都给去了，以纯文本形式，附件都添加在邮件最后。谁有方法的话盼能告诉一声。</div>
+<div>我的环境是：mac OS X 10.7.1，mail 5.0，Exchage Server（版本不确定，肯定比2011低）</div><div>从我测试的情况来看，我在mac上使用mail.app发送带有附件的邮件，由于原先的签名中就带有图片，就会导致签名的第一张图片之后的文本全部不会显示，都成了附件的形式，在gmail中收到的邮件也是如此，如下图：</div><div><img src="https://img.skitch.com/20110921-pidrdpbcm7rdayq6m535ccy5kw.jpg" alt=""></div><div>似乎和outlook邮件客户端没有关系，但和exchange server不知是否有一定关联？</div><div>在“<span class="Apple-style-span" style="background-color:rgb(221,221,221);"><strong><a href="http://social.technet.microsoft.com/Forums/en-AU/outlook/thread/d4782ce6-a15c-4023-b70c-5d1a8379c536" target="_blank" rel="noopener">Outlook 2010 has problems dealing with in-line attachment (not an Exchange issue!)</a></strong></span>”中还提到了一种有趣的解决方法：</div><div>在terminal上设置“<span class="Apple-style-span" style="background-color:rgb(221,221,221);">defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes”</span>&nbsp;，然后重启mail.app。</div><div>我试了一下，还真能其作用，但这样会导致在mail中自己看邮件非常不方便，因为看到的内容都是image什么的，具体内容就全不知了。</div><div><br></div><div>最终我还是没能找到解决方法，暂时改进的点是我把签名中的图片都给去了，以纯文本形式，附件都添加在邮件最后。谁有方法的话盼能告诉一声。</div>
 
 <div><br></div>
 
@@ -122,7 +124,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/22/slugs-5/" data-id="cj133pilt00m400c2jl2vinhn" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/22/slugs-5/" data-id="cjmiwvb3e00ky04c21lawi4er" class="article-share-link">Share</a>
       
 
       
@@ -257,7 +259,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/IT/page/3/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,12 +102,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>之前写过”<a href="http://xbin999.com/2013/04/27/%E7%BC%96%E5%86%99markdown%E6%96%87%E6%A1%A3%E7%9B%B4%E6%8E%A5%E5%8F%91%E5%B8%83%E5%88%B0wordpress%E4%B8%8A-4/">编写markdown文档直接发布到wordpress上</a>“，当时还是<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">自己解析ARGV</a>，看了<a href="http://xbin999.com/2013/07/18/ruby-optionparser/">optparse</a>后，把代码改一改。<br><br>       # Define the options, and what they do<br>       opts.on( ‘-s’, ‘–title [BlogTitle]’, ‘Blog title’ ) do|title|<br>         options[:title] = title<br>       end<br><br>       options[:tags] = nil<br>       opts.on( ‘-t’, ‘–tags tag1,tag2,tag3’, Array, ‘Tags blog’ ) do|tags|<br>         options[:tags] = tags<br>       end<br><br>       options[:categories] = nil<br>       opts.on( ‘-c’, ‘–categories cat1,cat2,cat3’, Array, ‘Blog categories’ ) do|categories|<br>         options[:categories] = categories<br>       end<br><br>第一个参数可选，后面的可以指定列表，挺好。<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">修改后的代码</a>。<br><br></div>
+        <div id="wrapper"><br><br>之前写过”<a href="http://xbin999.com/2013/04/27/%E7%BC%96%E5%86%99markdown%E6%96%87%E6%A1%A3%E7%9B%B4%E6%8E%A5%E5%8F%91%E5%B8%83%E5%88%B0wordpress%E4%B8%8A-4/">编写markdown文档直接发布到wordpress上</a>“，当时还是<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">自己解析ARGV</a>，看了<a href="http://xbin999.com/2013/07/18/ruby-optionparser/">optparse</a>后，把代码改一改。<br><br>       # Define the options, and what they do<br>       opts.on( ‘-s’, ‘–title [BlogTitle]’, ‘Blog title’ ) do|title|<br>         options[:title] = title<br>       end<br><br>       options[:tags] = nil<br>       opts.on( ‘-t’, ‘–tags tag1,tag2,tag3’, Array, ‘Tags blog’ ) do|tags|<br>         options[:tags] = tags<br>       end<br><br>       options[:categories] = nil<br>       opts.on( ‘-c’, ‘–categories cat1,cat2,cat3’, Array, ‘Blog categories’ ) do|categories|<br>         options[:categories] = categories<br>       end<br><br>第一个参数可选，后面的可以指定列表，挺好。<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">修改后的代码</a>。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/19/使用optparse改写post/" data-id="cj133pivs015100c21jgjyywd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/19/使用optparse改写post/" data-id="cjmiwvba3013604c2c0g758l2" class="article-share-link">Share</a>
       
 
       
@@ -152,19 +153,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>原先在看的<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="external">Programming Ruby</a>版本有点低，其中的代码有些在1.9中也不适合，比如说<a href="http://xbin999.com/2013/07/03/%e7%9c%8b%e4%b9%a6%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b%ef%bc%8c%e5%86%99%e4%bb%a3%e7%a0%81%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b/">Net::HTTP.get</a>，找了本Programming Ruby 1.9的，目录结构也有所不同了，所以补看部分。不过最近事情多，效率变低，每天都只是看一会，也缺少总结了。<br><br>今天记录一下看”Organizing Your Source”中的一个例子用的<a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/optparse/rdoc/OptionParser.html" target="_blank" rel="external">optparse</a>，optparse是Ruby的一个库，不是gem。OptionParser类用于对命令行选项进行解析，有一些特色：<br><br><em>   参数规范说明和处理代码写在一起，便于关联。
+        <div id="wrapper"><br><br>原先在看的<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="noopener">Programming Ruby</a>版本有点低，其中的代码有些在1.9中也不适合，比如说<a href="http://xbin999.com/2013/07/03/%e7%9c%8b%e4%b9%a6%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b%ef%bc%8c%e5%86%99%e4%bb%a3%e7%a0%81%e6%98%af%e4%b8%80%e5%9b%9e%e4%ba%8b/">Net::HTTP.get</a>，找了本Programming Ruby 1.9的，目录结构也有所不同了，所以补看部分。不过最近事情多，效率变低，每天都只是看一会，也缺少总结了。<br><br>今天记录一下看”Organizing Your Source”中的一个例子用的<a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/optparse/rdoc/OptionParser.html" target="_blank" rel="noopener">optparse</a>，optparse是Ruby的一个库，不是gem。OptionParser类用于对命令行选项进行解析，有一些特色：<br><br><em>   参数规范说明和处理代码写在一起，便于关联。
 </em>   可以自动生成选项的汇总，不需要独立维护选项信息。<br><em>   可选和必选参数指定很简单优雅。
 </em>   输入参数能自动转换成所需类。<br><em>   输入参数能限制数据集。<br><br>有个简单例子：<br><br>    require ‘optparse’<br>    options = {}<br>    optparse = OptionParser.new do |opts|<br>      opts.banner = “Usage: example.rb [options]”<br><br>      opts.on(“-v”, “–[no-]verbose”, “Run verbosely”) do |v|<br>        options[:verbose] = v<br>      end<br>    end<br>    optparse.parse!<br>    p options<br>    p ARGV<br>    `<br><br>    OptionParser.parse! 用于从ARGV中抽取选项，被抽取的选项会从ARGV中删除。<br><br>    在上例中，options是一个空的hash，当命令行中遇到-v或–verbose，则会设置options[:verbose]为true。<br><br>    optparse是一个OptionParser对象实例，传递了一个块，这个块构造了内部的数据结构，然后调用parse!。<br><br>    有两篇不错的文章：
 
-</em>   <a href="http://ruby.about.com/od/advancedruby/a/optionparser.htm" target="_blank" rel="external">OptionParser–Parsing Command-line Options the Ruby Way</a><br>*   <a href="http://rubylearning.com/blog/2011/01/03/how-do-i-make-a-command-line-tool-in-ruby/" target="_blank" rel="external">How do I make a command-line tool in Ruby?</a><br><br>    关于选项是可选还是必选，只需要看在选项后面的内容是否加上[]即可，比如下面的-r必选，-i可选。<br><br>    <pre><code># Mandatory argument.
+</em>   <a href="http://ruby.about.com/od/advancedruby/a/optionparser.htm" target="_blank" rel="noopener">OptionParser–Parsing Command-line Options the Ruby Way</a><br>*   <a href="http://rubylearning.com/blog/2011/01/03/how-do-i-make-a-command-line-tool-in-ruby/" target="_blank" rel="noopener">How do I make a command-line tool in Ruby?</a><br><br>    关于选项是可选还是必选，只需要看在选项后面的内容是否加上[]即可，比如下面的-r必选，-i可选。<br><br>    <pre><code># Mandatory argument.
           opts.on(&quot;-r&quot;, &quot;--require LIBRARY&quot;,
                   &quot;Require the LIBRARY before executing your script&quot;) do |lib|
-            options.library</code></pre><br><br>    对于必选的选项，如果在输入的命令行未指定选项参数值，则会报错：<br><br>    <pre><code>optparsetest.rb:44:in</code>‘: missing argument: -r (OptionParser::MissingArgument)<br><br>代码中可以捕获OptionParser::MissingArgument。stack overflow有个问题<a href="http://stackoverflow.com/questions/1541294/how-do-you-specify-a-required-switch-not-argument-with-ruby-optionparser/1542658#1542658" target="_blank" rel="external">How do you specify a required switch (not argument) with Ruby OptionParser?</a>专门描述了对于强制选项的处理方法。<br><br></pre></div>
+            options.library</code></pre><br><br>    对于必选的选项，如果在输入的命令行未指定选项参数值，则会报错：<br><br>    <pre><code>optparsetest.rb:44:in</code>‘: missing argument: -r (OptionParser::MissingArgument)<br><br>代码中可以捕获OptionParser::MissingArgument。stack overflow有个问题<a href="http://stackoverflow.com/questions/1541294/how-do-you-specify-a-required-switch-not-argument-with-ruby-optionparser/1542658#1542658" target="_blank" rel="noopener">How do you specify a required switch (not argument) with Ruby OptionParser?</a>专门描述了对于强制选项的处理方法。<br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/18/ruby-optionparser/" data-id="cj133pikg00ih00c2asncibfx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/18/ruby-optionparser/" data-id="cjmiwvb2900hj04c25ditbc1t" class="article-share-link">Share</a>
       
 
       
@@ -210,7 +211,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/index.html" target="_blank" rel="external">《Programming Ruby》</a> 有两章提到Web和Tk，这都是很大的篇章，还是需要专题去看。以前也曾用tcl/tk写过一个界面，用来解释当时写的计费汇总科目的配置，不过这都已经随着代码的退休也已忘却。<br><br>所以在看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_tk.html" target="_blank" rel="external">Ruby Tk</a>章节时回忆一下。<br><br>先是需要一个容器widget（比如TkFrame或TkRoot），然后在容器中创建widget，比如说按钮或文本，准备好后调用Tk.mainloop启动界面，Tk引擎就会控制程序，显示widget并调用响应GUI事件的代码。<br><br>看一段简单的代码：<br><br>    require ‘tk’<br>    root = TkRoot.new { title “Ex1” }<br>    TkLabel.new(root) {<br>      text  ‘Hello, World!’<br>      pack  { padx 15 ; pady 15; side ‘left’ }<br>    }<br>    Tk.mainloop<br><br>我们可以通过回调和绑定变量从widget传回信息。<br><br><em>   回调callback：command选项有Proc对象，回调时触发。
+        <div id="wrapper"><br><br><a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/index.html" target="_blank" rel="noopener">《Programming Ruby》</a> 有两章提到Web和Tk，这都是很大的篇章，还是需要专题去看。以前也曾用tcl/tk写过一个界面，用来解释当时写的计费汇总科目的配置，不过这都已经随着代码的退休也已忘却。<br><br>所以在看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_tk.html" target="_blank" rel="noopener">Ruby Tk</a>章节时回忆一下。<br><br>先是需要一个容器widget（比如TkFrame或TkRoot），然后在容器中创建widget，比如说按钮或文本，准备好后调用Tk.mainloop启动界面，Tk引擎就会控制程序，显示widget并调用响应GUI事件的代码。<br><br>看一段简单的代码：<br><br>    require ‘tk’<br>    root = TkRoot.new { title “Ex1” }<br>    TkLabel.new(root) {<br>      text  ‘Hello, World!’<br>      pack  { padx 15 ; pady 15; side ‘left’ }<br>    }<br>    Tk.mainloop<br><br>我们可以通过回调和绑定变量从widget传回信息。<br><br><em>   回调callback：command选项有Proc对象，回调时触发。
 </em>   采用TkVariable proxy模式，绑定Ruby变量到Tk widget的值。在TKVariable.new中采用TkVariable引用作为参数，这样你就可以直接用TkVariable的值get/set方法影响widget的内容。<br><em>   每个widget都有configure方法，使用Hash或代码块，和new的方式一致。
 </em>   可以使用cget返回特定的选项值。<br><br>GUI中很重要的一点就是界面元素的排布，Geometry管理器提供了三种命令：<br><br><em>   pack：灵活的，基于约束的排布
 </em>   place：绝对位置排布<br>*   grid：表格（行列）方式排布<br><br>绑定事件：b.bind(“Enter”) { b.configure(‘image’=&gt;image2) }<br><br>至于一堆的widget和事件，需要用的时候理理。<br><br></div>
@@ -218,7 +219,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/13/ruby-tk/" data-id="cj133pikk00iq00c2npnofmab" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/13/ruby-tk/" data-id="cjmiwvb2d00hr04c2akqafbn6" class="article-share-link">Share</a>
       
 
       
@@ -292,7 +293,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/12/ruby的世界/" data-id="cj133pil400k600c26y157vsh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/12/ruby的世界/" data-id="cjmiwvb2t00j704c2tukrscas" class="article-share-link">Share</a>
       
 
       
@@ -347,7 +348,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/11/写了段有实际用途的代码/" data-id="cj133pixc017b00c2rh92sp78" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/11/写了段有实际用途的代码/" data-id="cjmiwvbb6015h04c20u32t3tc" class="article-share-link">Share</a>
       
 
       
@@ -393,12 +394,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/07/08/ruby%e6%96%b0%e6%89%8b%e9%a1%bb%e7%9f%a5/">新手须知</a>外，写代码除了有个编辑器外，考虑多的就是怎么调试代码。<br><br>Ruby Debugger，Ruby本身提供了调试功能，可以使用-r debug选项，调试时的命令参见<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/trouble.html" target="_blank" rel="external">When Trouble Strikes</a>，我看也gdb有点像，break, where, list, cont。<br><br>当然也肯定离不开irb，交互式Ruby。不过现在有个两者的结合体，又可以象irb一样交互，又提供调试功能，那就是<a href="http://pryrepl.org/" target="_blank" rel="external">pry</a>，<a href="http://blog.larrylv.com/posts/2012/12/20/use-pry-instead-of-irb/" target="_blank" rel="external">这里</a>有篇简单的入门文章，看起来不错，后续在实践中熟悉。pry-nav提供了上一步、下一步的功能。<br><br>还有两个性能方面的分析工具，一个是benchmark，分析整体消耗的时间，一个是profier，能分析到每个方法的执行结果数据，就能方便定位性能瓶颈了。<br><br></div>
+        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/07/08/ruby%e6%96%b0%e6%89%8b%e9%a1%bb%e7%9f%a5/">新手须知</a>外，写代码除了有个编辑器外，考虑多的就是怎么调试代码。<br><br>Ruby Debugger，Ruby本身提供了调试功能，可以使用-r debug选项，调试时的命令参见<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/trouble.html" target="_blank" rel="noopener">When Trouble Strikes</a>，我看也gdb有点像，break, where, list, cont。<br><br>当然也肯定离不开irb，交互式Ruby。不过现在有个两者的结合体，又可以象irb一样交互，又提供调试功能，那就是<a href="http://pryrepl.org/" target="_blank" rel="noopener">pry</a>，<a href="http://blog.larrylv.com/posts/2012/12/20/use-pry-instead-of-irb/" target="_blank" rel="noopener">这里</a>有篇简单的入门文章，看起来不错，后续在实践中熟悉。pry-nav提供了上一步、下一步的功能。<br><br>还有两个性能方面的分析工具，一个是benchmark，分析整体消耗的时间，一个是profier，能分析到每个方法的执行结果数据，就能方便定位性能瓶颈了。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/10/ruby写代码须知/" data-id="cj133pikv00jl00c2sj73br7q" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/10/ruby写代码须知/" data-id="cjmiwvb2m00im04c2mzyltkq0" class="article-share-link">Share</a>
       
 
       
@@ -444,7 +445,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>有鉴于写代码老是犯低级错误，先看一下新手须知。原帖在<a href="http://ruby-doc.org/docs/Newcomers/ruby.html" target="_blank" rel="external">Things That Newcomers to Ruby Should Know
+        <div id="wrapper"><br><br>有鉴于写代码老是犯低级错误，先看一下新手须知。原帖在<a href="http://ruby-doc.org/docs/Newcomers/ruby.html" target="_blank" rel="noopener">Things That Newcomers to Ruby Should Know
 </a>，选了几个我感兴趣和看明白的。<br><br>1.  使用”ruby -w”能得到更有帮助警告，可以设置RUBYOPT环境变量为’w’。<br>2.  ri 查看Ruby文档。<br>3.  注意hash，如果key值的对象变化的，需要Hash#rehash。<br><br>            s = “mutable”<br>            arr = [s]<br>            hsh = { arr =&gt; “object” }<br>            s.upcase!<br>            p hsh[arr]    # -&gt; nil (maybe not what was expected)<br>            hsh.rehash<br>            p hsh[arr]    # -&gt; “object”<br>    <code>&lt;/pre&gt;
 4.  从文件中读到的数据是string类型，需要to_i, to_f转换为数值，否则+做的是字符串连接。
 5.  ruby没有++，--，需要使用x+=1。
@@ -460,7 +461,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/08/ruby新手须知/" data-id="cj133pil100jz00c2nmgmylrr" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/08/ruby新手须知/" data-id="cjmiwvb2r00j004c29rbrrdkd" class="article-share-link">Share</a>
       
 
       
@@ -549,7 +550,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/07/ruby多进程/" data-id="cj133pikz00jv00c24zopfgp5" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/07/ruby多进程/" data-id="cjmiwvb2q00ix04c2458ht1qd" class="article-share-link">Share</a>
       
 
       
@@ -595,14 +596,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/06/03/%e5%9d%9a%e6%8c%81100%e5%a4%a9%e6%9d%a5%e5%9f%b9%e5%85%bb%e6%97%b6%e9%97%b4%e7%ae%a1%e7%90%86%e4%b9%a0%e6%83%af/">坚持100天学习Ruby</a>，第四周，说是第四周，其实是一个月了。小结一下。<br><br><em>   继续看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="external">Programming Ruby - The Pragmatic Programmer’s Guide</a>三章，”Exceptions, Catch, and Throw”，”Modules”和”Basic Input and Output”，数量上还行，并且多了点练习。
+        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/06/03/%e5%9d%9a%e6%8c%81100%e5%a4%a9%e6%9d%a5%e5%9f%b9%e5%85%bb%e6%97%b6%e9%97%b4%e7%ae%a1%e7%90%86%e4%b9%a0%e6%83%af/">坚持100天学习Ruby</a>，第四周，说是第四周，其实是一个月了。小结一下。<br><br><em>   继续看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="noopener">Programming Ruby - The Pragmatic Programmer’s Guide</a>三章，”Exceptions, Catch, and Throw”，”Modules”和”Basic Input and Output”，数量上还行，并且多了点练习。
 </em>   时间还是在中午休息时间，时间每天都要在40分钟以上。<br><em>   为了写代码，折腾了一下<a href="http://xbin999.com/2013/06/30/%e4%b8%basublime-text-2%e9%85%8d%e7%bd%aeruby%e7%8e%af%e5%a2%83/">Sublime Text2配置Ruby的环境</a>。
 </em>   看的一些需要记录的点：<br>&gt;- Ruby中不仅<a href="http://xbin999.com/2013/06/29/throwcatch%e5%92%8craiserescue%e7%9a%84%e4%b8%8d%e5%90%8c/">有异常（rescue/raise），还有正常（throw/catch）</a>，可以用于优雅地退出一堆的处理环节。<br>&gt;- Modules中介绍了<a href="http://xbin999.com/2013/06/29/modules/">mixin</a>的方式，提供多重继承的实现机制。<br>&gt;- <a href="http://xbin999.com/2013/07/01/ruby%e5%9f%ba%e6%9c%ac%e7%9a%84%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba/">基本的输入输出</a>倒没啥，不过练习中开始碰到问题，慢慢求解的一个过程。<br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/04/第四周的总结/" data-id="cj133pjo4022f00c2vfm01huw" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/04/第四周的总结/" data-id="cjmiwvbrx020c04c2u15rdoep" class="article-share-link">Share</a>
       
 
       
@@ -652,12 +653,12 @@
 
     结果运行时直接报错：
 
-    &lt;pre&gt;</code><br>    mathstest.rb:11:in `initialize’: wrong number of arguments (1 for 2) (ArgumentError)<br><br>原来Ruby并不支持类方法中的重载（overload），参见：<a href="http://stackoverflow.com/questions/9373104/why-does-ruby-not-support-method-overloading" target="_blank" rel="external">Why does Ruby not support method overloading</a>，其中说到：<br><br>方法重载有有两种方式，一是参数类型不同；二是参数个数不同。在Ruby中首先就没有数据类型的定义，它本身是一种动态类型的语言。而第二种方式看起来可行，但是参数可以有缺省值，这时调用谁也是个问题。<br><br></div>
+    &lt;pre&gt;</code><br>    mathstest.rb:11:in `initialize’: wrong number of arguments (1 for 2) (ArgumentError)<br><br>原来Ruby并不支持类方法中的重载（overload），参见：<a href="http://stackoverflow.com/questions/9373104/why-does-ruby-not-support-method-overloading" target="_blank" rel="noopener">Why does Ruby not support method overloading</a>，其中说到：<br><br>方法重载有有两种方式，一是参数类型不同；二是参数个数不同。在Ruby中首先就没有数据类型的定义，它本身是一种动态类型的语言。而第二种方式看起来可行，但是参数可以有缺省值，这时调用谁也是个问题。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/04/ruby没有重载/" data-id="cj133pil300k200c2ikjpedan" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/04/ruby没有重载/" data-id="cjmiwvb2s00j404c23bwjk100" class="article-share-link">Share</a>
       
 
       
@@ -774,7 +775,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

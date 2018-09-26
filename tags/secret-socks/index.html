@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/secret-socks/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,13 +102,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原先<a href="http://xbin999.com/?p=597">有ssh的账号</a>，在mac上翻墙倒也不麻烦，下了个secret socks，略微配置一下连上usassh。<div><img src="https://img.skitch.com/20110916-tksy79fudfipndy8sx65yxqhtm.jpg" alt=""></div><div>直接勾选“Update network settings”，提示输入root口令后，就会直接修改网络中的设置以sock方式访问。这时打开safari就可以翻墙了。</div><div>不过这种方式的缺陷还是所有的站点访问都会走ssh，国内很多站点的访问速度会有影响。还是想能改成智能点的，只有自己需要的站点访问就好了。</div><div>采用PAC的方案，我把原先chrome中的<a href="https://chrome.google.com/webstore/detail/bgfkhjmcnkmegdmagboackgipbdpomke" target="_blank" rel="external">proxy switchy</a>设置的列表导出成一个pac文件，然后在网络中设置代理方式为“自动代理配置”，同时提供配置文件。</div><div><img src="https://img.skitch.com/20110916-xs1pbcrj12xd5tnm2ukgyjrnmk.jpg" alt=""></div><div>从<a href="http://www.google.com.hk/search?hl=zh-CN&amp;newwindow=1&amp;safe=strict&amp;client=safari&amp;rls=en&amp;q=secret+socks+mac+pac&amp;oq=secret+socks+mac+pac&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=s&amp;gs_upl=2648l2648l1l4787l1l1l0l0l0l0l0l0ll0l0" target="_blank" rel="external">google的结果</a>来看都说很简单，这样就ok了，可是俺死活没搞通。瞎折腾了半天，要么都访问不了，要么就是走的ssh通道。</div><div>奇了个怪了！</div><div>后来忽然想是否我的pac文件不对，于是自己写了个最简单的pac文件：</div><div><div>function FindProxyForURL(url, host)</div><div>{</div><div>&nbsp; &nbsp; &nbsp; &nbsp; return “SOCKS 127.0.0.1:1080”;</div><div>}</div></div><div>换了个思路，也就找到了问题的根源。才发现是犯了两毛病：</div><div>1. 我最开始在代理配置文件中的URL提供的是“file://”形式的地址，采用了“选取文件”的按钮，貌似<a href="http://rss.9ria.com/?p=3750" target="_blank" rel="external">lion不支持“file://”形式</a>。嗯，这个就<a href="http://mac.pcbeta.com/thread-55498-1-1.html" target="_blank" rel="external">启用网络共享，提供http的访问</a>形式。</div><div>2. 从chrome导出的pac文件采用的sock地址形式都是”SOCKS5 127.0.0.1:1080”，而不是SOCKS。<a href="http://www.poemcode.net/2011/07/pac-on-mac/" target="_blank" rel="external">规格的说法应该是提供SOCKS</a>。一字之差害死人啊。</div><div>终于在晚上睡觉前搞定了，可以安心睡觉了。</div></p>
+        <p>原先<a href="http://xbin999.com/?p=597">有ssh的账号</a>，在mac上翻墙倒也不麻烦，下了个secret socks，略微配置一下连上usassh。<div><img src="https://img.skitch.com/20110916-tksy79fudfipndy8sx65yxqhtm.jpg" alt=""></div><div>直接勾选“Update network settings”，提示输入root口令后，就会直接修改网络中的设置以sock方式访问。这时打开safari就可以翻墙了。</div><div>不过这种方式的缺陷还是所有的站点访问都会走ssh，国内很多站点的访问速度会有影响。还是想能改成智能点的，只有自己需要的站点访问就好了。</div><div>采用PAC的方案，我把原先chrome中的<a href="https://chrome.google.com/webstore/detail/bgfkhjmcnkmegdmagboackgipbdpomke" target="_blank" rel="noopener">proxy switchy</a>设置的列表导出成一个pac文件，然后在网络中设置代理方式为“自动代理配置”，同时提供配置文件。</div><div><img src="https://img.skitch.com/20110916-xs1pbcrj12xd5tnm2ukgyjrnmk.jpg" alt=""></div><div>从<a href="http://www.google.com.hk/search?hl=zh-CN&amp;newwindow=1&amp;safe=strict&amp;client=safari&amp;rls=en&amp;q=secret+socks+mac+pac&amp;oq=secret+socks+mac+pac&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=s&amp;gs_upl=2648l2648l1l4787l1l1l0l0l0l0l0l0ll0l0" target="_blank" rel="noopener">google的结果</a>来看都说很简单，这样就ok了，可是俺死活没搞通。瞎折腾了半天，要么都访问不了，要么就是走的ssh通道。</div><div>奇了个怪了！</div><div>后来忽然想是否我的pac文件不对，于是自己写了个最简单的pac文件：</div><div><div>function FindProxyForURL(url, host)</div><div>{</div><div>&nbsp; &nbsp; &nbsp; &nbsp; return “SOCKS 127.0.0.1:1080”;</div><div>}</div></div><div>换了个思路，也就找到了问题的根源。才发现是犯了两毛病：</div><div>1. 我最开始在代理配置文件中的URL提供的是“file://”形式的地址，采用了“选取文件”的按钮，貌似<a href="http://rss.9ria.com/?p=3750" target="_blank" rel="noopener">lion不支持“file://”形式</a>。嗯，这个就<a href="http://mac.pcbeta.com/thread-55498-1-1.html" target="_blank" rel="noopener">启用网络共享，提供http的访问</a>形式。</div><div>2. 从chrome导出的pac文件采用的sock地址形式都是”SOCKS5 127.0.0.1:1080”，而不是SOCKS。<a href="http://www.poemcode.net/2011/07/pac-on-mac/" target="_blank" rel="noopener">规格的说法应该是提供SOCKS</a>。一字之差害死人啊。</div><div>终于在晚上睡觉前搞定了，可以安心睡觉了。</div></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/16/slugs/" data-id="cj133pilv00mb00c2qbxltu3l" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/16/slugs/" data-id="cjmiwvb3g00l504c2gd75gqxx" class="article-share-link">Share</a>
       
 
       
@@ -220,7 +221,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -5,30 +5,20 @@
   
   <title>Not enough space和HP-UX内存管理 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近开发环境（HP-UX）上经常碰到的一个问题，类似于：
-/usr/lib/dld.sl: Call to mmap() failed -TEXT /apps/mmcprodora/8.0.6/lib/librw60.sl/usr/lib/dld.sl: Not enough space 
-主要原因在HP-UX上，对于32位的应用程序运行，Shared memory有1.75GB的限制。
- 
-1.">
+  <meta name="description" content="最近开发环境（HP-UX）上经常碰到的一个问题，类似于： /usr/lib/dld.sl: Call to mmap() failed -TEXT /apps/mmcprodora/8.0.6/lib/librw60.sl/usr/lib/dld.sl: Not enough space  主要原因在HP-UX上，对于32位的应用程序运行，Shared memory有1.75GB的限制。   1.">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Not enough space和HP-UX内存管理">
 <meta property="og:url" content="http://xbin999.com/2005/08/30/not-enough-space和hp-ux内存管理/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="最近开发环境（HP-UX）上经常碰到的一个问题，类似于：
-/usr/lib/dld.sl: Call to mmap() failed -TEXT /apps/mmcprodora/8.0.6/lib/librw60.sl/usr/lib/dld.sl: Not enough space 
-主要原因在HP-UX上，对于32位的应用程序运行，Shared memory有1.75GB的限制。
- 
-1.">
+<meta property="og:description" content="最近开发环境（HP-UX）上经常碰到的一个问题，类似于： /usr/lib/dld.sl: Call to mmap() failed -TEXT /apps/mmcprodora/8.0.6/lib/librw60.sl/usr/lib/dld.sl: Not enough space  主要原因在HP-UX上，对于32位的应用程序运行，Shared memory有1.75GB的限制。   1.">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://storage.msn.com/x1pKouN4nZmbX3jyMYzteNssJE6nuLzEgAU8L6tTZH5rGXlwuCEbG5tcAZTF-9JhEm7btqX-3AujDgyrNAUACHyGKCBT3WFZkS0C6dxdrNYFLVPu6fr4hrsHy9Za16I5FRqG3YvO_NuIPvVNmwMD2olHg">
 <meta property="og:image" content="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV789eTribnzOcyvidszP0tu9kMHoei6-CNbrGiVCwEpT4">
 <meta property="og:updated_time" content="2014-09-18T07:27:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Not enough space和HP-UX内存管理">
-<meta name="twitter:description" content="最近开发环境（HP-UX）上经常碰到的一个问题，类似于：
-/usr/lib/dld.sl: Call to mmap() failed -TEXT /apps/mmcprodora/8.0.6/lib/librw60.sl/usr/lib/dld.sl: Not enough space 
-主要原因在HP-UX上，对于32位的应用程序运行，Shared memory有1.75GB的限制。
- 
-1.">
+<meta name="twitter:description" content="最近开发环境（HP-UX）上经常碰到的一个问题，类似于： /usr/lib/dld.sl: Call to mmap() failed -TEXT /apps/mmcprodora/8.0.6/lib/librw60.sl/usr/lib/dld.sl: Not enough space  主要原因在HP-UX上，对于32位的应用程序运行，Shared memory有1.75GB的限制。   1.">
 <meta name="twitter:image" content="http://storage.msn.com/x1pKouN4nZmbX3jyMYzteNssJE6nuLzEgAU8L6tTZH5rGXlwuCEbG5tcAZTF-9JhEm7btqX-3AujDgyrNAUACHyGKCBT3WFZkS0C6dxdrNYFLVPu6fr4hrsHy9Za16I5FRqG3YvO_NuIPvVNmwMD2olHg">
 <meta name="twitter:creator" content="@xbin999">
   
@@ -138,16 +128,16 @@
 <p><div>而在我们的应用中最好的解决方法是第三种：大家使用同一份shared library。</div></p>
 <p><div> </div></p>
 <p><div>参考：</div></p>
-<p><div><a href="http://support.businessobjects.com/library/kbase/articles/c2010558.asp" target="_blank" rel="external">Holos and HP memory management issues</a></div></p>
-<p><div><a href="http://docs.hp.com/hpux/onlinedocs/os/memwn1_4.pdf" target="_blank" rel="external">Memory window white paper</a></div></p>
-<p><div><a href="http://web.gat.com/comp/analysis/mdsplus/textfilebusy.html" target="_blank" rel="external">Shared Libraries on HP-UX</a></div></p>
-<p><div>《UNIX环境高级编程》</div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV7oExKEhqAyVYHH0FFZz4Shoo0gX_9lb4VP8To6oj7ixw" target="_blank" rel="external"><img src="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV789eTribnzOcyvidszP0tu9kMHoei6-CNbrGiVCwEpT4" alt=""></a></td></tr></table></p>
+<p><div><a href="http://support.businessobjects.com/library/kbase/articles/c2010558.asp" target="_blank" rel="noopener">Holos and HP memory management issues</a></div></p>
+<p><div><a href="http://docs.hp.com/hpux/onlinedocs/os/memwn1_4.pdf" target="_blank" rel="noopener">Memory window white paper</a></div></p>
+<p><div><a href="http://web.gat.com/comp/analysis/mdsplus/textfilebusy.html" target="_blank" rel="noopener">Shared Libraries on HP-UX</a></div></p>
+<p><div>《UNIX环境高级编程》</div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV7oExKEhqAyVYHH0FFZz4Shoo0gX_9lb4VP8To6oj7ixw" target="_blank" rel="noopener"><img src="http://byfiles.storage.live.com/y1pTFnifpTXA8g0fhYgzqAxo0PNu_x7USV789eTribnzOcyvidszP0tu9kMHoei6-CNbrGiVCwEpT4" alt=""></a></td></tr></table></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/30/not-enough-space和hp-ux内存管理/" data-id="cj133piix00e600c28o3w9k1a" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/30/not-enough-space和hp-ux内存管理/" data-id="cjmiwvb1200da04c2ubdujpa7" class="article-share-link">Share</a>
       
 
       
@@ -282,7 +272,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

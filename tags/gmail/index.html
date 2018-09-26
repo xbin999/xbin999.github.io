@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/gmail/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,15 +104,15 @@
       
         <p>环境越来越恶化，这两天到处都是Gmail彻底被墙的消息。我等屁民只有迎难而上，把vpn，ssh给用好。</p>
 <p>原先一直都是在用Chrome+SwitchySharp+ssh的方式，但这个方式不爽的是只支持http/https，很多时候git或brew更新时都会出问题，到时就只有祭起VPN大棋，但VPN的问题呢又在于走的是全局路由，包括国内的站点也都走了VPN，既慢又费流量。以前偶尔用用，一直懒得折腾，今天研究了一下，可以根据国内外地址设置不同的访问路由。这真是一个折腾的时代。</p>
-<p>在mac下需要的几个工具：修改路由的<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>和开源的OpenVPN客户端<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>，原理就是：</p>
+<p>在mac下需要的几个工具：修改路由的<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes</a>和开源的OpenVPN客户端<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>，原理就是：</p>
 <p>“<em>利用来自APNIC的数据生成路由命令脚本，让VPN客户端在连接时自动执行。通过这些路由脚本，可以让用户在使用VPN作为默认网关时，不使用VPN访问中国国内IP，从而减轻VPN负担，并提高访问国内网站的速度。</em>”</p>
-<p>如果你VPN服务使用PPTP，mac下很简单，参照<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes说明</a>即可，可惜我的<a href="https://www.123ssh.net/aff.php?aff=087" target="_blank" rel="external">VPN提供商</a>PPTP，L2TP，Cisco IPSecVPN几种连接方式相继被GFW干扰，目前只有采用OpenVPN的连接方式，参见<a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a>，不过Viscosity不是免费的，我就找个开源的<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>替代。</p>
+<p>如果你VPN服务使用PPTP，mac下很简单，参照<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes说明</a>即可，可惜我的<a href="https://www.123ssh.net/aff.php?aff=087" target="_blank" rel="noopener">VPN提供商</a>PPTP，L2TP，Cisco IPSecVPN几种连接方式相继被GFW干扰，目前只有采用OpenVPN的连接方式，参见<a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="noopener">Mac OS X通过Viscosity连接OpenVPN</a>，不过Viscosity不是免费的，我就找个开源的<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>替代。</p>
 <p>说明一下过程和注意事项：</p>
 <ul>
-<li>下载<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>。</li>
+<li>下载<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes</a>。</li>
 <li>在目录下执行python chnroutes.py -p mac ，生成 ip-up 与 ip-down 两个文件。</li>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中导入你的vpn服务提供商提供的配置文件。</li>
-<li>修改<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>的连接配置文件，增加</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>中导入你的vpn服务提供商提供的配置文件。</li>
+<li>修改<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>的连接配置文件，增加</li>
 </ul>
 <pre><code>
 up {your directory}/ip-up
@@ -121,24 +122,24 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
 </code></pre>
 
 <ul>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中的设置里Set DNS/WINS为“Do not setnameserver”，由前面的配置文件来指定。</li>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>连接VPN，连接成功后，可以访问<a href="http://ip138.com/" target="_blank" rel="external">ip138.com</a>和<a href="http://www.ip.cn/" target="_blank" rel="external">ip.cn</a>，前者为访问国内站点的ip地址，后者为访问国外站点的地址，两者应该不同。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>中的设置里Set DNS/WINS为“Do not setnameserver”，由前面的配置文件来指定。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>连接VPN，连接成功后，可以访问<a href="http://ip138.com/" target="_blank" rel="noopener">ip138.com</a>和<a href="http://www.ip.cn/" target="_blank" rel="noopener">ip.cn</a>，前者为访问国内站点的ip地址，后者为访问国外站点的地址，两者应该不同。</li>
 </ul>
-<p><em>– 12月30日更新：<br>发现连上VPN后，公司内网无法访问，参考<a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a>在ip-up/ip-down中增加公司的域名以及内网地址即可。对于Chrome来说可能需要清除缓存，否则总指向到该死的189so。</em></p>
+<p><em>– 12月30日更新：<br>发现连上VPN后，公司内网无法访问，参考<a href="http://fxck.it/post/57501298563" target="_blank" rel="noopener">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a>在ip-up/ip-down中增加公司的域名以及内网地址即可。对于Chrome来说可能需要清除缓存，否则总指向到该死的189so。</em></p>
 <p>参考的文章有：</p>
 <ul>
-<li><a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">jimmyxu/chnroutes</a></li>
-<li><a href="http://www.jianshu.com/p/6e84c6d7dc58" target="_blank" rel="external">Mac（OSX）使用VPN小技巧——国内外访问分流</a></li>
-<li><a href="http://v.ifiorano.com/post/21261756835" target="_blank" rel="external">解决max-routes参数的2000条限制</a></li>
-<li><a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a></li>
-<li><a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a></li>
+<li><a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">jimmyxu/chnroutes</a></li>
+<li><a href="http://www.jianshu.com/p/6e84c6d7dc58" target="_blank" rel="noopener">Mac（OSX）使用VPN小技巧——国内外访问分流</a></li>
+<li><a href="http://v.ifiorano.com/post/21261756835" target="_blank" rel="noopener">解决max-routes参数的2000条限制</a></li>
+<li><a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="noopener">Mac OS X通过Viscosity连接OpenVPN</a></li>
+<li><a href="http://fxck.it/post/57501298563" target="_blank" rel="noopener">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" data-id="cj133piie00ch00c2ogstaetm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" data-id="cjmiwvb0l00bm04c2ne8iey9o" class="article-share-link">Share</a>
       
 
       
@@ -184,14 +185,14 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我把日常的邮件系统都移到了gmail中处理，不过一直有个问题困扰着。那就是在邮件中加入图片的时候，它总是以附件的形式展现，而不能直接在邮件中显示图片，很多时候邮件就无法达到让人一目了然的程度。比如上次从gmail发的<a href="http://xbin999.wordpress.com/2010/11/12/powerpoint%E7%B2%98%E8%B4%B4%E5%AF%B9%E8%B1%A1%E5%8F%98%E8%89%B2%E7%9A%84%E9%97%AE%E9%A2%98/" title="Permanent Link to PowerPoint粘贴对象变色的问题" target="_blank" rel="external">PowerPoint粘贴对象变色的问题</a>，附件的图片虽然在blog中显示了，但只能列在最后。</p>
-<p>这也是个<a href="http://xbin999.wordpress.com/2010/08/19/%E4%B8%8D%E6%98%AF%E9%97%AE%E9%A2%98%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" rel="external">不是问题的问题</a>，很多时候就算了，让收件人看附件去吧。（不过我又依稀记得以前是能插入图片的，呵呵）<br>今天又碰到发图片邮件了，看了一下，在google labs中有一个Inserting images的功能的，而我一直也是开启该特性的。那为什么又不行了呢？原来这个特性和离线模式相冲，看它的完整说明：<br>Allows you to insert images into a message body. You can upload and insert image files in your computer, or insert images by URLs. This lab will not work if you have offline enabled.<br>难怪！我选择了gmail，也喜欢上了离线模式，因为这让我本地也存储了邮件，不上网也可以查到邮件，彻底摆脱了邮件客户端。可没想到它还带来了一个副作用，NND。<br>恩，咋办呢？鱼和熊掌不可兼得啊。<br>目前我的解决方式是在需要发送图片的时候，在IE中启动gmail，没有离线模式。<br>不爽而将就着吧。又带来了一个新的<a href="http://xbin999.wordpress.com/2010/08/19/%E4%B8%8D%E6%98%AF%E9%97%AE%E9%A2%98%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" rel="external">不是问题的问题</a>”。</p>
+        <p>我把日常的邮件系统都移到了gmail中处理，不过一直有个问题困扰着。那就是在邮件中加入图片的时候，它总是以附件的形式展现，而不能直接在邮件中显示图片，很多时候邮件就无法达到让人一目了然的程度。比如上次从gmail发的<a href="http://xbin999.wordpress.com/2010/11/12/powerpoint%E7%B2%98%E8%B4%B4%E5%AF%B9%E8%B1%A1%E5%8F%98%E8%89%B2%E7%9A%84%E9%97%AE%E9%A2%98/" title="Permanent Link to PowerPoint粘贴对象变色的问题" target="_blank" rel="noopener">PowerPoint粘贴对象变色的问题</a>，附件的图片虽然在blog中显示了，但只能列在最后。</p>
+<p>这也是个<a href="http://xbin999.wordpress.com/2010/08/19/%E4%B8%8D%E6%98%AF%E9%97%AE%E9%A2%98%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">不是问题的问题</a>，很多时候就算了，让收件人看附件去吧。（不过我又依稀记得以前是能插入图片的，呵呵）<br>今天又碰到发图片邮件了，看了一下，在google labs中有一个Inserting images的功能的，而我一直也是开启该特性的。那为什么又不行了呢？原来这个特性和离线模式相冲，看它的完整说明：<br>Allows you to insert images into a message body. You can upload and insert image files in your computer, or insert images by URLs. This lab will not work if you have offline enabled.<br>难怪！我选择了gmail，也喜欢上了离线模式，因为这让我本地也存储了邮件，不上网也可以查到邮件，彻底摆脱了邮件客户端。可没想到它还带来了一个副作用，NND。<br>恩，咋办呢？鱼和熊掌不可兼得啊。<br>目前我的解决方式是在需要发送图片的时候，在IE中启动gmail，没有离线模式。<br>不爽而将就着吧。又带来了一个新的<a href="http://xbin999.wordpress.com/2010/08/19/%E4%B8%8D%E6%98%AF%E9%97%AE%E9%A2%98%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">不是问题的问题</a>”。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2010/11/17/在gmail中展现图片，而不是附件/" data-id="cj133pj1c01cx00c282hn9uhz" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2010/11/17/在gmail中展现图片，而不是附件/" data-id="cjmiwvbdp01b204c22ir5t4lg" class="article-share-link">Share</a>
       
 
       
@@ -304,7 +305,7 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/objective-c/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,14 +104,14 @@
       
         <div id="wrapper"><br><br>Objective C的属性定义时提供了一堆的修饰符，readonly, readwrite, assign, retain, copy, nonatomic，看代码都糊涂，看了一下《The Objective-C Programming Language》中有关属性定义的章节，节选如下：<br><br><em>   Accessor Method Names 存取方法名称&gt; 属性对应的getter, setter默认的方法名称是propertyName和setPropertyName:，比如属性“foo”的存取方法是foo和setFoo:。<br>&gt;<br>&gt; </em>   getter=getterName 指定属性的get存取方法名称。对于布尔型值会用is作为get存取方法的前缀。<br>&gt; <em>   setter=setterName 指定属性的set存取方法名称。如果属性是readonly，而指定了setter方法，会得到编译错误。<br>&gt;<br>&gt; 使用.是对getter和setter的简便的封装，两者是一致的。
 
-</em>   Writablility 读写属性&gt; <em>   readwrite: 默认。<br>&gt; </em>   readonly<br>&gt;<br>&gt; 在implementation块中使用<a href="https://github.com/synthesize" target="_blank" rel="external">@synthesize</a> 自动生成getter/setter存取方法。<br><br><em>   Setter Semantics setter方法语义&gt; </em>   assign: 默认，表明setter使用简单的赋值，用于标量数据类型，如NSInteger, CGRect，或者不是你拥有的对象，比如delegate。retain和assign在GC模式下是一样的。<br>&gt; <em>   retain：用于对象赋值。前一个值会被发送一个release消息。Mac OS X v10.6以前只针对Objective-C对象类型有效，不能用于Core Foundation对象；但在v10.6以后可以使用<strong>attribute</strong>关键字标明Core Foundation属性在内存管理上和对象同样对待，比如：<br>&gt; &gt; @property(retain) <strong>attribute</strong>((NSObject)) CFDictionaryRef myDictionary;<br>&gt; &gt;     `<br>&gt;<br>&gt; </em>   copy：表明对象的拷贝用于赋值，前一个值会被发送一个release消息，拷贝通过调用copy方法实现。只针对对象类型有效，并且必须实现NSCopying协议。<br>&gt;<br>&gt;     不同的约束依赖于你是否采用GC：<br>&gt;<br>&gt; <em>   如果你没有使用GC，那么对于对象属性你必须严格标明是采用assign，retain或者copy，否则会得到一个编译器警告。（鼓励你想明白到底采用什么方式的内存管理。）<br>&gt; </em>   如果你使用GC，那么默认情况下不会得到警告，除非属性类是基于NSCopying。<br><br><em>   Atomic 原子性&gt; </em>   atomic，默认。存取方法在多线程环境中提供更安全的存取。如果使用了retain或copy，而没有表明nonatomic，那么在引用计数的环境中，get存取方法使用锁来保持和释放要返回的值，类似于：<br>&gt; &gt; <pre>`<br>&gt; &gt;     [_internal lock]; // lock using an object-level lock<br>&gt; &gt;     id result = [[value retain] autorelease];<br>&gt; &gt;     [_internal unlock];<br>&gt; &gt;     return result;<br>&gt;<br>&gt; <em>   nonatomic，直接返回值，效率更快。<br>&gt;<br>&gt; 注意：属性的原子性并不等同于对象是线程安全的。
+</em>   Writablility 读写属性&gt; <em>   readwrite: 默认。<br>&gt; </em>   readonly<br>&gt;<br>&gt; 在implementation块中使用<a href="https://github.com/synthesize" target="_blank" rel="noopener">@synthesize</a> 自动生成getter/setter存取方法。<br><br><em>   Setter Semantics setter方法语义&gt; </em>   assign: 默认，表明setter使用简单的赋值，用于标量数据类型，如NSInteger, CGRect，或者不是你拥有的对象，比如delegate。retain和assign在GC模式下是一样的。<br>&gt; <em>   retain：用于对象赋值。前一个值会被发送一个release消息。Mac OS X v10.6以前只针对Objective-C对象类型有效，不能用于Core Foundation对象；但在v10.6以后可以使用<strong>attribute</strong>关键字标明Core Foundation属性在内存管理上和对象同样对待，比如：<br>&gt; &gt; @property(retain) <strong>attribute</strong>((NSObject)) CFDictionaryRef myDictionary;<br>&gt; &gt;     `<br>&gt;<br>&gt; </em>   copy：表明对象的拷贝用于赋值，前一个值会被发送一个release消息，拷贝通过调用copy方法实现。只针对对象类型有效，并且必须实现NSCopying协议。<br>&gt;<br>&gt;     不同的约束依赖于你是否采用GC：<br>&gt;<br>&gt; <em>   如果你没有使用GC，那么对于对象属性你必须严格标明是采用assign，retain或者copy，否则会得到一个编译器警告。（鼓励你想明白到底采用什么方式的内存管理。）<br>&gt; </em>   如果你使用GC，那么默认情况下不会得到警告，除非属性类是基于NSCopying。<br><br><em>   Atomic 原子性&gt; </em>   atomic，默认。存取方法在多线程环境中提供更安全的存取。如果使用了retain或copy，而没有表明nonatomic，那么在引用计数的环境中，get存取方法使用锁来保持和释放要返回的值，类似于：<br>&gt; &gt; <pre>`<br>&gt; &gt;     [_internal lock]; // lock using an object-level lock<br>&gt; &gt;     id result = [[value retain] autorelease];<br>&gt; &gt;     [_internal unlock];<br>&gt; &gt;     return result;<br>&gt;<br>&gt; <em>   nonatomic，直接返回值，效率更快。<br>&gt;<br>&gt; 注意：属性的原子性并不等同于对象是线程安全的。
 
 </em>   Manage Ownership&gt; <em>   weak<br>&gt; </em>   strong: default。<br>&gt;<br>&gt; 这个要和assign, retain, copy整合在一起看看Objective C的内存管理机制才行。<br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/01/27/objective-c-property/" data-id="cj133pij000ei00c2b1xco7my" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/01/27/objective-c-property/" data-id="cjmiwvb1500dn04c25vug9fpl" class="article-share-link">Share</a>
       
 
       
@@ -223,7 +224,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

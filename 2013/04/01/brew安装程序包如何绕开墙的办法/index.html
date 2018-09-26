@@ -5,25 +5,18 @@
   
   <title>brew安装程序包如何绕开墙的办法 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="上次说过用brew安装应用的时候碰上“curl: (7) couldn’t connect to host 的问题”，去掉了代理访问虽然正常了，但由于很多应用还是托管在sourceforge上，而sourceforge由于被墙的缘故，所以使用brew安装的时候还是会报错。
-象我安装ImageMagick的时候，就出现：
-$ brew install ImageMagick
-Warning: You">
+  <meta name="description" content="上次说过用brew安装应用的时候碰上“curl: (7) couldn’t connect to host 的问题”，去掉了代理访问虽然正常了，但由于很多应用还是托管在sourceforge上，而sourceforge由于被墙的缘故，所以使用brew安装的时候还是会报错。 象我安装ImageMagick的时候，就出现： $ brew install ImageMagick Warning: You">
+<meta name="keywords" content="IT,mac,curl,Homebrew,proxy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="brew安装程序包如何绕开墙的办法">
 <meta property="og:url" content="http://xbin999.com/2013/04/01/brew安装程序包如何绕开墙的办法/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="上次说过用brew安装应用的时候碰上“curl: (7) couldn’t connect to host 的问题”，去掉了代理访问虽然正常了，但由于很多应用还是托管在sourceforge上，而sourceforge由于被墙的缘故，所以使用brew安装的时候还是会报错。
-象我安装ImageMagick的时候，就出现：
-$ brew install ImageMagick
-Warning: You">
+<meta property="og:description" content="上次说过用brew安装应用的时候碰上“curl: (7) couldn’t connect to host 的问题”，去掉了代理访问虽然正常了，但由于很多应用还是托管在sourceforge上，而sourceforge由于被墙的缘故，所以使用brew安装的时候还是会报错。 象我安装ImageMagick的时候，就出现： $ brew install ImageMagick Warning: You">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T07:27:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="brew安装程序包如何绕开墙的办法">
-<meta name="twitter:description" content="上次说过用brew安装应用的时候碰上“curl: (7) couldn’t connect to host 的问题”，去掉了代理访问虽然正常了，但由于很多应用还是托管在sourceforge上，而sourceforge由于被墙的缘故，所以使用brew安装的时候还是会报错。
-象我安装ImageMagick的时候，就出现：
-$ brew install ImageMagick
-Warning: You">
+<meta name="twitter:description" content="上次说过用brew安装应用的时候碰上“curl: (7) couldn’t connect to host 的问题”，去掉了代理访问虽然正常了，但由于很多应用还是托管在sourceforge上，而sourceforge由于被墙的缘故，所以使用brew安装的时候还是会报错。 象我安装ImageMagick的时候，就出现： $ brew install ImageMagick Warning: You">
 <meta name="twitter:creator" content="@xbin999">
   
     <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
@@ -109,20 +102,20 @@ Warning: You">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>上次说过用brew安装应用的时候碰上“<a href="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host-%e7%9a%84%e9%97%ae%e9%a2%98/">curl: (7) couldn’t connect to host 的问题</a>”，去掉了代理访问虽然正常了，但由于很多应用还是托管在<a href="http://sourceforge.net/" target="_blank" rel="external">sourceforge</a>上，而<a href="http://sourceforge.net/" target="_blank" rel="external">sourceforge</a>由于被墙的缘故，所以使用brew安装的时候还是会报错。</p>
-<p>象我安装<a href="http://www.imagemagick.org/script/index.php" target="_blank" rel="external">ImageMagick</a>的时候，就出现：</p>
+        <p>上次说过用brew安装应用的时候碰上“<a href="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host-%e7%9a%84%e9%97%ae%e9%a2%98/">curl: (7) couldn’t connect to host 的问题</a>”，去掉了代理访问虽然正常了，但由于很多应用还是托管在<a href="http://sourceforge.net/" target="_blank" rel="noopener">sourceforge</a>上，而<a href="http://sourceforge.net/" target="_blank" rel="noopener">sourceforge</a>由于被墙的缘故，所以使用brew安装的时候还是会报错。</p>
+<p>象我安装<a href="http://www.imagemagick.org/script/index.php" target="_blank" rel="noopener">ImageMagick</a>的时候，就出现：</p>
 <p><pre><code>$ brew install ImageMagick</code></pre></p>
 <p>Warning: Your Xcode (4.4.1) is outdated</p>
 <p>Please install Xcode 4.6.</p>
-<p>==&gt; Downloading <a href="https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-" target="_blank" rel="external">https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-</a></p>
+<p>==&gt; Downloading <a href="https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-" target="_blank" rel="noopener">https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-</a></p>
 <p>curl: (56) Recv failure: Connection reset by peer</p>
 <p>Warning: Bottle installation failed: building from source.</p>
-<p>==&gt; Downloading <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10" target="_blank" rel="external">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10</a></p>
+<p>==&gt; Downloading <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10" target="_blank" rel="noopener">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10</a></p>
 <p>curl: (56) Recv failure: Connection reset by peer</p>
-<p>Error: Download failed: <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz" target="_blank" rel="external">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz</a><br>如何解决这个问题呢？有多种方法：</p>
+<p>Error: Download failed: <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz" target="_blank" rel="noopener">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz</a><br>如何解决这个问题呢？有多种方法：</p>
 <ol>
-<li>一是<a href="http://leegorous.net/blog/2012/08/10/how-to-skip-download-in-brew-install/" target="_blank" rel="external">跳过下载步骤，事先下载程序包，放到/Library/Caches/Homebrew/ 目录中</a>，就可以继续。不过讨厌的是你不知道需要依赖多少个包的时候，这一个个下实在是浪费功夫。</li>
-<li><a href="http://community.itbbs.cn/thread/21327/" target="_blank" rel="external">修改下载目标源，直接把sf.net的地址给替换掉</a>，一样麻烦。</li>
+<li>一是<a href="http://leegorous.net/blog/2012/08/10/how-to-skip-download-in-brew-install/" target="_blank" rel="noopener">跳过下载步骤，事先下载程序包，放到/Library/Caches/Homebrew/ 目录中</a>，就可以继续。不过讨厌的是你不知道需要依赖多少个包的时候，这一个个下实在是浪费功夫。</li>
+<li><a href="http://community.itbbs.cn/thread/21327/" target="_blank" rel="noopener">修改下载目标源，直接把sf.net的地址给替换掉</a>，一样麻烦。</li>
 <li>使用代理，让curl通过代理来访问。编辑$HOME/.curlrc文件，增加“–socks5 127.0.0.1:1080”即可（替换成你自己的代理），这样你在brew install安装的时候，相应curl就会通过socks代理访问，从而成功下载完成安装。方便简单，就是你需要自己设置一个socks代理。</li>
 </ol>
 
@@ -130,7 +123,7 @@ Warning: You">
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/01/brew安装程序包如何绕开墙的办法/" data-id="cj133piff003e00c2fis9wrzh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/01/brew安装程序包如何绕开墙的办法/" data-id="cjmiwvaxy003504c28fqrv9f6" class="article-share-link">Share</a>
       
 
       
@@ -265,7 +258,7 @@ Warning: You">
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

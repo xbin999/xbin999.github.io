@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/extension/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -102,15 +103,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Mac safari默认的google搜索采用的是http，考虑我国国情实在是不方便，每次点击搜索结果无果，去修改url加入https。真是搞不懂为啥safari不提供选项供设置。</p>
-<p>还好找了个extension <a href="http://vitarn.com/projects/googlessl/" target="_blank" rel="external">Google SSL</a>，可以将url中的<a href="http://www.google.com/替换为https://www.google.com/，方便了很多。" target="_blank" rel="external">http://www.google.com/替换为https://www.google.com/，方便了很多。</a></p>
-<p>不过要注意一点，<a href="http://www.google.com/" target="_blank" rel="external">http://www.google.com/</a> 会重定向到所在地区，比如<a href="http://www.google.com.hk/，看了一下extension的规则没有对此做处理，不过此时可以先输入：[www.google.com/ncr](http://www.douban.com/link2?url=http%3A//www.google.com/ncr" target="_blank" rel="external">http://www.google.com.hk/，看了一下extension的规则没有对此做处理，不过此时可以先输入：[www.google.com/ncr](http://www.douban.com/link2?url=http%3A//www.google.com/ncr</a>)<span style="color:#111111;font-family:Arial, Helvetica, sans-serif;line-height:21px;background-color:#ffffff;"> ，切换到英语不跳转即可。</span></p>
+<p>还好找了个extension <a href="http://vitarn.com/projects/googlessl/" target="_blank" rel="noopener">Google SSL</a>，可以将url中的<a href="http://www.google.com/替换为https://www.google.com/，方便了很多。" target="_blank" rel="noopener">http://www.google.com/替换为https://www.google.com/，方便了很多。</a></p>
+<p>不过要注意一点，<a href="http://www.google.com/" target="_blank" rel="noopener">http://www.google.com/</a> 会重定向到所在地区，比如<a href="http://www.google.com.hk/，看了一下extension的规则没有对此做处理，不过此时可以先输入：[www.google.com/ncr](http://www.douban.com/link2?url=http%3A//www.google.com/ncr)" target="_blank" rel="noopener">http://www.google.com.hk/，看了一下extension的规则没有对此做处理，不过此时可以先输入：[www.google.com/ncr](http://www.douban.com/link2?url=http%3A//www.google.com/ncr)</a><span style="color:#111111;font-family:Arial, Helvetica, sans-serif;line-height:21px;background-color:#ffffff;"> ，切换到英语不跳转即可。</span></p>
 <p>&nbsp;</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/08/24/让safari使用https搜索/" data-id="cj133pjvh028r00c2boez6ayt" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/08/24/让safari使用https搜索/" data-id="cjmiwvbvx026o04c2chnsljau" class="article-share-link">Share</a>
       
 
       
@@ -156,17 +157,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前在safari中一直使用<a href="http://archive.robwilkerson.org/2010/06/16/add-to-google-reader-extension-for-safari-5/" target="_blank" rel="external">Add To Google Reader</a>订阅RSS，不过由于老外不必担心GFW，采用http即可，但是我使用的时候经常都很杯具的是http无法访问google，从而必须手工改成https，再刷新一次，很不爽。</p>
-<p>就像修改一下，去找代码，codaset已经不能访问。就到<a href="https://github.com/" target="_blank" rel="external">github</a>上找了个<a href="http://robwilkerson.org/" target="_blank" rel="external">Rob Wilkerson</a> 之前参考的版本，也就是<a href="http://github.com/Chupa" target="_blank" rel="external">Chupa</a>的<a href="http://github.com/Chupa/Read-in-Google-Reader" target="_blank" rel="external">源代码</a>。我也clone了他的代码，做了一些修改。</p>
+        <p>之前在safari中一直使用<a href="http://archive.robwilkerson.org/2010/06/16/add-to-google-reader-extension-for-safari-5/" target="_blank" rel="noopener">Add To Google Reader</a>订阅RSS，不过由于老外不必担心GFW，采用http即可，但是我使用的时候经常都很杯具的是http无法访问google，从而必须手工改成https，再刷新一次，很不爽。</p>
+<p>就像修改一下，去找代码，codaset已经不能访问。就到<a href="https://github.com/" target="_blank" rel="noopener">github</a>上找了个<a href="http://robwilkerson.org/" target="_blank" rel="noopener">Rob Wilkerson</a> 之前参考的版本，也就是<a href="http://github.com/Chupa" target="_blank" rel="noopener">Chupa</a>的<a href="http://github.com/Chupa/Read-in-Google-Reader" target="_blank" rel="noopener">源代码</a>。我也clone了他的代码，做了一些修改。</p>
 <p>一是采用https的方式访问google；</p>
 <p>二是点击RSS按钮后直接采用google reader订阅，而不需要选择iGoogle或Reader。</p>
-<p>你可以直接在target中<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension/raw/master/target/read-in-https-google-reader.safariextz" target="_blank" rel="external">下载</a>安装即可，或者在<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension" target="_blank" rel="external">read-in-https-google-reader</a>中得到源代码。</p>
+<p>你可以直接在target中<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension/raw/master/target/read-in-https-google-reader.safariextz" target="_blank" rel="noopener">下载</a>安装即可，或者在<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension" target="_blank" rel="noopener">read-in-https-google-reader</a>中得到源代码。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/" data-id="cj133pj1i01d600c2xq2yt9vc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/" data-id="cjmiwvbdt01bb04c2fe8kwmzi" class="article-share-link">Share</a>
       
 
       
@@ -279,7 +280,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

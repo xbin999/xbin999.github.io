@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/symbol/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,10 +102,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>过年了还在单位，在看看ROR。简单翻译一下<a href="http://blog.41studio.com/knowing-the-difference-between-symbol-and-symbol-in-rails/" target="_blank" rel="external">Knowing The Difference Between [:symbol] and [symbol:] in Rails</a>，自己也搞搞明白。</p>
+        <p>过年了还在单位，在看看ROR。简单翻译一下<a href="http://blog.41studio.com/knowing-the-difference-between-symbol-and-symbol-in-rails/" target="_blank" rel="noopener">Knowing The Difference Between [:symbol] and [symbol:] in Rails</a>，自己也搞搞明白。</p>
 <hr>
 <p>对于Rails新手来说，看到一个冒号一会在前一会在后经常容易迷惑。那么:symbol和symbol: 的区别是什么呢？</p>
-<h1 id="符号前的冒号"><a href="#符号前的冒号" class="headerlink" title="符号前的冒号"></a>符号前的冒号</h1><p>一个前面带有冒号的符号就是一个<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="external">Symbol</a> （有点像变量）我们需要使用=&gt;对Symbol赋值。</p>
+<h1 id="符号前的冒号"><a href="#符号前的冒号" class="headerlink" title="符号前的冒号"></a>符号前的冒号</h1><p>一个前面带有冒号的符号就是一个<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="noopener">Symbol</a> （有点像变量）我们需要使用=&gt;对Symbol赋值。</p>
 <p>举个例子，如果我们想复制”Ruby on Rails”赋值给:book符号，我们就写：</p>
 <pre><code>
 :book => "Ruby on Rails"
@@ -124,7 +125,7 @@ book: :available
 
 <p>这段代码就是i讲一个变量符号赋值给另一个符号。不过千万小心类似这样的写法Book::Name，这个完全不同，Book::Name表示Name是一个模块名，Book是一个类名。</p>
 <hr>
-<p>上面的文章似乎简单化了，Symbol的含义不只此。:symbol是<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="external">Symbol</a> ，看文档的说明：</p>
+<p>上面的文章似乎简单化了，Symbol的含义不只此。:symbol是<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="noopener">Symbol</a> ，看文档的说明：</p>
 <blockquote>
 <p>Symbol对象用于表示Ruby解释器中的名字和一些字符串，他们可以采用:name和:”string”的语法格式，也可以使用to_sym方法。对于指定的名称和字符串在程序运行期间会创建相同的symbol对象。也就是说无论Fred是一个上下文中的常量、另一个中的方法，或是第三个中的类，:Fred符号在所有三个上下文中都是相同的对象。</p>
 </blockquote>
@@ -136,7 +137,7 @@ book: :available
 => 1
 </code></pre>
 
-<p>IBM developerWorks这篇<a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl/index.html" target="_blank" rel="external">理解 Ruby Symbol，第 1 部分</a> 说的更细些，尤其提到使用技巧，在ruby中使用Symbol处理名字可以降低Ruby内存消耗。</p>
+<p>IBM developerWorks这篇<a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl/index.html" target="_blank" rel="noopener">理解 Ruby Symbol，第 1 部分</a> 说的更细些，尤其提到使用技巧，在ruby中使用Symbol处理名字可以降低Ruby内存消耗。</p>
 <p>典型的使用是在hash中，symbol可以作为key值，效率比使用字符串要更好，因为Ruby对每一次字符串引用都会生成一个String对象。</p>
 <p>还有可以做hash参数，普通调用函数的时候往往需要确保参数个数、顺序匹配，而使用hash参数就没有这个问题。Ruby on Rails大量地运用了这种方式，比如：</p>
 <pre><code>
@@ -147,14 +148,14 @@ add_column :products, :price, :decimal,
 </code></pre>
 
 <p>使用hash参数，可以如下定义，前半部分为固定参数，后面是可变参数，或者全部采用hash参数。</p>
-<p><a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl2/" target="_blank" rel="external">理解 Ruby Symbol ，第 2 部分： Symbol 内幕</a> 提到使用:Symbol的方式会创建Symbol对象，保存在符号表中，这是一个全局数据结构，存放了所有Symbol的（数字ID、名字）对，Ruby不会做删除。</p>
+<p><a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl2/" target="_blank" rel="noopener">理解 Ruby Symbol ，第 2 部分： Symbol 内幕</a> 提到使用:Symbol的方式会创建Symbol对象，保存在符号表中，这是一个全局数据结构，存放了所有Symbol的（数字ID、名字）对，Ruby不会做删除。</p>
 <p>文中最后有一句话：<em>Symbol 的特点决定了它的简洁和高效。 Ruby 把它的符号表敞开了给你，在 Symbol 可以更好地发挥作用时，不要吝啬使用 Symbol 。</em></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/02/16/ruby-symbol/" data-id="cj133pikj00im00c2r8qtubv4" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/02/16/ruby-symbol/" data-id="cjmiwvb2b00hp04c2vkijq1ye" class="article-share-link">Share</a>
       
 
       
@@ -267,7 +268,7 @@ add_column :products, :price, :decimal,
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

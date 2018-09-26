@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/mac/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,7 +104,7 @@
       
         <p>经常写微信公众号或博客的朋友，总会面临图片处理的效率问题，找图片或截屏，调整大小，上传，复制粘贴图片地址，让人做得很厌烦。</p>
 <p>说说怎么提高效率，找图片和截屏就不提了，而后面三件工作在mac下完全可以用workflow来协助我们完成。</p>
-<p>调整图片的大小我是参考了<a href="http://macshuo.com/" target="_blank" rel="external">MacTalk</a> 的文章（原文我忘了），基本思路就是复制图像文件到统一目录中，调整图像大小，转换为JPG格式，并可以统一签上前缀名称。这样你就可以上传到微信公众平台，而无需担心图像文件过大影响用户浏览消耗过多的流量。</p>
+<p>调整图片的大小我是参考了<a href="http://macshuo.com/" target="_blank" rel="noopener">MacTalk</a> 的文章（原文我忘了），基本思路就是复制图像文件到统一目录中，调整图像大小，转换为JPG格式，并可以统一签上前缀名称。这样你就可以上传到微信公众平台，而无需担心图像文件过大影响用户浏览消耗过多的流量。</p>
 <p><img src="http://xbin999.qiniudn.com/images/resize700.png" alt=""></p>
 <p>如果是写博客，我采用七牛云作为图床，使用上传脚本，上传后的结果可以直接 <a href="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/">生成markdown格式日志</a> 。同样写一个workflow，将图像文件移到七牛云的上传目录，执行shell脚本即可。（先在/tmp下生成一个qiniu.log文件）</p>
 <p><img src="http://xbin999.qiniudn.com/images/upload2qiniu.png" alt=""></p>
@@ -113,7 +114,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/03/19/blog-tu-pian-de-kuai-su-chu-li/" data-id="cj133pifa003200c2ls1wu4v2" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/03/19/blog-tu-pian-de-kuai-su-chu-li/" data-id="cjmiwvaxu002v04c2yzvt5cww" class="article-share-link">Share</a>
       
 
       
@@ -159,20 +160,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用<a href="http://www.adminer.org/" target="_blank" rel="external">Adminer</a>，一个PHP文件的数据库管理工具管理SQLite时，简单地删除一张表，报错：attempt to write a readonly database。</p>
-<p>原因在于<a href="http://www.adminer.org/" target="_blank" rel="external">Adminer</a>是在Apache中运行，在mac中使用的用户身份是_www用户，就没有写的权限了。所以要<a href="https://coderwall.com/p/gl_grw/make-a-directory-writable-by-apache-in-mac-os-x-maverick" target="_blank" rel="external">修改目录权限让apache可写</a>。</p>
+        <p>使用<a href="http://www.adminer.org/" target="_blank" rel="noopener">Adminer</a>，一个PHP文件的数据库管理工具管理SQLite时，简单地删除一张表，报错：attempt to write a readonly database。</p>
+<p>原因在于<a href="http://www.adminer.org/" target="_blank" rel="noopener">Adminer</a>是在Apache中运行，在mac中使用的用户身份是_www用户，就没有写的权限了。所以要<a href="https://coderwall.com/p/gl_grw/make-a-directory-writable-by-apache-in-mac-os-x-maverick" target="_blank" rel="noopener">修改目录权限让apache可写</a>。</p>
 <pre><code>
 $ sudo chown -R _www:staff db
 $ sudo chmod -R 775 db
 </code></pre>
 
-<p>权限如果改成755的话，个人用户就又没有写权限了。当然更好的方式是保留原有权限，只<a href="http://francoisdeschenes.com/2013/02/26/enable-write-permissions-for-apache-built-into-mac-os-x" target="_blank" rel="external">给_www用户新增所需权限</a>：sudo chmod -R +a ‘_www allow read,write,delete,add_file,add_subdirectory,file_inherit,directory_inherit’ #dir#，就打起来复杂点。</p>
+<p>权限如果改成755的话，个人用户就又没有写权限了。当然更好的方式是保留原有权限，只<a href="http://francoisdeschenes.com/2013/02/26/enable-write-permissions-for-apache-built-into-mac-os-x" target="_blank" rel="noopener">给_www用户新增所需权限</a>：sudo chmod -R +a ‘_www allow read,write,delete,add_file,add_subdirectory,file_inherit,directory_inherit’ #dir#，就打起来复杂点。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/01/16/attempt-to-write-a-readonly-database/" data-id="cj133pif3002e00c277sp1dfy" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/01/16/attempt-to-write-a-readonly-database/" data-id="cjmiwvaxm002604c223re0ybw" class="article-share-link">Share</a>
       
 
       
@@ -218,7 +219,7 @@ $ sudo chmod -R 775 db
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>总是挡不住升级的诱惑，即使总会有这样或那样的问题。在看了MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="external">“OSX Yosemite，焕然一新”</a>后，觉得也差不多，就开始升级了。</p>
+        <p>总是挡不住升级的诱惑，即使总会有这样或那样的问题。在看了MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="noopener">“OSX Yosemite，焕然一新”</a>后，觉得也差不多，就开始升级了。</p>
 <p>备份，下载Yosemite，安装，一切顺利，周五晚上就成功升级到Yosemite了。想想太顺利了，开始折腾应用，然后悲剧就发生了。</p>
 <p>升级后，提示有四个应用不兼容Yosemite：</p>
 <ul>
@@ -231,24 +232,24 @@ $ sudo chmod -R 775 db
 <p>再之后查问题，发现这个问题搞起来还是有点复杂，折腾良久无果，最后我还是恢复到了原先的10.9，再重新做了一次升级。等搞明白或者有稳定的解决方案再说。</p>
 <p>升级后处理的问题简单整理一下：</p>
 <ul>
-<li><a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>的更新参考MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="external">“OSX Yosemite，焕然一新”</a>。</li>
-<li>使用chrome看一堆chrome helper进程无反应，参见<a href="https://code.google.com/p/chromium/issues/detail?id=397642&amp;q=label%3Ahotlist-yosemite&amp;colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified" target="_blank" rel="external">Google chrome helper not responding</a>还是没有解决，暂时用Safari。</li>
+<li><a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a>的更新参考MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="noopener">“OSX Yosemite，焕然一新”</a>。</li>
+<li>使用chrome看一堆chrome helper进程无反应，参见<a href="https://code.google.com/p/chromium/issues/detail?id=397642&amp;q=label%3Ahotlist-yosemite&amp;colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified" target="_blank" rel="noopener">Google chrome helper not responding</a>还是没有解决，暂时用Safari。</li>
 </ul>
 <p><img src="http://xbin999.qiniudn.com/images/Googlehelper.png" alt=""></p>
 <ul>
 <li>QQ拼音打字在从候选字列表中选自时经常出错，比如是打“一堆”，暂时用原生的输入法。</li>
-<li>在<a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>更新后安装MacVim，提示“checking uint32_t is 32 bits… configure: error: WRONG!  uint32_t not defined correctly.”错误，参见<a href="https://github.com/Homebrew/homebrew/issues/33357" target="_blank" rel="external">macvim install failed in 10.10 #33357</a>，需要把XCode升级到6.1。升级后安装成功，再brew linkapps安装到/Applications 即可。</li>
+<li>在<a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a>更新后安装MacVim，提示“checking uint32_t is 32 bits… configure: error: WRONG!  uint32_t not defined correctly.”错误，参见<a href="https://github.com/Homebrew/homebrew/issues/33357" target="_blank" rel="noopener">macvim install failed in 10.10 #33357</a>，需要把XCode升级到6.1。升级后安装成功，再brew linkapps安装到/Applications 即可。</li>
 </ul>
 <p>最迫切的就是Google Chrome和Trim Enabler了，暂时先不折腾了。</p>
-<p>升级后的体验还得慢慢来，但升级后最想用的iOS协作却发现我的MacBook Pro太老了，都无法支持，呜呜。简单说一下：Yosemite和iOS协作最大的提升就是AirDrop在Mac和iOS设备间的共享、HandOff功能实现应用的无缝切换，不过不幸的是这两个功能都需要蓝牙4.0的支持，而我的MacBook Pro是2011年的，不支持蓝牙4.0。当然也有牛人替换了老设备的蓝牙，实现了<a href="http://bbs.feng.com/read-htm-tid-8418369.html" target="_blank" rel="external">黑、白苹果开Handoff教程 - ME294GM3亲测可用</a>。</p>
-<p>想要知道自己的设备是否支持蓝牙4.0，可以在”About This Mac”点”System report”，查看“Bluetooth”即可。 如果知道自己的设备年限，大致可参考<a href="http://www.macx.cn/thread-2130264-1-1.html" target="_blank" rel="external">OS X Yosemite 的 Handoff 功能可能不支持所有 Mac</a>，其中说到：</p>
+<p>升级后的体验还得慢慢来，但升级后最想用的iOS协作却发现我的MacBook Pro太老了，都无法支持，呜呜。简单说一下：Yosemite和iOS协作最大的提升就是AirDrop在Mac和iOS设备间的共享、HandOff功能实现应用的无缝切换，不过不幸的是这两个功能都需要蓝牙4.0的支持，而我的MacBook Pro是2011年的，不支持蓝牙4.0。当然也有牛人替换了老设备的蓝牙，实现了<a href="http://bbs.feng.com/read-htm-tid-8418369.html" target="_blank" rel="noopener">黑、白苹果开Handoff教程 - ME294GM3亲测可用</a>。</p>
+<p>想要知道自己的设备是否支持蓝牙4.0，可以在”About This Mac”点”System report”，查看“Bluetooth”即可。 如果知道自己的设备年限，大致可参考<a href="http://www.macx.cn/thread-2130264-1-1.html" target="_blank" rel="noopener">OS X Yosemite 的 Handoff 功能可能不支持所有 Mac</a>，其中说到：</p>
 <p><em>由于Continuity 的 Handoff 功能需要蓝牙4.0才能正常工作，这意味着并不是所有安装 OS X Yosemite 的 Mac 电脑都能用上 Handoff。2011年中期之后的 MacBook Air、2012年中期之后的 MacBook Pro、2012年末的 iMac、2011年中期的 Mac mini 和2013年末的 Mac Pro 才支持蓝牙4.0。</em></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/10/19/upgrade-Yosemite/" data-id="cj133pimy00op00c2137wsuky" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/10/19/upgrade-Yosemite/" data-id="cjmiwvb4900nk04c20nzknh2v" class="article-share-link">Share</a>
       
 
       
@@ -296,14 +297,14 @@ $ sudo chmod -R 775 db
       
         <div id="wrapper"><br><br>Objective C的属性定义时提供了一堆的修饰符，readonly, readwrite, assign, retain, copy, nonatomic，看代码都糊涂，看了一下《The Objective-C Programming Language》中有关属性定义的章节，节选如下：<br><br><em>   Accessor Method Names 存取方法名称&gt; 属性对应的getter, setter默认的方法名称是propertyName和setPropertyName:，比如属性“foo”的存取方法是foo和setFoo:。<br>&gt;<br>&gt; </em>   getter=getterName 指定属性的get存取方法名称。对于布尔型值会用is作为get存取方法的前缀。<br>&gt; <em>   setter=setterName 指定属性的set存取方法名称。如果属性是readonly，而指定了setter方法，会得到编译错误。<br>&gt;<br>&gt; 使用.是对getter和setter的简便的封装，两者是一致的。
 
-</em>   Writablility 读写属性&gt; <em>   readwrite: 默认。<br>&gt; </em>   readonly<br>&gt;<br>&gt; 在implementation块中使用<a href="https://github.com/synthesize" target="_blank" rel="external">@synthesize</a> 自动生成getter/setter存取方法。<br><br><em>   Setter Semantics setter方法语义&gt; </em>   assign: 默认，表明setter使用简单的赋值，用于标量数据类型，如NSInteger, CGRect，或者不是你拥有的对象，比如delegate。retain和assign在GC模式下是一样的。<br>&gt; <em>   retain：用于对象赋值。前一个值会被发送一个release消息。Mac OS X v10.6以前只针对Objective-C对象类型有效，不能用于Core Foundation对象；但在v10.6以后可以使用<strong>attribute</strong>关键字标明Core Foundation属性在内存管理上和对象同样对待，比如：<br>&gt; &gt; @property(retain) <strong>attribute</strong>((NSObject)) CFDictionaryRef myDictionary;<br>&gt; &gt;     `<br>&gt;<br>&gt; </em>   copy：表明对象的拷贝用于赋值，前一个值会被发送一个release消息，拷贝通过调用copy方法实现。只针对对象类型有效，并且必须实现NSCopying协议。<br>&gt;<br>&gt;     不同的约束依赖于你是否采用GC：<br>&gt;<br>&gt; <em>   如果你没有使用GC，那么对于对象属性你必须严格标明是采用assign，retain或者copy，否则会得到一个编译器警告。（鼓励你想明白到底采用什么方式的内存管理。）<br>&gt; </em>   如果你使用GC，那么默认情况下不会得到警告，除非属性类是基于NSCopying。<br><br><em>   Atomic 原子性&gt; </em>   atomic，默认。存取方法在多线程环境中提供更安全的存取。如果使用了retain或copy，而没有表明nonatomic，那么在引用计数的环境中，get存取方法使用锁来保持和释放要返回的值，类似于：<br>&gt; &gt; <pre>`<br>&gt; &gt;     [_internal lock]; // lock using an object-level lock<br>&gt; &gt;     id result = [[value retain] autorelease];<br>&gt; &gt;     [_internal unlock];<br>&gt; &gt;     return result;<br>&gt;<br>&gt; <em>   nonatomic，直接返回值，效率更快。<br>&gt;<br>&gt; 注意：属性的原子性并不等同于对象是线程安全的。
+</em>   Writablility 读写属性&gt; <em>   readwrite: 默认。<br>&gt; </em>   readonly<br>&gt;<br>&gt; 在implementation块中使用<a href="https://github.com/synthesize" target="_blank" rel="noopener">@synthesize</a> 自动生成getter/setter存取方法。<br><br><em>   Setter Semantics setter方法语义&gt; </em>   assign: 默认，表明setter使用简单的赋值，用于标量数据类型，如NSInteger, CGRect，或者不是你拥有的对象，比如delegate。retain和assign在GC模式下是一样的。<br>&gt; <em>   retain：用于对象赋值。前一个值会被发送一个release消息。Mac OS X v10.6以前只针对Objective-C对象类型有效，不能用于Core Foundation对象；但在v10.6以后可以使用<strong>attribute</strong>关键字标明Core Foundation属性在内存管理上和对象同样对待，比如：<br>&gt; &gt; @property(retain) <strong>attribute</strong>((NSObject)) CFDictionaryRef myDictionary;<br>&gt; &gt;     `<br>&gt;<br>&gt; </em>   copy：表明对象的拷贝用于赋值，前一个值会被发送一个release消息，拷贝通过调用copy方法实现。只针对对象类型有效，并且必须实现NSCopying协议。<br>&gt;<br>&gt;     不同的约束依赖于你是否采用GC：<br>&gt;<br>&gt; <em>   如果你没有使用GC，那么对于对象属性你必须严格标明是采用assign，retain或者copy，否则会得到一个编译器警告。（鼓励你想明白到底采用什么方式的内存管理。）<br>&gt; </em>   如果你使用GC，那么默认情况下不会得到警告，除非属性类是基于NSCopying。<br><br><em>   Atomic 原子性&gt; </em>   atomic，默认。存取方法在多线程环境中提供更安全的存取。如果使用了retain或copy，而没有表明nonatomic，那么在引用计数的环境中，get存取方法使用锁来保持和释放要返回的值，类似于：<br>&gt; &gt; <pre>`<br>&gt; &gt;     [_internal lock]; // lock using an object-level lock<br>&gt; &gt;     id result = [[value retain] autorelease];<br>&gt; &gt;     [_internal unlock];<br>&gt; &gt;     return result;<br>&gt;<br>&gt; <em>   nonatomic，直接返回值，效率更快。<br>&gt;<br>&gt; 注意：属性的原子性并不等同于对象是线程安全的。
 
 </em>   Manage Ownership&gt; <em>   weak<br>&gt; </em>   strong: default。<br>&gt;<br>&gt; 这个要和assign, retain, copy整合在一起看看Objective C的内存管理机制才行。<br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/01/27/objective-c-property/" data-id="cj133pij000ei00c2b1xco7my" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/01/27/objective-c-property/" data-id="cjmiwvb1500dn04c25vug9fpl" class="article-share-link">Share</a>
       
 
       
@@ -349,14 +350,14 @@ $ sudo chmod -R 775 db
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>虽然<a href="http://xbin999.com/?p=1446">用了Tmpdisk将内存虚拟成临时存储</a>，但整体性能还是没有提升，所以最后还是选择对自己的老机器做一次升级，将内存从4G到8G，并在光驱位上安装一个SSD硬盘。<br><br>首先确定自己的主机配置情况，我是搞不太清楚的。到<a href="https://selfsolve.apple.com/agreementWarrantyDynamic.do" target="_blank" rel="external">Check Your Service and Support Coverage</a>，输入我的序列号：XXXXXXXXXXXX，得到的结果MacBook Pro (13-inch, Early 2011)。然后在<a href="http://support.apple.com/kb/HT4132?viewlocale=zh_CN" target="_blank" rel="external">如何识别 MacBook Pro 机型</a>中可以看到，“MacBook Pro（13 英寸，2011 年初）MacBookPro8,1 MC724xx/A 13.3”/2.7 i7/2x2GB/500-5400<br><br>MC700xx/A 13.3”/2.3 i5/2x2GB/320-5400”，我的机器是i5。<br><br>可以看到最大内存是4GBx2 DDR3，也就是只能到8GB，内存的安装和拆卸还是比较简单的，参见<a href="http://support.apple.com/kb/HT1270?viewlocale=zh_CN" target="_blank" rel="external">如何安装或拆卸内存</a>。<br><br>比较麻烦的是光驱位安装硬盘，先是选择硬盘，可以在关于本机的system report - system information中看到，Link speed 是6Gb，SATA3 的接口，选择了<a href="http://www.amazon.cn/gp/product/B00C8R6HIC/ref=oh_details_o00_s00_i00?ie=UTF8&amp;psc=1" target="_blank" rel="external">Toshiba的2.5 SATA3 128G</a>。<br><br>拆机安装前重点参考了两篇文章：<br><br><em>   一是<a href="http://www.macuknow.com/node/21313" target="_blank" rel="external">自行 DIY 打造 Fusion Drive 雙碟合一環境！</a>
+        <div id="wrapper"><br><br>虽然<a href="http://xbin999.com/?p=1446">用了Tmpdisk将内存虚拟成临时存储</a>，但整体性能还是没有提升，所以最后还是选择对自己的老机器做一次升级，将内存从4G到8G，并在光驱位上安装一个SSD硬盘。<br><br>首先确定自己的主机配置情况，我是搞不太清楚的。到<a href="https://selfsolve.apple.com/agreementWarrantyDynamic.do" target="_blank" rel="noopener">Check Your Service and Support Coverage</a>，输入我的序列号：XXXXXXXXXXXX，得到的结果MacBook Pro (13-inch, Early 2011)。然后在<a href="http://support.apple.com/kb/HT4132?viewlocale=zh_CN" target="_blank" rel="noopener">如何识别 MacBook Pro 机型</a>中可以看到，“MacBook Pro（13 英寸，2011 年初）MacBookPro8,1 MC724xx/A 13.3”/2.7 i7/2x2GB/500-5400<br><br>MC700xx/A 13.3”/2.3 i5/2x2GB/320-5400”，我的机器是i5。<br><br>可以看到最大内存是4GBx2 DDR3，也就是只能到8GB，内存的安装和拆卸还是比较简单的，参见<a href="http://support.apple.com/kb/HT1270?viewlocale=zh_CN" target="_blank" rel="noopener">如何安装或拆卸内存</a>。<br><br>比较麻烦的是光驱位安装硬盘，先是选择硬盘，可以在关于本机的system report - system information中看到，Link speed 是6Gb，SATA3 的接口，选择了<a href="http://www.amazon.cn/gp/product/B00C8R6HIC/ref=oh_details_o00_s00_i00?ie=UTF8&amp;psc=1" target="_blank" rel="noopener">Toshiba的2.5 SATA3 128G</a>。<br><br>拆机安装前重点参考了两篇文章：<br><br><em>   一是<a href="http://www.macuknow.com/node/21313" target="_blank" rel="noopener">自行 DIY 打造 Fusion Drive 雙碟合一環境！</a>
 
-</em>   二是<a href="http://www.teanie.com/macbook-pro-upgrade-ssd-fusion-drive.html" target="_blank" rel="external">MacBook Pro 升级 SSD 全流程图解</a><br><br>我采用的也是Fusion Drive模式，把两个硬盘混搭，懒得自己去分别管理两个不同的硬盘。<br><br>安装基本还算顺利，注意的点是，卸下光驱的时候，在光驱左上角还有一颗隐藏的螺丝，不要硬拔。还有在安装完成后，使用<a href="http://www.groths.org/trim-enabler-for-mac/" target="_blank" rel="external">Trim Enabler</a>打开SSD硬盘的TRIM功能，以起到保护作用。<br><br>最后可以采用Disk Speed Test做一次磁盘读写的测试。这两天使用速度不错，感觉挺好。<br><br></div>
+</em>   二是<a href="http://www.teanie.com/macbook-pro-upgrade-ssd-fusion-drive.html" target="_blank" rel="noopener">MacBook Pro 升级 SSD 全流程图解</a><br><br>我采用的也是Fusion Drive模式，把两个硬盘混搭，懒得自己去分别管理两个不同的硬盘。<br><br>安装基本还算顺利，注意的点是，卸下光驱的时候，在光驱左上角还有一颗隐藏的螺丝，不要硬拔。还有在安装完成后，使用<a href="http://www.groths.org/trim-enabler-for-mac/" target="_blank" rel="noopener">Trim Enabler</a>打开SSD硬盘的TRIM功能，以起到保护作用。<br><br>最后可以采用Disk Speed Test做一次磁盘读写的测试。这两天使用速度不错，感觉挺好。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/01/08/mac-book-pro升级/" data-id="cj133piie00ce00c2dha0m3zi" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/01/08/mac-book-pro升级/" data-id="cjmiwvb0k00bj04c2wnroxwcb" class="article-share-link">Share</a>
       
 
       
@@ -402,13 +403,13 @@ $ sudo chmod -R 775 db
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>在知乎上看到一个问题<a href="http://www.zhihu.com/question/20873070/answer/20139836" target="_blank" rel="external">程序员如何优雅地使用 Mac？</a>的回答，里面提到了一个mac上的工具<a href="http://inkscribbles.com/apps/tmpdisk/" target="_blank" rel="external">TmpDisk</a>，开源的内存磁盘管理工具，用来将你的内存虚拟成硬盘，加速文件的读写，缺点当然是关机或弹出磁盘文件就丢失了。不过这个貌似也看成是优点，你都不需要去考虑清理文件。<br><br>立即<a href="http://inkscribbles.com/downloads/TmpDisk-1.1.2.dmg" target="_blank" rel="external">下载</a>安装，设置好后，将我常用的下载目录（包括邮件附件）设置到该虚拟硬盘上，体验果然飞快啊。其实大多数邮件的附件下载下来并不需要长期保存，只要当时快速处理即可。这样只需要每天关机前将需要保存的文件转移到硬盘即可（刚好是一次整理过程），其他自动删除，爽。<br><br>没钱买SSD的人有福了，不过速度越快，心倒是更痒了。<br><br></div>
+        <div id="wrapper"><br><br>在知乎上看到一个问题<a href="http://www.zhihu.com/question/20873070/answer/20139836" target="_blank" rel="noopener">程序员如何优雅地使用 Mac？</a>的回答，里面提到了一个mac上的工具<a href="http://inkscribbles.com/apps/tmpdisk/" target="_blank" rel="noopener">TmpDisk</a>，开源的内存磁盘管理工具，用来将你的内存虚拟成硬盘，加速文件的读写，缺点当然是关机或弹出磁盘文件就丢失了。不过这个貌似也看成是优点，你都不需要去考虑清理文件。<br><br>立即<a href="http://inkscribbles.com/downloads/TmpDisk-1.1.2.dmg" target="_blank" rel="noopener">下载</a>安装，设置好后，将我常用的下载目录（包括邮件附件）设置到该虚拟硬盘上，体验果然飞快啊。其实大多数邮件的附件下载下来并不需要长期保存，只要当时快速处理即可。这样只需要每天关机前将需要保存的文件转移到硬盘即可（刚好是一次整理过程），其他自动删除，爽。<br><br>没钱买SSD的人有福了，不过速度越快，心倒是更痒了。<br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/11/28/没钱买ssd的人可以用内存做临时存储/" data-id="cj133pjhy01w900c25g8kuwvi" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/11/28/没钱买ssd的人可以用内存做临时存储/" data-id="cjmiwvbo401u604c293k451t0" class="article-share-link">Share</a>
       
 
       
@@ -454,12 +455,12 @@ $ sudo chmod -R 775 db
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>刚想找个几个月前的文件，文件名也不记得了，先到gmail搜索邮件，然后把找到的文件名贴到spotlight，满心想可以立马得到搜索结果了。神奇的是居然啥结果也没有，难道都被我删除了，不应该啊！<br><br>无奈只好到目录层级中一级级地找，找了4级才找到。不过这就奇怪了，明明文件存在，为啥spotlight找不到呢？这都是半年没更新的文件了，何况也没提示索引更新啊？google了一下，貌似<a href="https://www.google.com/search?q=mac+spotlight+cannot+search+file#q=mac+spotlight+index+is+not+working&amp;safe=active" target="_blank" rel="external">spotlight也存在工作不正常</a>的时候，于是<a href="http://support.apple.com/kb/HT2409?viewlocale=zh_CN" target="_blank" rel="external">重新re-index</a>，操作方法是在System Preferences中选择Spotlight，在Privacy中增加失效的目录到阻止索引的清单中，完成后确认，再在Privacy中删除该目录，这样目录中的文件就会被重新索引了。<br><br>在Spotlight中再输入文件名，搜索正常。<br><br>BTW. Spotlight中找到文件后，输入Command+Enter，可以直接打开文件所在目录，还是挺方便的。<br><br></div>
+        <div id="wrapper"><br><br>刚想找个几个月前的文件，文件名也不记得了，先到gmail搜索邮件，然后把找到的文件名贴到spotlight，满心想可以立马得到搜索结果了。神奇的是居然啥结果也没有，难道都被我删除了，不应该啊！<br><br>无奈只好到目录层级中一级级地找，找了4级才找到。不过这就奇怪了，明明文件存在，为啥spotlight找不到呢？这都是半年没更新的文件了，何况也没提示索引更新啊？google了一下，貌似<a href="https://www.google.com/search?q=mac+spotlight+cannot+search+file#q=mac+spotlight+index+is+not+working&amp;safe=active" target="_blank" rel="noopener">spotlight也存在工作不正常</a>的时候，于是<a href="http://support.apple.com/kb/HT2409?viewlocale=zh_CN" target="_blank" rel="noopener">重新re-index</a>，操作方法是在System Preferences中选择Spotlight，在Privacy中增加失效的目录到阻止索引的清单中，完成后确认，再在Privacy中删除该目录，这样目录中的文件就会被重新索引了。<br><br>在Spotlight中再输入文件名，搜索正常。<br><br>BTW. Spotlight中找到文件后，输入Command+Enter，可以直接打开文件所在目录，还是挺方便的。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/11/06/spotlight搜索不到明明存在的文件/" data-id="cj133pilz00ml00c2liqlls86" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/11/06/spotlight搜索不到明明存在的文件/" data-id="cjmiwvb3k00lc04c25d1xben9" class="article-share-link">Share</a>
       
 
       
@@ -505,12 +506,12 @@ $ sudo chmod -R 775 db
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>之前在知乎上提过一个问题<a href="http://www.zhihu.com/question/20387561" target="_blank" rel="external">“在mac lion 设置802.1X如何使用证书连接有线网络”</a>，后来自己解决了，也是自问自答。<br><br>不过当时描述的比较简单，有朋友问起，都忘了，再重新整理一下。<br><br>先是得下载工具<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="external">iphone configuration utility</a>，安装后运行。<br><br>1.  点击“Configuration Profiles”，New一个，在General中填写Name, Identifer，界面如图：<br><a href="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" alt="config1"></a><br><br>2.  在Credentials中，选择Configure，会提示选择证书，找到管理员提供的证书后继续，填写证书密码。<br><a href="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" alt="config2"></a><br><br>3.  在Wi-Fi 中，选择Configure，我们如果是连有线网络的认证，可以随便输入SSID，选择Security Type，这个要看你的有线网络认证类型了，我选择WPA/WPA2 Enterprise，会出来相应的协议和验证要填写，如图：<br><a href="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" alt="config3"></a><br><br>4.  还是在在Wi-Fi 中，勾选完协议后，再选择”Authentication”，你需要在Identity Certificate中选择之前设置的证书。<br><br>5.  至此<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="external">iphone configuration utility</a>中设置完成，点击Export导出为.mobileconfig文件。<br><br>6.  双击倒出的.mobileconfig文件，会提示我们导入user profile，此时按提示操作，最后点击Install即可。<br><br>7.  成功导入后，在System Preferences中，你应该看到一个新的图标Profiles在System下，点击Profiles可以查看导入的信息。<br><a href="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" alt="config4"></a><br><br>8.  在System Preferences中，点击Network，选择Ethernet，点击Advance，tab选项中就会看到有802.1X，里面就有会有新增的配置profile。图上显示的profile名称和前面的设置不同，主要是我前面的截图是为了示例新建的，后面并没有实际导入。<br><a href="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" alt="config5"></a><br><br>9.  插入网线，应该会做验证，你也可以在Ethernet中，连接802.1X。<br><br>大致就是这样了，希望能有所帮助。<br><br></div>
+        <div id="wrapper"><br><br>之前在知乎上提过一个问题<a href="http://www.zhihu.com/question/20387561" target="_blank" rel="noopener">“在mac lion 设置802.1X如何使用证书连接有线网络”</a>，后来自己解决了，也是自问自答。<br><br>不过当时描述的比较简单，有朋友问起，都忘了，再重新整理一下。<br><br>先是得下载工具<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="noopener">iphone configuration utility</a>，安装后运行。<br><br>1.  点击“Configuration Profiles”，New一个，在General中填写Name, Identifer，界面如图：<br><a href="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" alt="config1"></a><br><br>2.  在Credentials中，选择Configure，会提示选择证书，找到管理员提供的证书后继续，填写证书密码。<br><a href="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" alt="config2"></a><br><br>3.  在Wi-Fi 中，选择Configure，我们如果是连有线网络的认证，可以随便输入SSID，选择Security Type，这个要看你的有线网络认证类型了，我选择WPA/WPA2 Enterprise，会出来相应的协议和验证要填写，如图：<br><a href="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" alt="config3"></a><br><br>4.  还是在在Wi-Fi 中，勾选完协议后，再选择”Authentication”，你需要在Identity Certificate中选择之前设置的证书。<br><br>5.  至此<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="noopener">iphone configuration utility</a>中设置完成，点击Export导出为.mobileconfig文件。<br><br>6.  双击倒出的.mobileconfig文件，会提示我们导入user profile，此时按提示操作，最后点击Install即可。<br><br>7.  成功导入后，在System Preferences中，你应该看到一个新的图标Profiles在System下，点击Profiles可以查看导入的信息。<br><a href="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" alt="config4"></a><br><br>8.  在System Preferences中，点击Network，选择Ethernet，点击Advance，tab选项中就会看到有802.1X，里面就有会有新增的配置profile。图上显示的profile名称和前面的设置不同，主要是我前面的截图是为了示例新建的，后面并没有实际导入。<br><a href="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" alt="config5"></a><br><br>9.  插入网线，应该会做验证，你也可以在Ethernet中，连接802.1X。<br><br>大致就是这样了，希望能有所帮助。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/25/在mac-lion设置802-1x使用证书连接有线网络/" data-id="cj133pj1g01d300c2r1lfiesl" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/25/在mac-lion设置802-1x使用证书连接有线网络/" data-id="cjmiwvbds01b804c2m56xzmo3" class="article-share-link">Share</a>
       
 
       
@@ -567,7 +568,7 @@ $ sudo chmod -R 775 db
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/05/27/碰上一个关不掉的文档/" data-id="cj133pjmm020x00c2sbepxwq0" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/05/27/碰上一个关不掉的文档/" data-id="cjmiwvbqz01yu04c2149qxiwm" class="article-share-link">Share</a>
       
 
       
@@ -613,15 +614,15 @@ $ sudo chmod -R 775 db
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://pow.cx" target="_blank" rel="external">pow</a> 一个小工具，在Mac下使用rack开发时方便采用域名来访问，而无需localhost:xxxx。安装和使用都很简单。<br><br><em>   安装：<br><br>    $ curl get.pow.cx | sh `
-</em>   使用:在~/.pow目录中创建到rack应用的符号链接，然后访问域名<a href="http://myapp.dev" target="_blank" rel="external">http://myapp.dev</a> 即可。<br>    <pre>`<br>    $ cd ~/.pow<br>    $ ln -s ~/Projects/myapp<br><br><em>   可以查看服务进程是否启动：$ ps -ef|grep pow
-</em>   如果需要重启服务进程 $ touch ~/.pow/restart.txt<br>*   查看日志 $ tail -f ~/Library/Logs/Pow/access.log<br><br>使用时碰到一个问题，安装后访问<a href="http://myapp.dev" target="_blank" rel="external">http://myapp.dev</a> 没有任何反应，查了以为是<a href="https://github.com/37signals/pow/issues/21" target="_blank" rel="external">.dev resolver doesn’t “register” properly
+        <div id="wrapper"><br><br><a href="http://pow.cx" target="_blank" rel="noopener">pow</a> 一个小工具，在Mac下使用rack开发时方便采用域名来访问，而无需localhost:xxxx。安装和使用都很简单。<br><br><em>   安装：<br><br>    $ curl get.pow.cx | sh `
+</em>   使用:在~/.pow目录中创建到rack应用的符号链接，然后访问域名<a href="http://myapp.dev" target="_blank" rel="noopener">http://myapp.dev</a> 即可。<br>    <pre>`<br>    $ cd ~/.pow<br>    $ ln -s ~/Projects/myapp<br><br><em>   可以查看服务进程是否启动：$ ps -ef|grep pow
+</em>   如果需要重启服务进程 $ touch ~/.pow/restart.txt<br>*   查看日志 $ tail -f ~/Library/Logs/Pow/access.log<br><br>使用时碰到一个问题，安装后访问<a href="http://myapp.dev" target="_blank" rel="noopener">http://myapp.dev</a> 没有任何反应，查了以为是<a href="https://github.com/37signals/pow/issues/21" target="_blank" rel="noopener">.dev resolver doesn’t “register” properly
 </a> ，结果是自己给chrome设置了翻墙代理。<br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/05/10/关于pow的使用/" data-id="cj133piwx016s00c2mc64ghia" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/05/10/关于pow的使用/" data-id="cjmiwvbay014z04c2syhblhtq" class="article-share-link">Share</a>
       
 
       
@@ -738,7 +739,7 @@ $ sudo chmod -R 775 db
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -6,11 +6,13 @@
   <title>学习一下git（一） | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="看ruby和写代码的时候，很难离得开git )和github，所以让自己也系统地看一下。git )是一个分布式的版本控制和源代码管理系统，最开始是由Linus Torvalds为linux内核开发而设计实现的。传统的版本控制管理，象CVS，SVN一般都会有一个中心服务器，本地check out代码，然后修改，提交合并代码，但这样的问题是依赖于中心服务器。而对于分布式版本控制系统则在本地都有完整的代">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习一下git（一）">
 <meta property="og:url" content="http://xbin999.com/2013/08/21/学习一下git（一）/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="看ruby和写代码的时候，很难离得开git )和github，所以让自己也系统地看一下。git )是一个分布式的版本控制和源代码管理系统，最开始是由Linus Torvalds为linux内核开发而设计实现的。传统的版本控制管理，象CVS，SVN一般都会有一个中心服务器，本地check out代码，然后修改，提交合并代码，但这样的问题是依赖于中心服务器。而对于分布式版本控制系统则在本地都有完整的代">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67">
 <meta property="og:image" content="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
@@ -103,8 +105,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>看ruby和写代码的时候，很难离得开<a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="external">git</a> )和<a href="https://github.com/" target="_blank" rel="external">github</a>，所以让自己也系统地看一下。<br><br><a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="external">git</a> )是一个分布式的版本控制和源代码管理系统，最开始是由Linus Torvalds为linux内核开发而设计实现的。<br><br>传统的版本控制管理，象CVS，SVN一般都会有一个中心服务器，本地check out代码，然后修改，提交合并代码，但这样的问题是依赖于中心服务器。而对于分布式版本控制系统则在本地都有完整的代码仓库，任何一台服务器发生故障，都可以使用镜像的本地仓库恢复。<br><br>git很大的一个特点是对于文件保存完整的数据，而非文件的增量差异，在不同版本时对于没有变化的文件不再保存，而仅做一个链接。<br><br><a href="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" alt="Git保存更新时的文件快照"></a><br><br>由于其分布式的特点，每台机器上都是一个仓库，所以基本上操作都在本地，包括往库里提交修改、版本差异比较、查看更新日志等等。<br><br>对于git来说，任何一个文件流转过程中都存在三种状态：<br><br><em>   已提交（committed），表明文件已经提交到本地仓库中。
-</em>   已修改（modified），表明文件已经修改，但未提交。<br><em>   已暂存（staged），表明已修改的文件放在下次提交时要保存的清单中。<br><br>所以对于本地工作时，git有三个工作区域：git的工作目录，git本地仓库和暂存区域，一般在工作目录中会有一个.git目录，其中就保存了元数据和对象数据库，而暂存区域文件(index索引文件)也放在.git目录中。对于理解暂存区的作用，<a href="http://www.worldhello.net/2010/11/30/2166.html" target="_blank" rel="external">worldhello</a>上有一篇很好的文章和一个图，引用一下：<br><a href="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" alt="git work area"></a><br><br>如果我修改一个文件，增加一行”in stage”，然后使用git add 保存到暂存区，之后再增加一行”in work directory”，git status查看状态：<br><br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git status -s<br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git add yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in stage” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    M  yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in work directory” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    MM yun.txt<br><br>此时工作区、暂存区和本地仓库yun.txt文件的内容各不相同，可以使用：
+        <div id="wrapper"><br><br>看ruby和写代码的时候，很难离得开<a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="noopener">git</a> )和<a href="https://github.com/" target="_blank" rel="noopener">github</a>，所以让自己也系统地看一下。<br><br><a href="http://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="noopener">git</a> )是一个分布式的版本控制和源代码管理系统，最开始是由Linus Torvalds为linux内核开发而设计实现的。<br><br>传统的版本控制管理，象CVS，SVN一般都会有一个中心服务器，本地check out代码，然后修改，提交合并代码，但这样的问题是依赖于中心服务器。而对于分布式版本控制系统则在本地都有完整的代码仓库，任何一台服务器发生故障，都可以使用镜像的本地仓库恢复。<br><br>git很大的一个特点是对于文件保存完整的数据，而非文件的增量差异，在不同版本时对于没有变化的文件不再保存，而仅做一个链接。<br><br><a href="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/560b41e53541af7e4153c7aa1d5f7fe94307810e/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303130352d746e2e706e67" alt="Git保存更新时的文件快照"></a><br><br>由于其分布式的特点，每台机器上都是一个仓库，所以基本上操作都在本地，包括往库里提交修改、版本差异比较、查看更新日志等等。<br><br>对于git来说，任何一个文件流转过程中都存在三种状态：<br><br><em>   已提交（committed），表明文件已经提交到本地仓库中。
+</em>   已修改（modified），表明文件已经修改，但未提交。<br><em>   已暂存（staged），表明已修改的文件放在下次提交时要保存的清单中。<br><br>所以对于本地工作时，git有三个工作区域：git的工作目录，git本地仓库和暂存区域，一般在工作目录中会有一个.git目录，其中就保存了元数据和对象数据库，而暂存区域文件(index索引文件)也放在.git目录中。对于理解暂存区的作用，<a href="http://www.worldhello.net/2010/11/30/2166.html" target="_blank" rel="noopener">worldhello</a>上有一篇很好的文章和一个图，引用一下：<br><a href="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/e26a24884f8a8c04a6c8b9f4ece0fc7f82b44020/687474703a2f2f7777772e776f726c6468656c6c6f2e6e65742f777066696c65732f323031302f31312f6769742d73746167652e706e67" alt="git work area"></a><br><br>如果我修改一个文件，增加一行”in stage”，然后使用git add 保存到暂存区，之后再增加一行”in work directory”，git status查看状态：<br><br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git status -s<br>    ➜  /Users/yangbin/tmp/gittest git:(master) &gt;git add yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in stage” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    M  yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;echo “in work directory” &gt;&gt; yun.txt<br>    ➜  /Users/yangbin/tmp/gittest git:(master) ✗ &gt;git status -s<br>    MM yun.txt<br><br>此时工作区、暂存区和本地仓库yun.txt文件的内容各不相同，可以使用：
 
 </em>   git commit yun.txt 提交暂存区的内容到本地仓库，也就是增加“in stage”；<br><em>   git rm – cached yun.txt 直接从暂存区删除内容，工作区不变；
 </em>   git checkout . yun.txt 使用暂存区文件更新工作区文件；<br>*   git chekcout HEAD yun.txt 使用本地仓库文件更新工作区和暂存区文件。<br><br>当然我们要使用git一般都是从git init 和git clone开始的，这个下次再说。<br><br></div>
@@ -112,7 +114,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/21/学习一下git（一）/" data-id="cj133pj3w01gf00c24no2ia39" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/21/学习一下git（一）/" data-id="cjmiwvbff01ek04c228kgmghp" class="article-share-link">Share</a>
       
 
       
@@ -247,7 +249,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

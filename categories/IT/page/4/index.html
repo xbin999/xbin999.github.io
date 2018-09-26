@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/categories/IT/page/4/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -113,7 +114,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/06/列出数据量大的文件或目录/" data-id="cj133pixq017u00c2wv2bjs8m" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/06/列出数据量大的文件或目录/" data-id="cjmiwvbbe016004c2h2ek9j90" class="article-share-link">Share</a>
       
 
       
@@ -159,12 +160,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>之前在知乎上提过一个问题<a href="http://www.zhihu.com/question/20387561" target="_blank" rel="external">“在mac lion 设置802.1X如何使用证书连接有线网络”</a>，后来自己解决了，也是自问自答。<br><br>不过当时描述的比较简单，有朋友问起，都忘了，再重新整理一下。<br><br>先是得下载工具<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="external">iphone configuration utility</a>，安装后运行。<br><br>1.  点击“Configuration Profiles”，New一个，在General中填写Name, Identifer，界面如图：<br><a href="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" alt="config1"></a><br><br>2.  在Credentials中，选择Configure，会提示选择证书，找到管理员提供的证书后继续，填写证书密码。<br><a href="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" alt="config2"></a><br><br>3.  在Wi-Fi 中，选择Configure，我们如果是连有线网络的认证，可以随便输入SSID，选择Security Type，这个要看你的有线网络认证类型了，我选择WPA/WPA2 Enterprise，会出来相应的协议和验证要填写，如图：<br><a href="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" alt="config3"></a><br><br>4.  还是在在Wi-Fi 中，勾选完协议后，再选择”Authentication”，你需要在Identity Certificate中选择之前设置的证书。<br><br>5.  至此<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="external">iphone configuration utility</a>中设置完成，点击Export导出为.mobileconfig文件。<br><br>6.  双击倒出的.mobileconfig文件，会提示我们导入user profile，此时按提示操作，最后点击Install即可。<br><br>7.  成功导入后，在System Preferences中，你应该看到一个新的图标Profiles在System下，点击Profiles可以查看导入的信息。<br><a href="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" alt="config4"></a><br><br>8.  在System Preferences中，点击Network，选择Ethernet，点击Advance，tab选项中就会看到有802.1X，里面就有会有新增的配置profile。图上显示的profile名称和前面的设置不同，主要是我前面的截图是为了示例新建的，后面并没有实际导入。<br><a href="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" alt="config5"></a><br><br>9.  插入网线，应该会做验证，你也可以在Ethernet中，连接802.1X。<br><br>大致就是这样了，希望能有所帮助。<br><br></div>
+        <div id="wrapper"><br><br>之前在知乎上提过一个问题<a href="http://www.zhihu.com/question/20387561" target="_blank" rel="noopener">“在mac lion 设置802.1X如何使用证书连接有线网络”</a>，后来自己解决了，也是自问自答。<br><br>不过当时描述的比较简单，有朋友问起，都忘了，再重新整理一下。<br><br>先是得下载工具<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="noopener">iphone configuration utility</a>，安装后运行。<br><br>1.  点击“Configuration Profiles”，New一个，在General中填写Name, Identifer，界面如图：<br><a href="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/a3ebf7a2b580505a7be28b365ed33de8fd120b85/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a613167716a69676a3230737230706f6a75722e6a7067" alt="config1"></a><br><br>2.  在Credentials中，选择Configure，会提示选择证书，找到管理员提供的证书后继续，填写证书密码。<br><a href="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/743de19db51432d43034100494918a9c7a206eda/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a61316674676f726a3230736e3070737136682e6a7067" alt="config2"></a><br><br>3.  在Wi-Fi 中，选择Configure，我们如果是连有线网络的认证，可以随便输入SSID，选择Security Type，这个要看你的有线网络认证类型了，我选择WPA/WPA2 Enterprise，会出来相应的协议和验证要填写，如图：<br><a href="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/172a19c1dd2ee15c4c0b9f2f56231105649aac57/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131657a3430326a3230737130706a34326d2e6a7067" alt="config3"></a><br><br>4.  还是在在Wi-Fi 中，勾选完协议后，再选择”Authentication”，你需要在Identity Certificate中选择之前设置的证书。<br><br>5.  至此<a href="http://support.apple.com/kb/DL1465" target="_blank" rel="noopener">iphone configuration utility</a>中设置完成，点击Export导出为.mobileconfig文件。<br><br>6.  双击倒出的.mobileconfig文件，会提示我们导入user profile，此时按提示操作，最后点击Install即可。<br><br>7.  成功导入后，在System Preferences中，你应该看到一个新的图标Profiles在System下，点击Profiles可以查看导入的信息。<br><a href="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/3e8fb9cdfbe5797b4511288918aa9b6be56bcc85/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131653067336d6a3230696d3068737461772e6a7067" alt="config4"></a><br><br>8.  在System Preferences中，点击Network，选择Ethernet，点击Advance，tab选项中就会看到有802.1X，里面就有会有新增的配置profile。图上显示的profile名称和前面的设置不同，主要是我前面的截图是为了示例新建的，后面并没有实际导入。<br><a href="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/6fff3f35ffd013ef1d175d4e24639ef86934719b/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36613766306236346a773165367a6131646574626e6a3230696d3067357461672e6a7067" alt="config5"></a><br><br>9.  插入网线，应该会做验证，你也可以在Ethernet中，连接802.1X。<br><br>大致就是这样了，希望能有所帮助。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/25/在mac-lion设置802-1x使用证书连接有线网络/" data-id="cj133pj1g01d300c2r1lfiesl" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/25/在mac-lion设置802-1x使用证书连接有线网络/" data-id="cjmiwvbds01b804c2m56xzmo3" class="article-share-link">Share</a>
       
 
       
@@ -210,13 +211,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>Kindle正式在国内销售了，第一反应就是是否可以在<a href="http://z.cn" target="_blank" rel="external">亚马逊中国网站</a>上购买电子书，并直接推送到Kindle设备了呢？<br><br>在我原来通过淘宝买的Kindle PaperWhite上试了一下：<br><br><em>   首先注销原先的亚马逊账号(amazon.com)，换成亚马逊中国(amazon.cn)的账号进行注册，结果是不行，找不到相应的账号。
-</em>   不过我们可以采用间接办法，账号注销后，选择重新注册新的亚马逊账号，注册时选择中国大陆，并采用自己原有的亚马逊中国账号和密码，注册完成后，登录<a href="http://z.cn" target="_blank" rel="external">亚马逊中国网站</a>上，管理您的设备，就可以发现KPW在已注册的设备中。<br>*   测试购买了一下免费的电子书，KPW上立刻进行了同步。<br>太棒了，接下来就可以自在地在<a href="http://z.cn" target="_blank" rel="external">亚马逊中国网站</a>上购买电子书，那就多看点书吧。<br><br></div>
+        <div id="wrapper"><br><br>Kindle正式在国内销售了，第一反应就是是否可以在<a href="http://z.cn" target="_blank" rel="noopener">亚马逊中国网站</a>上购买电子书，并直接推送到Kindle设备了呢？<br><br>在我原来通过淘宝买的Kindle PaperWhite上试了一下：<br><br><em>   首先注销原先的亚马逊账号(amazon.com)，换成亚马逊中国(amazon.cn)的账号进行注册，结果是不行，找不到相应的账号。
+</em>   不过我们可以采用间接办法，账号注销后，选择重新注册新的亚马逊账号，注册时选择中国大陆，并采用自己原有的亚马逊中国账号和密码，注册完成后，登录<a href="http://z.cn" target="_blank" rel="noopener">亚马逊中国网站</a>上，管理您的设备，就可以发现KPW在已注册的设备中。<br>*   测试购买了一下免费的电子书，KPW上立刻进行了同步。<br>太棒了，接下来就可以自在地在<a href="http://z.cn" target="_blank" rel="noopener">亚马逊中国网站</a>上购买电子书，那就多看点书吧。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/08/亚马逊中国允许推送电子书到kindle/" data-id="cj133pitx012400c2c398aq4r" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/08/亚马逊中国允许推送电子书到kindle/" data-id="cjmiwvb8y010a04c20bkdazt8" class="article-share-link">Share</a>
       
 
       
@@ -263,12 +264,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>[slideshare id=10146903&amp;style=border: 1px solid #CCC; border-width: 1px 1px 0; margin-bottom: 5px;&amp;sc=no]</p>
-<div style="margin-bottom:5px;"><strong> <a href="http://www.slideshare.net/xbin999/ss-10146903" title="好玩的英国历史" target="_blank" rel="external">好玩的英国历史</a> </strong> from <strong><a href="http://www.slideshare.net/xbin999" target="_blank" rel="external">Bin Yang</a></strong></div>
+<div style="margin-bottom:5px;"><strong> <a href="http://www.slideshare.net/xbin999/ss-10146903" title="好玩的英国历史" target="_blank" rel="noopener">好玩的英国历史</a> </strong> from <strong><a href="http://www.slideshare.net/xbin999" target="_blank" rel="noopener">Bin Yang</a></strong></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/05/30/好玩的英国历史/" data-id="cj133pj3801fl00c2d80h3fsx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/05/30/好玩的英国历史/" data-id="cjmiwvbf101dr04c2amb1cm64" class="article-share-link">Share</a>
       
 
       
@@ -325,7 +326,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/05/27/碰上一个关不掉的文档/" data-id="cj133pjmm020x00c2sbepxwq0" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/05/27/碰上一个关不掉的文档/" data-id="cjmiwvbqz01yu04c2149qxiwm" class="article-share-link">Share</a>
       
 
       
@@ -371,15 +372,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://pow.cx" target="_blank" rel="external">pow</a> 一个小工具，在Mac下使用rack开发时方便采用域名来访问，而无需localhost:xxxx。安装和使用都很简单。<br><br><em>   安装：<br><br>    $ curl get.pow.cx | sh `
-</em>   使用:在~/.pow目录中创建到rack应用的符号链接，然后访问域名<a href="http://myapp.dev" target="_blank" rel="external">http://myapp.dev</a> 即可。<br>    <pre>`<br>    $ cd ~/.pow<br>    $ ln -s ~/Projects/myapp<br><br><em>   可以查看服务进程是否启动：$ ps -ef|grep pow
-</em>   如果需要重启服务进程 $ touch ~/.pow/restart.txt<br>*   查看日志 $ tail -f ~/Library/Logs/Pow/access.log<br><br>使用时碰到一个问题，安装后访问<a href="http://myapp.dev" target="_blank" rel="external">http://myapp.dev</a> 没有任何反应，查了以为是<a href="https://github.com/37signals/pow/issues/21" target="_blank" rel="external">.dev resolver doesn’t “register” properly
+        <div id="wrapper"><br><br><a href="http://pow.cx" target="_blank" rel="noopener">pow</a> 一个小工具，在Mac下使用rack开发时方便采用域名来访问，而无需localhost:xxxx。安装和使用都很简单。<br><br><em>   安装：<br><br>    $ curl get.pow.cx | sh `
+</em>   使用:在~/.pow目录中创建到rack应用的符号链接，然后访问域名<a href="http://myapp.dev" target="_blank" rel="noopener">http://myapp.dev</a> 即可。<br>    <pre>`<br>    $ cd ~/.pow<br>    $ ln -s ~/Projects/myapp<br><br><em>   可以查看服务进程是否启动：$ ps -ef|grep pow
+</em>   如果需要重启服务进程 $ touch ~/.pow/restart.txt<br>*   查看日志 $ tail -f ~/Library/Logs/Pow/access.log<br><br>使用时碰到一个问题，安装后访问<a href="http://myapp.dev" target="_blank" rel="noopener">http://myapp.dev</a> 没有任何反应，查了以为是<a href="https://github.com/37signals/pow/issues/21" target="_blank" rel="noopener">.dev resolver doesn’t “register” properly
 </a> ，结果是自己给chrome设置了翻墙代理。<br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/05/10/关于pow的使用/" data-id="cj133piwx016s00c2mc64ghia" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/05/10/关于pow的使用/" data-id="cjmiwvbay014z04c2syhblhtq" class="article-share-link">Share</a>
       
 
       
@@ -425,18 +426,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="external">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="external">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="external">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="external">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
+        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="noopener">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="noopener">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="noopener">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="noopener">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
 
 </em>   运行flavor时报错<br><br>    ~/.rvm/gems/ruby-1.9.3-p125/gems/json-1.7.5/lib/json/ext/parser.bundle: [BUG] Segmentation fault<br>    ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]<br>    <code>&lt;/pre&gt;
     这个原因是flavor.rb指定了/usr/bin/ruby，和我的rvm环境不一致，修改ruby运行环境即可。
 *   命令行下mail 运行时报错
-    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="external">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
+    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="noopener">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cj133pjrt025o00c2dw0lao7k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cjmiwvbtv023l04c2sakbzzgc" class="article-share-link">Share</a>
       
 
       
@@ -482,20 +483,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>上次说过用brew安装应用的时候碰上“<a href="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host-%e7%9a%84%e9%97%ae%e9%a2%98/">curl: (7) couldn’t connect to host 的问题</a>”，去掉了代理访问虽然正常了，但由于很多应用还是托管在<a href="http://sourceforge.net/" target="_blank" rel="external">sourceforge</a>上，而<a href="http://sourceforge.net/" target="_blank" rel="external">sourceforge</a>由于被墙的缘故，所以使用brew安装的时候还是会报错。</p>
-<p>象我安装<a href="http://www.imagemagick.org/script/index.php" target="_blank" rel="external">ImageMagick</a>的时候，就出现：</p>
+        <p>上次说过用brew安装应用的时候碰上“<a href="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host-%e7%9a%84%e9%97%ae%e9%a2%98/">curl: (7) couldn’t connect to host 的问题</a>”，去掉了代理访问虽然正常了，但由于很多应用还是托管在<a href="http://sourceforge.net/" target="_blank" rel="noopener">sourceforge</a>上，而<a href="http://sourceforge.net/" target="_blank" rel="noopener">sourceforge</a>由于被墙的缘故，所以使用brew安装的时候还是会报错。</p>
+<p>象我安装<a href="http://www.imagemagick.org/script/index.php" target="_blank" rel="noopener">ImageMagick</a>的时候，就出现：</p>
 <p><pre><code>$ brew install ImageMagick</code></pre></p>
 <p>Warning: Your Xcode (4.4.1) is outdated</p>
 <p>Please install Xcode 4.6.</p>
-<p>==&gt; Downloading <a href="https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-" target="_blank" rel="external">https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-</a></p>
+<p>==&gt; Downloading <a href="https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-" target="_blank" rel="noopener">https://downloads.sf.net/project/machomebrew/Bottles/imagemagick-6.8.0-</a></p>
 <p>curl: (56) Recv failure: Connection reset by peer</p>
 <p>Warning: Bottle installation failed: building from source.</p>
-<p>==&gt; Downloading <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10" target="_blank" rel="external">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10</a></p>
+<p>==&gt; Downloading <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10" target="_blank" rel="noopener">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10</a></p>
 <p>curl: (56) Recv failure: Connection reset by peer</p>
-<p>Error: Download failed: <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz" target="_blank" rel="external">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz</a><br>如何解决这个问题呢？有多种方法：</p>
+<p>Error: Download failed: <a href="http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz" target="_blank" rel="noopener">http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.0-10.tar.gz</a><br>如何解决这个问题呢？有多种方法：</p>
 <ol>
-<li>一是<a href="http://leegorous.net/blog/2012/08/10/how-to-skip-download-in-brew-install/" target="_blank" rel="external">跳过下载步骤，事先下载程序包，放到/Library/Caches/Homebrew/ 目录中</a>，就可以继续。不过讨厌的是你不知道需要依赖多少个包的时候，这一个个下实在是浪费功夫。</li>
-<li><a href="http://community.itbbs.cn/thread/21327/" target="_blank" rel="external">修改下载目标源，直接把sf.net的地址给替换掉</a>，一样麻烦。</li>
+<li>一是<a href="http://leegorous.net/blog/2012/08/10/how-to-skip-download-in-brew-install/" target="_blank" rel="noopener">跳过下载步骤，事先下载程序包，放到/Library/Caches/Homebrew/ 目录中</a>，就可以继续。不过讨厌的是你不知道需要依赖多少个包的时候，这一个个下实在是浪费功夫。</li>
+<li><a href="http://community.itbbs.cn/thread/21327/" target="_blank" rel="noopener">修改下载目标源，直接把sf.net的地址给替换掉</a>，一样麻烦。</li>
 <li>使用代理，让curl通过代理来访问。编辑$HOME/.curlrc文件，增加“–socks5 127.0.0.1:1080”即可（替换成你自己的代理），这样你在brew install安装的时候，相应curl就会通过socks代理访问，从而成功下载完成安装。方便简单，就是你需要自己设置一个socks代理。</li>
 </ol>
 
@@ -503,7 +504,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/01/brew安装程序包如何绕开墙的办法/" data-id="cj133piff003e00c2fis9wrzh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/01/brew安装程序包如何绕开墙的办法/" data-id="cjmiwvaxy003504c28fqrv9f6" class="article-share-link">Share</a>
       
 
       
@@ -557,7 +558,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/03/19/使用wifi给iphoneipad传送音乐/" data-id="cj133pivw015600c22zdt4z1l" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/03/19/使用wifi给iphoneipad传送音乐/" data-id="cjmiwvba5013c04c2wbwao74x" class="article-share-link">Share</a>
       
 
       
@@ -603,8 +604,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用<a href="http://www.cloudfoundry.com/" target="_blank" rel="external">Cloud Foundry</a>过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：<a href="http://blog.55minutes.com/2012/01/fixing-a-segmentation-fault-in-ruby-193/" target="_blank" rel="external">Fixing a Segmentation Fault in Ruby 1.9.3</a> ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）</p>
-<p>查问题的时候，发现抱怨MacPorts较多，选择<a href="http://hi.hiing.net/2011/06/use-homebrew-package-management.html" target="_blank" rel="external">用Homebrew替换MacPorts</a>，卸载了MacPorts，安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="external">Homebrew</a>，使用命令：</p>
+        <p>使用<a href="http://www.cloudfoundry.com/" target="_blank" rel="noopener">Cloud Foundry</a>过程中，vmc push 遇到错误“net/http.rb:799: [BUG] Segmentation fault”，原因见：<a href="http://blog.55minutes.com/2012/01/fixing-a-segmentation-fault-in-ruby-193/" target="_blank" rel="noopener">Fixing a Segmentation Fault in Ruby 1.9.3</a> ，主要是vmc用到了openssl库，和使用MacPorts依赖的库产生冲突。（这个问题下次再说）</p>
+<p>查问题的时候，发现抱怨MacPorts较多，选择<a href="http://hi.hiing.net/2011/06/use-homebrew-package-management.html" target="_blank" rel="noopener">用Homebrew替换MacPorts</a>，卸载了MacPorts，安装<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="noopener">Homebrew</a>，使用命令：</p>
 <p><code>$ brew install wget</code><br>测试出现错误：“curl: (7) couldn’t connect to host”。</p>
 <p><code>$ curl -v http://localhost</code><br>发现开始就去连接本地的socks proxy 服务器，而我又没起该代理服务器。于是连接上代理服务器，再做测试，提示：“Empty reply from server mac”。</p>
 <p>干脆去掉默认代理连接，打开.bash_profile，注释：</p>
@@ -617,7 +618,7 @@ $ curl localhost
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host的问题/" data-id="cj133pify004u00c2rf4dxxm4" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/03/07/curl-7-couldnt-connect-to-host的问题/" data-id="cjmiwvayd004g04c255a8mskn" class="article-share-link">Share</a>
       
 
       
@@ -734,7 +735,7 @@ $ curl localhost
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -6,11 +6,13 @@
   <title>本月出帐不利 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="好几个月没管过出帐的事了，没想今天有事，而且接二连三，要晕倒了。先是程序内存超除了1G，导致core dump，这是原先设计时没想到的。看来也是移动业务发展匀速啊。当时调整了主机参数，结果还是没管用。无奈临时修改了代码（久违的代码，呵呵），在900M撑住了，勉强过关啊。好悬！后面有必要优化一下内存结构。不过考虑在连接时加上&amp;quot;-N&amp;quot;选项试试，可以使32位程序达到1.9G的内存。上">
+<meta name="keywords" content="工作杂记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本月出帐不利">
 <meta property="og:url" content="http://xbin999.com/2005/11/03/本月出帐不利/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="好几个月没管过出帐的事了，没想今天有事，而且接二连三，要晕倒了。先是程序内存超除了1G，导致core dump，这是原先设计时没想到的。看来也是移动业务发展匀速啊。当时调整了主机参数，结果还是没管用。无奈临时修改了代码（久违的代码，呵呵），在900M撑住了，勉强过关啊。好悬！后面有必要优化一下内存结构。不过考虑在连接时加上&amp;quot;-N&amp;quot;选项试试，可以使32位程序达到1.9G的内存。上">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本月出帐不利">
@@ -96,12 +98,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!674" class="bvMsg"><div><span>好几个月没管过出帐的事了，没想今天有事，而且接二连三，要晕倒了。</span></div><br><div><span>先是程序内存超除了1G，导致core dump，这是原先设计时没想到的。看来也是移动业务发展匀速啊。当时调整了主机参数，结果还是没管用。无奈临时修改了代码（久违的代码，呵呵），在900M撑住了，勉强过关啊。好悬！</span></div><br><div><span>后面有必要优化一下内存结构。不过考虑在连接时加上&quot;-N&quot;选项试试，可以使32位程序达到1.9G的内存。上次在</span><span><a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!430.entry" target="_blank" rel="external">&quot;Not enough space&quot;和HP-UX内存管理</a>说过，只是没有做测试。什么时候把代码统一编译到64位就好了。</span></div><br><div><span>之后的问题也好难搞，不知为何小帅哥以前写的那块代码牵扯到了VPMN的接口，而VPMN接口又扯到了TYKT，一环套一环啊。不幸的是TYKT由R&amp;D做的，用的系统函数和我们的是一套。但偏偏有个函数我们早做了修改。结果实际运行时用到了TYKT的那一个。惨啊！</span></div><br><div><span>这个问题查的我够呛，find grep一大堆，再电话n多人，终于发现。</span></div><br><div><span>个人觉得namespace比较重要，应推广，尤其是目前这么多的版本。</span></div><br><div><span>另外该考虑给系统解耦了，否则象坐在火药桶上啊:-(</span></div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!674" class="bvMsg"><div><span>好几个月没管过出帐的事了，没想今天有事，而且接二连三，要晕倒了。</span></div><br><div><span>先是程序内存超除了1G，导致core dump，这是原先设计时没想到的。看来也是移动业务发展匀速啊。当时调整了主机参数，结果还是没管用。无奈临时修改了代码（久违的代码，呵呵），在900M撑住了，勉强过关啊。好悬！</span></div><br><div><span>后面有必要优化一下内存结构。不过考虑在连接时加上&quot;-N&quot;选项试试，可以使32位程序达到1.9G的内存。上次在</span><span><a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!430.entry" target="_blank" rel="noopener">&quot;Not enough space&quot;和HP-UX内存管理</a>说过，只是没有做测试。什么时候把代码统一编译到64位就好了。</span></div><br><div><span>之后的问题也好难搞，不知为何小帅哥以前写的那块代码牵扯到了VPMN的接口，而VPMN接口又扯到了TYKT，一环套一环啊。不幸的是TYKT由R&amp;D做的，用的系统函数和我们的是一套。但偏偏有个函数我们早做了修改。结果实际运行时用到了TYKT的那一个。惨啊！</span></div><br><div><span>这个问题查的我够呛，find grep一大堆，再电话n多人，终于发现。</span></div><br><div><span>个人觉得namespace比较重要，应推广，尤其是目前这么多的版本。</span></div><br><div><span>另外该考虑给系统解耦了，否则象坐在火药桶上啊:-(</span></div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/03/本月出帐不利/" data-id="cj133pjge01up00c2sj87j45y" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/03/本月出帐不利/" data-id="cjmiwvbn701sl04c2x5jb5iza" class="article-share-link">Share</a>
       
 
       
@@ -236,7 +238,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

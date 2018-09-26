@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/wordpress/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,18 +102,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="external">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="external">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="external">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="external">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
+        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="noopener">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="noopener">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="noopener">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="noopener">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
 
 </em>   运行flavor时报错<br><br>    ~/.rvm/gems/ruby-1.9.3-p125/gems/json-1.7.5/lib/json/ext/parser.bundle: [BUG] Segmentation fault<br>    ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]<br>    <code>&lt;/pre&gt;
     这个原因是flavor.rb指定了/usr/bin/ruby，和我的rvm环境不一致，修改ruby运行环境即可。
 *   命令行下mail 运行时报错
-    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="external">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
+    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="noopener">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cj133pjrt025o00c2dw0lao7k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cjmiwvbtv023l04c2sakbzzgc" class="article-share-link">Share</a>
       
 
       
@@ -164,7 +165,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/08/21/域名迁移到了wordpress-com/" data-id="cj133pj2501e500c2xemfq3jw" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/08/21/域名迁移到了wordpress-com/" data-id="cjmiwvbe801ca04c2r1mzznnu" class="article-share-link">Share</a>
       
 
       
@@ -210,19 +211,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>差不多1年前<a href="http://xbin999.wordpress.com/2011/09/02/这个站点是怎么建起来的/" target="_blank" rel="external">在amazon EC2上免费建了个站点</a>，在<a href="http://www.godaddy.com" target="_blank" rel="external">Godaddy</a>上申请了域名，现在时间都快到了，不断地收到邮件提醒，周末就想整理一下。</p>
-<p><a href="http://www.xbin999.com" target="_blank" rel="external">xbin999.com</a>域名先保留着，于是就又续费了，不过也得折腾，貌似Godaddy也不能访问，加host搞定。</p>
+        <p>差不多1年前<a href="http://xbin999.wordpress.com/2011/09/02/这个站点是怎么建起来的/" target="_blank" rel="noopener">在amazon EC2上免费建了个站点</a>，在<a href="http://www.godaddy.com" target="_blank" rel="noopener">Godaddy</a>上申请了域名，现在时间都快到了，不断地收到邮件提醒，周末就想整理一下。</p>
+<p><a href="http://www.xbin999.com" target="_blank" rel="noopener">xbin999.com</a>域名先保留着，于是就又续费了，不过也得折腾，貌似Godaddy也不能访问，加host搞定。</p>
 <p>EC2主机想想还是算了，自己很少折腾，博客都很少写。其实对于我来说偶尔想起来有个地方写写就可以了。所以目标就想选个能写博客，能映射域名的地就可以了。比较了几个：</p>
-<p><a href="http://wordpress.com" target="_blank" rel="external">wordpress.com</a> 本来是首选，原先就一直在用，只是因为它老被墙，现在都不能正常访问，总觉得要翻墙才能访问还是太麻烦了些。另外域名映射一年是13美元。</p>
-<p><a href="http://blogetery.com" target="_blank" rel="external">blogetery.com</a> 最大好处是域名映射免费，貌似250M的空间，想看看它的收费项目，但居然Dashboard上一直都打不开Pro页面。另外Tools下的导入功能居然没有提供对wordpress的导入，真是晕啊！</p>
-<p><a href="http://blog.com" target="_blank" rel="external">blog.com</a> 域名映射需要18美元一年，没有被墙，国内可以直接访问，同时也提供丰富的导入功能，感觉还不错。结果我在导入原先的文章过程中，提示我：“This blog has been suspended due to the violation of the Blog.com’s<a href="http://blog.com/terms-of-service" target="_blank" rel="external">Terms of Service</a>” 之后就再也进不去了，发邮件求助也没有任何反应。好悲催啊！</p>
+<p><a href="http://wordpress.com" target="_blank" rel="noopener">wordpress.com</a> 本来是首选，原先就一直在用，只是因为它老被墙，现在都不能正常访问，总觉得要翻墙才能访问还是太麻烦了些。另外域名映射一年是13美元。</p>
+<p><a href="http://blogetery.com" target="_blank" rel="noopener">blogetery.com</a> 最大好处是域名映射免费，貌似250M的空间，想看看它的收费项目，但居然Dashboard上一直都打不开Pro页面。另外Tools下的导入功能居然没有提供对wordpress的导入，真是晕啊！</p>
+<p><a href="http://blog.com" target="_blank" rel="noopener">blog.com</a> 域名映射需要18美元一年，没有被墙，国内可以直接访问，同时也提供丰富的导入功能，感觉还不错。结果我在导入原先的文章过程中，提示我：“This blog has been suspended due to the violation of the Blog.com’s<a href="http://blog.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a>” 之后就再也进不去了，发邮件求助也没有任何反应。好悲催啊！</p>
 <p>真没想到简简单单写篇博客也这么难！看来我还是选wordpress算了。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/08/19/重新选个写博客的地/" data-id="cj133pk0902ct00c24cfaqp17" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/08/19/重新选个写博客的地/" data-id="cjmiwvbym02an04c2cxwu2i4a" class="article-share-link">Share</a>
       
 
       
@@ -270,18 +271,18 @@
       
         <p>心血来潮想<a href="http://xbin999.com/?p=5">自己建个站点</a>，不过没想花多少钱，所以能免费的就先免费着。</p>
 <ol>
-<li>之前曾看到过采用Amazon Web Servcie有免费一年的优惠，自主性也比较强。所以又找了一下那几篇文章《<a href="http://www.inside.com.tw/2010/11/02/amazon-aws-1" target="_blank" rel="external">免費玩雲端運算，Amazon Web Service 雲端運算平台攻略 </a>》，有<a href="http://www.inside.com.tw/2010/11/02/amazon-aws-1" target="_blank" rel="external">1</a>，<a href="http://www.inside.com.tw/2010/11/05/free-aws2" target="_blank" rel="external">2</a>，<a href="http://www.inside.com.tw/2010/11/08/free-aws-3" target="_blank" rel="external">3</a>系列，就依样画葫芦来了一遍。AWS帐号原先注册过，申请了EC2；</li>
+<li>之前曾看到过采用Amazon Web Servcie有免费一年的优惠，自主性也比较强。所以又找了一下那几篇文章《<a href="http://www.inside.com.tw/2010/11/02/amazon-aws-1" target="_blank" rel="noopener">免費玩雲端運算，Amazon Web Service 雲端運算平台攻略 </a>》，有<a href="http://www.inside.com.tw/2010/11/02/amazon-aws-1" target="_blank" rel="noopener">1</a>，<a href="http://www.inside.com.tw/2010/11/05/free-aws2" target="_blank" rel="noopener">2</a>，<a href="http://www.inside.com.tw/2010/11/08/free-aws-3" target="_blank" rel="noopener">3</a>系列，就依样画葫芦来了一遍。AWS帐号原先注册过，申请了EC2；</li>
 <li>确认是免费后，再架了个wordpress。上面的那篇教程写的非常详细，基本没遇到什么问题；</li>
-<li>接着就是申请域名了，看介绍都说<a href="http://www.cmhello.com/8-big-foreign-domain-registrar.html" target="_blank" rel="external">选择国外的域名注册好</a>，那我也就随大流了。选择了<a href="http://www.godaddy.com/" target="_blank" rel="external">GoDaddy</a>，支持支付宝付款，好像是7美元多吧。又发现有<a href="http://www.cmhello.com/tag/godaddy" target="_blank" rel="external">好的教程</a>，好心人真是多；</li>
+<li>接着就是申请域名了，看介绍都说<a href="http://www.cmhello.com/8-big-foreign-domain-registrar.html" target="_blank" rel="noopener">选择国外的域名注册好</a>，那我也就随大流了。选择了<a href="http://www.godaddy.com/" target="_blank" rel="noopener">GoDaddy</a>，支持支付宝付款，好像是7美元多吧。又发现有<a href="http://www.cmhello.com/tag/godaddy" target="_blank" rel="noopener">好的教程</a>，好心人真是多；</li>
 <li>简单设置一下，将IP和域名做个绑定，可以访问现在这个博客，取了个名字叫<a href="http://xbin999.com">杨先生村民</a>，也给俺老家做个宣传；</li>
-<li>余下的就慢慢捣鼓吧，我也不熟悉。从<a href="http://xbin999.wordpress.com" target="_blank" rel="external">原先的wordpress</a>（老被墙）到了最近的几篇文章，免得都是空白；再就是装了几个wordpress的plugin，先凑乎着吧；</li>
+<li>余下的就慢慢捣鼓吧，我也不熟悉。从<a href="http://xbin999.wordpress.com" target="_blank" rel="noopener">原先的wordpress</a>（老被墙）到了最近的几篇文章，免得都是空白；再就是装了几个wordpress的plugin，先凑乎着吧；</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/02/这个站点是怎么建起来的/" data-id="cj133pjza02bv00c2pxpffo2e" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/02/这个站点是怎么建起来的/" data-id="cjmiwvby0029p04c2twh7fjab" class="article-share-link">Share</a>
       
 
       
@@ -336,7 +337,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/02/在手机上发布blog/" data-id="cj133pj1t01dn00c294w9irzy" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/02/在手机上发布blog/" data-id="cjmiwvbe001bs04c282ui0m5j" class="article-share-link">Share</a>
       
 
       
@@ -384,10 +385,10 @@
       
         <p>SNS，微博太多了，谁也管不了那么多呀！还好这年头不用什么都Ctrl+C/Ctrl+V。</p>
 <p>看看我的关系图：</p>
-<p><a href="http://xbin999.files.wordpress.com/2010/10/201010141189.jpg" target="_blank" rel="external"><img src="http://xbin999.files.wordpress.com/2010/10/201010141189_thumb.jpg" alt="201010141189" title="201010141189"></a> </p>
-<p>blog刚刚<a href="http://xbin999.wordpress.com/2010/09/28/from-msnspace-to-wordpress/" target="_blank" rel="external">从msn space迁到了wordpress</a>，请原先订阅msn space的RSS更新一下，建议使用<a href="http://feeds.feedburner.com/xbin999" target="_blank" rel="external">feedburner的地址</a><a href="http://feeds.feedburner.com/xbin999" target="_blank" rel="external"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt=""></a> 。</p>
-<p>目前主力在使用的就是中间的主干wordpress –&gt; twitter –&gt; buzz –&gt; 新浪微博了。稍微有点不爽的是<a href="http://www.williamlong.info/archives/2166.html" target="_blank" rel="external">buzz同步新浪微博</a>的输出体验还不是很舒服，比如<a href="http://t.sina.com.cn/1786710884/24EMRj2y9" target="_blank" rel="external">这条</a>，有空再折腾一下吧。其次就是豆瓣了。</p>
-<p><a href="http://www.follow5.com/" target="_blank" rel="external">follow5</a>可以支持输出到n多的微博上，不过目前采用buzz同步到新浪微博上后，看来可以去掉直接同步新浪了。我喜欢用它的gtalk机器人，想说点啥的时候方便。</p>
+<p><a href="http://xbin999.files.wordpress.com/2010/10/201010141189.jpg" target="_blank" rel="noopener"><img src="http://xbin999.files.wordpress.com/2010/10/201010141189_thumb.jpg" alt="201010141189" title="201010141189"></a> </p>
+<p>blog刚刚<a href="http://xbin999.wordpress.com/2010/09/28/from-msnspace-to-wordpress/" target="_blank" rel="noopener">从msn space迁到了wordpress</a>，请原先订阅msn space的RSS更新一下，建议使用<a href="http://feeds.feedburner.com/xbin999" target="_blank" rel="noopener">feedburner的地址</a><a href="http://feeds.feedburner.com/xbin999" target="_blank" rel="noopener"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt=""></a> 。</p>
+<p>目前主力在使用的就是中间的主干wordpress –&gt; twitter –&gt; buzz –&gt; 新浪微博了。稍微有点不爽的是<a href="http://www.williamlong.info/archives/2166.html" target="_blank" rel="noopener">buzz同步新浪微博</a>的输出体验还不是很舒服，比如<a href="http://t.sina.com.cn/1786710884/24EMRj2y9" target="_blank" rel="noopener">这条</a>，有空再折腾一下吧。其次就是豆瓣了。</p>
+<p><a href="http://www.follow5.com/" target="_blank" rel="noopener">follow5</a>可以支持输出到n多的微博上，不过目前采用buzz同步到新浪微博上后，看来可以去掉直接同步新浪了。我喜欢用它的gtalk机器人，想说点啥的时候方便。</p>
 <p>foursquare最近又解封了，继续使用。</p>
 <p>friendfeed和facebook目前只是输出信息，一般不上。其他还有139，开心网，renren虽说注册了，但几乎都不用。还是要做减法。</p>
 
@@ -395,7 +396,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2010/10/14/我的sns微博关系图/" data-id="cj133pjaf01oc00c2cot9hkk9" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2010/10/14/我的sns微博关系图/" data-id="cjmiwvbje01mb04c22cbeqom3" class="article-share-link">Share</a>
       
 
       
@@ -508,7 +509,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

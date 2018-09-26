@@ -5,19 +5,18 @@
   
   <title>Ruby基本的输入输出 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ruby提供了两种I/O方式：   一种是Kernel模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。
-   一种是使用IO对象，让你有更多的控制。IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序">
+  <meta name="description" content="Ruby提供了两种I/O方式：   一种是Kernel模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。    一种是使用IO对象，让你有更多的控制。IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby基本的输入输出">
 <meta property="og:url" content="http://xbin999.com/2013/07/01/ruby基本的输入输出/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="Ruby提供了两种I/O方式：   一种是Kernel模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。
-   一种是使用IO对象，让你有更多的控制。IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序">
+<meta property="og:description" content="Ruby提供了两种I/O方式：   一种是Kernel模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。    一种是使用IO对象，让你有更多的控制。IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ruby基本的输入输出">
-<meta name="twitter:description" content="Ruby提供了两种I/O方式：   一种是Kernel模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。
-   一种是使用IO对象，让你有更多的控制。IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序">
+<meta name="twitter:description" content="Ruby提供了两种I/O方式：   一种是Kernel模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。    一种是使用IO对象，让你有更多的控制。IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序">
 <meta name="twitter:creator" content="@xbin999">
   
     <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
@@ -103,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>Ruby提供了两种I/O方式：<br><br><em>   一种是<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ref_m_kernel.html" target="_blank" rel="external">Kernel</a>模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。
+        <div id="wrapper"><br><br>Ruby提供了两种I/O方式：<br><br><em>   一种是<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ref_m_kernel.html" target="_blank" rel="noopener">Kernel</a>模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。
 </em>   一种是使用IO对象，让你有更多的控制。<br><br>IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序和外部资源之间建立了双向通道（读、写）。<br><br>Ruby可以使用File.open打开文件，并传递一个块，执行完成后自动关闭文件。File.open如果不传递block，则和File.new本质是相同。<br><br>    File.open(“testfile”, “r”) do |aFile|<br><br>    # … process the file<br><br>    end<br>    <code>&lt;/pre&gt;
 
     读取文件的方式
@@ -111,12 +110,12 @@
 *   IO.each_byte和IO.each_line分别提供了逐个字符和逐行读取文件的方式，each_line还可以设定自定义的行分隔符，each等同于each_line。
     &lt;pre&gt;</code><br>    IO.foreach(“testfile”){ |line| puts line}<br><br><em>   IO.for_each提供了iteraotr和自动关闭文件的功能。
 </em>   IO.readlines可以将文件直接读取到行数组中。<br><br>写文件，puts和print一个对象，会把对象采用to_s转成字符串，如果to_s没有返回有效的字符串，则会创建诸如<a>ClassName:0x123456</a>形式的对象类名和id的字符串。<br><br><em>   IO.sysread和IO.syswrite提供了更底层的读写能力。
-</em>   Array.pack, String.unpack提供了字符串和二进制流之间的打包和解包能力。<br><em>   还可以往输出IO流使用&lt;&lt;运算符，<em>*注意往String使用&lt;&lt;时，对于0到255的整型数值会转换成字符再连接。</em></em><br><br>网络交互提供两种方式，一种是较低层次的socket通信，一种是较高层次的应用层通信，比如FTP, HTTP, POP, SMTP和telnet。<br><br></div>
+</em>   Array.pack, String.unpack提供了字符串和二进制流之间的打包和解包能力。<br>*   还可以往输出IO流使用&lt;&lt;运算符，<strong>注意往String使用&lt;&lt;时，对于0到255的整型数值会转换成字符再连接。</strong><br><br>网络交互提供两种方式，一种是较低层次的socket通信，一种是较高层次的应用层通信，比如FTP, HTTP, POP, SMTP和telnet。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/01/ruby基本的输入输出/" data-id="cj133piky00js00c238kv8xqm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/01/ruby基本的输入输出/" data-id="cjmiwvb2p00it04c22mk5hevp" class="article-share-link">Share</a>
       
 
       
@@ -251,7 +250,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

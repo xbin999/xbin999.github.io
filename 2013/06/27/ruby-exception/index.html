@@ -6,11 +6,13 @@
   <title>Ruby Exception | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Ruby Exception的层次结构，Exception类的下一层有fatal, NoMemoryError, ScriptError, SecurityError, SignalException, StandardError, SystemExit和SystemStackError。大多数异常继承自StandardError，这部分是一般Ruby程序需要处理的，其他偏底层和更严重。每个Exc">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby Exception">
 <meta property="og:url" content="http://xbin999.com/2013/06/27/ruby-exception/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="Ruby Exception的层次结构，Exception类的下一层有fatal, NoMemoryError, ScriptError, SecurityError, SignalException, StandardError, SystemExit和SystemStackError。大多数异常继承自StandardError，这部分是一般Ruby程序需要处理的，其他偏底层和更严重。每个Exc">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://a248.e.akamai.net/camo.github.com/a8e9e779209e18e6a971d54da161c205323c55a4/687474703a2f2f727562796c6561726e696e672e636f6d2f696d616765732f657863657074696f6e2e6a7067">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
@@ -102,7 +104,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>Ruby Exception的层次结构，Exception类的下一层有fatal, NoMemoryError, ScriptError, SecurityError, SignalException, StandardError, SystemExit和SystemStackError。<br><a href="https://a248.e.akamai.net/camo.github.com/a8e9e779209e18e6a971d54da161c205323c55a4/687474703a2f2f727562796c6561726e696e672e636f6d2f696d616765732f657863657074696f6e2e6a7067" target="_blank" rel="external"><img src="https://a248.e.akamai.net/camo.github.com/a8e9e779209e18e6a971d54da161c205323c55a4/687474703a2f2f727562796c6561726e696e672e636f6d2f696d616765732f657863657074696f6e2e6a7067" alt=""></a><br><br>大多数异常继承自StandardError，这部分是一般Ruby程序需要处理的，其他偏底层和更严重。每个Exception都关联一个消息串和堆栈的调用层次。<br><br>通常使用异常的形式（else并不常用），在异常处理中可以使用retry，重复执行begin/end块。<br><br>    f = File.open(“testfile”)<br>    begin<br>      # .. process<br>    rescue<br>      # .. handle error1<br>    rescue<br>      # .. handle error2<br>    else<br>      puts “No errors.”<br>    ensure<br>      f.close unless f.nil?<br>    end<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>Ruby Exception的层次结构，Exception类的下一层有fatal, NoMemoryError, ScriptError, SecurityError, SignalException, StandardError, SystemExit和SystemStackError。<br><a href="https://a248.e.akamai.net/camo.github.com/a8e9e779209e18e6a971d54da161c205323c55a4/687474703a2f2f727562796c6561726e696e672e636f6d2f696d616765732f657863657074696f6e2e6a7067" target="_blank" rel="noopener"><img src="https://a248.e.akamai.net/camo.github.com/a8e9e779209e18e6a971d54da161c205323c55a4/687474703a2f2f727562796c6561726e696e672e636f6d2f696d616765732f657863657074696f6e2e6a7067" alt=""></a><br><br>大多数异常继承自StandardError，这部分是一般Ruby程序需要处理的，其他偏底层和更严重。每个Exception都关联一个消息串和堆栈的调用层次。<br><br>通常使用异常的形式（else并不常用），在异常处理中可以使用retry，重复执行begin/end块。<br><br>    f = File.open(“testfile”)<br>    begin<br>      # .. process<br>    rescue<br>      # .. handle error1<br>    rescue<br>      # .. handle error2<br>    else<br>      puts “No errors.”<br>    ensure<br>      f.close unless f.nil?<br>    end<br>    <code>&lt;/pre&gt;
 
     使用raise（Kernal::raise方法）来触发异常，典型的形式有三种：
 
@@ -112,7 +114,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/27/ruby-exception/" data-id="cj133pikb00i700c2dl64dy23" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/27/ruby-exception/" data-id="cjmiwvb2500h804c2z2hz615l" class="article-share-link">Share</a>
       
 
       
@@ -247,7 +249,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

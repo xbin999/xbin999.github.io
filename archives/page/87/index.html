@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/page/87/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,7 +104,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/14/认识了几个字/" data-id="cj133pjvf028p00c27wk6e61y" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/14/认识了几个字/" data-id="cjmiwvbvu026m04c2amdo6eb7" class="article-share-link">Share</a>
       
 
       
@@ -150,7 +151,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/13/自然月/" data-id="cj133pjtg027300c2825wg6hu" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/13/自然月/" data-id="cjmiwvbut024z04c2zww0vscu" class="article-share-link">Share</a>
       
 
       
@@ -192,13 +193,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!899" class="bvMsg"><br><br>在公司内部准备建一个Wiki，选择了MediaWiki，分别下了<a href="http://internap.dl.sourceforge.net/sourceforge/wikipedia/mediawiki-1.5.4.tar.gz" target="_blank" rel="external">MediaWiki</a>, <a href="http://mirror.vmmatrix.net/apache/httpd/httpd-2.2.0.tar.gz" target="_blank" rel="external">Apache</a>和<a href="http://cn.php.net/distributions/php-5.1.1.tar.gz" target="_blank" rel="external">PHP</a>。mysql原先已经装了一个，就省了。<br><br>在windows下安装很简单，没什么好说的。说说碰到的问题和配置的修改吧。<br><br>1. Apache安装的时候出了点错，主要原先的80端口已经给IIS占用了，服务没有安装成功。<br><br>修改一下httpd.conf，端口改为3188。<br><br>&gt; Listen 3188<br>&gt; ServerName 10.70.14.99:3188<br><br>重新安装一下服务<br><br>&gt; binApache -k install<br><br>启动服务，在浏览器输入<a href="http://10.70.14.99:3188" target="_blank" rel="external">http://10.70.14.99:3188</a>，有欢迎界面了，一切ok。<br><br>2. PHP直接解压缩即可，针对Apache做一下配置。在httpd.conf中增加：<br><br>&gt; # 对 PHP 5 用这两行：<br>&gt; LoadModule php5_module &quot;d:/php/php5apache2.dll&quot;<br>&gt; AddType application/x-httpd-php .php<br>&gt;<br>&gt; # 配置 php.ini 的路径<br>&gt; PHPIniDir &quot;D:/php&quot;<br><br>再写一个hello.php测试一下<br><br>&gt; &lt;html&gt;<br>&gt;  &lt;head&gt;<br>&gt;   &lt;title&gt;PHP 测试&lt;/title&gt;<br>&gt;  &lt;/head&gt;<br>&gt;  &lt;body&gt;<br>&gt;  &lt;?php echo ‘&lt;p&gt;Hello World&lt;/p&gt;’; ?&gt;<br>&gt;  &lt;?php phpinfo(); ?&gt;<br>&gt; &lt;/body&gt;<br>&gt; &lt;/html&gt;<br><br>在浏览器输入<a href="http://10.70.14.99:3188/hello.php" target="_blank" rel="external">http://10.70.14.99:3188/hello.php</a>，哈哈，也成功了。<br><br>3. 把MediaWiki解开，拷贝到Apache目录下，做配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="external">ttp://10.70.14.99:3188/wiki/config/index.php</a>，有警告：<br><br>&gt; Warning: dl() [function.dl]: Not supported in multithreaded Web servers - use extension=mysql.so in your php.ini in D:Program FilesApache GroupApache2htdocswikiinstall-utils.inc on line 17<br>&gt; Could not load MySQL driver! Please compile php –with-mysql or install the mysql.so module.<br><br>修改一下php.ini<br><br>&gt; extension_dir = &quot;D:PHPext&quot;<br>&gt;<br>&gt; extension=php_mysql.dll<br><br>再重新配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="external">http://10.70.14.99:3188/wiki/config/index.php</a>，没问题。接着就输入Wiki的相关配置，Sitename、Contact email、Sysop account name什么的。<br><br>Creating LocalSettings.php…<br><br>Installation successful! Move the config/LocalSettings.php file into the parent directory, then follow this link to your wiki.<br><br>参照提示，把config/LocalSettings.php移到上级目录，哈哈，一切大功告成。<br><br>4. 稍微修饰一下，改了logo，再允许上传图象文件。<br><br>LocalSettings.php<br>$wgEnableUploads  = true;<br>$wgFileExtensions = array(‘gif’,’png’,’jpg’,’jpeg’,’xls’,’doc’);<br><br>依葫芦画瓢，查查文档，还算顺利，记录一下。<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!899" class="bvMsg"><br><br>在公司内部准备建一个Wiki，选择了MediaWiki，分别下了<a href="http://internap.dl.sourceforge.net/sourceforge/wikipedia/mediawiki-1.5.4.tar.gz" target="_blank" rel="noopener">MediaWiki</a>, <a href="http://mirror.vmmatrix.net/apache/httpd/httpd-2.2.0.tar.gz" target="_blank" rel="noopener">Apache</a>和<a href="http://cn.php.net/distributions/php-5.1.1.tar.gz" target="_blank" rel="noopener">PHP</a>。mysql原先已经装了一个，就省了。<br><br>在windows下安装很简单，没什么好说的。说说碰到的问题和配置的修改吧。<br><br>1. Apache安装的时候出了点错，主要原先的80端口已经给IIS占用了，服务没有安装成功。<br><br>修改一下httpd.conf，端口改为3188。<br><br>&gt; Listen 3188<br>&gt; ServerName 10.70.14.99:3188<br><br>重新安装一下服务<br><br>&gt; binApache -k install<br><br>启动服务，在浏览器输入<a href="http://10.70.14.99:3188" target="_blank" rel="noopener">http://10.70.14.99:3188</a>，有欢迎界面了，一切ok。<br><br>2. PHP直接解压缩即可，针对Apache做一下配置。在httpd.conf中增加：<br><br>&gt; # 对 PHP 5 用这两行：<br>&gt; LoadModule php5_module &quot;d:/php/php5apache2.dll&quot;<br>&gt; AddType application/x-httpd-php .php<br>&gt;<br>&gt; # 配置 php.ini 的路径<br>&gt; PHPIniDir &quot;D:/php&quot;<br><br>再写一个hello.php测试一下<br><br>&gt; &lt;html&gt;<br>&gt;  &lt;head&gt;<br>&gt;   &lt;title&gt;PHP 测试&lt;/title&gt;<br>&gt;  &lt;/head&gt;<br>&gt;  &lt;body&gt;<br>&gt;  &lt;?php echo ‘&lt;p&gt;Hello World&lt;/p&gt;’; ?&gt;<br>&gt;  &lt;?php phpinfo(); ?&gt;<br>&gt; &lt;/body&gt;<br>&gt; &lt;/html&gt;<br><br>在浏览器输入<a href="http://10.70.14.99:3188/hello.php" target="_blank" rel="noopener">http://10.70.14.99:3188/hello.php</a>，哈哈，也成功了。<br><br>3. 把MediaWiki解开，拷贝到Apache目录下，做配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="noopener">ttp://10.70.14.99:3188/wiki/config/index.php</a>，有警告：<br><br>&gt; Warning: dl() [function.dl]: Not supported in multithreaded Web servers - use extension=mysql.so in your php.ini in D:Program FilesApache GroupApache2htdocswikiinstall-utils.inc on line 17<br>&gt; Could not load MySQL driver! Please compile php –with-mysql or install the mysql.so module.<br><br>修改一下php.ini<br><br>&gt; extension_dir = &quot;D:PHPext&quot;<br>&gt;<br>&gt; extension=php_mysql.dll<br><br>再重新配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="noopener">http://10.70.14.99:3188/wiki/config/index.php</a>，没问题。接着就输入Wiki的相关配置，Sitename、Contact email、Sysop account name什么的。<br><br>Creating LocalSettings.php…<br><br>Installation successful! Move the config/LocalSettings.php file into the parent directory, then follow this link to your wiki.<br><br>参照提示，把config/LocalSettings.php移到上级目录，哈哈，一切大功告成。<br><br>4. 稍微修饰一下，改了logo，再允许上传图象文件。<br><br>LocalSettings.php<br>$wgEnableUploads  = true;<br>$wgFileExtensions = array(‘gif’,’png’,’jpg’,’jpeg’,’xls’,’doc’);<br><br>依葫芦画瓢，查查文档，还算顺利，记录一下。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/10/安装mediawiki/" data-id="cj133pj4k01hc00c2rtgb54z8" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/10/安装mediawiki/" data-id="cjmiwvbfw01fk04c2b8myjesx" class="article-share-link">Share</a>
       
 
       
@@ -246,7 +247,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/08/受伤了，心痛了/" data-id="cj133piyw019p00c208p4y4md" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/08/受伤了，心痛了/" data-id="cjmiwvbc9017v04c2ji3rodqc" class="article-share-link">Share</a>
       
 
       
@@ -288,13 +289,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!878" class="bvMsg"><br><br>在“<a href="http://spaces.msn.com/members/xbin999/blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!839.entry" target="_blank" rel="external">可恶的乐乐</a>”中说到小家伙老是调戏我们，一睡觉，就让我们起床泡奶粉。现在真相终于大白了。<br><br>每到睡觉的时候，总要关灯。而乐乐不想让我们关灯，就抗议，但抗议总也起不了作用。也不知怎么她就想出了这么一招。<br><br>装进被窝，灯一灭，小家伙就开始嚷，“我要吃奶粉！我要吃奶粉！”<br><br>而且一直给你唠叨，直到你给她泡奶粉为止。<br><br>灯开了，目的达到了，她也就得意了。自然奶粉是不要的了。<br><br>这个小精灵啊！<br><br>搞了好几天了，还乐此不疲啊。现在不理她了，和她说“狼来了”的故事不能老是上演。但好像她还不买帐啊，真是艰难啊。<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!878" class="bvMsg"><br><br>在“<a href="http://spaces.msn.com/members/xbin999/blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!839.entry" target="_blank" rel="noopener">可恶的乐乐</a>”中说到小家伙老是调戏我们，一睡觉，就让我们起床泡奶粉。现在真相终于大白了。<br><br>每到睡觉的时候，总要关灯。而乐乐不想让我们关灯，就抗议，但抗议总也起不了作用。也不知怎么她就想出了这么一招。<br><br>装进被窝，灯一灭，小家伙就开始嚷，“我要吃奶粉！我要吃奶粉！”<br><br>而且一直给你唠叨，直到你给她泡奶粉为止。<br><br>灯开了，目的达到了，她也就得意了。自然奶粉是不要的了。<br><br>这个小精灵啊！<br><br>搞了好几天了，还乐此不疲啊。现在不理她了，和她说“狼来了”的故事不能老是上演。但好像她还不买帐啊，真是艰难啊。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/08/真相终于大白－谈论可恶的乐乐/" data-id="cj133pjm4020c00c247f1et65" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/08/真相终于大白－谈论可恶的乐乐/" data-id="cjmiwvbqn01y804c28gzbdve9" class="article-share-link">Share</a>
       
 
       
@@ -340,7 +341,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Do u pay attention to the <a href="http://www.google.com/logos/braille.gif" target="_blank" rel="external">Google’s logo</a> today?<br><a href="http://www.google.com/search?q=louis+braille+birthdate" target="_blank" rel="external"><img src="http://www.google.com/logos/braille.gif" alt="A picture of the Braille letters spelling out &quot;Google.&quot; Happy Birthday Louis Braille!"></a> &gt; I was puzzled in my first sight. What’s this? Where’s google? I clicked the logo, and he told me a story, <a href="http://www.his.com/%7Epshapiro/braille.html" target="_blank" rel="external">a story of Louis Braille</a>.</p>
+        <p>Do u pay attention to the <a href="http://www.google.com/logos/braille.gif" target="_blank" rel="noopener">Google’s logo</a> today?<br><a href="http://www.google.com/search?q=louis+braille+birthdate" target="_blank" rel="noopener"><img src="http://www.google.com/logos/braille.gif" alt="A picture of the Braille letters spelling out &quot;Google.&quot; Happy Birthday Louis Braille!"></a> &gt; I was puzzled in my first sight. What’s this? Where’s google? I clicked the logo, and he told me a story, <a href="http://www.his.com/%7Epshapiro/braille.html" target="_blank" rel="noopener">a story of Louis Braille</a>.</p>
 <p>Louis Braille was a French, who invented Braille. Aha! The name should come from his name. It’s a revolution for blind man to read. </p>
 <p>A creative person, and a creative google.</p>
 <p>“Happy birthday to Louis Braille.”</p>
@@ -349,7 +350,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/04/the-story-of-louis-braille/" data-id="cj133pimi00nn00c2t5ac0b8x" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/04/the-story-of-louis-braille/" data-id="cjmiwvb3x00mi04c2m0aylmlk" class="article-share-link">Share</a>
       
 
       
@@ -391,12 +392,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!870" class="bvMsg"><br><br>安替在msn spaces上的blog又被封了，这次是因为新京报被光明日报接管。上面的文章据说已经全给微软cut了，paste不回来了，不过网上还是有很多<a href="http://buchimifan.yculblog.com/post.1019485.html" target="_blank" rel="external">悼新京报</a>的。<br><br>现在想看安替的blog的方式是：<br><br>&gt; 2006年我会重新出发，恢复<a href="http://anti.blog-city.com/" target="_blank" rel="external"><u><font color="#0000ff">http://anti.blog-city.com</font></u></a>的博客更新，国内朋友可以用Rss软件订阅：<a href="http://feeds.feedburner.com/blog-city/anti" target="_blank" rel="external"><u><font color="#0000ff">http://feeds.feedburner.com/blog-city/anti</font></u></a>，或者直接发邮件给<a href="mailto:antisblog@gmail.com" target="_blank" rel="external"><u><font color="#0000ff">antisblog@gmail.com</font></u></a>订阅，我会把每篇博客都发送给订户。</div>
+        <div id="msgcns!B3AD1EA9132E7DF1!870" class="bvMsg"><br><br>安替在msn spaces上的blog又被封了，这次是因为新京报被光明日报接管。上面的文章据说已经全给微软cut了，paste不回来了，不过网上还是有很多<a href="http://buchimifan.yculblog.com/post.1019485.html" target="_blank" rel="noopener">悼新京报</a>的。<br><br>现在想看安替的blog的方式是：<br><br>&gt; 2006年我会重新出发，恢复<a href="http://anti.blog-city.com/" target="_blank" rel="noopener"><u><font color="#0000ff">http://anti.blog-city.com</font></u></a>的博客更新，国内朋友可以用Rss软件订阅：<a href="http://feeds.feedburner.com/blog-city/anti" target="_blank" rel="noopener"><u><font color="#0000ff">http://feeds.feedburner.com/blog-city/anti</font></u></a>，或者直接发邮件给<a href="mailto:antisblog@gmail.com" target="_blank" rel="noopener"><u><font color="#0000ff">antisblog@gmail.com</font></u></a>订阅，我会把每篇博客都发送给订户。</div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/04/安替的blog被封/" data-id="cj133pj4i01h800c27dbfcy7r" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/04/安替的blog被封/" data-id="cjmiwvbfv01fg04c2hc0t717x" class="article-share-link">Share</a>
       
 
       
@@ -444,7 +445,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/04/303/" data-id="cj133pids000b00c28nuxu15n" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/04/303/" data-id="cjmiwvawp000a04c2fyk98115" class="article-share-link">Share</a>
       
 
       
@@ -488,15 +489,15 @@
       
         <div id="msgcns!B3AD1EA9132E7DF1!867" class="bvMsg">
 
-<p><a href="http://spaces.msn.com/members/xbin999/javascript:OpenSection(" target="_blank" rel="external">车牌数了不少了</a>，下次让她顺便车子也认识一下，什么马呀、狮子的最喜欢了。</p>
+<p><a href="http://spaces.msn.com/members/xbin999/javascript:OpenSection(" target="_blank" rel="noopener">车牌数了不少了</a>，下次让她顺便车子也认识一下，什么马呀、狮子的最喜欢了。</p>
 <p><img src="http://storage.msn.com/x1pKouN4nZmbX3jyMYzteNssJE6nuLzEgAU8L6tTZH5rGWJ_8beAFCtuMrvGR2Q9Vaa_rJjKNsBJq2IbIjAnDP65xKlqNBeuUdXVw8a2k4HtF3bxFBswxGCc3MiuPCfBhYM9Cy642CHHMsXvVdMimANag" alt=""></p>
-<p><div></div></p></div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1plGiOzFdt2fiPLyA4Z4eHPoRJ5khWPdJiUyGGZTKkGhz1K0xw844qZMbWYitd-0pbS5fUiZqCp5E" target="_blank" rel="external"><img src="http://byfiles.storage.live.com/y1plGiOzFdt2fiPLyA4Z4eHPoRJ5khWPdJic6CMUCpW5qEIpnF4o5dOddbQL7IGJ500Mo3OWrUotJo" alt=""></a></td></tr></table><p></p>
+<p><div></div></p></div><table cellspacing="0" border="0"><tr><td></td></tr><tr><td valign="top"><a href="http://byfiles.storage.live.com/y1plGiOzFdt2fiPLyA4Z4eHPoRJ5khWPdJiUyGGZTKkGhz1K0xw844qZMbWYitd-0pbS5fUiZqCp5E" target="_blank" rel="noopener"><img src="http://byfiles.storage.live.com/y1plGiOzFdt2fiPLyA4Z4eHPoRJ5khWPdJic6CMUCpW5qEIpnF4o5dOddbQL7IGJ500Mo3OWrUotJo" alt=""></a></td></tr></table><p></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/04/数车牌的乐乐/" data-id="cj133pjcz01rb00c2e9jbrmqy" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/04/数车牌的乐乐/" data-id="cjmiwvbl601pi04c2zciw0tff" class="article-share-link">Share</a>
       
 
       
@@ -538,12 +539,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!848" class="bvMsg"><div>很久前就在space上添加了“<a href="http://1kg.blogbus.com/" target="_blank" rel="external">多背一公斤</a>”的链接，但之后关注很少，实在也惭愧，可能也还是自己缺少这方面的参与精神。</div><br><div> </div><br><div>今天看到<a href="http://join.1kg.cn/" target="_blank" rel="external">多背一公斤项目团队在招募</a>，在这里也做一下宣传。希望能有更多的人关注和参与。</div><br><div>        <img src="http://1kgweb.blogbus.com/files/1135767890.gif" alt="http://1kgweb.blogbus.com/files/1135767890.gif"><br>        <img src="http://1kgweb.blogbus.com/files/1135767931.gif" alt="http://1kgweb.blogbus.com/files/1135767931.gif"></div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!848" class="bvMsg"><div>很久前就在space上添加了“<a href="http://1kg.blogbus.com/" target="_blank" rel="noopener">多背一公斤</a>”的链接，但之后关注很少，实在也惭愧，可能也还是自己缺少这方面的参与精神。</div><br><div> </div><br><div>今天看到<a href="http://join.1kg.cn/" target="_blank" rel="noopener">多背一公斤项目团队在招募</a>，在这里也做一下宣传。希望能有更多的人关注和参与。</div><br><div>        <img src="http://1kgweb.blogbus.com/files/1135767890.gif" alt="http://1kgweb.blogbus.com/files/1135767890.gif"><br>        <img src="http://1kgweb.blogbus.com/files/1135767931.gif" alt="http://1kgweb.blogbus.com/files/1135767931.gif"></div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/12/31/多背一公斤/" data-id="cj133pj2h01el00c22o94io9h" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/12/31/多背一公斤/" data-id="cjmiwvbed01cq04c2ie1xzro0" class="article-share-link">Share</a>
       
 
       
@@ -660,7 +661,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

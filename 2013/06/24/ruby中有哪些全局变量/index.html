@@ -6,11 +6,13 @@
   <title>Ruby中有哪些全局变量 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.9.3-p125 :068 &amp;gt; global_variables.sort     =&amp;gt; [:$!, :$”, :$$, :$&amp;amp;, :$’, :$, :$+, :$,, :$-, :$-0, :$-F, :$-I, :$-K, :$-W, :$-a, :$-d, :$-i, :$-l, :$-p, :$-v, :$-w, :$., :$/, :$0, :$1, :$">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby中有哪些全局变量">
 <meta property="og:url" content="http://xbin999.com/2013/06/24/ruby中有哪些全局变量/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="1.9.3-p125 :068 &amp;gt; global_variables.sort     =&amp;gt; [:$!, :$”, :$$, :$&amp;amp;, :$’, :$, :$+, :$,, :$-, :$-0, :$-F, :$-I, :$-K, :$-W, :$-a, :$-d, :$-i, :$-l, :$-p, :$-v, :$-w, :$., :$/, :$0, :$1, :$">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ruby中有哪些全局变量">
@@ -100,18 +102,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>    1.9.3-p125 :068 &gt; global_variables.sort<br>     =&gt; [:$!, :$”, :$$, :$&amp;, :$’, :$<em>, :$+, :$,, :$-, :$-0, :$-F, :$-I, :$-K, :$-W, :$-a, :$-d, :$-i, :$-l, :$-p, :$-v, :$-w, :$., :$/, :$0, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9, :$:, :$;, :$, :$?, :$@, :$DEBUG, :$FILENAME, :$KCODE, :$LOADED_FEATURES, :$LOAD_PATH, :$PROGRAM<em>NAME, :$SAFE, :$VERBOSE, :$\, :$</em>, :$`, :$binding, :$stderr, :$stdin, :$stdout, :$~]<br>    1.9.3-p125 :069 &gt; global_variables.length<br>     =&gt; 56 
+        <div id="wrapper"><br><br>    1.9.3-p125 :068 &gt; global_variables.sort<br>     =&gt; [:$!, :$”, :$$, :$&amp;, :$’, :$<em>, :$+, :$,, :$-, :$-0, :$-F, :$-I, :$-K, :$-W, :$-a, :$-d, :$-i, :$-l, :$-p, :$-v, :$-w, :$., :$/, :$0, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9, :$:, :$;, :$, :$?, :$@, :$DEBUG, :$FILENAME, :$KCODE, :$LOADED_FEATURES, :$LOAD_PATH, :$PROGRAM_NAME, :$SAFE, :$VERBOSE, :$\, :$_, :$`, :$binding, :$stderr, :$stdin, :$stdout, :$~]<br>    1.9.3-p125 :069 &gt; global_variables.length<br>     =&gt; 56 
 
 </em>   $<em>， gets输入的结果保存在全局变量$</em>中，print不带参数时会输出$<em>的值，光写一个正则表达式，也是和$</em> 匹配。<br><em>   $?， 命令行的返回状态
 </em>   $~， 用//括起来的正则表达式是Regexp对象，match匹配的结果是一个MatchData实例，MatchData是一个特殊变量$~的类型，封装了通过特殊变量$&amp;(匹配的内容),$’(匹配的内容的前半部分), $`(匹配的内容的后半部分), $1, $2等等返回的结果。<br><em>   $0， 脚本运行文件名称。
 </em>   $<em>， 命令行参数。
 </em>   $.， 当前的输入行号。<br><em>   $$，进程号。
-</em>   $:，$LOAD_PATH。<br><br>有两篇<a href="http://www.zhlwish.com/2013/01/15/ruby-global-variables-you-should-known/" target="_blank" rel="external">几个有意思的Ruby全局变量</a>和<a href="http://blog.chinaunix.net/uid-26244834-id-2954687.html" target="_blank" rel="external">Ruby的全局变量</a>可以参考。<br><br></div>
+</em>   $:，$LOAD_PATH。<br><br>有两篇<a href="http://www.zhlwish.com/2013/01/15/ruby-global-variables-you-should-known/" target="_blank" rel="noopener">几个有意思的Ruby全局变量</a>和<a href="http://blog.chinaunix.net/uid-26244834-id-2954687.html" target="_blank" rel="noopener">Ruby的全局变量</a>可以参考。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/24/ruby中有哪些全局变量/" data-id="cj133pikn00j000c2i9yxyvma" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/24/ruby中有哪些全局变量/" data-id="cjmiwvb2f00i104c2u2aa7x5u" class="article-share-link">Share</a>
       
 
       
@@ -246,7 +248,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

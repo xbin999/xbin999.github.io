@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/apache/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,20 +102,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用<a href="http://www.adminer.org/" target="_blank" rel="external">Adminer</a>，一个PHP文件的数据库管理工具管理SQLite时，简单地删除一张表，报错：attempt to write a readonly database。</p>
-<p>原因在于<a href="http://www.adminer.org/" target="_blank" rel="external">Adminer</a>是在Apache中运行，在mac中使用的用户身份是_www用户，就没有写的权限了。所以要<a href="https://coderwall.com/p/gl_grw/make-a-directory-writable-by-apache-in-mac-os-x-maverick" target="_blank" rel="external">修改目录权限让apache可写</a>。</p>
+        <p>使用<a href="http://www.adminer.org/" target="_blank" rel="noopener">Adminer</a>，一个PHP文件的数据库管理工具管理SQLite时，简单地删除一张表，报错：attempt to write a readonly database。</p>
+<p>原因在于<a href="http://www.adminer.org/" target="_blank" rel="noopener">Adminer</a>是在Apache中运行，在mac中使用的用户身份是_www用户，就没有写的权限了。所以要<a href="https://coderwall.com/p/gl_grw/make-a-directory-writable-by-apache-in-mac-os-x-maverick" target="_blank" rel="noopener">修改目录权限让apache可写</a>。</p>
 <pre><code>
 $ sudo chown -R _www:staff db
 $ sudo chmod -R 775 db
 </code></pre>
 
-<p>权限如果改成755的话，个人用户就又没有写权限了。当然更好的方式是保留原有权限，只<a href="http://francoisdeschenes.com/2013/02/26/enable-write-permissions-for-apache-built-into-mac-os-x" target="_blank" rel="external">给_www用户新增所需权限</a>：sudo chmod -R +a ‘_www allow read,write,delete,add_file,add_subdirectory,file_inherit,directory_inherit’ #dir#，就打起来复杂点。</p>
+<p>权限如果改成755的话，个人用户就又没有写权限了。当然更好的方式是保留原有权限，只<a href="http://francoisdeschenes.com/2013/02/26/enable-write-permissions-for-apache-built-into-mac-os-x" target="_blank" rel="noopener">给_www用户新增所需权限</a>：sudo chmod -R +a ‘_www allow read,write,delete,add_file,add_subdirectory,file_inherit,directory_inherit’ #dir#，就打起来复杂点。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/01/16/attempt-to-write-a-readonly-database/" data-id="cj133pif3002e00c277sp1dfy" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/01/16/attempt-to-write-a-readonly-database/" data-id="cjmiwvaxm002604c223re0ybw" class="article-share-link">Share</a>
       
 
       
@@ -227,7 +228,7 @@ $ sudo chmod -R 775 db
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

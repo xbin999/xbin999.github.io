@@ -6,11 +6,13 @@
   <title>About memory | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="We met some problems for our 32-bit applications with memory in HP-UX recently. One is  the single process exceeded 1 G limit, the other is memory of CORBA server is too big while running for long tim">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About memory">
 <meta property="og:url" content="http://xbin999.com/2005/11/10/about-memory/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="We met some problems for our 32-bit applications with memory in HP-UX recently. One is  the single process exceeded 1 G limit, the other is memory of CORBA server is too big while running for long tim">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About memory">
@@ -102,7 +104,7 @@
       
         <p>We met some problems for our 32-bit applications with memory in HP-UX recently. One is  the single process exceeded 1 G limit, the other is memory of CORBA server is too big while running for long time.</p>
 <p>For the first problem, we can migrate application to 64-bit, or link using “-N”. It can change the executable file’s format to EXEC_MAGIC, which can support nearly 1.9GB.</p>
-<p>And the second problem, while most unix dont return the free memory to the operating system, the application should be optimized. (“mapmalloc can return dynamic allocated memory to the OS, but the price is that memory allocation takes about five times longer”, said in “<a href="http://www.onlamp.com/pub/a/onlamp/2005/10/27/memory-management.html?page=1" target="_blank" rel="external">Modern Memory Management</a>“) Something may be caused by dynamic allocation of STL, like vector. It’s better to use reserve for vector.</p>
+<p>And the second problem, while most unix dont return the free memory to the operating system, the application should be optimized. (“mapmalloc can return dynamic allocated memory to the OS, but the price is that memory allocation takes about five times longer”, said in “<a href="http://www.onlamp.com/pub/a/onlamp/2005/10/27/memory-management.html?page=1" target="_blank" rel="noopener">Modern Memory Management</a>“) Something may be caused by dynamic allocation of STL, like vector. It’s better to use reserve for vector.</p>
 <p>Some suggestions are also given in the article:</p>
 <p>1. It is always wise to free objects you do not need, especially large ones as soon as possible, to minimize this footprint.</p>
 <p>2. To avoid problems with memory fragmentation, try to avoid making many small memory allocations and instead replace them with one or two large allocations where possible.</p>
@@ -111,7 +113,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/10/about-memory/" data-id="cj133piev001x00c2ost4pb3v" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/10/about-memory/" data-id="cjmiwvaxh001p04c2d89aab8e" class="article-share-link">Share</a>
       
 
       
@@ -246,7 +248,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

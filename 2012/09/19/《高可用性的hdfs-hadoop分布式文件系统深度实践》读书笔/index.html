@@ -5,20 +5,19 @@
   
   <title>《高可用性的HDFS-HADOOP分布式文件系统深度实践》读书笔记 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了《高可用性的HDFS》，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记：
-HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于元数据的可靠性以及NameN">
+  <meta name="description" content="最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了《高可用性的HDFS》，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记： HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于元数据的可靠性以及NameN">
+<meta name="keywords" content="读书,markdown,hadoop,hdfs,mou,分布式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《高可用性的HDFS-HADOOP分布式文件系统深度实践》读书笔记">
 <meta property="og:url" content="http://xbin999.com/2012/09/19/《高可用性的hdfs-hadoop分布式文件系统深度实践》读书笔/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了《高可用性的HDFS》，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记：
-HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于元数据的可靠性以及NameN">
+<meta property="og:description" content="最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了《高可用性的HDFS》，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记： HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于元数据的可靠性以及NameN">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://www.cloudera.com/wp-content/uploads/2012/01/diagram-1.jpeg4-1024x670.png">
 <meta property="og:updated_time" content="2014-09-18T12:11:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《高可用性的HDFS-HADOOP分布式文件系统深度实践》读书笔记">
-<meta name="twitter:description" content="最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了《高可用性的HDFS》，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记：
-HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于元数据的可靠性以及NameN">
+<meta name="twitter:description" content="最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了《高可用性的HDFS》，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记： HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于元数据的可靠性以及NameN">
 <meta name="twitter:image" content="https://www.cloudera.com/wp-content/uploads/2012/01/diagram-1.jpeg4-1024x670.png">
 <meta name="twitter:creator" content="@xbin999">
   
@@ -105,7 +104,7 @@ HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了<a href="http://book.douban.com/subject/10742139/" target="_blank" rel="external">《高可用性的HDFS》</a>，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记：</p>
+        <p>最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了<a href="http://book.douban.com/subject/10742139/" target="_blank" rel="noopener">《高可用性的HDFS》</a>，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记：</p>
 <p>HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于<strong>元数据</strong>的可靠性以及NameNode服务恢复时间。</p>
 <h2 id="比较成熟的HA解决方案有："><a href="#比较成熟的HA解决方案有：" class="headerlink" title="比较成熟的HA解决方案有："></a>比较成熟的HA解决方案有：</h2><ul>
 <li>Hadoop的元数据库备份方案</li>
@@ -180,17 +179,17 @@ HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自�
 <li>facebook集群存储了1.5亿个文件，加载namenode元数据和等待块位置映射信息上报这两个阶段各自耗费的时间大概都在20分钟左右；</li>
 <li>在yahoo运行的15个集群中，三年时间内，只有3次NamoNode的故障与硬件问题有关。</li>
 </ul>
-<h2 id="关于hadoop的版本"><a href="#关于hadoop的版本" class="headerlink" title="关于hadoop的版本"></a><a href="http://www.cloudera.com/blog/2012/01/an-update-on-apache-hadoop-1-0/" target="_blank" rel="external">关于hadoop的版本</a></h2><p><img src="https://www.cloudera.com/wp-content/uploads/2012/01/diagram-1.jpeg4-1024x670.png" alt="hadoop version"></p>
+<h2 id="关于hadoop的版本"><a href="#关于hadoop的版本" class="headerlink" title="关于hadoop的版本"></a><a href="http://www.cloudera.com/blog/2012/01/an-update-on-apache-hadoop-1-0/" target="_blank" rel="noopener">关于hadoop的版本</a></h2><p><img src="https://www.cloudera.com/wp-content/uploads/2012/01/diagram-1.jpeg4-1024x670.png" alt="hadoop version"></p>
 <ul>
 <li>Facebook Hadoop分支的版本是再0.20-append基础上，加入自身特性发展起来的；</li>
-<li>Clourera CDH3<br>BTW. 这是第一篇用<a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;ved=0CCsQFjAB&amp;url=http%3A%2F%2Fmouapp.com%2F&amp;ei=vYNZUPWXBqneigelkYCQDw&amp;usg=AFQjCNHKHFDR31tYCuaiXn9mm-OfyLiLQA&amp;sig2=UdkmR6fMJ5B-GKgmkPkFOA" target="_blank" rel="external">Mou</a>编写的markdown格式的文章，挺方便的，要是支持直接发布到wordpress上就更好了。</li>
+<li>Clourera CDH3<br>BTW. 这是第一篇用<a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;ved=0CCsQFjAB&amp;url=http%3A%2F%2Fmouapp.com%2F&amp;ei=vYNZUPWXBqneigelkYCQDw&amp;usg=AFQjCNHKHFDR31tYCuaiXn9mm-OfyLiLQA&amp;sig2=UdkmR6fMJ5B-GKgmkPkFOA" target="_blank" rel="noopener">Mou</a>编写的markdown格式的文章，挺方便的，要是支持直接发布到wordpress上就更好了。</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/09/19/《高可用性的hdfs-hadoop分布式文件系统深度实践》读书笔/" data-id="cj133pipg00ub00c271pjg5le" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/09/19/《高可用性的hdfs-hadoop分布式文件系统深度实践》读书笔/" data-id="cjmiwvb5x00sm04c298h4mguq" class="article-share-link">Share</a>
       
 
       
@@ -325,7 +324,7 @@ HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自�
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

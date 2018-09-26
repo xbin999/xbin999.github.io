@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/amazon/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,10 +102,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于一个爱看书的人来说（我能说我自己吗？），豆瓣和亚马逊是不可缺少的两个网站。豆瓣可以猜你喜欢，有推荐的豆列，还可以建立<a href="http://book.douban.com/cart" target="_blank" rel="external">购书单</a>，并且会提供购书单中各网站购买的价格对比，一般我选择在<a href="http://www.amazon.cn/" target="_blank" rel="external">亚马逊</a>购书比较多，这里除了种类和价格因素外，还有就是亚马逊的书籍推荐服务。</p>
-<p>我习惯的购书是日常在豆瓣中把要买的书加入购书单，然后去亚马逊购买，有活动自然会更划算。亚马逊经常会有各种各样的促销活动，但活动活动往往会有范围，而不是针对所有的书，比如现在的<a href="http://amzn.to/1x0AM7u" target="_blank" rel="external">“满199元返100元图书券”</a>活动，也有35万中文图书的限制。这样带来的问题就是，把书加入购物车后，却发现书又没参加活动，凑单的时候就更苦恼了。（不差钱的就不用管这些了）</p>
-<p>所以我一直想能不能有个服务，能检查一下我的购书单，看看有哪些书是参加了亚马逊的促销活动的。不过貌似豆瓣和亚马逊都不会有人提供，第三方的也总不见，无奈只有自己用ruby写了一个<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="external">“从豆瓣购书单中挑出有亚马逊促销的书籍”</a>。</p>
-<p>机制也很简单，先在浏览器打开你的<a href="http://book.douban.com/cart" target="_blank" rel="external">豆瓣购书单</a>，另存为cart.html，然后用了三个正则表达式用来做html的解析，你只需要修改最后的一个prom_regexp，提供亚马逊促销活动对应的促销码即可，比如<a href="http://amzn.to/1x0AM7u" target="_blank" rel="external">“满199元返100元图书券”</a>活动的促销码就是“<em>6HREB5FXXK</em>”，运行后的结果输出的就是你的购书单中参加了活动的书籍和豆瓣链接（当然你的电脑上需要安装有ruby的环境），适用于在购书单中列了一堆书又还没有钱，等着促销活动的朋友。</p>
+        <p>对于一个爱看书的人来说（我能说我自己吗？），豆瓣和亚马逊是不可缺少的两个网站。豆瓣可以猜你喜欢，有推荐的豆列，还可以建立<a href="http://book.douban.com/cart" target="_blank" rel="noopener">购书单</a>，并且会提供购书单中各网站购买的价格对比，一般我选择在<a href="http://www.amazon.cn/" target="_blank" rel="noopener">亚马逊</a>购书比较多，这里除了种类和价格因素外，还有就是亚马逊的书籍推荐服务。</p>
+<p>我习惯的购书是日常在豆瓣中把要买的书加入购书单，然后去亚马逊购买，有活动自然会更划算。亚马逊经常会有各种各样的促销活动，但活动活动往往会有范围，而不是针对所有的书，比如现在的<a href="http://amzn.to/1x0AM7u" target="_blank" rel="noopener">“满199元返100元图书券”</a>活动，也有35万中文图书的限制。这样带来的问题就是，把书加入购物车后，却发现书又没参加活动，凑单的时候就更苦恼了。（不差钱的就不用管这些了）</p>
+<p>所以我一直想能不能有个服务，能检查一下我的购书单，看看有哪些书是参加了亚马逊的促销活动的。不过貌似豆瓣和亚马逊都不会有人提供，第三方的也总不见，无奈只有自己用ruby写了一个<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="noopener">“从豆瓣购书单中挑出有亚马逊促销的书籍”</a>。</p>
+<p>机制也很简单，先在浏览器打开你的<a href="http://book.douban.com/cart" target="_blank" rel="noopener">豆瓣购书单</a>，另存为cart.html，然后用了三个正则表达式用来做html的解析，你只需要修改最后的一个prom_regexp，提供亚马逊促销活动对应的促销码即可，比如<a href="http://amzn.to/1x0AM7u" target="_blank" rel="noopener">“满199元返100元图书券”</a>活动的促销码就是“<em>6HREB5FXXK</em>”，运行后的结果输出的就是你的购书单中参加了活动的书籍和豆瓣链接（当然你的电脑上需要安装有ruby的环境），适用于在购书单中列了一堆书又还没有钱，等着促销活动的朋友。</p>
 <p>比如我的运行结果就是：</p>
 <pre><code>
 === books in promotion ===
@@ -120,13 +121,13 @@
 ...
 </code></pre>
 
-<p>喜欢的朋友可以从github上获取<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="external">源代码</a>自行修改。</p>
+<p>喜欢的朋友可以从github上获取<a href="https://gist.github.com/xbin999/6d03649cf7fed5432dd0" target="_blank" rel="noopener">源代码</a>自行修改。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/09/01/豆瓣购书单和亚马逊促销/" data-id="cj133pjxq02ah00c2rvxdsgt2" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/09/01/豆瓣购书单和亚马逊促销/" data-id="cjmiwvbx3028d04c217bu0nid" class="article-share-link">Share</a>
       
 
       
@@ -239,7 +240,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

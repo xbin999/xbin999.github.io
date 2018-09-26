@@ -6,11 +6,13 @@
   <title>编写markdown文档直接发布到wordpress上 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="我现在用nvALT来书写markdown文档，有时想把写好的文章发布到自己的博客上，比较土的方式往往是先预览，然后打开博客编辑，复制粘帖。想想是不是可以简化一下，能直接把写好的markdown文档发布到wordpress博客上。试了一下，分三步走：1.  可以把nvALT的存储模式设置成普通文本文件（Plain Text Files ），这样写好的内容就会以单个文件形式保存在设置的目录中。2.">
+<meta name="keywords" content="ruby,tool,markdown,wordpress">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编写markdown文档直接发布到wordpress上">
 <meta property="og:url" content="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="我现在用nvALT来书写markdown文档，有时想把写好的文章发布到自己的博客上，比较土的方式往往是先预览，然后打开博客编辑，复制粘帖。想想是不是可以简化一下，能直接把写好的markdown文档发布到wordpress博客上。试了一下，分三步走：1.  可以把nvALT的存储模式设置成普通文本文件（Plain Text Files ），这样写好的内容就会以单个文件形式保存在设置的目录中。2.">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T07:34:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编写markdown文档直接发布到wordpress上">
@@ -100,18 +102,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="external">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="external">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="external">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="external">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
+        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="noopener">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="noopener">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="noopener">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="noopener">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
 
 </em>   运行flavor时报错<br><br>    ~/.rvm/gems/ruby-1.9.3-p125/gems/json-1.7.5/lib/json/ext/parser.bundle: [BUG] Segmentation fault<br>    ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]<br>    <code>&lt;/pre&gt;
     这个原因是flavor.rb指定了/usr/bin/ruby，和我的rvm环境不一致，修改ruby运行环境即可。
 *   命令行下mail 运行时报错
-    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="external">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
+    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="noopener">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cj133pjrt025o00c2dw0lao7k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cjmiwvbtv023l04c2sakbzzgc" class="article-share-link">Share</a>
       
 
       
@@ -246,7 +248,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

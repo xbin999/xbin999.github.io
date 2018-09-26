@@ -6,11 +6,13 @@
   <title>有意思的MongoDB | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="现在的项目团队中有在使用MongoDB，MongoDB是一个文档数据库，采用类JSON的格式BSON存储文档，号称集文档数据库、KEY/VALUE存储和关系型数据库的优点与一身。晚上看了一会MongoDB的文档，结构还是比较简单：dbs -&amp;gt; collections -&amp;gt; objects其中collection类似于关系型数据库中的表，object类似于记录，也就是存储的文档。 在优化">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有意思的MongoDB">
 <meta property="og:url" content="http://xbin999.com/2010/08/31/有意思的mongodb/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="现在的项目团队中有在使用MongoDB，MongoDB是一个文档数据库，采用类JSON的格式BSON存储文档，号称集文档数据库、KEY/VALUE存储和关系型数据库的优点与一身。晚上看了一会MongoDB的文档，结构还是比较简单：dbs -&amp;gt; collections -&amp;gt; objects其中collection类似于关系型数据库中的表，object类似于记录，也就是存储的文档。 在优化">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T07:31:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有意思的MongoDB">
@@ -96,13 +98,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!2108" class="bvMsg"><div>现在的项目团队中有在使用<a href="http://www.mongodb.org/" target="_blank" rel="external">MongoDB</a>，MongoDB是一个文档数据库，采用类JSON的格式BSON存储文档，号称<a href="http://www.mongodb.org/display/DOCSCN/Home" target="_blank" rel="external">集文档数据库、KEY/VALUE存储和关系型数据库的优点与一身</a>。</div><br><div>晚上看了一会MongoDB的文档，结构还是比较简单：</div><br><div>dbs -&gt; collections -&gt; objects</div><br><div>其中collection类似于关系型数据库中的表，object类似于记录，也就是存储的文档。</div><br><div> </div><br><div>在<a href="http://www.mongodb.org/display/DOCS/Optimization" target="_blank" rel="external">优化</a>章节中提到的几点：</div><br><div>1. 创建索引/限制输出结果/选取字段，这是比较常规的优化手段。需要注意的是选取字段的结果，会使得对象不完整，这样更新后无法保存到数据库中；</div><br><div>2. 有profier工具，$explain, hints和传统数据库类似的地方；</div><br><div>3. 服务端的代码执行；</div><br><div>4. 对count()函数涉及的字段建索引；</div><br><div>5. 实现计数器方式的应用时，支持简单对象字段的增加操作，可以直接在服务端更新。避免获取、更新、再保存的来回过程；</div><br><div>6. <a href="http://www.mongodb.org/display/DOCS/Optimizing+Storage+of+Small+Objects" target="_blank" rel="external">小对象的优化</a>提到三点意见：一是显示使用_id字段，二是取短的字段名称（哈哈，这个我觉得真逗，想起当年节衣缩食地在TimesTen中掐字段大小），三是采用组合对象；</div><br><div>7. MongoDB的查询优化不是基于cost和统计来做的，而是简单地尝试不同执行计划，并行运行。是驴子是马拉出来遛遛，谁先完成就认为谁ok，其他的就干掉；</div><br><div>看了觉得挺有意思，先简单记录一下，啥时候找时间也试试。</div><br><div> </div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!2108" class="bvMsg"><div>现在的项目团队中有在使用<a href="http://www.mongodb.org/" target="_blank" rel="noopener">MongoDB</a>，MongoDB是一个文档数据库，采用类JSON的格式BSON存储文档，号称<a href="http://www.mongodb.org/display/DOCSCN/Home" target="_blank" rel="noopener">集文档数据库、KEY/VALUE存储和关系型数据库的优点与一身</a>。</div><br><div>晚上看了一会MongoDB的文档，结构还是比较简单：</div><br><div>dbs -&gt; collections -&gt; objects</div><br><div>其中collection类似于关系型数据库中的表，object类似于记录，也就是存储的文档。</div><br><div> </div><br><div>在<a href="http://www.mongodb.org/display/DOCS/Optimization" target="_blank" rel="noopener">优化</a>章节中提到的几点：</div><br><div>1. 创建索引/限制输出结果/选取字段，这是比较常规的优化手段。需要注意的是选取字段的结果，会使得对象不完整，这样更新后无法保存到数据库中；</div><br><div>2. 有profier工具，$explain, hints和传统数据库类似的地方；</div><br><div>3. 服务端的代码执行；</div><br><div>4. 对count()函数涉及的字段建索引；</div><br><div>5. 实现计数器方式的应用时，支持简单对象字段的增加操作，可以直接在服务端更新。避免获取、更新、再保存的来回过程；</div><br><div>6. <a href="http://www.mongodb.org/display/DOCS/Optimizing+Storage+of+Small+Objects" target="_blank" rel="noopener">小对象的优化</a>提到三点意见：一是显示使用_id字段，二是取短的字段名称（哈哈，这个我觉得真逗，想起当年节衣缩食地在TimesTen中掐字段大小），三是采用组合对象；</div><br><div>7. MongoDB的查询优化不是基于cost和统计来做的，而是简单地尝试不同执行计划，并行运行。是驴子是马拉出来遛遛，谁先完成就认为谁ok，其他的就干掉；</div><br><div>看了觉得挺有意思，先简单记录一下，啥时候找时间也试试。</div><br><div> </div></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2010/08/31/有意思的mongodb/" data-id="cj133pjff01tu00c2q0f51wam" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2010/08/31/有意思的mongodb/" data-id="cjmiwvbmi01rq04c2m167bwp9" class="article-share-link">Share</a>
       
 
       
@@ -237,7 +239,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

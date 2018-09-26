@@ -5,23 +5,19 @@
   
   <title>学习一下git（四） | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如github，其他的可以参见git官方wiki上的托管服务列表。可以从git clone 开始，    $ git clone https://github.com/xbin999/gittest.git    &amp;lt;/pre&amp;gt;
-
-    git">
+  <meta name="description" content="之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如github，其他的可以参见git官方wiki上的托管服务列表。可以从git clone 开始，    $ git clone https://github.com/xbin999/gittest.git    &amp;lt;/pre&amp;gt;      git">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习一下git（四）">
 <meta property="og:url" content="http://xbin999.com/2013/09/18/学习一下git（四）/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如github，其他的可以参见git官方wiki上的托管服务列表。可以从git clone 开始，    $ git clone https://github.com/xbin999/gittest.git    &amp;lt;/pre&amp;gt;
-
-    git">
+<meta property="og:description" content="之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如github，其他的可以参见git官方wiki上的托管服务列表。可以从git clone 开始，    $ git clone https://github.com/xbin999/gittest.git    &amp;lt;/pre&amp;gt;      git">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://github-camo.global.ssl.fastly.net/84e5e600f9b92af778961977102368c3245aa075/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303531312d746e2e706e67">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习一下git（四）">
-<meta name="twitter:description" content="之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如github，其他的可以参见git官方wiki上的托管服务列表。可以从git clone 开始，    $ git clone https://github.com/xbin999/gittest.git    &amp;lt;/pre&amp;gt;
-
-    git">
+<meta name="twitter:description" content="之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如github，其他的可以参见git官方wiki上的托管服务列表。可以从git clone 开始，    $ git clone https://github.com/xbin999/gittest.git    &amp;lt;/pre&amp;gt;      git">
 <meta name="twitter:image" content="https://github-camo.global.ssl.fastly.net/84e5e600f9b92af778961977102368c3245aa075/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303531312d746e2e706e67">
 <meta name="twitter:creator" content="@xbin999">
   
@@ -108,19 +104,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如<a href="https://github.com" target="_blank" rel="external">github</a>，其他的可以参见git官方wiki上的<a href="https://git.wiki.kernel.org/index.php/GitHosting" target="_blank" rel="external">托管服务列表</a>。<br><br>可以从git clone 开始，<br><br>    $ git clone <a href="https://github.com/xbin999/gittest.git" target="_blank" rel="external">https://github.com/xbin999/gittest.git</a><br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>之前有关git的学习都是基于本地，除了版本的管理和控制外，和别人的协作一般还是需要远程服务器。你可以自己架设服务器，也可以用git托管服务，比如<a href="https://github.com" target="_blank" rel="noopener">github</a>，其他的可以参见git官方wiki上的<a href="https://git.wiki.kernel.org/index.php/GitHosting" target="_blank" rel="noopener">托管服务列表</a>。<br><br>可以从git clone 开始，<br><br>    $ git clone <a href="https://github.com/xbin999/gittest.git" target="_blank" rel="noopener">https://github.com/xbin999/gittest.git</a><br>    <code>&lt;/pre&gt;
 
     git clone除了建立自己的本地分支master和远程分支origin/master外，并且会将他们都指向orgin上的master分支，这自动就是一个跟踪分支（从远程分支checkout出来）。
 
-    &lt;pre&gt;</code><br>    $ git remote -v<br>    origin  <a href="https://github.com/xbin999/gittest.git" target="_blank" rel="external">https://github.com/xbin999/gittest.git</a> (fetch)<br>    origin  <a href="https://github.com/xbin999/gittest.git" target="_blank" rel="external">https://github.com/xbin999/gittest.git</a> (push)<br><br><em>   git remote add 可以添加远程仓库地址，指定别名。
+    &lt;pre&gt;</code><br>    $ git remote -v<br>    origin  <a href="https://github.com/xbin999/gittest.git" target="_blank" rel="noopener">https://github.com/xbin999/gittest.git</a> (fetch)<br>    origin  <a href="https://github.com/xbin999/gittest.git" target="_blank" rel="noopener">https://github.com/xbin999/gittest.git</a> (push)<br><br><em>   git remote add 可以添加远程仓库地址，指定别名。
 </em>   git remote show 显示远程仓库信息。<br><em>   git fetch 从远程仓库抓取信息。注意fetch出来只是更新remote索引。要在本地编辑需要merge到本地分支中或者checkout出一个新的分支。
-</em>   git push 推送数据到远程仓库。<br><br>而和远程服务器最简单的协作方式之一：先在自己的特性分支中工作一段时间，完成后合并到自己的 master 分支；然后下载合并 origin/master 上的更新（如果有的话），再推回远程服务器。一般的协作流程如图所示：<br><br><a href="https://github-camo.global.ssl.fastly.net/84e5e600f9b92af778961977102368c3245aa075/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303531312d746e2e706e67" target="_blank" rel="external"><img src="https://github-camo.global.ssl.fastly.net/84e5e600f9b92af778961977102368c3245aa075/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303531312d746e2e706e67" alt=""></a><br><br>对于自己拥有的项目，可以用git push推送。但如果要给公开项目作贡献，往往你并没有直接更新主仓库分支的权限，需要把工作成果交给项目维护人。<br><br><em>   一种方式使用 git 托管服务商提供的仓库复制功能，一般称作 fork，比如GitHub 都支持这样的操作，而且许多项目管理员都希望大家使用这样的方式。
+</em>   git push 推送数据到远程仓库。<br><br>而和远程服务器最简单的协作方式之一：先在自己的特性分支中工作一段时间，完成后合并到自己的 master 分支；然后下载合并 origin/master 上的更新（如果有的话），再推回远程服务器。一般的协作流程如图所示：<br><br><a href="https://github-camo.global.ssl.fastly.net/84e5e600f9b92af778961977102368c3245aa075/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303531312d746e2e706e67" target="_blank" rel="noopener"><img src="https://github-camo.global.ssl.fastly.net/84e5e600f9b92af778961977102368c3245aa075/687474703a2f2f6769742e676974636166652e636f6d2f666967757265732f3138333333666967303531312d746e2e706e67" alt=""></a><br><br>对于自己拥有的项目，可以用git push推送。但如果要给公开项目作贡献，往往你并没有直接更新主仓库分支的权限，需要把工作成果交给项目维护人。<br><br><em>   一种方式使用 git 托管服务商提供的仓库复制功能，一般称作 fork，比如GitHub 都支持这样的操作，而且许多项目管理员都希望大家使用这样的方式。
 </em>   另一种方式是通过电子邮件寄送文件补丁。<br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/09/18/学习一下git（四）/" data-id="cj133pj4201gn00c2gm0zg8uc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/09/18/学习一下git（四）/" data-id="cjmiwvbfk01es04c2itxknto7" class="article-share-link">Share</a>
       
 
       
@@ -255,7 +251,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -6,11 +6,13 @@
   <title>Ruby没有重载 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="写代码的时候想在构造时，传递不同的参数方式，想当然的就是两个initialize，比如：      def initialize(level = 0)        # do something      end      def initialize(nums, opers, isDivided = true)         # do something      end    &amp;lt;/pr">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby没有重载">
 <meta property="og:url" content="http://xbin999.com/2013/07/04/ruby没有重载/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="写代码的时候想在构造时，传递不同的参数方式，想当然的就是两个initialize，比如：      def initialize(level = 0)        # do something      end      def initialize(nums, opers, isDivided = true)         # do something      end    &amp;lt;/pr">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ruby没有重载">
@@ -104,12 +106,12 @@
 
     结果运行时直接报错：
 
-    &lt;pre&gt;</code><br>    mathstest.rb:11:in `initialize’: wrong number of arguments (1 for 2) (ArgumentError)<br><br>原来Ruby并不支持类方法中的重载（overload），参见：<a href="http://stackoverflow.com/questions/9373104/why-does-ruby-not-support-method-overloading" target="_blank" rel="external">Why does Ruby not support method overloading</a>，其中说到：<br><br>方法重载有有两种方式，一是参数类型不同；二是参数个数不同。在Ruby中首先就没有数据类型的定义，它本身是一种动态类型的语言。而第二种方式看起来可行，但是参数可以有缺省值，这时调用谁也是个问题。<br><br></div>
+    &lt;pre&gt;</code><br>    mathstest.rb:11:in `initialize’: wrong number of arguments (1 for 2) (ArgumentError)<br><br>原来Ruby并不支持类方法中的重载（overload），参见：<a href="http://stackoverflow.com/questions/9373104/why-does-ruby-not-support-method-overloading" target="_blank" rel="noopener">Why does Ruby not support method overloading</a>，其中说到：<br><br>方法重载有有两种方式，一是参数类型不同；二是参数个数不同。在Ruby中首先就没有数据类型的定义，它本身是一种动态类型的语言。而第二种方式看起来可行，但是参数可以有缺省值，这时调用谁也是个问题。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/04/ruby没有重载/" data-id="cj133pil300k200c2ikjpedan" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/04/ruby没有重载/" data-id="cjmiwvb2s00j404c23bwjk100" class="article-share-link">Share</a>
       
 
       
@@ -244,7 +246,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

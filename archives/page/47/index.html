@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/page/47/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,16 +102,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一直比较困惑于在移动互联网中的数据模型设计到底应该是怎么样的？原先在做移动项目的时候，往往有较成熟的<a href="http://www.tmforum.org/BusinessProcessFramework/1647/home.html" target="_blank" rel="external">eTom</a>模型或者BOSS规范，从初始开始设计时就会从概念模型的角度出发。但现在往往被领导、产品经理、数据分析师所提的名词所困惑住，什么数据模型、数据建模、数据埋点、数据体系、指标体系，很多时候都在混用，但到底每个人心目中的数据模型或者建模又是指什么呢？很多时候这里还貌似没有开发的什么事？我就更迷糊了。</p>
+        <p>一直比较困惑于在移动互联网中的数据模型设计到底应该是怎么样的？原先在做移动项目的时候，往往有较成熟的<a href="http://www.tmforum.org/BusinessProcessFramework/1647/home.html" target="_blank" rel="noopener">eTom</a>模型或者BOSS规范，从初始开始设计时就会从概念模型的角度出发。但现在往往被领导、产品经理、数据分析师所提的名词所困惑住，什么数据模型、数据建模、数据埋点、数据体系、指标体系，很多时候都在混用，但到底每个人心目中的数据模型或者建模又是指什么呢？很多时候这里还貌似没有开发的什么事？我就更迷糊了。</p>
 <p>最近和产品、数据的同事有了进一步的交流，把自己的一点体会再理理。不同的角色对于数据的出发点和需求不同，而在一个系统的整体设计和实现中，数据的体现有不同层次，而数据也必然是和产品和业务相结合的。完整的业务模型应该包括数据模型和业务流程。而在数据体系上，从层次上我们可以划分为：指标体系 - 概念模型 - 逻辑模型 - 物理模型。（仓库的底层模型设计虽然不同，但也归结为此列）</p>
 <p>在产品设计的角度上往往看到的比较多的是UI界面，大部分PRD中提供的都是一个手机页面再接着一个手机页面，比如：</p>
 <blockquote>
 <p>下载 -》访问 -》注册 -》登录 -》游戏</p>
 </blockquote>
 <p>这个是业务流程，做得比较细的产品经理会在流程上标注出核心的业务数据。这也就是我们现阶段通常所说的数据埋点了。</p>
-<p>而从领导的角度来说，他更多看得是产品的成功与否如何来做衡量？这样往往一个产品设计开始就会先制定一些KPI指标，比如用户活跃度。如果指标是多维度的来做衡量的，这就是指标体系。（一个好的指标体系肯定不会是以单个指标来衡量的，比如<a href="http://www.ysy.me/2011/07/06/google-metrics-framework/" target="_blank" rel="external">谷歌衡量用户体验的指标体系</a>提到的HEART）</p>
+<p>而从领导的角度来说，他更多看得是产品的成功与否如何来做衡量？这样往往一个产品设计开始就会先制定一些KPI指标，比如用户活跃度。如果指标是多维度的来做衡量的，这就是指标体系。（一个好的指标体系肯定不会是以单个指标来衡量的，比如<a href="http://www.ysy.me/2011/07/06/google-metrics-framework/" target="_blank" rel="noopener">谷歌衡量用户体验的指标体系</a>提到的HEART）</p>
 <p>但是我认为这些都还不是数据建模或者数据模型，数据模型通常是会从中抽象出来概念模型，再经过设计和开发人员逐步细化到逻辑和物理模型。基于业务流程的数据埋点往往会偏重于主流程，分支可能会被忽略，另外维度也很可能考虑不全；而基于指标体系的数据设计关注点也会偏于狭窄，并且指标只是计算的结果，而如何计算得到的才是关键。而要保证从产品设计到最终实现，数据指标定义和提取的一致性，模型的建立和一致的理解还是非常关键的。</p>
-<p>我拿网上的一个<a href="http://www.socialbeta.cn/articles/how-facebook-uses-data.html" target="_blank" rel="external">Facebook设计主管谈如何利用数据做决策</a>来简单分析一下之间的区别：</p>
+<p>我拿网上的一个<a href="http://www.socialbeta.cn/articles/how-facebook-uses-data.html" target="_blank" rel="noopener">Facebook设计主管谈如何利用数据做决策</a>来简单分析一下之间的区别：</p>
 <blockquote>
 <p>Julie讲述了自己的产品设计团队通过数据来分析用户是如何利用不同功能的，她以图片上传功能为例进行讲述。她的团队得出了以下几个数据：</p>
 <ul>
@@ -144,7 +145,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/01/11/到底什么是数据模型和数据建模/" data-id="cj133pixv018000c29zugw20f" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/01/11/到底什么是数据模型和数据建模/" data-id="cjmiwvbbh016704c2a3qp2p1n" class="article-share-link">Share</a>
       
 
       
@@ -190,13 +191,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>先声明，我自己也是才学会怎么把三阶魔方给完整地拼出来，技术也不咋的，还是初级水平。第一次拼出来也是看了<a href="http://www.leonzhang.com/" target="_blank" rel="external">Leon</a>提到的文章<a href="http://hsxxtgl.blog.163.com/blog/static/56363227200711139112886/" target="_blank" rel="external">《普通三阶魔方复原玩法技巧》</a>学会的。不过在自己练习的过程中，也琢磨着怎么吸引<a href="http://weibo.com/zhixin2003" target="_blank" rel="external">小乐</a>来玩，怎么让小家伙会持续转下去直到拼出完整的六面，这还是挺有难度的。你说要理解其中的技巧很有难度，而如果光背公式那在还获得成就和喜悦前就已经被公式给淹没了。</p>
+        <p>先声明，我自己也是才学会怎么把三阶魔方给完整地拼出来，技术也不咋的，还是初级水平。第一次拼出来也是看了<a href="http://www.leonzhang.com/" target="_blank" rel="noopener">Leon</a>提到的文章<a href="http://hsxxtgl.blog.163.com/blog/static/56363227200711139112886/" target="_blank" rel="noopener">《普通三阶魔方复原玩法技巧》</a>学会的。不过在自己练习的过程中，也琢磨着怎么吸引<a href="http://weibo.com/zhixin2003" target="_blank" rel="noopener">小乐</a>来玩，怎么让小家伙会持续转下去直到拼出完整的六面，这还是挺有难度的。你说要理解其中的技巧很有难度，而如果光背公式那在还获得成就和喜悦前就已经被公式给淹没了。</p>
 <p>小乐第一次玩魔方的时候，对于拼出一个面还是比较简单的（其他都是无序的），当时只是和她讲了一下怎么让顶(U)上的块来接侧面的，以及如何把底部(D)的块调整到侧面。所以小家伙在拼好一个面时还是觉得挺有意思，经常转一转，完成一个面后展示给我看。</p>
-<p>但在想教她往下一步的时候，发现遇到了难题。原本以为很简单的顶上十字，由于要求每个棱块都要颜色对好，小乐怎么都不习惯，就有点厌倦了。（我估计她有点害怕）不过这个时候我也并没有多去和她讲解啥的，只是她偶尔再拼拼一个面玩玩。而在这段时间，结合着<a href="http://www.rubik.com.cn/" target="_blank" rel="external">魔方小站</a>和<a href="http://dragoncube.org/" target="_blank" rel="external">今古庸龙魔方网</a>，自己对魔方的认识也有了进一步的理解，尤其是<a href="http://dragoncube.org/lbl.html" target="_blank" rel="external">3x3x3的基本解法</a>熟悉之后，这个方法在最后5、6、7的翻角、换角、换边速度上相比前文的还是有优势，且要记的公式也不多，而且以后过渡到<a href="http://www.rubik.com.cn/fridrich.htm" target="_blank" rel="external">CFOP</a>更容易些，决定向小乐推荐这个招法。</p>
+<p>但在想教她往下一步的时候，发现遇到了难题。原本以为很简单的顶上十字，由于要求每个棱块都要颜色对好，小乐怎么都不习惯，就有点厌倦了。（我估计她有点害怕）不过这个时候我也并没有多去和她讲解啥的，只是她偶尔再拼拼一个面玩玩。而在这段时间，结合着<a href="http://www.rubik.com.cn/" target="_blank" rel="noopener">魔方小站</a>和<a href="http://dragoncube.org/" target="_blank" rel="noopener">今古庸龙魔方网</a>，自己对魔方的认识也有了进一步的理解，尤其是<a href="http://dragoncube.org/lbl.html" target="_blank" rel="noopener">3x3x3的基本解法</a>熟悉之后，这个方法在最后5、6、7的翻角、换角、换边速度上相比前文的还是有优势，且要记的公式也不多，而且以后过渡到<a href="http://www.rubik.com.cn/fridrich.htm" target="_blank" rel="noopener">CFOP</a>更容易些，决定向小乐推荐这个招法。</p>
 <p><img src="http://dragoncube.org/lbl/lbl.jpg" alt=""></p>
 <p>不过咋开始呢？动动脑子，还是从她喜欢的小说入手，一步步来，最后我总结的招法名词叫：</p>
 <p>十字坡 - 刘关张 - 二龙山 - 顶上十字坡 - 小西天 - 大西天</p>
-<p>也就是对应了<a href="http://dragoncube.org/lbl.html" target="_blank" rel="external">3x3x3的基本解法</a>中的7个步骤，其中6和7归结为一起算大西天。在这个招法名词中融合水浒、三国和西游记三大名著，也是小乐日常喜欢念叨的人物。</p>
+<p>也就是对应了<a href="http://dragoncube.org/lbl.html" target="_blank" rel="noopener">3x3x3的基本解法</a>中的7个步骤，其中6和7归结为一起算大西天。在这个招法名词中融合水浒、三国和西游记三大名著，也是小乐日常喜欢念叨的人物。</p>
 <p>以顶层白色为例：</p>
 <p>“十字坡”的招法要解决棱块对齐的问题，改进了一下方法，采用先把白色棱块在黄色底部先拼好，然后逐块和侧面中心块颜色对齐后两圈回，这样小乐就比较容易接受了。同时这个时候小家伙开始学会了观察每个色块都是有它固定的位置的。</p>
 <p>“刘关张”就是要完成白色完整的一面。有了十字坡的基础后，小乐开始明白了白色对齐后，边上一周的颜色需要相同，我们就把他们称为“刘关张”三兄弟，而每次要完成一条边，都会有兄弟团聚的过程，经常就念叨关羽和张飞要去接大哥等等之类。这个小乐有一开始的基础就比较快了。</p>
@@ -207,14 +208,14 @@
 <p>“小西天”完成黄色面，“RUR’URUUR’”，口诀还是挺简单的，继续念路飞，路路路..R，在转的过程中，我们是这样看的，“刘关张”上来，刘备先发起进攻，关羽张飞回营，大哥还不知道，继续走，这时关羽和张飞发现大哥不见了，赶紧回来接，大哥两圈转回来，兄弟团聚一起回营。哈哈，还是刘关张。不过在小西天中麻烦的是可能要多次完成，这里就涉及一个对色块的判断问题，远比“顶上十字坡”要复杂，一开始的时候，我会先告诉她位置，让她先练熟口诀，或者她自己不断转n遍，总能复位。后来开始给她讲判断要诀，就是看“单鱼头”和鱼头朝你时候同时另一角的黄色块要对着你，以及怎么变成“单鱼头”。<br><img src="http://ww1.sinaimg.cn/bmiddle/6a7f0b64jw1dow35v6ojsj.jpg" alt=""><br>“大西天”，取经完成，功德圆满的日子要到了。这里有两步：</p>
 <p>先是换角，注意点是黄色面要朝向自己，而不是黄色面朝上，RU’R，“刘关张”上来，然后底层张飞转两圈D2离开，来了个假张飞，（我一开始说刘备，小乐说是张飞，和之前的刘备离开是不同的，说明她自己还是有一套自己的位置排序），R’UR后发现张飞不对，再D2两圈接回真张飞，最后R2两圈刘关张回白色大本营。</p>
 <p>接着是换边，也就是棱块互换，RRURUR’U’R’U’R’UR’，路飞一路路路路，注意的地方就是一开始是两个R，在这个时候已经很难抵挡住小乐转出六面的激动了。</p>
-<p>这些名词和招法就这么描写，估计只有小乐和我看得明白了。每个小孩子的方法也只有父母自己去体会，什么才是最好的。最后看一段<a href="http://v.youku.com/v_show/id_XMzQwNzY5Mjc2.html" target="_blank" rel="external">小乐转魔方的视频</a>，记录的成绩是2分57秒。</p>
+<p>这些名词和招法就这么描写，估计只有小乐和我看得明白了。每个小孩子的方法也只有父母自己去体会，什么才是最好的。最后看一段<a href="http://v.youku.com/v_show/id_XMzQwNzY5Mjc2.html" target="_blank" rel="noopener">小乐转魔方的视频</a>，记录的成绩是2分57秒。</p>
 <p>[youku id=”XMzQwNzY5Mjc2”] </p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/01/09/教小乐转魔方之十字坡刘关张二龙山顶上十字/" data-id="cj133pjc501qe00c2g2l9yu8v" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/01/09/教小乐转魔方之十字坡刘关张二龙山顶上十字/" data-id="cjmiwvbkk01oe04c29vidrize" class="article-share-link">Share</a>
       
 
       
@@ -263,15 +264,15 @@
         <p>写博客的人貌似越来越少了，尤其是独立博客，原先订阅的feeds很多都长久没有更新了，前两天把feed理了一把，先把80%以上的给砍了，一下子觉得清爽了好多。于是也又有了打开Google reader的兴趣，虽然新改版的界面让我觉得上面的工具栏太宽了些。</p>
 <p>看的过程中有时还是难免想随手分享一下，buzz已经over了，twitter和facebook要翻墙，能看到的人也不多，所以想能分享到新浪微博上，可Send to 工具栏上是没有分享到新浪微博的选项。不过打开设置，看了一下Send To是支持自定义的，自己设置一下即可。</p>
 <p>Name: 新浪微博</p>
-<p>URL: <a href="http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}" target="_blank" rel="external">http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}</a></p>
-<p>Icon Url: <a href="http://t.sina.com.cn/favicon.ico" target="_blank" rel="external">http://t.sina.com.cn/favicon.ico</a></p>
-<p>《<span class="Apple-style-span" style="color:#000000;font-size:17px;line-height:25px;"><a href="http://hanz188.iteye.com/blog/654473" target="_blank" rel="external">二十个Google Reader分享功能Send To技巧</a></span>》这里还有更详细的分享技巧。</p>
+<p>URL: <a href="http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}" target="_blank" rel="noopener">http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}</a></p>
+<p>Icon Url: <a href="http://t.sina.com.cn/favicon.ico" target="_blank" rel="noopener">http://t.sina.com.cn/favicon.ico</a></p>
+<p>《<span class="Apple-style-span" style="color:#000000;font-size:17px;line-height:25px;"><a href="http://hanz188.iteye.com/blog/654473" target="_blank" rel="noopener">二十个Google Reader分享功能Send To技巧</a></span>》这里还有更详细的分享技巧。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/30/在google-reader中设置分享到新浪微博/" data-id="cj133pj1e01cz00c2uxgl1y5c" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/30/在google-reader中设置分享到新浪微博/" data-id="cjmiwvbdq01b504c2q4ouu717" class="article-share-link">Share</a>
       
 
       
@@ -317,14 +318,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://baby.sina.com.cn/nf/qimeng.shtml" target="_blank" rel="external">写给孩子的哲学启蒙书</a></p>
-<p>on tumblr: <a href="http://xbin999.tumblr.com/post/13050093427" target="_blank" rel="external">http://xbin999.tumblr.com/post/13050093427</a></p>
+        <p><a href="http://baby.sina.com.cn/nf/qimeng.shtml" target="_blank" rel="noopener">写给孩子的哲学启蒙书</a></p>
+<p>on tumblr: <a href="http://xbin999.tumblr.com/post/13050093427" target="_blank" rel="noopener">http://xbin999.tumblr.com/post/13050093427</a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/20/写给孩子的哲学启蒙书/" data-id="cj133pixi017k00c24217s0nv" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/20/写给孩子的哲学启蒙书/" data-id="cjmiwvbba015q04c29eybv6kn" class="article-share-link">Share</a>
       
 
       
@@ -370,13 +371,13 @@
       
         <p><img src="http://25.media.tumblr.com/tumblr_luuyjs9NOj1r3eh4oo1_500.png" alt=""></p>
 <p>牙仙子，好久不见</p>
-<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12966448950" target="_blank" rel="external">http://xbin999.tumblr.com/post/12966448950</a></p>
+<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12966448950" target="_blank" rel="noopener">http://xbin999.tumblr.com/post/12966448950</a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/18/牙仙子，好久不见/" data-id="cj133pjjp01xr00c274m5v5lc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/18/牙仙子，好久不见/" data-id="cjmiwvbp101vo04c2hlh6qxej" class="article-share-link">Share</a>
       
 
       
@@ -421,13 +422,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>不要去告诉孩子该怎么做，你说了就错了，要做个coach型的父母。只有孩子做错了你才需要制止，其他多鼓励。</p>
-<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12914910715" target="_blank" rel="external">http://xbin999.tumblr.com/post/12914910715</a></p>
+<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12914910715" target="_blank" rel="noopener">http://xbin999.tumblr.com/post/12914910715</a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/17/不要去告诉孩子该怎么做/" data-id="cj133pir800xl00c2jdqvx0za" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/17/不要去告诉孩子该怎么做/" data-id="cjmiwvb7500vu04c2vh52zvrj" class="article-share-link">Share</a>
       
 
       
@@ -473,13 +474,13 @@
       
         <p><img src="http://30.media.tumblr.com/tumblr_luj5i5d5OJ1r3eh4oo1_500.png" alt=""></p>
 <p>one piece</p>
-<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12674127673" target="_blank" rel="external">http://xbin999.tumblr.com/post/12674127673</a></p>
+<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12674127673" target="_blank" rel="noopener">http://xbin999.tumblr.com/post/12674127673</a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/12/one-piece/" data-id="cj133pij200eo00c2jcdk0vtq" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/12/one-piece/" data-id="cjmiwvb1600dt04c2in3wn2f5" class="article-share-link">Share</a>
       
 
       
@@ -523,14 +524,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.ted.com/talks/lang/chi_hans/richard_seymour_how_beauty_feels.html" target="_blank" rel="external">理查德･西摩：美的感受是什么样的</a></p>
-<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12316138216" target="_blank" rel="external">http://xbin999.tumblr.com/post/12316138216</a></p>
+        <p><a href="http://www.ted.com/talks/lang/chi_hans/richard_seymour_how_beauty_feels.html" target="_blank" rel="noopener">理查德･西摩：美的感受是什么样的</a></p>
+<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12316138216" target="_blank" rel="noopener">http://xbin999.tumblr.com/post/12316138216</a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/04/理查德･西摩：美的感受是什么样的/" data-id="cj133pjk501y600c2775f5d4t" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/04/理查德･西摩：美的感受是什么样的/" data-id="cjmiwvbpa01w304c2fu647qgo" class="article-share-link">Share</a>
       
 
       
@@ -574,15 +575,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.idea-cool.cn/y2011/n22088.html" target="_blank" rel="external">瞬间将废旧瓶子变成漂亮的花瓶</a>: </p>
+        <p><a href="http://www.idea-cool.cn/y2011/n22088.html" target="_blank" rel="noopener">瞬间将废旧瓶子变成漂亮的花瓶</a>: </p>
 <p>很好的创意，回家做一个。 </p>
-<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12191360717" target="_blank" rel="external">http://xbin999.tumblr.com/post/12191360717</a></p>
+<p>on tumblr: <a href="http://xbin999.tumblr.com/post/12191360717" target="_blank" rel="noopener">http://xbin999.tumblr.com/post/12191360717</a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/01/瞬间将废旧瓶子变成漂亮的花瓶/" data-id="cj133pjmi020s00c22dlqle8m" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/01/瞬间将废旧瓶子变成漂亮的花瓶/" data-id="cjmiwvbqv01yp04c2qrdu0z94" class="article-share-link">Share</a>
       
 
       
@@ -641,7 +642,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cj133pj8k01m100c2cv8occsh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cjmiwvbia01k604c2q3qu96y9" class="article-share-link">Share</a>
       
 
       
@@ -758,7 +759,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

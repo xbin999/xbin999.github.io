@@ -6,11 +6,13 @@
   <title>什么是RubyGem | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="RubyGems包管理系统（也称为Gems）已经成为Ruby代码包发布和管理的标准，在Ruby 1.9中已经打包在Ruby中提供。每个gem有名称、版本和平台。比如rake gem版本是0.8.7，平台是ruby，可以在Ruby的任意平台上运行，其他平台还包括java（比如nokogiri）和mswin32（比如sqlite-ruby）。Gems的结构，一般包括三部分：   代码，包括测试和支持工">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby,RubyGem">
 <meta property="og:type" content="article">
 <meta property="og:title" content="什么是RubyGem">
 <meta property="og:url" content="http://xbin999.com/2013/07/24/什么是rubygem/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="RubyGems包管理系统（也称为Gems）已经成为Ruby代码包发布和管理的标准，在Ruby 1.9中已经打包在Ruby中提供。每个gem有名称、版本和平台。比如rake gem版本是0.8.7，平台是ruby，可以在Ruby的任意平台上运行，其他平台还包括java（比如nokogiri）和mswin32（比如sqlite-ruby）。Gems的结构，一般包括三部分：   代码，包括测试和支持工">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是RubyGem">
@@ -100,17 +102,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://rubygems.org/" target="_blank" rel="external">RubyGems</a>包管理系统（也称为Gems）已经成为Ruby代码包发布和管理的标准，在Ruby 1.9中已经打包在Ruby中提供。<br><br>每个gem有名称、版本和平台。比如<a href="http://rubygems.org/gems/rake" target="_blank" rel="external">rake</a> gem版本是0.8.7，平台是ruby，可以在Ruby的任意平台上运行，其他平台还包括java（比如<a href="http://rubygems.org/gems/nokogiri/versions/1.4.4.2-java" target="_blank" rel="external">nokogiri</a>）和mswin32（比如<a href="http://rubygems.org/gems/sqlite-ruby/versions/2.2.3-mswin32" target="_blank" rel="external">sqlite-ruby</a>）。<br><br>Gems的结构，一般包括三部分：<br><br><em>   代码，包括测试和支持工具。
+        <div id="wrapper"><br><br><a href="http://rubygems.org/" target="_blank" rel="noopener">RubyGems</a>包管理系统（也称为Gems）已经成为Ruby代码包发布和管理的标准，在Ruby 1.9中已经打包在Ruby中提供。<br><br>每个gem有名称、版本和平台。比如<a href="http://rubygems.org/gems/rake" target="_blank" rel="noopener">rake</a> gem版本是0.8.7，平台是ruby，可以在Ruby的任意平台上运行，其他平台还包括java（比如<a href="http://rubygems.org/gems/nokogiri/versions/1.4.4.2-java" target="_blank" rel="noopener">nokogiri</a>）和mswin32（比如<a href="http://rubygems.org/gems/sqlite-ruby/versions/2.2.3-mswin32" target="_blank" rel="noopener">sqlite-ruby</a>）。<br><br>Gems的结构，一般包括三部分：<br><br><em>   代码，包括测试和支持工具。
 </em>   文档<br><em>   gemspec<br><br>每个gem有同样的标准代码组织结构：<br><br>    % tree freewill<br>    freewill/<br>    ├── bin/<br>    │   └── freewill<br>    ├── lib/<br>    │   └── freewill.rb<br>    ├── test/<br>    │   └── test_freewill.rb<br>    ├── README<br>    ├── Rakefile<br>    └── freewill.gemspec<br>    `
 
 </em>   lib包含gem的代码。<br><em>   test或spec包含测试，取决于采用测试框架。
 </em>   一个gem通常有一个Rakefile，用于rake程序自动化测试、生成代码和执行其他一些任务。<br><em>   一般在bin目录下会有一个执行文件，gem安装后，该bin目录通常会在PATH路径中。
-</em>   文档一般包含在README和代码中。当安装gem时，文档会自动生成，大多数gems包括<a href="http://rdoc.sourceforge.net/doc/" target="_blank" rel="external">RDoc</a>文档，有的也用<a href="http://yardoc.org/" target="_blank" rel="external">YARD</a>。<br>*   最后一部分是gemspec，包含有关这个gem的规格信息。包括文件、测试、平台、版本号和其他的作者邮件和姓名等等。<br><br>    RubyGems修改了Ruby的装载路径，控制你的Ruby代码能被require找到。<br><br>    一旦使用require请求一个gem，RubyGems<br><br>    自动把lib目录加入到$LOAD_PATH中，有些gems也会增加其他目录，比如bin。这些是可选的，你可以把一个gem的多个目录加入到装载路径中。<br><br>    Gemspec提供基本的信息，让你知道gem包含的内容，一个简单例子：<br><br>    <pre>`<br>    % cat freewill.gemspec<br>    Gem::Specification.new do |s|<br>      s.name        = ‘freewill’<br>      s.version     = ‘1.0.0’<br>      s.date        = ‘2010-04-27’<br>      s.summary     = “Freewill!”<br>      s.description = “I will choose Freewill!”<br>      s.authors     = [“Nick Quaranto”]<br>      s.email       = ‘nick@quaran.to’<br>      s.homepage    = ‘<a href="http://example.com" target="_blank" rel="external">http://example.com</a>‘<br>      s.files       = [“lib/freewill.rb”]<br>    end<br><br>来源<a href="http://guides.rubygems.org/what-is-a-gem/" target="_blank" rel="external">What is a gem?</a><br><br></pre></div>
+</em>   文档一般包含在README和代码中。当安装gem时，文档会自动生成，大多数gems包括<a href="http://rdoc.sourceforge.net/doc/" target="_blank" rel="noopener">RDoc</a>文档，有的也用<a href="http://yardoc.org/" target="_blank" rel="noopener">YARD</a>。<br>*   最后一部分是gemspec，包含有关这个gem的规格信息。包括文件、测试、平台、版本号和其他的作者邮件和姓名等等。<br><br>    RubyGems修改了Ruby的装载路径，控制你的Ruby代码能被require找到。<br><br>    一旦使用require请求一个gem，RubyGems<br><br>    自动把lib目录加入到$LOAD_PATH中，有些gems也会增加其他目录，比如bin。这些是可选的，你可以把一个gem的多个目录加入到装载路径中。<br><br>    Gemspec提供基本的信息，让你知道gem包含的内容，一个简单例子：<br><br>    <pre>`<br>    % cat freewill.gemspec<br>    Gem::Specification.new do |s|<br>      s.name        = ‘freewill’<br>      s.version     = ‘1.0.0’<br>      s.date        = ‘2010-04-27’<br>      s.summary     = “Freewill!”<br>      s.description = “I will choose Freewill!”<br>      s.authors     = [“Nick Quaranto”]<br>      s.email       = <a href="mailto:&#39;nick@quaran.to" target="_blank" rel="noopener">&#39;nick@quaran.to</a>‘<br>      s.homepage    = ‘<a href="http://example.com&#39;" target="_blank" rel="noopener">http://example.com&#39;</a><br>      s.files       = [“lib/freewill.rb”]<br>    end<br><br>来源<a href="http://guides.rubygems.org/what-is-a-gem/" target="_blank" rel="noopener">What is a gem?</a><br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/24/什么是rubygem/" data-id="cj133piu5012i00c2x6om9qd7" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/24/什么是rubygem/" data-id="cjmiwvb93010p04c2hte518re" class="article-share-link">Share</a>
       
 
       
@@ -245,7 +247,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

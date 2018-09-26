@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/categories/IT/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,7 +104,7 @@
       
         <p>经常写微信公众号或博客的朋友，总会面临图片处理的效率问题，找图片或截屏，调整大小，上传，复制粘贴图片地址，让人做得很厌烦。</p>
 <p>说说怎么提高效率，找图片和截屏就不提了，而后面三件工作在mac下完全可以用workflow来协助我们完成。</p>
-<p>调整图片的大小我是参考了<a href="http://macshuo.com/" target="_blank" rel="external">MacTalk</a> 的文章（原文我忘了），基本思路就是复制图像文件到统一目录中，调整图像大小，转换为JPG格式，并可以统一签上前缀名称。这样你就可以上传到微信公众平台，而无需担心图像文件过大影响用户浏览消耗过多的流量。</p>
+<p>调整图片的大小我是参考了<a href="http://macshuo.com/" target="_blank" rel="noopener">MacTalk</a> 的文章（原文我忘了），基本思路就是复制图像文件到统一目录中，调整图像大小，转换为JPG格式，并可以统一签上前缀名称。这样你就可以上传到微信公众平台，而无需担心图像文件过大影响用户浏览消耗过多的流量。</p>
 <p><img src="http://xbin999.qiniudn.com/images/resize700.png" alt=""></p>
 <p>如果是写博客，我采用七牛云作为图床，使用上传脚本，上传后的结果可以直接 <a href="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/">生成markdown格式日志</a> 。同样写一个workflow，将图像文件移到七牛云的上传目录，执行shell脚本即可。（先在/tmp下生成一个qiniu.log文件）</p>
 <p><img src="http://xbin999.qiniudn.com/images/upload2qiniu.png" alt=""></p>
@@ -113,7 +114,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/03/19/blog-tu-pian-de-kuai-su-chu-li/" data-id="cj133pifa003200c2ls1wu4v2" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/03/19/blog-tu-pian-de-kuai-su-chu-li/" data-id="cjmiwvaxu002v04c2yzvt5cww" class="article-share-link">Share</a>
       
 
       
@@ -183,7 +184,7 @@ line_length = message_lines.max{ |a,b| a.length <=> b.length }.encode('gbk').b.l
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/03/18/cowsay-support-chinese/" data-id="cj133pifv004h00c2ea2k6a3d" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/03/18/cowsay-support-chinese/" data-id="cjmiwvayb004a04c229xvf7wn" class="article-share-link">Share</a>
       
 
       
@@ -311,7 +312,7 @@ resources :posts
 </code></pre>
 
 <p>这就生成了前面例子中有关Post的index, show, new, edit, create, update和destroy所有路由信息了。路由使用 HTTP 方法和 URL 匹配请求，把四个 URL结合不同的HTTP方法映射到七个不同的动作上。</p>
-<p>REST有主要有两个核心精神，参见<a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="external">RESTful 應用程式</a>：</p>
+<p>REST有主要有两个核心精神，参见<a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="noopener">RESTful 應用程式</a>：</p>
 <ul>
 <li>使用Resource来当做识别的资源，也就是使用一个URL网址來代表一个Resource。</li>
 <li>同一个Resource则可以有不同的Representations格式变化。</li>
@@ -320,16 +321,16 @@ resources :posts
 <p>基本的就是这样，具体路由为了简化书写，还有resource的嵌套，as别名，module/namespace/member/collection/scope多种组合形态，还可以用except/only做七个预设资源路由的限制，这个慢慢用到时再了解。</p>
 <p>参考文档：</p>
 <ul>
-<li><a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="external">RESTful 應用程式</a></li>
-<li><a href="https://ihower.tw/rails4/routing.html" target="_blank" rel="external">路由(Routing)</a></li>
-<li><a href="http://guides.ruby-china.org/routing.html" target="_blank" rel="external">Rails 路由全解 — Ruby on Rails 指南</a></li>
+<li><a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="noopener">RESTful 應用程式</a></li>
+<li><a href="https://ihower.tw/rails4/routing.html" target="_blank" rel="noopener">路由(Routing)</a></li>
+<li><a href="http://guides.ruby-china.org/routing.html" target="_blank" rel="noopener">Rails 路由全解 — Ruby on Rails 指南</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/02/26/rails-route/" data-id="cj133pijn00go00c28s9hezjs" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/02/26/rails-route/" data-id="cjmiwvb1p00fp04c2d3wqghzf" class="article-share-link">Share</a>
       
 
       
@@ -375,10 +376,10 @@ resources :posts
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>过年了还在单位，在看看ROR。简单翻译一下<a href="http://blog.41studio.com/knowing-the-difference-between-symbol-and-symbol-in-rails/" target="_blank" rel="external">Knowing The Difference Between [:symbol] and [symbol:] in Rails</a>，自己也搞搞明白。</p>
+        <p>过年了还在单位，在看看ROR。简单翻译一下<a href="http://blog.41studio.com/knowing-the-difference-between-symbol-and-symbol-in-rails/" target="_blank" rel="noopener">Knowing The Difference Between [:symbol] and [symbol:] in Rails</a>，自己也搞搞明白。</p>
 <hr>
 <p>对于Rails新手来说，看到一个冒号一会在前一会在后经常容易迷惑。那么:symbol和symbol: 的区别是什么呢？</p>
-<h1 id="符号前的冒号"><a href="#符号前的冒号" class="headerlink" title="符号前的冒号"></a>符号前的冒号</h1><p>一个前面带有冒号的符号就是一个<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="external">Symbol</a> （有点像变量）我们需要使用=&gt;对Symbol赋值。</p>
+<h1 id="符号前的冒号"><a href="#符号前的冒号" class="headerlink" title="符号前的冒号"></a>符号前的冒号</h1><p>一个前面带有冒号的符号就是一个<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="noopener">Symbol</a> （有点像变量）我们需要使用=&gt;对Symbol赋值。</p>
 <p>举个例子，如果我们想复制”Ruby on Rails”赋值给:book符号，我们就写：</p>
 <pre><code>
 :book => "Ruby on Rails"
@@ -398,7 +399,7 @@ book: :available
 
 <p>这段代码就是i讲一个变量符号赋值给另一个符号。不过千万小心类似这样的写法Book::Name，这个完全不同，Book::Name表示Name是一个模块名，Book是一个类名。</p>
 <hr>
-<p>上面的文章似乎简单化了，Symbol的含义不只此。:symbol是<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="external">Symbol</a> ，看文档的说明：</p>
+<p>上面的文章似乎简单化了，Symbol的含义不只此。:symbol是<a href="http://ruby-doc.org//core-2.2.0/Symbol.html" target="_blank" rel="noopener">Symbol</a> ，看文档的说明：</p>
 <blockquote>
 <p>Symbol对象用于表示Ruby解释器中的名字和一些字符串，他们可以采用:name和:”string”的语法格式，也可以使用to_sym方法。对于指定的名称和字符串在程序运行期间会创建相同的symbol对象。也就是说无论Fred是一个上下文中的常量、另一个中的方法，或是第三个中的类，:Fred符号在所有三个上下文中都是相同的对象。</p>
 </blockquote>
@@ -410,7 +411,7 @@ book: :available
 => 1
 </code></pre>
 
-<p>IBM developerWorks这篇<a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl/index.html" target="_blank" rel="external">理解 Ruby Symbol，第 1 部分</a> 说的更细些，尤其提到使用技巧，在ruby中使用Symbol处理名字可以降低Ruby内存消耗。</p>
+<p>IBM developerWorks这篇<a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl/index.html" target="_blank" rel="noopener">理解 Ruby Symbol，第 1 部分</a> 说的更细些，尤其提到使用技巧，在ruby中使用Symbol处理名字可以降低Ruby内存消耗。</p>
 <p>典型的使用是在hash中，symbol可以作为key值，效率比使用字符串要更好，因为Ruby对每一次字符串引用都会生成一个String对象。</p>
 <p>还有可以做hash参数，普通调用函数的时候往往需要确保参数个数、顺序匹配，而使用hash参数就没有这个问题。Ruby on Rails大量地运用了这种方式，比如：</p>
 <pre><code>
@@ -421,14 +422,14 @@ add_column :products, :price, :decimal,
 </code></pre>
 
 <p>使用hash参数，可以如下定义，前半部分为固定参数，后面是可变参数，或者全部采用hash参数。</p>
-<p><a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl2/" target="_blank" rel="external">理解 Ruby Symbol ，第 2 部分： Symbol 内幕</a> 提到使用:Symbol的方式会创建Symbol对象，保存在符号表中，这是一个全局数据结构，存放了所有Symbol的（数字ID、名字）对，Ruby不会做删除。</p>
+<p><a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-rubysbl2/" target="_blank" rel="noopener">理解 Ruby Symbol ，第 2 部分： Symbol 内幕</a> 提到使用:Symbol的方式会创建Symbol对象，保存在符号表中，这是一个全局数据结构，存放了所有Symbol的（数字ID、名字）对，Ruby不会做删除。</p>
 <p>文中最后有一句话：<em>Symbol 的特点决定了它的简洁和高效。 Ruby 把它的符号表敞开了给你，在 Symbol 可以更好地发挥作用时，不要吝啬使用 Symbol 。</em></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/02/16/ruby-symbol/" data-id="cj133pikj00im00c2r8qtubv4" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/02/16/ruby-symbol/" data-id="cjmiwvb2b00hp04c2vkijq1ye" class="article-share-link">Share</a>
       
 
       
@@ -475,15 +476,15 @@ add_column :products, :price, :decimal,
     <div class="article-entry" itemprop="articleBody">
       
         <p>刚写了一篇文章发布后，引用部分的内容(blockquote)字体很难看，字又大，还居中，实在无法忍受。</p>
-<p>搜了一下，一开始以为是一直以为是<a href="https://github.com/hexojs/hexo-renderer-stylus/issues/5" target="_blank" rel="external">hexojs/hexo-renderer-stylus#5</a> 渲染的问题，尝试了不对；后来想是不是还是<a href="https://github.com/xiangming/landscape-plus" target="_blank" rel="external">landscape-plus theme</a>的问题，还特意去开了个<a href="https://github.com/xiangming/landscape-plus/issues/62" target="_blank" rel="external">issue</a>问问。</p>
-<p>其实还是自己的问题，style.css并不是修改后就会自动生成的，手工删除后public/css/style.css，重新<a href="http://hexo.io/" target="_blank" rel="external">hexo</a> generate即可。之前是嫌<a href="http://xbin999.com">博客</a>文章太多，每次编译耗时久而懒得折腾。简单地建个目录，搞个测试看到hexo generate生成的文件清单就很容易排除了。</p>
-<p>顺便搞搞清楚npm和nvm，<a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>是针对javascipt的安装包管理器（Node Package Manager），而<a href="https://www.npmjs.com/package/nvm" target="_blank" rel="external">nvm</a>则用来安装和管理多个node.js的版本，其本身由npm安装。</p>
+<p>搜了一下，一开始以为是一直以为是<a href="https://github.com/hexojs/hexo-renderer-stylus/issues/5" target="_blank" rel="noopener">hexojs/hexo-renderer-stylus#5</a> 渲染的问题，尝试了不对；后来想是不是还是<a href="https://github.com/xiangming/landscape-plus" target="_blank" rel="noopener">landscape-plus theme</a>的问题，还特意去开了个<a href="https://github.com/xiangming/landscape-plus/issues/62" target="_blank" rel="noopener">issue</a>问问。</p>
+<p>其实还是自己的问题，style.css并不是修改后就会自动生成的，手工删除后public/css/style.css，重新<a href="http://hexo.io/" target="_blank" rel="noopener">hexo</a> generate即可。之前是嫌<a href="http://xbin999.com">博客</a>文章太多，每次编译耗时久而懒得折腾。简单地建个目录，搞个测试看到hexo generate生成的文件清单就很容易排除了。</p>
+<p>顺便搞搞清楚npm和nvm，<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>是针对javascipt的安装包管理器（Node Package Manager），而<a href="https://www.npmjs.com/package/nvm" target="_blank" rel="noopener">nvm</a>则用来安装和管理多个node.js的版本，其本身由npm安装。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/02/15/hexo-genereate-CSS-not-change/" data-id="cj133piho00a100c2n3ehc19f" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/02/15/hexo-genereate-CSS-not-change/" data-id="cjmiwvazy009904c27kybimvw" class="article-share-link">Share</a>
       
 
       
@@ -529,20 +530,20 @@ add_column :products, :price, :decimal,
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用<a href="http://www.adminer.org/" target="_blank" rel="external">Adminer</a>，一个PHP文件的数据库管理工具管理SQLite时，简单地删除一张表，报错：attempt to write a readonly database。</p>
-<p>原因在于<a href="http://www.adminer.org/" target="_blank" rel="external">Adminer</a>是在Apache中运行，在mac中使用的用户身份是_www用户，就没有写的权限了。所以要<a href="https://coderwall.com/p/gl_grw/make-a-directory-writable-by-apache-in-mac-os-x-maverick" target="_blank" rel="external">修改目录权限让apache可写</a>。</p>
+        <p>使用<a href="http://www.adminer.org/" target="_blank" rel="noopener">Adminer</a>，一个PHP文件的数据库管理工具管理SQLite时，简单地删除一张表，报错：attempt to write a readonly database。</p>
+<p>原因在于<a href="http://www.adminer.org/" target="_blank" rel="noopener">Adminer</a>是在Apache中运行，在mac中使用的用户身份是_www用户，就没有写的权限了。所以要<a href="https://coderwall.com/p/gl_grw/make-a-directory-writable-by-apache-in-mac-os-x-maverick" target="_blank" rel="noopener">修改目录权限让apache可写</a>。</p>
 <pre><code>
 $ sudo chown -R _www:staff db
 $ sudo chmod -R 775 db
 </code></pre>
 
-<p>权限如果改成755的话，个人用户就又没有写权限了。当然更好的方式是保留原有权限，只<a href="http://francoisdeschenes.com/2013/02/26/enable-write-permissions-for-apache-built-into-mac-os-x" target="_blank" rel="external">给_www用户新增所需权限</a>：sudo chmod -R +a ‘_www allow read,write,delete,add_file,add_subdirectory,file_inherit,directory_inherit’ #dir#，就打起来复杂点。</p>
+<p>权限如果改成755的话，个人用户就又没有写权限了。当然更好的方式是保留原有权限，只<a href="http://francoisdeschenes.com/2013/02/26/enable-write-permissions-for-apache-built-into-mac-os-x" target="_blank" rel="noopener">给_www用户新增所需权限</a>：sudo chmod -R +a ‘_www allow read,write,delete,add_file,add_subdirectory,file_inherit,directory_inherit’ #dir#，就打起来复杂点。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/01/16/attempt-to-write-a-readonly-database/" data-id="cj133pif3002e00c277sp1dfy" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/01/16/attempt-to-write-a-readonly-database/" data-id="cjmiwvaxm002604c223re0ybw" class="article-share-link">Share</a>
       
 
       
@@ -590,15 +591,15 @@ $ sudo chmod -R 775 db
       
         <p>环境越来越恶化，这两天到处都是Gmail彻底被墙的消息。我等屁民只有迎难而上，把vpn，ssh给用好。</p>
 <p>原先一直都是在用Chrome+SwitchySharp+ssh的方式，但这个方式不爽的是只支持http/https，很多时候git或brew更新时都会出问题，到时就只有祭起VPN大棋，但VPN的问题呢又在于走的是全局路由，包括国内的站点也都走了VPN，既慢又费流量。以前偶尔用用，一直懒得折腾，今天研究了一下，可以根据国内外地址设置不同的访问路由。这真是一个折腾的时代。</p>
-<p>在mac下需要的几个工具：修改路由的<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>和开源的OpenVPN客户端<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>，原理就是：</p>
+<p>在mac下需要的几个工具：修改路由的<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes</a>和开源的OpenVPN客户端<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>，原理就是：</p>
 <p>“<em>利用来自APNIC的数据生成路由命令脚本，让VPN客户端在连接时自动执行。通过这些路由脚本，可以让用户在使用VPN作为默认网关时，不使用VPN访问中国国内IP，从而减轻VPN负担，并提高访问国内网站的速度。</em>”</p>
-<p>如果你VPN服务使用PPTP，mac下很简单，参照<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes说明</a>即可，可惜我的<a href="https://www.123ssh.net/aff.php?aff=087" target="_blank" rel="external">VPN提供商</a>PPTP，L2TP，Cisco IPSecVPN几种连接方式相继被GFW干扰，目前只有采用OpenVPN的连接方式，参见<a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a>，不过Viscosity不是免费的，我就找个开源的<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>替代。</p>
+<p>如果你VPN服务使用PPTP，mac下很简单，参照<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes说明</a>即可，可惜我的<a href="https://www.123ssh.net/aff.php?aff=087" target="_blank" rel="noopener">VPN提供商</a>PPTP，L2TP，Cisco IPSecVPN几种连接方式相继被GFW干扰，目前只有采用OpenVPN的连接方式，参见<a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="noopener">Mac OS X通过Viscosity连接OpenVPN</a>，不过Viscosity不是免费的，我就找个开源的<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>替代。</p>
 <p>说明一下过程和注意事项：</p>
 <ul>
-<li>下载<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">chnroutes</a>。</li>
+<li>下载<a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">chnroutes</a>。</li>
 <li>在目录下执行python chnroutes.py -p mac ，生成 ip-up 与 ip-down 两个文件。</li>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中导入你的vpn服务提供商提供的配置文件。</li>
-<li>修改<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>的连接配置文件，增加</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>中导入你的vpn服务提供商提供的配置文件。</li>
+<li>修改<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>的连接配置文件，增加</li>
 </ul>
 <pre><code>
 up {your directory}/ip-up
@@ -608,24 +609,24 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
 </code></pre>
 
 <ul>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>中的设置里Set DNS/WINS为“Do not setnameserver”，由前面的配置文件来指定。</li>
-<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="external">Tunnelblick</a>连接VPN，连接成功后，可以访问<a href="http://ip138.com/" target="_blank" rel="external">ip138.com</a>和<a href="http://www.ip.cn/" target="_blank" rel="external">ip.cn</a>，前者为访问国内站点的ip地址，后者为访问国外站点的地址，两者应该不同。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>中的设置里Set DNS/WINS为“Do not setnameserver”，由前面的配置文件来指定。</li>
+<li>在<a href="http://sourceforge.net/projects/tunnelblick/" target="_blank" rel="noopener">Tunnelblick</a>连接VPN，连接成功后，可以访问<a href="http://ip138.com/" target="_blank" rel="noopener">ip138.com</a>和<a href="http://www.ip.cn/" target="_blank" rel="noopener">ip.cn</a>，前者为访问国内站点的ip地址，后者为访问国外站点的地址，两者应该不同。</li>
 </ul>
-<p><em>– 12月30日更新：<br>发现连上VPN后，公司内网无法访问，参考<a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a>在ip-up/ip-down中增加公司的域名以及内网地址即可。对于Chrome来说可能需要清除缓存，否则总指向到该死的189so。</em></p>
+<p><em>– 12月30日更新：<br>发现连上VPN后，公司内网无法访问，参考<a href="http://fxck.it/post/57501298563" target="_blank" rel="noopener">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a>在ip-up/ip-down中增加公司的域名以及内网地址即可。对于Chrome来说可能需要清除缓存，否则总指向到该死的189so。</em></p>
 <p>参考的文章有：</p>
 <ul>
-<li><a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="external">jimmyxu/chnroutes</a></li>
-<li><a href="http://www.jianshu.com/p/6e84c6d7dc58" target="_blank" rel="external">Mac（OSX）使用VPN小技巧——国内外访问分流</a></li>
-<li><a href="http://v.ifiorano.com/post/21261756835" target="_blank" rel="external">解决max-routes参数的2000条限制</a></li>
-<li><a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="external">Mac OS X通过Viscosity连接OpenVPN</a></li>
-<li><a href="http://fxck.it/post/57501298563" target="_blank" rel="external">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a></li>
+<li><a href="https://github.com/jimmyxu/chnroutes" target="_blank" rel="noopener">jimmyxu/chnroutes</a></li>
+<li><a href="http://www.jianshu.com/p/6e84c6d7dc58" target="_blank" rel="noopener">Mac（OSX）使用VPN小技巧——国内外访问分流</a></li>
+<li><a href="http://v.ifiorano.com/post/21261756835" target="_blank" rel="noopener">解决max-routes参数的2000条限制</a></li>
+<li><a href="https://www.123ssh.net/macosx-connect-openvpn-using-viscosity/" target="_blank" rel="noopener">Mac OS X通过Viscosity连接OpenVPN</a></li>
+<li><a href="http://fxck.it/post/57501298563" target="_blank" rel="noopener">如何在连接国外 VPN 翻墙的同时，访问公司内网服务 - Alsotang’s blog</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" data-id="cj133piie00ch00c2ogstaetm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/12/29/mac-os-she-zhi-bu-tong-de-lu-you/" data-id="cjmiwvb0l00bm04c2ne8iey9o" class="article-share-link">Share</a>
       
 
       
@@ -671,16 +672,16 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://xbin999.com/2014/09/18/%E8%BF%81%E7%A7%BBwordpress%E5%88%B0hexo/">博客迁移到hexo</a>后，使用<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云</a>作为图床，日常就用它的命令行工具<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="external">qrsync</a>上传图像，上传成功后会显示日志。有点不爽的是日志中只是显示上传到服务器上的相对路径的文件名称，在写markdown 格式时，还需要自己去补充类似“![]”，然后再补充完整url信息。</p>
+        <p><a href="http://xbin999.com/2014/09/18/%E8%BF%81%E7%A7%BBwordpress%E5%88%B0hexo/">博客迁移到hexo</a>后，使用<a href="http://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>作为图床，日常就用它的命令行工具<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="noopener">qrsync</a>上传图像，上传成功后会显示日志。有点不爽的是日志中只是显示上传到服务器上的相对路径的文件名称，在写markdown 格式时，还需要自己去补充类似“![]”，然后再补充完整url信息。</p>
 <p>于是就在日志信息后加一个sed的脚本做替换，帮自动生成markdown格式，书写自然就方便了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Users/yangbin/bin/qrsync /Users/yangbin/bin/qiniu-conf.json 2&gt;&amp;1 |sed -e &apos;s/\(=&gt; xbin999:\)\(.*\)/=&gt; ![](http:\/\/xbin999.qiniudb.com\/\2\)/&apos;</div></pre></td></tr></table></figure>
-<p>另一种只显示结果文件格式的可以参见<a href="https://gist.github.com/xbin999/5d6ae721d04d51f99c39" target="_blank" rel="external">gist</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/yangbin/bin/qrsync /Users/yangbin/bin/qiniu-conf.json 2&gt;&amp;1 |sed -e &apos;s/\(=&gt; xbin999:\)\(.*\)/=&gt; ![](http:\/\/xbin999.qiniudb.com\/\2\)/&apos;</span><br></pre></td></tr></table></figure>
+<p>另一种只显示结果文件格式的可以参见<a href="https://gist.github.com/xbin999/5d6ae721d04d51f99c39" target="_blank" rel="noopener">gist</a>。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/" data-id="cj133pijy00hb00c24j9e48rd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/" data-id="cjmiwvb1w00gc04c2cmmcrvto" class="article-share-link">Share</a>
       
 
       
@@ -726,8 +727,8 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一直没搞明白iOS是如何设计界面的，看到有两篇不错的教程，<a href="http://www.raywenderlich.com/50317/beginning-auto-layout-tutorial-in-ios-7-part-1" target="_blank" rel="external">Beginning Auto Layout Tutorial in iOS 7: Part 1
-</a>和<a href="http://www.raywenderlich.com/50319/beginning-auto-layout-tutorial-in-ios-7-part-2" target="_blank" rel="external">Part 2</a>，针对Auto Layout做了很好的示例，把其中的一小节翻译了一下，算是加深印象。</p>
+        <p>一直没搞明白iOS是如何设计界面的，看到有两篇不错的教程，<a href="http://www.raywenderlich.com/50317/beginning-auto-layout-tutorial-in-ios-7-part-1" target="_blank" rel="noopener">Beginning Auto Layout Tutorial in iOS 7: Part 1
+</a>和<a href="http://www.raywenderlich.com/50319/beginning-auto-layout-tutorial-in-ios-7-part-2" target="_blank" rel="noopener">Part 2</a>，针对Auto Layout做了很好的示例，把其中的一小节翻译了一下，算是加深印象。</p>
 <p>As you’ve seen in the test drive above, the basic tool in Auto Layout is the constraint. A constraint describes a geometric relationship between two views. For example, you might have a constraint that says:<br>就像你在上面的例子中所看到的，自动布局（Auto Layout）的基本工具是约束。一个约束描述了两个视图间的几何关系。比如你可以这样描述一个约束： </p>
 <p>“The right edge of label A is connected to the left edge of button B with 20 points of empty space between them.”<br>“标签A的右侧和按钮B的左侧相连，两者间距20个点。” </p>
 <p>Auto Layout takes all of these constraints and does some mathematics to calculate the ideal positions and sizes of all your views. You no longer have to set the frames of your views yourself – Auto Layout does that for you, entirely based on the constraints you have set on those views.<br>自动布局获取所有的约束，然后计算得到所有视图的大小和理想位置。你不在需要自己设置视图的框架，自动布局基于你在视图上设置的约束为你实现了。 </p>
@@ -755,7 +756,7 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/11/24/How-Auto-Layout-works/" data-id="cj133pie3001000c2jws0jg56" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/11/24/How-Auto-Layout-works/" data-id="cjmiwvax1001004c24drfzpnr" class="article-share-link">Share</a>
       
 
       
@@ -801,7 +802,7 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>总是挡不住升级的诱惑，即使总会有这样或那样的问题。在看了MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="external">“OSX Yosemite，焕然一新”</a>后，觉得也差不多，就开始升级了。</p>
+        <p>总是挡不住升级的诱惑，即使总会有这样或那样的问题。在看了MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="noopener">“OSX Yosemite，焕然一新”</a>后，觉得也差不多，就开始升级了。</p>
 <p>备份，下载Yosemite，安装，一切顺利，周五晚上就成功升级到Yosemite了。想想太顺利了，开始折腾应用，然后悲剧就发生了。</p>
 <p>升级后，提示有四个应用不兼容Yosemite：</p>
 <ul>
@@ -814,24 +815,24 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
 <p>再之后查问题，发现这个问题搞起来还是有点复杂，折腾良久无果，最后我还是恢复到了原先的10.9，再重新做了一次升级。等搞明白或者有稳定的解决方案再说。</p>
 <p>升级后处理的问题简单整理一下：</p>
 <ul>
-<li><a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>的更新参考MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="external">“OSX Yosemite，焕然一新”</a>。</li>
-<li>使用chrome看一堆chrome helper进程无反应，参见<a href="https://code.google.com/p/chromium/issues/detail?id=397642&amp;q=label%3Ahotlist-yosemite&amp;colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified" target="_blank" rel="external">Google chrome helper not responding</a>还是没有解决，暂时用Safari。</li>
+<li><a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a>的更新参考MacTalk的文章<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&amp;mid=201068562&amp;idx=1&amp;sn=2ce214ddc5f403c621fa5a78f65fb27d#rd" target="_blank" rel="noopener">“OSX Yosemite，焕然一新”</a>。</li>
+<li>使用chrome看一堆chrome helper进程无反应，参见<a href="https://code.google.com/p/chromium/issues/detail?id=397642&amp;q=label%3Ahotlist-yosemite&amp;colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified" target="_blank" rel="noopener">Google chrome helper not responding</a>还是没有解决，暂时用Safari。</li>
 </ul>
 <p><img src="http://xbin999.qiniudn.com/images/Googlehelper.png" alt=""></p>
 <ul>
 <li>QQ拼音打字在从候选字列表中选自时经常出错，比如是打“一堆”，暂时用原生的输入法。</li>
-<li>在<a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>更新后安装MacVim，提示“checking uint32_t is 32 bits… configure: error: WRONG!  uint32_t not defined correctly.”错误，参见<a href="https://github.com/Homebrew/homebrew/issues/33357" target="_blank" rel="external">macvim install failed in 10.10 #33357</a>，需要把XCode升级到6.1。升级后安装成功，再brew linkapps安装到/Applications 即可。</li>
+<li>在<a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a>更新后安装MacVim，提示“checking uint32_t is 32 bits… configure: error: WRONG!  uint32_t not defined correctly.”错误，参见<a href="https://github.com/Homebrew/homebrew/issues/33357" target="_blank" rel="noopener">macvim install failed in 10.10 #33357</a>，需要把XCode升级到6.1。升级后安装成功，再brew linkapps安装到/Applications 即可。</li>
 </ul>
 <p>最迫切的就是Google Chrome和Trim Enabler了，暂时先不折腾了。</p>
-<p>升级后的体验还得慢慢来，但升级后最想用的iOS协作却发现我的MacBook Pro太老了，都无法支持，呜呜。简单说一下：Yosemite和iOS协作最大的提升就是AirDrop在Mac和iOS设备间的共享、HandOff功能实现应用的无缝切换，不过不幸的是这两个功能都需要蓝牙4.0的支持，而我的MacBook Pro是2011年的，不支持蓝牙4.0。当然也有牛人替换了老设备的蓝牙，实现了<a href="http://bbs.feng.com/read-htm-tid-8418369.html" target="_blank" rel="external">黑、白苹果开Handoff教程 - ME294GM3亲测可用</a>。</p>
-<p>想要知道自己的设备是否支持蓝牙4.0，可以在”About This Mac”点”System report”，查看“Bluetooth”即可。 如果知道自己的设备年限，大致可参考<a href="http://www.macx.cn/thread-2130264-1-1.html" target="_blank" rel="external">OS X Yosemite 的 Handoff 功能可能不支持所有 Mac</a>，其中说到：</p>
+<p>升级后的体验还得慢慢来，但升级后最想用的iOS协作却发现我的MacBook Pro太老了，都无法支持，呜呜。简单说一下：Yosemite和iOS协作最大的提升就是AirDrop在Mac和iOS设备间的共享、HandOff功能实现应用的无缝切换，不过不幸的是这两个功能都需要蓝牙4.0的支持，而我的MacBook Pro是2011年的，不支持蓝牙4.0。当然也有牛人替换了老设备的蓝牙，实现了<a href="http://bbs.feng.com/read-htm-tid-8418369.html" target="_blank" rel="noopener">黑、白苹果开Handoff教程 - ME294GM3亲测可用</a>。</p>
+<p>想要知道自己的设备是否支持蓝牙4.0，可以在”About This Mac”点”System report”，查看“Bluetooth”即可。 如果知道自己的设备年限，大致可参考<a href="http://www.macx.cn/thread-2130264-1-1.html" target="_blank" rel="noopener">OS X Yosemite 的 Handoff 功能可能不支持所有 Mac</a>，其中说到：</p>
 <p><em>由于Continuity 的 Handoff 功能需要蓝牙4.0才能正常工作，这意味着并不是所有安装 OS X Yosemite 的 Mac 电脑都能用上 Handoff。2011年中期之后的 MacBook Air、2012年中期之后的 MacBook Pro、2012年末的 iMac、2011年中期的 Mac mini 和2013年末的 Mac Pro 才支持蓝牙4.0。</em></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/10/19/upgrade-Yosemite/" data-id="cj133pimy00op00c2137wsuky" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/10/19/upgrade-Yosemite/" data-id="cjmiwvb4900nk04c20nzknh2v" class="article-share-link">Share</a>
       
 
       
@@ -948,7 +949,7 @@ networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

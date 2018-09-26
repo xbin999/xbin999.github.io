@@ -6,11 +6,13 @@
   <title>为Sublime Text 2配置Ruby环境 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="“工欲善其事，必先利其器。”尤其对于像我这样的工具控来说，Ruby还没好好学，代码也没好好写，就想得先把写代码的环境给搞好。选了Sublime Text 2做为文本编辑工具（虽说常弹出个是否购买的提示，但心里还是觉得宁静些），然后开始找些插件，比如Alignment, Markdown Editing等。当然目标还是要搞定Ruby的环境。一开始其实没搞明白怎么运行，先看到了插件SublimeREP">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为Sublime Text 2配置Ruby环境">
 <meta property="og:url" content="http://xbin999.com/2013/06/30/为sublime-text-2配置ruby环境/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="“工欲善其事，必先利其器。”尤其对于像我这样的工具控来说，Ruby还没好好学，代码也没好好写，就想得先把写代码的环境给搞好。选了Sublime Text 2做为文本编辑工具（虽说常弹出个是否购买的提示，但心里还是觉得宁静些），然后开始找些插件，比如Alignment, Markdown Editing等。当然目标还是要搞定Ruby的环境。一开始其实没搞明白怎么运行，先看到了插件SublimeREP">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Sublime Text 2配置Ruby环境">
@@ -100,9 +102,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>“工欲善其事，必先利其器。”<br><br>尤其对于像我这样的工具控来说，Ruby还没好好学，代码也没好好写，就想得先把写代码的环境给搞好。选了<a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text 2</a>做为文本编辑工具（虽说常弹出个是否购买的提示，但心里还是觉得宁静些），然后开始找些插件，比如Alignment, Markdown Editing等。当然目标还是要搞定Ruby的环境。<br><br>一开始其实没搞明白怎么运行，先看到了插件SublimeREPL，里面可以运行Ruby解释环境。就先开始折腾SublimeREPL，安装挺容易，但运行Ruby，<a href="https://github.com/pry/pry" target="_blank" rel="external">pry</a>出错，<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems.rb:777:in <code>report_activate_error&#39;: Could not find RubyGem pry (&amp;gt;= 0) (Gem::LoadError)
+        <div id="wrapper"><br><br>“工欲善其事，必先利其器。”<br><br>尤其对于像我这样的工具控来说，Ruby还没好好学，代码也没好好写，就想得先把写代码的环境给搞好。选了<a href="http://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text 2</a>做为文本编辑工具（虽说常弹出个是否购买的提示，但心里还是觉得宁静些），然后开始找些插件，比如Alignment, Markdown Editing等。当然目标还是要搞定Ruby的环境。<br><br>一开始其实没搞明白怎么运行，先看到了插件SublimeREPL，里面可以运行Ruby解释环境。就先开始折腾SublimeREPL，安装挺容易，但运行Ruby，<a href="https://github.com/pry/pry" target="_blank" rel="noopener">pry</a>出错，<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems.rb:777:in <code>report_activate_error&#39;: Could not find RubyGem pry (&amp;gt;= 0) (Gem::LoadError)
     from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems.rb:211:in</code>activate’<br>    from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems.rb:1056:in <code>gem&#39;
-    from /Users/yangbin/Library/Application Support/Sublime Text 2/Packages/SublimeREPL/config/Ruby/pry_repl.rb:6</code><br><br>    IRB(deprecated)可以运行，不过版本是1.8，OS系统提供的，而非我的RVM中在用的1.9.3的版本。<br><br>    <a href="https://github.com/pry/pry" target="_blank" rel="external">pry</a>的问题折腾了我好久，直到发现了<a href="https://github.com/wuub/SublimeREPL/issues/168" target="_blank" rel="external">“Ruby REPL doesn’t work”</a>，我在pry_repl.rb中加入了测试代码：<br><br>    <pre><code>puts &quot;+++++++++++++++++++++++&quot;
+    from /Users/yangbin/Library/Application Support/Sublime Text 2/Packages/SublimeREPL/config/Ruby/pry_repl.rb:6</code><br><br>    IRB(deprecated)可以运行，不过版本是1.8，OS系统提供的，而非我的RVM中在用的1.9.3的版本。<br><br>    <a href="https://github.com/pry/pry" target="_blank" rel="noopener">pry</a>的问题折腾了我好久，直到发现了<a href="https://github.com/wuub/SublimeREPL/issues/168" target="_blank" rel="noopener">“Ruby REPL doesn’t work”</a>，我在pry_repl.rb中加入了测试代码：<br><br>    <pre><code>puts &quot;+++++++++++++++++++++++&quot;
     puts &quot;PATH:#{ENV[&#39;PATH&#39;]}&quot;
     puts &quot;GEM_PATH:#{ENV[&#39;GEM_PATH&#39;]}&quot;
     puts &quot;+++++++++++++++++++++++&quot;</code></pre><br><br>    发现输出的结果不对。<br><br>    再调整配置文件~/Library/Application Support/Sublime Text 2/Packages/User/SublimeREPL.sublime-settings为：<br><br>    <pre><code>{
@@ -115,12 +117,12 @@
     PATH:/usr/local/bin:/Users/yangbin/.rvm/rubies/ruby-1.9.3-p125/bin/:/usr/bin:/bin:/usr/sbin:/sbin
     GEM_PATH:/Users/yangbin/.rvm/gems/ruby-1.9.3-p125:/Users/yangbin/.rvm/gems/ruby-1.9.3-p125@global
     +++++++++++++++++++++++
-    [1] pry(main)&amp;gt;</code></pre><br><br>    而要在Sublime Text 2中直接运行Ruby程序，从菜单选择“Tools - Build”（Command + B）即可。这里也涉及Ruby环境的设置，如果要使用RVM，修改~/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.sublime-build文件：<br><br>    <pre>`<br>    {<br>        “cmd”: [“/Users/yangbin/.rvm/bin/rvm-auto-ruby”, “$file”],<br>        “file_regex”: “^(…<em>?):([0-9]</em>):?([0-9]*)”,<br>        “selector”: “source.ruby”<br>    }<br><br>参见<a href="https://coderwall.com/p/4-hzwq" target="_blank" rel="external">Make rvm and Sublime Text 2 play nice</a>。<br><br></pre></div>
+    [1] pry(main)&amp;gt;</code></pre><br><br>    而要在Sublime Text 2中直接运行Ruby程序，从菜单选择“Tools - Build”（Command + B）即可。这里也涉及Ruby环境的设置，如果要使用RVM，修改~/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.sublime-build文件：<br><br>    <pre>`<br>    {<br>        “cmd”: [“/Users/yangbin/.rvm/bin/rvm-auto-ruby”, “$file”],<br>        “file_regex”: “^(…<em>?):([0-9]</em>):?([0-9]*)”,<br>        “selector”: “source.ruby”<br>    }<br><br>参见<a href="https://coderwall.com/p/4-hzwq" target="_blank" rel="noopener">Make rvm and Sublime Text 2 play nice</a>。<br><br></pre></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/30/为sublime-text-2配置ruby环境/" data-id="cj133pirv00yq00c24ho19ysk" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/30/为sublime-text-2配置ruby环境/" data-id="cjmiwvb7l00wz04c2yg9sc9n7" class="article-share-link">Share</a>
       
 
       
@@ -255,7 +257,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/数据建模/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,16 +102,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一直比较困惑于在移动互联网中的数据模型设计到底应该是怎么样的？原先在做移动项目的时候，往往有较成熟的<a href="http://www.tmforum.org/BusinessProcessFramework/1647/home.html" target="_blank" rel="external">eTom</a>模型或者BOSS规范，从初始开始设计时就会从概念模型的角度出发。但现在往往被领导、产品经理、数据分析师所提的名词所困惑住，什么数据模型、数据建模、数据埋点、数据体系、指标体系，很多时候都在混用，但到底每个人心目中的数据模型或者建模又是指什么呢？很多时候这里还貌似没有开发的什么事？我就更迷糊了。</p>
+        <p>一直比较困惑于在移动互联网中的数据模型设计到底应该是怎么样的？原先在做移动项目的时候，往往有较成熟的<a href="http://www.tmforum.org/BusinessProcessFramework/1647/home.html" target="_blank" rel="noopener">eTom</a>模型或者BOSS规范，从初始开始设计时就会从概念模型的角度出发。但现在往往被领导、产品经理、数据分析师所提的名词所困惑住，什么数据模型、数据建模、数据埋点、数据体系、指标体系，很多时候都在混用，但到底每个人心目中的数据模型或者建模又是指什么呢？很多时候这里还貌似没有开发的什么事？我就更迷糊了。</p>
 <p>最近和产品、数据的同事有了进一步的交流，把自己的一点体会再理理。不同的角色对于数据的出发点和需求不同，而在一个系统的整体设计和实现中，数据的体现有不同层次，而数据也必然是和产品和业务相结合的。完整的业务模型应该包括数据模型和业务流程。而在数据体系上，从层次上我们可以划分为：指标体系 - 概念模型 - 逻辑模型 - 物理模型。（仓库的底层模型设计虽然不同，但也归结为此列）</p>
 <p>在产品设计的角度上往往看到的比较多的是UI界面，大部分PRD中提供的都是一个手机页面再接着一个手机页面，比如：</p>
 <blockquote>
 <p>下载 -》访问 -》注册 -》登录 -》游戏</p>
 </blockquote>
 <p>这个是业务流程，做得比较细的产品经理会在流程上标注出核心的业务数据。这也就是我们现阶段通常所说的数据埋点了。</p>
-<p>而从领导的角度来说，他更多看得是产品的成功与否如何来做衡量？这样往往一个产品设计开始就会先制定一些KPI指标，比如用户活跃度。如果指标是多维度的来做衡量的，这就是指标体系。（一个好的指标体系肯定不会是以单个指标来衡量的，比如<a href="http://www.ysy.me/2011/07/06/google-metrics-framework/" target="_blank" rel="external">谷歌衡量用户体验的指标体系</a>提到的HEART）</p>
+<p>而从领导的角度来说，他更多看得是产品的成功与否如何来做衡量？这样往往一个产品设计开始就会先制定一些KPI指标，比如用户活跃度。如果指标是多维度的来做衡量的，这就是指标体系。（一个好的指标体系肯定不会是以单个指标来衡量的，比如<a href="http://www.ysy.me/2011/07/06/google-metrics-framework/" target="_blank" rel="noopener">谷歌衡量用户体验的指标体系</a>提到的HEART）</p>
 <p>但是我认为这些都还不是数据建模或者数据模型，数据模型通常是会从中抽象出来概念模型，再经过设计和开发人员逐步细化到逻辑和物理模型。基于业务流程的数据埋点往往会偏重于主流程，分支可能会被忽略，另外维度也很可能考虑不全；而基于指标体系的数据设计关注点也会偏于狭窄，并且指标只是计算的结果，而如何计算得到的才是关键。而要保证从产品设计到最终实现，数据指标定义和提取的一致性，模型的建立和一致的理解还是非常关键的。</p>
-<p>我拿网上的一个<a href="http://www.socialbeta.cn/articles/how-facebook-uses-data.html" target="_blank" rel="external">Facebook设计主管谈如何利用数据做决策</a>来简单分析一下之间的区别：</p>
+<p>我拿网上的一个<a href="http://www.socialbeta.cn/articles/how-facebook-uses-data.html" target="_blank" rel="noopener">Facebook设计主管谈如何利用数据做决策</a>来简单分析一下之间的区别：</p>
 <blockquote>
 <p>Julie讲述了自己的产品设计团队通过数据来分析用户是如何利用不同功能的，她以图片上传功能为例进行讲述。她的团队得出了以下几个数据：</p>
 <ul>
@@ -144,7 +145,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/01/11/到底什么是数据模型和数据建模/" data-id="cj133pixv018000c29zugw20f" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/01/11/到底什么是数据模型和数据建模/" data-id="cjmiwvbbh016704c2a3qp2p1n" class="article-share-link">Share</a>
       
 
       
@@ -257,7 +258,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

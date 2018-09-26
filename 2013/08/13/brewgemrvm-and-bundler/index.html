@@ -6,11 +6,13 @@
   <title>brew,gem,rvm and bundler | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="brew,gem,rvm 和 bundler都是软件包的管理工具，搞过来搞过去，有点晕，需要理理。brew是OS X上提供软件包的管理。Homebrew将软件包安装到单独的目录，然后符号链接到/usr/local 中，完全基于git和ruby。使用gem来安装你的gems，用brew来搞定他们的依赖包。brew的安装：    ruby -e “$(curl -fsSL https://raw.gi">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="brew,gem,rvm and bundler">
 <meta property="og:url" content="http://xbin999.com/2013/08/13/brewgemrvm-and-bundler/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="brew,gem,rvm 和 bundler都是软件包的管理工具，搞过来搞过去，有点晕，需要理理。brew是OS X上提供软件包的管理。Homebrew将软件包安装到单独的目录，然后符号链接到/usr/local 中，完全基于git和ruby。使用gem来安装你的gems，用brew来搞定他们的依赖包。brew的安装：    ruby -e “$(curl -fsSL https://raw.gi">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="brew,gem,rvm and bundler">
@@ -100,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>brew,gem,rvm 和 bundler都是软件包的管理工具，搞过来搞过去，有点晕，需要理理。<br><br><a href="http://brew.sh/" target="_blank" rel="external"><strong>brew</strong></a>是OS X上提供软件包的管理。Homebrew将软件包安装到单独的目录，然后符号链接到/usr/local 中，完全基于git和ruby。使用gem来安装你的gems，用brew来搞定他们的依赖包。brew的安装：<br><br>    ruby -e “$(curl -fsSL <a href="https://raw.github.com/mxcl/homebrew/go" target="_blank" rel="external">https://raw.github.com/mxcl/homebrew/go</a>)”<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>brew,gem,rvm 和 bundler都是软件包的管理工具，搞过来搞过去，有点晕，需要理理。<br><br><a href="http://brew.sh/" target="_blank" rel="noopener"><strong>brew</strong></a>是OS X上提供软件包的管理。Homebrew将软件包安装到单独的目录，然后符号链接到/usr/local 中，完全基于git和ruby。使用gem来安装你的gems，用brew来搞定他们的依赖包。brew的安装：<br><br>    ruby -e “$(curl -fsSL <a href="https://raw.github.com/mxcl/homebrew/go)&quot;" target="_blank" rel="noopener">https://raw.github.com/mxcl/homebrew/go)&quot;</a><br>    <code>&lt;/pre&gt;
 
     [**RubyGems**](http://rubygems.org/)是一个包管理框架，提供了ruby社区gem的托管服务，用于方便地下载、安装和使用ruby软件包。ruby软件包被称为&quot;gem&quot;，包含了ruby应用或库。要升级到最新的RubyGems，运行：
 
@@ -118,12 +120,12 @@
 
     采用rvm安装ruby：
 
-    &lt;pre&gt;</code><br>    $ rvm list known<br>    $ rvm install 1.9.3<br>    $ rvm use 1.9.3<br><br><a href="http://bundler.io/" target="_blank" rel="external"><strong>Bundler</strong></a>为ruby维持一个一致性的环境，跟踪应用代码和所需要的ruby gems，这样一个应用可以有所需要的精确的gems（和版本）。<br><br>$ gem install bundler<br><br>安装的顺序，先安装rvm，之后选择安装一个ruby版本，就可以提供一个完整的ruby运行环境。之后可以安装brew（brew虽然是管理os的，但基于ruby）和gem，分别管理操作系统和ruby的软件包。之后ruby重新编译的时候所依赖的包可以使用brew安装。有了gem之后，bundler只不过就是一个gem，直接通过gem install 即可。<br><br></div>
+    &lt;pre&gt;</code><br>    $ rvm list known<br>    $ rvm install 1.9.3<br>    $ rvm use 1.9.3<br><br><a href="http://bundler.io/" target="_blank" rel="noopener"><strong>Bundler</strong></a>为ruby维持一个一致性的环境，跟踪应用代码和所需要的ruby gems，这样一个应用可以有所需要的精确的gems（和版本）。<br><br>$ gem install bundler<br><br>安装的顺序，先安装rvm，之后选择安装一个ruby版本，就可以提供一个完整的ruby运行环境。之后可以安装brew（brew虽然是管理os的，但基于ruby）和gem，分别管理操作系统和ruby的软件包。之后ruby重新编译的时候所依赖的包可以使用brew安装。有了gem之后，bundler只不过就是一个gem，直接通过gem install 即可。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/08/13/brewgemrvm-and-bundler/" data-id="cj133pife003c00c2rajxwlef" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/08/13/brewgemrvm-and-bundler/" data-id="cjmiwvaxx003304c2ak7mzdp2" class="article-share-link">Share</a>
       
 
       
@@ -258,7 +260,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

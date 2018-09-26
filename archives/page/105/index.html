@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/page/105/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -103,7 +104,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/29/什么是正交性/" data-id="cj133piu8012n00c26a9c16uc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/29/什么是正交性/" data-id="cjmiwvb95010u04c259y8y4rb" class="article-share-link">Share</a>
       
 
       
@@ -150,7 +151,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/29/割接教训/" data-id="cj133piy1018d00c2dkfg230z" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/29/割接教训/" data-id="cjmiwvbbm016k04c2xbbvm988" class="article-share-link">Share</a>
       
 
       
@@ -192,13 +193,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!199" class="bvMsg"><br><br>eygle提供的<a href="http://www.eygle.com/archives/2005/04/oracleoeouaeeae.html" target="_blank" rel="external"><font color="#ff0000">Oracle中大批量删除数据的方法</font></a>，感觉不错，解决了我现在的实际问题。<img src="http://spaces.msn.com/mmm2005-04-13_18.20/RTE/emoticons/smile_teeth.gif" alt=""><br><br>create or replace procedure delBigTab<br>(<br>p_TableName       in    varchar2,<br>p_Condition       in    varchar2,<br>p_Count        in    varchar2<br>)<br>as<br>pragma <strong>autonomous_transaction</strong>;<br>n_delete number:=0;<br>begin<br>while 1=1 loop<br>EXECUTE IMMEDIATE<br>‘delete from ‘||p_TableName||’ where ‘||p_Condition||’ and rownum &lt;= :rn’<br>USING p_Count;<br>if SQL%NOTFOUND then<br>exit;<br>else<br>n_delete:=n_delete + SQL%ROWCOUNT;<br>end if;<br>commit;<br>end loop;<br>commit;<br>DBMS_OUTPUT.PUT_LINE(‘Finished!’);<br>DBMS_OUTPUT.PUT_LINE(‘Totally ‘||to_char(n_delete)||’ records deleted!’);<br>end;<br><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!199" class="bvMsg"><br><br>eygle提供的<a href="http://www.eygle.com/archives/2005/04/oracleoeouaeeae.html" target="_blank" rel="noopener"><font color="#ff0000">Oracle中大批量删除数据的方法</font></a>，感觉不错，解决了我现在的实际问题。<img src="http://spaces.msn.com/mmm2005-04-13_18.20/RTE/emoticons/smile_teeth.gif" alt=""><br><br>create or replace procedure delBigTab<br>(<br>p_TableName       in    varchar2,<br>p_Condition       in    varchar2,<br>p_Count        in    varchar2<br>)<br>as<br>pragma <strong>autonomous_transaction</strong>;<br>n_delete number:=0;<br>begin<br>while 1=1 loop<br>EXECUTE IMMEDIATE<br>‘delete from ‘||p_TableName||’ where ‘||p_Condition||’ and rownum &lt;= :rn’<br>USING p_Count;<br>if SQL%NOTFOUND then<br>exit;<br>else<br>n_delete:=n_delete + SQL%ROWCOUNT;<br>end if;<br>commit;<br>end loop;<br>commit;<br>DBMS_OUTPUT.PUT_LINE(‘Finished!’);<br>DBMS_OUTPUT.PUT_LINE(‘Totally ‘||to_char(n_delete)||’ records deleted!’);<br>end;<br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/22/转oracle中大批量删除数据的方法/" data-id="cj133pjyp02be00c2sxjxbspo" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/22/转oracle中大批量删除数据的方法/" data-id="cjmiwvbxn029904c2ml8gt9b9" class="article-share-link">Share</a>
       
 
       
@@ -240,13 +241,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!196" class="bvMsg"><br><br> 　|　|定|詩|﹄|呼|隻|山|鴨|母|公|兒|寫|呵|甲|<br> 　|　|的|一|怎|嚕|有|羊|子|雞|雞|的|點|呵|骨|<br> 　|　|功|首|麼|呼|小|上|下|出|吹|兒|什|，|文|<br> 　|　|底|，|樣|嚕|豬|坡|田|門|響|歌|麼|有|？|<br> 　|　|吧|還|，|睡|不|練|練|做|起|不|吧|點|假|<br> 　|　|。|是|也|懶|鍛|長|游|早|床|錯|，|意|古|<br> 　|　|　|有|算|覺|煉|跑|泳|操|號|。|我|思|文|<br> 　|　|　|一|吟|。|，|，|，|，|，|﹃|女|。|？|<br><br><a href="http://cathayan.org/jiaguwen.html" target="_blank" rel="external">http://cathayan.org/jiaguwen.html</a><br><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!196" class="bvMsg"><br><br> 　|　|定|詩|﹄|呼|隻|山|鴨|母|公|兒|寫|呵|甲|<br> 　|　|的|一|怎|嚕|有|羊|子|雞|雞|的|點|呵|骨|<br> 　|　|功|首|麼|呼|小|上|下|出|吹|兒|什|，|文|<br> 　|　|底|，|樣|嚕|豬|坡|田|門|響|歌|麼|有|？|<br> 　|　|吧|還|，|睡|不|練|練|做|起|不|吧|點|假|<br> 　|　|。|是|也|懶|鍛|長|游|早|床|錯|，|意|古|<br> 　|　|　|有|算|覺|煉|跑|泳|操|號|。|我|思|文|<br> 　|　|　|一|吟|。|，|，|，|，|，|﹃|女|。|？|<br><br><a href="http://cathayan.org/jiaguwen.html" target="_blank" rel="noopener">http://cathayan.org/jiaguwen.html</a><br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/17/假古文/" data-id="cj133piw6015n00c2jdroisqi" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/17/假古文/" data-id="cjmiwvbac013t04c2zy4oxd8e" class="article-share-link">Share</a>
       
 
       
@@ -294,7 +295,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/10/数字电视/" data-id="cj133pjcf01qp00c2yv3skesw" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/10/数字电视/" data-id="cjmiwvbks01op04c275l938jb" class="article-share-link">Share</a>
       
 
       
@@ -342,7 +343,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/06/8020/" data-id="cj133pidy000q00c25s4hvvnq" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/06/8020/" data-id="cjmiwvaww000n04c2nrd47xbp" class="article-share-link">Share</a>
       
 
       
@@ -384,13 +385,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!180" class="bvMsg"><br><br>虽然知道浮点数不能做精确比较，不过还是经常会疏忽。前段时间看morphis, herfool的二次出帐代码，倒是学到了一个单词epsilon，印像深刻了<img src="http://spaces.msn.com/mmm2005-01-24_16.34/RTE/emoticons/smile_regular.gif" alt="">。<br><br>msdn上的一篇文章：<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/vccore/html/_core_Why_Floating_Point_Numbers_May_Lose_Precision.asp" target="_blank" rel="external">为何浮点数可能丢失精度</a><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!180" class="bvMsg"><br><br>虽然知道浮点数不能做精确比较，不过还是经常会疏忽。前段时间看morphis, herfool的二次出帐代码，倒是学到了一个单词epsilon，印像深刻了<img src="http://spaces.msn.com/mmm2005-01-24_16.34/RTE/emoticons/smile_regular.gif" alt="">。<br><br>msdn上的一篇文章：<a href="http://msdn.microsoft.com/library/chs/default.asp?url=/library/CHS/vccore/html/_core_Why_Floating_Point_Numbers_May_Lose_Precision.asp" target="_blank" rel="noopener">为何浮点数可能丢失精度</a><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/05/epsilon/" data-id="cj133pigf006e00c2nxyu4ry3" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/05/epsilon/" data-id="cjmiwvayw005v04c2eqjqqwhb" class="article-share-link">Share</a>
       
 
       
@@ -438,7 +439,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/05/转《华尔街日报》：房产泡沫破裂只是时间早晚问/" data-id="cj133pjyu02bg00c2nyhj0q6a" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/05/转《华尔街日报》：房产泡沫破裂只是时间早晚问/" data-id="cjmiwvbxp029d04c21plhc9mb" class="article-share-link">Share</a>
       
 
       
@@ -480,13 +481,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!173" class="bvMsg"><br><br>同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &quot;s/[[:cntrl:]]//g&quot;来做转换，简单写了个shell如下：<br><br>#!/bin/sh<br># name: dos2unix.sh<br># Creator: Bin Yang<br># Created data: 2005/04/04<br><br>if [ $# -lt 1 ]<br>then<br>    echo &quot;Usage: $0 filename&quot;<br>    return<br>fi<br><br>echo &quot;replace begin…&quot;<br>while [ $# -gt 0 ]<br>do<br>    filename=$1<br>    shift<br><br>    echo &quot;dealing with $filename… &quot;<br>    mv $filename .$filename.bak<br>    sed &quot;s/[[:cntrl:]]//g&quot; .$filename.bak &gt; $filename<br>done<br><br>echo &quot;replace end.&quot;<br><br>developerWorks上有不错的sed教程<a href="http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml" target="_blank" rel="external">http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml</a><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!173" class="bvMsg"><br><br>同事把windows前台编写的代码拿到后台，结果发现文件中的行末尾多了很多^M控制符。这是因为基于 DOS/Windows 的文本文件在每一行末尾有一个 CR（回车）和 LF（换行），而 UNIX 文本只有一个换行。可以使用sed &quot;s/[[:cntrl:]]//g&quot;来做转换，简单写了个shell如下：<br><br>#!/bin/sh<br># name: dos2unix.sh<br># Creator: Bin Yang<br># Created data: 2005/04/04<br><br>if [ $# -lt 1 ]<br>then<br>    echo &quot;Usage: $0 filename&quot;<br>    return<br>fi<br><br>echo &quot;replace begin…&quot;<br>while [ $# -gt 0 ]<br>do<br>    filename=$1<br>    shift<br><br>    echo &quot;dealing with $filename… &quot;<br>    mv $filename .$filename.bak<br>    sed &quot;s/[[:cntrl:]]//g&quot; .$filename.bak &gt; $filename<br>done<br><br>echo &quot;replace end.&quot;<br><br>developerWorks上有不错的sed教程<a href="http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml" target="_blank" rel="noopener">http://www-900.ibm.com/developerWorks/cn/linux/shell/sed/sed-1/index.shtml</a><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/04/04/sed简单应用/" data-id="cj133pild00ks00c2t0z3wee6" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/04/04/sed简单应用/" data-id="cjmiwvb2z00jt04c2e7v2stx0" class="article-share-link">Share</a>
       
 
       
@@ -534,7 +535,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/03/27/不要/" data-id="cj133pir400xi00c2md5g7wrq" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/03/27/不要/" data-id="cjmiwvb7400vs04c2yl9aq9u0" class="article-share-link">Share</a>
       
 
       
@@ -651,7 +652,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

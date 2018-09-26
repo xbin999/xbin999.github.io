@@ -6,11 +6,13 @@
   <title>throw:catch和raise:rescue的不同 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="看Exceptions, Catch, and Throw前半部分的时候听清楚的，Exceptions大家也都差不多，不就是定义异常，抛出异常，捕捉异常嘛，只不过ruby没有用try/catch/throw，而搞了套新名词，begin/rescue/else/ensure/end, raise罢了。可看到后半部分，又出现了catch/throw，就有点糊涂了。“While the exceptio">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="throw:catch和raise:rescue的不同">
 <meta property="og:url" content="http://xbin999.com/2013/06/29/throwcatch和raiserescue的不同/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="看Exceptions, Catch, and Throw前半部分的时候听清楚的，Exceptions大家也都差不多，不就是定义异常，抛出异常，捕捉异常嘛，只不过ruby没有用try/catch/throw，而搞了套新名词，begin/rescue/else/ensure/end, raise罢了。可看到后半部分，又出现了catch/throw，就有点糊涂了。“While the exceptio">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="throw:catch和raise:rescue的不同">
@@ -100,12 +102,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/tut_exceptions.html" target="_blank" rel="external">Exceptions, Catch, and Throw</a>前半部分的时候听清楚的，<a href="http://xbin999.com/2013/06/27/ruby-exception/">Exceptions</a>大家也都差不多，不就是定义异常，抛出异常，捕捉异常嘛，只不过ruby没有用try/catch/throw，而搞了套新名词，begin/rescue/else/ensure/end, raise罢了。<br><br>可看到后半部分，又出现了catch/throw，就有点糊涂了。<br><br>“While the exception mechanism of raise and rescue is great for abandoning execution when things go wrong, it’s sometimes nice to be able to jump out of some deeply nested construct during normal processing. This is where catch and throw come in handy.”<br><br>那例子也觉得绕。既然我都有了rescue/raise，还要catch/throw干嘛呢？<br><br>网上搜了一下，<a href="http://stackoverflow.com" target="_blank" rel="external">stackoverflow</a>和<a href="http://rubylearning.com" target="_blank" rel="external">rubylearning</a>分别有两篇好文章。一个是<a href="http://stackoverflow.com/questions/3716801/what-is-catch-and-throw-used-for-in-ruby" target="_blank" rel="external">What is catch and throw used for in Ruby?</a>，一个是<a href="http://rubylearning.com/blog/2011/07/12/throw-catch-raise-rescue-im-so-confused/" target="_blank" rel="external">Throw, Catch, Raise, Rescue… I’m so confused!</a>。<br><br>简单地说，rescue/raise是用来应对异常的，不过有的时候我们处理的不是异常，又需要简明优雅的方式能跳出一堆的处理流程（比如说退出多层嵌套的循环，往往我们要break），这时我们就可以使用catch/throw，有点嘎然而止的意味。<br><br>比如stackoverflow上的例子：<br><br>    INFINITY = 1.0 / 0.0<br>    catch (:done) do<br>      1.upto(INFINITY) do |i|<br>        1.upto(INFINITY) do |j|<br>          if some_condition<br>            throw :done<br>          end<br>        end<br>      end<br>    end<br><br>还有两篇文章都提到的实例<a href="http://www.sinatrarb.com/" target="_blank" rel="external">sintra</a>中在使用的halt，就是在halt方法中throw :halt，然后在invoke中catch该:halt信息，你可以在任何地方使用halt中止一个请求。<br><br>还有一个自己的理解，可以使用rescue/raise来实现，但rescue/raise通常是用来处理异常，需要堆栈调用信息，更重一些，效率上应该也有影响。<br><br><a href="http://www.sinatrarb.com/" target="_blank" rel="external">sintra</a>后面再找时间学习一下。<br><br></div>
+        <div id="wrapper"><br><br>看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/tut_exceptions.html" target="_blank" rel="noopener">Exceptions, Catch, and Throw</a>前半部分的时候听清楚的，<a href="http://xbin999.com/2013/06/27/ruby-exception/">Exceptions</a>大家也都差不多，不就是定义异常，抛出异常，捕捉异常嘛，只不过ruby没有用try/catch/throw，而搞了套新名词，begin/rescue/else/ensure/end, raise罢了。<br><br>可看到后半部分，又出现了catch/throw，就有点糊涂了。<br><br>“While the exception mechanism of raise and rescue is great for abandoning execution when things go wrong, it’s sometimes nice to be able to jump out of some deeply nested construct during normal processing. This is where catch and throw come in handy.”<br><br>那例子也觉得绕。既然我都有了rescue/raise，还要catch/throw干嘛呢？<br><br>网上搜了一下，<a href="http://stackoverflow.com" target="_blank" rel="noopener">stackoverflow</a>和<a href="http://rubylearning.com" target="_blank" rel="noopener">rubylearning</a>分别有两篇好文章。一个是<a href="http://stackoverflow.com/questions/3716801/what-is-catch-and-throw-used-for-in-ruby" target="_blank" rel="noopener">What is catch and throw used for in Ruby?</a>，一个是<a href="http://rubylearning.com/blog/2011/07/12/throw-catch-raise-rescue-im-so-confused/" target="_blank" rel="noopener">Throw, Catch, Raise, Rescue… I’m so confused!</a>。<br><br>简单地说，rescue/raise是用来应对异常的，不过有的时候我们处理的不是异常，又需要简明优雅的方式能跳出一堆的处理流程（比如说退出多层嵌套的循环，往往我们要break），这时我们就可以使用catch/throw，有点嘎然而止的意味。<br><br>比如stackoverflow上的例子：<br><br>    INFINITY = 1.0 / 0.0<br>    catch (:done) do<br>      1.upto(INFINITY) do |i|<br>        1.upto(INFINITY) do |j|<br>          if some_condition<br>            throw :done<br>          end<br>        end<br>      end<br>    end<br><br>还有两篇文章都提到的实例<a href="http://www.sinatrarb.com/" target="_blank" rel="noopener">sintra</a>中在使用的halt，就是在halt方法中throw :halt，然后在invoke中catch该:halt信息，你可以在任何地方使用halt中止一个请求。<br><br>还有一个自己的理解，可以使用rescue/raise来实现，但rescue/raise通常是用来处理异常，需要堆栈调用信息，更重一些，效率上应该也有影响。<br><br><a href="http://www.sinatrarb.com/" target="_blank" rel="noopener">sintra</a>后面再找时间学习一下。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/29/throwcatch和raiserescue的不同/" data-id="cj133pimm00nw00c2jmx0x0hd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/29/throwcatch和raiserescue的不同/" data-id="cjmiwvb4000mq04c2xy4x01xy" class="article-share-link">Share</a>
       
 
       
@@ -240,7 +242,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

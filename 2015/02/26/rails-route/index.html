@@ -5,19 +5,18 @@
   
   <title>Ruby on Rails的路由 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="路由就是用户输入URL地址，后端服务器能找到对应的处理程序。在Ruby on Rails中，我理解的路由（Route）主要和两件事情相关，一是将URL和http动作（Verb）映射到后端的控制器（Controller）对应的动作（Action）；二是页面返回时，需要将Rails 视图（Views）中常用的帮助方法（Helper）转换成路径（Path）或URL。
-路由的映射配置在config/rou">
+  <meta name="description" content="路由就是用户输入URL地址，后端服务器能找到对应的处理程序。在Ruby on Rails中，我理解的路由（Route）主要和两件事情相关，一是将URL和http动作（Verb）映射到后端的控制器（Controller）对应的动作（Action）；二是页面返回时，需要将Rails 视图（Views）中常用的帮助方法（Helper）转换成路径（Path）或URL。 路由的映射配置在config/rou">
+<meta name="keywords" content="IT,Ruby,ROR,route,Rails">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby on Rails的路由">
 <meta property="og:url" content="http://xbin999.com/2015/02/26/rails-route/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="路由就是用户输入URL地址，后端服务器能找到对应的处理程序。在Ruby on Rails中，我理解的路由（Route）主要和两件事情相关，一是将URL和http动作（Verb）映射到后端的控制器（Controller）对应的动作（Action）；二是页面返回时，需要将Rails 视图（Views）中常用的帮助方法（Helper）转换成路径（Path）或URL。
-路由的映射配置在config/rou">
+<meta property="og:description" content="路由就是用户输入URL地址，后端服务器能找到对应的处理程序。在Ruby on Rails中，我理解的路由（Route）主要和两件事情相关，一是将URL和http动作（Verb）映射到后端的控制器（Controller）对应的动作（Action）；二是页面返回时，需要将Rails 视图（Views）中常用的帮助方法（Helper）转换成路径（Path）或URL。 路由的映射配置在config/rou">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2015-02-26T07:44:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ruby on Rails的路由">
-<meta name="twitter:description" content="路由就是用户输入URL地址，后端服务器能找到对应的处理程序。在Ruby on Rails中，我理解的路由（Route）主要和两件事情相关，一是将URL和http动作（Verb）映射到后端的控制器（Controller）对应的动作（Action）；二是页面返回时，需要将Rails 视图（Views）中常用的帮助方法（Helper）转换成路径（Path）或URL。
-路由的映射配置在config/rou">
+<meta name="twitter:description" content="路由就是用户输入URL地址，后端服务器能找到对应的处理程序。在Ruby on Rails中，我理解的路由（Route）主要和两件事情相关，一是将URL和http动作（Verb）映射到后端的控制器（Controller）对应的动作（Action）；二是页面返回时，需要将Rails 视图（Views）中常用的帮助方法（Helper）转换成路径（Path）或URL。 路由的映射配置在config/rou">
 <meta name="twitter:creator" content="@xbin999">
   
     <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
@@ -185,7 +184,7 @@ resources :posts
 </code></pre>
 
 <p>这就生成了前面例子中有关Post的index, show, new, edit, create, update和destroy所有路由信息了。路由使用 HTTP 方法和 URL 匹配请求，把四个 URL结合不同的HTTP方法映射到七个不同的动作上。</p>
-<p>REST有主要有两个核心精神，参见<a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="external">RESTful 應用程式</a>：</p>
+<p>REST有主要有两个核心精神，参见<a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="noopener">RESTful 應用程式</a>：</p>
 <ul>
 <li>使用Resource来当做识别的资源，也就是使用一个URL网址來代表一个Resource。</li>
 <li>同一个Resource则可以有不同的Representations格式变化。</li>
@@ -194,16 +193,16 @@ resources :posts
 <p>基本的就是这样，具体路由为了简化书写，还有resource的嵌套，as别名，module/namespace/member/collection/scope多种组合形态，还可以用except/only做七个预设资源路由的限制，这个慢慢用到时再了解。</p>
 <p>参考文档：</p>
 <ul>
-<li><a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="external">RESTful 應用程式</a></li>
-<li><a href="https://ihower.tw/rails4/routing.html" target="_blank" rel="external">路由(Routing)</a></li>
-<li><a href="http://guides.ruby-china.org/routing.html" target="_blank" rel="external">Rails 路由全解 — Ruby on Rails 指南</a></li>
+<li><a href="https://ihower.tw/rails4/restful.html" target="_blank" rel="noopener">RESTful 應用程式</a></li>
+<li><a href="https://ihower.tw/rails4/routing.html" target="_blank" rel="noopener">路由(Routing)</a></li>
+<li><a href="http://guides.ruby-china.org/routing.html" target="_blank" rel="noopener">Rails 路由全解 — Ruby on Rails 指南</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2015/02/26/rails-route/" data-id="cj133pijn00go00c28s9hezjs" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2015/02/26/rails-route/" data-id="cjmiwvb1p00fp04c2d3wqghzf" class="article-share-link">Share</a>
       
 
       
@@ -338,7 +337,7 @@ resources :posts
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

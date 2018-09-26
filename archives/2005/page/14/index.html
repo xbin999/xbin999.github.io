@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/2005/page/14/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -97,13 +98,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!363" class="bvMsg"><br><br> 刚刚看到space上多了个“记录它&quot;的功能，试一下怎么效果。<br><br>顺便我也学会了怎么做个滚动条，用在《<a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!329.entry" target="_blank" rel="external">一篇旧稿</a>》上，谢谢cqingz和morphis。<br><br>什么时候找本合适的html教材看看，能快速入门的那种。<br><br><em>引用</em><br>&gt; <a href="http://spaces.msn.com/members/morphis/blog/cns!1pslHGgpONp1MxbB3ZwecLNw!204.entry" target="_blank" rel="external">美妙的Composite模式</a><br>&gt;<br>&gt; <div><br>&gt; <div><font color="#000000">最近重看’Design Pattern’， 对着例子写完了Composite模式，发现很有意思。突然还发现其实以前我用过它，在写一个小解析器的时候。</font></div><br>&gt; <div><font color="#000000"></font> </div><br>&gt; <div><font color="#000000">Design Pattern已经将OO发挥到了极致，但是C++除了OO还有强大的Generic，不知道两者结合会有怎样的杀伤力。</font></div><br>&gt; <div><font color="#000000"></font> </div><br>&gt; <div style="border-right:white 1px solid;border-top:white 1px solid;overflow:scroll;border-left:white 1px solid;border-bottom:medium none;height:200px;"><br>&gt; <div><font color="#000000">//a sample rewritten from Design Pattern<br>&gt; #include &lt;iostream&gt;<br>&gt; #include &lt;list&gt;</font></div><br>&gt; <div><font color="#000000"></font> </div><br>&gt; <div><font color="#000000">//Equipment<br>&gt; class Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         virtual ~Equipment() &#123;&#125;</font></div><br>&gt; <div><font color="#000000">protected:<br>&gt;         Equipment(const char <em> name, int price) : name<em>(name), price</em>(price) &#123;&#125;</em></font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         std::string getName() &#123; return name<em>; &#125;<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 return price</em>;<br>&gt;         &#125;</font></div><br>&gt; <div><font color="#000000">private:<br>&gt;         std::string name<em>;<br>&gt;         int price</em>;</font></div><br>&gt; <div><font color="#000000">&#125;;</font></div><br>&gt; <div><font color="#000000">//FloppyDisk<br>&gt; class FloppyDisk : public Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         FloppyDisk(const char  name, int price) : Equipment(name, price) &#123;&#125;<br>&gt;         ~FloppyDisk() &#123;&#125;</font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 return Equipment::getNetPrice();<br>&gt;         &#125;<br>&gt; &#125;;</font></div><br>&gt; <div><br>&gt; <font color="#000000">//Card<br>&gt; class Card : public Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         Card(const char <em> name, int price) : Equipment(name, price) &#123;&#125;<br>&gt;         ~Card() &#123;&#125;</em></font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 return Equipment::getNetPrice();<br>&gt;         &#125;<br>&gt; &#125;;</font></div><br>&gt; <div><font color="#000000">//CompositeEquipment<br>&gt; class CompositeEquipment : public Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         virtual ~CompositeEquipment() &#123;&#125;</font></div><br>&gt; <div><font color="#000000">protected:<br>&gt;         CompositeEquipment(const char  name, int price) : Equipment(name, price) &#123;&#125;</font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 int price = 0;<br>&gt;                 for (std::list&lt;Equipment *&gt;::iterator itr = equipment<em>list</em>.begin();<br>&gt;                         itr != equipment<em>list</em>.end();<br>&gt;                         ++ itr)<br>&gt;               &amp;</font></div></div></div><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!363" class="bvMsg"><br><br> 刚刚看到space上多了个“记录它&quot;的功能，试一下怎么效果。<br><br>顺便我也学会了怎么做个滚动条，用在《<a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!329.entry" target="_blank" rel="noopener">一篇旧稿</a>》上，谢谢cqingz和morphis。<br><br>什么时候找本合适的html教材看看，能快速入门的那种。<br><br>_引用_<br>&gt; <a href="http://spaces.msn.com/members/morphis/blog/cns!1pslHGgpONp1MxbB3ZwecLNw!204.entry" target="_blank" rel="noopener">美妙的Composite模式</a><br>&gt;<br>&gt; <div><br>&gt; <div><font color="#000000">最近重看’Design Pattern’， 对着例子写完了Composite模式，发现很有意思。突然还发现其实以前我用过它，在写一个小解析器的时候。</font></div><br>&gt; <div><font color="#000000"></font> </div><br>&gt; <div><font color="#000000">Design Pattern已经将OO发挥到了极致，但是C++除了OO还有强大的Generic，不知道两者结合会有怎样的杀伤力。</font></div><br>&gt; <div><font color="#000000"></font> </div><br>&gt; <div style="border-right:white 1px solid;border-top:white 1px solid;overflow:scroll;border-left:white 1px solid;border-bottom:medium none;height:200px;"><br>&gt; <div><font color="#000000">//a sample rewritten from Design Pattern<br>&gt; #include &lt;iostream&gt;<br>&gt; #include &lt;list&gt;</font></div><br>&gt; <div><font color="#000000"></font> </div><br>&gt; <div><font color="#000000">//Equipment<br>&gt; class Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         virtual ~Equipment() &#123;&#125;</font></div><br>&gt; <div><font color="#000000">protected:<br>&gt;         Equipment(const char <em> name, int price) : name_(name), price_(price) &#123;&#125;</em></font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         std::string getName() &#123; return name_; &#125;<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 return price_;<br>&gt;         &#125;</font></div><br>&gt; <div><font color="#000000">private:<br>&gt;         std::string name_;<br>&gt;         int price_;</font></div><br>&gt; <div><font color="#000000">&#125;;</font></div><br>&gt; <div><font color="#000000">//FloppyDisk<br>&gt; class FloppyDisk : public Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         FloppyDisk(const char  name, int price) : Equipment(name, price) &#123;&#125;<br>&gt;         ~FloppyDisk() &#123;&#125;</font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 return Equipment::getNetPrice();<br>&gt;         &#125;<br>&gt; &#125;;</font></div><br>&gt; <div><br>&gt; <font color="#000000">//Card<br>&gt; class Card : public Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         Card(const char <em> name, int price) : Equipment(name, price) &#123;&#125;<br>&gt;         ~Card() &#123;&#125;</em></font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 return Equipment::getNetPrice();<br>&gt;         &#125;<br>&gt; &#125;;</font></div><br>&gt; <div><font color="#000000">//CompositeEquipment<br>&gt; class CompositeEquipment : public Equipment<br>&gt; &#123;<br>&gt; public:<br>&gt;         virtual ~CompositeEquipment() &#123;&#125;</font></div><br>&gt; <div><font color="#000000">protected:<br>&gt;         CompositeEquipment(const char  name, int price) : Equipment(name, price) &#123;&#125;</font></div><br>&gt; <div><font color="#000000">public:<br>&gt;         virtual int getNetPrice()<br>&gt;         &#123;<br>&gt;                 int price = 0;<br>&gt;                 for (std::list&lt;Equipment *&gt;::iterator itr = equipment_list_.begin();<br>&gt;                         itr != equipment_list_.end();<br>&gt;                         ++ itr)<br>&gt;               &amp;</font></div></div></div><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/14/谈论美妙的composite模式/" data-id="cj133pjxh02ac00c24c5m1wle" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/14/谈论美妙的composite模式/" data-id="cjmiwvbx0028904c27px4d566" class="article-share-link">Share</a>
       
 
       
@@ -151,7 +152,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/12/火爆的超级女生/" data-id="cj133pjim01wv00c2zm3m8dqa" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/12/火爆的超级女生/" data-id="cjmiwvbof01us04c2jc0ymt5o" class="article-share-link">Share</a>
       
 
       
@@ -193,13 +194,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!355" class="bvMsg"><div>土豆上的<a href="http://www.toodou.com/items_4_channel.php?programID=7273" target="_blank" rel="external">乐乐频道</a>开通了，以后可以给大家放放声音，甚至小片子了。</div><br><div>这个《<a href="http://www.toodou.com/item_details.php?itemID=7929" target="_blank" rel="external">蚕宝宝</a>》不知有谁听得懂啊？小家伙在说的时候差点就死循环了，呵呵。</div><br><div> </div><br><div>P.S. 不知道有没有方法能把播放器直接嵌到msn space上来啊？</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!355" class="bvMsg"><div>土豆上的<a href="http://www.toodou.com/items_4_channel.php?programID=7273" target="_blank" rel="noopener">乐乐频道</a>开通了，以后可以给大家放放声音，甚至小片子了。</div><br><div>这个《<a href="http://www.toodou.com/item_details.php?itemID=7929" target="_blank" rel="noopener">蚕宝宝</a>》不知有谁听得懂啊？小家伙在说的时候差点就死循环了，呵呵。</div><br><div> </div><br><div>P.S. 不知道有没有方法能把播放器直接嵌到msn space上来啊？</div></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/10/乐乐念儿歌－蚕宝宝/" data-id="cj133pise00zi00c2cv4yi0s3" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/10/乐乐念儿歌－蚕宝宝/" data-id="cjmiwvb7v00xs04c2o7k7wcdb" class="article-share-link">Share</a>
       
 
       
@@ -241,12 +242,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!351" class="bvMsg"><div>这两天在参加培训，关于“高绩效团队”的，昨天下午5点就结束了，难得这么早，刚好就在文二路新华书店边上，不去都不好意思了。好久没买过书了，近两次买的都是给乐乐的，什么《半小时妈妈》、《宝宝的儿歌》、《三个小猪》等等，哈哈，还是卓有成效，乐乐都已经能背好几十首儿歌了，下次在<a href="http://space.toodou.com/xbin999/" target="_blank" rel="external">土豆</a>上开个频道给大家听听。不过是需要锻炼大家听力的噢。</div><br><div>开进书店，转晕了，东逛逛，西逛逛，也没什么目标。可能好久没买书了，都好久没看书了，什么都想看看，结果捎了一堆，看看书单吧：</div><br><div>余华《许三观卖血记》</div><br><div>林语堂《京华烟云》</div><br><div>余秋雨《文化苦旅》</div><br><div>Andrei Alexandrescu《C++设计新思维》</div><br><div>martin flower《重构》</div><br><div>够乱七八糟的了吧，刚刚课堂上老师说了，女人没目标的逛街，总会带回大包小包。我也是，买书的时候总想什么都买，往往也束之高阁，但愿这次带回的书不是衣服。</div><br><div>肯定要给maggie骂了，也不知道去当当或china-pub，还有折扣。虽然天天上网，但我还真的不习惯网上购物的方式，买书我也喜欢在书店里摸娑的感觉，我喜欢看到书页，看它的纸张，看她的风格，看它的字体，要舒服，呵呵。从培训课堂的测试来看，就是稍有点完美主义。</div><br><div>不过下次还是要尝试一下网上购书的滋味，银子也还是要节约的，上个月我本来在dearbook上下过一次单，结果没人理，后来居然连订单也不见了，打击太大。不知道谁能介绍和普及一下，哪个网站比较好，方便，最好在杭州也是货到付款的。</div><br><div> </div><br><div>P.S. 两天的培训还不错，<a href="http://yellowpage.chinahrd.net/YPages/11c9a497e9ce4ceca70295ef01287b5b.html" target="_blank" rel="external">老师</a>是从麦当劳出来的，听了许多汉堡包的故事，我喜欢巨无霸，呵呵。有机会再来说说体会吧。</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!351" class="bvMsg"><div>这两天在参加培训，关于“高绩效团队”的，昨天下午5点就结束了，难得这么早，刚好就在文二路新华书店边上，不去都不好意思了。好久没买过书了，近两次买的都是给乐乐的，什么《半小时妈妈》、《宝宝的儿歌》、《三个小猪》等等，哈哈，还是卓有成效，乐乐都已经能背好几十首儿歌了，下次在<a href="http://space.toodou.com/xbin999/" target="_blank" rel="noopener">土豆</a>上开个频道给大家听听。不过是需要锻炼大家听力的噢。</div><br><div>开进书店，转晕了，东逛逛，西逛逛，也没什么目标。可能好久没买书了，都好久没看书了，什么都想看看，结果捎了一堆，看看书单吧：</div><br><div>余华《许三观卖血记》</div><br><div>林语堂《京华烟云》</div><br><div>余秋雨《文化苦旅》</div><br><div>Andrei Alexandrescu《C++设计新思维》</div><br><div>martin flower《重构》</div><br><div>够乱七八糟的了吧，刚刚课堂上老师说了，女人没目标的逛街，总会带回大包小包。我也是，买书的时候总想什么都买，往往也束之高阁，但愿这次带回的书不是衣服。</div><br><div>肯定要给maggie骂了，也不知道去当当或china-pub，还有折扣。虽然天天上网，但我还真的不习惯网上购物的方式，买书我也喜欢在书店里摸娑的感觉，我喜欢看到书页，看它的纸张，看她的风格，看它的字体，要舒服，呵呵。从培训课堂的测试来看，就是稍有点完美主义。</div><br><div>不过下次还是要尝试一下网上购书的滋味，银子也还是要节约的，上个月我本来在dearbook上下过一次单，结果没人理，后来居然连订单也不见了，打击太大。不知道谁能介绍和普及一下，哪个网站比较好，方便，最好在杭州也是货到付款的。</div><br><div> </div><br><div>P.S. 两天的培训还不错，<a href="http://yellowpage.chinahrd.net/YPages/11c9a497e9ce4ceca70295ef01287b5b.html" target="_blank" rel="noopener">老师</a>是从麦当劳出来的，听了许多汉堡包的故事，我喜欢巨无霸，呵呵。有机会再来说说体会吧。</div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/09/买书是件快乐的事/" data-id="cj133pitl011f00c2uyxdmavk" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/09/买书是件快乐的事/" data-id="cjmiwvb8q00zp04c22u2ab29l" class="article-share-link">Share</a>
       
 
       
@@ -301,7 +302,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/07/“麦莎”过后游西湖/" data-id="cj133pipc00u300c2370h62k4" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/07/“麦莎”过后游西湖/" data-id="cjmiwvb5u00sg04c2odsh5gij" class="article-share-link">Share</a>
       
 
       
@@ -343,12 +344,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!329" class="bvMsg"><div><br><table cellspacing="0" cellpadding="0" width="100%" border="0"><br><tbody><br><tr><br><td><br><div align="left"><font color="#000066" size="2">转一篇以前的旧稿，59年的，闲逛看到的，没什么意义。（真不懂网站上居然还有这么老的稿子）只因为稿子的作者是纪静如－纪老师，又一位可敬的女性，很巧，也是北大才女。</font></div><br><div align="left"><font color="#000066" size="2">我的良师，她一直都把我当作小朋友。是她影响我从原先的学校里走了出来，然后一起走过了四年。70多的老人，一直都和我们这帮小伙子一起，投入的远远超出我们，为了她的信念。</font></div><br><div align="left"><font color="#000066" size="2">期间有过痛苦，有过收获，也有过苦闷，她对我的影响很多，虽然我后来离开了原先的公司，但还是一直很尊敬她，我永远的老师。</font></div><br><div align="left"><font color="#000066" size="2"></font> </div><br><div align="left"><strong><font color="#000066" size="2"></font></strong> </div><br><div align="center"><font color="#000066" size="2"><strong><a href="http://xinhua.0451.net/new2/200111632427.htm" target="_blank" rel="external">中国冰上运动几年来获得很大发展</a></strong></font></div></td></tr><br><tr><br><td><br><div style="border-right:black 2px solid;border-top:black 2px solid;overflow:scroll;border-left:black 2px solid;border-bottom:black 2px solid;height:200px;" align="left"><font size="2"><br><br>　　<strong>新华社哈尔滨１９５９年２月２０日电</strong>　（新华社记者<strong>马新仁、纪静如</strong>）报道：解放前只有极少数人参加而且从未举行过全国性比赛的冰上运动，在全国解放后不满十年的时间内，已经迅速地发展成为群众性的体育活动，并且已经有成批的优秀运动员成长起来了。<br>　　从１９５３年举行第一次全国冰上运动会到现在的六年中，速度滑冰的全国纪录几乎每年都要全部被刷新。第一届全国冰上运动会男子速滑全能冠军得分是二四三·一七二分，只相当于目前二级运动员的标准。今年成年男子速滑全能第八名的成绩（二一六·○○三分），已经远远地超过了１９５３年的全国冠军。最近去奥斯陆参加１９５９年世界男子速度滑冰锦标赛的著名选手王金玉和李太权的全能总分已提高到二○○分以内，都超过了运动健将标准。短距离五○○公尺速滑成绩，在第一届全国冰上运动会上李在雄创造的成绩是五十一秒四，不久前杨菊成在奥斯陆获得这项比赛世界亚军时创造的成绩是四十二秒四，整整提高了九秒钟。<br>　　我国速度滑冰选手从１９５７年开始参加了世界速度滑冰锦标赛。１９５８年，中国十七岁的女选手杨云香在世界比赛中，在十六名有资格获得四项全能比赛正式名次的各国选手中名列第十五。今年，中国十七岁的男选手王金玉在世界比赛中也在十六名有资格获得四项全能比赛正式名次的选手中名列第九。<br>　　花样滑冰比赛的要求比较严格，而且要求也在逐年提高，但是参加这项比赛的人数却越来越多。在今年全国冬季运动会上，东北三省、北京市、河北、内蒙古、中国人民解放军都派了选手参加比赛。这次运动会，有四十五名花样滑冰运动员在比赛和大会测验中达到等级运动员标准。这说明花样滑冰在许多地区已经形成群众爱好的体育活动。<br>　　冰球运动几年来也有很大发展。这项运动开展得比较早的哈尔滨市，它的代表队在过去几次全国比赛中球门都很少被对方攻破，而且多次以几十比零的压倒优势战胜对方。这几年哈尔滨队的冰球技术有了很大提高，但其他各地的冰球队的进步同样也很快。以原哈尔滨队队员为骨干组成的黑龙江冰球队，这次虽然在全国冬季运动会上荣获了全国冠军，但是和他比赛的吉林、北京、解放军各队，每场都攻入一球或数球。解放军队在对黑龙江队比赛时，六十分钟内共射入对方三球。<br>冰上运动的迅速发展，是和解放后，人民生活水平提高，以及国家对群众体育运动的重视分不开的。现在，不论在东北三省的各大、中、小城市，还是在北京、天津等地，冰刀、冰鞋都已成为商业部门必须准备的冬令物品和畅销物品之一。北方的城市每年都设有许多公共冰场或群众自办的冰场，免费或低费开放。根据辽宁、吉林、黑龙江三省十几个城市的不完全统计，１９５３年经常滑冰的只有一万八千人左右，１９５５年却增加到十七万人。而１９５８年入冬以来，单是哈尔滨一个城市，就有三十万人经常参加冰上运动。目前，在北方，滑冰运动已经普及到了一些县和人民公社。例如在吉林省和龙县，已有五十多处冰场（包括天然冰场），五千多双冰鞋；敦化县有冰场三十多处，冰鞋三千多双。少数民族地区冰上运动近几年来发展得更快。内蒙古自治区解放前只有少数有钱人家的子弟在呼和浩特玩玩冰球，现在几乎各盟、各旗都有冰球队，仅呼伦贝尔盟就有八个冰球队。宁夏回族自治区更是天然冰场布满全区，有很多人参加冰上运动。<br></font></div></td></tr></tbody></table></div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!329" class="bvMsg"><div><br><table cellspacing="0" cellpadding="0" width="100%" border="0"><br><tbody><br><tr><br><td><br><div align="left"><font color="#000066" size="2">转一篇以前的旧稿，59年的，闲逛看到的，没什么意义。（真不懂网站上居然还有这么老的稿子）只因为稿子的作者是纪静如－纪老师，又一位可敬的女性，很巧，也是北大才女。</font></div><br><div align="left"><font color="#000066" size="2">我的良师，她一直都把我当作小朋友。是她影响我从原先的学校里走了出来，然后一起走过了四年。70多的老人，一直都和我们这帮小伙子一起，投入的远远超出我们，为了她的信念。</font></div><br><div align="left"><font color="#000066" size="2">期间有过痛苦，有过收获，也有过苦闷，她对我的影响很多，虽然我后来离开了原先的公司，但还是一直很尊敬她，我永远的老师。</font></div><br><div align="left"><font color="#000066" size="2"></font> </div><br><div align="left"><strong><font color="#000066" size="2"></font></strong> </div><br><div align="center"><font color="#000066" size="2"><strong><a href="http://xinhua.0451.net/new2/200111632427.htm" target="_blank" rel="noopener">中国冰上运动几年来获得很大发展</a></strong></font></div></td></tr><br><tr><br><td><br><div style="border-right:black 2px solid;border-top:black 2px solid;overflow:scroll;border-left:black 2px solid;border-bottom:black 2px solid;height:200px;" align="left"><font size="2"><br><br>　　<strong>新华社哈尔滨１９５９年２月２０日电</strong>　（新华社记者<strong>马新仁、纪静如</strong>）报道：解放前只有极少数人参加而且从未举行过全国性比赛的冰上运动，在全国解放后不满十年的时间内，已经迅速地发展成为群众性的体育活动，并且已经有成批的优秀运动员成长起来了。<br>　　从１９５３年举行第一次全国冰上运动会到现在的六年中，速度滑冰的全国纪录几乎每年都要全部被刷新。第一届全国冰上运动会男子速滑全能冠军得分是二四三·一七二分，只相当于目前二级运动员的标准。今年成年男子速滑全能第八名的成绩（二一六·○○三分），已经远远地超过了１９５３年的全国冠军。最近去奥斯陆参加１９５９年世界男子速度滑冰锦标赛的著名选手王金玉和李太权的全能总分已提高到二○○分以内，都超过了运动健将标准。短距离五○○公尺速滑成绩，在第一届全国冰上运动会上李在雄创造的成绩是五十一秒四，不久前杨菊成在奥斯陆获得这项比赛世界亚军时创造的成绩是四十二秒四，整整提高了九秒钟。<br>　　我国速度滑冰选手从１９５７年开始参加了世界速度滑冰锦标赛。１９５８年，中国十七岁的女选手杨云香在世界比赛中，在十六名有资格获得四项全能比赛正式名次的各国选手中名列第十五。今年，中国十七岁的男选手王金玉在世界比赛中也在十六名有资格获得四项全能比赛正式名次的选手中名列第九。<br>　　花样滑冰比赛的要求比较严格，而且要求也在逐年提高，但是参加这项比赛的人数却越来越多。在今年全国冬季运动会上，东北三省、北京市、河北、内蒙古、中国人民解放军都派了选手参加比赛。这次运动会，有四十五名花样滑冰运动员在比赛和大会测验中达到等级运动员标准。这说明花样滑冰在许多地区已经形成群众爱好的体育活动。<br>　　冰球运动几年来也有很大发展。这项运动开展得比较早的哈尔滨市，它的代表队在过去几次全国比赛中球门都很少被对方攻破，而且多次以几十比零的压倒优势战胜对方。这几年哈尔滨队的冰球技术有了很大提高，但其他各地的冰球队的进步同样也很快。以原哈尔滨队队员为骨干组成的黑龙江冰球队，这次虽然在全国冬季运动会上荣获了全国冠军，但是和他比赛的吉林、北京、解放军各队，每场都攻入一球或数球。解放军队在对黑龙江队比赛时，六十分钟内共射入对方三球。<br>冰上运动的迅速发展，是和解放后，人民生活水平提高，以及国家对群众体育运动的重视分不开的。现在，不论在东北三省的各大、中、小城市，还是在北京、天津等地，冰刀、冰鞋都已成为商业部门必须准备的冬令物品和畅销物品之一。北方的城市每年都设有许多公共冰场或群众自办的冰场，免费或低费开放。根据辽宁、吉林、黑龙江三省十几个城市的不完全统计，１９５３年经常滑冰的只有一万八千人左右，１９５５年却增加到十七万人。而１９５８年入冬以来，单是哈尔滨一个城市，就有三十万人经常参加冰上运动。目前，在北方，滑冰运动已经普及到了一些县和人民公社。例如在吉林省和龙县，已有五十多处冰场（包括天然冰场），五千多双冰鞋；敦化县有冰场三十多处，冰鞋三千多双。少数民族地区冰上运动近几年来发展得更快。内蒙古自治区解放前只有少数有钱人家的子弟在呼和浩特玩玩冰球，现在几乎各盟、各旗都有冰球队，仅呼伦贝尔盟就有八个冰球队。宁夏回族自治区更是天然冰场布满全区，有很多人参加冰上运动。<br></font></div></td></tr></tbody></table></div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/05/一篇旧稿/" data-id="cj133piq200vk00c2wrx0xi1z" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/05/一篇旧稿/" data-id="cjmiwvb6c00tv04c2k6tdqjuy" class="article-share-link">Share</a>
       
 
       
@@ -396,7 +397,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/04/ruby-on-rails之父获得googleoreilly 05年度best-hacker/" data-id="cj133pikf00ie00c22cwovrlf" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/04/ruby-on-rails之父获得googleoreilly 05年度best-hacker/" data-id="cjmiwvb2700hf04c2as06ze7d" class="article-share-link">Share</a>
       
 
       
@@ -438,12 +439,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!324" class="bvMsg"><div>林昭，一个令人钦佩的女性。</div><br><div><font face="宋体">“我是林昭，你记下来，双木三十六之‘林’，刀在口上之日的‘昭’……你是谁？还有你们是谁？怎么不敢自报家门？”</font></div><br><div><font face="宋体">这是何等的豪气！！</font></div><br><div> </div><br><div>中国是一个善于遗忘的国度，尤其是对于历史。还是让我们记住<a href="http://cn.netor.com/m/box200012/m3356.asp?BoardID=3356" target="_blank" rel="external">民主先驱－永远的林昭</a>。</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!324" class="bvMsg"><div>林昭，一个令人钦佩的女性。</div><br><div><font face="宋体">“我是林昭，你记下来，双木三十六之‘林’，刀在口上之日的‘昭’……你是谁？还有你们是谁？怎么不敢自报家门？”</font></div><br><div><font face="宋体">这是何等的豪气！！</font></div><br><div> </div><br><div>中国是一个善于遗忘的国度，尤其是对于历史。还是让我们记住<a href="http://cn.netor.com/m/box200012/m3356.asp?BoardID=3356" target="_blank" rel="noopener">民主先驱－永远的林昭</a>。</div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/04/纪念林昭/" data-id="cj133pjoj022s00c2age4ck3w" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/04/纪念林昭/" data-id="cjmiwvbs5020p04c2r6jvswm1" class="article-share-link">Share</a>
       
 
       
@@ -490,7 +491,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/03/有事，没事都可以在这里留个言/" data-id="cj133pjf301tg00c26uirovn9" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/03/有事，没事都可以在这里留个言/" data-id="cjmiwvbm901rc04c25eu3h75p" class="article-share-link">Share</a>
       
 
       
@@ -532,12 +533,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!306" class="bvMsg"><div>&quot;当身陷一个组织中是，我们很容易就以为这个组织就是整个世界，我们担心一旦离开，是否就意味着安全网的消失，就意味着很多麻烦。但如果我的朋友中、尤其是那些年轻人，这样想的话，我会理解却有那么一点疑虑，因为对于一个青年来说，没有什么比勇敢更重要的品质了，那种安全感的消失，往往也意味着新世界的浮现。&quot;</div><br><div>——刚刚看到的许知远<a href="http://www.mindmeters.com/showlog.asp?cat_id=36&amp;log_id=1225" target="_blank" rel="external">辞职的文章</a>，牛人说的到底不一样。小波同学就具有那种勇敢的品质。也能给我们这些懒人一些激励。</div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!306" class="bvMsg"><div>&quot;当身陷一个组织中是，我们很容易就以为这个组织就是整个世界，我们担心一旦离开，是否就意味着安全网的消失，就意味着很多麻烦。但如果我的朋友中、尤其是那些年轻人，这样想的话，我会理解却有那么一点疑虑，因为对于一个青年来说，没有什么比勇敢更重要的品质了，那种安全感的消失，往往也意味着新世界的浮现。&quot;</div><br><div>——刚刚看到的许知远<a href="http://www.mindmeters.com/showlog.asp?cat_id=36&amp;log_id=1225" target="_blank" rel="noopener">辞职的文章</a>，牛人说的到底不一样。小波同学就具有那种勇敢的品质。也能给我们这些懒人一些激励。</div></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/08/03/lets-try-something-new/" data-id="cj133piia00by00c2cjycwvs6" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/08/03/lets-try-something-new/" data-id="cjmiwvb0g00b304c2eboalm8t" class="article-share-link">Share</a>
       
 
       
@@ -654,7 +655,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

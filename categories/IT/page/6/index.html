@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/categories/IT/page/6/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,17 +102,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前在safari中一直使用<a href="http://archive.robwilkerson.org/2010/06/16/add-to-google-reader-extension-for-safari-5/" target="_blank" rel="external">Add To Google Reader</a>订阅RSS，不过由于老外不必担心GFW，采用http即可，但是我使用的时候经常都很杯具的是http无法访问google，从而必须手工改成https，再刷新一次，很不爽。</p>
-<p>就像修改一下，去找代码，codaset已经不能访问。就到<a href="https://github.com/" target="_blank" rel="external">github</a>上找了个<a href="http://robwilkerson.org/" target="_blank" rel="external">Rob Wilkerson</a> 之前参考的版本，也就是<a href="http://github.com/Chupa" target="_blank" rel="external">Chupa</a>的<a href="http://github.com/Chupa/Read-in-Google-Reader" target="_blank" rel="external">源代码</a>。我也clone了他的代码，做了一些修改。</p>
+        <p>之前在safari中一直使用<a href="http://archive.robwilkerson.org/2010/06/16/add-to-google-reader-extension-for-safari-5/" target="_blank" rel="noopener">Add To Google Reader</a>订阅RSS，不过由于老外不必担心GFW，采用http即可，但是我使用的时候经常都很杯具的是http无法访问google，从而必须手工改成https，再刷新一次，很不爽。</p>
+<p>就像修改一下，去找代码，codaset已经不能访问。就到<a href="https://github.com/" target="_blank" rel="noopener">github</a>上找了个<a href="http://robwilkerson.org/" target="_blank" rel="noopener">Rob Wilkerson</a> 之前参考的版本，也就是<a href="http://github.com/Chupa" target="_blank" rel="noopener">Chupa</a>的<a href="http://github.com/Chupa/Read-in-Google-Reader" target="_blank" rel="noopener">源代码</a>。我也clone了他的代码，做了一些修改。</p>
 <p>一是采用https的方式访问google；</p>
 <p>二是点击RSS按钮后直接采用google reader订阅，而不需要选择iGoogle或Reader。</p>
-<p>你可以直接在target中<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension/raw/master/target/read-in-https-google-reader.safariextz" target="_blank" rel="external">下载</a>安装即可，或者在<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension" target="_blank" rel="external">read-in-https-google-reader</a>中得到源代码。</p>
+<p>你可以直接在target中<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension/raw/master/target/read-in-https-google-reader.safariextz" target="_blank" rel="noopener">下载</a>安装即可，或者在<a href="https://github.com/xbin999/read-in-https-google-reader.safariextension" target="_blank" rel="noopener">read-in-https-google-reader</a>中得到源代码。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/" data-id="cj133pj1i01d600c2xq2yt9vc" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/05/14/在safari中使用https-google-reader订阅rss/" data-id="cjmiwvbdt01bb04c2fe8kwmzi" class="article-share-link">Share</a>
       
 
       
@@ -158,13 +159,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--> 现象，存储过程调用外部c写的动态库函数decode解密偶尔会出错，原因：传递给decode的密文不能保障一定是合法解密结果。</p>
-<div style="font-family:Arial;">解密函数如下：</div><br><div style="font-family:Arial;">text <em> mydecode(text </em>t) {</div><br><div style="font-family:Arial;">char <em>p = decodeBytes((char </em>) VARDATA(t), VARSIZE(t) - VARHDRSZ);</div><br><div style="font-family:Arial;">text <em>new_t = (text </em>) palloc(strlen(p)+VARHDRSZ);</div><br><div style="font-family:Arial;">SET_VARSIZE(new_t, strlen(p)+VARHDRSZ);</div><br><div style="font-family:Arial;">memcpy((void <em>) VARDATA(new_t),(void</em>)p,strlen(p));</div><br><div style="font-family:Arial;">free(p);</div><br><div style="font-family:Arial;">return new_t;</div><br><div style="font-family:Arial;">}</div><br><div style="font-family:Arial;">对PG几乎也是一窍不通，下了它的<a href="http://www.postgresql.org/docs/" target="_blank" rel="external">文档</a>，就直接看C Language Functions，大概了解了一下。</div><br><div style="font-family:Arial;">上面的写法是c语言函数的版本-0调用风格，已经不提倡了。</div><br><div style="font-family:Arial;">text 是一个结构，length是存储文本长度，data是起始指针：</div><br><div style="font-family:Arial;">typedef struct {     integer length;     char data[1]; } text;</div><br><div style="font-family:Arial;">palloc用来分配内存，用了一些宏VARDATA, VARHDRSZ, SET_VARSIZE方便书写，不易出错。</div><br><div style="font-family:Arial;"><tt>（VARHDRSZ</tt> 和 <tt>sizeof(int4)</tt> 一样， 但是我们认为用宏 <tt>VARHDRSZ</tt> 表示附加尺寸是用于变长类型的更好的风格。）</div><br><div style="font-family:Arial;">找个测试环境，在.bash_profile中增加PG环境，PATH=$PATH:$HOME/bin:/usr/local/pgsql/bin/</div><br><div style="font-family:Arial;">编译代码，超简单的makefile：</div><br><div style="font-family:Arial;">MODULES = codetest</div><br><div style="font-family:Arial;">PGXS := $(shell pg_config –pgxs)</div><br><div style="font-family:Arial;">include $(PGXS)</div><br><div style="font-family:Arial;">引用了pg的makefile，这个真好，只需要修改MODULES的就行了。这里pg_config可以用于查看pg的配置：</div><br><div style="font-family:Arial;">[postgres@bi ~]$ pg_config –pgxs</div><br><div style="font-family:Arial;">/usr/local/pgsql/lib/pgxs/src/makefiles/pgxs.mk</div><br><div style="font-family:Arial;">然后将编译后生成的动态库复制到PG的lib目录下。</div><br><div style="font-family:Arial;">在数据库中创建函数和调用如下：</div><br><div style="font-family:Arial;">CREATE OR REPLACE FUNCTION myencode(text)<br><div>RETURNS text AS</div><br><div>‘codetest.so’, ‘myencode’</div><br><div>LANGUAGE c IMMUTABLE STRICT;</div><br><div>弄几个测试例子：</div><br></div><br><div style="font-family:Arial;">select mydecode(‘’);</div><br><div style="font-family:Arial;">select mydecode(‘z255’);</div><br><div style="font-family:Arial;">select mydecode(‘z2551’);</div><br><div style="font-family:Arial;">select mydecode(‘)7zED5A=’);</div><br><div style="font-family:Arial;">函数调用时会出错，数据库连接都断开了。查看后端的日志</div><br><div style="font-family:Arial;">[postgres@bi pg_log]$ tail -f /var/applog/pg_log/postgresql-2012-05-10_000000.csv</div><br><div style="font-family:Arial;">2012-05-10 13:29:50.765 CST,,,5825,,4f9dc310.16c1,126,,2012-04-30 06:39:12 CST,,0,LOG,00000,”server process (PID 20433) was terminated by signal 11: <span style="color:#ff1e18;">Segmentation fault</span>“,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:50.765 CST,,,5825,,4f9dc310.16c1,127,,2012-04-30 06:39:12 CST,,0,LOG,00000,”terminating any other active server processes”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:50.767 CST,,,5825,,4f9dc310.16c1,128,,2012-04-30 06:39:12 CST,,0,LOG,00000,”all server processes terminated; reinitializing”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.219 CST,,,20479,,4fab524f.4fff,1,,2012-05-10 13:29:51 CST,,0,LOG,00000,”database system was interrupted; last known up at 2012-05-10 13:27:38 CST”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.228 CST,,,20479,,4fab524f.4fff,2,,2012-05-10 13:29:51 CST,,0,LOG,00000,”database system was not properly shut down; automatic recovery in progress”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.269 CST,,,20479,,4fab524f.4fff,3,,2012-05-10 13:29:51 CST,,0,LOG,00000,”record with zero length at BF/1C615314”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.269 CST,,,20479,,4fab524f.4fff,4,,2012-05-10 13:29:51 CST,,0,LOG,00000,”redo is not required”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.278 CST,,,20479,,4fab524f.4fff,5,,2012-05-10 13:29:51 CST,,0,LOG,00000,”checkpoint starting: shutdown immediate”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.294 CST,,,20479,,4fab524f.4fff,6,,2012-05-10 13:29:51 CST,,0,LOG,00000,”checkpoint complete: wrote 0 buffers (0.0%); 0 transaction log file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.000 s, total=0.025 s”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.304 CST,,,20482,,4fab524f.5002,1,,2012-05-10 13:29:51 CST,,0,LOG,00000,”autovacuum launcher started”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.306 CST,,,5825,,4f9dc310.16c1,129,,2012-04-30 06:39:12 CST,,0,LOG,00000,”database system is ready to accept connections”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:52.232 CST,”postgres”,”postgres”,20484,”172.16.15.49:61169”,4fab5250.5004,1,”startup”,2012-05-10 13:29:52 CST,,0,FATAL,42704,”unrecognized configuration parameter “”application_name”””,,,,,,,,</div><br><div style="font-family:Arial;">应该还是的内存地址的引用出了问题，原代码中缺少写日志（要写了日志文件调试会好很多）。看了代码decodeBytes 可能会返回NULL，这导致了后续的strlen()函数出错。所以简单地修改了方法，增加空指针判断，如下：</div><br><div style="font-family:Arial;">if (p == NULL) {</div><br><div style="font-family:Arial;">p = malloc(1);</div><br><div style="font-family:Arial;">*p = ‘’;</div><br><div style="font-family:Arial;">}</div><br><div style="font-family:Arial;">问题得以解决。</div><br><div style="font-family:Arial;"></div><br><div style="font-family:Arial;">BTW. 好久未看代码了，没感觉。</div>
+<div style="font-family:Arial;">解密函数如下：</div><br><div style="font-family:Arial;">text <em> mydecode(text </em>t) {</div><br><div style="font-family:Arial;">char <em>p = decodeBytes((char </em>) VARDATA(t), VARSIZE(t) - VARHDRSZ);</div><br><div style="font-family:Arial;">text <em>new_t = (text </em>) palloc(strlen(p)+VARHDRSZ);</div><br><div style="font-family:Arial;">SET_VARSIZE(new_t, strlen(p)+VARHDRSZ);</div><br><div style="font-family:Arial;">memcpy((void <em>) VARDATA(new_t),(void</em>)p,strlen(p));</div><br><div style="font-family:Arial;">free(p);</div><br><div style="font-family:Arial;">return new_t;</div><br><div style="font-family:Arial;">}</div><br><div style="font-family:Arial;">对PG几乎也是一窍不通，下了它的<a href="http://www.postgresql.org/docs/" target="_blank" rel="noopener">文档</a>，就直接看C Language Functions，大概了解了一下。</div><br><div style="font-family:Arial;">上面的写法是c语言函数的版本-0调用风格，已经不提倡了。</div><br><div style="font-family:Arial;">text 是一个结构，length是存储文本长度，data是起始指针：</div><br><div style="font-family:Arial;">typedef struct {     integer length;     char data[1]; } text;</div><br><div style="font-family:Arial;">palloc用来分配内存，用了一些宏VARDATA, VARHDRSZ, SET_VARSIZE方便书写，不易出错。</div><br><div style="font-family:Arial;"><tt>（VARHDRSZ</tt> 和 <tt>sizeof(int4)</tt> 一样， 但是我们认为用宏 <tt>VARHDRSZ</tt> 表示附加尺寸是用于变长类型的更好的风格。）</div><br><div style="font-family:Arial;">找个测试环境，在.bash_profile中增加PG环境，PATH=$PATH:$HOME/bin:/usr/local/pgsql/bin/</div><br><div style="font-family:Arial;">编译代码，超简单的makefile：</div><br><div style="font-family:Arial;">MODULES = codetest</div><br><div style="font-family:Arial;">PGXS := $(shell pg_config –pgxs)</div><br><div style="font-family:Arial;">include $(PGXS)</div><br><div style="font-family:Arial;">引用了pg的makefile，这个真好，只需要修改MODULES的就行了。这里pg_config可以用于查看pg的配置：</div><br><div style="font-family:Arial;">[postgres@bi ~]$ pg_config –pgxs</div><br><div style="font-family:Arial;">/usr/local/pgsql/lib/pgxs/src/makefiles/pgxs.mk</div><br><div style="font-family:Arial;">然后将编译后生成的动态库复制到PG的lib目录下。</div><br><div style="font-family:Arial;">在数据库中创建函数和调用如下：</div><br><div style="font-family:Arial;">CREATE OR REPLACE FUNCTION myencode(text)<br><div>RETURNS text AS</div><br><div>‘codetest.so’, ‘myencode’</div><br><div>LANGUAGE c IMMUTABLE STRICT;</div><br><div>弄几个测试例子：</div><br></div><br><div style="font-family:Arial;">select mydecode(‘’);</div><br><div style="font-family:Arial;">select mydecode(‘z255’);</div><br><div style="font-family:Arial;">select mydecode(‘z2551’);</div><br><div style="font-family:Arial;">select mydecode(‘)7zED5A=’);</div><br><div style="font-family:Arial;">函数调用时会出错，数据库连接都断开了。查看后端的日志</div><br><div style="font-family:Arial;">[postgres@bi pg_log]$ tail -f /var/applog/pg_log/postgresql-2012-05-10_000000.csv</div><br><div style="font-family:Arial;">2012-05-10 13:29:50.765 CST,,,5825,,4f9dc310.16c1,126,,2012-04-30 06:39:12 CST,,0,LOG,00000,”server process (PID 20433) was terminated by signal 11: <span style="color:#ff1e18;">Segmentation fault</span>“,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:50.765 CST,,,5825,,4f9dc310.16c1,127,,2012-04-30 06:39:12 CST,,0,LOG,00000,”terminating any other active server processes”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:50.767 CST,,,5825,,4f9dc310.16c1,128,,2012-04-30 06:39:12 CST,,0,LOG,00000,”all server processes terminated; reinitializing”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.219 CST,,,20479,,4fab524f.4fff,1,,2012-05-10 13:29:51 CST,,0,LOG,00000,”database system was interrupted; last known up at 2012-05-10 13:27:38 CST”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.228 CST,,,20479,,4fab524f.4fff,2,,2012-05-10 13:29:51 CST,,0,LOG,00000,”database system was not properly shut down; automatic recovery in progress”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.269 CST,,,20479,,4fab524f.4fff,3,,2012-05-10 13:29:51 CST,,0,LOG,00000,”record with zero length at BF/1C615314”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.269 CST,,,20479,,4fab524f.4fff,4,,2012-05-10 13:29:51 CST,,0,LOG,00000,”redo is not required”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.278 CST,,,20479,,4fab524f.4fff,5,,2012-05-10 13:29:51 CST,,0,LOG,00000,”checkpoint starting: shutdown immediate”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.294 CST,,,20479,,4fab524f.4fff,6,,2012-05-10 13:29:51 CST,,0,LOG,00000,”checkpoint complete: wrote 0 buffers (0.0%); 0 transaction log file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.000 s, total=0.025 s”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.304 CST,,,20482,,4fab524f.5002,1,,2012-05-10 13:29:51 CST,,0,LOG,00000,”autovacuum launcher started”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:51.306 CST,,,5825,,4f9dc310.16c1,129,,2012-04-30 06:39:12 CST,,0,LOG,00000,”database system is ready to accept connections”,,,,,,,,</div><br><div style="font-family:Arial;">2012-05-10 13:29:52.232 CST,”postgres”,”postgres”,20484,”172.16.15.49:61169”,4fab5250.5004,1,”startup”,2012-05-10 13:29:52 CST,,0,FATAL,42704,”unrecognized configuration parameter “”application_name”””,,,,,,,,</div><br><div style="font-family:Arial;">应该还是的内存地址的引用出了问题，原代码中缺少写日志（要写了日志文件调试会好很多）。看了代码decodeBytes 可能会返回NULL，这导致了后续的strlen()函数出错。所以简单地修改了方法，增加空指针判断，如下：</div><br><div style="font-family:Arial;">if (p == NULL) {</div><br><div style="font-family:Arial;">p = malloc(1);</div><br><div style="font-family:Arial;">*p = ‘’;</div><br><div style="font-family:Arial;">}</div><br><div style="font-family:Arial;">问题得以解决。</div><br><div style="font-family:Arial;"></div><br><div style="font-family:Arial;">BTW. 好久未看代码了，没感觉。</div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/05/10/解决postgresql存储过程中调用c编写的动态库出错的问题/" data-id="cj133pjv3028c00c2bgvmuixz" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/05/10/解决postgresql存储过程中调用c编写的动态库出错的问题/" data-id="cjmiwvbvo026904c2o9hukkil" class="article-share-link">Share</a>
       
 
       
@@ -211,10 +212,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>看新浪微博上发图片的真是不少，分享资源的方式即使是pdf或ppt很多也都直接转成图片后直接分享了。</p>
-<p>周末和<a href="http://weibo.com/zhixin2003" target="_blank" rel="external">小乐</a>做了一个<a href="http://www.slideshare.net/xbin999/ss-12545682" target="_blank" rel="external">《大清皇帝人物图》</a>，上传到slideshare后，就想是否也可以直接转成图片呢？不过要我一张张片子拷贝粘贴就不愿意了，懒人找了一下懒办法，记录在此：</p>
+<p>周末和<a href="http://weibo.com/zhixin2003" target="_blank" rel="noopener">小乐</a>做了一个<a href="http://www.slideshare.net/xbin999/ss-12545682" target="_blank" rel="noopener">《大清皇帝人物图》</a>，上传到slideshare后，就想是否也可以直接转成图片呢？不过要我一张张片子拷贝粘贴就不愿意了，懒人找了一下懒办法，记录在此：</p>
 <p>1. 利用PowerPoint另存为图片的方式，会生成一个文件夹，里面一堆图片；</p>
-<p>2. 安装<a href="http://www.imagemagick.org/" target="_blank" rel="external">ImageMagick</a>，一个跨平台的命令行的图片处理工具；</p>
-<p>3. 使用命令：convert xxx*.jpg -append result.jpg，其中-append是纵向拼接。生成的图片在<a href="https://img.skitch.com/20120417-jmh4wusqk82fnn6eyxcucytbir.jpg" target="_blank" rel="external">这里</a>；</p>
+<p>2. 安装<a href="http://www.imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a>，一个跨平台的命令行的图片处理工具；</p>
+<p>3. 使用命令：convert xxx*.jpg -append result.jpg，其中-append是纵向拼接。生成的图片在<a href="https://img.skitch.com/20120417-jmh4wusqk82fnn6eyxcucytbir.jpg" target="_blank" rel="noopener">这里</a>；</p>
 <p>真心喜欢命令行，有充分的自由度。</p>
 <p><img src="https://img.skitch.com/20120417-jmh4wusqk82fnn6eyxcucytbir.jpg" alt=""></p>
 
@@ -222,7 +223,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/04/17/将ppt转成长微博图片/" data-id="cj133pj5701hy00c25s21h6xb" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/04/17/将ppt转成长微博图片/" data-id="cjmiwvbga01g504c2ur2iip22" class="article-share-link">Share</a>
       
 
       
@@ -268,7 +269,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>看到<a href="http://www.36kr.com/p/86016.html" target="_blank" rel="external">Evernote Hello更加人性化</a>，更新试用了一下，感觉重要的两点：</p>
+        <p>看到<a href="http://www.36kr.com/p/86016.html" target="_blank" rel="noopener">Evernote Hello更加人性化</a>，更新试用了一下，感觉重要的两点：</p>
 <p>一是提供了搜索按钮，可以快速匹配；</p>
 <p>二是和手机通讯录的链接，以前只能单向把Evernote Hello中的联系人添加到通讯录中，现在可以选择通讯录中的人名；</p>
 <p><img src="http://blog.evernote.com/wp-content/uploads/2012/02/hello_mosaic.jpg" alt=""></p>
@@ -276,14 +277,14 @@
 <blockquote>
 <p>“The second option—choosing an attendee from an upcoming calendar appointment—is only available if you have calendar events scheduled within an hour before and an hour after the current time.”</p>
 </blockquote>
-<p>参见“<a href="https://support.evernote.com/link/portal/16051/16058/Article/2378/Evernote-Hello-Adding-People" target="_blank" rel="external">Evernote Hello Adding People</a>”。</p>
+<p>参见“<a href="https://support.evernote.com/link/portal/16051/16058/Article/2378/Evernote-Hello-Adding-People" target="_blank" rel="noopener">Evernote Hello Adding People</a>”。</p>
 <p>虽然没怎么用（因为我基本上都不怎么见人），还是觉得这个应用很赞，适合于常见客户的。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/02/24/evernote-hello帮你记住刚见面的人/" data-id="cj133pigg006h00c24gw1u3by" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/02/24/evernote-hello帮你记住刚见面的人/" data-id="cjmiwvayw005y04c2oil6jt79" class="article-share-link">Share</a>
       
 
       
@@ -330,7 +331,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在上次思考了《<a href="http://xbin999.com/?p=776">到底什么是数据模型和数据建模</a>》后，继续胡思乱想，最近思路有点改变，不再想希望能集合一群人（有点类似咨询团队，这也许比较适合于运营商吧）来讨论设计能出一个比较理想的数据模型，转而分点突破，比如考虑用户行为中的下载或者付费，由点及面或者现阶段更合适些。</p>
-<p>在和同事讨论下载行为的过程中，对于如何来提炼用户行为的数据模型，借鉴一下<a href="http://wiki.mbalib.com/wiki/5W1H分析法" target="_blank" rel="external">5W+1H</a>方法，整理了下图，我把它称之为”5W1H1R”分析方法。</p>
+<p>在和同事讨论下载行为的过程中，对于如何来提炼用户行为的数据模型，借鉴一下<a href="http://wiki.mbalib.com/wiki/5W1H分析法" target="_blank" rel="noopener">5W+1H</a>方法，整理了下图，我把它称之为”5W1H1R”分析方法。</p>
 <p><img src="https://img.skitch.com/20120203-x3nt5u4n2rd7ps7ey95tmm15pq.jpg" alt="5W1H1R"></p>
 <p>看看图很简单，而且貌似不同的行业、不同的系统也许都一样，但这里还是有移动互联网所独特的地方，并且要想真正回答清楚这些问题，其实也不是一件容易的事情。</p>
 <p>1. Who</p>
@@ -354,7 +355,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/02/03/移动互联网数据模型分析方法-5w1h1r/" data-id="cj133pjmw021700c28q1i32zx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/02/03/移动互联网数据模型分析方法-5w1h1r/" data-id="cjmiwvbr501z304c20s913v6h" class="article-share-link">Share</a>
       
 
       
@@ -401,29 +402,29 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>虽然平时喜欢折腾手机，但是发现真的想要介绍一款产品时候，却往往不会描述。这次公司在黄山战略会上时突然意识到这个严重的问题，几乎大部分介绍的产品我都用了，但要说使用体会时却不知从何说起。总结一下一是以前在工作上往往是偏于后端的，象以前做账务系统，动不动就是架构或者性能，很少从前端的用户体验上描述；二是平时微博发多了，要么是slides，思维导图的形式，往往都是简短几句概要。所以需要强迫改变一下自己，写点文字，并且让自己从产品使用的角度来学习如何描述。</p>
-<p>先从自己平时用的最多的微博客户端来练练，在iphone上我装了有三个微博相关的APP，分别是<a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="external">FIT™ 随享</a> 新浪微博客户端，<a href="http://itunes.apple.com/cn/app/id350962117?mt=8" target="_blank" rel="external">新浪官方微博客户端</a>，<a href="http://itunes.apple.com/us/app/id392682745?mt=8" target="_blank" rel="external">Weico 新浪微博客户端</a>（我用的是免费版本），以下的对比图片排列从左到右次序分别为FIT，新浪，Weico。</p>
+<p>先从自己平时用的最多的微博客户端来练练，在iphone上我装了有三个微博相关的APP，分别是<a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="noopener">FIT™ 随享</a> 新浪微博客户端，<a href="http://itunes.apple.com/cn/app/id350962117?mt=8" target="_blank" rel="noopener">新浪官方微博客户端</a>，<a href="http://itunes.apple.com/us/app/id392682745?mt=8" target="_blank" rel="noopener">Weico 新浪微博客户端</a>（我用的是免费版本），以下的对比图片排列从左到右次序分别为FIT，新浪，Weico。</p>
 <p>我从我自己使用的几个角度，读是第一位的（很多人都是只看不说的，虽然我实在搞不懂悄悄关注有啥意思）。新浪和Weico的阅读窗口大体相同，比较中规中矩，相比FIT提供全屏阅读，让人获得更好的浏览效果，看窗口中同样的两条微博信息，FIT可以看到更多的内容，也可以集中焦点在阅读上。</p>
 <p><img src="https://img.skitch.com/20120117-r4bbrxi2tcnthpnd5ihy4s6bpx.jpg" alt="weibo-1"></p>
-<p>其次是社交属性，微博必然带来用户之间的互动，如何让用户在@和评论上更快捷方便，这一点上FIT也是领先一筹。最常用的三大联系法宝“@，评论，私信”，FIT直接在第一入口就提供，而新浪和Weico都需要先点击消息，才能在上方的“@我，评论，私信”显示，多了一级入口。再来看底部工具栏中多出的”广场”和”我的资料”功能，FIT都把它放于”更多…”，这一点值得赞赏。对于我来说，我计划很少会使用广场这样的功能，形同鸡肋。而动不动去看“我的资料”，我想也只会在最开始的时候会老去关注自己有几个粉丝吧，放在“更多…”足以。当然俺家<a href="http://weibo.com/zhixin2003" target="_blank" rel="external">小乐</a>还是会经常关注自己的粉丝的，欢迎关注。</p>
+<p>其次是社交属性，微博必然带来用户之间的互动，如何让用户在@和评论上更快捷方便，这一点上FIT也是领先一筹。最常用的三大联系法宝“@，评论，私信”，FIT直接在第一入口就提供，而新浪和Weico都需要先点击消息，才能在上方的“@我，评论，私信”显示，多了一级入口。再来看底部工具栏中多出的”广场”和”我的资料”功能，FIT都把它放于”更多…”，这一点值得赞赏。对于我来说，我计划很少会使用广场这样的功能，形同鸡肋。而动不动去看“我的资料”，我想也只会在最开始的时候会老去关注自己有几个粉丝吧，放在“更多…”足以。当然俺家<a href="http://weibo.com/zhixin2003" target="_blank" rel="noopener">小乐</a>还是会经常关注自己的粉丝的，欢迎关注。</p>
 <p><img src="https://img.skitch.com/20120117-mrfpd5sicc2yur67pftygugb61.jpg" alt="weibo-2"></p>
 <p>在用户互动的时候，@的功能至关重用，相比这一点，新浪和Weico都提供了最近联系人的功能，相比在输入上更快捷些。</p>
 <p><img src="https://img.skitch.com/20120117-bgprgk9qe7ndbue7js6yhg9m1i.jpg" alt="weibo-3"></p>
-<p>第三我觉得微博上一个分享的重要功能是照片，随手拍照随手分享，各客户端都提供了照片分享和地理位置分享的功能。不过在图片分享上，Weico技高一筹，支持多图，还可以拼图，特效（这是我用Weico来管理<a href="http://weibo.com/zhixin2003" target="_blank" rel="external">小乐</a>账号的最大原因，从第一幅图Weico右上角的相机图标也可以看出Weico对拍照分享的高度重视），而FIT虽然允许多图，但只能把各个图片按次序连接，新浪就直接只提供单张图片的分享了。</p>
+<p>第三我觉得微博上一个分享的重要功能是照片，随手拍照随手分享，各客户端都提供了照片分享和地理位置分享的功能。不过在图片分享上，Weico技高一筹，支持多图，还可以拼图，特效（这是我用Weico来管理<a href="http://weibo.com/zhixin2003" target="_blank" rel="noopener">小乐</a>账号的最大原因，从第一幅图Weico右上角的相机图标也可以看出Weico对拍照分享的高度重视），而FIT虽然允许多图，但只能把各个图片按次序连接，新浪就直接只提供单张图片的分享了。</p>
 <p>最后比一下我的资料，由于FIT是在“更多…”中集成，相对比较紧凑，符合我的风格，Weico有趣的是在显示个人资料的时候同时把自己的微博也做了显示，我还是觉得多此一举，浪费流量。</p>
 <p><img src="https://img.skitch.com/20120117-dw1wqnxqd8xdnjnsbyj1qufbe.jpg" alt="weibo-4"></p>
-<p>其他<a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="external">FIT™ 随享</a>还提供了一些比较有趣的功能，让我感觉他们做的一些细致的地方：</p>
+<p>其他<a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="noopener">FIT™ 随享</a>还提供了一些比较有趣的功能，让我感觉他们做的一些细致的地方：</p>
 <p>比如在阅读微博时，从左到右滑动屏幕就会出现“评论，转发，收藏”等功能，可以和全屏互补，阅读和书写良好结合；</p>
 <p>还有比如向下滑动更新，除了提示“更新中…”外，还会告诉你一些使用技巧，如“你可以直接分享你正在挺的iPod歌曲”。</p>
-<p>还有一点非常重要的是，<a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="external">FIT™ 随享</a>同时集成了FIT输入法（虽然我自己又单独安装了FIT输入法），其输入在ios上的方便，FIT K9及ios的原生键盘都让你在书写时带来愉悦的感觉。</p>
+<p>还有一点非常重要的是，<a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="noopener">FIT™ 随享</a>同时集成了FIT输入法（虽然我自己又单独安装了FIT输入法），其输入在ios上的方便，FIT K9及ios的原生键盘都让你在书写时带来愉悦的感觉。</p>
 <p><img src="https://img.skitch.com/20120117-eew73a4nibe68u53qwywsy4r1r.jpg" alt="weibo-4"></p>
-<p>综上所述，对于我个人来说我更喜欢<span style="color:#053bee;font-size:12px;"><span style="text-decoration:underline;"><a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="external">FIT™ 随享</a></span></span><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;">的风格，简洁优美，注重细节，最后给</span></span><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;"><a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="external">FIT™ 随享</a></span></span><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;">提点建议就是能提供@的常用联系人以及优化拼图功能。</span></span></p>
-<p><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;">最后做个广告，关注<a href="http://weibo.com/zhixin2003" target="_blank" rel="external">叽里呱啦的小乐</a>，能早日突破100粉丝。（我有私心，粉丝多点，她会有写的兴趣，锻炼锻炼写作能力，哈哈）</span></span></p>
+<p>综上所述，对于我个人来说我更喜欢<span style="color:#053bee;font-size:12px;"><span style="text-decoration:underline;"><a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="noopener">FIT™ 随享</a></span></span><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;">的风格，简洁优美，注重细节，最后给</span></span><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;"><a href="http://itunes.apple.com/us/app/id433846107?mt=8" target="_blank" rel="noopener">FIT™ 随享</a></span></span><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;">提点建议就是能提供@的常用联系人以及优化拼图功能。</span></span></p>
+<p><span style="color:#053bee;font-size:12px;"><span style="color:#000000;font-size:medium;">最后做个广告，关注<a href="http://weibo.com/zhixin2003" target="_blank" rel="noopener">叽里呱啦的小乐</a>，能早日突破100粉丝。（我有私心，粉丝多点，她会有写的兴趣，锻炼锻炼写作能力，哈哈）</span></span></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/01/17/三款微博手机客户端的比较/" data-id="cj133piqj00wg00c2kx22q2w9" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/01/17/三款微博手机客户端的比较/" data-id="cjmiwvb6n00um04c2xe5xkelv" class="article-share-link">Share</a>
       
 
       
@@ -469,16 +470,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一直比较困惑于在移动互联网中的数据模型设计到底应该是怎么样的？原先在做移动项目的时候，往往有较成熟的<a href="http://www.tmforum.org/BusinessProcessFramework/1647/home.html" target="_blank" rel="external">eTom</a>模型或者BOSS规范，从初始开始设计时就会从概念模型的角度出发。但现在往往被领导、产品经理、数据分析师所提的名词所困惑住，什么数据模型、数据建模、数据埋点、数据体系、指标体系，很多时候都在混用，但到底每个人心目中的数据模型或者建模又是指什么呢？很多时候这里还貌似没有开发的什么事？我就更迷糊了。</p>
+        <p>一直比较困惑于在移动互联网中的数据模型设计到底应该是怎么样的？原先在做移动项目的时候，往往有较成熟的<a href="http://www.tmforum.org/BusinessProcessFramework/1647/home.html" target="_blank" rel="noopener">eTom</a>模型或者BOSS规范，从初始开始设计时就会从概念模型的角度出发。但现在往往被领导、产品经理、数据分析师所提的名词所困惑住，什么数据模型、数据建模、数据埋点、数据体系、指标体系，很多时候都在混用，但到底每个人心目中的数据模型或者建模又是指什么呢？很多时候这里还貌似没有开发的什么事？我就更迷糊了。</p>
 <p>最近和产品、数据的同事有了进一步的交流，把自己的一点体会再理理。不同的角色对于数据的出发点和需求不同，而在一个系统的整体设计和实现中，数据的体现有不同层次，而数据也必然是和产品和业务相结合的。完整的业务模型应该包括数据模型和业务流程。而在数据体系上，从层次上我们可以划分为：指标体系 - 概念模型 - 逻辑模型 - 物理模型。（仓库的底层模型设计虽然不同，但也归结为此列）</p>
 <p>在产品设计的角度上往往看到的比较多的是UI界面，大部分PRD中提供的都是一个手机页面再接着一个手机页面，比如：</p>
 <blockquote>
 <p>下载 -》访问 -》注册 -》登录 -》游戏</p>
 </blockquote>
 <p>这个是业务流程，做得比较细的产品经理会在流程上标注出核心的业务数据。这也就是我们现阶段通常所说的数据埋点了。</p>
-<p>而从领导的角度来说，他更多看得是产品的成功与否如何来做衡量？这样往往一个产品设计开始就会先制定一些KPI指标，比如用户活跃度。如果指标是多维度的来做衡量的，这就是指标体系。（一个好的指标体系肯定不会是以单个指标来衡量的，比如<a href="http://www.ysy.me/2011/07/06/google-metrics-framework/" target="_blank" rel="external">谷歌衡量用户体验的指标体系</a>提到的HEART）</p>
+<p>而从领导的角度来说，他更多看得是产品的成功与否如何来做衡量？这样往往一个产品设计开始就会先制定一些KPI指标，比如用户活跃度。如果指标是多维度的来做衡量的，这就是指标体系。（一个好的指标体系肯定不会是以单个指标来衡量的，比如<a href="http://www.ysy.me/2011/07/06/google-metrics-framework/" target="_blank" rel="noopener">谷歌衡量用户体验的指标体系</a>提到的HEART）</p>
 <p>但是我认为这些都还不是数据建模或者数据模型，数据模型通常是会从中抽象出来概念模型，再经过设计和开发人员逐步细化到逻辑和物理模型。基于业务流程的数据埋点往往会偏重于主流程，分支可能会被忽略，另外维度也很可能考虑不全；而基于指标体系的数据设计关注点也会偏于狭窄，并且指标只是计算的结果，而如何计算得到的才是关键。而要保证从产品设计到最终实现，数据指标定义和提取的一致性，模型的建立和一致的理解还是非常关键的。</p>
-<p>我拿网上的一个<a href="http://www.socialbeta.cn/articles/how-facebook-uses-data.html" target="_blank" rel="external">Facebook设计主管谈如何利用数据做决策</a>来简单分析一下之间的区别：</p>
+<p>我拿网上的一个<a href="http://www.socialbeta.cn/articles/how-facebook-uses-data.html" target="_blank" rel="noopener">Facebook设计主管谈如何利用数据做决策</a>来简单分析一下之间的区别：</p>
 <blockquote>
 <p>Julie讲述了自己的产品设计团队通过数据来分析用户是如何利用不同功能的，她以图片上传功能为例进行讲述。她的团队得出了以下几个数据：</p>
 <ul>
@@ -512,7 +513,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/01/11/到底什么是数据模型和数据建模/" data-id="cj133pixv018000c29zugw20f" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/01/11/到底什么是数据模型和数据建模/" data-id="cjmiwvbbh016704c2a3qp2p1n" class="article-share-link">Share</a>
       
 
       
@@ -561,15 +562,15 @@
         <p>写博客的人貌似越来越少了，尤其是独立博客，原先订阅的feeds很多都长久没有更新了，前两天把feed理了一把，先把80%以上的给砍了，一下子觉得清爽了好多。于是也又有了打开Google reader的兴趣，虽然新改版的界面让我觉得上面的工具栏太宽了些。</p>
 <p>看的过程中有时还是难免想随手分享一下，buzz已经over了，twitter和facebook要翻墙，能看到的人也不多，所以想能分享到新浪微博上，可Send to 工具栏上是没有分享到新浪微博的选项。不过打开设置，看了一下Send To是支持自定义的，自己设置一下即可。</p>
 <p>Name: 新浪微博</p>
-<p>URL: <a href="http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}" target="_blank" rel="external">http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}</a></p>
-<p>Icon Url: <a href="http://t.sina.com.cn/favicon.ico" target="_blank" rel="external">http://t.sina.com.cn/favicon.ico</a></p>
-<p>《<span class="Apple-style-span" style="color:#000000;font-size:17px;line-height:25px;"><a href="http://hanz188.iteye.com/blog/654473" target="_blank" rel="external">二十个Google Reader分享功能Send To技巧</a></span>》这里还有更详细的分享技巧。</p>
+<p>URL: <a href="http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}" target="_blank" rel="noopener">http://v.t.sina.com.cn/share/share.php?title=${title}&amp;url=${url}&amp;source=${source}</a></p>
+<p>Icon Url: <a href="http://t.sina.com.cn/favicon.ico" target="_blank" rel="noopener">http://t.sina.com.cn/favicon.ico</a></p>
+<p>《<span class="Apple-style-span" style="color:#000000;font-size:17px;line-height:25px;"><a href="http://hanz188.iteye.com/blog/654473" target="_blank" rel="noopener">二十个Google Reader分享功能Send To技巧</a></span>》这里还有更详细的分享技巧。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/11/30/在google-reader中设置分享到新浪微博/" data-id="cj133pj1e01cz00c2uxgl1y5c" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/11/30/在google-reader中设置分享到新浪微博/" data-id="cjmiwvbdq01b504c2q4ouu717" class="article-share-link">Share</a>
       
 
       
@@ -630,7 +631,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cj133pj8k01m100c2cv8occsh" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/10/31/悲剧的self-assigned-ip?dress/" data-id="cjmiwvbia01k604c2q3qu96y9" class="article-share-link">Share</a>
       
 
       
@@ -676,14 +677,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div>刚想换算一下港币，google能直接告诉我们答案，不过一开始输入的查询语句有问题，后来改成“<a href="http://www.google.com.hk/#hl=zh-CN&amp;source=hp&amp;q=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;oq=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=e&amp;gs_upl=1882l6890l0l7169l31l14l0l0l0l0l0l0ll0l0&amp;bav=cf.osb&amp;fp=4c2aaa88d72919d4&amp;biw=1239&amp;bih=670" target="_blank" rel="external">1港币等于多少人民币</a>”才行。</div></p>
+        <p><div>刚想换算一下港币，google能直接告诉我们答案，不过一开始输入的查询语句有问题，后来改成“<a href="http://www.google.com.hk/#hl=zh-CN&amp;source=hp&amp;q=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;oq=1%E6%B8%AF%E5%B8%81%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%E4%BA%BA%E6%B0%91%E5%B8%81&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=e&amp;gs_upl=1882l6890l0l7169l31l14l0l0l0l0l0l0ll0l0&amp;bav=cf.osb&amp;fp=4c2aaa88d72919d4&amp;biw=1239&amp;bih=670" target="_blank" rel="noopener">1港币等于多少人民币</a>”才行。</div></p>
 <p><div>不过也正因为此，想去找一个mac下的汇率计算工具，才发现Calculator就提供了这一功能，选择”Convert - Currency”，真是方便。</div><br><img src="https://img.skitch.com/20111016-jsj3eijarcm3yfhr5rh1kcaqy7.jpg" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/10/17/slugs-6/" data-id="cj133pilu00m700c2gv3rw7jx" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/10/17/slugs-6/" data-id="cjmiwvb3f00l204c2ljxrds6j" class="article-share-link">Share</a>
       
 
       
@@ -800,7 +801,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

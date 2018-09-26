@@ -5,22 +5,18 @@
   
   <title>Google Drive无法登录 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版一文，主要是Google Drive登录并没有能走SS代理，只有通过Privoxy代理将http/https转发到SS。
-不过我尝试使用：
-1forward-socks5 .google.com 127">
+  <meta name="description" content="我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版一文，主要是Google Drive登录并没有能走SS代理，只有通过Privoxy代理将http/https转发到SS。 不过我尝试使用： 1forward-socks5 .google.com 127">
+<meta name="keywords" content="IT,ShadowSocks,Google Drive">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Google Drive无法登录">
 <meta property="og:url" content="http://xbin999.com/2017/02/18/Google Drive无法登录/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版一文，主要是Google Drive登录并没有能走SS代理，只有通过Privoxy代理将http/https转发到SS。
-不过我尝试使用：
-1forward-socks5 .google.com 127">
+<meta property="og:description" content="我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版一文，主要是Google Drive登录并没有能走SS代理，只有通过Privoxy代理将http/https转发到SS。 不过我尝试使用： 1forward-socks5 .google.com 127">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-02-18T04:32:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Google Drive无法登录">
-<meta name="twitter:description" content="我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版一文，主要是Google Drive登录并没有能走SS代理，只有通过Privoxy代理将http/https转发到SS。
-不过我尝试使用：
-1forward-socks5 .google.com 127">
+<meta name="twitter:description" content="我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版一文，主要是Google Drive登录并没有能走SS代理，只有通过Privoxy代理将http/https转发到SS。 不过我尝试使用： 1forward-socks5 .google.com 127">
 <meta name="twitter:creator" content="@xbin999">
   
     <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
@@ -102,25 +98,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照<a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="external">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a>一文，主要是Google Drive登录并没有能走SS代理，只有通过<a href="https://www.privoxy.org/" target="_blank" rel="external">Privoxy</a>代理将http/https转发到SS。</p>
+        <p>我将ShadowSocks设置成全局，但Google Drive在出现登录页面后，输入用户名和密码还是无法登录。参照<a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="noopener">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a>一文，主要是Google Drive登录并没有能走SS代理，只有通过<a href="https://www.privoxy.org/" target="_blank" rel="noopener">Privoxy</a>代理将http/https转发到SS。</p>
 <p>不过我尝试使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forward-socks5 .google.com 127.0.0.1:1080</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forward-socks5 .google.com 127.0.0.1:1080</span><br></pre></td></tr></table></figure>
 <p>能一直登录到最后，但完成后就显示是未登录。无奈只有把域名改成”/”全匹配，但这样造成所有http/https都会走shadowsocks代理。</p>
 <p>有关Privoxy的启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Applications/Privoxy&gt; sudo ./stopPrivoxy.sh ; sudo ./startPrivoxy.sh</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/Privoxy&gt; sudo ./stopPrivoxy.sh ; sudo ./startPrivoxy.sh</span><br></pre></td></tr></table></figure>
 <p>参考：</p>
 <ul>
-<li><a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="external">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a></li>
-<li><a href="https://wutong.me/archives/472.html" target="_blank" rel="external">实现Charles和Shadowsocks的共存</a></li>
-<li><a href="https://gist.github.com/Alexniver/9a4f1791fe4305b0750a" target="_blank" rel="external">ubuntu下, 使用shadowsock和Privoxy帮助你在命令行中, 无障碍进行go get</a></li>
-<li><a href="https://www.zfanw.com/blog/privoxy-tutorial.html" target="_blank" rel="external">Privoxy 简明教程</a></li>
+<li><a href="https://wutong.me/archives/493.html/comment-page-1#comment-5" target="_blank" rel="noopener">Google云端硬盘登录出现“无法登录，请稍后再试”的原因排查和解决方案（Mac版</a></li>
+<li><a href="https://wutong.me/archives/472.html" target="_blank" rel="noopener">实现Charles和Shadowsocks的共存</a></li>
+<li><a href="https://gist.github.com/Alexniver/9a4f1791fe4305b0750a" target="_blank" rel="noopener">ubuntu下, 使用shadowsock和Privoxy帮助你在命令行中, 无障碍进行go get</a></li>
+<li><a href="https://www.zfanw.com/blog/privoxy-tutorial.html" target="_blank" rel="noopener">Privoxy 简明教程</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2017/02/18/Google Drive无法登录/" data-id="cj133pie1000x00c209pkv3lr" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2017/02/18/Google Drive无法登录/" data-id="cjmiwvawz000v04c2ky9m3o5g" class="article-share-link">Share</a>
       
 
       
@@ -255,7 +251,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

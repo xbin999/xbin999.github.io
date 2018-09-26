@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/ssh/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>连不上ssh有一段时间了，因要出去玩，也就没在意它，回来后发现还是如此，看来是哪里出问题了。<br><br>看<a href="https://www.123ssh.com/yihaotong.php" target="_blank" rel="external">服务器地址</a>说明，多了个混淆SSH端口，是443和2222，一开始没在意混淆的概念，以为就是端口地址变了，就在命令上指定了“-p 443”，但还是连接不上。<br><br>再细注意，发现还有个混淆加密密钥，而man ssh居然没有这个obfuscated。才感觉需要探究一下这混淆是啥意思呢？<br><br><a href="http://blog.slpo.net/" target="_blank" rel="external">DZF</a>上有一篇<a href="http://blog.slpo.net/?p=1234" target="_blank" rel="external">Obfuscated ssh</a>的安装说明，而在<a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="external">obfuscated-openssh</a>介绍到Handshake obfuscation，握手混淆，通过混淆加密key来加强了初始的SSH握手。越来越复杂了。<br><br><a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="external">obfuscated-openssh</a>在openssh客户端上增加了obfuscated handshake协议，客户端会多两个-z，-Z的参数。不管那么多，按提示先装一个：<br><br>    $ wget -o ofcssh.zip <a href="https://github.com/brl/obfuscated-openssh/archive/master.zip" target="_blank" rel="external">https://github.com/brl/obfuscated-openssh/archive/master.zip</a><br>    $ unzip ofcssh.zip<br>    $ cd obfuscated-openssh-master<br>    $ ./configure<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>连不上ssh有一段时间了，因要出去玩，也就没在意它，回来后发现还是如此，看来是哪里出问题了。<br><br>看<a href="https://www.123ssh.com/yihaotong.php" target="_blank" rel="noopener">服务器地址</a>说明，多了个混淆SSH端口，是443和2222，一开始没在意混淆的概念，以为就是端口地址变了，就在命令上指定了“-p 443”，但还是连接不上。<br><br>再细注意，发现还有个混淆加密密钥，而man ssh居然没有这个obfuscated。才感觉需要探究一下这混淆是啥意思呢？<br><br><a href="http://blog.slpo.net/" target="_blank" rel="noopener">DZF</a>上有一篇<a href="http://blog.slpo.net/?p=1234" target="_blank" rel="noopener">Obfuscated ssh</a>的安装说明，而在<a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="noopener">obfuscated-openssh</a>介绍到Handshake obfuscation，握手混淆，通过混淆加密key来加强了初始的SSH握手。越来越复杂了。<br><br><a href="https://github.com/brl/obfuscated-openssh" target="_blank" rel="noopener">obfuscated-openssh</a>在openssh客户端上增加了obfuscated handshake协议，客户端会多两个-z，-Z的参数。不管那么多，按提示先装一个：<br><br>    $ wget -o ofcssh.zip <a href="https://github.com/brl/obfuscated-openssh/archive/master.zip" target="_blank" rel="noopener">https://github.com/brl/obfuscated-openssh/archive/master.zip</a><br>    $ unzip ofcssh.zip<br>    $ cd obfuscated-openssh-master<br>    $ ./configure<br>    <code>&lt;/pre&gt;
     结果不幸出现错误如下：
     &lt;pre&gt;</code><br>    checking OpenSSL header version… 90812f (OpenSSL 0.9.8r 8 Feb 2011)<br>    checking OpenSSL library version… 90818f (OpenSSL 0.9.8x 10 May 2012)<br>    checking whether OpenSSL’s headers match the library… no<br>    configure: error: Your OpenSSL headers do not match your<br>    library. Check config.log for details.<br>    <code>&lt;/pre&gt;
     又是这该死的openssl，之前记得用brew装过openssl:
@@ -111,12 +112,12 @@
     果然，还是1.0.1e版，重新配置：
     &lt;pre&gt;</code><br>    $ ./configure –with-ssl-dir=/usr/local/Cellar/openssl/1.0.1e/<br>    $ make<br>    <code>&lt;/pre&gt;
     又出错了：
-    &lt;pre&gt;</code><br>    Undefined symbols for architecture x86_64:<br>      “_res_9_dn_expand”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getlong”, referenced from:<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getshort”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_init”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_query”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>    ld: symbol(s) not found for architecture x86_64<br><br>需要<a href="https://discussions.apple.com/thread/2546848?start=0&amp;tstart=0" target="_blank" rel="external">修改Makefile，在LDFLAGS后增加lresolv</a>，总算编译成功。<br><br>$ make install<br><br>如果涉及权限问题，自行加上sudo。安装后的程序在/usr/local/bin，使用带有obfuscated handshake功能的ssh：<br><br>$ /usr/local/bin/ssh -NT -f -D 1080 -p 443 -Z obfascatedkey username@sshhost<br><br>大功告成，亲个嘴吧。<br><br>有需要购买ssh的话，点击<a href="https://www.123ssh.com/aff.php?aff=087" target="_blank" rel="external">我的推广链接</a>。<br><br></div>
+    &lt;pre&gt;</code><br>    Undefined symbols for architecture x86_64:<br>      “_res_9_dn_expand”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getlong”, referenced from:<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_getshort”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>          _parse_dns_rrsection in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_init”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>      “_res_9_query”, referenced from:<br>          _getrrsetbyname in libopenbsd-compat.a(getrrsetbyname.o)<br>    ld: symbol(s) not found for architecture x86_64<br><br>需要<a href="https://discussions.apple.com/thread/2546848?start=0&amp;tstart=0" target="_blank" rel="noopener">修改Makefile，在LDFLAGS后增加lresolv</a>，总算编译成功。<br><br>$ make install<br><br>如果涉及权限问题，自行加上sudo。安装后的程序在/usr/local/bin，使用带有obfuscated handshake功能的ssh：<br><br>$ /usr/local/bin/ssh -NT -f -D 1080 -p 443 -Z obfascatedkey username@sshhost<br><br>大功告成，亲个嘴吧。<br><br>有需要购买ssh的话，点击<a href="https://www.123ssh.com/aff.php?aff=087" target="_blank" rel="noopener">我的推广链接</a>。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/09/04/使用带有obfuscated-handshake的ssh/" data-id="cj133pivz015c00c2yoncgdof" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/09/04/使用带有obfuscated-handshake的ssh/" data-id="cjmiwvba9013j04c24zrxdc81" class="article-share-link">Share</a>
       
 
       
@@ -162,13 +163,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原先<a href="http://xbin999.com/?p=597">有ssh的账号</a>，在mac上翻墙倒也不麻烦，下了个secret socks，略微配置一下连上usassh。<div><img src="https://img.skitch.com/20110916-tksy79fudfipndy8sx65yxqhtm.jpg" alt=""></div><div>直接勾选“Update network settings”，提示输入root口令后，就会直接修改网络中的设置以sock方式访问。这时打开safari就可以翻墙了。</div><div>不过这种方式的缺陷还是所有的站点访问都会走ssh，国内很多站点的访问速度会有影响。还是想能改成智能点的，只有自己需要的站点访问就好了。</div><div>采用PAC的方案，我把原先chrome中的<a href="https://chrome.google.com/webstore/detail/bgfkhjmcnkmegdmagboackgipbdpomke" target="_blank" rel="external">proxy switchy</a>设置的列表导出成一个pac文件，然后在网络中设置代理方式为“自动代理配置”，同时提供配置文件。</div><div><img src="https://img.skitch.com/20110916-xs1pbcrj12xd5tnm2ukgyjrnmk.jpg" alt=""></div><div>从<a href="http://www.google.com.hk/search?hl=zh-CN&amp;newwindow=1&amp;safe=strict&amp;client=safari&amp;rls=en&amp;q=secret+socks+mac+pac&amp;oq=secret+socks+mac+pac&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=s&amp;gs_upl=2648l2648l1l4787l1l1l0l0l0l0l0l0ll0l0" target="_blank" rel="external">google的结果</a>来看都说很简单，这样就ok了，可是俺死活没搞通。瞎折腾了半天，要么都访问不了，要么就是走的ssh通道。</div><div>奇了个怪了！</div><div>后来忽然想是否我的pac文件不对，于是自己写了个最简单的pac文件：</div><div><div>function FindProxyForURL(url, host)</div><div>{</div><div>&nbsp; &nbsp; &nbsp; &nbsp; return “SOCKS 127.0.0.1:1080”;</div><div>}</div></div><div>换了个思路，也就找到了问题的根源。才发现是犯了两毛病：</div><div>1. 我最开始在代理配置文件中的URL提供的是“file://”形式的地址，采用了“选取文件”的按钮，貌似<a href="http://rss.9ria.com/?p=3750" target="_blank" rel="external">lion不支持“file://”形式</a>。嗯，这个就<a href="http://mac.pcbeta.com/thread-55498-1-1.html" target="_blank" rel="external">启用网络共享，提供http的访问</a>形式。</div><div>2. 从chrome导出的pac文件采用的sock地址形式都是”SOCKS5 127.0.0.1:1080”，而不是SOCKS。<a href="http://www.poemcode.net/2011/07/pac-on-mac/" target="_blank" rel="external">规格的说法应该是提供SOCKS</a>。一字之差害死人啊。</div><div>终于在晚上睡觉前搞定了，可以安心睡觉了。</div></p>
+        <p>原先<a href="http://xbin999.com/?p=597">有ssh的账号</a>，在mac上翻墙倒也不麻烦，下了个secret socks，略微配置一下连上usassh。<div><img src="https://img.skitch.com/20110916-tksy79fudfipndy8sx65yxqhtm.jpg" alt=""></div><div>直接勾选“Update network settings”，提示输入root口令后，就会直接修改网络中的设置以sock方式访问。这时打开safari就可以翻墙了。</div><div>不过这种方式的缺陷还是所有的站点访问都会走ssh，国内很多站点的访问速度会有影响。还是想能改成智能点的，只有自己需要的站点访问就好了。</div><div>采用PAC的方案，我把原先chrome中的<a href="https://chrome.google.com/webstore/detail/bgfkhjmcnkmegdmagboackgipbdpomke" target="_blank" rel="noopener">proxy switchy</a>设置的列表导出成一个pac文件，然后在网络中设置代理方式为“自动代理配置”，同时提供配置文件。</div><div><img src="https://img.skitch.com/20110916-xs1pbcrj12xd5tnm2ukgyjrnmk.jpg" alt=""></div><div>从<a href="http://www.google.com.hk/search?hl=zh-CN&amp;newwindow=1&amp;safe=strict&amp;client=safari&amp;rls=en&amp;q=secret+socks+mac+pac&amp;oq=secret+socks+mac+pac&amp;aq=f&amp;aqi=&amp;aql=&amp;gs_sm=s&amp;gs_upl=2648l2648l1l4787l1l1l0l0l0l0l0l0ll0l0" target="_blank" rel="noopener">google的结果</a>来看都说很简单，这样就ok了，可是俺死活没搞通。瞎折腾了半天，要么都访问不了，要么就是走的ssh通道。</div><div>奇了个怪了！</div><div>后来忽然想是否我的pac文件不对，于是自己写了个最简单的pac文件：</div><div><div>function FindProxyForURL(url, host)</div><div>{</div><div>&nbsp; &nbsp; &nbsp; &nbsp; return “SOCKS 127.0.0.1:1080”;</div><div>}</div></div><div>换了个思路，也就找到了问题的根源。才发现是犯了两毛病：</div><div>1. 我最开始在代理配置文件中的URL提供的是“file://”形式的地址，采用了“选取文件”的按钮，貌似<a href="http://rss.9ria.com/?p=3750" target="_blank" rel="noopener">lion不支持“file://”形式</a>。嗯，这个就<a href="http://mac.pcbeta.com/thread-55498-1-1.html" target="_blank" rel="noopener">启用网络共享，提供http的访问</a>形式。</div><div>2. 从chrome导出的pac文件采用的sock地址形式都是”SOCKS5 127.0.0.1:1080”，而不是SOCKS。<a href="http://www.poemcode.net/2011/07/pac-on-mac/" target="_blank" rel="noopener">规格的说法应该是提供SOCKS</a>。一字之差害死人啊。</div><div>终于在晚上睡觉前搞定了，可以安心睡觉了。</div></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2011/09/16/slugs/" data-id="cj133pilv00mb00c2qbxltu3l" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2011/09/16/slugs/" data-id="cjmiwvb3g00l504c2gd75gqxx" class="article-share-link">Share</a>
       
 
       
@@ -214,14 +215,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前一直用免费的SSH帐号，cjb不稳定了，dailiav的没有了，shellmix也是时好时坏，太折腾人了。想想还是买一个算了，刚好那天听维靖的推荐，在<a href="https://www.usassh.com/aff.php?aff=087" target="_blank" rel="external">usassh</a>上注册买了一个。年付70，打6折，也就是42元一年，直接用支付宝付款，还是挺方便的。速度感觉也不错。<br>推荐一下吧。有需要的可以点我的<a href="https://www.usassh.com/aff.php?aff=087" target="_blank" rel="external">邀请链接</a>，还有个优惠码是xbin999，可以打7者。不过貌似我采用的“11月末促销优惠码：201011”，还是6折的。</p>
+        <p>之前一直用免费的SSH帐号，cjb不稳定了，dailiav的没有了，shellmix也是时好时坏，太折腾人了。想想还是买一个算了，刚好那天听维靖的推荐，在<a href="https://www.usassh.com/aff.php?aff=087" target="_blank" rel="noopener">usassh</a>上注册买了一个。年付70，打6折，也就是42元一年，直接用支付宝付款，还是挺方便的。速度感觉也不错。<br>推荐一下吧。有需要的可以点我的<a href="https://www.usassh.com/aff.php?aff=087" target="_blank" rel="noopener">邀请链接</a>，还有个优惠码是xbin999，可以打7者。不过貌似我采用的“11月末促销优惠码：201011”，还是6折的。</p>
 <p>BTW. 开始写这篇文章的时候没能连上ssh，看服务器状态是忙，写完之后发现已经恢复。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2010/11/28/ssh代理帐号/" data-id="cj133pim500mr00c2ig1g5u4m" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2010/11/28/ssh代理帐号/" data-id="cjmiwvb3n00lj04c2uiov4676" class="article-share-link">Share</a>
       
 
       
@@ -334,7 +335,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/page/91/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -102,7 +103,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/23/有点头晕/" data-id="cj133pjfm01u200c2m5vi903k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/23/有点头晕/" data-id="cjmiwvbmo01rz04c276x34ilr" class="article-share-link">Share</a>
       
 
       
@@ -144,11 +145,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>In recenty days I wrote a initial version of <a href="http://xbin999.wordpress.com/2005/11/19/openomy-command-window/" target="_blank" rel="external">OCW</a>. It can work now, although it’s raw.</p>
+        <p>In recenty days I wrote a initial version of <a href="http://xbin999.wordpress.com/2005/11/19/openomy-command-window/" target="_blank" rel="noopener">OCW</a>. It can work now, although it’s raw.</p>
 <p>How to start?</p>
 <p>1. Install ruby</p>
-<p>2. Get an account from <a href="http://www.openomy.com/" target="_blank" rel="external">openomy</a></p>
-<p>3. Get the source of OCW and <a href="http://www.openomy.com/api/libraries/ruby/openomy.rb" target="_blank" rel="external">openomy-ruby</a></p>
+<p>2. Get an account from <a href="http://www.openomy.com/" target="_blank" rel="noopener">openomy</a></p>
+<p>3. Get the source of OCW and <a href="http://www.openomy.com/api/libraries/ruby/openomy.rb" target="_blank" rel="noopener">openomy-ruby</a></p>
 <p>4. run OCW.rb and login, you have 3 methods to login</p>
 <ul>
 <li>write your own ocw.yml file, which include: </li>
@@ -159,12 +160,12 @@
 <ul>
 <li><p>login -u. You can type your unconfirmedtoken after the prompt, which can let u change account easily.</p>
 </li>
-<li><p>login. If no unconfirmedtoken is specifed, you will get a url, and then copy it to a explorer to authorize it. A truely <a href="http://documentation.openomy.com/index.php/How_Non-Web_Apps_Work" target="_blank" rel="external">non-web app</a> .</p>
+<li><p>login. If no unconfirmedtoken is specifed, you will get a url, and then copy it to a explorer to authorize it. A truely <a href="http://documentation.openomy.com/index.php/How_Non-Web_Apps_Work" target="_blank" rel="noopener">non-web app</a> .</p>
 </li>
 </ul>
 <p>After logined, u can ls, tag, mktag, rmtag, get, put and so on, treat openomy as a local file system.</p>
-<p>A known bug: while tag a file with OCW, u’ll get “Openomy API Error: 2 - Permissions not valid.” I’d mail to <a href="http://blog.mauricecodik.com/" target="_blank" rel="external">Maurice</a> and <a href="http://www.iseff.com/" target="_blank" rel="external">Ian</a>. I think it will be resolved soon. </p>
-<p>Source code can be gotten <a href="http://rss.openomy.com/download/get/47" target="_blank" rel="external">here</a>. Yes, it’s also stored in <a href="http://www.openomy.com/" target="_blank" rel="external">openomy</a> (I have no other spaces ), and fetched by <a href="http://rss.openomy.com/rss/xbin999/ebook" target="_blank" rel="external">rss</a>.</p>
+<p>A known bug: while tag a file with OCW, u’ll get “Openomy API Error: 2 - Permissions not valid.” I’d mail to <a href="http://blog.mauricecodik.com/" target="_blank" rel="noopener">Maurice</a> and <a href="http://www.iseff.com/" target="_blank" rel="noopener">Ian</a>. I think it will be resolved soon. </p>
+<p>Source code can be gotten <a href="http://rss.openomy.com/download/get/47" target="_blank" rel="noopener">here</a>. Yes, it’s also stored in <a href="http://www.openomy.com/" target="_blank" rel="noopener">openomy</a> (I have no other spaces ), and fetched by <a href="http://rss.openomy.com/rss/xbin999/ebook" target="_blank" rel="noopener">rss</a>.</p>
 <p>It’s my first ruby program. All suggestions are welcome.</p>
 <p>Updated:</p>
 <p>The bug is known. It’s caused by Tags::AddFileToTag, ‘“fileID” =&gt; fileId’ is neglected which passing the parameters into get_request.</p>
@@ -173,7 +174,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/22/ocw-v01/" data-id="cj133pij100el00c2luaka64k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/22/ocw-v01/" data-id="cjmiwvb1600dr04c2n7d28pk0" class="article-share-link">Share</a>
       
 
       
@@ -219,7 +220,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.openomy.com/" target="_blank" rel="external">Openomy</a> is a online file storage. Itâs convenient to do in web. But sometimes i like to enter in the command window ;-) So i decided to write a small program âOCWâ? (Openomy Command Window).</p>
+        <p><a href="http://www.openomy.com/" target="_blank" rel="noopener">Openomy</a> is a online file storage. Itâs convenient to do in web. But sometimes i like to enter in the command window ;-) So i decided to write a small program âOCWâ? (Openomy Command Window).</p>
 <p>All commands are entered in a command window, like shell. Man can treated it as a local file system.</p>
 <p><img src="http://static.flickr.com/32/64688396_2fb7a7220a.jpg?v=0" alt="Openomy Command Window"></p>
 
@@ -227,7 +228,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/19/openomy-command-window/" data-id="cj133pij500f100c23qgbgrv9" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/19/openomy-command-window/" data-id="cjmiwvb1a00e604c2u9p6svne" class="article-share-link">Share</a>
       
 
       
@@ -269,13 +270,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!723" class="bvMsg"><div>1. 以前就说过要“<a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!578.entry" target="_blank" rel="external">解放外婆</a>”，也有一个多月了。坚持的还不错。</div><br><div>晚上7点过乐乐就上床，看“红果果和绿泡泡”，到看完“动漫世界”，这时候她的注意力有些分散，外婆有机会逃离她的视线。</div><br><div>乐乐会问：“外婆？外婆？”</div><br><div>答：“外婆去紫林公寓了。”</div><br><div>“喔，外婆去紫林公寓了，去姨娘那里了。明天早上再来看囡囡了。”乐乐嘟嘟哝哝的，她会乖乖地，但一副可怜的样子。</div><br><div>白天的时候，她就对外婆说，“外婆，我想你了。外婆去紫林公寓，去姨娘那里，我想外婆了。”</div><br><div><font color="#ff0000">欺骗真的让人很心痛。</font></div><br><div>而且现在乐乐一点点长大，也越来越懂了。有时晚上外婆一不在，她就时刻叫不停，“外婆，外婆。”一刻也不让外婆在眼前消失。</div><br><div>谁有更好的方法吗？</div><br><div> </div><br><div>2. 看完动漫世界，都是八点半了，这时候乐乐会下命令：</div><br><div>“电视关掉。”</div><br><div>“睡觉了。”</div><br><div>好，关掉电视，躺下来。可千万别以为她这就睡了，这只不过是序曲。到真正的睡觉时间还不定呢？</div><br><div>先要玩一阵，也许是讲故事，看动物大本营，也许是<a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!681.entry" target="_blank" rel="external">去动物园，看海狮表演</a>。</div><br><div>等到快进入状态的时候，然后和她商量：“睡大床还是小床？”</div><br><div>“大床”“小床”，这就要看她的高兴了。确定了目标后，接下来就正式进入睡眠的准备了。</div><br><div> </div><br><div>3. 当然这时候我们需要换盏灯，柔和一点的。对了，别忘了最关键的。知道是什么吗？</div><br><div>“尿布”</div><br><div>哈哈，并不是乐乐晚上还要包着尿布睡。是她要拿着尿布，那可是她的小宝贝，就和狗仔、娃娃一样。</div><br><div>很小就养成的习惯了，没有尿布乐乐就不安分，转来转去，嘴巴还要嘀咕“尿布，尿布”</div><br><div>这时得赶紧把尿布递给她，还得是方方正正叠好的。乐乐的眼睛已经闭上了，小手接过来。一只手抓住边，一只手用掌心轻轻地摸娑着叠好的角。</div><br><div>乐乐安心的睡了。</div><br><div> </div><br><div>4. 当然晚上的节目还是很丰富，小家伙睡的就很不老实。自己一个人睡着，很少肯盖被子。你给她盖好了，她一会儿“腾”的就给你踢掉了。或者小孩子的脚非常之柔软，会轻松地从被窝里经过脖子绕出到外面。象练体操的。所以得经常看看她的被子盖的怎样了。</div><br><div>尿布是很早就不用了（好像我们一直都用的很少），白条她自己会说的，晚上呢？就要注意了。如果老是睡着不安稳，时间长了很可能是有小便了，就记得要给她把把尿了。</div><br><div> </div><br><div>5. 人世间最痛苦的事情知道是什么吗？就是睡意正浓的时候，在大冬天从暖暖的被窝里爬出来了。而且还不是一回。</div><br><div>乐乐一直不太肯吃东西，吃的少，包括奶粉。现在忽然晚上开始要吃奶粉了，睡前吃一回，半夜吃一回，2、3点再吃一回，6点再吃一回，有一回居然难得的一晚上吃了800的奶粉，可是从未有过的记录。当然更多的时候，她都是要吃奶粉，但也不肯吃多，一回120就足已。</div><br><div> </div><br><div>P.S.</div><br><div>乐乐现有又有新的叫法了，爸爸是老爸，妈妈是老妈，外婆呢？老外婆。</div><br><div><br><div>我的乖女儿，什么时候才放了你老爸、老妈还有老外婆啊？</div><br><div> </div></div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!723" class="bvMsg"><div>1. 以前就说过要“<a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!578.entry" target="_blank" rel="noopener">解放外婆</a>”，也有一个多月了。坚持的还不错。</div><br><div>晚上7点过乐乐就上床，看“红果果和绿泡泡”，到看完“动漫世界”，这时候她的注意力有些分散，外婆有机会逃离她的视线。</div><br><div>乐乐会问：“外婆？外婆？”</div><br><div>答：“外婆去紫林公寓了。”</div><br><div>“喔，外婆去紫林公寓了，去姨娘那里了。明天早上再来看囡囡了。”乐乐嘟嘟哝哝的，她会乖乖地，但一副可怜的样子。</div><br><div>白天的时候，她就对外婆说，“外婆，我想你了。外婆去紫林公寓，去姨娘那里，我想外婆了。”</div><br><div><font color="#ff0000">欺骗真的让人很心痛。</font></div><br><div>而且现在乐乐一点点长大，也越来越懂了。有时晚上外婆一不在，她就时刻叫不停，“外婆，外婆。”一刻也不让外婆在眼前消失。</div><br><div>谁有更好的方法吗？</div><br><div> </div><br><div>2. 看完动漫世界，都是八点半了，这时候乐乐会下命令：</div><br><div>“电视关掉。”</div><br><div>“睡觉了。”</div><br><div>好，关掉电视，躺下来。可千万别以为她这就睡了，这只不过是序曲。到真正的睡觉时间还不定呢？</div><br><div>先要玩一阵，也许是讲故事，看动物大本营，也许是<a href="http://spaces.msn.com/members/xbin999/Blog/cns!1pptNmdTuW6GU-KPeD3kbfjA!681.entry" target="_blank" rel="noopener">去动物园，看海狮表演</a>。</div><br><div>等到快进入状态的时候，然后和她商量：“睡大床还是小床？”</div><br><div>“大床”“小床”，这就要看她的高兴了。确定了目标后，接下来就正式进入睡眠的准备了。</div><br><div> </div><br><div>3. 当然这时候我们需要换盏灯，柔和一点的。对了，别忘了最关键的。知道是什么吗？</div><br><div>“尿布”</div><br><div>哈哈，并不是乐乐晚上还要包着尿布睡。是她要拿着尿布，那可是她的小宝贝，就和狗仔、娃娃一样。</div><br><div>很小就养成的习惯了，没有尿布乐乐就不安分，转来转去，嘴巴还要嘀咕“尿布，尿布”</div><br><div>这时得赶紧把尿布递给她，还得是方方正正叠好的。乐乐的眼睛已经闭上了，小手接过来。一只手抓住边，一只手用掌心轻轻地摸娑着叠好的角。</div><br><div>乐乐安心的睡了。</div><br><div> </div><br><div>4. 当然晚上的节目还是很丰富，小家伙睡的就很不老实。自己一个人睡着，很少肯盖被子。你给她盖好了，她一会儿“腾”的就给你踢掉了。或者小孩子的脚非常之柔软，会轻松地从被窝里经过脖子绕出到外面。象练体操的。所以得经常看看她的被子盖的怎样了。</div><br><div>尿布是很早就不用了（好像我们一直都用的很少），白条她自己会说的，晚上呢？就要注意了。如果老是睡着不安稳，时间长了很可能是有小便了，就记得要给她把把尿了。</div><br><div> </div><br><div>5. 人世间最痛苦的事情知道是什么吗？就是睡意正浓的时候，在大冬天从暖暖的被窝里爬出来了。而且还不是一回。</div><br><div>乐乐一直不太肯吃东西，吃的少，包括奶粉。现在忽然晚上开始要吃奶粉了，睡前吃一回，半夜吃一回，2、3点再吃一回，6点再吃一回，有一回居然难得的一晚上吃了800的奶粉，可是从未有过的记录。当然更多的时候，她都是要吃奶粉，但也不肯吃多，一回120就足已。</div><br><div> </div><br><div>P.S.</div><br><div>乐乐现有又有新的叫法了，爸爸是老爸，妈妈是老妈，外婆呢？老外婆。</div><br><div><br><div>我的乖女儿，什么时候才放了你老爸、老妈还有老外婆啊？</div><br><div> </div></div></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/19/睡觉的故事/" data-id="cj133pjmg020p00c2gffb0f8j" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/19/睡觉的故事/" data-id="cjmiwvbqt01yl04c2mro80r9q" class="article-share-link">Share</a>
       
 
       
@@ -325,7 +326,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/18/剃头！－忍不住还是贴一下/" data-id="cj133pixy018700c2hj8zxoj6" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/18/剃头！－忍不住还是贴一下/" data-id="cjmiwvbbj016d04c26hsuze6d" class="article-share-link">Share</a>
       
 
       
@@ -373,7 +374,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/17/疯狂shopping/" data-id="cj133pjl001z400c2oay970us" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/17/疯狂shopping/" data-id="cjmiwvbpu01x104c2bt6z80ag" class="article-share-link">Share</a>
       
 
       
@@ -421,15 +422,15 @@
       
         <p><img src="http://hinchcliffe.org/img/trustedstorage.jpg" alt="A Web 2.0 Killer App"></p>
 <p>Â </p>
-<p>I canât access the Dion Hinchcliffeâs Web 2.0 Blog site. I got the image from <a href="http://chn.blogbeta.com/" target="_blank" rel="external">blog Chinese translation</a>.</p>
-<p><a href="http://web2.wsj2.com/web_20_needs_trusted_online_information_storage.htm" target="_blank" rel="external">Web 2.0 Needs Trusted, Online Information Storage</a></p>
-<h2 id="Web2-0eoee¦-a-¯a¿¡eµcaoe¨cº¿a¿¡ae-¯a­a¨"><a href="#Web2-0eoee¦-a-¯a¿¡eµcaoe¨cº¿a¿¡ae-¯a­a¨" class="headerlink" title="Web2.0éè¦?å?¯ä¿¡èµçå¨çº¿ä¿¡æ?¯å­å¨"></a><a href="http://chn.blogbeta.com/74.html" target="_blank" rel="external">Web2.0éè¦?å?¯ä¿¡èµçå¨çº¿ä¿¡æ?¯å­å¨</a></h2><p>Â </p>
+<p>I canât access the Dion Hinchcliffeâs Web 2.0 Blog site. I got the image from <a href="http://chn.blogbeta.com/" target="_blank" rel="noopener">blog Chinese translation</a>.</p>
+<p><a href="http://web2.wsj2.com/web_20_needs_trusted_online_information_storage.htm" target="_blank" rel="noopener">Web 2.0 Needs Trusted, Online Information Storage</a></p>
+<h2 id="Web2-0eoee¦-a-¯a¿¡eµcaoe¨cº¿a¿¡ae-¯a­a¨"><a href="#Web2-0eoee¦-a-¯a¿¡eµcaoe¨cº¿a¿¡ae-¯a­a¨" class="headerlink" title="Web2.0éè¦?å?¯ä¿¡èµçå¨çº¿ä¿¡æ?¯å­å¨"></a><a href="http://chn.blogbeta.com/74.html" target="_blank" rel="noopener">Web2.0éè¦?å?¯ä¿¡èµçå¨çº¿ä¿¡æ?¯å­å¨</a></h2><p>Â </p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/16/online-trusted-storage/" data-id="cj133pij300es00c2cs6c75rt" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/16/online-trusted-storage/" data-id="cjmiwvb1700dx04c2yk7po5ak" class="article-share-link">Share</a>
       
 
       
@@ -471,13 +472,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!710" class="bvMsg"><br><br><a href="http://numsum.com/" target="_blank" rel="external">Num Sum,</a> 网上的电子表格。试用一下，看看<a href="http://numsum.com/spreadsheet/show/4021" target="_blank" rel="external">10月份的浙江体彩6＋1结果</a>，中奖了没有？<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!710" class="bvMsg"><br><br><a href="http://numsum.com/" target="_blank" rel="noopener">Num Sum,</a> 网上的电子表格。试用一下，看看<a href="http://numsum.com/spreadsheet/show/4021" target="_blank" rel="noopener">10月份的浙江体彩6＋1结果</a>，中奖了没有？<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/16/numsum-web-spreadsheets/" data-id="cj133piiz00ed00c2yxpai942" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/16/numsum-web-spreadsheets/" data-id="cjmiwvb1400dh04c2635h128n" class="article-share-link">Share</a>
       
 
       
@@ -519,13 +520,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!709" class="bvMsg"><br><br><a href="http://it.slashdot.org/it/05/11/15/2037232.shtml?tid=172&amp;tid=93&amp;tid=228" target="_blank" rel="external"><u>有人在网上公布</u></a>了可以计算MD5冲撞的C程序<a href="http://www.stachliu.com/collisions.html" target="_blank" rel="external"><u><font color="#006666">代码</font></u></a>，据称破解MD5只需在P4 1.6G上计算45分钟。<br><br>冲击很大啊！我想目前MD5还是在各个系统中广泛使用，替换起来也是个头疼的事。现在该选择什么呢？<br><br><div></div></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!709" class="bvMsg"><br><br><a href="http://it.slashdot.org/it/05/11/15/2037232.shtml?tid=172&amp;tid=93&amp;tid=228" target="_blank" rel="noopener"><u>有人在网上公布</u></a>了可以计算MD5冲撞的C程序<a href="http://www.stachliu.com/collisions.html" target="_blank" rel="noopener"><u><font color="#006666">代码</font></u></a>，据称破解MD5只需在P4 1.6G上计算45分钟。<br><br>冲击很大啊！我想目前MD5还是在各个系统中广泛使用，替换起来也是个头疼的事。现在该选择什么呢？<br><br><div></div></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/16/md5还能用吗？/" data-id="cj133piig00cn00c2h54zaaaj" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/16/md5还能用吗？/" data-id="cjmiwvb0n00bs04c2iaaqkaps" class="article-share-link">Share</a>
       
 
       
@@ -571,13 +572,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.openomy.com/" target="_blank" rel="external">Openomy</a> offically launched. Everyone can sign up now. The storage per user is 1GB. And <a href="http://blog.mauricecodik.com/" target="_blank" rel="external">Maurice</a> built <a href="http://rss.openomy.com/" target="_blank" rel="external">openomy/RSS</a>, which publish Openomy tags over RSS feeds. You can get the file easily. It’s interesting.</p>
+        <p><a href="http://www.openomy.com/" target="_blank" rel="noopener">Openomy</a> offically launched. Everyone can sign up now. The storage per user is 1GB. And <a href="http://blog.mauricecodik.com/" target="_blank" rel="noopener">Maurice</a> built <a href="http://rss.openomy.com/" target="_blank" rel="noopener">openomy/RSS</a>, which publish Openomy tags over RSS feeds. You can get the file easily. It’s interesting.</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2005/11/14/openomy-launched/" data-id="cj133pij700f800c2r4nrku88" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2005/11/14/openomy-launched/" data-id="cjmiwvb1b00ed04c24mup700m" class="article-share-link">Share</a>
       
 
       
@@ -694,7 +695,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

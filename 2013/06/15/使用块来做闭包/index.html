@@ -6,11 +6,13 @@
   <title>使用块来做闭包 | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在Ruby中可以使用块(Blocks)来实现闭包(Closure)的功能，闭包听过很多回了，但都没仔细去看过，看维基中有关闭包的定义 )：在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。所以，有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用块来做闭包">
 <meta property="og:url" content="http://xbin999.com/2013/06/15/使用块来做闭包/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="在Ruby中可以使用块(Blocks)来实现闭包(Closure)的功能，闭包听过很多回了，但都没仔细去看过，看维基中有关闭包的定义 )：在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。所以，有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用块来做闭包">
@@ -100,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>在Ruby中可以使用块(Blocks)来实现闭包(Closure)的功能，闭包听过很多回了，但都没仔细去看过，看维基中有关<a href="http://zh.wikipedia.org/zh/%E9%97%AD%E5%8C%85_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6" target="_blank" rel="external">闭包的定义</a> )：<br><br><em>在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。所以，有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。</em><br><br>太拗口了。不过简单来看，闭包不仅仅是函数，还包括了函数的上下文，而使用闭包可以使得你在函数的外部也引用函数体内的变量等上下文环境。<br><br>看一个例子：<br><br>    def nTimes(aThing)<br>      return proc { |n| aThing * n }<br>    end<br><br>    p1 = nTimes(23)<br>    p1.call(3)<br>    »<br>    69<br>    p1.call(4)<br>    »<br>    92<br>    p2 = nTimes(“Hello “)<br>    p2.call(3)<br>    »<br>    “Hello Hello Hello “<br>    <code>&lt;/pre&gt;
+        <div id="wrapper"><br><br>在Ruby中可以使用块(Blocks)来实现闭包(Closure)的功能，闭包听过很多回了，但都没仔细去看过，看维基中有关<a href="http://zh.wikipedia.org/zh/%E9%97%AD%E5%8C%85_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6" target="_blank" rel="noopener">闭包的定义</a> )：<br><br><em>在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。所以，有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。</em><br><br>太拗口了。不过简单来看，闭包不仅仅是函数，还包括了函数的上下文，而使用闭包可以使得你在函数的外部也引用函数体内的变量等上下文环境。<br><br>看一个例子：<br><br>    def nTimes(aThing)<br>      return proc { |n| aThing * n }<br>    end<br><br>    p1 = nTimes(23)<br>    p1.call(3)<br>    »<br>    69<br>    p1.call(4)<br>    »<br>    92<br>    p2 = nTimes(“Hello “)<br>    p2.call(3)<br>    »<br>    “Hello Hello Hello “<br>    <code>&lt;/pre&gt;
 
     方法nTimes返回了一个Proc对象，其中引用了aThing这个方法中的变量，而在外部调用p1时仍可以使用aThings，这就是闭包。
 
@@ -125,7 +127,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/06/15/使用块来做闭包/" data-id="cj133pivx015a00c2j8swgryu" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/06/15/使用块来做闭包/" data-id="cjmiwvba8013g04c2ob26vf4k" class="article-share-link">Share</a>
       
 
       
@@ -260,7 +262,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

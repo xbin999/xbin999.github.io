@@ -6,11 +6,13 @@
   <title>安装MediaWiki | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在公司内部准备建一个Wiki，选择了MediaWiki，分别下了MediaWiki, Apache和PHP。mysql原先已经装了一个，就省了。在windows下安装很简单，没什么好说的。说说碰到的问题和配置的修改吧。1. Apache安装的时候出了点错，主要原先的80端口已经给IIS占用了，服务没有安装成功。修改一下httpd.conf，端口改为3188。&amp;gt; Listen 3188&amp;gt;">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装MediaWiki">
 <meta property="og:url" content="http://xbin999.com/2006/01/10/安装mediawiki/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="在公司内部准备建一个Wiki，选择了MediaWiki，分别下了MediaWiki, Apache和PHP。mysql原先已经装了一个，就省了。在windows下安装很简单，没什么好说的。说说碰到的问题和配置的修改吧。1. Apache安装的时候出了点错，主要原先的80端口已经给IIS占用了，服务没有安装成功。修改一下httpd.conf，端口改为3188。&amp;gt; Listen 3188&amp;gt;">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-18T12:07:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装MediaWiki">
@@ -96,13 +98,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!899" class="bvMsg"><br><br>在公司内部准备建一个Wiki，选择了MediaWiki，分别下了<a href="http://internap.dl.sourceforge.net/sourceforge/wikipedia/mediawiki-1.5.4.tar.gz" target="_blank" rel="external">MediaWiki</a>, <a href="http://mirror.vmmatrix.net/apache/httpd/httpd-2.2.0.tar.gz" target="_blank" rel="external">Apache</a>和<a href="http://cn.php.net/distributions/php-5.1.1.tar.gz" target="_blank" rel="external">PHP</a>。mysql原先已经装了一个，就省了。<br><br>在windows下安装很简单，没什么好说的。说说碰到的问题和配置的修改吧。<br><br>1. Apache安装的时候出了点错，主要原先的80端口已经给IIS占用了，服务没有安装成功。<br><br>修改一下httpd.conf，端口改为3188。<br><br>&gt; Listen 3188<br>&gt; ServerName 10.70.14.99:3188<br><br>重新安装一下服务<br><br>&gt; binApache -k install<br><br>启动服务，在浏览器输入<a href="http://10.70.14.99:3188" target="_blank" rel="external">http://10.70.14.99:3188</a>，有欢迎界面了，一切ok。<br><br>2. PHP直接解压缩即可，针对Apache做一下配置。在httpd.conf中增加：<br><br>&gt; # 对 PHP 5 用这两行：<br>&gt; LoadModule php5_module &quot;d:/php/php5apache2.dll&quot;<br>&gt; AddType application/x-httpd-php .php<br>&gt;<br>&gt; # 配置 php.ini 的路径<br>&gt; PHPIniDir &quot;D:/php&quot;<br><br>再写一个hello.php测试一下<br><br>&gt; &lt;html&gt;<br>&gt;  &lt;head&gt;<br>&gt;   &lt;title&gt;PHP 测试&lt;/title&gt;<br>&gt;  &lt;/head&gt;<br>&gt;  &lt;body&gt;<br>&gt;  &lt;?php echo ‘&lt;p&gt;Hello World&lt;/p&gt;’; ?&gt;<br>&gt;  &lt;?php phpinfo(); ?&gt;<br>&gt; &lt;/body&gt;<br>&gt; &lt;/html&gt;<br><br>在浏览器输入<a href="http://10.70.14.99:3188/hello.php" target="_blank" rel="external">http://10.70.14.99:3188/hello.php</a>，哈哈，也成功了。<br><br>3. 把MediaWiki解开，拷贝到Apache目录下，做配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="external">ttp://10.70.14.99:3188/wiki/config/index.php</a>，有警告：<br><br>&gt; Warning: dl() [function.dl]: Not supported in multithreaded Web servers - use extension=mysql.so in your php.ini in D:Program FilesApache GroupApache2htdocswikiinstall-utils.inc on line 17<br>&gt; Could not load MySQL driver! Please compile php –with-mysql or install the mysql.so module.<br><br>修改一下php.ini<br><br>&gt; extension_dir = &quot;D:PHPext&quot;<br>&gt;<br>&gt; extension=php_mysql.dll<br><br>再重新配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="external">http://10.70.14.99:3188/wiki/config/index.php</a>，没问题。接着就输入Wiki的相关配置，Sitename、Contact email、Sysop account name什么的。<br><br>Creating LocalSettings.php…<br><br>Installation successful! Move the config/LocalSettings.php file into the parent directory, then follow this link to your wiki.<br><br>参照提示，把config/LocalSettings.php移到上级目录，哈哈，一切大功告成。<br><br>4. 稍微修饰一下，改了logo，再允许上传图象文件。<br><br>LocalSettings.php<br>$wgEnableUploads  = true;<br>$wgFileExtensions = array(‘gif’,’png’,’jpg’,’jpeg’,’xls’,’doc’);<br><br>依葫芦画瓢，查查文档，还算顺利，记录一下。<br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!899" class="bvMsg"><br><br>在公司内部准备建一个Wiki，选择了MediaWiki，分别下了<a href="http://internap.dl.sourceforge.net/sourceforge/wikipedia/mediawiki-1.5.4.tar.gz" target="_blank" rel="noopener">MediaWiki</a>, <a href="http://mirror.vmmatrix.net/apache/httpd/httpd-2.2.0.tar.gz" target="_blank" rel="noopener">Apache</a>和<a href="http://cn.php.net/distributions/php-5.1.1.tar.gz" target="_blank" rel="noopener">PHP</a>。mysql原先已经装了一个，就省了。<br><br>在windows下安装很简单，没什么好说的。说说碰到的问题和配置的修改吧。<br><br>1. Apache安装的时候出了点错，主要原先的80端口已经给IIS占用了，服务没有安装成功。<br><br>修改一下httpd.conf，端口改为3188。<br><br>&gt; Listen 3188<br>&gt; ServerName 10.70.14.99:3188<br><br>重新安装一下服务<br><br>&gt; binApache -k install<br><br>启动服务，在浏览器输入<a href="http://10.70.14.99:3188" target="_blank" rel="noopener">http://10.70.14.99:3188</a>，有欢迎界面了，一切ok。<br><br>2. PHP直接解压缩即可，针对Apache做一下配置。在httpd.conf中增加：<br><br>&gt; # 对 PHP 5 用这两行：<br>&gt; LoadModule php5_module &quot;d:/php/php5apache2.dll&quot;<br>&gt; AddType application/x-httpd-php .php<br>&gt;<br>&gt; # 配置 php.ini 的路径<br>&gt; PHPIniDir &quot;D:/php&quot;<br><br>再写一个hello.php测试一下<br><br>&gt; &lt;html&gt;<br>&gt;  &lt;head&gt;<br>&gt;   &lt;title&gt;PHP 测试&lt;/title&gt;<br>&gt;  &lt;/head&gt;<br>&gt;  &lt;body&gt;<br>&gt;  &lt;?php echo ‘&lt;p&gt;Hello World&lt;/p&gt;’; ?&gt;<br>&gt;  &lt;?php phpinfo(); ?&gt;<br>&gt; &lt;/body&gt;<br>&gt; &lt;/html&gt;<br><br>在浏览器输入<a href="http://10.70.14.99:3188/hello.php" target="_blank" rel="noopener">http://10.70.14.99:3188/hello.php</a>，哈哈，也成功了。<br><br>3. 把MediaWiki解开，拷贝到Apache目录下，做配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="noopener">ttp://10.70.14.99:3188/wiki/config/index.php</a>，有警告：<br><br>&gt; Warning: dl() [function.dl]: Not supported in multithreaded Web servers - use extension=mysql.so in your php.ini in D:Program FilesApache GroupApache2htdocswikiinstall-utils.inc on line 17<br>&gt; Could not load MySQL driver! Please compile php –with-mysql or install the mysql.so module.<br><br>修改一下php.ini<br><br>&gt; extension_dir = &quot;D:PHPext&quot;<br>&gt;<br>&gt; extension=php_mysql.dll<br><br>再重新配置<a href="http://10.70.14.99:3188/wiki/config/index.php" target="_blank" rel="noopener">http://10.70.14.99:3188/wiki/config/index.php</a>，没问题。接着就输入Wiki的相关配置，Sitename、Contact email、Sysop account name什么的。<br><br>Creating LocalSettings.php…<br><br>Installation successful! Move the config/LocalSettings.php file into the parent directory, then follow this link to your wiki.<br><br>参照提示，把config/LocalSettings.php移到上级目录，哈哈，一切大功告成。<br><br>4. 稍微修饰一下，改了logo，再允许上传图象文件。<br><br>LocalSettings.php<br>$wgEnableUploads  = true;<br>$wgFileExtensions = array(‘gif’,’png’,’jpg’,’jpeg’,’xls’,’doc’);<br><br>依葫芦画瓢，查查文档，还算顺利，记录一下。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2006/01/10/安装mediawiki/" data-id="cj133pj4k01hc00c2rtgb54z8" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2006/01/10/安装mediawiki/" data-id="cjmiwvbfw01fk04c2b8myjesx" class="article-share-link">Share</a>
       
 
       
@@ -237,7 +239,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

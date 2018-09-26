@@ -5,16 +5,18 @@
   
   <title>又遇到&quot;maximum open cursors exceeded&quot; | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="昨天刚骂完娘，下午还是又被拉到学院路了。说是程序出错，提示&amp;quot;maximum open cursors exceeded&amp;quot;。电话都到老板那里了，伙计们也都急着要回家过年。只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&amp;quot;远程访问序列&amp;quot;的问题。这里再描述一次吧：&amp;gt; 在oracle的文档中给出了取sequence值的例子：schema.sequence">
+  <meta name="description" content="昨天刚骂完娘，下午还是又被拉到学院路了。说是程序出错，提示&amp;quot;maximum open cursors exceeded&amp;quot;。电话都到老板那里了，伙计们也都急着要回家过年。只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&amp;quot;远程访问序列&amp;quot;的问题。这里再描述一次吧：&amp;gt; _在oracle的文档中给出了取sequence值的例子：schema.sequenc">
+<meta name="keywords" content="IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="又遇到"maximum open cursors exceeded"">
+<meta property="og:title" content="又遇到&quot;maximum open cursors exceeded&quot;">
 <meta property="og:url" content="http://xbin999.com/2007/02/15/又遇到maximum-open-cursors-exceeded/index.html">
 <meta property="og:site_name" content="杨先生村民">
-<meta property="og:description" content="昨天刚骂完娘，下午还是又被拉到学院路了。说是程序出错，提示&amp;quot;maximum open cursors exceeded&amp;quot;。电话都到老板那里了，伙计们也都急着要回家过年。只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&amp;quot;远程访问序列&amp;quot;的问题。这里再描述一次吧：&amp;gt; 在oracle的文档中给出了取sequence值的例子：schema.sequence">
+<meta property="og:description" content="昨天刚骂完娘，下午还是又被拉到学院路了。说是程序出错，提示&amp;quot;maximum open cursors exceeded&amp;quot;。电话都到老板那里了，伙计们也都急着要回家过年。只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&amp;quot;远程访问序列&amp;quot;的问题。这里再描述一次吧：&amp;gt; _在oracle的文档中给出了取sequence值的例子：schema.sequenc">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-02-16T05:45:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="又遇到"maximum open cursors exceeded"">
-<meta name="twitter:description" content="昨天刚骂完娘，下午还是又被拉到学院路了。说是程序出错，提示&amp;quot;maximum open cursors exceeded&amp;quot;。电话都到老板那里了，伙计们也都急着要回家过年。只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&amp;quot;远程访问序列&amp;quot;的问题。这里再描述一次吧：&amp;gt; 在oracle的文档中给出了取sequence值的例子：schema.sequence">
+<meta name="twitter:title" content="又遇到&quot;maximum open cursors exceeded&quot;">
+<meta name="twitter:description" content="昨天刚骂完娘，下午还是又被拉到学院路了。说是程序出错，提示&amp;quot;maximum open cursors exceeded&amp;quot;。电话都到老板那里了，伙计们也都急着要回家过年。只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&amp;quot;远程访问序列&amp;quot;的问题。这里再描述一次吧：&amp;gt; _在oracle的文档中给出了取sequence值的例子：schema.sequenc">
 <meta name="twitter:creator" content="@xbin999">
   
     <link rel="alternative" href="/atom.xml" title="杨先生村民" type="application/atom+xml">
@@ -96,13 +98,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="msgcns!B3AD1EA9132E7DF1!1719" class="bvMsg"><br><br><a href="http://xbin999.spaces.live.com/blog/cns!B3AD1EA9132E7DF1!1717.entry" target="_blank" rel="external">昨天刚骂完娘</a>，下午还是又被拉到学院路了。说是程序出错，提示&quot;maximum open cursors exceeded&quot;。电话都到老板那里了，伙计们也都急着要回家过年。<br><br>只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&quot;<a href="http://faq.csdn.net/read/182524.html" target="_blank" rel="external">远程访问序列</a>&quot;的问题。这里再描述一次吧：<br><br>&gt; <em>在oracle的文档中给出了取sequence值的例子：schema.sequence.nextval@dblink<br>&gt; </em> 不过这里还有一个要注意的地方，就是写完整的sql语句时，应该是<br>&gt; <em>select yourseq.nextval@dblink from dual@dblink<br>&gt; 而不是<br>&gt; select</em> <em>yourseq.nextval@dblink</em> _from dual<br>&gt; 两者有差别，这一次我的程序就犯了这个错误，使用了后一种写法，结果在后台服务程序长时间运行后出错，错误信息：<br>&gt; ORA-01000 maximum open cursors exceeded<br>&gt; 主要原因就是使用后一种写法，造成分布式事务，每执行一次会打开游标，而没有关闭，这样一个session长时间执行后，就可能超出OPEN<em>CURSORS的阀值。<br>&gt; 如果有环境的话，大家可以一试：<br>&gt; 在sqlplus中执行<br>&gt; select</em> _seq<em>test.nextval@mydblink</em> _from dual;<br>&gt; 语句，然后检查<br>&gt; select OPEN<em>CURSORS from v$dblink;<br>&gt; 该数值持续增长。</em><br><br>赶到机房，看了错误，再问了一下同事的代码，感觉采用OTL时用了静态变量出了问题。写了段测试代码：<br><br>int test_open_cursors( otl_connect&amp; dbConnect, CBSErrorMsg&amp; cErrorMsg)<br>&#123;<br>int16 rv;<br><br>try<br>&#123;<br>int iOpenCursors = 0;<br>string strSql = &quot;select 1 from dual@testcs2&quot;;<br>string strSql2 = &quot;select OPEN_CURSORS from v$dblink&quot;;<br><br>double llSeqId;<br>int32 iMax = 2000;<br><br>for ( int i = 0; i &lt; iMax; ++i)<br>&#123;<br>static otl_stream os;<br>os.open( 1, strSql.c_str(), dbConnect);<br>os &gt;&gt; llSeqId;<br>cout &lt;&lt; llSeqId &lt;&lt; &quot;t&quot;;<br>// os.close();<br><br>otl_stream os2( 1, strSql2.c_str(), dbConnect);<br>os2 &gt;&gt; iOpenCursors;<br>cout &lt;&lt; iOpenCursors &lt;&lt; endl;<br>&#125;<br>&#125;<br>catch(otl_exception&amp; p)<br>&#123;<br>cerr &lt;&lt; string( (const char*)p.msg + string(p.stm_text) + string(p.var_info)) &lt;&lt; endl;<br>return -1;<br>&#125;<br>return 0;<br>&#125;<br><br>哎，果然。静态变量os光做了open，没有close，结果导致游标打开持续增长。好了，总算问题找到了，伙计，赶紧改程序吧。<br><br>希望还能过好年。<br><br>  <span><span>Technorati</span> : <a href="http://technorati.com/tag/Oracle" target="_blank" rel="external">Oracle</a>, <a href="http://technorati.com/tag/xbin999" target="_blank" rel="external">xbin999</a>, <a href="http://technorati.com/tag/%E5%B7%A5%E4%BD%9C" target="_blank" rel="external">工作</a>, <a href="http://technorati.com/tag/%E6%B8%B8%E6%A0%87" target="_blank" rel="external">游标</a></span><br><br></div>
+        <div id="msgcns!B3AD1EA9132E7DF1!1719" class="bvMsg"><br><br><a href="http://xbin999.spaces.live.com/blog/cns!B3AD1EA9132E7DF1!1717.entry" target="_blank" rel="noopener">昨天刚骂完娘</a>，下午还是又被拉到学院路了。说是程序出错，提示&quot;maximum open cursors exceeded&quot;。电话都到老板那里了，伙计们也都急着要回家过年。<br><br>只有自己再过去看看是啥。当初曾碰到过一次，那时的原因是&quot;<a href="http://faq.csdn.net/read/182524.html" target="_blank" rel="noopener">远程访问序列</a>&quot;的问题。这里再描述一次吧：<br><br>&gt; _在oracle的文档中给出了取sequence值的例子：schema.sequence.nextval@dblink<br>&gt; _ 不过这里还有一个要注意的地方，就是写完整的sql语句时，应该是<br>&gt; <em>select yourseq.nextval@dblink from dual@dblink<br>&gt; 而不是<br>&gt; select</em> <em>yourseq.nextval@dblink</em> _from dual<br>&gt; 两者有差别，这一次我的程序就犯了这个错误，使用了后一种写法，结果在后台服务程序长时间运行后出错，错误信息：<br>&gt; ORA-01000 maximum open cursors exceeded<br>&gt; 主要原因就是使用后一种写法，造成分布式事务，每执行一次会打开游标，而没有关闭，这样一个session长时间执行后，就可能超出OPEN_CURSORS的阀值。<br>&gt; 如果有环境的话，大家可以一试：<br>&gt; 在sqlplus中执行<br>&gt; select_ _seq<em>test.nextval@mydblink</em> _from dual;<br>&gt; 语句，然后检查<br>&gt; select OPEN_CURSORS from v$dblink;<br>&gt; 该数值持续增长。_<br><br>赶到机房，看了错误，再问了一下同事的代码，感觉采用OTL时用了静态变量出了问题。写了段测试代码：<br><br>int test_open_cursors( otl_connect&amp; dbConnect, CBSErrorMsg&amp; cErrorMsg)<br>&#123;<br>int16 rv;<br><br>try<br>&#123;<br>int iOpenCursors = 0;<br>string strSql = &quot;select 1 from dual@testcs2&quot;;<br>string strSql2 = &quot;select OPEN_CURSORS from v$dblink&quot;;<br><br>double llSeqId;<br>int32 iMax = 2000;<br><br>for ( int i = 0; i &lt; iMax; ++i)<br>&#123;<br>static otl_stream os;<br>os.open( 1, strSql.c_str(), dbConnect);<br>os &gt;&gt; llSeqId;<br>cout &lt;&lt; llSeqId &lt;&lt; &quot;t&quot;;<br>// os.close();<br><br>otl_stream os2( 1, strSql2.c_str(), dbConnect);<br>os2 &gt;&gt; iOpenCursors;<br>cout &lt;&lt; iOpenCursors &lt;&lt; endl;<br>&#125;<br>&#125;<br>catch(otl_exception&amp; p)<br>&#123;<br>cerr &lt;&lt; string( (const char*)p.msg + string(p.stm_text) + string(p.var_info)) &lt;&lt; endl;<br>return -1;<br>&#125;<br>return 0;<br>&#125;<br><br>哎，果然。静态变量os光做了open，没有close，结果导致游标打开持续增长。好了，总算问题找到了，伙计，赶紧改程序吧。<br><br>希望还能过好年。<br><br>  <span><span>Technorati</span> : <a href="http://technorati.com/tag/Oracle" target="_blank" rel="noopener">Oracle</a>, <a href="http://technorati.com/tag/xbin999" target="_blank" rel="noopener">xbin999</a>, <a href="http://technorati.com/tag/%E5%B7%A5%E4%BD%9C" target="_blank" rel="noopener">工作</a>, <a href="http://technorati.com/tag/%E6%B8%B8%E6%A0%87" target="_blank" rel="noopener">游标</a></span><br><br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2007/02/15/又遇到maximum-open-cursors-exceeded/" data-id="cj133piys019h00c2otx668kl" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2007/02/15/又遇到maximum-open-cursors-exceeded/" data-id="cjmiwvbc6017o04c2870lj2l8" class="article-share-link">Share</a>
       
 
       
@@ -237,7 +239,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

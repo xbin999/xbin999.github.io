@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/tags/markdown/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,16 +102,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://xbin999.com/2014/09/18/%E8%BF%81%E7%A7%BBwordpress%E5%88%B0hexo/">博客迁移到hexo</a>后，使用<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云</a>作为图床，日常就用它的命令行工具<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="external">qrsync</a>上传图像，上传成功后会显示日志。有点不爽的是日志中只是显示上传到服务器上的相对路径的文件名称，在写markdown 格式时，还需要自己去补充类似“![]”，然后再补充完整url信息。</p>
+        <p><a href="http://xbin999.com/2014/09/18/%E8%BF%81%E7%A7%BBwordpress%E5%88%B0hexo/">博客迁移到hexo</a>后，使用<a href="http://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>作为图床，日常就用它的命令行工具<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="noopener">qrsync</a>上传图像，上传成功后会显示日志。有点不爽的是日志中只是显示上传到服务器上的相对路径的文件名称，在写markdown 格式时，还需要自己去补充类似“![]”，然后再补充完整url信息。</p>
 <p>于是就在日志信息后加一个sed的脚本做替换，帮自动生成markdown格式，书写自然就方便了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Users/yangbin/bin/qrsync /Users/yangbin/bin/qiniu-conf.json 2&gt;&amp;1 |sed -e &apos;s/\(=&gt; xbin999:\)\(.*\)/=&gt; ![](http:\/\/xbin999.qiniudb.com\/\2\)/&apos;</div></pre></td></tr></table></figure>
-<p>另一种只显示结果文件格式的可以参见<a href="https://gist.github.com/xbin999/5d6ae721d04d51f99c39" target="_blank" rel="external">gist</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/yangbin/bin/qrsync /Users/yangbin/bin/qiniu-conf.json 2&gt;&amp;1 |sed -e &apos;s/\(=&gt; xbin999:\)\(.*\)/=&gt; ![](http:\/\/xbin999.qiniudb.com\/\2\)/&apos;</span><br></pre></td></tr></table></figure>
+<p>另一种只显示结果文件格式的可以参见<a href="https://gist.github.com/xbin999/5d6ae721d04d51f99c39" target="_blank" rel="noopener">gist</a>。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/" data-id="cj133pijy00hb00c24j9e48rd" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2014/12/01/replace-qrsync-log-file-with-markdown-format/" data-id="cjmiwvb1w00gc04c2cmmcrvto" class="article-share-link">Share</a>
       
 
       
@@ -156,18 +157,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="external">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="external">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="external">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="external">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="external">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
+        <div id="wrapper"><br><br>我现在用<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>来书写markdown文档，有时想把写好的文章发布到<a href="http://xbin999.com/">自己的博客</a>上，比较土的方式往往是先预览，然后打开<a href="http://xbin999.com/">博客</a>编辑，复制粘帖。<br><br>想想是不是可以简化一下，能直接把写好的markdown文档发布到<a href="http://xbin999.com/">wordpress博客</a>上。试了一下，分三步走：<br><br>1.  可以把<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a>的存储模式设置成普通文本文件（Plain Text Files <em>），这样写好的内容就会以单个文件形式保存在设置的目录中。<br>2.  然后使用<a href="https://gist.github.com/ttscoff/3732963" target="_blank" rel="noopener">flavor</a> 讲文件转换成html文件，需要安装ruby 和json。<br>3.  发布到<a href="http://wordpress.com" target="_blank" rel="noopener">wordpress</a>上，这个原来想偷点懒，直接基于<a href="http://en.support.wordpress.com/post-by-email/" target="_blank" rel="noopener">wordpress提供的发布邮件账号</a>，通过邮件发出即可，但后来发现直接基于命令行上的mail命令，不支持html文本。只好另外想办法，找个API来直接调用接口发布。wordpress支持xmlrpc，有个简单的例子<a href="http://rcbth.com/2010/07/16/wordpress-posting-from-ruby-xmlrpc/" target="_blank" rel="noopener">Simple WordPress Posting from Ruby via XMLRPC</a>，直接搬来使用即可。<br>4.  最后做的事情就是把flavor和上面的例子串接一下，<a href="https://gist.github.com/xbin999/5472265" target="_blank" rel="noopener">代码</a>放在github上。<br>这篇文档就是以这个方式完成发布的，测试的过程中碰到几个问题：
 
 </em>   运行flavor时报错<br><br>    ~/.rvm/gems/ruby-1.9.3-p125/gems/json-1.7.5/lib/json/ext/parser.bundle: [BUG] Segmentation fault<br>    ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]<br>    <code>&lt;/pre&gt;
     这个原因是flavor.rb指定了/usr/bin/ruby，和我的rvm环境不一致，修改ruby运行环境即可。
 *   命令行下mail 运行时报错
-    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="external">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
+    &lt;pre&gt;</code>sendmail: fatal: chdir /Library/Server/Mail/Data/spool: No such file or directory<br><br>这里需要设置mac下的mail环境，有篇<a href="http://apple.stackexchange.com/questions/54051/sendmail-error-on-os-x-mountain-lion" target="_blank" rel="noopener">详细的说明</a>。<br>*   中文字符的问题<br><br>xmlrpc/create.rb:46:in `join’: incompatible character encodings: UTF–8 and ASCII–8BIT (Encoding::CompatibilityError)<br><br>这里需要讲flavor调用github解析返回的结果做强制编码html.force_encoding(“UTF–8”).encode(“UTF–8”)。<br></div>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cj133pjrt025o00c2dw0lao7k" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/04/27/编写markdown文档直接发布到wordpress上-4/" data-id="cjmiwvbtv023l04c2sakbzzgc" class="article-share-link">Share</a>
       
 
       
@@ -219,22 +220,22 @@
 <li>用几个#号来标识标题。</li>
 <li>段落的写法，第一个是数字，那就按数字1,2,3排，非数字就是符号排的段落，第一个字符用-, *, + 都可以。</li>
 <li>链接的写法，最简单的就是中括号里写文字，后面小括号里写链接，相同主机内可以使用相对路径。</li>
-<li>对写代码的人来说，还有一个要记住的是用反引号`把代码给括起来。<br>我觉得有这么几招就差不多了，顶多用两个星号搞搞<strong>粗体</strong>、一个星号<em>斜体</em>，详细的使用帮助可以参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">markdown语法说明</a>。</li>
+<li>对写代码的人来说，还有一个要记住的是用反引号`把代码给括起来。<br>我觉得有这么几招就差不多了，顶多用两个星号搞搞<strong>粗体</strong>、一个星号_斜体_，详细的使用帮助可以参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">markdown语法说明</a>。</li>
 </ol>
 <p><strong>“工欲善其事，必先利其器。”</strong></p>
-<p>首先，我得选择一个文本编写工具来替代Stickies，支持markdown，简单一点，能自动保存。<a href="http://mouapp.com/" target="_blank" rel="external">Mou</a> 不够简单，还是觉得<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 不错，简洁得很，同时支持<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 的云服务。（<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 同时提供iphone/ipad下的客户端应用，虽然<a href="http://simplenote.com/" target="_blank" rel="external">Simplenote</a> 在国内访问貌似不畅。）</p>
-<p>其次需要能把markdown文件转成html文件，将格式内容进行保存或者发布到博客中（我一般还是会保存在Evernote中，话说Evernote什么时候能支持markdown啊）。<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身能提供预览并保存html文件。另外mac下还有两个不错的工具：</p>
+<p>首先，我得选择一个文本编写工具来替代Stickies，支持markdown，简单一点，能自动保存。<a href="http://mouapp.com/" target="_blank" rel="noopener">Mou</a> 不够简单，还是觉得<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 不错，简洁得很，同时支持<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 的云服务。（<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 同时提供iphone/ipad下的客户端应用，虽然<a href="http://simplenote.com/" target="_blank" rel="noopener">Simplenote</a> 在国内访问貌似不畅。）</p>
+<p>其次需要能把markdown文件转成html文件，将格式内容进行保存或者发布到博客中（我一般还是会保存在Evernote中，话说Evernote什么时候能支持markdown啊）。<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 本身能提供预览并保存html文件。另外mac下还有两个不错的工具：</p>
 <ul>
-<li>一个是chrome扩展<a href="https://github.com/adam-p/markdown-here" target="_blank" rel="external">Markdown here</a> 对于使用gmail的人来说有帮助，先用markdown写邮件，然后使用该插件Markdown Toggle做一次转换即可；</li>
-<li>一个是<a href="http://brettterpstra.com/projects/markdown-service-tools/" target="_blank" rel="external">md</a> ，提供了mac OS下的一堆服务，让你在文本编辑下右键菜单出现一堆常用的markdown服务。<br>最后再推荐<a href="https://github.com/github/gollum" target="_blank" rel="external">gollum</a> ，基于<a href="http://git-scm.com/" target="_blank" rel="external">git</a> 的个人wiki管理工具，和<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 配合（<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 本身也能提供页面的跳转，够强大吧），一个写markdown文件，一个提供wiki页面和搜索。</li>
+<li>一个是chrome扩展<a href="https://github.com/adam-p/markdown-here" target="_blank" rel="noopener">Markdown here</a> 对于使用gmail的人来说有帮助，先用markdown写邮件，然后使用该插件Markdown Toggle做一次转换即可；</li>
+<li>一个是<a href="http://brettterpstra.com/projects/markdown-service-tools/" target="_blank" rel="noopener">md</a> ，提供了mac OS下的一堆服务，让你在文本编辑下右键菜单出现一堆常用的markdown服务。<br>最后再推荐<a href="https://github.com/github/gollum" target="_blank" rel="noopener">gollum</a> ，基于<a href="http://git-scm.com/" target="_blank" rel="noopener">git</a> 的个人wiki管理工具，和<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 配合（<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 本身也能提供页面的跳转，够强大吧），一个写markdown文件，一个提供wiki页面和搜索。</li>
 </ul>
-<p>先写这么多，等使用时间长了，有心得再做更新，这篇文章就是基于<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="external">nvALT</a> 写的。</p>
+<p>先写这么多，等使用时间长了，有心得再做更新，这篇文章就是基于<a href="http://brettterpstra.com/projects/nvalt/" target="_blank" rel="noopener">nvALT</a> 写的。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/02/07/采用markdown来编写文档/" data-id="cj133pjzz02cj00c2hwxagvef" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/02/07/采用markdown来编写文档/" data-id="cjmiwvbyg02ae04c23fbwccpi" class="article-share-link">Share</a>
       
 
       
@@ -280,7 +281,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了<a href="http://book.douban.com/subject/10742139/" target="_blank" rel="external">《高可用性的HDFS》</a>，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记：</p>
+        <p>最近有项目在用HADOOP，比较关心NameNode的HA机制，翻了<a href="http://book.douban.com/subject/10742139/" target="_blank" rel="noopener">《高可用性的HDFS》</a>，感觉整体内容并不多，较多的是代码、环境安装和测试，不过对于我这个门外汉来说，快速入门吧。以下是笔记：</p>
 <p>HDFS的HA主要由NameNode的HA决定，NameNode的可靠性主要取决于自身计算机硬件系统的可靠性、系统软件以及HDFS软件的可靠性；NameNode的可维护性则取决于<strong>元数据</strong>的可靠性以及NameNode服务恢复时间。</p>
 <h2 id="比较成熟的HA解决方案有："><a href="#比较成熟的HA解决方案有：" class="headerlink" title="比较成熟的HA解决方案有："></a>比较成熟的HA解决方案有：</h2><ul>
 <li>Hadoop的元数据库备份方案</li>
@@ -355,17 +356,17 @@
 <li>facebook集群存储了1.5亿个文件，加载namenode元数据和等待块位置映射信息上报这两个阶段各自耗费的时间大概都在20分钟左右；</li>
 <li>在yahoo运行的15个集群中，三年时间内，只有3次NamoNode的故障与硬件问题有关。</li>
 </ul>
-<h2 id="关于hadoop的版本"><a href="#关于hadoop的版本" class="headerlink" title="关于hadoop的版本"></a><a href="http://www.cloudera.com/blog/2012/01/an-update-on-apache-hadoop-1-0/" target="_blank" rel="external">关于hadoop的版本</a></h2><p><img src="https://www.cloudera.com/wp-content/uploads/2012/01/diagram-1.jpeg4-1024x670.png" alt="hadoop version"></p>
+<h2 id="关于hadoop的版本"><a href="#关于hadoop的版本" class="headerlink" title="关于hadoop的版本"></a><a href="http://www.cloudera.com/blog/2012/01/an-update-on-apache-hadoop-1-0/" target="_blank" rel="noopener">关于hadoop的版本</a></h2><p><img src="https://www.cloudera.com/wp-content/uploads/2012/01/diagram-1.jpeg4-1024x670.png" alt="hadoop version"></p>
 <ul>
 <li>Facebook Hadoop分支的版本是再0.20-append基础上，加入自身特性发展起来的；</li>
-<li>Clourera CDH3<br>BTW. 这是第一篇用<a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;ved=0CCsQFjAB&amp;url=http%3A%2F%2Fmouapp.com%2F&amp;ei=vYNZUPWXBqneigelkYCQDw&amp;usg=AFQjCNHKHFDR31tYCuaiXn9mm-OfyLiLQA&amp;sig2=UdkmR6fMJ5B-GKgmkPkFOA" target="_blank" rel="external">Mou</a>编写的markdown格式的文章，挺方便的，要是支持直接发布到wordpress上就更好了。</li>
+<li>Clourera CDH3<br>BTW. 这是第一篇用<a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;ved=0CCsQFjAB&amp;url=http%3A%2F%2Fmouapp.com%2F&amp;ei=vYNZUPWXBqneigelkYCQDw&amp;usg=AFQjCNHKHFDR31tYCuaiXn9mm-OfyLiLQA&amp;sig2=UdkmR6fMJ5B-GKgmkPkFOA" target="_blank" rel="noopener">Mou</a>编写的markdown格式的文章，挺方便的，要是支持直接发布到wordpress上就更好了。</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2012/09/19/《高可用性的hdfs-hadoop分布式文件系统深度实践》读书笔/" data-id="cj133pipg00ub00c271pjg5le" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2012/09/19/《高可用性的hdfs-hadoop分布式文件系统深度实践》读书笔/" data-id="cjmiwvb5x00sm04c298h4mguq" class="article-share-link">Share</a>
       
 
       
@@ -478,7 +479,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

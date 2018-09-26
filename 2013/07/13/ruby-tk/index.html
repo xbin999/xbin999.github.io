@@ -6,11 +6,13 @@
   <title>Ruby Tk | 杨先生村民</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="《Programming Ruby》 有两章提到Web和Tk，这都是很大的篇章，还是需要专题去看。以前也曾用tcl/tk写过一个界面，用来解释当时写的计费汇总科目的配置，不过这都已经随着代码的退休也已忘却。所以在看Ruby Tk章节时回忆一下。先是需要一个容器widget（比如TkFrame或TkRoot），然后在容器中创建widget，比如说按钮或文本，准备好后调用Tk.mainloop启动界面">
+<meta name="keywords" content="IT,ruby,坚持100天学习Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby Tk">
 <meta property="og:url" content="http://xbin999.com/2013/07/13/ruby-tk/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="《Programming Ruby》 有两章提到Web和Tk，这都是很大的篇章，还是需要专题去看。以前也曾用tcl/tk写过一个界面，用来解释当时写的计费汇总科目的配置，不过这都已经随着代码的退休也已忘却。所以在看Ruby Tk章节时回忆一下。先是需要一个容器widget（比如TkFrame或TkRoot），然后在容器中创建widget，比如说按钮或文本，准备好后调用Tk.mainloop启动界面">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2014-09-13T08:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ruby Tk">
@@ -100,7 +102,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/index.html" target="_blank" rel="external">《Programming Ruby》</a> 有两章提到Web和Tk，这都是很大的篇章，还是需要专题去看。以前也曾用tcl/tk写过一个界面，用来解释当时写的计费汇总科目的配置，不过这都已经随着代码的退休也已忘却。<br><br>所以在看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_tk.html" target="_blank" rel="external">Ruby Tk</a>章节时回忆一下。<br><br>先是需要一个容器widget（比如TkFrame或TkRoot），然后在容器中创建widget，比如说按钮或文本，准备好后调用Tk.mainloop启动界面，Tk引擎就会控制程序，显示widget并调用响应GUI事件的代码。<br><br>看一段简单的代码：<br><br>    require ‘tk’<br>    root = TkRoot.new { title “Ex1” }<br>    TkLabel.new(root) {<br>      text  ‘Hello, World!’<br>      pack  { padx 15 ; pady 15; side ‘left’ }<br>    }<br>    Tk.mainloop<br><br>我们可以通过回调和绑定变量从widget传回信息。<br><br><em>   回调callback：command选项有Proc对象，回调时触发。
+        <div id="wrapper"><br><br><a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/index.html" target="_blank" rel="noopener">《Programming Ruby》</a> 有两章提到Web和Tk，这都是很大的篇章，还是需要专题去看。以前也曾用tcl/tk写过一个界面，用来解释当时写的计费汇总科目的配置，不过这都已经随着代码的退休也已忘却。<br><br>所以在看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_tk.html" target="_blank" rel="noopener">Ruby Tk</a>章节时回忆一下。<br><br>先是需要一个容器widget（比如TkFrame或TkRoot），然后在容器中创建widget，比如说按钮或文本，准备好后调用Tk.mainloop启动界面，Tk引擎就会控制程序，显示widget并调用响应GUI事件的代码。<br><br>看一段简单的代码：<br><br>    require ‘tk’<br>    root = TkRoot.new { title “Ex1” }<br>    TkLabel.new(root) {<br>      text  ‘Hello, World!’<br>      pack  { padx 15 ; pady 15; side ‘left’ }<br>    }<br>    Tk.mainloop<br><br>我们可以通过回调和绑定变量从widget传回信息。<br><br><em>   回调callback：command选项有Proc对象，回调时触发。
 </em>   采用TkVariable proxy模式，绑定Ruby变量到Tk widget的值。在TKVariable.new中采用TkVariable引用作为参数，这样你就可以直接用TkVariable的值get/set方法影响widget的内容。<br><em>   每个widget都有configure方法，使用Hash或代码块，和new的方式一致。
 </em>   可以使用cget返回特定的选项值。<br><br>GUI中很重要的一点就是界面元素的排布，Geometry管理器提供了三种命令：<br><br><em>   pack：灵活的，基于约束的排布
 </em>   place：绝对位置排布<br>*   grid：表格（行列）方式排布<br><br>绑定事件：b.bind(“Enter”) { b.configure(‘image’=&gt;image2) }<br><br>至于一堆的widget和事件，需要用的时候理理。<br><br></div>
@@ -108,7 +110,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/13/ruby-tk/" data-id="cj133pikk00iq00c2npnofmab" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/13/ruby-tk/" data-id="cjmiwvb2d00hr04c2akqafbn6" class="article-share-link">Share</a>
       
 
       
@@ -243,7 +245,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

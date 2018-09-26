@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://xbin999.com/archives/2013/page/7/index.html">
 <meta property="og:site_name" content="杨先生村民">
 <meta property="og:description" content="xbin999 blog | life | child | mac | IT">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨先生村民">
 <meta name="twitter:description" content="xbin999 blog | life | child | mac | IT">
@@ -101,12 +102,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/07/08/ruby%e6%96%b0%e6%89%8b%e9%a1%bb%e7%9f%a5/">新手须知</a>外，写代码除了有个编辑器外，考虑多的就是怎么调试代码。<br><br>Ruby Debugger，Ruby本身提供了调试功能，可以使用-r debug选项，调试时的命令参见<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/trouble.html" target="_blank" rel="external">When Trouble Strikes</a>，我看也gdb有点像，break, where, list, cont。<br><br>当然也肯定离不开irb，交互式Ruby。不过现在有个两者的结合体，又可以象irb一样交互，又提供调试功能，那就是<a href="http://pryrepl.org/" target="_blank" rel="external">pry</a>，<a href="http://blog.larrylv.com/posts/2012/12/20/use-pry-instead-of-irb/" target="_blank" rel="external">这里</a>有篇简单的入门文章，看起来不错，后续在实践中熟悉。pry-nav提供了上一步、下一步的功能。<br><br>还有两个性能方面的分析工具，一个是benchmark，分析整体消耗的时间，一个是profier，能分析到每个方法的执行结果数据，就能方便定位性能瓶颈了。<br><br></div>
+        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/07/08/ruby%e6%96%b0%e6%89%8b%e9%a1%bb%e7%9f%a5/">新手须知</a>外，写代码除了有个编辑器外，考虑多的就是怎么调试代码。<br><br>Ruby Debugger，Ruby本身提供了调试功能，可以使用-r debug选项，调试时的命令参见<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/trouble.html" target="_blank" rel="noopener">When Trouble Strikes</a>，我看也gdb有点像，break, where, list, cont。<br><br>当然也肯定离不开irb，交互式Ruby。不过现在有个两者的结合体，又可以象irb一样交互，又提供调试功能，那就是<a href="http://pryrepl.org/" target="_blank" rel="noopener">pry</a>，<a href="http://blog.larrylv.com/posts/2012/12/20/use-pry-instead-of-irb/" target="_blank" rel="noopener">这里</a>有篇简单的入门文章，看起来不错，后续在实践中熟悉。pry-nav提供了上一步、下一步的功能。<br><br>还有两个性能方面的分析工具，一个是benchmark，分析整体消耗的时间，一个是profier，能分析到每个方法的执行结果数据，就能方便定位性能瓶颈了。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/10/ruby写代码须知/" data-id="cj133pikv00jl00c2sj73br7q" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/10/ruby写代码须知/" data-id="cjmiwvb2m00im04c2mzyltkq0" class="article-share-link">Share</a>
       
 
       
@@ -152,7 +153,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>有鉴于写代码老是犯低级错误，先看一下新手须知。原帖在<a href="http://ruby-doc.org/docs/Newcomers/ruby.html" target="_blank" rel="external">Things That Newcomers to Ruby Should Know
+        <div id="wrapper"><br><br>有鉴于写代码老是犯低级错误，先看一下新手须知。原帖在<a href="http://ruby-doc.org/docs/Newcomers/ruby.html" target="_blank" rel="noopener">Things That Newcomers to Ruby Should Know
 </a>，选了几个我感兴趣和看明白的。<br><br>1.  使用”ruby -w”能得到更有帮助警告，可以设置RUBYOPT环境变量为’w’。<br>2.  ri 查看Ruby文档。<br>3.  注意hash，如果key值的对象变化的，需要Hash#rehash。<br><br>            s = “mutable”<br>            arr = [s]<br>            hsh = { arr =&gt; “object” }<br>            s.upcase!<br>            p hsh[arr]    # -&gt; nil (maybe not what was expected)<br>            hsh.rehash<br>            p hsh[arr]    # -&gt; “object”<br>    <code>&lt;/pre&gt;
 4.  从文件中读到的数据是string类型，需要to_i, to_f转换为数值，否则+做的是字符串连接。
 5.  ruby没有++，--，需要使用x+=1。
@@ -168,7 +169,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/08/ruby新手须知/" data-id="cj133pil100jz00c2nmgmylrr" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/08/ruby新手须知/" data-id="cjmiwvb2r00j004c29rbrrdkd" class="article-share-link">Share</a>
       
 
       
@@ -257,7 +258,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/07/ruby多进程/" data-id="cj133pikz00jv00c24zopfgp5" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/07/ruby多进程/" data-id="cjmiwvb2q00ix04c2458ht1qd" class="article-share-link">Share</a>
       
 
       
@@ -305,7 +306,7 @@
       
         <p><a href="http://xbin999.com/2013/07/02/%e5%a5%bd%e7%9a%87%e5%b8%9d%e5%92%8c%e4%bb%96%e7%9a%84%e5%9d%8f%e5%84%bf%e5%ad%90%ef%bc%88%e4%b8%80%ef%bc%89/">马可.奥勒留</a>的原则之一是“宽恕你的敌人”。尽管马可.奥勒留不是基督徒，但他的为人处世比后世那些身为基督徒的皇帝要高尚得多。<br>很多人能够以身作则，却无法教好自己的儿子，马可.奥勒留也是如此，他没能把自己的儿子也培养成为一个好人。马可可以说是好到了极致，而他的儿子康茂德确是坏到了…<br>“极致。”小乐插话。<br>这个孩子长大成人可以自己做主后，他把履行职责、行为端正和遵从上帝的法则统统抛在脑后。第一目标就是享乐，而且是最堕落的享乐。<br>“我猜对了。”<br><img src="http://ww3.sinaimg.cn/mw690/6a7f0b64jw1e68lyb3bvyj206409b3yp.jpg" alt="">康茂德是个运动健将，有结实的肌肉和英俊的外表，为此还给自己做了个雕像，让人们把自己当神一样供奉。为了炫耀肌肉的健美和力量，作为一个皇帝却参加摔跤比赛。要是有人挑他的过错，他就会把这个人毒死或杀死。他过着野性、放荡的生活，不过最终也罪有应得，很多刺杀他的计划都没有成功，但最后被一个摔跤手给勒死了。<br>“啊？！是摔跤吗？”<br>“不是，应该也是被刺杀的。”<br>“192年的最后一天，由康茂德的情妇瑪琪亞、近卫军长官萊图斯計劃，在康茂德从竞技场回宮洗浴時，由摔跤手納尔奇苏斯將他勒死在浴場。”</p>
 <p>快乐啊快乐！对于康茂德，快乐就意味着尽情地吃喝玩乐，参加通宵达旦的放荡的晚会。而对哪些不同的愉悦，也就是高尚的乐趣，康茂德是没兴趣的。<br>大约在芝诺的同一时期，还有一位希腊哲学家，叫伊壁鸠鲁。他的思想后来也在罗马流行起来，伊壁鸠鲁主义者认为最高的善就是快乐，但是这种快乐必须是“正确的”（善的）。<br>念着念着，觉得鸠字我念的不对，我念zhen音，一查，果然，应该是jiu，赶紧向小乐道歉纠正。<br>“鸠字怎么写的？”小乐问。<br>“左边一个九，右边一个鸟。”<br>“那是应该念鸠。”<br>惭愧，想一想这不是斑鸠的鸠嘛。</p>
-<p>看《<a href="http://book.douban.com/subject/1006093/" target="_blank" rel="external">哲学的故事</a>》中的描述，伊壁鸠鲁主义差不多是思想家伊壁鸠鲁独立创立的，其首要目的在于把人们从恐惧中解放出来，尝到人们去寻求个人生活的幸福和成就。“默默无闻地生活”是其格言之一。</p>
+<p>看《<a href="http://book.douban.com/subject/1006093/" target="_blank" rel="noopener">哲学的故事</a>》中的描述，伊壁鸠鲁主义差不多是思想家伊壁鸠鲁独立创立的，其首要目的在于把人们从恐惧中解放出来，尝到人们去寻求个人生活的幸福和成就。“默默无闻地生活”是其格言之一。</p>
 <p>而在希利尔讲世界史中说伊壁鸠鲁主义者认为这些快乐是善的：</p>
 <blockquote>
 <ul>
@@ -322,13 +323,13 @@
 </ul>
 </blockquote>
 <p>题图为康茂德扮成海格力斯神的雕像。</p>
-<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="noopener">fuyunv</a>  .</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/04/好皇帝和他的坏儿子（二）/" data-id="cj133pj3c01fr00c2ozz8phhm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/04/好皇帝和他的坏儿子（二）/" data-id="cjmiwvbf401dw04c2ac9vyylz" class="article-share-link">Share</a>
       
 
       
@@ -374,14 +375,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/06/03/%e5%9d%9a%e6%8c%81100%e5%a4%a9%e6%9d%a5%e5%9f%b9%e5%85%bb%e6%97%b6%e9%97%b4%e7%ae%a1%e7%90%86%e4%b9%a0%e6%83%af/">坚持100天学习Ruby</a>，第四周，说是第四周，其实是一个月了。小结一下。<br><br><em>   继续看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="external">Programming Ruby - The Pragmatic Programmer’s Guide</a>三章，”Exceptions, Catch, and Throw”，”Modules”和”Basic Input and Output”，数量上还行，并且多了点练习。
+        <div id="wrapper"><br><br><a href="http://xbin999.com/2013/06/03/%e5%9d%9a%e6%8c%81100%e5%a4%a9%e6%9d%a5%e5%9f%b9%e5%85%bb%e6%97%b6%e9%97%b4%e7%ae%a1%e7%90%86%e4%b9%a0%e6%83%af/">坚持100天学习Ruby</a>，第四周，说是第四周，其实是一个月了。小结一下。<br><br><em>   继续看<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/" target="_blank" rel="noopener">Programming Ruby - The Pragmatic Programmer’s Guide</a>三章，”Exceptions, Catch, and Throw”，”Modules”和”Basic Input and Output”，数量上还行，并且多了点练习。
 </em>   时间还是在中午休息时间，时间每天都要在40分钟以上。<br><em>   为了写代码，折腾了一下<a href="http://xbin999.com/2013/06/30/%e4%b8%basublime-text-2%e9%85%8d%e7%bd%aeruby%e7%8e%af%e5%a2%83/">Sublime Text2配置Ruby的环境</a>。
 </em>   看的一些需要记录的点：<br>&gt;- Ruby中不仅<a href="http://xbin999.com/2013/06/29/throwcatch%e5%92%8craiserescue%e7%9a%84%e4%b8%8d%e5%90%8c/">有异常（rescue/raise），还有正常（throw/catch）</a>，可以用于优雅地退出一堆的处理环节。<br>&gt;- Modules中介绍了<a href="http://xbin999.com/2013/06/29/modules/">mixin</a>的方式，提供多重继承的实现机制。<br>&gt;- <a href="http://xbin999.com/2013/07/01/ruby%e5%9f%ba%e6%9c%ac%e7%9a%84%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba/">基本的输入输出</a>倒没啥，不过练习中开始碰到问题，慢慢求解的一个过程。<br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/04/第四周的总结/" data-id="cj133pjo4022f00c2vfm01huw" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/04/第四周的总结/" data-id="cjmiwvbrx020c04c2u15rdoep" class="article-share-link">Share</a>
       
 
       
@@ -431,12 +432,12 @@
 
     结果运行时直接报错：
 
-    &lt;pre&gt;</code><br>    mathstest.rb:11:in `initialize’: wrong number of arguments (1 for 2) (ArgumentError)<br><br>原来Ruby并不支持类方法中的重载（overload），参见：<a href="http://stackoverflow.com/questions/9373104/why-does-ruby-not-support-method-overloading" target="_blank" rel="external">Why does Ruby not support method overloading</a>，其中说到：<br><br>方法重载有有两种方式，一是参数类型不同；二是参数个数不同。在Ruby中首先就没有数据类型的定义，它本身是一种动态类型的语言。而第二种方式看起来可行，但是参数可以有缺省值，这时调用谁也是个问题。<br><br></div>
+    &lt;pre&gt;</code><br>    mathstest.rb:11:in `initialize’: wrong number of arguments (1 for 2) (ArgumentError)<br><br>原来Ruby并不支持类方法中的重载（overload），参见：<a href="http://stackoverflow.com/questions/9373104/why-does-ruby-not-support-method-overloading" target="_blank" rel="noopener">Why does Ruby not support method overloading</a>，其中说到：<br><br>方法重载有有两种方式，一是参数类型不同；二是参数个数不同。在Ruby中首先就没有数据类型的定义，它本身是一种动态类型的语言。而第二种方式看起来可行，但是参数可以有缺省值，这时调用谁也是个问题。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/04/ruby没有重载/" data-id="cj133pil300k200c2ikjpedan" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/04/ruby没有重载/" data-id="cjmiwvb2s00j404c23bwjk100" class="article-share-link">Share</a>
       
 
       
@@ -498,12 +499,12 @@
 
     还是版本问题，可以看到Net::HTTP.get 在[1.9.2](http://rubydoc.info/stdlib/net/1.9.2/Net/HTTP:get) 和[1.8.6](http://rubydoc.info/stdlib/net/1.8.6/Net/HTTP.get) 的版本上参数发生了变化。
 
-    &lt;pre&gt;</code><br>    - (Object) get(path, initheader = {}, dest = nil, &amp;block)  #1.9.2<br>    + (Object) get(uri_or_host, path = nil, port = nil)  #1.8.6<br><br>代码get参数中传递的第二个参数nil含义完全不同了，简单去掉nil即可。<br><br>看书是一回事，写代码是一回事，还得练兵才是。<br><br>BTW. 在<a href="http://stackoverflow.com" target="_blank" rel="external">stackoverflow</a>提问题的好处，还有人会帮助你把问题的书写英文给改写了一遍，可以练习英语。<br><br></div>
+    &lt;pre&gt;</code><br>    - (Object) get(path, initheader = {}, dest = nil, &amp;block)  #1.9.2<br>    + (Object) get(uri_or_host, path = nil, port = nil)  #1.8.6<br><br>代码get参数中传递的第二个参数nil含义完全不同了，简单去掉nil即可。<br><br>看书是一回事，写代码是一回事，还得练兵才是。<br><br>BTW. 在<a href="http://stackoverflow.com" target="_blank" rel="noopener">stackoverflow</a>提问题的好处，还有人会帮助你把问题的书写英文给改写了一遍，可以练习英语。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/03/看书是一回事，写代码是一回事/" data-id="cj133pjln01zr00c2pt2u4blm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/03/看书是一回事，写代码是一回事/" data-id="cjmiwvbqa01xn04c2v8thkwub" class="article-share-link">Share</a>
       
 
       
@@ -599,13 +600,13 @@
 <p>直到今天，成千上万的人们还在阅读马可.奥勒留的《沉思录》，书中的一些言论听起来就像是出自圣经一样。甚至到了今天，人们还把那些承受苦难而毫无怨言的人称作斯多葛主义者。</p>
 <p>&nbsp;</p>
 <p>题图为马可.奥勒留。</p>
-<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="external">fuyunv</a>  .</p>
+<p>欢迎订阅讲述我和小乐成长中故事的微信账号: <a href="http://xbin999.files.wordpress.com/2012/12/qrcode_for_gh_ffed660b754c_430.jpg?w=300&amp;h=300#038;h=300" target="_blank" rel="noopener">fuyunv</a>  .</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/02/好皇帝和他的坏儿子（一）/" data-id="cj133pj3a01fo00c2ms4jtgvo" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/02/好皇帝和他的坏儿子（一）/" data-id="cjmiwvbf201dt04c2im0dbu9t" class="article-share-link">Share</a>
       
 
       
@@ -693,7 +694,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/02/数字游戏抢30/" data-id="cj133pjcd01qn00c2ecg4y8pl" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/02/数字游戏抢30/" data-id="cjmiwvbkp01ol04c2jrxrp3ed" class="article-share-link">Share</a>
       
 
       
@@ -739,7 +740,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="wrapper"><br><br>Ruby提供了两种I/O方式：<br><br><em>   一种是<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ref_m_kernel.html" target="_blank" rel="external">Kernel</a>模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。
+        <div id="wrapper"><br><br>Ruby提供了两种I/O方式：<br><br><em>   一种是<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ref_m_kernel.html" target="_blank" rel="noopener">Kernel</a>模块中实现的I/O相关的方法，gets, open, print, printf, putc, puts, readline, readlines和test，提供简单和方便的输入输出操作。
 </em>   一种是使用IO对象，让你有更多的控制。<br><br>IO对象有两个子类File和BasicSocket提供具体的行为，但基本原则是相同的。一个IO对象在Ruby程序和外部资源之间建立了双向通道（读、写）。<br><br>Ruby可以使用File.open打开文件，并传递一个块，执行完成后自动关闭文件。File.open如果不传递block，则和File.new本质是相同。<br><br>    File.open(“testfile”, “r”) do |aFile|<br><br>    # … process the file<br><br>    end<br>    <code>&lt;/pre&gt;
 
     读取文件的方式
@@ -747,12 +748,12 @@
 *   IO.each_byte和IO.each_line分别提供了逐个字符和逐行读取文件的方式，each_line还可以设定自定义的行分隔符，each等同于each_line。
     &lt;pre&gt;</code><br>    IO.foreach(“testfile”){ |line| puts line}<br><br><em>   IO.for_each提供了iteraotr和自动关闭文件的功能。
 </em>   IO.readlines可以将文件直接读取到行数组中。<br><br>写文件，puts和print一个对象，会把对象采用to_s转成字符串，如果to_s没有返回有效的字符串，则会创建诸如<a>ClassName:0x123456</a>形式的对象类名和id的字符串。<br><br><em>   IO.sysread和IO.syswrite提供了更底层的读写能力。
-</em>   Array.pack, String.unpack提供了字符串和二进制流之间的打包和解包能力。<br><em>   还可以往输出IO流使用&lt;&lt;运算符，<em>*注意往String使用&lt;&lt;时，对于0到255的整型数值会转换成字符再连接。</em></em><br><br>网络交互提供两种方式，一种是较低层次的socket通信，一种是较高层次的应用层通信，比如FTP, HTTP, POP, SMTP和telnet。<br><br></div>
+</em>   Array.pack, String.unpack提供了字符串和二进制流之间的打包和解包能力。<br>*   还可以往输出IO流使用&lt;&lt;运算符，<strong>注意往String使用&lt;&lt;时，对于0到255的整型数值会转换成字符再连接。</strong><br><br>网络交互提供两种方式，一种是较低层次的socket通信，一种是较高层次的应用层通信，比如FTP, HTTP, POP, SMTP和telnet。<br><br></div>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://xbin999.com/2013/07/01/ruby基本的输入输出/" data-id="cj133piky00js00c238kv8xqm" class="article-share-link">Share</a>
+        <a data-url="http://xbin999.com/2013/07/01/ruby基本的输入输出/" data-id="cjmiwvb2p00it04c22mk5hevp" class="article-share-link">Share</a>
       
 
       
@@ -869,7 +870,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Bin Yang<br>
+      &copy; 2018 Bin Yang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
